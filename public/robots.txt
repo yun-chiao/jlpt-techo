@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jlpt-techo.chiaoban.com/sitemap.xml
+Sitemap: https://jlpt.chiaoban.com/sitemap.xml
