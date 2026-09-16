@@ -161,10 +161,10 @@
             "type": "multiple_choice",
             "question_text": "わたし（　）学生です。",
             "options": [
-              "が",
               "は",
               "を",
-              "に"
+              "に",
+              "が"
             ],
             "correct_answer": "は",
             "explanation": "「AはBです」的主題用助詞「は」標示，表示「我是學生」。"
@@ -174,10 +174,10 @@
             "type": "multiple_choice",
             "question_text": "田中さんは先生（　）。",
             "options": [
-              "です",
               "ですか",
-              "でした",
-              "ます"
+              "です",
+              "ます",
+              "でした"
             ],
             "correct_answer": "です",
             "explanation": "名詞肯定判斷句以「です」結尾，表示禮貌的「是」。"
@@ -187,10 +187,10 @@
             "type": "multiple_choice",
             "question_text": "「私は台湾人です」中，助詞「は」的發音是？",
             "options": [
-              "wa",
               "ha",
-              "ba",
-              "e"
+              "e",
+              "wa",
+              "ba"
             ],
             "correct_answer": "wa",
             "explanation": "「は」當主題助詞時必須念作「wa」，不可念成「ha」。"
@@ -218,9 +218,9 @@
             "type": "multiple_choice",
             "question_text": "私は医者（　）。─ 我「不是」醫生",
             "options": [
-              "ではありません",
-              "です",
               "ですか",
+              "です",
+              "ではありません",
               "でした"
             ],
             "correct_answer": "ではありません",
@@ -232,9 +232,9 @@
             "question_text": "「ではありません」在口語中常說成？",
             "options": [
               "じゃありません",
-              "でありません",
               "ないです",
-              "ませんです"
+              "ませんです",
+              "でありません"
             ],
             "correct_answer": "じゃありません",
             "explanation": "口語中「では」常縮約為「じゃ」，說成「じゃありません」。"
@@ -244,10 +244,10 @@
             "type": "multiple_choice",
             "question_text": "山田さんは学生では（　）ません。",
             "options": [
-              "あり",
               "い",
-              "し",
-              "なり"
+              "あり",
+              "なり",
+              "し"
             ],
             "correct_answer": "あり",
             "explanation": "否定形固定為「ではありません」，中間是「あり」。"
@@ -275,10 +275,10 @@
             "type": "multiple_choice",
             "question_text": "あなたは先生です（　）。─ 詢問對方",
             "options": [
-              "か",
               "よ",
-              "ね",
-              "の"
+              "か",
+              "の",
+              "ね"
             ],
             "correct_answer": "か",
             "explanation": "句尾加終助詞「か」即成疑問句，語調上揚。"
@@ -289,8 +289,8 @@
             "question_text": "「あなたは学生ですか」的肯定回答是？",
             "options": [
               "はい、学生です。",
-              "いいえ、学生です。",
               "はい、学生ではありません。",
+              "いいえ、学生です。",
               "学生ですか。"
             ],
             "correct_answer": "はい、学生です。",
@@ -301,10 +301,10 @@
             "type": "multiple_choice",
             "question_text": "日文疑問句句尾一般使用哪個標點？",
             "options": [
-              "。",
               "？",
-              "！",
-              "、"
+              "、",
+              "。",
+              "！"
             ],
             "correct_answer": "。",
             "explanation": "日文疑問句已有「か」表示疑問，句尾一般用句號「。」，不加問號。"
@@ -318,10 +318,10 @@
         "type": "multiple_choice",
         "question_text": "わたし（ ）田中ではありません。",
         "options": [
-          "が",
           "は",
-          "の",
-          "を"
+          "が",
+          "を",
+          "の"
         ],
         "correct_answer": "は",
         "explanation": "此句為名詞否定判斷句「A は B ではありません」，主題用助詞「は」。"
@@ -344,10 +344,10 @@
         "type": "multiple_choice",
         "question_text": "A：あなたは先生ですか。 B：（ ）、学生です。",
         "options": [
-          "はい",
           "いいえ",
           "すみません",
-          "さようなら"
+          "さようなら",
+          "はい"
         ],
         "correct_answer": "いいえ",
         "explanation": "B 回答「我是學生」，表示否定對方的問題，因此開頭應用「いいえ」。"
@@ -516,9 +516,9 @@
             "type": "multiple_choice",
             "question_text": "私は台湾大学（　）学生です。",
             "options": [
-              "の",
-              "は",
               "も",
+              "は",
+              "の",
               "を"
             ],
             "correct_answer": "の",
@@ -529,10 +529,10 @@
             "type": "multiple_choice",
             "question_text": "田中さんはABC（　）社員です。",
             "options": [
-              "の",
               "が",
-              "に",
-              "と"
+              "の",
+              "と",
+              "に"
             ],
             "correct_answer": "の",
             "explanation": "「ABC公司的員工」中的「的」用「の」表示。"
@@ -542,10 +542,10 @@
             "type": "multiple_choice",
             "question_text": "中文可說「台大學生」，日文的「の」可以省略嗎？",
             "options": [
-              "不可省略",
               "可以省略",
               "口語可省略",
-              "書面可省略"
+              "書面可省略",
+              "不可省略"
             ],
             "correct_answer": "不可省略",
             "explanation": "中文的「的」有時可省，但日文名詞連接名詞時「の」不可省略。"
@@ -573,10 +573,10 @@
             "type": "multiple_choice",
             "question_text": "田中さんは会社員です。山田さん（　）会社員です。",
             "options": [
-              "も",
               "は",
+              "が",
               "の",
-              "が"
+              "も"
             ],
             "correct_answer": "も",
             "explanation": "前後兩者情況相同時，用「も」表示「也」。"
@@ -586,10 +586,10 @@
             "type": "multiple_choice",
             "question_text": "使用「も」時，正確的做法是？",
             "options": [
-              "直接取代「は」",
               "加在「は」後面",
-              "加在「は」前面",
-              "與「が」並用"
+              "與「が」並用",
+              "直接取代「は」",
+              "加在「は」前面"
             ],
             "correct_answer": "直接取代「は」",
             "explanation": "「も」直接取代「は」的位置，不可寫成「はも」。"
@@ -600,9 +600,9 @@
             "question_text": "私（　）台湾人です。─「我也是台灣人」",
             "options": [
               "も",
-              "は",
+              "と",
               "が",
-              "と"
+              "は"
             ],
             "correct_answer": "も",
             "explanation": "表示「也」時用「も」取代「は」。"
@@ -630,10 +630,10 @@
             "type": "multiple_choice",
             "question_text": "お名前は（　）ですか。",
             "options": [
-              "何",
               "誰",
-              "どこ",
-              "どれ"
+              "何",
+              "どれ",
+              "どこ"
             ],
             "correct_answer": "何",
             "explanation": "詢問名字（事物）用疑問詞「何」，放在答案的位置。"
@@ -643,10 +643,10 @@
             "type": "multiple_choice",
             "question_text": "あの人は（　）ですか。",
             "options": [
-              "誰",
-              "何",
               "どこ",
-              "いつ"
+              "いつ",
+              "誰",
+              "何"
             ],
             "correct_answer": "誰",
             "explanation": "詢問人用疑問詞「誰」。"
@@ -656,10 +656,10 @@
             "type": "multiple_choice",
             "question_text": "「何」在「です」前面讀作？",
             "options": [
-              "なん",
               "なに",
               "なの",
-              "どう"
+              "どう",
+              "なん"
             ],
             "correct_answer": "なん",
             "explanation": "「何ですか」中讀「なん」；單獨使用時讀「なに」。"
@@ -673,10 +673,10 @@
         "type": "multiple_choice",
         "question_text": "田中さんは会社員です。山田さん（ ）会社員です。",
         "options": [
-          "も",
           "は",
+          "か",
           "の",
-          "か"
+          "も"
         ],
         "correct_answer": "も",
         "explanation": "前後兩人情況相同（都是公司職員），第二句應使用表示「也」的助詞「も」。"
@@ -686,10 +686,10 @@
         "type": "multiple_choice",
         "question_text": "A：あの人は（ ）ですか。 B：鈴木さんです。",
         "options": [
-          "なん",
-          "だれ",
           "どこ",
-          "いくら"
+          "いくら",
+          "だれ",
+          "なん"
         ],
         "correct_answer": "だれ",
         "explanation": "回答是人名，因此問句應使用詢問人物的疑問詞「誰（だれ）」。"
@@ -699,10 +699,10 @@
         "type": "multiple_choice",
         "question_text": "私はABC（ ）社員です。",
         "options": [
-          "の",
-          "は",
           "も",
-          "か"
+          "か",
+          "は",
+          "の"
         ],
         "correct_answer": "の",
         "explanation": "「ABC」與「社員」為所屬關係，兩個名詞之間須用助詞「の」連接。"
@@ -871,10 +871,10 @@
             "type": "multiple_choice",
             "question_text": "（　）は辞書です。─ 指自己手上的東西",
             "options": [
-              "これ",
               "それ",
               "あれ",
-              "どれ"
+              "どれ",
+              "これ"
             ],
             "correct_answer": "これ",
             "explanation": "「これ」指靠近說話者的東西。"
@@ -885,9 +885,9 @@
             "question_text": "離說話者和聽話者都遠的東西用哪個指示詞？",
             "options": [
               "あれ",
-              "これ",
+              "この",
               "それ",
-              "この"
+              "これ"
             ],
             "correct_answer": "あれ",
             "explanation": "「あれ」指離雙方都遠的東西。"
@@ -897,9 +897,9 @@
             "type": "multiple_choice",
             "question_text": "下列哪一句是「錯誤」的？",
             "options": [
-              "あれ人は田中さんです。",
-              "これは本です。",
               "それはかばんです。",
+              "これは本です。",
+              "あれ人は田中さんです。",
               "あれは何ですか。"
             ],
             "correct_answer": "あれ人は田中さんです。",
@@ -928,10 +928,10 @@
             "type": "multiple_choice",
             "question_text": "（　）本は私のです。─「這本書」",
             "options": [
-              "この",
               "これ",
+              "どれ",
               "それ",
-              "どれ"
+              "この"
             ],
             "correct_answer": "この",
             "explanation": "後面接名詞時要用連體詞「この」，不可用「これ」。"
@@ -942,9 +942,9 @@
             "question_text": "「この・その・あの」後面必須接什麼？",
             "options": [
               "名詞",
-              "動詞",
               "形容詞",
-              "助詞"
+              "助詞",
+              "動詞"
             ],
             "correct_answer": "名詞",
             "explanation": "連體詞不能單獨使用，後面必須接名詞。"
@@ -985,10 +985,10 @@
             "type": "multiple_choice",
             "question_text": "これは田中さん（　）傘です。",
             "options": [
+              "を",
               "の",
               "は",
-              "が",
-              "を"
+              "が"
             ],
             "correct_answer": "の",
             "explanation": "「の」表示所有關係：「田中先生的傘」。"
@@ -999,8 +999,8 @@
             "question_text": "その辞書は私（　）です。─「是我的」",
             "options": [
               "の",
-              "は",
               "が",
+              "は",
               "も"
             ],
             "correct_answer": "の",
@@ -1028,10 +1028,10 @@
         "type": "multiple_choice",
         "question_text": "（手拿著包包）（ ）はわたしのかばんです。",
         "options": [
-          "これ",
           "それ",
-          "あれ",
-          "この"
+          "これ",
+          "この",
+          "あれ"
         ],
         "correct_answer": "これ",
         "explanation": "物品在說話者手上，屬於近距離，用「これ」。「この」後面須接名詞，不可直接接「は」。"
@@ -1041,10 +1041,10 @@
         "type": "multiple_choice",
         "question_text": "（ ）本は田中さんのです。",
         "options": [
-          "これ",
           "この",
           "それ",
-          "どれ"
+          "どれ",
+          "これ"
         ],
         "correct_answer": "この",
         "explanation": "空格後面直接接名詞「本」，因此須使用連體詞「この」。"
@@ -1054,10 +1054,10 @@
         "type": "multiple_choice",
         "question_text": "A：これは誰の傘ですか。 B：山田さん（ ）です。",
         "options": [
-          "の",
           "は",
-          "も",
-          "か"
+          "の",
+          "か",
+          "も"
         ],
         "correct_answer": "の",
         "explanation": "表示所有者時用「の」，且物品「傘」已明確，故可省略為「山田さんのです」。"
@@ -1227,9 +1227,9 @@
             "question_text": "机の上に本が（　）。",
             "options": [
               "あります",
-              "います",
               "です",
-              "します"
+              "します",
+              "います"
             ],
             "correct_answer": "あります",
             "explanation": "書是無生命物品，存在用「あります」。"
@@ -1240,8 +1240,8 @@
             "question_text": "教室に学生が（　）。",
             "options": [
               "います",
-              "あります",
               "です",
+              "あります",
               "します"
             ],
             "correct_answer": "います",
@@ -1252,10 +1252,10 @@
             "type": "multiple_choice",
             "question_text": "庭に木が（　）。─ 植物用哪個？",
             "options": [
-              "あります",
               "います",
-              "できます",
-              "します"
+              "します",
+              "あります",
+              "できます"
             ],
             "correct_answer": "あります",
             "explanation": "植物雖是生物，但不會移動，日文中用「あります」。"
@@ -1296,10 +1296,10 @@
             "type": "multiple_choice",
             "question_text": "いすの下（　）猫がいます。",
             "options": [
-              "に",
               "で",
               "を",
-              "へ"
+              "へ",
+              "に"
             ],
             "correct_answer": "に",
             "explanation": "存在的場所用助詞「に」標示。"
@@ -1310,9 +1310,9 @@
             "question_text": "中文「桌上」的正確日文說法是？",
             "options": [
               "机の上",
-              "机上",
               "上の机",
-              "机うえ"
+              "机うえ",
+              "机上"
             ],
             "correct_answer": "机の上",
             "explanation": "日文必須說「机の上」，「の」不可省略。"
@@ -1340,10 +1340,10 @@
             "type": "multiple_choice",
             "question_text": "トイレは（　）ですか。─ 問位置",
             "options": [
-              "どこ",
-              "どれ",
               "誰",
-              "何"
+              "何",
+              "どこ",
+              "どれ"
             ],
             "correct_answer": "どこ",
             "explanation": "詢問場所位置用疑問詞「どこ」。"
@@ -1353,10 +1353,10 @@
             "type": "multiple_choice",
             "question_text": "駅は（　）です。─ 指離雙方都遠的地方",
             "options": [
-              "あそこ",
-              "ここ",
               "そこ",
-              "どこ"
+              "どこ",
+              "ここ",
+              "あそこ"
             ],
             "correct_answer": "あそこ",
             "explanation": "「あそこ」指離說話者與聽話者都遠的場所。"
@@ -1366,10 +1366,10 @@
             "type": "multiple_choice",
             "question_text": "「駅はあそこです」這句話的主題是？",
             "options": [
-              "駅",
               "あそこ",
               "です",
-              "場所"
+              "場所",
+              "駅"
             ],
             "correct_answer": "駅",
             "explanation": "「[物]は[場所]です」以物（駅）為主題，說明它的位置。"
@@ -1383,10 +1383,10 @@
         "type": "multiple_choice",
         "question_text": "机の上に猫が（ ）。",
         "options": [
-          "あります",
-          "います",
           "です",
-          "ではありません"
+          "ではありません",
+          "います",
+          "あります"
         ],
         "correct_answer": "います",
         "explanation": "「猫」是有生命的動物，存在句須用「います」。"
@@ -1396,9 +1396,9 @@
         "type": "multiple_choice",
         "question_text": "トイレは（ ）ですか。",
         "options": [
-          "どれ",
-          "どこ",
           "だれ",
+          "どこ",
+          "どれ",
           "なん"
         ],
         "correct_answer": "どこ",
@@ -1409,10 +1409,10 @@
         "type": "multiple_choice",
         "question_text": "教室（ ）机があります。",
         "options": [
-          "に",
           "を",
           "は",
-          "で"
+          "で",
+          "に"
         ],
         "correct_answer": "に",
         "explanation": "存在句「～があります」中，表示存在場所的助詞是「に」。"
@@ -1599,10 +1599,10 @@
             "type": "multiple_choice",
             "question_text": "「四時」的正確讀音是？",
             "options": [
-              "よじ",
               "しじ",
-              "よんじ",
-              "よつじ"
+              "よじ",
+              "よつじ",
+              "よんじ"
             ],
             "correct_answer": "よじ",
             "explanation": "四時是特殊讀音「よじ」，不讀「しじ」或「よんじ」。"
@@ -1613,9 +1613,9 @@
             "question_text": "「九時」的正確讀音是？",
             "options": [
               "くじ",
-              "きゅうじ",
               "ここのじ",
-              "くうじ"
+              "くうじ",
+              "きゅうじ"
             ],
             "correct_answer": "くじ",
             "explanation": "九時是特殊讀音「くじ」。"
@@ -1625,10 +1625,10 @@
             "type": "multiple_choice",
             "question_text": "「十分」的正確讀音是？",
             "options": [
-              "じゅっぷん",
-              "じゅうふん",
               "とおふん",
-              "じゅうぶん"
+              "じゅうぶん",
+              "じゅうふん",
+              "じゅっぷん"
             ],
             "correct_answer": "じゅっぷん",
             "explanation": "「分」在 10 後面讀「ぷん」：じゅっぷん（也可讀じっぷん）。"
@@ -1656,9 +1656,9 @@
             "type": "multiple_choice",
             "question_text": "毎朝七時（　）起きます。",
             "options": [
-              "に",
-              "で",
               "を",
+              "で",
+              "に",
               "へ"
             ],
             "correct_answer": "に",
@@ -1669,10 +1669,10 @@
             "type": "multiple_choice",
             "question_text": "下列哪個時間詞後面「不」加「に」？",
             "options": [
-              "明日",
               "七時",
               "日曜日",
-              "三月三日"
+              "三月三日",
+              "明日"
             ],
             "correct_answer": "明日",
             "explanation": "「明日、今日、毎日」等相對時間名詞後不加「に」。"
@@ -1682,10 +1682,10 @@
             "type": "multiple_choice",
             "question_text": "日曜日（　）働きません。",
             "options": [
-              "に",
-              "で",
               "から",
-              "まで"
+              "まで",
+              "で",
+              "に"
             ],
             "correct_answer": "に",
             "explanation": "星期後面加「に」表示時間點。"
@@ -1713,10 +1713,10 @@
             "type": "multiple_choice",
             "question_text": "会社は九時（　）五時までです。",
             "options": [
-              "から",
               "まで",
-              "に",
-              "で"
+              "で",
+              "から",
+              "に"
             ],
             "correct_answer": "から",
             "explanation": "「から」表示起點（從九點）。"
@@ -1726,10 +1726,10 @@
             "type": "multiple_choice",
             "question_text": "月曜日から金曜日（　）働きます。",
             "options": [
+              "と",
               "まで",
               "から",
-              "に",
-              "と"
+              "に"
             ],
             "correct_answer": "まで",
             "explanation": "「まで」表示終點（到星期五）。"
@@ -1740,9 +1740,9 @@
             "question_text": "「から」表示的是？",
             "options": [
               "起點（從～）",
-              "終點（到～）",
               "一起的對象",
-              "動作的場所"
+              "動作的場所",
+              "終點（到～）"
             ],
             "correct_answer": "起點（從～）",
             "explanation": "「から」表示時間或場所的起點，「まで」表示終點。"
@@ -1756,9 +1756,9 @@
         "type": "multiple_choice",
         "question_text": "毎朝七時（ ）起きます。",
         "options": [
-          "に",
-          "で",
           "を",
+          "で",
+          "に",
           "へ"
         ],
         "correct_answer": "に",
@@ -1769,9 +1769,9 @@
         "type": "multiple_choice",
         "question_text": "銀行は九時（ ）三時までです。",
         "options": [
-          "から",
-          "まで",
           "に",
+          "まで",
+          "から",
           "と"
         ],
         "correct_answer": "から",
@@ -1782,10 +1782,10 @@
         "type": "multiple_choice",
         "question_text": "A：今日は（ ）ですか。 B：月曜日です。",
         "options": [
-          "何時",
           "何曜日",
           "何日",
-          "いつ"
+          "いつ",
+          "何時"
         ],
         "correct_answer": "何曜日",
         "explanation": "回答為「月曜日」（星期一），因此問句應使用詢問星期的「何曜日」。"
@@ -1954,10 +1954,10 @@
             "type": "multiple_choice",
             "question_text": "明日、京都（　）行きます。",
             "options": [
-              "へ",
               "を",
+              "と",
               "が",
-              "と"
+              "へ"
             ],
             "correct_answer": "へ",
             "explanation": "移動的目的地用助詞「へ」（也可用「に」）。"
@@ -1967,10 +1967,10 @@
             "type": "multiple_choice",
             "question_text": "助詞「へ」的發音是？",
             "options": [
-              "e",
               "he",
+              "ha",
               "we",
-              "ha"
+              "e"
             ],
             "correct_answer": "e",
             "explanation": "「へ」當助詞時念作「e」，不念「he」。"
@@ -1980,10 +1980,10 @@
             "type": "multiple_choice",
             "question_text": "昨日、うちへ（　）。─「昨天沒有回家」",
             "options": [
-              "帰りませんでした",
               "帰りません",
-              "帰ります",
-              "帰りました"
+              "帰りませんでした",
+              "帰りました",
+              "帰ります"
             ],
             "correct_answer": "帰りませんでした",
             "explanation": "過去否定用「～ませんでした」。"
@@ -2012,9 +2012,9 @@
             "question_text": "電車（　）会社へ行きます。",
             "options": [
               "で",
-              "に",
               "を",
-              "へ"
+              "へ",
+              "に"
             ],
             "correct_answer": "で",
             "explanation": "交通工具後加「で」，表示「搭電車」。"
@@ -2024,10 +2024,10 @@
             "type": "multiple_choice",
             "question_text": "「走路去車站」的正確說法是？",
             "options": [
-              "歩いて駅へ行きます。",
               "歩いてで駅へ行きます。",
-              "歩くで駅へ行きます。",
-              "歩きますで駅へ行きます。"
+              "歩きますで駅へ行きます。",
+              "歩いて駅へ行きます。",
+              "歩くで駅へ行きます。"
             ],
             "correct_answer": "歩いて駅へ行きます。",
             "explanation": "走路用「歩いて」，後面不加「で」。"
@@ -2037,10 +2037,10 @@
             "type": "multiple_choice",
             "question_text": "バス（　）学校へ来ます。",
             "options": [
-              "で",
               "に",
-              "と",
-              "が"
+              "で",
+              "が",
+              "と"
             ],
             "correct_answer": "で",
             "explanation": "交通手段用「で」：搭公車來學校。"
@@ -2068,10 +2068,10 @@
             "type": "multiple_choice",
             "question_text": "友達（　）日本へ行きます。─「和朋友」",
             "options": [
-              "と",
-              "で",
               "に",
-              "を"
+              "を",
+              "で",
+              "と"
             ],
             "correct_answer": "と",
             "explanation": "一起行動的對象用「と」，相當於「和～」。"
@@ -2081,10 +2081,10 @@
             "type": "multiple_choice",
             "question_text": "「一個人（做某事）」的正確說法是？",
             "options": [
-              "一人で",
-              "一人と",
               "一人に",
-              "一人へ"
+              "一人へ",
+              "一人で",
+              "一人と"
             ],
             "correct_answer": "一人で",
             "explanation": "獨自一人用「一人で」，「で」不可省略。"
@@ -2094,10 +2094,10 @@
             "type": "multiple_choice",
             "question_text": "詢問一起去的對象時用？",
             "options": [
-              "誰と",
               "誰が",
-              "誰を",
-              "誰で"
+              "誰で",
+              "誰と",
+              "誰を"
             ],
             "correct_answer": "誰と",
             "explanation": "詢問同行對象用「誰と」（和誰）。"
@@ -2125,9 +2125,9 @@
         "question_text": "明日、友達（ ）京都へ行きます。",
         "options": [
           "と",
-          "で",
           "に",
-          "が"
+          "が",
+          "で"
         ],
         "correct_answer": "と",
         "explanation": "「友達」是一起行動的對象，表示同伴須用助詞「と」。"
@@ -2137,9 +2137,9 @@
         "type": "multiple_choice",
         "question_text": "日曜日、どこ（ ）行きますか。",
         "options": [
-          "へ",
-          "で",
           "を",
+          "で",
+          "へ",
           "は"
         ],
         "correct_answer": "へ",
@@ -2331,9 +2331,9 @@
             "type": "multiple_choice",
             "question_text": "何（　）飲みますか。",
             "options": [
-              "を",
-              "が",
               "は",
+              "が",
+              "を",
               "で"
             ],
             "correct_answer": "を",
@@ -2344,10 +2344,10 @@
             "type": "multiple_choice",
             "question_text": "助詞「を」的發音是？",
             "options": [
-              "o",
               "wo",
+              "ho",
               "u",
-              "ho"
+              "o"
             ],
             "correct_answer": "o",
             "explanation": "助詞「を」發音與「お」相同，念作「o」。"
@@ -2375,10 +2375,10 @@
             "type": "multiple_choice",
             "question_text": "図書館（　）本を読みます。",
             "options": [
-              "で",
               "に",
-              "へ",
-              "を"
+              "で",
+              "を",
+              "へ"
             ],
             "correct_answer": "で",
             "explanation": "動作進行的場所用「で」：在圖書館看書。"
@@ -2389,8 +2389,8 @@
             "question_text": "教室（　）学生がいます。",
             "options": [
               "に",
-              "で",
               "を",
+              "で",
               "と"
             ],
             "correct_answer": "に",
@@ -2401,10 +2401,10 @@
             "type": "multiple_choice",
             "question_text": "レストラン（　）ご飯を食べました。",
             "options": [
-              "で",
               "に",
-              "へ",
-              "から"
+              "から",
+              "で",
+              "へ"
             ],
             "correct_answer": "で",
             "explanation": "「吃飯」是動作，場所用「で」。"
@@ -2432,10 +2432,10 @@
             "type": "multiple_choice",
             "question_text": "一緒に映画を見（　）か。─ 禮貌邀請",
             "options": [
-              "ません",
               "ます",
-              "ました",
-              "ましょう"
+              "ましょう",
+              "ません",
+              "ました"
             ],
             "correct_answer": "ません",
             "explanation": "「～ませんか」是禮貌的邀請：「要不要一起看？」"
@@ -2445,9 +2445,9 @@
             "type": "multiple_choice",
             "question_text": "回應邀請說「好，一起看吧」：",
             "options": [
-              "ええ、見ましょう。",
-              "いいえ、見ます。",
               "はい、見ません。",
+              "いいえ、見ます。",
+              "ええ、見ましょう。",
               "ええ、見ましたか。"
             ],
             "correct_answer": "ええ、見ましょう。",
@@ -2458,10 +2458,10 @@
             "type": "multiple_choice",
             "question_text": "「～ませんか」的語意是？",
             "options": [
-              "邀請",
               "否定",
+              "禁止",
               "過去",
-              "禁止"
+              "邀請"
             ],
             "correct_answer": "邀請",
             "explanation": "雖是否定形，但「～ませんか」的語意是邀請，不是否定。"
@@ -2476,8 +2476,8 @@
         "question_text": "毎朝コーヒー（ ）飲みます。",
         "options": [
           "を",
-          "に",
           "で",
+          "に",
           "が"
         ],
         "correct_answer": "を",
@@ -2488,10 +2488,10 @@
         "type": "multiple_choice",
         "question_text": "図書館（ ）本を読みます。",
         "options": [
+          "へ",
           "で",
           "に",
-          "を",
-          "へ"
+          "を"
         ],
         "correct_answer": "で",
         "explanation": "「読みます」是動作，表示動作進行的場所須用助詞「で」。"
@@ -2501,10 +2501,10 @@
         "type": "multiple_choice",
         "question_text": "A：一緒に映画を（ ）。 B：ええ、いいですね。",
         "options": [
-          "見ませんか",
-          "見ません",
           "見ました",
-          "見ませんでした"
+          "見ませんでした",
+          "見ません",
+          "見ませんか"
         ],
         "correct_answer": "見ませんか",
         "explanation": "B 的回答是接受邀請，因此 A 應使用邀約句型「～ませんか」。"
@@ -2683,9 +2683,9 @@
             "question_text": "私は友達に本を（　）。─ 我送書給朋友",
             "options": [
               "あげました",
-              "もらいました",
+              "ありました",
               "くれました",
-              "ありました"
+              "もらいました"
             ],
             "correct_answer": "あげました",
             "explanation": "給予用「あげます」，接受者用「に」標示。"
@@ -2696,9 +2696,9 @@
             "question_text": "私は田中さん（　）花をもらいました。",
             "options": [
               "に",
-              "を",
               "が",
-              "は"
+              "は",
+              "を"
             ],
             "correct_answer": "に",
             "explanation": "「もらいます」的給予者用「に」或「から」標示。"
@@ -2708,10 +2708,10 @@
             "type": "multiple_choice",
             "question_text": "別人給「我」東西時用哪個動詞？田中さんは私に本を（　）。",
             "options": [
-              "くれました",
               "あげました",
+              "しました",
               "もらいました",
-              "しました"
+              "くれました"
             ],
             "correct_answer": "くれました",
             "explanation": "別人給我時不用「あげます」，要用「くれます」。"
@@ -2739,10 +2739,10 @@
             "type": "multiple_choice",
             "question_text": "はし（　）ご飯を食べます。",
             "options": [
+              "と",
               "で",
               "を",
-              "に",
-              "と"
+              "に"
             ],
             "correct_answer": "で",
             "explanation": "使用的工具後加「で」：「用筷子」。"
@@ -2752,10 +2752,10 @@
             "type": "multiple_choice",
             "question_text": "「用日文說」的正確說法是？",
             "options": [
+              "日本語が話します。",
               "日本語で話します。",
               "日本語を話します。",
-              "日本語に話します。",
-              "日本語が話します。"
+              "日本語に話します。"
             ],
             "correct_answer": "日本語で話します。",
             "explanation": "「で」表示使用的語言（用日文說）；「を」則是「說日文」。"
@@ -2796,10 +2796,10 @@
             "type": "multiple_choice",
             "question_text": "（　）宿題をしましたか。─「已經做了嗎」",
             "options": [
-              "もう",
               "まだ",
+              "とても",
               "よく",
-              "とても"
+              "もう"
             ],
             "correct_answer": "もう",
             "explanation": "「もう」搭配過去式表示「已經～了」。"
@@ -2809,10 +2809,10 @@
             "type": "multiple_choice",
             "question_text": "被問「もう食べましたか」，回答「還沒」應該說？",
             "options": [
-              "いいえ、まだです。",
-              "いいえ、まだ食べませんでした。",
               "はい、まだです。",
-              "いいえ、もうです。"
+              "いいえ、もうです。",
+              "いいえ、まだ食べませんでした。",
+              "いいえ、まだです。"
             ],
             "correct_answer": "いいえ、まだです。",
             "explanation": "回答「還沒」用「まだです」，不可說「まだ～ませんでした」。"
@@ -2823,8 +2823,8 @@
             "question_text": "もう昼ご飯を（　）か。",
             "options": [
               "食べました",
-              "食べます",
               "食べましょう",
+              "食べます",
               "食べません"
             ],
             "correct_answer": "食べました",
@@ -2839,10 +2839,10 @@
         "type": "multiple_choice",
         "question_text": "私は田中さん（ ）花をもらいました。",
         "options": [
-          "に",
-          "を",
           "で",
-          "へ"
+          "へ",
+          "に",
+          "を"
         ],
         "correct_answer": "に",
         "explanation": "「もらいます」的給予者用助詞「に」（或「から」）標示。"
@@ -2852,10 +2852,10 @@
         "type": "multiple_choice",
         "question_text": "日本人ははし（ ）ご飯を食べます。",
         "options": [
-          "で",
           "に",
           "を",
-          "と"
+          "と",
+          "で"
         ],
         "correct_answer": "で",
         "explanation": "「はし」是吃飯使用的工具，表示工具手段須用助詞「で」。"
@@ -2865,10 +2865,10 @@
         "type": "multiple_choice",
         "question_text": "A：もう宿題をしましたか。 B：いいえ、（ ）。",
         "options": [
-          "まだです",
           "もうです",
+          "まだしませんでした",
           "しました",
-          "まだしませんでした"
+          "まだです"
         ],
         "correct_answer": "まだです",
         "explanation": "回答尚未完成時使用「まだです」，「まだしませんでした」是錯誤用法。"
@@ -3037,10 +3037,10 @@
             "type": "multiple_choice",
             "question_text": "このかばんは高（　）です。─「不貴」",
             "options": [
-              "くない",
               "いない",
               "じゃない",
-              "かった"
+              "かった",
+              "くない"
             ],
             "correct_answer": "くない",
             "explanation": "い形容詞否定：去「い」加「くない」。"
@@ -3050,10 +3050,10 @@
             "type": "multiple_choice",
             "question_text": "「いい」的否定形是？",
             "options": [
-              "よくないです",
               "いくないです",
-              "いいではありません",
-              "よいくないです"
+              "よくないです",
+              "よいくないです",
+              "いいではありません"
             ],
             "correct_answer": "よくないです",
             "explanation": "「いい」是特殊變化，否定用「よくない」。"
@@ -3063,10 +3063,10 @@
             "type": "multiple_choice",
             "question_text": "この本はあまり難し（　）ないです。",
             "options": [
-              "く",
-              "い",
               "くて",
-              "かっ"
+              "かっ",
+              "い",
+              "く"
             ],
             "correct_answer": "く",
             "explanation": "否定形「難しくない」：去「い」加「く」再接「ない」。"
@@ -3094,10 +3094,10 @@
             "type": "multiple_choice",
             "question_text": "昨日はとても寒（　）です。─ 過去",
             "options": [
-              "かった",
-              "いでした",
               "くない",
-              "い"
+              "い",
+              "かった",
+              "いでした"
             ],
             "correct_answer": "かった",
             "explanation": "い形容詞過去式：去「い」加「かった」。"
@@ -3120,10 +3120,10 @@
             "type": "multiple_choice",
             "question_text": "「いい」的過去式是？",
             "options": [
-              "よかったです",
               "いかったです",
               "いいでした",
-              "よいでした"
+              "よいでした",
+              "よかったです"
             ],
             "correct_answer": "よかったです",
             "explanation": "「いい」的過去式為特殊變化「よかったです」。"
@@ -3151,10 +3151,10 @@
             "type": "multiple_choice",
             "question_text": "（　）車を買いました。─「新車」",
             "options": [
-              "新しい",
               "新しいな",
-              "新しく",
-              "新しいの"
+              "新しい",
+              "新しいの",
+              "新しく"
             ],
             "correct_answer": "新しい",
             "explanation": "い形容詞直接放在名詞前修飾，不加「な」。"
@@ -3164,9 +3164,9 @@
             "type": "multiple_choice",
             "question_text": "「あまり」後面必須搭配什麼？",
             "options": [
-              "否定形",
-              "肯定形",
               "過去形",
+              "肯定形",
+              "否定形",
               "疑問形"
             ],
             "correct_answer": "否定形",
@@ -3178,9 +3178,9 @@
             "question_text": "この店は（　）安くないです。─「不太便宜」",
             "options": [
               "あまり",
-              "とても",
               "よく",
-              "たくさん"
+              "たくさん",
+              "とても"
             ],
             "correct_answer": "あまり",
             "explanation": "「あまり＋否定」表示「不太～」；「とても」用於肯定句。"
@@ -3194,10 +3194,10 @@
         "type": "multiple_choice",
         "question_text": "この店のラーメンはあまり（ ）。",
         "options": [
-          "おいしくないです",
-          "おいしいです",
           "おいしくなかったです",
-          "おいしいではありません"
+          "おいしいではありません",
+          "おいしくないです",
+          "おいしいです"
         ],
         "correct_answer": "おいしくないです",
         "explanation": "「あまり」須與否定搭配，且句子為現在式，因此選「おいしくないです」。「おいしいではありません」是錯誤的形式。"
@@ -3207,10 +3207,10 @@
         "type": "multiple_choice",
         "question_text": "昨日はとても（ ）。",
         "options": [
-          "寒かったです",
-          "寒いでした",
           "寒いです",
-          "寒くないです"
+          "寒くないです",
+          "寒いでした",
+          "寒かったです"
         ],
         "correct_answer": "寒かったです",
         "explanation": "「昨日」表示過去，い形容詞過去式為「～かったです」。「寒いでした」是常見錯誤。"
@@ -3220,10 +3220,10 @@
         "type": "multiple_choice",
         "question_text": "A：旅行はどうでしたか。 B：とても（ ）です。",
         "options": [
-          "よかった",
           "いかった",
+          "いくなかった",
           "いいでした",
-          "いくなかった"
+          "よかった"
         ],
         "correct_answer": "よかった",
         "explanation": "「いい」的過去式為特殊變化「よかった」，不可寫成「いかった」。"
@@ -3401,10 +3401,10 @@
             "type": "multiple_choice",
             "question_text": "この町は静か（　）。",
             "options": [
-              "です",
-              "いです",
               "だです",
-              "くです"
+              "くです",
+              "です",
+              "いです"
             ],
             "correct_answer": "です",
             "explanation": "な形容詞的活用與名詞相同，肯定直接加「です」。"
@@ -3414,9 +3414,9 @@
             "type": "multiple_choice",
             "question_text": "「きれい」的否定形是？",
             "options": [
-              "きれいではありません",
-              "きれくないです",
               "きれいくないです",
+              "きれくないです",
+              "きれいではありません",
               "きれいじゃない形"
             ],
             "correct_answer": "きれいではありません",
@@ -3427,10 +3427,10 @@
             "type": "multiple_choice",
             "question_text": "先週は暇（　）。─「上週沒有空」",
             "options": [
-              "ではありませんでした",
               "くなかったです",
               "じゃないでした",
-              "でした"
+              "でした",
+              "ではありませんでした"
             ],
             "correct_answer": "ではありませんでした",
             "explanation": "な形容詞過去否定：「ではありませんでした」。"
@@ -3458,10 +3458,10 @@
             "type": "multiple_choice",
             "question_text": "京都は（　）町です。",
             "options": [
+              "きれいだ",
               "きれいな",
               "きれい",
-              "きれいの",
-              "きれいだ"
+              "きれいの"
             ],
             "correct_answer": "きれいな",
             "explanation": "な形容詞修飾名詞時，中間必須加「な」。"
@@ -3472,8 +3472,8 @@
             "question_text": "い形容詞修飾名詞的方式是？",
             "options": [
               "直接接名詞（高い山）",
-              "加「な」（高いな山）",
               "加「の」（高いの山）",
+              "加「な」（高いな山）",
               "加「に」（高いに山）"
             ],
             "correct_answer": "直接接名詞（高い山）",
@@ -3485,9 +3485,9 @@
             "question_text": "（　）人ですか。─ 問「什麼樣的人」",
             "options": [
               "どんな",
-              "どの",
               "どれ",
-              "どう"
+              "どう",
+              "どの"
             ],
             "correct_answer": "どんな",
             "explanation": "詢問性質或種類用「どんな＋名詞」。"
@@ -3516,8 +3516,8 @@
             "question_text": "私は日本料理（　）好きです。",
             "options": [
               "が",
-              "を",
               "に",
+              "を",
               "は"
             ],
             "correct_answer": "が",
@@ -3529,9 +3529,9 @@
             "question_text": "山田さんは英語（　）わかります。",
             "options": [
               "が",
-              "を",
+              "で",
               "に",
-              "で"
+              "を"
             ],
             "correct_answer": "が",
             "explanation": "「わかります」的對象也用「が」標示。"
@@ -3541,10 +3541,10 @@
             "type": "multiple_choice",
             "question_text": "「音楽を好きです」這個說法？",
             "options": [
-              "錯誤，應用「が」",
               "正確",
-              "較禮貌",
-              "口語常用"
+              "錯誤，應用「が」",
+              "口語常用",
+              "較禮貌"
             ],
             "correct_answer": "錯誤，應用「が」",
             "explanation": "好惡的對象用「が」：「音楽が好きです」。"
@@ -3558,10 +3558,10 @@
         "type": "multiple_choice",
         "question_text": "京都は（ ）町です。",
         "options": [
+          "きれいい",
           "きれいな",
           "きれい",
-          "きれいの",
-          "きれいい"
+          "きれいの"
         ],
         "correct_answer": "きれいな",
         "explanation": "「きれい」是な形容詞，修飾名詞時須加「な」。"
@@ -3572,8 +3572,8 @@
         "question_text": "私は日本料理（ ）好きです。",
         "options": [
           "が",
-          "を",
           "に",
+          "を",
           "で"
         ],
         "correct_answer": "が",
@@ -3585,9 +3585,9 @@
         "question_text": "先週は（ ）。",
         "options": [
           "暇でした",
-          "暇かったです",
+          "暇いでした",
           "暇だったです",
-          "暇いでした"
+          "暇かったです"
         ],
         "correct_answer": "暇でした",
         "explanation": "「暇」是な形容詞，過去式與名詞相同，用「～でした」。"
@@ -3766,9 +3766,9 @@
             "question_text": "りんごを三つ買いました──數量詞「三つ」後面？",
             "options": [
               "不加任何助詞",
-              "要加「を」",
               "要加「が」",
-              "要加「は」"
+              "要加「は」",
+              "要加「を」"
             ],
             "correct_answer": "不加任何助詞",
             "explanation": "數量詞直接放在動詞前，後面不加助詞。"
@@ -3791,9 +3791,9 @@
             "type": "multiple_choice",
             "question_text": "「一人」的正確讀音是？",
             "options": [
-              "ひとり",
-              "いちにん",
               "いちじん",
+              "いちにん",
+              "ひとり",
               "ひとにん"
             ],
             "correct_answer": "ひとり",
@@ -3822,10 +3822,10 @@
             "type": "multiple_choice",
             "question_text": "東京は台北（　）大きいです。─「比台北大」",
             "options": [
-              "より",
-              "から",
               "まで",
-              "ほど"
+              "ほど",
+              "より",
+              "から"
             ],
             "correct_answer": "より",
             "explanation": "「より」表示比較的基準：A比B～。"
@@ -3835,10 +3835,10 @@
             "type": "multiple_choice",
             "question_text": "コーヒーと紅茶と（　）が好きですか。",
             "options": [
-              "どちら",
-              "何",
               "どれ",
-              "誰"
+              "誰",
+              "どちら",
+              "何"
             ],
             "correct_answer": "どちら",
             "explanation": "二選一的疑問用「どちら」。"
@@ -3848,9 +3848,9 @@
             "type": "multiple_choice",
             "question_text": "回答「コーヒーと紅茶とどちらが好きですか」用哪句？",
             "options": [
-              "コーヒーのほうが好きです。",
-              "はい、好きです。",
               "コーヒーは一番好きです。",
+              "はい、好きです。",
+              "コーヒーのほうが好きです。",
               "いいえ、どちらです。"
             ],
             "correct_answer": "コーヒーのほうが好きです。",
@@ -3879,10 +3879,10 @@
             "type": "multiple_choice",
             "question_text": "スポーツ（　）何が一番好きですか。",
             "options": [
-              "で",
               "に",
               "は",
-              "を"
+              "を",
+              "で"
             ],
             "correct_answer": "で",
             "explanation": "最高級句型中，範圍用助詞「で」標示。"
@@ -3893,9 +3893,9 @@
             "question_text": "日本で富士山が（　）高いです。",
             "options": [
               "一番",
-              "とても",
               "もっと",
-              "より"
+              "より",
+              "とても"
             ],
             "correct_answer": "一番",
             "explanation": "「一番」表示「最」，用於三者以上的最高級。"
@@ -3905,10 +3905,10 @@
             "type": "multiple_choice",
             "question_text": "三者以上的範圍中詢問時，用哪類疑問詞？",
             "options": [
-              "何・どれ・どこ等",
               "どちら",
+              "はい・いいえ",
               "どっちか",
-              "はい・いいえ"
+              "何・どれ・どこ等"
             ],
             "correct_answer": "何・どれ・どこ等",
             "explanation": "三者以上用「何・どれ・どこ・誰」等；二選一才用「どちら」。"
@@ -3922,10 +3922,10 @@
         "type": "multiple_choice",
         "question_text": "りんごを（ ）買いました。",
         "options": [
-          "三つ",
-          "三つを",
           "三枚",
-          "三本"
+          "三本",
+          "三つを",
+          "三つ"
         ],
         "correct_answer": "三つ",
         "explanation": "蘋果用一般數量詞「～つ」，且數量詞後不加助詞，故選「三つ」。"
@@ -3935,10 +3935,10 @@
         "type": "multiple_choice",
         "question_text": "東京は台北（ ）大きいです。",
         "options": [
-          "より",
           "ほど",
           "で",
-          "が"
+          "が",
+          "より"
         ],
         "correct_answer": "より",
         "explanation": "比較句「AはBより～です」中，比較基準用「より」。"
@@ -3948,10 +3948,10 @@
         "type": "multiple_choice",
         "question_text": "スポーツ（ ）何が一番好きですか。",
         "options": [
-          "で",
-          "に",
           "は",
-          "を"
+          "を",
+          "に",
+          "で"
         ],
         "correct_answer": "で",
         "explanation": "最高級句型中，表示選擇範圍的助詞是「で」。"
@@ -4120,10 +4120,10 @@
             "type": "multiple_choice",
             "question_text": "「書きます」屬於哪一類動詞？",
             "options": [
-              "I類",
               "II類",
               "III類",
-              "な形容詞"
+              "な形容詞",
+              "I類"
             ],
             "correct_answer": "I類",
             "explanation": "「ます」前是い段音「き」，屬於I類（五段動詞）。"
@@ -4133,10 +4133,10 @@
             "type": "multiple_choice",
             "question_text": "「食べます」屬於哪一類動詞？",
             "options": [
-              "II類",
               "I類",
+              "例外動詞",
               "III類",
-              "例外動詞"
+              "II類"
             ],
             "correct_answer": "II類",
             "explanation": "「ます」前是え段音「べ」，屬於II類（一段動詞）。"
@@ -4146,10 +4146,10 @@
             "type": "multiple_choice",
             "question_text": "III類（不規則動詞）有哪些？",
             "options": [
-              "します與来ます",
               "食べます與見ます",
-              "行きます與書きます",
-              "います與あります"
+              "します與来ます",
+              "います與あります",
+              "行きます與書きます"
             ],
             "correct_answer": "します與来ます",
             "explanation": "III類只有「します（含～します）」與「来ます」兩個。"
@@ -4178,9 +4178,9 @@
             "question_text": "「見ます」屬於哪一類動詞？",
             "options": [
               "II類（例外）",
-              "I類",
               "III類",
-              "形容詞"
+              "形容詞",
+              "I類"
             ],
             "correct_answer": "II類（例外）",
             "explanation": "「見ます」的「み」雖是い段音，但屬II類例外動詞，須個別記憶。"
@@ -4190,10 +4190,10 @@
             "type": "multiple_choice",
             "question_text": "下列何者是「ます」前為い段音、卻屬II類的例外動詞？",
             "options": [
-              "起きます",
               "書きます",
-              "読みます",
-              "話します"
+              "話します",
+              "起きます",
+              "読みます"
             ],
             "correct_answer": "起きます",
             "explanation": "「起きます」是II類例外；其餘三個都是規則的I類。"
@@ -4203,10 +4203,10 @@
             "type": "multiple_choice",
             "question_text": "「います」屬於哪一類動詞？",
             "options": [
-              "II類（例外）",
               "I類",
-              "III類",
-              "助動詞"
+              "II類（例外）",
+              "助動詞",
+              "III類"
             ],
             "correct_answer": "II類（例外）",
             "explanation": "「います」是II類例外動詞，變化時直接去「ます」。"
@@ -4235,9 +4235,9 @@
             "question_text": "動詞的過去否定形是？",
             "options": [
               "～ませんでした",
-              "～ませんかった",
+              "～ましたせん",
               "～ないでした",
-              "～ましたせん"
+              "～ませんかった"
             ],
             "correct_answer": "～ませんでした",
             "explanation": "過去否定固定為「～ませんでした」。"
@@ -4247,10 +4247,10 @@
             "type": "multiple_choice",
             "question_text": "昨日は日本語を勉強（　）。─「昨天沒念」",
             "options": [
-              "しませんでした",
-              "しません",
               "しました",
-              "します"
+              "します",
+              "しませんでした",
+              "しません"
             ],
             "correct_answer": "しませんでした",
             "explanation": "過去的否定用「～ませんでした」。"
@@ -4260,10 +4260,10 @@
             "type": "multiple_choice",
             "question_text": "明天要做的動作用哪個形？",
             "options": [
-              "～ます",
-              "～ました",
               "～ませんでした",
-              "～ています"
+              "～ています",
+              "～ました",
+              "～ます"
             ],
             "correct_answer": "～ます",
             "explanation": "日文動詞只分「非過去」與「過去」，未來的動作用「～ます」。"
@@ -4277,10 +4277,10 @@
         "type": "multiple_choice",
         "question_text": "「読みます」屬於哪一類動詞？",
         "options": [
+          "い形容詞",
           "I類（五段動詞）",
           "II類（一段動詞）",
-          "III類（不規則動詞）",
-          "い形容詞"
+          "III類（不規則動詞）"
         ],
         "correct_answer": "I類（五段動詞）",
         "explanation": "「読みます」中「ます」前為い段音「み」，屬於I類動詞。"
@@ -4291,9 +4291,9 @@
         "question_text": "「起きます」屬於哪一類動詞？",
         "options": [
           "II類（一段動詞）",
-          "I類（五段動詞）",
           "III類（不規則動詞）",
-          "な形容詞"
+          "な形容詞",
+          "I類（五段動詞）"
         ],
         "correct_answer": "II類（一段動詞）",
         "explanation": "「起きます」的「ます」前雖為い段音「き」，但屬於II類動詞的例外，須特別記憶。"
@@ -4303,10 +4303,10 @@
         "type": "multiple_choice",
         "question_text": "昨日は日本語を（ ）。",
         "options": [
+          "勉強しませんかった",
           "勉強しませんでした",
           "勉強しません",
-          "勉強しました か",
-          "勉強しませんかった"
+          "勉強しました か"
         ],
         "correct_answer": "勉強しませんでした",
         "explanation": "「昨日」為過去，過去否定為「～ませんでした」。「～ませんかった」是錯誤形式。"
@@ -4501,10 +4501,10 @@
             "type": "multiple_choice",
             "question_text": "「行きます」的て形是？",
             "options": [
-              "行って",
-              "行いて",
               "行んで",
-              "行きて"
+              "行きて",
+              "行いて",
+              "行って"
             ],
             "correct_answer": "行って",
             "explanation": "「行きます」是特殊例外，て形為「行って」，不是「行いて」。"
@@ -4532,10 +4532,10 @@
             "type": "multiple_choice",
             "question_text": "ちょっと待っ（　）ください。",
             "options": [
-              "て",
               "た",
               "ない",
-              "たり"
+              "たり",
+              "て"
             ],
             "correct_answer": "て",
             "explanation": "請求句型「～てください」：て形＋ください。"
@@ -4545,10 +4545,10 @@
             "type": "multiple_choice",
             "question_text": "ここに名前を（　）ください。",
             "options": [
-              "書いて",
               "書きて",
-              "書かて",
-              "書くて"
+              "書くて",
+              "書いて",
+              "書かて"
             ],
             "correct_answer": "書いて",
             "explanation": "「書きます」的て形是「書いて」（き→いて）。"
@@ -4558,10 +4558,10 @@
             "type": "multiple_choice",
             "question_text": "對上司或長輩請求時，可在句前加什麼緩和語氣？",
             "options": [
-              "すみませんが",
               "おい",
-              "ねえ",
-              "あのう禁止"
+              "あのう禁止",
+              "すみませんが",
+              "ねえ"
             ],
             "correct_answer": "すみませんが",
             "explanation": "加「すみませんが」可使「～てください」的指示語氣更委婉。"
@@ -4590,8 +4590,8 @@
             "question_text": "雨が（　）います。─「正在下雨」",
             "options": [
               "降って",
-              "降りて",
               "降んで",
+              "降りて",
               "降た"
             ],
             "correct_answer": "降って",
@@ -4602,10 +4602,10 @@
             "type": "multiple_choice",
             "question_text": "私は台北に（　）います。─「住在台北」",
             "options": [
-              "住んで",
               "住みて",
-              "住って",
-              "住で"
+              "住で",
+              "住んで",
+              "住って"
             ],
             "correct_answer": "住んで",
             "explanation": "「住みます」用「住んでいます」表示居住的狀態。"
@@ -4615,10 +4615,10 @@
             "type": "multiple_choice",
             "question_text": "「結婚しています」表示什麼？",
             "options": [
-              "狀態（已婚）",
               "正要結婚",
-              "曾經結婚",
-              "想結婚"
+              "狀態（已婚）",
+              "想結婚",
+              "曾經結婚"
             ],
             "correct_answer": "狀態（已婚）",
             "explanation": "「～ています」在此表示動作結果持續的狀態：已婚。"
@@ -4632,10 +4632,10 @@
         "type": "multiple_choice",
         "question_text": "「待ちます」的て形是？",
         "options": [
-          "待って",
           "待ちて",
           "待んで",
-          "待いて"
+          "待いて",
+          "待って"
         ],
         "correct_answer": "待って",
         "explanation": "「待ちます」為I類動詞，「ます」前為「ち」，變化規則為「ち→って」。"
@@ -4658,10 +4658,10 @@
         "type": "multiple_choice",
         "question_text": "田中さんは今、電話を（ ）。",
         "options": [
-          "かけています",
-          "かけます",
           "かけて",
-          "かけました"
+          "かけました",
+          "かけています",
+          "かけます"
         ],
         "correct_answer": "かけています",
         "explanation": "「今」表示現在正在進行的動作，須用「～ています」。"
@@ -4843,10 +4843,10 @@
             "type": "multiple_choice",
             "question_text": "「あります」的ない形是？",
             "options": [
-              "ない",
               "あらない",
-              "ありない",
-              "あるない"
+              "ない",
+              "あるない",
+              "ありない"
             ],
             "correct_answer": "ない",
             "explanation": "「あります」是特殊例外，ない形就是「ない」。"
@@ -4856,10 +4856,10 @@
             "type": "multiple_choice",
             "question_text": "「来ます」的ない形是？",
             "options": [
-              "来ない（こない）",
               "来ない（きない）",
-              "来なくて",
-              "来らない"
+              "来ない（こない）",
+              "来らない",
+              "来なくて"
             ],
             "correct_answer": "来ない（こない）",
             "explanation": "III類「来ます」的ない形讀作「こない」。"
@@ -4887,10 +4887,10 @@
             "type": "multiple_choice",
             "question_text": "ここで写真を（　）でください。",
             "options": [
-              "撮らない",
               "撮りない",
-              "撮って",
-              "撮らなくて"
+              "撮らない",
+              "撮らなくて",
+              "撮って"
             ],
             "correct_answer": "撮らない",
             "explanation": "禁止請求「～ないでください」：ない形＋でください。"
@@ -4900,10 +4900,10 @@
             "type": "multiple_choice",
             "question_text": "心配（　）でください。─「請不要擔心」",
             "options": [
-              "しない",
               "しなくて",
-              "しません",
-              "せず"
+              "せず",
+              "しない",
+              "しません"
             ],
             "correct_answer": "しない",
             "explanation": "「します」的ない形是「しない」：心配しないでください。"
@@ -4913,10 +4913,10 @@
             "type": "multiple_choice",
             "question_text": "「触らないください」這個說法？",
             "options": [
-              "錯誤，「で」不可省略",
-              "正確",
               "口語可以",
-              "更客氣"
+              "更客氣",
+              "錯誤，「で」不可省略",
+              "正確"
             ],
             "correct_answer": "錯誤，「で」不可省略",
             "explanation": "正確說法是「触らないでください」，「で」不可省略。"
@@ -4945,8 +4945,8 @@
             "question_text": "毎日薬を飲ま（　）なりません。",
             "options": [
               "なければ",
-              "なくても",
               "ないで",
+              "なくても",
               "なかった"
             ],
             "correct_answer": "なければ",
@@ -4957,10 +4957,10 @@
             "type": "multiple_choice",
             "question_text": "「明天不必早起」的說法是？",
             "options": [
+              "早く起きません。",
               "早く起きなくてもいいです。",
               "早く起きなければなりません。",
-              "早く起きないでください。",
-              "早く起きません。"
+              "早く起きないでください。"
             ],
             "correct_answer": "早く起きなくてもいいです。",
             "explanation": "「～なくてもいいです」表示「不～也可以」。"
@@ -4970,9 +4970,9 @@
             "type": "multiple_choice",
             "question_text": "「～なければなりません」的語意是？",
             "options": [
-              "必須（義務）",
-              "禁止",
               "不必",
+              "禁止",
+              "必須（義務）",
               "邀請"
             ],
             "correct_answer": "必須（義務）",
@@ -4987,10 +4987,10 @@
         "type": "multiple_choice",
         "question_text": "「飲みます」的ない形是？",
         "options": [
-          "飲まない",
-          "飲みない",
           "飲めない",
-          "飲んない"
+          "飲んない",
+          "飲まない",
+          "飲みない"
         ],
         "correct_answer": "飲まない",
         "explanation": "「飲みます」為I類動詞，「み」改為あ段音「ま」再加「ない」。"
@@ -5000,10 +5000,10 @@
         "type": "multiple_choice",
         "question_text": "ここで写真を（ ）ください。",
         "options": [
-          "撮らないで",
           "撮らない",
-          "撮って",
-          "撮りません"
+          "撮りません",
+          "撮らないで",
+          "撮って"
         ],
         "correct_answer": "撮らないで",
         "explanation": "禁止請求句型為「～ないでください」，「で」不可省略。"
@@ -5014,9 +5014,9 @@
         "question_text": "明日は休みですから、早く（ ）。",
         "options": [
           "起きなくてもいいです",
-          "起きなければなりません",
           "起きないでください",
-          "起きてください"
+          "起きてください",
+          "起きなければなりません"
         ],
         "correct_answer": "起きなくてもいいです",
         "explanation": "「明天放假」是理由，因此後句應表示「不必早起」，用「～なくてもいいです」。"
@@ -5194,9 +5194,9 @@
             "type": "multiple_choice",
             "question_text": "「書きます」的辭書形是？",
             "options": [
-              "書く",
-              "書きる",
               "書け",
+              "書きる",
+              "書く",
               "書か"
             ],
             "correct_answer": "書く",
@@ -5207,10 +5207,10 @@
             "type": "multiple_choice",
             "question_text": "「食べます」的辭書形是？",
             "options": [
-              "食べる",
               "食べく",
+              "食べう",
               "食ぶ",
-              "食べう"
+              "食べる"
             ],
             "correct_answer": "食べる",
             "explanation": "II類：去「ます」加「る」。"
@@ -5251,10 +5251,10 @@
             "type": "multiple_choice",
             "question_text": "私は日本語を（　）ことができます。",
             "options": [
-              "話す",
               "話します",
               "話して",
-              "話した"
+              "話した",
+              "話す"
             ],
             "correct_answer": "話す",
             "explanation": "「～ことができます」前面必須接辭書形。"
@@ -5277,10 +5277,10 @@
             "type": "multiple_choice",
             "question_text": "「話しますことができます」這個說法？",
             "options": [
+              "口語常用",
               "錯誤，「こと」前須接辭書形",
               "正確",
-              "更禮貌",
-              "口語常用"
+              "更禮貌"
             ],
             "correct_answer": "錯誤，「こと」前須接辭書形",
             "explanation": "正確說法是「話すことができます」。"
@@ -5308,10 +5308,10 @@
             "type": "multiple_choice",
             "question_text": "趣味は映画を（　）ことです。",
             "options": [
-              "見る",
               "見ます",
-              "見て",
-              "見た"
+              "見る",
+              "見た",
+              "見て"
             ],
             "correct_answer": "見る",
             "explanation": "說明興趣用「辭書形＋ことです」使動作名詞化。"
@@ -5321,10 +5321,10 @@
             "type": "multiple_choice",
             "question_text": "（　）前に、本を読みます。─「睡前」",
             "options": [
-              "寝る",
               "寝た",
+              "寝ます",
               "寝て",
-              "寝ます"
+              "寝る"
             ],
             "correct_answer": "寝る",
             "explanation": "「～前に」前面接辭書形，不論主句時態。"
@@ -5334,10 +5334,10 @@
             "type": "multiple_choice",
             "question_text": "名詞接「前に」的方式是？",
             "options": [
-              "名詞＋の＋前に",
               "名詞＋前に",
+              "名詞＋で＋前に",
               "名詞＋な＋前に",
-              "名詞＋で＋前に"
+              "名詞＋の＋前に"
             ],
             "correct_answer": "名詞＋の＋前に",
             "explanation": "名詞須加「の」：「食事の前に」。"
@@ -5351,9 +5351,9 @@
         "type": "multiple_choice",
         "question_text": "「泳ぎます」的辭書形是？",
         "options": [
-          "泳ぐ",
-          "泳ぎる",
           "泳ぐる",
+          "泳ぎる",
+          "泳ぐ",
           "泳く"
         ],
         "correct_answer": "泳ぐ",
@@ -5364,10 +5364,10 @@
         "type": "multiple_choice",
         "question_text": "私は漢字を（ ）ことができます。",
         "options": [
-          "読む",
-          "読みます",
           "読んで",
-          "読まない"
+          "読まない",
+          "読む",
+          "読みます"
         ],
         "correct_answer": "読む",
         "explanation": "「～ことができます」前面必須接動詞辭書形。"
@@ -5377,9 +5377,9 @@
         "type": "multiple_choice",
         "question_text": "寝る（ ）、本を読みます。",
         "options": [
-          "前に",
-          "後で",
           "から",
+          "後で",
+          "前に",
           "まで"
         ],
         "correct_answer": "前に",
@@ -5549,10 +5549,10 @@
             "type": "multiple_choice",
             "question_text": "「読みます」的た形是？",
             "options": [
-              "読んだ",
-              "読った",
               "読みた",
-              "読いた"
+              "読いた",
+              "読んだ",
+              "読った"
             ],
             "correct_answer": "読んだ",
             "explanation": "た形與て形規則相同：「読んで」→「読んだ」。"
@@ -5562,10 +5562,10 @@
             "type": "multiple_choice",
             "question_text": "「行きます」的た形是？",
             "options": [
-              "行った",
               "行いた",
               "行んだ",
-              "行きた"
+              "行きた",
+              "行った"
             ],
             "correct_answer": "行った",
             "explanation": "「行きます」是特殊變化，た形為「行った」。"
@@ -5575,10 +5575,10 @@
             "type": "multiple_choice",
             "question_text": "た形的變化規則與哪個形完全相同？",
             "options": [
-              "て形",
               "ない形",
+              "ます形",
               "辭書形",
-              "ます形"
+              "て形"
             ],
             "correct_answer": "て形",
             "explanation": "た形＝て形的「て→た」「で→だ」，規則完全相同。"
@@ -5606,9 +5606,9 @@
             "type": "multiple_choice",
             "question_text": "富士山に（　）ことがあります。─「曾經爬過」",
             "options": [
-              "登った",
-              "登る",
               "登って",
+              "登る",
+              "登った",
               "登ります"
             ],
             "correct_answer": "登った",
@@ -5619,10 +5619,10 @@
             "type": "multiple_choice",
             "question_text": "一度も温泉に入った（　）。─「一次也沒泡過」",
             "options": [
-              "ことがありません",
-              "ことがあります",
               "ことでした",
-              "ことです"
+              "ことです",
+              "ことがあります",
+              "ことがありません"
             ],
             "correct_answer": "ことがありません",
             "explanation": "否定為「～たことがありません」，「一度も」加強語氣。"
@@ -5632,10 +5632,10 @@
             "type": "multiple_choice",
             "question_text": "「昨日日本へ行ったことがあります」這句話？",
             "options": [
-              "錯誤，太近的過去用「行きました」",
               "正確",
-              "更自然",
-              "表示習慣"
+              "表示習慣",
+              "錯誤，太近的過去用「行きました」",
+              "更自然"
             ],
             "correct_answer": "錯誤，太近的過去用「行きました」",
             "explanation": "「～たことがあります」表示經驗，太近的過去事件只用「～ました」。"
@@ -5663,10 +5663,10 @@
             "type": "multiple_choice",
             "question_text": "週末は掃除を（　）、洗濯をしたりします。",
             "options": [
-              "したり",
               "して",
+              "します",
               "した",
-              "します"
+              "したり"
             ],
             "correct_answer": "したり",
             "explanation": "列舉句型「～たり～たりします」。"
@@ -5676,10 +5676,10 @@
             "type": "multiple_choice",
             "question_text": "ご飯を食べた（　）、散歩します。─「吃完飯後」",
             "options": [
-              "後で",
-              "前に",
               "たり",
-              "から"
+              "から",
+              "前に",
+              "後で"
             ],
             "correct_answer": "後で",
             "explanation": "「～た後で」表示「～之後」，前面接た形。"
@@ -5689,10 +5689,10 @@
             "type": "multiple_choice",
             "question_text": "「～たり～たり」句尾必須加什麼？",
             "options": [
-              "します",
               "です",
-              "ます",
-              "あります"
+              "あります",
+              "します",
+              "ます"
             ],
             "correct_answer": "します",
             "explanation": "句尾一定要加「します」，時態由它決定。"
@@ -5706,10 +5706,10 @@
         "type": "multiple_choice",
         "question_text": "「行きます」的た形是？",
         "options": [
-          "行った",
           "行きた",
           "行いた",
-          "行んだ"
+          "行んだ",
+          "行った"
         ],
         "correct_answer": "行った",
         "explanation": "「行きます」是特殊變化，て形為「行って」，因此た形為「行った」。"
@@ -5719,10 +5719,10 @@
         "type": "multiple_choice",
         "question_text": "富士山に（ ）ことがありますか。",
         "options": [
-          "登った",
-          "登る",
           "登って",
-          "登り"
+          "登り",
+          "登る",
+          "登った"
         ],
         "correct_answer": "登った",
         "explanation": "表示經驗的句型「～たことがあります」前面須接動詞た形。"
@@ -5732,10 +5732,10 @@
         "type": "multiple_choice",
         "question_text": "週末は掃除を（ ）、洗濯を（ ）します。",
         "options": [
+          "する／する",
           "したり／したり",
           "して／して",
-          "した／した",
-          "する／する"
+          "した／した"
         ],
         "correct_answer": "したり／したり",
         "explanation": "列舉代表性動作的句型為「～たり～たりします」，前面接た形加「り」。"
