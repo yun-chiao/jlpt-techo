@@ -549,5 +549,19 @@
   { "kanji": "急落します", "kana": "きゅうらくします", "romaji": "kyuuraku shimasu", "part_of_speech": "動詞（III類）", "meaning": "暴跌", "example_ja": "為替が急落した。", "example_zh": "匯率暴跌了。", "category": "動詞" },
   { "kanji": "乱高下します", "kana": "らんこうげします", "romaji": "rankouge shimasu", "part_of_speech": "動詞（III類）", "meaning": "劇烈震盪起伏", "example_ja": "市場が乱高下している。", "example_zh": "市場劇烈震盪起伏。", "category": "動詞" },
   { "kanji": "低迷します", "kana": "ていめいします", "romaji": "teimei shimasu", "part_of_speech": "動詞（III類）", "meaning": "低迷", "example_ja": "景気が低迷している。", "example_zh": "景氣正處於低迷。", "category": "動詞" },
-  { "kanji": "低調", "kana": "ていちょう", "romaji": "teichou", "part_of_speech": "な形容詞", "meaning": "低迷、不景氣", "example_ja": "今年の売り上げは低調だ。", "example_zh": "今年的銷售低迷。", "category": "な形容詞" }
+  { "kanji": "低調", "kana": "ていちょう", "romaji": "teichou", "part_of_speech": "な形容詞", "meaning": "低迷、不景氣", "example_ja": "今年の売り上げは低調だ。", "example_zh": "今年的銷售低迷。", "category": "な形容詞" },
+  { "kanji": "浮揚します", "kana": "ふようします", "romaji": "fuyou shimasu", "part_of_speech": "動詞（III類）", "meaning": "浮起、景氣回升", "example_ja": "景気浮揚策を打ち出す。", "example_zh": "提出景氣回升的對策。", "category": "動詞" },
+  { "kanji": "牽引役", "kana": "けんいんやく", "romaji": "ken-in yaku", "part_of_speech": "名詞", "meaning": "帶動角色、火車頭", "example_ja": "地域経済の牽引役を担う。", "example_zh": "肩負帶動地區經濟的角色。", "category": "文語・表現" },
+  { "kanji": "起爆", "kana": "きばく", "romaji": "kibaku", "part_of_speech": "名詞", "meaning": "引爆", "example_ja": "起爆装置が発見された。", "example_zh": "發現了引爆裝置。", "category": "科學・技術" },
+  { "kanji": "劣化します", "kana": "れっかします", "romaji": "rekka shimasu", "part_of_speech": "動詞（III類）", "meaning": "劣化", "example_ja": "設備が劣化している。", "example_zh": "設備正在劣化。", "category": "動詞" },
+  { "kanji": "陳腐化します", "kana": "ちんぷかします", "romaji": "chinpuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "陳腐化、過時", "example_ja": "技術が陳腐化するのは早い。", "example_zh": "技術陳腐化的速度很快。", "category": "動詞" },
+  { "kanji": "老朽化します", "kana": "ろうきゅうかします", "romaji": "roukyuuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "老舊化", "example_ja": "インフラが老朽化している。", "example_zh": "基礎建設正在老舊化。", "category": "動詞" },
+  { "kanji": "肥大化します", "kana": "ひだいかします", "romaji": "hidaika shimasu", "part_of_speech": "動詞（III類）", "meaning": "肥大化、膨脹", "example_ja": "組織が肥大化してしまった。", "example_zh": "組織變得肥大化了。", "category": "動詞" },
+  { "kanji": "簡素化します", "kana": "かんそかします", "romaji": "kansoka shimasu", "part_of_speech": "動詞（III類）", "meaning": "簡化", "example_ja": "手続きを簡素化する。", "example_zh": "簡化手續。", "category": "動詞" },
+  { "kanji": "効率化します", "kana": "こうりつかします", "romaji": "kouritsuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "效率化", "example_ja": "業務を効率化する。", "example_zh": "使業務效率化。", "category": "動詞" },
+  { "kanji": "省力化します", "kana": "しょうりょくかします", "romaji": "shouryokuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "省力化", "example_ja": "作業を省力化する機械を導入する。", "example_zh": "導入使作業省力化的機械。", "category": "動詞" },
+  { "kanji": "自動化します", "kana": "じどうかします", "romaji": "jidouka shimasu", "part_of_speech": "動詞（III類）", "meaning": "自動化", "example_ja": "生産ラインを自動化する。", "example_zh": "使生產線自動化。", "category": "動詞" },
+  { "kanji": "可視化します", "kana": "かしかします", "romaji": "kashika shimasu", "part_of_speech": "動詞（III類）", "meaning": "視覺化、具象化", "example_ja": "データを可視化する。", "example_zh": "將數據視覺化。", "category": "動詞" },
+  { "kanji": "数値化します", "kana": "すうちかします", "romaji": "suuchika shimasu", "part_of_speech": "動詞（III類）", "meaning": "數值化、量化", "example_ja": "成果を数値化して評価する。", "example_zh": "將成果數值化以進行評估。", "category": "動詞" },
+  { "kanji": "定量化します", "kana": "ていりょうかします", "romaji": "teiryouka shimasu", "part_of_speech": "動詞（III類）", "meaning": "定量化", "example_ja": "効果を定量化するのは難しい。", "example_zh": "要將效果定量化很困難。", "category": "動詞" }
 ]
