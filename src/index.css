@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-canvas: #faf7f2;
+  --color-card-white: #ffffff;
+  --color-sumi-black: #2b2523;
+  --color-butter-yellow: #ffe5a3;
+  --color-oatmeal-track: #efeae1;
+
+  --jlpt-n1: #e63956;
+  --jlpt-n1-rgb: 230, 57, 86;
+  --jlpt-n1-tint: #ffeaef;
+  --jlpt-n2: #ff6b35;
+  --jlpt-n2-rgb: 255, 107, 53;
+  --jlpt-n2-tint: #fff0e8;
+  --jlpt-n3: #7cb518;
+  --jlpt-n3-rgb: 124, 181, 24;
+  --jlpt-n3-tint: #f2f8e6;
+  --jlpt-n4: #0096c7;
+  --jlpt-n4-rgb: 0, 150, 199;
+  --jlpt-n4-tint: #e2f4fa;
+  --jlpt-n5: #8338ec;
+  --jlpt-n5-rgb: 131, 56, 236;
+  --jlpt-n5-tint: #f2e8fd;
+
+  --shadow-retro-sm: 2px 2px 0px #2b2523;
+  --shadow-retro-md: 3px 3px 0px #2b2523;
+  --shadow-retro-lg: 5px 5px 0px #2b2523;
+
+  /* 未指定級別時的預設主題色（墨黑 + 燕麥灰） */
+  --level: var(--color-sumi-black);
+  --level-tint: var(--color-oatmeal-track);
+}
+
+:root[data-level='n1'] {
+  --level: var(--jlpt-n1);
+  --level-tint: var(--jlpt-n1-tint);
+}
+:root[data-level='n2'] {
+  --level: var(--jlpt-n2);
+  --level-tint: var(--jlpt-n2-tint);
+}
+:root[data-level='n3'] {
+  --level: var(--jlpt-n3);
+  --level-tint: var(--jlpt-n3-tint);
+}
+:root[data-level='n4'] {
+  --level: var(--jlpt-n4);
+  --level-tint: var(--jlpt-n4-tint);
+}
+:root[data-level='n5'] {
+  --level: var(--jlpt-n5);
+  --level-tint: var(--jlpt-n5-tint);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-canvas);
+  color: var(--color-sumi-black);
+  font-family: 'Zen Kaku Gothic New', 'Noto Sans TC', 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 鍵盤焦點：以該級色 3px 外框呈現 */
+:focus-visible {
+  outline: 3px solid var(--level);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 錨點跳轉時預留 NavBar 高度 */
+[id^='grammar-point-'] {
+  scroll-margin-top: 96px;
+}
+
+@layer components {
+  /* 復古按鈕：hover 浮起、active 按壓 */
+  .btn-retro {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-paper-sumi bg-paper-card px-4 py-2 font-display text-sm font-bold text-paper-sumi shadow-retro-sm transition-[transform,box-shadow] duration-100 md:px-5 md:py-2.5 md:text-base;
+  }
+  .btn-retro:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-retro-md);
+  }
+  .btn-retro:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  /* 可點擊紙卡：hover 浮起 */
+  .card-lift {
+    @apply transition-[transform,box-shadow] duration-100;
+  }
+  .card-lift:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-retro-lg);
+  }
+}

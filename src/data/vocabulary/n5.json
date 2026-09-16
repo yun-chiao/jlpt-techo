@@ -1,0 +1,6642 @@
+[
+  {
+    "kanji": "私",
+    "kana": "わたし",
+    "romaji": "watashi",
+    "part_of_speech": "代名詞",
+    "meaning": "我",
+    "example_ja": "私は学生です。",
+    "example_zh": "我是學生。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "あなた",
+    "kana": "あなた",
+    "romaji": "anata",
+    "part_of_speech": "代名詞",
+    "meaning": "你",
+    "example_ja": "あなたは先生ですか。",
+    "example_zh": "你是老師嗎？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "彼",
+    "kana": "かれ",
+    "romaji": "kare",
+    "part_of_speech": "代名詞",
+    "meaning": "他",
+    "example_ja": "彼は日本人です。",
+    "example_zh": "他是日本人。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "彼女",
+    "kana": "かのじょ",
+    "romaji": "kanojo",
+    "part_of_speech": "代名詞",
+    "meaning": "她",
+    "example_ja": "彼女は私の友達です。",
+    "example_zh": "她是我的朋友。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "私たち",
+    "kana": "わたしたち",
+    "romaji": "watashitachi",
+    "part_of_speech": "代名詞",
+    "meaning": "我們",
+    "example_ja": "私たちは留学生です。",
+    "example_zh": "我們是留學生。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "皆さん",
+    "kana": "みなさん",
+    "romaji": "minasan",
+    "part_of_speech": "代名詞",
+    "meaning": "大家、各位",
+    "example_ja": "皆さん、おはようございます。",
+    "example_zh": "各位，早安。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "みんな",
+    "kana": "みんな",
+    "romaji": "minna",
+    "part_of_speech": "代名詞",
+    "meaning": "大家、全部",
+    "example_ja": "みんなで公園へ行きます。",
+    "example_zh": "大家一起去公園。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "これ",
+    "kana": "これ",
+    "romaji": "kore",
+    "part_of_speech": "指示代名詞",
+    "meaning": "這個（近己方）",
+    "example_ja": "これは辞書です。",
+    "example_zh": "這是字典。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "それ",
+    "kana": "それ",
+    "romaji": "sore",
+    "part_of_speech": "指示代名詞",
+    "meaning": "那個（近對方）",
+    "example_ja": "それは私のかばんです。",
+    "example_zh": "那是我的包包。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "あれ",
+    "kana": "あれ",
+    "romaji": "are",
+    "part_of_speech": "指示代名詞",
+    "meaning": "那個（遠處）",
+    "example_ja": "あれは何ですか。",
+    "example_zh": "那是什麼？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "どれ",
+    "kana": "どれ",
+    "romaji": "dore",
+    "part_of_speech": "指示代名詞",
+    "meaning": "哪個（三者以上）",
+    "example_ja": "あなたの傘はどれですか。",
+    "example_zh": "你的傘是哪一把？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "この",
+    "kana": "この",
+    "romaji": "kono",
+    "part_of_speech": "連體詞",
+    "meaning": "這個～（接名詞）",
+    "example_ja": "この本は面白いです。",
+    "example_zh": "這本書很有趣。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "その",
+    "kana": "その",
+    "romaji": "sono",
+    "part_of_speech": "連體詞",
+    "meaning": "那個～（接名詞）",
+    "example_ja": "その靴はいくらですか。",
+    "example_zh": "那雙鞋多少錢？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "あの",
+    "kana": "あの",
+    "romaji": "ano",
+    "part_of_speech": "連體詞",
+    "meaning": "那個～（遠處，接名詞）",
+    "example_ja": "あの人は田中さんです。",
+    "example_zh": "那個人是田中先生。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "どの",
+    "kana": "どの",
+    "romaji": "dono",
+    "part_of_speech": "連體詞",
+    "meaning": "哪個～（接名詞）",
+    "example_ja": "どの電車に乗りますか。",
+    "example_zh": "要搭哪班電車？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "ここ",
+    "kana": "ここ",
+    "romaji": "koko",
+    "part_of_speech": "指示代名詞",
+    "meaning": "這裡",
+    "example_ja": "ここは教室です。",
+    "example_zh": "這裡是教室。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "そこ",
+    "kana": "そこ",
+    "romaji": "soko",
+    "part_of_speech": "指示代名詞",
+    "meaning": "那裡（近對方）",
+    "example_ja": "そこにかばんがあります。",
+    "example_zh": "那裡有包包。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "あそこ",
+    "kana": "あそこ",
+    "romaji": "asoko",
+    "part_of_speech": "指示代名詞",
+    "meaning": "那裡（遠處）",
+    "example_ja": "トイレはあそこです。",
+    "example_zh": "廁所在那裡。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "こちら",
+    "kana": "こちら",
+    "romaji": "kochira",
+    "part_of_speech": "指示代名詞",
+    "meaning": "這邊、這位（禮貌）",
+    "example_ja": "こちらは山田さんです。",
+    "example_zh": "這位是山田先生。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "そちら",
+    "kana": "そちら",
+    "romaji": "sochira",
+    "part_of_speech": "指示代名詞",
+    "meaning": "那邊（近對方，禮貌）",
+    "example_ja": "そちらは寒いですか。",
+    "example_zh": "你那邊冷嗎？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "あちら",
+    "kana": "あちら",
+    "romaji": "achira",
+    "part_of_speech": "指示代名詞",
+    "meaning": "那邊（遠處，禮貌）",
+    "example_ja": "受付はあちらです。",
+    "example_zh": "接待處在那邊。",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "どちら",
+    "kana": "どちら",
+    "romaji": "dochira",
+    "part_of_speech": "指示代名詞",
+    "meaning": "哪邊、哪位（禮貌）；二選一的「哪個」",
+    "example_ja": "お国はどちらですか。",
+    "example_zh": "您是哪國人？",
+    "category": "代名詞・指示詞"
+  },
+  {
+    "kanji": "何",
+    "kana": "なに／なん",
+    "romaji": "nani / nan",
+    "part_of_speech": "疑問詞",
+    "meaning": "什麼",
+    "example_ja": "これは何ですか。",
+    "example_zh": "這是什麼？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "誰",
+    "kana": "だれ",
+    "romaji": "dare",
+    "part_of_speech": "疑問詞",
+    "meaning": "誰",
+    "example_ja": "あの人は誰ですか。",
+    "example_zh": "那個人是誰？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "どなた",
+    "kana": "どなた",
+    "romaji": "donata",
+    "part_of_speech": "疑問詞",
+    "meaning": "哪位（「誰」的禮貌說法）",
+    "example_ja": "失礼ですが、どなたですか。",
+    "example_zh": "不好意思，請問您是哪位？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "いつ",
+    "kana": "いつ",
+    "romaji": "itsu",
+    "part_of_speech": "疑問詞",
+    "meaning": "什麼時候",
+    "example_ja": "誕生日はいつですか。",
+    "example_zh": "生日是什麼時候？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "どこ",
+    "kana": "どこ",
+    "romaji": "doko",
+    "part_of_speech": "疑問詞",
+    "meaning": "哪裡",
+    "example_ja": "駅はどこですか。",
+    "example_zh": "車站在哪裡？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "いくつ",
+    "kana": "いくつ",
+    "romaji": "ikutsu",
+    "part_of_speech": "疑問詞",
+    "meaning": "幾個；幾歲",
+    "example_ja": "りんごをいくつ買いますか。",
+    "example_zh": "要買幾個蘋果？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "いくら",
+    "kana": "いくら",
+    "romaji": "ikura",
+    "part_of_speech": "疑問詞",
+    "meaning": "多少錢",
+    "example_ja": "この時計はいくらですか。",
+    "example_zh": "這支手錶多少錢？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "どう",
+    "kana": "どう",
+    "romaji": "dou",
+    "part_of_speech": "疑問詞",
+    "meaning": "如何、怎麼樣",
+    "example_ja": "日本の生活はどうですか。",
+    "example_zh": "日本的生活怎麼樣？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "いかが",
+    "kana": "いかが",
+    "romaji": "ikaga",
+    "part_of_speech": "疑問詞",
+    "meaning": "如何（「どう」的禮貌說法）",
+    "example_ja": "コーヒーはいかがですか。",
+    "example_zh": "來杯咖啡如何？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "どうして",
+    "kana": "どうして",
+    "romaji": "doushite",
+    "part_of_speech": "疑問詞",
+    "meaning": "為什麼",
+    "example_ja": "どうして昨日来ませんでしたか。",
+    "example_zh": "昨天為什麼沒有來？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "なぜ",
+    "kana": "なぜ",
+    "romaji": "naze",
+    "part_of_speech": "疑問詞",
+    "meaning": "為什麼（較書面）",
+    "example_ja": "なぜ日本語を勉強しますか。",
+    "example_zh": "為什麼學日文？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "どんな",
+    "kana": "どんな",
+    "romaji": "donna",
+    "part_of_speech": "連體詞",
+    "meaning": "什麼樣的",
+    "example_ja": "どんな音楽が好きですか。",
+    "example_zh": "你喜歡什麼樣的音樂？",
+    "category": "疑問詞"
+  },
+  {
+    "kanji": "おはようございます",
+    "kana": "おはようございます",
+    "romaji": "ohayou gozaimasu",
+    "part_of_speech": "寒暄語",
+    "meaning": "早安",
+    "example_ja": "先生、おはようございます。",
+    "example_zh": "老師，早安。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "こんにちは",
+    "kana": "こんにちは",
+    "romaji": "konnichiwa",
+    "part_of_speech": "寒暄語",
+    "meaning": "你好、午安",
+    "example_ja": "こんにちは。お元気ですか。",
+    "example_zh": "你好。最近好嗎？",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "こんばんは",
+    "kana": "こんばんは",
+    "romaji": "konbanwa",
+    "part_of_speech": "寒暄語",
+    "meaning": "晚上好",
+    "example_ja": "こんばんは。寒いですね。",
+    "example_zh": "晚上好。好冷啊。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "さようなら",
+    "kana": "さようなら",
+    "romaji": "sayounara",
+    "part_of_speech": "寒暄語",
+    "meaning": "再見",
+    "example_ja": "さようなら。また明日。",
+    "example_zh": "再見。明天見。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "おやすみなさい",
+    "kana": "おやすみなさい",
+    "romaji": "oyasuminasai",
+    "part_of_speech": "寒暄語",
+    "meaning": "晚安（睡前）",
+    "example_ja": "もう寝ます。おやすみなさい。",
+    "example_zh": "我要睡了。晚安。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "ありがとうございます",
+    "kana": "ありがとうございます",
+    "romaji": "arigatou gozaimasu",
+    "part_of_speech": "寒暄語",
+    "meaning": "謝謝",
+    "example_ja": "どうもありがとうございます。",
+    "example_zh": "非常感謝。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "すみません",
+    "kana": "すみません",
+    "romaji": "sumimasen",
+    "part_of_speech": "寒暄語",
+    "meaning": "不好意思、對不起；謝謝",
+    "example_ja": "すみません、駅はどこですか。",
+    "example_zh": "不好意思，車站在哪裡？",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "ごめんなさい",
+    "kana": "ごめんなさい",
+    "romaji": "gomennasai",
+    "part_of_speech": "寒暄語",
+    "meaning": "對不起",
+    "example_ja": "遅くなって、ごめんなさい。",
+    "example_zh": "我遲到了，對不起。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "はい",
+    "kana": "はい",
+    "romaji": "hai",
+    "part_of_speech": "感嘆詞",
+    "meaning": "是、對",
+    "example_ja": "はい、そうです。",
+    "example_zh": "是，沒錯。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "いいえ",
+    "kana": "いいえ",
+    "romaji": "iie",
+    "part_of_speech": "感嘆詞",
+    "meaning": "不、不是",
+    "example_ja": "いいえ、違います。",
+    "example_zh": "不，不是。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "お願いします",
+    "kana": "おねがいします",
+    "romaji": "onegai shimasu",
+    "part_of_speech": "寒暄語",
+    "meaning": "拜託、麻煩你",
+    "example_ja": "コーヒーをお願いします。",
+    "example_zh": "麻煩給我咖啡。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "初めまして",
+    "kana": "はじめまして",
+    "romaji": "hajimemashite",
+    "part_of_speech": "寒暄語",
+    "meaning": "初次見面",
+    "example_ja": "初めまして、田中です。",
+    "example_zh": "初次見面，我是田中。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "どうぞよろしく",
+    "kana": "どうぞよろしく",
+    "romaji": "douzo yoroshiku",
+    "part_of_speech": "寒暄語",
+    "meaning": "請多指教",
+    "example_ja": "どうぞよろしくお願いします。",
+    "example_zh": "請多多指教。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "どうぞ",
+    "kana": "どうぞ",
+    "romaji": "douzo",
+    "part_of_speech": "副詞",
+    "meaning": "請（用）、請（進）",
+    "example_ja": "どうぞ、入ってください。",
+    "example_zh": "請進。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "どうも",
+    "kana": "どうも",
+    "romaji": "doumo",
+    "part_of_speech": "副詞",
+    "meaning": "非常；謝啦（口語）",
+    "example_ja": "どうも、すみません。",
+    "example_zh": "真是不好意思。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "いただきます",
+    "kana": "いただきます",
+    "romaji": "itadakimasu",
+    "part_of_speech": "寒暄語",
+    "meaning": "開動了（用餐前）",
+    "example_ja": "では、いただきます。",
+    "example_zh": "那麼，我開動了。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "ごちそうさまでした",
+    "kana": "ごちそうさまでした",
+    "romaji": "gochisousama deshita",
+    "part_of_speech": "寒暄語",
+    "meaning": "謝謝招待（用餐後）",
+    "example_ja": "ごちそうさまでした。おいしかったです。",
+    "example_zh": "謝謝招待。很好吃。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "いってきます",
+    "kana": "いってきます",
+    "romaji": "ittekimasu",
+    "part_of_speech": "寒暄語",
+    "meaning": "我出門了",
+    "example_ja": "いってきます。",
+    "example_zh": "我出門了。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "いってらっしゃい",
+    "kana": "いってらっしゃい",
+    "romaji": "itterasshai",
+    "part_of_speech": "寒暄語",
+    "meaning": "路上小心（送人出門）",
+    "example_ja": "いってらっしゃい。気をつけて。",
+    "example_zh": "路上小心。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "ただいま",
+    "kana": "ただいま",
+    "romaji": "tadaima",
+    "part_of_speech": "寒暄語",
+    "meaning": "我回來了",
+    "example_ja": "ただいま。",
+    "example_zh": "我回來了。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "お帰りなさい",
+    "kana": "おかえりなさい",
+    "romaji": "okaerinasai",
+    "part_of_speech": "寒暄語",
+    "meaning": "你回來啦",
+    "example_ja": "お帰りなさい。",
+    "example_zh": "你回來啦。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "失礼します",
+    "kana": "しつれいします",
+    "romaji": "shitsurei shimasu",
+    "part_of_speech": "寒暄語",
+    "meaning": "打擾了、失陪了",
+    "example_ja": "では、失礼します。",
+    "example_zh": "那麼，我先失陪了。",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "もしもし",
+    "kana": "もしもし",
+    "romaji": "moshimoshi",
+    "part_of_speech": "感嘆詞",
+    "meaning": "喂（電話用語）",
+    "example_ja": "もしもし、田中さんですか。",
+    "example_zh": "喂，是田中先生嗎？",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "お元気ですか",
+    "kana": "おげんきですか",
+    "romaji": "ogenki desu ka",
+    "part_of_speech": "寒暄語",
+    "meaning": "你好嗎？",
+    "example_ja": "皆さん、お元気ですか。",
+    "example_zh": "大家都好嗎？",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "大丈夫",
+    "kana": "だいじょうぶ",
+    "romaji": "daijoubu",
+    "part_of_speech": "な形容詞",
+    "meaning": "沒問題、不要緊",
+    "example_ja": "大丈夫ですか。",
+    "example_zh": "你還好嗎？",
+    "category": "寒暄・常用表現"
+  },
+  {
+    "kanji": "零／ゼロ",
+    "kana": "れい／ゼロ",
+    "romaji": "rei / zero",
+    "part_of_speech": "數詞",
+    "meaning": "零",
+    "example_ja": "電話番号は零三の……です。",
+    "example_zh": "電話號碼是 03-……。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "一",
+    "kana": "いち",
+    "romaji": "ichi",
+    "part_of_speech": "數詞",
+    "meaning": "一",
+    "example_ja": "一から十まで数えます。",
+    "example_zh": "從一數到十。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "二",
+    "kana": "に",
+    "romaji": "ni",
+    "part_of_speech": "數詞",
+    "meaning": "二",
+    "example_ja": "二番の出口です。",
+    "example_zh": "是二號出口。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "三",
+    "kana": "さん",
+    "romaji": "san",
+    "part_of_speech": "數詞",
+    "meaning": "三",
+    "example_ja": "三人で行きます。",
+    "example_zh": "三個人一起去。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "四",
+    "kana": "し／よん",
+    "romaji": "shi / yon",
+    "part_of_speech": "數詞",
+    "meaning": "四",
+    "example_ja": "四時に会いましょう。",
+    "example_zh": "四點見吧。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "五",
+    "kana": "ご",
+    "romaji": "go",
+    "part_of_speech": "數詞",
+    "meaning": "五",
+    "example_ja": "五分待ってください。",
+    "example_zh": "請等五分鐘。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "六",
+    "kana": "ろく",
+    "romaji": "roku",
+    "part_of_speech": "數詞",
+    "meaning": "六",
+    "example_ja": "六時に起きます。",
+    "example_zh": "六點起床。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "七",
+    "kana": "しち／なな",
+    "romaji": "shichi / nana",
+    "part_of_speech": "數詞",
+    "meaning": "七",
+    "example_ja": "七時に帰ります。",
+    "example_zh": "七點回家。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "八",
+    "kana": "はち",
+    "romaji": "hachi",
+    "part_of_speech": "數詞",
+    "meaning": "八",
+    "example_ja": "八階へ行きます。",
+    "example_zh": "去八樓。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "九",
+    "kana": "きゅう／く",
+    "romaji": "kyuu / ku",
+    "part_of_speech": "數詞",
+    "meaning": "九",
+    "example_ja": "九時から授業です。",
+    "example_zh": "九點開始上課。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "十",
+    "kana": "じゅう",
+    "romaji": "juu",
+    "part_of_speech": "數詞",
+    "meaning": "十",
+    "example_ja": "十人の学生がいます。",
+    "example_zh": "有十位學生。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "百",
+    "kana": "ひゃく",
+    "romaji": "hyaku",
+    "part_of_speech": "數詞",
+    "meaning": "百",
+    "example_ja": "百円のパンを買いました。",
+    "example_zh": "買了一百日圓的麵包。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "千",
+    "kana": "せん",
+    "romaji": "sen",
+    "part_of_speech": "數詞",
+    "meaning": "千",
+    "example_ja": "千円札があります。",
+    "example_zh": "有一千日圓紙鈔。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "万",
+    "kana": "まん",
+    "romaji": "man",
+    "part_of_speech": "數詞",
+    "meaning": "萬",
+    "example_ja": "一万円です。",
+    "example_zh": "是一萬日圓。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "一つ",
+    "kana": "ひとつ",
+    "romaji": "hitotsu",
+    "part_of_speech": "量詞",
+    "meaning": "一個",
+    "example_ja": "りんごを一つください。",
+    "example_zh": "請給我一個蘋果。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "二つ",
+    "kana": "ふたつ",
+    "romaji": "futatsu",
+    "part_of_speech": "量詞",
+    "meaning": "兩個",
+    "example_ja": "卵を二つ使います。",
+    "example_zh": "用兩顆蛋。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "三つ",
+    "kana": "みっつ",
+    "romaji": "mittsu",
+    "part_of_speech": "量詞",
+    "meaning": "三個",
+    "example_ja": "箱が三つあります。",
+    "example_zh": "有三個箱子。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "四つ",
+    "kana": "よっつ",
+    "romaji": "yottsu",
+    "part_of_speech": "量詞",
+    "meaning": "四個",
+    "example_ja": "椅子が四つあります。",
+    "example_zh": "有四張椅子。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "五つ",
+    "kana": "いつつ",
+    "romaji": "itsutsu",
+    "part_of_speech": "量詞",
+    "meaning": "五個",
+    "example_ja": "みかんを五つ買いました。",
+    "example_zh": "買了五個橘子。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "六つ",
+    "kana": "むっつ",
+    "romaji": "muttsu",
+    "part_of_speech": "量詞",
+    "meaning": "六個",
+    "example_ja": "お菓子が六つあります。",
+    "example_zh": "有六個點心。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "七つ",
+    "kana": "ななつ",
+    "romaji": "nanatsu",
+    "part_of_speech": "量詞",
+    "meaning": "七個",
+    "example_ja": "コップが七つあります。",
+    "example_zh": "有七個杯子。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "八つ",
+    "kana": "やっつ",
+    "romaji": "yattsu",
+    "part_of_speech": "量詞",
+    "meaning": "八個",
+    "example_ja": "お皿が八つあります。",
+    "example_zh": "有八個盤子。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "九つ",
+    "kana": "ここのつ",
+    "romaji": "kokonotsu",
+    "part_of_speech": "量詞",
+    "meaning": "九個",
+    "example_ja": "石が九つあります。",
+    "example_zh": "有九顆石頭。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "十",
+    "kana": "とお",
+    "romaji": "too",
+    "part_of_speech": "量詞",
+    "meaning": "十個",
+    "example_ja": "卵を十ください。",
+    "example_zh": "請給我十顆蛋。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～人",
+    "kana": "～にん",
+    "romaji": "-nin",
+    "part_of_speech": "量詞",
+    "meaning": "～人（一人ひとり、二人ふたり為特殊讀音）",
+    "example_ja": "家族は四人です。",
+    "example_zh": "家裡有四個人。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～歳",
+    "kana": "～さい",
+    "romaji": "-sai",
+    "part_of_speech": "量詞",
+    "meaning": "～歲",
+    "example_ja": "私は二十歳です。",
+    "example_zh": "我二十歲。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～円",
+    "kana": "～えん",
+    "romaji": "-en",
+    "part_of_speech": "量詞",
+    "meaning": "～日圓",
+    "example_ja": "これは五百円です。",
+    "example_zh": "這個五百日圓。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～番",
+    "kana": "～ばん",
+    "romaji": "-ban",
+    "part_of_speech": "量詞",
+    "meaning": "～號",
+    "example_ja": "三番の窓口へ行ってください。",
+    "example_zh": "請到三號窗口。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～回",
+    "kana": "～かい",
+    "romaji": "-kai",
+    "part_of_speech": "量詞",
+    "meaning": "～次",
+    "example_ja": "週に二回テニスをします。",
+    "example_zh": "一週打兩次網球。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～階",
+    "kana": "～かい",
+    "romaji": "-kai",
+    "part_of_speech": "量詞",
+    "meaning": "～樓",
+    "example_ja": "本屋は五階にあります。",
+    "example_zh": "書店在五樓。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～個",
+    "kana": "～こ",
+    "romaji": "-ko",
+    "part_of_speech": "量詞",
+    "meaning": "～個",
+    "example_ja": "卵を三個ください。",
+    "example_zh": "請給我三顆蛋。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～枚",
+    "kana": "～まい",
+    "romaji": "-mai",
+    "part_of_speech": "量詞",
+    "meaning": "～張、～件（薄平物）",
+    "example_ja": "切手を二枚買いました。",
+    "example_zh": "買了兩張郵票。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～台",
+    "kana": "～だい",
+    "romaji": "-dai",
+    "part_of_speech": "量詞",
+    "meaning": "～台（機器、車輛）",
+    "example_ja": "車が二台あります。",
+    "example_zh": "有兩台車。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～冊",
+    "kana": "～さつ",
+    "romaji": "-satsu",
+    "part_of_speech": "量詞",
+    "meaning": "～本（書籍）",
+    "example_ja": "ノートを三冊買いました。",
+    "example_zh": "買了三本筆記本。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～本",
+    "kana": "～ほん",
+    "romaji": "-hon",
+    "part_of_speech": "量詞",
+    "meaning": "～枝、～瓶（細長物）",
+    "example_ja": "ビールを二本飲みました。",
+    "example_zh": "喝了兩瓶啤酒。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～杯",
+    "kana": "～はい",
+    "romaji": "-hai",
+    "part_of_speech": "量詞",
+    "meaning": "～杯",
+    "example_ja": "コーヒーを一杯ください。",
+    "example_zh": "請給我一杯咖啡。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～匹",
+    "kana": "～ひき",
+    "romaji": "-hiki",
+    "part_of_speech": "量詞",
+    "meaning": "～隻（小動物）",
+    "example_ja": "猫が二匹います。",
+    "example_zh": "有兩隻貓。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "～ページ",
+    "kana": "～ページ",
+    "romaji": "-peeji",
+    "part_of_speech": "量詞",
+    "meaning": "～頁",
+    "example_ja": "十ページを開いてください。",
+    "example_zh": "請翻到第十頁。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "半分",
+    "kana": "はんぶん",
+    "romaji": "hanbun",
+    "part_of_speech": "名詞",
+    "meaning": "一半",
+    "example_ja": "パンを半分食べました。",
+    "example_zh": "吃了一半的麵包。",
+    "category": "數字・量詞"
+  },
+  {
+    "kanji": "今",
+    "kana": "いま",
+    "romaji": "ima",
+    "part_of_speech": "名詞",
+    "meaning": "現在",
+    "example_ja": "今、何時ですか。",
+    "example_zh": "現在幾點？",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～時",
+    "kana": "～じ",
+    "romaji": "-ji",
+    "part_of_speech": "量詞",
+    "meaning": "～點（鐘）",
+    "example_ja": "今、三時です。",
+    "example_zh": "現在三點。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～分",
+    "kana": "～ふん／ぷん",
+    "romaji": "-fun / -pun",
+    "part_of_speech": "量詞",
+    "meaning": "～分（鐘）",
+    "example_ja": "九時十五分に始まります。",
+    "example_zh": "九點十五分開始。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "半",
+    "kana": "はん",
+    "romaji": "han",
+    "part_of_speech": "名詞",
+    "meaning": "半（三十分）",
+    "example_ja": "七時半に起きます。",
+    "example_zh": "七點半起床。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "時間",
+    "kana": "じかん",
+    "romaji": "jikan",
+    "part_of_speech": "名詞",
+    "meaning": "時間；～小時",
+    "example_ja": "時間がありません。",
+    "example_zh": "沒有時間。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "今日",
+    "kana": "きょう",
+    "romaji": "kyou",
+    "part_of_speech": "名詞",
+    "meaning": "今天",
+    "example_ja": "今日はいい天気です。",
+    "example_zh": "今天天氣很好。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "明日",
+    "kana": "あした",
+    "romaji": "ashita",
+    "part_of_speech": "名詞",
+    "meaning": "明天",
+    "example_ja": "明日、学校へ行きます。",
+    "example_zh": "明天去學校。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "昨日",
+    "kana": "きのう",
+    "romaji": "kinou",
+    "part_of_speech": "名詞",
+    "meaning": "昨天",
+    "example_ja": "昨日は雨でした。",
+    "example_zh": "昨天下雨。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "おととい",
+    "kana": "おととい",
+    "romaji": "ototoi",
+    "part_of_speech": "名詞",
+    "meaning": "前天",
+    "example_ja": "おととい映画を見ました。",
+    "example_zh": "前天看了電影。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "あさって",
+    "kana": "あさって",
+    "romaji": "asatte",
+    "part_of_speech": "名詞",
+    "meaning": "後天",
+    "example_ja": "あさって試験があります。",
+    "example_zh": "後天有考試。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "毎日",
+    "kana": "まいにち",
+    "romaji": "mainichi",
+    "part_of_speech": "名詞",
+    "meaning": "每天",
+    "example_ja": "毎日日本語を勉強します。",
+    "example_zh": "每天學日文。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "毎朝",
+    "kana": "まいあさ",
+    "romaji": "maiasa",
+    "part_of_speech": "名詞",
+    "meaning": "每天早上",
+    "example_ja": "毎朝コーヒーを飲みます。",
+    "example_zh": "每天早上喝咖啡。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "毎晩",
+    "kana": "まいばん",
+    "romaji": "maiban",
+    "part_of_speech": "名詞",
+    "meaning": "每天晚上",
+    "example_ja": "毎晩十一時に寝ます。",
+    "example_zh": "每晚十一點睡覺。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "毎週",
+    "kana": "まいしゅう",
+    "romaji": "maishuu",
+    "part_of_speech": "名詞",
+    "meaning": "每週",
+    "example_ja": "毎週日曜日に掃除をします。",
+    "example_zh": "每週日打掃。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "朝",
+    "kana": "あさ",
+    "romaji": "asa",
+    "part_of_speech": "名詞",
+    "meaning": "早上",
+    "example_ja": "朝、パンを食べます。",
+    "example_zh": "早上吃麵包。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "昼",
+    "kana": "ひる",
+    "romaji": "hiru",
+    "part_of_speech": "名詞",
+    "meaning": "中午、白天",
+    "example_ja": "昼に友達と会います。",
+    "example_zh": "中午和朋友見面。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "夜",
+    "kana": "よる",
+    "romaji": "yoru",
+    "part_of_speech": "名詞",
+    "meaning": "晚上、夜裡",
+    "example_ja": "夜、本を読みます。",
+    "example_zh": "晚上看書。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "晩",
+    "kana": "ばん",
+    "romaji": "ban",
+    "part_of_speech": "名詞",
+    "meaning": "晚上",
+    "example_ja": "晩ご飯を作ります。",
+    "example_zh": "做晚飯。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "午前",
+    "kana": "ごぜん",
+    "romaji": "gozen",
+    "part_of_speech": "名詞",
+    "meaning": "上午",
+    "example_ja": "午前九時に来てください。",
+    "example_zh": "請上午九點來。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "午後",
+    "kana": "ごご",
+    "romaji": "gogo",
+    "part_of_speech": "名詞",
+    "meaning": "下午",
+    "example_ja": "午後、図書館へ行きます。",
+    "example_zh": "下午去圖書館。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "夕方",
+    "kana": "ゆうがた",
+    "romaji": "yuugata",
+    "part_of_speech": "名詞",
+    "meaning": "傍晚",
+    "example_ja": "夕方、散歩します。",
+    "example_zh": "傍晚散步。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "今朝",
+    "kana": "けさ",
+    "romaji": "kesa",
+    "part_of_speech": "名詞",
+    "meaning": "今天早上",
+    "example_ja": "今朝、何を食べましたか。",
+    "example_zh": "今天早上吃了什麼？",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "今晩",
+    "kana": "こんばん",
+    "romaji": "konban",
+    "part_of_speech": "名詞",
+    "meaning": "今晚",
+    "example_ja": "今晩、電話します。",
+    "example_zh": "今晚打電話。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "今週",
+    "kana": "こんしゅう",
+    "romaji": "konshuu",
+    "part_of_speech": "名詞",
+    "meaning": "這週",
+    "example_ja": "今週は忙しいです。",
+    "example_zh": "這週很忙。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "先週",
+    "kana": "せんしゅう",
+    "romaji": "senshuu",
+    "part_of_speech": "名詞",
+    "meaning": "上週",
+    "example_ja": "先週、京都へ行きました。",
+    "example_zh": "上週去了京都。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "来週",
+    "kana": "らいしゅう",
+    "romaji": "raishuu",
+    "part_of_speech": "名詞",
+    "meaning": "下週",
+    "example_ja": "来週、テストがあります。",
+    "example_zh": "下週有考試。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "今月",
+    "kana": "こんげつ",
+    "romaji": "kongetsu",
+    "part_of_speech": "名詞",
+    "meaning": "這個月",
+    "example_ja": "今月は仕事が多いです。",
+    "example_zh": "這個月工作很多。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "先月",
+    "kana": "せんげつ",
+    "romaji": "sengetsu",
+    "part_of_speech": "名詞",
+    "meaning": "上個月",
+    "example_ja": "先月、日本へ来ました。",
+    "example_zh": "上個月來到日本。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "来月",
+    "kana": "らいげつ",
+    "romaji": "raigetsu",
+    "part_of_speech": "名詞",
+    "meaning": "下個月",
+    "example_ja": "来月、国へ帰ります。",
+    "example_zh": "下個月回國。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "今年",
+    "kana": "ことし",
+    "romaji": "kotoshi",
+    "part_of_speech": "名詞",
+    "meaning": "今年",
+    "example_ja": "今年、二十歳になります。",
+    "example_zh": "今年滿二十歲。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "去年",
+    "kana": "きょねん",
+    "romaji": "kyonen",
+    "part_of_speech": "名詞",
+    "meaning": "去年",
+    "example_ja": "去年の夏は暑かったです。",
+    "example_zh": "去年夏天很熱。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "来年",
+    "kana": "らいねん",
+    "romaji": "rainen",
+    "part_of_speech": "名詞",
+    "meaning": "明年",
+    "example_ja": "来年、結婚します。",
+    "example_zh": "明年結婚。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～年",
+    "kana": "～ねん",
+    "romaji": "-nen",
+    "part_of_speech": "量詞",
+    "meaning": "～年",
+    "example_ja": "日本に三年住んでいます。",
+    "example_zh": "在日本住了三年。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～月",
+    "kana": "～がつ",
+    "romaji": "-gatsu",
+    "part_of_speech": "量詞",
+    "meaning": "～月（四月しがつ、七月しちがつ、九月くがつ）",
+    "example_ja": "誕生日は五月です。",
+    "example_zh": "生日在五月。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～日",
+    "kana": "～にち",
+    "romaji": "-nichi",
+    "part_of_speech": "量詞",
+    "meaning": "～日、～號（一日ついたち等特殊讀音）",
+    "example_ja": "十日に会いましょう。",
+    "example_zh": "十號見面吧。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～週間",
+    "kana": "～しゅうかん",
+    "romaji": "-shuukan",
+    "part_of_speech": "量詞",
+    "meaning": "～週、～個星期",
+    "example_ja": "一週間休みました。",
+    "example_zh": "休息了一個星期。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "～か月",
+    "kana": "～かげつ",
+    "romaji": "-kagetsu",
+    "part_of_speech": "量詞",
+    "meaning": "～個月",
+    "example_ja": "三か月日本語を勉強しました。",
+    "example_zh": "學了三個月日文。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "月曜日",
+    "kana": "げつようび",
+    "romaji": "getsuyoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期一",
+    "example_ja": "月曜日から働きます。",
+    "example_zh": "從星期一開始工作。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "火曜日",
+    "kana": "かようび",
+    "romaji": "kayoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期二",
+    "example_ja": "火曜日にテストがあります。",
+    "example_zh": "星期二有考試。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "水曜日",
+    "kana": "すいようび",
+    "romaji": "suiyoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期三",
+    "example_ja": "水曜日は暇です。",
+    "example_zh": "星期三有空。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "木曜日",
+    "kana": "もくようび",
+    "romaji": "mokuyoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期四",
+    "example_ja": "木曜日に映画を見ます。",
+    "example_zh": "星期四看電影。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "金曜日",
+    "kana": "きんようび",
+    "romaji": "kinyoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期五",
+    "example_ja": "金曜日の夜は楽しいです。",
+    "example_zh": "星期五的晚上很開心。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "土曜日",
+    "kana": "どようび",
+    "romaji": "doyoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期六",
+    "example_ja": "土曜日に買い物します。",
+    "example_zh": "星期六去買東西。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "日曜日",
+    "kana": "にちようび",
+    "romaji": "nichiyoubi",
+    "part_of_speech": "名詞",
+    "meaning": "星期日",
+    "example_ja": "日曜日は働きません。",
+    "example_zh": "星期日不工作。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "何曜日",
+    "kana": "なんようび",
+    "romaji": "nanyoubi",
+    "part_of_speech": "疑問詞",
+    "meaning": "星期幾",
+    "example_ja": "今日は何曜日ですか。",
+    "example_zh": "今天星期幾？",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "誕生日",
+    "kana": "たんじょうび",
+    "romaji": "tanjoubi",
+    "part_of_speech": "名詞",
+    "meaning": "生日",
+    "example_ja": "誕生日おめでとうございます。",
+    "example_zh": "生日快樂。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "休み",
+    "kana": "やすみ",
+    "romaji": "yasumi",
+    "part_of_speech": "名詞",
+    "meaning": "休息、休假",
+    "example_ja": "明日は休みです。",
+    "example_zh": "明天放假。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "夏休み",
+    "kana": "なつやすみ",
+    "romaji": "natsuyasumi",
+    "part_of_speech": "名詞",
+    "meaning": "暑假",
+    "example_ja": "夏休みに海へ行きます。",
+    "example_zh": "暑假去海邊。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "春",
+    "kana": "はる",
+    "romaji": "haru",
+    "part_of_speech": "名詞",
+    "meaning": "春天",
+    "example_ja": "春に桜が咲きます。",
+    "example_zh": "春天櫻花開。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "夏",
+    "kana": "なつ",
+    "romaji": "natsu",
+    "part_of_speech": "名詞",
+    "meaning": "夏天",
+    "example_ja": "夏は暑いです。",
+    "example_zh": "夏天很熱。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "秋",
+    "kana": "あき",
+    "romaji": "aki",
+    "part_of_speech": "名詞",
+    "meaning": "秋天",
+    "example_ja": "秋は涼しいです。",
+    "example_zh": "秋天很涼爽。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "冬",
+    "kana": "ふゆ",
+    "romaji": "fuyu",
+    "part_of_speech": "名詞",
+    "meaning": "冬天",
+    "example_ja": "冬に雪が降ります。",
+    "example_zh": "冬天下雪。",
+    "category": "時間・日期"
+  },
+  {
+    "kanji": "人",
+    "kana": "ひと",
+    "romaji": "hito",
+    "part_of_speech": "名詞",
+    "meaning": "人",
+    "example_ja": "あの人は誰ですか。",
+    "example_zh": "那個人是誰？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "家族",
+    "kana": "かぞく",
+    "romaji": "kazoku",
+    "part_of_speech": "名詞",
+    "meaning": "家人、家族",
+    "example_ja": "家族は五人です。",
+    "example_zh": "家裡有五個人。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "両親",
+    "kana": "りょうしん",
+    "romaji": "ryoushin",
+    "part_of_speech": "名詞",
+    "meaning": "父母、雙親",
+    "example_ja": "両親は台湾にいます。",
+    "example_zh": "父母在台灣。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "父",
+    "kana": "ちち",
+    "romaji": "chichi",
+    "part_of_speech": "名詞",
+    "meaning": "（自己的）父親",
+    "example_ja": "父は会社員です。",
+    "example_zh": "我父親是公司職員。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "母",
+    "kana": "はは",
+    "romaji": "haha",
+    "part_of_speech": "名詞",
+    "meaning": "（自己的）母親",
+    "example_ja": "母は料理が上手です。",
+    "example_zh": "我母親很會做菜。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "お父さん",
+    "kana": "おとうさん",
+    "romaji": "otousan",
+    "part_of_speech": "名詞",
+    "meaning": "父親（稱呼別人的或叫自己爸爸）",
+    "example_ja": "お父さんはお元気ですか。",
+    "example_zh": "令尊身體好嗎？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "お母さん",
+    "kana": "おかあさん",
+    "romaji": "okaasan",
+    "part_of_speech": "名詞",
+    "meaning": "母親（稱呼別人的或叫自己媽媽）",
+    "example_ja": "お母さんは何歳ですか。",
+    "example_zh": "令堂幾歲？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "兄",
+    "kana": "あに",
+    "romaji": "ani",
+    "part_of_speech": "名詞",
+    "meaning": "（自己的）哥哥",
+    "example_ja": "兄は東京にいます。",
+    "example_zh": "我哥哥在東京。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "お兄さん",
+    "kana": "おにいさん",
+    "romaji": "oniisan",
+    "part_of_speech": "名詞",
+    "meaning": "哥哥（稱呼別人的）",
+    "example_ja": "お兄さんは学生ですか。",
+    "example_zh": "你哥哥是學生嗎？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "姉",
+    "kana": "あね",
+    "romaji": "ane",
+    "part_of_speech": "名詞",
+    "meaning": "（自己的）姊姊",
+    "example_ja": "姉は医者です。",
+    "example_zh": "我姊姊是醫生。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "お姉さん",
+    "kana": "おねえさん",
+    "romaji": "oneesan",
+    "part_of_speech": "名詞",
+    "meaning": "姊姊（稱呼別人的）",
+    "example_ja": "お姉さんはきれいですね。",
+    "example_zh": "你姊姊真漂亮。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "弟",
+    "kana": "おとうと",
+    "romaji": "otouto",
+    "part_of_speech": "名詞",
+    "meaning": "弟弟",
+    "example_ja": "弟は高校生です。",
+    "example_zh": "我弟弟是高中生。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "妹",
+    "kana": "いもうと",
+    "romaji": "imouto",
+    "part_of_speech": "名詞",
+    "meaning": "妹妹",
+    "example_ja": "妹は歌が好きです。",
+    "example_zh": "我妹妹喜歡唱歌。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "兄弟",
+    "kana": "きょうだい",
+    "romaji": "kyoudai",
+    "part_of_speech": "名詞",
+    "meaning": "兄弟姊妹",
+    "example_ja": "兄弟がいますか。",
+    "example_zh": "你有兄弟姊妹嗎？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "おじいさん",
+    "kana": "おじいさん",
+    "romaji": "ojiisan",
+    "part_of_speech": "名詞",
+    "meaning": "爺爺、外公；老爺爺",
+    "example_ja": "おじいさんは元気です。",
+    "example_zh": "爺爺很健康。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "おばあさん",
+    "kana": "おばあさん",
+    "romaji": "obaasan",
+    "part_of_speech": "名詞",
+    "meaning": "奶奶、外婆；老奶奶",
+    "example_ja": "おばあさんと散歩します。",
+    "example_zh": "和奶奶散步。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "おじさん",
+    "kana": "おじさん",
+    "romaji": "ojisan",
+    "part_of_speech": "名詞",
+    "meaning": "伯伯、叔叔、舅舅",
+    "example_ja": "おじさんは大阪に住んでいます。",
+    "example_zh": "叔叔住在大阪。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "おばさん",
+    "kana": "おばさん",
+    "romaji": "obasan",
+    "part_of_speech": "名詞",
+    "meaning": "伯母、阿姨、舅媽",
+    "example_ja": "おばさんの家へ行きます。",
+    "example_zh": "去阿姨家。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "ご主人",
+    "kana": "ごしゅじん",
+    "romaji": "goshujin",
+    "part_of_speech": "名詞",
+    "meaning": "（別人的）先生、丈夫",
+    "example_ja": "ご主人はお元気ですか。",
+    "example_zh": "您先生好嗎？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "奥さん",
+    "kana": "おくさん",
+    "romaji": "okusan",
+    "part_of_speech": "名詞",
+    "meaning": "（別人的）太太、夫人",
+    "example_ja": "奥さんは親切な人です。",
+    "example_zh": "他太太是親切的人。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "子ども",
+    "kana": "こども",
+    "romaji": "kodomo",
+    "part_of_speech": "名詞",
+    "meaning": "小孩",
+    "example_ja": "公園に子どもがいます。",
+    "example_zh": "公園裡有小孩。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "大人",
+    "kana": "おとな",
+    "romaji": "otona",
+    "part_of_speech": "名詞",
+    "meaning": "大人",
+    "example_ja": "大人は千円、子どもは五百円です。",
+    "example_zh": "大人一千日圓，小孩五百日圓。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "男",
+    "kana": "おとこ",
+    "romaji": "otoko",
+    "part_of_speech": "名詞",
+    "meaning": "男性",
+    "example_ja": "男の声が聞こえます。",
+    "example_zh": "聽得到男人的聲音。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "女",
+    "kana": "おんな",
+    "romaji": "onna",
+    "part_of_speech": "名詞",
+    "meaning": "女性",
+    "example_ja": "女の人が立っています。",
+    "example_zh": "有位女性站著。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "男の子",
+    "kana": "おとこのこ",
+    "romaji": "otokonoko",
+    "part_of_speech": "名詞",
+    "meaning": "男孩",
+    "example_ja": "男の子が走っています。",
+    "example_zh": "男孩在跑步。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "女の子",
+    "kana": "おんなのこ",
+    "romaji": "onnanoko",
+    "part_of_speech": "名詞",
+    "meaning": "女孩",
+    "example_ja": "女の子が歌っています。",
+    "example_zh": "女孩在唱歌。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "友達",
+    "kana": "ともだち",
+    "romaji": "tomodachi",
+    "part_of_speech": "名詞",
+    "meaning": "朋友",
+    "example_ja": "友達と旅行します。",
+    "example_zh": "和朋友去旅行。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "名前",
+    "kana": "なまえ",
+    "romaji": "namae",
+    "part_of_speech": "名詞",
+    "meaning": "名字",
+    "example_ja": "お名前は何ですか。",
+    "example_zh": "您叫什麼名字？",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "～さん",
+    "kana": "～さん",
+    "romaji": "-san",
+    "part_of_speech": "接尾詞",
+    "meaning": "～先生、～小姐",
+    "example_ja": "田中さんは先生です。",
+    "example_zh": "田中先生是老師。",
+    "category": "人・家族"
+  },
+  {
+    "kanji": "先生",
+    "kana": "せんせい",
+    "romaji": "sensei",
+    "part_of_speech": "名詞",
+    "meaning": "老師",
+    "example_ja": "先生に質問します。",
+    "example_zh": "向老師提問。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "学生",
+    "kana": "がくせい",
+    "romaji": "gakusei",
+    "part_of_speech": "名詞",
+    "meaning": "學生",
+    "example_ja": "私は大学の学生です。",
+    "example_zh": "我是大學生。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "生徒",
+    "kana": "せいと",
+    "romaji": "seito",
+    "part_of_speech": "名詞",
+    "meaning": "（中小學）學生",
+    "example_ja": "このクラスの生徒は三十人です。",
+    "example_zh": "這個班有三十位學生。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "留学生",
+    "kana": "りゅうがくせい",
+    "romaji": "ryuugakusei",
+    "part_of_speech": "名詞",
+    "meaning": "留學生",
+    "example_ja": "彼は台湾の留学生です。",
+    "example_zh": "他是來自台灣的留學生。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "医者",
+    "kana": "いしゃ",
+    "romaji": "isha",
+    "part_of_speech": "名詞",
+    "meaning": "醫生",
+    "example_ja": "医者になりたいです。",
+    "example_zh": "想成為醫生。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "会社員",
+    "kana": "かいしゃいん",
+    "romaji": "kaishain",
+    "part_of_speech": "名詞",
+    "meaning": "公司職員",
+    "example_ja": "父は会社員です。",
+    "example_zh": "我父親是公司職員。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "お巡りさん",
+    "kana": "おまわりさん",
+    "romaji": "omawarisan",
+    "part_of_speech": "名詞",
+    "meaning": "警察（口語）",
+    "example_ja": "お巡りさんに道を聞きました。",
+    "example_zh": "向警察問路。",
+    "category": "職業・身分"
+  },
+  {
+    "kanji": "体",
+    "kana": "からだ",
+    "romaji": "karada",
+    "part_of_speech": "名詞",
+    "meaning": "身體",
+    "example_ja": "体に気をつけてください。",
+    "example_zh": "請注意身體。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "頭",
+    "kana": "あたま",
+    "romaji": "atama",
+    "part_of_speech": "名詞",
+    "meaning": "頭；頭腦",
+    "example_ja": "頭が痛いです。",
+    "example_zh": "頭很痛。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "顔",
+    "kana": "かお",
+    "romaji": "kao",
+    "part_of_speech": "名詞",
+    "meaning": "臉",
+    "example_ja": "朝、顔を洗います。",
+    "example_zh": "早上洗臉。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "目",
+    "kana": "め",
+    "romaji": "me",
+    "part_of_speech": "名詞",
+    "meaning": "眼睛",
+    "example_ja": "目が大きいですね。",
+    "example_zh": "眼睛真大。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "耳",
+    "kana": "みみ",
+    "romaji": "mimi",
+    "part_of_speech": "名詞",
+    "meaning": "耳朵",
+    "example_ja": "うさぎは耳が長いです。",
+    "example_zh": "兔子耳朵很長。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "鼻",
+    "kana": "はな",
+    "romaji": "hana",
+    "part_of_speech": "名詞",
+    "meaning": "鼻子",
+    "example_ja": "象は鼻が長いです。",
+    "example_zh": "大象鼻子很長。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "口",
+    "kana": "くち",
+    "romaji": "kuchi",
+    "part_of_speech": "名詞",
+    "meaning": "嘴巴",
+    "example_ja": "口を開けてください。",
+    "example_zh": "請張開嘴。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "歯",
+    "kana": "は",
+    "romaji": "ha",
+    "part_of_speech": "名詞",
+    "meaning": "牙齒",
+    "example_ja": "毎晩、歯を磨きます。",
+    "example_zh": "每晚刷牙。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "手",
+    "kana": "て",
+    "romaji": "te",
+    "part_of_speech": "名詞",
+    "meaning": "手",
+    "example_ja": "手を洗ってください。",
+    "example_zh": "請洗手。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "足",
+    "kana": "あし",
+    "romaji": "ashi",
+    "part_of_speech": "名詞",
+    "meaning": "腳、腿",
+    "example_ja": "足が疲れました。",
+    "example_zh": "腳很累。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "お腹",
+    "kana": "おなか",
+    "romaji": "onaka",
+    "part_of_speech": "名詞",
+    "meaning": "肚子",
+    "example_ja": "お腹が空きました。",
+    "example_zh": "肚子餓了。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "背",
+    "kana": "せ",
+    "romaji": "se",
+    "part_of_speech": "名詞",
+    "meaning": "身高；背",
+    "example_ja": "彼は背が高いです。",
+    "example_zh": "他個子很高。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "声",
+    "kana": "こえ",
+    "romaji": "koe",
+    "part_of_speech": "名詞",
+    "meaning": "（人的）聲音",
+    "example_ja": "大きい声で読んでください。",
+    "example_zh": "請大聲讀。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "病気",
+    "kana": "びょうき",
+    "romaji": "byouki",
+    "part_of_speech": "名詞",
+    "meaning": "生病、疾病",
+    "example_ja": "病気で学校を休みました。",
+    "example_zh": "因為生病沒去學校。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "風邪",
+    "kana": "かぜ",
+    "romaji": "kaze",
+    "part_of_speech": "名詞",
+    "meaning": "感冒",
+    "example_ja": "風邪を引きました。",
+    "example_zh": "感冒了。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "熱",
+    "kana": "ねつ",
+    "romaji": "netsu",
+    "part_of_speech": "名詞",
+    "meaning": "發燒；熱度",
+    "example_ja": "熱があります。",
+    "example_zh": "發燒了。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "薬",
+    "kana": "くすり",
+    "romaji": "kusuri",
+    "part_of_speech": "名詞",
+    "meaning": "藥",
+    "example_ja": "薬を飲んでください。",
+    "example_zh": "請吃藥。",
+    "category": "身體・健康"
+  },
+  {
+    "kanji": "食べ物",
+    "kana": "たべもの",
+    "romaji": "tabemono",
+    "part_of_speech": "名詞",
+    "meaning": "食物",
+    "example_ja": "好きな食べ物は何ですか。",
+    "example_zh": "喜歡的食物是什麼？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "飲み物",
+    "kana": "のみもの",
+    "romaji": "nomimono",
+    "part_of_speech": "名詞",
+    "meaning": "飲料",
+    "example_ja": "飲み物は何がいいですか。",
+    "example_zh": "飲料要什麼好呢？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "ご飯",
+    "kana": "ごはん",
+    "romaji": "gohan",
+    "part_of_speech": "名詞",
+    "meaning": "飯；米飯",
+    "example_ja": "ご飯を食べましょう。",
+    "example_zh": "吃飯吧。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "朝ご飯",
+    "kana": "あさごはん",
+    "romaji": "asagohan",
+    "part_of_speech": "名詞",
+    "meaning": "早餐",
+    "example_ja": "朝ご飯を食べましたか。",
+    "example_zh": "吃早餐了嗎？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "昼ご飯",
+    "kana": "ひるごはん",
+    "romaji": "hirugohan",
+    "part_of_speech": "名詞",
+    "meaning": "午餐",
+    "example_ja": "昼ご飯は何を食べますか。",
+    "example_zh": "午餐要吃什麼？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "晩ご飯",
+    "kana": "ばんごはん",
+    "romaji": "bangohan",
+    "part_of_speech": "名詞",
+    "meaning": "晚餐",
+    "example_ja": "晩ご飯を作ります。",
+    "example_zh": "做晚餐。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "パン",
+    "kana": "パン",
+    "romaji": "pan",
+    "part_of_speech": "名詞",
+    "meaning": "麵包",
+    "example_ja": "毎朝パンを食べます。",
+    "example_zh": "每天早上吃麵包。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "卵",
+    "kana": "たまご",
+    "romaji": "tamago",
+    "part_of_speech": "名詞",
+    "meaning": "蛋",
+    "example_ja": "卵を三つ買いました。",
+    "example_zh": "買了三顆蛋。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "肉",
+    "kana": "にく",
+    "romaji": "niku",
+    "part_of_speech": "名詞",
+    "meaning": "肉",
+    "example_ja": "肉と野菜を買います。",
+    "example_zh": "買肉和蔬菜。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "鶏肉",
+    "kana": "とりにく",
+    "romaji": "toriniku",
+    "part_of_speech": "名詞",
+    "meaning": "雞肉",
+    "example_ja": "鶏肉のカレーが好きです。",
+    "example_zh": "喜歡雞肉咖哩。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "豚肉",
+    "kana": "ぶたにく",
+    "romaji": "butaniku",
+    "part_of_speech": "名詞",
+    "meaning": "豬肉",
+    "example_ja": "豚肉を五百グラムください。",
+    "example_zh": "請給我五百克豬肉。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "牛肉",
+    "kana": "ぎゅうにく",
+    "romaji": "gyuuniku",
+    "part_of_speech": "名詞",
+    "meaning": "牛肉",
+    "example_ja": "牛肉は高いです。",
+    "example_zh": "牛肉很貴。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "魚",
+    "kana": "さかな",
+    "romaji": "sakana",
+    "part_of_speech": "名詞",
+    "meaning": "魚",
+    "example_ja": "魚が好きです。",
+    "example_zh": "喜歡吃魚。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "野菜",
+    "kana": "やさい",
+    "romaji": "yasai",
+    "part_of_speech": "名詞",
+    "meaning": "蔬菜",
+    "example_ja": "野菜をたくさん食べてください。",
+    "example_zh": "請多吃蔬菜。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "果物",
+    "kana": "くだもの",
+    "romaji": "kudamono",
+    "part_of_speech": "名詞",
+    "meaning": "水果",
+    "example_ja": "果物の中でりんごが一番好きです。",
+    "example_zh": "水果當中最喜歡蘋果。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "りんご",
+    "kana": "りんご",
+    "romaji": "ringo",
+    "part_of_speech": "名詞",
+    "meaning": "蘋果",
+    "example_ja": "りんごを二つください。",
+    "example_zh": "請給我兩個蘋果。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "みかん",
+    "kana": "みかん",
+    "romaji": "mikan",
+    "part_of_speech": "名詞",
+    "meaning": "橘子",
+    "example_ja": "冬にみかんを食べます。",
+    "example_zh": "冬天吃橘子。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "水",
+    "kana": "みず",
+    "romaji": "mizu",
+    "part_of_speech": "名詞",
+    "meaning": "水",
+    "example_ja": "水をください。",
+    "example_zh": "請給我水。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "お茶",
+    "kana": "おちゃ",
+    "romaji": "ocha",
+    "part_of_speech": "名詞",
+    "meaning": "茶",
+    "example_ja": "お茶を飲みませんか。",
+    "example_zh": "要不要喝茶？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "紅茶",
+    "kana": "こうちゃ",
+    "romaji": "koucha",
+    "part_of_speech": "名詞",
+    "meaning": "紅茶",
+    "example_ja": "紅茶に砂糖を入れます。",
+    "example_zh": "紅茶裡加糖。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "牛乳",
+    "kana": "ぎゅうにゅう",
+    "romaji": "gyuunyuu",
+    "part_of_speech": "名詞",
+    "meaning": "牛奶",
+    "example_ja": "毎朝牛乳を飲みます。",
+    "example_zh": "每天早上喝牛奶。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "コーヒー",
+    "kana": "コーヒー",
+    "romaji": "koohii",
+    "part_of_speech": "名詞",
+    "meaning": "咖啡",
+    "example_ja": "コーヒーを一杯どうですか。",
+    "example_zh": "來杯咖啡如何？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "ジュース",
+    "kana": "ジュース",
+    "romaji": "juusu",
+    "part_of_speech": "名詞",
+    "meaning": "果汁",
+    "example_ja": "子どもはジュースが好きです。",
+    "example_zh": "小孩喜歡果汁。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "お酒",
+    "kana": "おさけ",
+    "romaji": "osake",
+    "part_of_speech": "名詞",
+    "meaning": "酒",
+    "example_ja": "お酒を飲みますか。",
+    "example_zh": "你喝酒嗎？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "ビール",
+    "kana": "ビール",
+    "romaji": "biiru",
+    "part_of_speech": "名詞",
+    "meaning": "啤酒",
+    "example_ja": "ビールを二本ください。",
+    "example_zh": "請給我兩瓶啤酒。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "料理",
+    "kana": "りょうり",
+    "romaji": "ryouri",
+    "part_of_speech": "名詞",
+    "meaning": "料理、菜餚",
+    "example_ja": "日本料理が好きです。",
+    "example_zh": "喜歡日本料理。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "塩",
+    "kana": "しお",
+    "romaji": "shio",
+    "part_of_speech": "名詞",
+    "meaning": "鹽",
+    "example_ja": "塩を取ってください。",
+    "example_zh": "請把鹽遞給我。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "砂糖",
+    "kana": "さとう",
+    "romaji": "satou",
+    "part_of_speech": "名詞",
+    "meaning": "糖",
+    "example_ja": "コーヒーに砂糖を入れますか。",
+    "example_zh": "咖啡要加糖嗎？",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "醤油",
+    "kana": "しょうゆ",
+    "romaji": "shouyu",
+    "part_of_speech": "名詞",
+    "meaning": "醬油",
+    "example_ja": "醤油を少し入れます。",
+    "example_zh": "加一點醬油。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "バター",
+    "kana": "バター",
+    "romaji": "bataa",
+    "part_of_speech": "名詞",
+    "meaning": "奶油",
+    "example_ja": "パンにバターをつけます。",
+    "example_zh": "在麵包上塗奶油。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "カレー",
+    "kana": "カレー",
+    "romaji": "karee",
+    "part_of_speech": "名詞",
+    "meaning": "咖哩",
+    "example_ja": "晩ご飯はカレーです。",
+    "example_zh": "晚餐是咖哩。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "お菓子",
+    "kana": "おかし",
+    "romaji": "okashi",
+    "part_of_speech": "名詞",
+    "meaning": "點心、零食",
+    "example_ja": "お菓子を買って帰ります。",
+    "example_zh": "買點心回家。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "お弁当",
+    "kana": "おべんとう",
+    "romaji": "obentou",
+    "part_of_speech": "名詞",
+    "meaning": "便當",
+    "example_ja": "お弁当を持って行きます。",
+    "example_zh": "帶便當去。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "箸",
+    "kana": "はし",
+    "romaji": "hashi",
+    "part_of_speech": "名詞",
+    "meaning": "筷子",
+    "example_ja": "箸でご飯を食べます。",
+    "example_zh": "用筷子吃飯。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "茶碗",
+    "kana": "ちゃわん",
+    "romaji": "chawan",
+    "part_of_speech": "名詞",
+    "meaning": "飯碗、茶碗",
+    "example_ja": "茶碗を洗います。",
+    "example_zh": "洗碗。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "コップ",
+    "kana": "コップ",
+    "romaji": "koppu",
+    "part_of_speech": "名詞",
+    "meaning": "杯子（玻璃杯）",
+    "example_ja": "コップに水を入れます。",
+    "example_zh": "把水倒進杯子。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "カップ",
+    "kana": "カップ",
+    "romaji": "kappu",
+    "part_of_speech": "名詞",
+    "meaning": "杯子（有把手）",
+    "example_ja": "カップでコーヒーを飲みます。",
+    "example_zh": "用杯子喝咖啡。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "スプーン",
+    "kana": "スプーン",
+    "romaji": "supuun",
+    "part_of_speech": "名詞",
+    "meaning": "湯匙",
+    "example_ja": "スプーンでスープを飲みます。",
+    "example_zh": "用湯匙喝湯。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "フォーク",
+    "kana": "フォーク",
+    "romaji": "fooku",
+    "part_of_speech": "名詞",
+    "meaning": "叉子",
+    "example_ja": "フォークとナイフを使います。",
+    "example_zh": "使用刀叉。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "ナイフ",
+    "kana": "ナイフ",
+    "romaji": "naifu",
+    "part_of_speech": "名詞",
+    "meaning": "刀子",
+    "example_ja": "ナイフで肉を切ります。",
+    "example_zh": "用刀切肉。",
+    "category": "食物・飲料"
+  },
+  {
+    "kanji": "服",
+    "kana": "ふく",
+    "romaji": "fuku",
+    "part_of_speech": "名詞",
+    "meaning": "衣服",
+    "example_ja": "新しい服を買いました。",
+    "example_zh": "買了新衣服。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "洋服",
+    "kana": "ようふく",
+    "romaji": "youfuku",
+    "part_of_speech": "名詞",
+    "meaning": "（西式）衣服",
+    "example_ja": "洋服の店で働いています。",
+    "example_zh": "在服飾店工作。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "シャツ",
+    "kana": "シャツ",
+    "romaji": "shatsu",
+    "part_of_speech": "名詞",
+    "meaning": "襯衫、上衣",
+    "example_ja": "白いシャツを着ています。",
+    "example_zh": "穿著白襯衫。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "ワイシャツ",
+    "kana": "ワイシャツ",
+    "romaji": "waishatsu",
+    "part_of_speech": "名詞",
+    "meaning": "（男用）襯衫",
+    "example_ja": "ワイシャツを洗いました。",
+    "example_zh": "洗了襯衫。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "セーター",
+    "kana": "セーター",
+    "romaji": "seetaa",
+    "part_of_speech": "名詞",
+    "meaning": "毛衣",
+    "example_ja": "寒いからセーターを着ます。",
+    "example_zh": "因為冷所以穿毛衣。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "コート",
+    "kana": "コート",
+    "romaji": "kooto",
+    "part_of_speech": "名詞",
+    "meaning": "大衣、外套",
+    "example_ja": "コートを脱いでください。",
+    "example_zh": "請脫掉大衣。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "ズボン",
+    "kana": "ズボン",
+    "romaji": "zubon",
+    "part_of_speech": "名詞",
+    "meaning": "褲子",
+    "example_ja": "黒いズボンを履いています。",
+    "example_zh": "穿著黑色褲子。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "スカート",
+    "kana": "スカート",
+    "romaji": "sukaato",
+    "part_of_speech": "名詞",
+    "meaning": "裙子",
+    "example_ja": "赤いスカートがほしいです。",
+    "example_zh": "想要紅色的裙子。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "帽子",
+    "kana": "ぼうし",
+    "romaji": "boushi",
+    "part_of_speech": "名詞",
+    "meaning": "帽子",
+    "example_ja": "帽子をかぶります。",
+    "example_zh": "戴帽子。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "靴",
+    "kana": "くつ",
+    "romaji": "kutsu",
+    "part_of_speech": "名詞",
+    "meaning": "鞋子",
+    "example_ja": "靴を脱いでください。",
+    "example_zh": "請脫鞋。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "靴下",
+    "kana": "くつした",
+    "romaji": "kutsushita",
+    "part_of_speech": "名詞",
+    "meaning": "襪子",
+    "example_ja": "靴下を履きます。",
+    "example_zh": "穿襪子。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "スリッパ",
+    "kana": "スリッパ",
+    "romaji": "surippa",
+    "part_of_speech": "名詞",
+    "meaning": "拖鞋",
+    "example_ja": "スリッパを履いてください。",
+    "example_zh": "請穿拖鞋。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "眼鏡",
+    "kana": "めがね",
+    "romaji": "megane",
+    "part_of_speech": "名詞",
+    "meaning": "眼鏡",
+    "example_ja": "眼鏡をかけています。",
+    "example_zh": "戴著眼鏡。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "ネクタイ",
+    "kana": "ネクタイ",
+    "romaji": "nekutai",
+    "part_of_speech": "名詞",
+    "meaning": "領帶",
+    "example_ja": "父にネクタイをあげました。",
+    "example_zh": "送了領帶給父親。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "ポケット",
+    "kana": "ポケット",
+    "romaji": "poketto",
+    "part_of_speech": "名詞",
+    "meaning": "口袋",
+    "example_ja": "ポケットに鍵があります。",
+    "example_zh": "口袋裡有鑰匙。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "ボタン",
+    "kana": "ボタン",
+    "romaji": "botan",
+    "part_of_speech": "名詞",
+    "meaning": "鈕扣；按鈕",
+    "example_ja": "ボタンを押してください。",
+    "example_zh": "請按按鈕。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "ハンカチ",
+    "kana": "ハンカチ",
+    "romaji": "hankachi",
+    "part_of_speech": "名詞",
+    "meaning": "手帕",
+    "example_ja": "ハンカチで手を拭きます。",
+    "example_zh": "用手帕擦手。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "傘",
+    "kana": "かさ",
+    "romaji": "kasa",
+    "part_of_speech": "名詞",
+    "meaning": "傘",
+    "example_ja": "傘を持って行ってください。",
+    "example_zh": "請帶傘去。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "かばん",
+    "kana": "かばん",
+    "romaji": "kaban",
+    "part_of_speech": "名詞",
+    "meaning": "包包、皮包",
+    "example_ja": "かばんの中に本があります。",
+    "example_zh": "包包裡有書。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "財布",
+    "kana": "さいふ",
+    "romaji": "saifu",
+    "part_of_speech": "名詞",
+    "meaning": "錢包",
+    "example_ja": "財布を忘れました。",
+    "example_zh": "忘了帶錢包。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "時計",
+    "kana": "とけい",
+    "romaji": "tokei",
+    "part_of_speech": "名詞",
+    "meaning": "時鐘、手錶",
+    "example_ja": "この時計は高かったです。",
+    "example_zh": "這支錶很貴。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "お金",
+    "kana": "おかね",
+    "romaji": "okane",
+    "part_of_speech": "名詞",
+    "meaning": "錢",
+    "example_ja": "お金が足りません。",
+    "example_zh": "錢不夠。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "荷物",
+    "kana": "にもつ",
+    "romaji": "nimotsu",
+    "part_of_speech": "名詞",
+    "meaning": "行李",
+    "example_ja": "荷物が重いです。",
+    "example_zh": "行李很重。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "鍵",
+    "kana": "かぎ",
+    "romaji": "kagi",
+    "part_of_speech": "名詞",
+    "meaning": "鑰匙；鎖",
+    "example_ja": "部屋の鍵をかけます。",
+    "example_zh": "鎖上房間的門。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "カメラ",
+    "kana": "カメラ",
+    "romaji": "kamera",
+    "part_of_speech": "名詞",
+    "meaning": "相機",
+    "example_ja": "カメラで写真を撮ります。",
+    "example_zh": "用相機拍照。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "手紙",
+    "kana": "てがみ",
+    "romaji": "tegami",
+    "part_of_speech": "名詞",
+    "meaning": "信",
+    "example_ja": "母に手紙を書きました。",
+    "example_zh": "寫信給母親。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "葉書",
+    "kana": "はがき",
+    "romaji": "hagaki",
+    "part_of_speech": "名詞",
+    "meaning": "明信片",
+    "example_ja": "京都から葉書を出しました。",
+    "example_zh": "從京都寄了明信片。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "切手",
+    "kana": "きって",
+    "romaji": "kitte",
+    "part_of_speech": "名詞",
+    "meaning": "郵票",
+    "example_ja": "八十円の切手をください。",
+    "example_zh": "請給我八十日圓的郵票。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "封筒",
+    "kana": "ふうとう",
+    "romaji": "fuutou",
+    "part_of_speech": "名詞",
+    "meaning": "信封",
+    "example_ja": "封筒に切手を貼ります。",
+    "example_zh": "在信封上貼郵票。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "新聞",
+    "kana": "しんぶん",
+    "romaji": "shinbun",
+    "part_of_speech": "名詞",
+    "meaning": "報紙",
+    "example_ja": "毎朝新聞を読みます。",
+    "example_zh": "每天早上看報紙。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "雑誌",
+    "kana": "ざっし",
+    "romaji": "zasshi",
+    "part_of_speech": "名詞",
+    "meaning": "雜誌",
+    "example_ja": "雑誌を二冊買いました。",
+    "example_zh": "買了兩本雜誌。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "地図",
+    "kana": "ちず",
+    "romaji": "chizu",
+    "part_of_speech": "名詞",
+    "meaning": "地圖",
+    "example_ja": "地図を見ながら歩きます。",
+    "example_zh": "邊看地圖邊走。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "写真",
+    "kana": "しゃしん",
+    "romaji": "shashin",
+    "part_of_speech": "名詞",
+    "meaning": "照片",
+    "example_ja": "ここで写真を撮らないでください。",
+    "example_zh": "請不要在這裡拍照。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "煙草",
+    "kana": "たばこ",
+    "romaji": "tabako",
+    "part_of_speech": "名詞",
+    "meaning": "香菸",
+    "example_ja": "ここで煙草を吸わないでください。",
+    "example_zh": "請不要在這裡抽菸。",
+    "category": "衣物・隨身物品"
+  },
+  {
+    "kanji": "家",
+    "kana": "いえ",
+    "romaji": "ie",
+    "part_of_speech": "名詞",
+    "meaning": "家、房子",
+    "example_ja": "家から駅まで十分です。",
+    "example_zh": "從家到車站十分鐘。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "うち",
+    "kana": "うち",
+    "romaji": "uchi",
+    "part_of_speech": "名詞",
+    "meaning": "家（自己家）",
+    "example_ja": "今日はうちにいます。",
+    "example_zh": "今天在家。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "部屋",
+    "kana": "へや",
+    "romaji": "heya",
+    "part_of_speech": "名詞",
+    "meaning": "房間",
+    "example_ja": "部屋を掃除します。",
+    "example_zh": "打掃房間。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "玄関",
+    "kana": "げんかん",
+    "romaji": "genkan",
+    "part_of_speech": "名詞",
+    "meaning": "玄關",
+    "example_ja": "玄関で靴を脱ぎます。",
+    "example_zh": "在玄關脫鞋。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "台所",
+    "kana": "だいどころ",
+    "romaji": "daidokoro",
+    "part_of_speech": "名詞",
+    "meaning": "廚房",
+    "example_ja": "母は台所にいます。",
+    "example_zh": "媽媽在廚房。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "お風呂",
+    "kana": "おふろ",
+    "romaji": "ofuro",
+    "part_of_speech": "名詞",
+    "meaning": "浴室、洗澡",
+    "example_ja": "お風呂に入ります。",
+    "example_zh": "洗澡。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "トイレ",
+    "kana": "トイレ",
+    "romaji": "toire",
+    "part_of_speech": "名詞",
+    "meaning": "廁所",
+    "example_ja": "トイレはどこですか。",
+    "example_zh": "廁所在哪裡？",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "お手洗い",
+    "kana": "おてあらい",
+    "romaji": "otearai",
+    "part_of_speech": "名詞",
+    "meaning": "洗手間（禮貌說法）",
+    "example_ja": "お手洗いを借りてもいいですか。",
+    "example_zh": "可以借用洗手間嗎？",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "庭",
+    "kana": "にわ",
+    "romaji": "niwa",
+    "part_of_speech": "名詞",
+    "meaning": "庭院",
+    "example_ja": "庭に花があります。",
+    "example_zh": "院子裡有花。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "窓",
+    "kana": "まど",
+    "romaji": "mado",
+    "part_of_speech": "名詞",
+    "meaning": "窗戶",
+    "example_ja": "窓を開けてください。",
+    "example_zh": "請打開窗戶。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "ドア",
+    "kana": "ドア",
+    "romaji": "doa",
+    "part_of_speech": "名詞",
+    "meaning": "門（西式）",
+    "example_ja": "ドアを閉めてください。",
+    "example_zh": "請關門。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "戸",
+    "kana": "と",
+    "romaji": "to",
+    "part_of_speech": "名詞",
+    "meaning": "門（日式拉門）",
+    "example_ja": "戸を開けます。",
+    "example_zh": "開門。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "門",
+    "kana": "もん",
+    "romaji": "mon",
+    "part_of_speech": "名詞",
+    "meaning": "大門",
+    "example_ja": "学校の門の前で待ちます。",
+    "example_zh": "在校門前等。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "机",
+    "kana": "つくえ",
+    "romaji": "tsukue",
+    "part_of_speech": "名詞",
+    "meaning": "桌子、書桌",
+    "example_ja": "机の上に本があります。",
+    "example_zh": "桌上有書。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "椅子",
+    "kana": "いす",
+    "romaji": "isu",
+    "part_of_speech": "名詞",
+    "meaning": "椅子",
+    "example_ja": "椅子に座ってください。",
+    "example_zh": "請坐在椅子上。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "テーブル",
+    "kana": "テーブル",
+    "romaji": "teeburu",
+    "part_of_speech": "名詞",
+    "meaning": "桌子（餐桌）",
+    "example_ja": "テーブルの上にコップがあります。",
+    "example_zh": "桌上有杯子。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "ベッド",
+    "kana": "ベッド",
+    "romaji": "beddo",
+    "part_of_speech": "名詞",
+    "meaning": "床",
+    "example_ja": "ベッドで寝ます。",
+    "example_zh": "在床上睡覺。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "本棚",
+    "kana": "ほんだな",
+    "romaji": "hondana",
+    "part_of_speech": "名詞",
+    "meaning": "書架",
+    "example_ja": "本棚に辞書があります。",
+    "example_zh": "書架上有字典。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "布団",
+    "kana": "ふとん",
+    "romaji": "futon",
+    "part_of_speech": "名詞",
+    "meaning": "棉被、被褥",
+    "example_ja": "布団を敷きます。",
+    "example_zh": "鋪棉被。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "箱",
+    "kana": "はこ",
+    "romaji": "hako",
+    "part_of_speech": "名詞",
+    "meaning": "箱子、盒子",
+    "example_ja": "箱の中に何がありますか。",
+    "example_zh": "箱子裡有什麼？",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "電気",
+    "kana": "でんき",
+    "romaji": "denki",
+    "part_of_speech": "名詞",
+    "meaning": "電；電燈",
+    "example_ja": "電気をつけてください。",
+    "example_zh": "請開燈。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "電話",
+    "kana": "でんわ",
+    "romaji": "denwa",
+    "part_of_speech": "名詞",
+    "meaning": "電話",
+    "example_ja": "友達に電話をかけます。",
+    "example_zh": "打電話給朋友。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "電話番号",
+    "kana": "でんわばんごう",
+    "romaji": "denwa bangou",
+    "part_of_speech": "名詞",
+    "meaning": "電話號碼",
+    "example_ja": "電話番号を教えてください。",
+    "example_zh": "請告訴我電話號碼。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "テレビ",
+    "kana": "テレビ",
+    "romaji": "terebi",
+    "part_of_speech": "名詞",
+    "meaning": "電視",
+    "example_ja": "夜、テレビを見ます。",
+    "example_zh": "晚上看電視。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "ラジオ",
+    "kana": "ラジオ",
+    "romaji": "rajio",
+    "part_of_speech": "名詞",
+    "meaning": "收音機",
+    "example_ja": "ラジオでニュースを聞きます。",
+    "example_zh": "用收音機聽新聞。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "冷蔵庫",
+    "kana": "れいぞうこ",
+    "romaji": "reizouko",
+    "part_of_speech": "名詞",
+    "meaning": "冰箱",
+    "example_ja": "冷蔵庫に牛乳があります。",
+    "example_zh": "冰箱裡有牛奶。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "洗濯機",
+    "kana": "せんたくき",
+    "romaji": "sentakuki",
+    "part_of_speech": "名詞",
+    "meaning": "洗衣機",
+    "example_ja": "洗濯機で服を洗います。",
+    "example_zh": "用洗衣機洗衣服。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "ストーブ",
+    "kana": "ストーブ",
+    "romaji": "sutoobu",
+    "part_of_speech": "名詞",
+    "meaning": "暖爐",
+    "example_ja": "寒いからストーブをつけます。",
+    "example_zh": "因為冷所以開暖爐。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "石鹸",
+    "kana": "せっけん",
+    "romaji": "sekken",
+    "part_of_speech": "名詞",
+    "meaning": "肥皂",
+    "example_ja": "石鹸で手を洗います。",
+    "example_zh": "用肥皂洗手。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "タオル",
+    "kana": "タオル",
+    "romaji": "taoru",
+    "part_of_speech": "名詞",
+    "meaning": "毛巾",
+    "example_ja": "タオルで顔を拭きます。",
+    "example_zh": "用毛巾擦臉。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "シャワー",
+    "kana": "シャワー",
+    "romaji": "shawaa",
+    "part_of_speech": "名詞",
+    "meaning": "淋浴",
+    "example_ja": "毎朝シャワーを浴びます。",
+    "example_zh": "每天早上淋浴。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "アパート",
+    "kana": "アパート",
+    "romaji": "apaato",
+    "part_of_speech": "名詞",
+    "meaning": "公寓",
+    "example_ja": "アパートに住んでいます。",
+    "example_zh": "住在公寓。",
+    "category": "家・生活用品"
+  },
+  {
+    "kanji": "学校",
+    "kana": "がっこう",
+    "romaji": "gakkou",
+    "part_of_speech": "名詞",
+    "meaning": "學校",
+    "example_ja": "バスで学校へ行きます。",
+    "example_zh": "搭公車去學校。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "大学",
+    "kana": "だいがく",
+    "romaji": "daigaku",
+    "part_of_speech": "名詞",
+    "meaning": "大學",
+    "example_ja": "大学で経済を勉強しています。",
+    "example_zh": "在大學念經濟。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "教室",
+    "kana": "きょうしつ",
+    "romaji": "kyoushitsu",
+    "part_of_speech": "名詞",
+    "meaning": "教室",
+    "example_ja": "教室に学生がいます。",
+    "example_zh": "教室裡有學生。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "クラス",
+    "kana": "クラス",
+    "romaji": "kurasu",
+    "part_of_speech": "名詞",
+    "meaning": "班級",
+    "example_ja": "クラスに二十人います。",
+    "example_zh": "班上有二十個人。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "授業",
+    "kana": "じゅぎょう",
+    "romaji": "jugyou",
+    "part_of_speech": "名詞",
+    "meaning": "上課、課程",
+    "example_ja": "授業は九時からです。",
+    "example_zh": "九點開始上課。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "宿題",
+    "kana": "しゅくだい",
+    "romaji": "shukudai",
+    "part_of_speech": "名詞",
+    "meaning": "作業、功課",
+    "example_ja": "宿題をしてから、寝ます。",
+    "example_zh": "做完作業再睡覺。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "テスト",
+    "kana": "テスト",
+    "romaji": "tesuto",
+    "part_of_speech": "名詞",
+    "meaning": "考試、測驗",
+    "example_ja": "明日テストがあります。",
+    "example_zh": "明天有考試。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "試験",
+    "kana": "しけん",
+    "romaji": "shiken",
+    "part_of_speech": "名詞",
+    "meaning": "考試",
+    "example_ja": "試験は難しかったです。",
+    "example_zh": "考試很難。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "問題",
+    "kana": "もんだい",
+    "romaji": "mondai",
+    "part_of_speech": "名詞",
+    "meaning": "問題、題目",
+    "example_ja": "この問題はやさしいです。",
+    "example_zh": "這題很簡單。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "質問",
+    "kana": "しつもん",
+    "romaji": "shitsumon",
+    "part_of_speech": "名詞",
+    "meaning": "提問、問題",
+    "example_ja": "質問がありますか。",
+    "example_zh": "有問題嗎？",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "意味",
+    "kana": "いみ",
+    "romaji": "imi",
+    "part_of_speech": "名詞",
+    "meaning": "意思",
+    "example_ja": "この言葉の意味がわかりません。",
+    "example_zh": "不懂這個詞的意思。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "言葉",
+    "kana": "ことば",
+    "romaji": "kotoba",
+    "part_of_speech": "名詞",
+    "meaning": "詞語、語言",
+    "example_ja": "新しい言葉を覚えます。",
+    "example_zh": "記新的單字。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "話",
+    "kana": "はなし",
+    "romaji": "hanashi",
+    "part_of_speech": "名詞",
+    "meaning": "話、談話；故事",
+    "example_ja": "先生の話を聞きます。",
+    "example_zh": "聽老師說話。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "字",
+    "kana": "じ",
+    "romaji": "ji",
+    "part_of_speech": "名詞",
+    "meaning": "字",
+    "example_ja": "きれいな字を書きますね。",
+    "example_zh": "你的字寫得真漂亮。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "漢字",
+    "kana": "かんじ",
+    "romaji": "kanji",
+    "part_of_speech": "名詞",
+    "meaning": "漢字",
+    "example_ja": "漢字を百個覚えました。",
+    "example_zh": "記了一百個漢字。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "平仮名",
+    "kana": "ひらがな",
+    "romaji": "hiragana",
+    "part_of_speech": "名詞",
+    "meaning": "平假名",
+    "example_ja": "平仮名で書いてください。",
+    "example_zh": "請用平假名寫。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "片仮名",
+    "kana": "かたかな",
+    "romaji": "katakana",
+    "part_of_speech": "名詞",
+    "meaning": "片假名",
+    "example_ja": "名前を片仮名で書きます。",
+    "example_zh": "用片假名寫名字。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "作文",
+    "kana": "さくぶん",
+    "romaji": "sakubun",
+    "part_of_speech": "名詞",
+    "meaning": "作文",
+    "example_ja": "日本語で作文を書きました。",
+    "example_zh": "用日文寫了作文。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "辞書",
+    "kana": "じしょ",
+    "romaji": "jisho",
+    "part_of_speech": "名詞",
+    "meaning": "字典",
+    "example_ja": "辞書で言葉を調べます。",
+    "example_zh": "用字典查單字。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "本",
+    "kana": "ほん",
+    "romaji": "hon",
+    "part_of_speech": "名詞",
+    "meaning": "書",
+    "example_ja": "寝る前に本を読みます。",
+    "example_zh": "睡前看書。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "ノート",
+    "kana": "ノート",
+    "romaji": "nooto",
+    "part_of_speech": "名詞",
+    "meaning": "筆記本",
+    "example_ja": "ノートに書いてください。",
+    "example_zh": "請寫在筆記本上。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "鉛筆",
+    "kana": "えんぴつ",
+    "romaji": "enpitsu",
+    "part_of_speech": "名詞",
+    "meaning": "鉛筆",
+    "example_ja": "鉛筆で書きます。",
+    "example_zh": "用鉛筆寫。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "ペン",
+    "kana": "ペン",
+    "romaji": "pen",
+    "part_of_speech": "名詞",
+    "meaning": "筆",
+    "example_ja": "ペンを貸してください。",
+    "example_zh": "請借我筆。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "ボールペン",
+    "kana": "ボールペン",
+    "romaji": "boorupen",
+    "part_of_speech": "名詞",
+    "meaning": "原子筆",
+    "example_ja": "ボールペンで名前を書きます。",
+    "example_zh": "用原子筆寫名字。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "消しゴム",
+    "kana": "けしゴム",
+    "romaji": "keshigomu",
+    "part_of_speech": "名詞",
+    "meaning": "橡皮擦",
+    "example_ja": "消しゴムで消してください。",
+    "example_zh": "請用橡皮擦擦掉。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "紙",
+    "kana": "かみ",
+    "romaji": "kami",
+    "part_of_speech": "名詞",
+    "meaning": "紙",
+    "example_ja": "紙に書いてください。",
+    "example_zh": "請寫在紙上。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "英語",
+    "kana": "えいご",
+    "romaji": "eigo",
+    "part_of_speech": "名詞",
+    "meaning": "英文",
+    "example_ja": "英語がわかりますか。",
+    "example_zh": "你懂英文嗎？",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "日本語",
+    "kana": "にほんご",
+    "romaji": "nihongo",
+    "part_of_speech": "名詞",
+    "meaning": "日文",
+    "example_ja": "日本語で話してください。",
+    "example_zh": "請用日文說。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "外国語",
+    "kana": "がいこくご",
+    "romaji": "gaikokugo",
+    "part_of_speech": "名詞",
+    "meaning": "外語",
+    "example_ja": "外国語の勉強は楽しいです。",
+    "example_zh": "學外語很有趣。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "練習",
+    "kana": "れんしゅう",
+    "romaji": "renshuu",
+    "part_of_speech": "名詞",
+    "meaning": "練習",
+    "example_ja": "毎日漢字の練習をします。",
+    "example_zh": "每天練習漢字。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "勉強",
+    "kana": "べんきょう",
+    "romaji": "benkyou",
+    "part_of_speech": "名詞",
+    "meaning": "學習、念書",
+    "example_ja": "日本語の勉強は面白いです。",
+    "example_zh": "學日文很有趣。",
+    "category": "學校・學習"
+  },
+  {
+    "kanji": "所",
+    "kana": "ところ",
+    "romaji": "tokoro",
+    "part_of_speech": "名詞",
+    "meaning": "地方",
+    "example_ja": "ここは静かな所です。",
+    "example_zh": "這裡是安靜的地方。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "駅",
+    "kana": "えき",
+    "romaji": "eki",
+    "part_of_speech": "名詞",
+    "meaning": "車站",
+    "example_ja": "駅まで歩いて行きます。",
+    "example_zh": "走路去車站。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "銀行",
+    "kana": "ぎんこう",
+    "romaji": "ginkou",
+    "part_of_speech": "名詞",
+    "meaning": "銀行",
+    "example_ja": "銀行は九時から三時までです。",
+    "example_zh": "銀行從九點開到三點。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "郵便局",
+    "kana": "ゆうびんきょく",
+    "romaji": "yuubinkyoku",
+    "part_of_speech": "名詞",
+    "meaning": "郵局",
+    "example_ja": "郵便局で切手を買います。",
+    "example_zh": "在郵局買郵票。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "病院",
+    "kana": "びょういん",
+    "romaji": "byouin",
+    "part_of_speech": "名詞",
+    "meaning": "醫院",
+    "example_ja": "病院へ行ったほうがいいですよ。",
+    "example_zh": "最好去醫院喔。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "店",
+    "kana": "みせ",
+    "romaji": "mise",
+    "part_of_speech": "名詞",
+    "meaning": "商店",
+    "example_ja": "あの店は安いです。",
+    "example_zh": "那家店很便宜。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "喫茶店",
+    "kana": "きっさてん",
+    "romaji": "kissaten",
+    "part_of_speech": "名詞",
+    "meaning": "咖啡廳",
+    "example_ja": "喫茶店でコーヒーを飲みます。",
+    "example_zh": "在咖啡廳喝咖啡。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "食堂",
+    "kana": "しょくどう",
+    "romaji": "shokudou",
+    "part_of_speech": "名詞",
+    "meaning": "食堂、餐廳",
+    "example_ja": "大学の食堂で昼ご飯を食べます。",
+    "example_zh": "在大學食堂吃午餐。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "レストラン",
+    "kana": "レストラン",
+    "romaji": "resutoran",
+    "part_of_speech": "名詞",
+    "meaning": "餐廳",
+    "example_ja": "レストランで晩ご飯を食べました。",
+    "example_zh": "在餐廳吃了晚餐。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "スーパー",
+    "kana": "スーパー",
+    "romaji": "suupaa",
+    "part_of_speech": "名詞",
+    "meaning": "超市",
+    "example_ja": "スーパーで野菜を買います。",
+    "example_zh": "在超市買蔬菜。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "デパート",
+    "kana": "デパート",
+    "romaji": "depaato",
+    "part_of_speech": "名詞",
+    "meaning": "百貨公司",
+    "example_ja": "デパートで服を買いました。",
+    "example_zh": "在百貨公司買了衣服。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "コンビニ",
+    "kana": "コンビニ",
+    "romaji": "konbini",
+    "part_of_speech": "名詞",
+    "meaning": "便利商店",
+    "example_ja": "コンビニでお弁当を買います。",
+    "example_zh": "在便利商店買便當。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "八百屋",
+    "kana": "やおや",
+    "romaji": "yaoya",
+    "part_of_speech": "名詞",
+    "meaning": "蔬果店",
+    "example_ja": "八百屋でりんごを買いました。",
+    "example_zh": "在蔬果店買了蘋果。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "本屋",
+    "kana": "ほんや",
+    "romaji": "honya",
+    "part_of_speech": "名詞",
+    "meaning": "書店",
+    "example_ja": "本屋で雑誌を買います。",
+    "example_zh": "在書店買雜誌。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "映画館",
+    "kana": "えいがかん",
+    "romaji": "eigakan",
+    "part_of_speech": "名詞",
+    "meaning": "電影院",
+    "example_ja": "映画館で映画を見ます。",
+    "example_zh": "在電影院看電影。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "図書館",
+    "kana": "としょかん",
+    "romaji": "toshokan",
+    "part_of_speech": "名詞",
+    "meaning": "圖書館",
+    "example_ja": "図書館で本を借ります。",
+    "example_zh": "在圖書館借書。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "公園",
+    "kana": "こうえん",
+    "romaji": "kouen",
+    "part_of_speech": "名詞",
+    "meaning": "公園",
+    "example_ja": "公園を散歩します。",
+    "example_zh": "在公園散步。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "ホテル",
+    "kana": "ホテル",
+    "romaji": "hoteru",
+    "part_of_speech": "名詞",
+    "meaning": "飯店",
+    "example_ja": "駅の前のホテルに泊まります。",
+    "example_zh": "住在車站前的飯店。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "大使館",
+    "kana": "たいしかん",
+    "romaji": "taishikan",
+    "part_of_speech": "名詞",
+    "meaning": "大使館",
+    "example_ja": "大使館はどこにありますか。",
+    "example_zh": "大使館在哪裡？",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "会社",
+    "kana": "かいしゃ",
+    "romaji": "kaisha",
+    "part_of_speech": "名詞",
+    "meaning": "公司",
+    "example_ja": "電車で会社へ行きます。",
+    "example_zh": "搭電車去公司。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "交番",
+    "kana": "こうばん",
+    "romaji": "kouban",
+    "part_of_speech": "名詞",
+    "meaning": "派出所",
+    "example_ja": "交番で道を聞きました。",
+    "example_zh": "在派出所問路。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "プール",
+    "kana": "プール",
+    "romaji": "puuru",
+    "part_of_speech": "名詞",
+    "meaning": "游泳池",
+    "example_ja": "夏はプールで泳ぎます。",
+    "example_zh": "夏天在游泳池游泳。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "動物園",
+    "kana": "どうぶつえん",
+    "romaji": "doubutsuen",
+    "part_of_speech": "名詞",
+    "meaning": "動物園",
+    "example_ja": "子どもと動物園へ行きます。",
+    "example_zh": "和小孩去動物園。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "町",
+    "kana": "まち",
+    "romaji": "machi",
+    "part_of_speech": "名詞",
+    "meaning": "城鎮、街上",
+    "example_ja": "この町は静かです。",
+    "example_zh": "這個城鎮很安靜。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "村",
+    "kana": "むら",
+    "romaji": "mura",
+    "part_of_speech": "名詞",
+    "meaning": "村莊",
+    "example_ja": "小さい村に住んでいます。",
+    "example_zh": "住在小村莊。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "国",
+    "kana": "くに",
+    "romaji": "kuni",
+    "part_of_speech": "名詞",
+    "meaning": "國家；故鄉",
+    "example_ja": "お国はどちらですか。",
+    "example_zh": "您是哪國人？",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "外国",
+    "kana": "がいこく",
+    "romaji": "gaikoku",
+    "part_of_speech": "名詞",
+    "meaning": "外國",
+    "example_ja": "外国へ行ったことがありますか。",
+    "example_zh": "你去過外國嗎？",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "道",
+    "kana": "みち",
+    "romaji": "michi",
+    "part_of_speech": "名詞",
+    "meaning": "路、道路",
+    "example_ja": "この道をまっすぐ行ってください。",
+    "example_zh": "請沿這條路直走。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "交差点",
+    "kana": "こうさてん",
+    "romaji": "kousaten",
+    "part_of_speech": "名詞",
+    "meaning": "十字路口",
+    "example_ja": "交差点を右へ曲がってください。",
+    "example_zh": "請在十字路口右轉。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "角",
+    "kana": "かど",
+    "romaji": "kado",
+    "part_of_speech": "名詞",
+    "meaning": "轉角",
+    "example_ja": "あの角を左へ曲がります。",
+    "example_zh": "在那個轉角左轉。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "橋",
+    "kana": "はし",
+    "romaji": "hashi",
+    "part_of_speech": "名詞",
+    "meaning": "橋",
+    "example_ja": "橋を渡ってください。",
+    "example_zh": "請過橋。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "建物",
+    "kana": "たてもの",
+    "romaji": "tatemono",
+    "part_of_speech": "名詞",
+    "meaning": "建築物",
+    "example_ja": "あの白い建物は病院です。",
+    "example_zh": "那棟白色建築物是醫院。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "入口",
+    "kana": "いりぐち",
+    "romaji": "iriguchi",
+    "part_of_speech": "名詞",
+    "meaning": "入口",
+    "example_ja": "入口はあちらです。",
+    "example_zh": "入口在那邊。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "出口",
+    "kana": "でぐち",
+    "romaji": "deguchi",
+    "part_of_speech": "名詞",
+    "meaning": "出口",
+    "example_ja": "東の出口で会いましょう。",
+    "example_zh": "在東出口見面吧。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "受付",
+    "kana": "うけつけ",
+    "romaji": "uketsuke",
+    "part_of_speech": "名詞",
+    "meaning": "接待處、櫃檯",
+    "example_ja": "受付で名前を書いてください。",
+    "example_zh": "請在櫃檯寫名字。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "エレベーター",
+    "kana": "エレベーター",
+    "romaji": "erebeetaa",
+    "part_of_speech": "名詞",
+    "meaning": "電梯",
+    "example_ja": "エレベーターで五階へ行きます。",
+    "example_zh": "搭電梯到五樓。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "エスカレーター",
+    "kana": "エスカレーター",
+    "romaji": "esukareetaa",
+    "part_of_speech": "名詞",
+    "meaning": "手扶梯",
+    "example_ja": "エスカレーターに乗ります。",
+    "example_zh": "搭手扶梯。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "ポスト",
+    "kana": "ポスト",
+    "romaji": "posuto",
+    "part_of_speech": "名詞",
+    "meaning": "郵筒、信箱",
+    "example_ja": "手紙をポストに入れます。",
+    "example_zh": "把信投進郵筒。",
+    "category": "場所・設施"
+  },
+  {
+    "kanji": "電車",
+    "kana": "でんしゃ",
+    "romaji": "densha",
+    "part_of_speech": "名詞",
+    "meaning": "電車",
+    "example_ja": "電車で会社へ行きます。",
+    "example_zh": "搭電車去公司。",
+    "category": "交通"
+  },
+  {
+    "kanji": "地下鉄",
+    "kana": "ちかてつ",
+    "romaji": "chikatetsu",
+    "part_of_speech": "名詞",
+    "meaning": "地鐵",
+    "example_ja": "地下鉄のほうが速いです。",
+    "example_zh": "地鐵比較快。",
+    "category": "交通"
+  },
+  {
+    "kanji": "バス",
+    "kana": "バス",
+    "romaji": "basu",
+    "part_of_speech": "名詞",
+    "meaning": "公車",
+    "example_ja": "バスで学校へ来ます。",
+    "example_zh": "搭公車來學校。",
+    "category": "交通"
+  },
+  {
+    "kanji": "タクシー",
+    "kana": "タクシー",
+    "romaji": "takushii",
+    "part_of_speech": "名詞",
+    "meaning": "計程車",
+    "example_ja": "タクシーを呼んでください。",
+    "example_zh": "請幫我叫計程車。",
+    "category": "交通"
+  },
+  {
+    "kanji": "車",
+    "kana": "くるま",
+    "romaji": "kuruma",
+    "part_of_speech": "名詞",
+    "meaning": "車、汽車",
+    "example_ja": "車で海へ行きました。",
+    "example_zh": "開車去了海邊。",
+    "category": "交通"
+  },
+  {
+    "kanji": "自動車",
+    "kana": "じどうしゃ",
+    "romaji": "jidousha",
+    "part_of_speech": "名詞",
+    "meaning": "汽車",
+    "example_ja": "自動車の会社で働いています。",
+    "example_zh": "在汽車公司工作。",
+    "category": "交通"
+  },
+  {
+    "kanji": "自転車",
+    "kana": "じてんしゃ",
+    "romaji": "jitensha",
+    "part_of_speech": "名詞",
+    "meaning": "腳踏車",
+    "example_ja": "自転車で駅へ行きます。",
+    "example_zh": "騎腳踏車去車站。",
+    "category": "交通"
+  },
+  {
+    "kanji": "飛行機",
+    "kana": "ひこうき",
+    "romaji": "hikouki",
+    "part_of_speech": "名詞",
+    "meaning": "飛機",
+    "example_ja": "飛行機で日本へ来ました。",
+    "example_zh": "搭飛機來日本。",
+    "category": "交通"
+  },
+  {
+    "kanji": "船",
+    "kana": "ふね",
+    "romaji": "fune",
+    "part_of_speech": "名詞",
+    "meaning": "船",
+    "example_ja": "船で島へ行きます。",
+    "example_zh": "搭船去島上。",
+    "category": "交通"
+  },
+  {
+    "kanji": "切符",
+    "kana": "きっぷ",
+    "romaji": "kippu",
+    "part_of_speech": "名詞",
+    "meaning": "車票、票",
+    "example_ja": "切符を二枚買いました。",
+    "example_zh": "買了兩張票。",
+    "category": "交通"
+  },
+  {
+    "kanji": "空港",
+    "kana": "くうこう",
+    "romaji": "kuukou",
+    "part_of_speech": "名詞",
+    "meaning": "機場",
+    "example_ja": "空港まで一時間かかります。",
+    "example_zh": "到機場要一小時。",
+    "category": "交通"
+  },
+  {
+    "kanji": "天気",
+    "kana": "てんき",
+    "romaji": "tenki",
+    "part_of_speech": "名詞",
+    "meaning": "天氣",
+    "example_ja": "今日はいい天気ですね。",
+    "example_zh": "今天天氣真好。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "晴れ",
+    "kana": "はれ",
+    "romaji": "hare",
+    "part_of_speech": "名詞",
+    "meaning": "晴天",
+    "example_ja": "明日は晴れでしょう。",
+    "example_zh": "明天應該是晴天。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "雨",
+    "kana": "あめ",
+    "romaji": "ame",
+    "part_of_speech": "名詞",
+    "meaning": "雨",
+    "example_ja": "雨が降っています。",
+    "example_zh": "正在下雨。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "雪",
+    "kana": "ゆき",
+    "romaji": "yuki",
+    "part_of_speech": "名詞",
+    "meaning": "雪",
+    "example_ja": "北海道は雪が多いです。",
+    "example_zh": "北海道雪很多。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "風",
+    "kana": "かぜ",
+    "romaji": "kaze",
+    "part_of_speech": "名詞",
+    "meaning": "風",
+    "example_ja": "今日は風が強いです。",
+    "example_zh": "今天風很大。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "空",
+    "kana": "そら",
+    "romaji": "sora",
+    "part_of_speech": "名詞",
+    "meaning": "天空",
+    "example_ja": "空が青いです。",
+    "example_zh": "天空很藍。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "山",
+    "kana": "やま",
+    "romaji": "yama",
+    "part_of_speech": "名詞",
+    "meaning": "山",
+    "example_ja": "日本で富士山が一番高いです。",
+    "example_zh": "在日本富士山最高。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "川",
+    "kana": "かわ",
+    "romaji": "kawa",
+    "part_of_speech": "名詞",
+    "meaning": "河川",
+    "example_ja": "川で泳がないでください。",
+    "example_zh": "請不要在河裡游泳。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "海",
+    "kana": "うみ",
+    "romaji": "umi",
+    "part_of_speech": "名詞",
+    "meaning": "海",
+    "example_ja": "夏休みに海へ行きます。",
+    "example_zh": "暑假去海邊。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "池",
+    "kana": "いけ",
+    "romaji": "ike",
+    "part_of_speech": "名詞",
+    "meaning": "池塘",
+    "example_ja": "公園に池があります。",
+    "example_zh": "公園裡有池塘。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "木",
+    "kana": "き",
+    "romaji": "ki",
+    "part_of_speech": "名詞",
+    "meaning": "樹木",
+    "example_ja": "庭に大きい木があります。",
+    "example_zh": "院子裡有大樹。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "花",
+    "kana": "はな",
+    "romaji": "hana",
+    "part_of_speech": "名詞",
+    "meaning": "花",
+    "example_ja": "きれいな花ですね。",
+    "example_zh": "好漂亮的花。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "桜",
+    "kana": "さくら",
+    "romaji": "sakura",
+    "part_of_speech": "名詞",
+    "meaning": "櫻花",
+    "example_ja": "春に桜を見に行きます。",
+    "example_zh": "春天去賞櫻。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "犬",
+    "kana": "いぬ",
+    "romaji": "inu",
+    "part_of_speech": "名詞",
+    "meaning": "狗",
+    "example_ja": "犬が好きです。",
+    "example_zh": "喜歡狗。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "猫",
+    "kana": "ねこ",
+    "romaji": "neko",
+    "part_of_speech": "名詞",
+    "meaning": "貓",
+    "example_ja": "うちに猫が二匹います。",
+    "example_zh": "家裡有兩隻貓。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "鳥",
+    "kana": "とり",
+    "romaji": "tori",
+    "part_of_speech": "名詞",
+    "meaning": "鳥",
+    "example_ja": "鳥が鳴いています。",
+    "example_zh": "鳥在叫。",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "動物",
+    "kana": "どうぶつ",
+    "romaji": "doubutsu",
+    "part_of_speech": "名詞",
+    "meaning": "動物",
+    "example_ja": "どんな動物が好きですか。",
+    "example_zh": "你喜歡什麼動物？",
+    "category": "自然・天氣"
+  },
+  {
+    "kanji": "上",
+    "kana": "うえ",
+    "romaji": "ue",
+    "part_of_speech": "名詞",
+    "meaning": "上面",
+    "example_ja": "机の上に本があります。",
+    "example_zh": "桌上有書。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "下",
+    "kana": "した",
+    "romaji": "shita",
+    "part_of_speech": "名詞",
+    "meaning": "下面",
+    "example_ja": "椅子の下に猫がいます。",
+    "example_zh": "椅子下有貓。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "中",
+    "kana": "なか",
+    "romaji": "naka",
+    "part_of_speech": "名詞",
+    "meaning": "裡面",
+    "example_ja": "かばんの中に何がありますか。",
+    "example_zh": "包包裡有什麼？",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "外",
+    "kana": "そと",
+    "romaji": "soto",
+    "part_of_speech": "名詞",
+    "meaning": "外面",
+    "example_ja": "外は寒いです。",
+    "example_zh": "外面很冷。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "前",
+    "kana": "まえ",
+    "romaji": "mae",
+    "part_of_speech": "名詞",
+    "meaning": "前面；之前",
+    "example_ja": "駅の前で待っています。",
+    "example_zh": "在車站前等。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "後ろ",
+    "kana": "うしろ",
+    "romaji": "ushiro",
+    "part_of_speech": "名詞",
+    "meaning": "後面",
+    "example_ja": "学校の後ろに山があります。",
+    "example_zh": "學校後面有山。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "左",
+    "kana": "ひだり",
+    "romaji": "hidari",
+    "part_of_speech": "名詞",
+    "meaning": "左邊",
+    "example_ja": "左へ曲がってください。",
+    "example_zh": "請左轉。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "右",
+    "kana": "みぎ",
+    "romaji": "migi",
+    "part_of_speech": "名詞",
+    "meaning": "右邊",
+    "example_ja": "銀行は右にあります。",
+    "example_zh": "銀行在右邊。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "隣",
+    "kana": "となり",
+    "romaji": "tonari",
+    "part_of_speech": "名詞",
+    "meaning": "隔壁、旁邊",
+    "example_ja": "銀行は郵便局の隣です。",
+    "example_zh": "銀行在郵局隔壁。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "横",
+    "kana": "よこ",
+    "romaji": "yoko",
+    "part_of_speech": "名詞",
+    "meaning": "旁邊、側面",
+    "example_ja": "テレビの横に花があります。",
+    "example_zh": "電視旁邊有花。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "側",
+    "kana": "そば",
+    "romaji": "soba",
+    "part_of_speech": "名詞",
+    "meaning": "旁邊、附近",
+    "example_ja": "駅の側に住んでいます。",
+    "example_zh": "住在車站附近。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "近く",
+    "kana": "ちかく",
+    "romaji": "chikaku",
+    "part_of_speech": "名詞",
+    "meaning": "附近",
+    "example_ja": "この近くに銀行がありますか。",
+    "example_zh": "這附近有銀行嗎？",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "間",
+    "kana": "あいだ",
+    "romaji": "aida",
+    "part_of_speech": "名詞",
+    "meaning": "之間",
+    "example_ja": "銀行は本屋と花屋の間にあります。",
+    "example_zh": "銀行在書店和花店之間。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "東",
+    "kana": "ひがし",
+    "romaji": "higashi",
+    "part_of_speech": "名詞",
+    "meaning": "東邊",
+    "example_ja": "東の空が明るいです。",
+    "example_zh": "東邊的天空很亮。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "西",
+    "kana": "にし",
+    "romaji": "nishi",
+    "part_of_speech": "名詞",
+    "meaning": "西邊",
+    "example_ja": "西口から出てください。",
+    "example_zh": "請從西出口出去。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "南",
+    "kana": "みなみ",
+    "romaji": "minami",
+    "part_of_speech": "名詞",
+    "meaning": "南邊",
+    "example_ja": "南の島へ旅行したいです。",
+    "example_zh": "想去南方的島旅行。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "北",
+    "kana": "きた",
+    "romaji": "kita",
+    "part_of_speech": "名詞",
+    "meaning": "北邊",
+    "example_ja": "北海道は日本の北にあります。",
+    "example_zh": "北海道在日本的北邊。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "向こう",
+    "kana": "むこう",
+    "romaji": "mukou",
+    "part_of_speech": "名詞",
+    "meaning": "對面、那邊",
+    "example_ja": "川の向こうに公園があります。",
+    "example_zh": "河的對岸有公園。",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "辺",
+    "kana": "へん",
+    "romaji": "hen",
+    "part_of_speech": "名詞",
+    "meaning": "一帶、附近",
+    "example_ja": "この辺にコンビニがありますか。",
+    "example_zh": "這一帶有便利商店嗎？",
+    "category": "方位・位置"
+  },
+  {
+    "kanji": "会います",
+    "kana": "あいます",
+    "romaji": "aimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "見面",
+    "example_ja": "駅で友達に会います。",
+    "example_zh": "在車站和朋友見面。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "開きます",
+    "kana": "あきます",
+    "romaji": "akimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "（門窗）開",
+    "example_ja": "ドアが開きます。",
+    "example_zh": "門會開。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "開けます",
+    "kana": "あけます",
+    "romaji": "akemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "打開",
+    "example_ja": "窓を開けてください。",
+    "example_zh": "請打開窗戶。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "あげます",
+    "kana": "あげます",
+    "romaji": "agemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "給（別人）",
+    "example_ja": "友達に本をあげました。",
+    "example_zh": "送書給朋友。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "遊びます",
+    "kana": "あそびます",
+    "romaji": "asobimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "玩",
+    "example_ja": "公園で遊びます。",
+    "example_zh": "在公園玩。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "浴びます",
+    "kana": "あびます",
+    "romaji": "abimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "淋（浴）",
+    "example_ja": "シャワーを浴びます。",
+    "example_zh": "淋浴。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "洗います",
+    "kana": "あらいます",
+    "romaji": "araimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "洗",
+    "example_ja": "手を洗ってください。",
+    "example_zh": "請洗手。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "あります",
+    "kana": "あります",
+    "romaji": "arimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "有、在（無生命物）",
+    "example_ja": "机の上に本があります。",
+    "example_zh": "桌上有書。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "歩きます",
+    "kana": "あるきます",
+    "romaji": "arukimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "走路",
+    "example_ja": "駅まで歩きます。",
+    "example_zh": "走路到車站。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "言います",
+    "kana": "いいます",
+    "romaji": "iimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "說",
+    "example_ja": "もう一度言ってください。",
+    "example_zh": "請再說一次。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "行きます",
+    "kana": "いきます",
+    "romaji": "ikimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "去",
+    "example_ja": "明日、京都へ行きます。",
+    "example_zh": "明天去京都。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "います",
+    "kana": "います",
+    "romaji": "imasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "有、在（人、動物）",
+    "example_ja": "教室に学生がいます。",
+    "example_zh": "教室裡有學生。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "要ります",
+    "kana": "いります",
+    "romaji": "irimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "需要",
+    "example_ja": "お金が要ります。",
+    "example_zh": "需要錢。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "入れます",
+    "kana": "いれます",
+    "romaji": "iremasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "放入、加入",
+    "example_ja": "コーヒーに砂糖を入れます。",
+    "example_zh": "咖啡裡加糖。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "歌います",
+    "kana": "うたいます",
+    "romaji": "utaimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "唱歌",
+    "example_ja": "日本の歌を歌います。",
+    "example_zh": "唱日本的歌。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "生まれます",
+    "kana": "うまれます",
+    "romaji": "umaremasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "出生",
+    "example_ja": "私は台北で生まれました。",
+    "example_zh": "我在台北出生。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "売ります",
+    "kana": "うります",
+    "romaji": "urimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "賣",
+    "example_ja": "この店は果物を売っています。",
+    "example_zh": "這家店賣水果。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "起きます",
+    "kana": "おきます",
+    "romaji": "okimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "起床",
+    "example_ja": "毎朝六時に起きます。",
+    "example_zh": "每天早上六點起床。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "置きます",
+    "kana": "おきます",
+    "romaji": "okimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "放置",
+    "example_ja": "かばんをここに置いてください。",
+    "example_zh": "請把包包放這裡。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "教えます",
+    "kana": "おしえます",
+    "romaji": "oshiemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "教；告訴",
+    "example_ja": "日本語を教えています。",
+    "example_zh": "在教日文。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "押します",
+    "kana": "おします",
+    "romaji": "oshimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "按、推",
+    "example_ja": "このボタンを押してください。",
+    "example_zh": "請按這個按鈕。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "覚えます",
+    "kana": "おぼえます",
+    "romaji": "oboemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "記住",
+    "example_ja": "単語を覚えます。",
+    "example_zh": "背單字。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "泳ぎます",
+    "kana": "およぎます",
+    "romaji": "oyogimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "游泳",
+    "example_ja": "海で泳ぎました。",
+    "example_zh": "在海裡游泳。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "降ります",
+    "kana": "おります",
+    "romaji": "orimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "下（車）",
+    "example_ja": "次の駅で降ります。",
+    "example_zh": "在下一站下車。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "終わります",
+    "kana": "おわります",
+    "romaji": "owarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "結束",
+    "example_ja": "授業は五時に終わります。",
+    "example_zh": "五點下課。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "買います",
+    "kana": "かいます",
+    "romaji": "kaimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "買",
+    "example_ja": "スーパーで野菜を買います。",
+    "example_zh": "在超市買蔬菜。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "返します",
+    "kana": "かえします",
+    "romaji": "kaeshimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "歸還",
+    "example_ja": "図書館に本を返します。",
+    "example_zh": "還書給圖書館。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "帰ります",
+    "kana": "かえります",
+    "romaji": "kaerimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "回去、回家",
+    "example_ja": "七時にうちへ帰ります。",
+    "example_zh": "七點回家。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "かかります",
+    "kana": "かかります",
+    "romaji": "kakarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "花費（時間、錢）",
+    "example_ja": "駅まで十分かかります。",
+    "example_zh": "到車站要十分鐘。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "書きます",
+    "kana": "かきます",
+    "romaji": "kakimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "寫",
+    "example_ja": "ここに名前を書いてください。",
+    "example_zh": "請在這裡寫名字。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "かけます",
+    "kana": "かけます",
+    "romaji": "kakemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "打（電話）；戴（眼鏡）",
+    "example_ja": "友達に電話をかけます。",
+    "example_zh": "打電話給朋友。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "貸します",
+    "kana": "かします",
+    "romaji": "kashimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "借出、借給",
+    "example_ja": "傘を貸してください。",
+    "example_zh": "請借我傘。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "借ります",
+    "kana": "かります",
+    "romaji": "karimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "借入",
+    "example_ja": "図書館で本を借ります。",
+    "example_zh": "在圖書館借書。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "消えます",
+    "kana": "きえます",
+    "romaji": "kiemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "（燈火）熄滅、消失",
+    "example_ja": "電気が消えました。",
+    "example_zh": "燈熄了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "聞きます",
+    "kana": "ききます",
+    "romaji": "kikimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "聽；問",
+    "example_ja": "音楽を聞きます。",
+    "example_zh": "聽音樂。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "切ります",
+    "kana": "きります",
+    "romaji": "kirimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "切、剪",
+    "example_ja": "ナイフで野菜を切ります。",
+    "example_zh": "用刀切菜。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "着ます",
+    "kana": "きます",
+    "romaji": "kimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "穿（上衣）",
+    "example_ja": "コートを着ます。",
+    "example_zh": "穿大衣。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "来ます",
+    "kana": "きます",
+    "romaji": "kimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "來",
+    "example_ja": "明日、うちへ来てください。",
+    "example_zh": "明天請來我家。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "消します",
+    "kana": "けします",
+    "romaji": "keshimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "關（燈）；擦掉",
+    "example_ja": "電気を消してください。",
+    "example_zh": "請關燈。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "答えます",
+    "kana": "こたえます",
+    "romaji": "kotaemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "回答",
+    "example_ja": "質問に答えてください。",
+    "example_zh": "請回答問題。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "困ります",
+    "kana": "こまります",
+    "romaji": "komarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "困擾、為難",
+    "example_ja": "お金がなくて、困っています。",
+    "example_zh": "沒有錢，很困擾。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "咲きます",
+    "kana": "さきます",
+    "romaji": "sakimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "（花）開",
+    "example_ja": "桜が咲きました。",
+    "example_zh": "櫻花開了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "差します",
+    "kana": "さします",
+    "romaji": "sashimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "撐（傘）",
+    "example_ja": "傘を差して歩きます。",
+    "example_zh": "撐著傘走。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "死にます",
+    "kana": "しにます",
+    "romaji": "shinimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "死",
+    "example_ja": "ペットの金魚が死にました。",
+    "example_zh": "寵物金魚死了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "閉まります",
+    "kana": "しまります",
+    "romaji": "shimarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "（門窗）關閉",
+    "example_ja": "ドアが閉まります。",
+    "example_zh": "門要關了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "閉めます",
+    "kana": "しめます",
+    "romaji": "shimemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "關上",
+    "example_ja": "窓を閉めてください。",
+    "example_zh": "請關窗。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "締めます",
+    "kana": "しめます",
+    "romaji": "shimemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "繫上（領帶、安全帶）",
+    "example_ja": "ネクタイを締めます。",
+    "example_zh": "打領帶。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "知ります",
+    "kana": "しります",
+    "romaji": "shirimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "知道",
+    "example_ja": "その話を知っていますか。",
+    "example_zh": "你知道那件事嗎？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "吸います",
+    "kana": "すいます",
+    "romaji": "suimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "吸（菸）",
+    "example_ja": "煙草を吸わないでください。",
+    "example_zh": "請不要抽菸。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "住みます",
+    "kana": "すみます",
+    "romaji": "sumimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "住",
+    "example_ja": "台北に住んでいます。",
+    "example_zh": "住在台北。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "します",
+    "kana": "します",
+    "romaji": "shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "做",
+    "example_ja": "週末は何をしますか。",
+    "example_zh": "週末做什麼？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "座ります",
+    "kana": "すわります",
+    "romaji": "suwarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "坐",
+    "example_ja": "ここに座ってもいいですか。",
+    "example_zh": "可以坐這裡嗎？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "出します",
+    "kana": "だします",
+    "romaji": "dashimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "拿出；寄出",
+    "example_ja": "手紙を出します。",
+    "example_zh": "寄信。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "立ちます",
+    "kana": "たちます",
+    "romaji": "tachimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "站立",
+    "example_ja": "あそこに立っている人は誰ですか。",
+    "example_zh": "站在那裡的人是誰？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "頼みます",
+    "kana": "たのみます",
+    "romaji": "tanomimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "拜託、點（餐）",
+    "example_ja": "コーヒーを頼みました。",
+    "example_zh": "點了咖啡。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "食べます",
+    "kana": "たべます",
+    "romaji": "tabemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "吃",
+    "example_ja": "朝ご飯を食べましたか。",
+    "example_zh": "吃早餐了嗎？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "違います",
+    "kana": "ちがいます",
+    "romaji": "chigaimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "不同；不對",
+    "example_ja": "いいえ、違います。",
+    "example_zh": "不，不對。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "使います",
+    "kana": "つかいます",
+    "romaji": "tsukaimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "使用",
+    "example_ja": "箸を使ってご飯を食べます。",
+    "example_zh": "用筷子吃飯。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "疲れます",
+    "kana": "つかれます",
+    "romaji": "tsukaremasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "疲累",
+    "example_ja": "今日はとても疲れました。",
+    "example_zh": "今天非常累。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "着きます",
+    "kana": "つきます",
+    "romaji": "tsukimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "到達",
+    "example_ja": "九時に駅に着きます。",
+    "example_zh": "九點到車站。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "作ります",
+    "kana": "つくります",
+    "romaji": "tsukurimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "做、製作",
+    "example_ja": "晩ご飯を作ります。",
+    "example_zh": "做晚餐。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "つけます",
+    "kana": "つけます",
+    "romaji": "tsukemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "開（燈、電器）",
+    "example_ja": "電気をつけてください。",
+    "example_zh": "請開燈。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "勤めます",
+    "kana": "つとめます",
+    "romaji": "tsutomemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "任職於",
+    "example_ja": "銀行に勤めています。",
+    "example_zh": "在銀行工作。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "できます",
+    "kana": "できます",
+    "romaji": "dekimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "會、能",
+    "example_ja": "日本語ができますか。",
+    "example_zh": "你會日文嗎？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "出かけます",
+    "kana": "でかけます",
+    "romaji": "dekakemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "外出",
+    "example_ja": "十時に出かけます。",
+    "example_zh": "十點出門。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "出ます",
+    "kana": "でます",
+    "romaji": "demasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "出去、離開",
+    "example_ja": "七時にうちを出ます。",
+    "example_zh": "七點出門。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "飛びます",
+    "kana": "とびます",
+    "romaji": "tobimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "飛",
+    "example_ja": "鳥が空を飛んでいます。",
+    "example_zh": "鳥在天上飛。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "止まります",
+    "kana": "とまります",
+    "romaji": "tomarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "停止",
+    "example_ja": "バスが止まりました。",
+    "example_zh": "公車停了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "撮ります",
+    "kana": "とります",
+    "romaji": "torimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "拍（照）",
+    "example_ja": "写真を撮ってもいいですか。",
+    "example_zh": "可以拍照嗎？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "取ります",
+    "kana": "とります",
+    "romaji": "torimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "拿、取",
+    "example_ja": "塩を取ってください。",
+    "example_zh": "請把鹽遞給我。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "鳴きます",
+    "kana": "なきます",
+    "romaji": "nakimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "（動物）叫",
+    "example_ja": "鳥が鳴いています。",
+    "example_zh": "鳥在叫。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "習います",
+    "kana": "ならいます",
+    "romaji": "naraimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "學習（跟人學）",
+    "example_ja": "先生にピアノを習います。",
+    "example_zh": "跟老師學鋼琴。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "並びます",
+    "kana": "ならびます",
+    "romaji": "narabimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "排隊、排列",
+    "example_ja": "店の前に人が並んでいます。",
+    "example_zh": "店門前有人排隊。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "並べます",
+    "kana": "ならべます",
+    "romaji": "narabemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "排列、擺放",
+    "example_ja": "お皿をテーブルに並べます。",
+    "example_zh": "把盤子擺到桌上。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "なります",
+    "kana": "なります",
+    "romaji": "narimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "變成、成為",
+    "example_ja": "医者になりたいです。",
+    "example_zh": "想成為醫生。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "脱ぎます",
+    "kana": "ぬぎます",
+    "romaji": "nugimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "脫（衣、鞋）",
+    "example_ja": "ここで靴を脱いでください。",
+    "example_zh": "請在這裡脫鞋。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "寝ます",
+    "kana": "ねます",
+    "romaji": "nemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "睡覺",
+    "example_ja": "毎晩十二時に寝ます。",
+    "example_zh": "每晚十二點睡。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "登ります",
+    "kana": "のぼります",
+    "romaji": "noborimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "爬（山）",
+    "example_ja": "富士山に登ったことがあります。",
+    "example_zh": "爬過富士山。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "飲みます",
+    "kana": "のみます",
+    "romaji": "nomimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "喝；吃（藥）",
+    "example_ja": "毎朝コーヒーを飲みます。",
+    "example_zh": "每天早上喝咖啡。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "乗ります",
+    "kana": "のります",
+    "romaji": "norimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "搭乘",
+    "example_ja": "ここでバスに乗ります。",
+    "example_zh": "在這裡搭公車。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "入ります",
+    "kana": "はいります",
+    "romaji": "hairimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "進入；泡（澡）",
+    "example_ja": "どうぞ、入ってください。",
+    "example_zh": "請進。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "履きます",
+    "kana": "はきます",
+    "romaji": "hakimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "穿（鞋、褲、裙）",
+    "example_ja": "新しい靴を履きます。",
+    "example_zh": "穿新鞋。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "始まります",
+    "kana": "はじまります",
+    "romaji": "hajimarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "開始",
+    "example_ja": "映画は七時に始まります。",
+    "example_zh": "電影七點開始。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "走ります",
+    "kana": "はしります",
+    "romaji": "hashirimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "跑",
+    "example_ja": "毎朝公園を走ります。",
+    "example_zh": "每天早上在公園跑步。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "働きます",
+    "kana": "はたらきます",
+    "romaji": "hatarakimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "工作",
+    "example_ja": "銀行で働いています。",
+    "example_zh": "在銀行工作。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "話します",
+    "kana": "はなします",
+    "romaji": "hanashimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "說話",
+    "example_ja": "日本語で話しましょう。",
+    "example_zh": "用日文說吧。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "貼ります",
+    "kana": "はります",
+    "romaji": "harimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "貼",
+    "example_ja": "封筒に切手を貼ります。",
+    "example_zh": "在信封上貼郵票。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "晴れます",
+    "kana": "はれます",
+    "romaji": "haremasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "放晴",
+    "example_ja": "午後から晴れます。",
+    "example_zh": "下午開始放晴。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "引きます",
+    "kana": "ひきます",
+    "romaji": "hikimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "拉；得（感冒）",
+    "example_ja": "風邪を引きました。",
+    "example_zh": "感冒了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "弾きます",
+    "kana": "ひきます",
+    "romaji": "hikimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "彈（樂器）",
+    "example_ja": "ピアノを弾くことができます。",
+    "example_zh": "會彈鋼琴。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "吹きます",
+    "kana": "ふきます",
+    "romaji": "fukimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "（風）吹",
+    "example_ja": "強い風が吹いています。",
+    "example_zh": "吹著強風。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "降ります",
+    "kana": "ふります",
+    "romaji": "furimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "下（雨、雪）",
+    "example_ja": "雨が降っています。",
+    "example_zh": "正在下雨。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "曲がります",
+    "kana": "まがります",
+    "romaji": "magarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "轉彎",
+    "example_ja": "次の角を右へ曲がってください。",
+    "example_zh": "請在下個轉角右轉。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "待ちます",
+    "kana": "まちます",
+    "romaji": "machimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "等待",
+    "example_ja": "ちょっと待ってください。",
+    "example_zh": "請稍等。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "磨きます",
+    "kana": "みがきます",
+    "romaji": "migakimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "刷（牙）、擦亮",
+    "example_ja": "寝る前に歯を磨きます。",
+    "example_zh": "睡前刷牙。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "見せます",
+    "kana": "みせます",
+    "romaji": "misemasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "給～看",
+    "example_ja": "写真を見せてください。",
+    "example_zh": "請給我看照片。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "見ます",
+    "kana": "みます",
+    "romaji": "mimasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "看",
+    "example_ja": "毎晩テレビを見ます。",
+    "example_zh": "每晚看電視。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "もらいます",
+    "kana": "もらいます",
+    "romaji": "moraimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "得到、收到",
+    "example_ja": "友達にプレゼントをもらいました。",
+    "example_zh": "收到朋友的禮物。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "くれます",
+    "kana": "くれます",
+    "romaji": "kuremasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "（別人）給我",
+    "example_ja": "田中さんは私に本をくれました。",
+    "example_zh": "田中先生給了我書。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "持ちます",
+    "kana": "もちます",
+    "romaji": "mochimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "拿、持有",
+    "example_ja": "傘を持って行きます。",
+    "example_zh": "帶傘去。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "休みます",
+    "kana": "やすみます",
+    "romaji": "yasumimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "休息；請假",
+    "example_ja": "病気で会社を休みました。",
+    "example_zh": "因為生病向公司請假。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "呼びます",
+    "kana": "よびます",
+    "romaji": "yobimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "叫、呼喚",
+    "example_ja": "タクシーを呼んでください。",
+    "example_zh": "請叫計程車。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "読みます",
+    "kana": "よみます",
+    "romaji": "yomimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "讀、唸",
+    "example_ja": "毎日新聞を読みます。",
+    "example_zh": "每天看報紙。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "分かります",
+    "kana": "わかります",
+    "romaji": "wakarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "懂、明白",
+    "example_ja": "意味が分かりますか。",
+    "example_zh": "懂意思嗎？",
+    "category": "動詞"
+  },
+  {
+    "kanji": "忘れます",
+    "kana": "わすれます",
+    "romaji": "wasuremasu",
+    "part_of_speech": "動詞（II類）",
+    "meaning": "忘記",
+    "example_ja": "宿題を忘れました。",
+    "example_zh": "忘了寫作業。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "渡します",
+    "kana": "わたします",
+    "romaji": "watashimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "交給",
+    "example_ja": "先生にレポートを渡しました。",
+    "example_zh": "把報告交給老師。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "渡ります",
+    "kana": "わたります",
+    "romaji": "watarimasu",
+    "part_of_speech": "動詞（I類）",
+    "meaning": "過（橋、馬路）",
+    "example_ja": "橋を渡って、まっすぐ行きます。",
+    "example_zh": "過橋後直走。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "勉強します",
+    "kana": "べんきょうします",
+    "romaji": "benkyou shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "學習、念書",
+    "example_ja": "毎日日本語を勉強します。",
+    "example_zh": "每天念日文。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "掃除します",
+    "kana": "そうじします",
+    "romaji": "souji shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "打掃",
+    "example_ja": "週末に部屋を掃除します。",
+    "example_zh": "週末打掃房間。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "洗濯します",
+    "kana": "せんたくします",
+    "romaji": "sentaku shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "洗衣服",
+    "example_ja": "日曜日に洗濯します。",
+    "example_zh": "星期日洗衣服。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "結婚します",
+    "kana": "けっこんします",
+    "romaji": "kekkon shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "結婚",
+    "example_ja": "兄は去年結婚しました。",
+    "example_zh": "哥哥去年結婚了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "旅行します",
+    "kana": "りょこうします",
+    "romaji": "ryokou shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "旅行",
+    "example_ja": "来月、日本を旅行します。",
+    "example_zh": "下個月去日本旅行。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "散歩します",
+    "kana": "さんぽします",
+    "romaji": "sanpo shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "散步",
+    "example_ja": "朝、公園を散歩します。",
+    "example_zh": "早上在公園散步。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "買い物します",
+    "kana": "かいものします",
+    "romaji": "kaimono shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "購物",
+    "example_ja": "デパートで買い物します。",
+    "example_zh": "在百貨公司購物。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "電話します",
+    "kana": "でんわします",
+    "romaji": "denwa shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "打電話",
+    "example_ja": "後で電話します。",
+    "example_zh": "待會打電話。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "質問します",
+    "kana": "しつもんします",
+    "romaji": "shitsumon shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "提問",
+    "example_ja": "先生に質問しました。",
+    "example_zh": "向老師提問了。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "運転します",
+    "kana": "うんてんします",
+    "romaji": "unten shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "開車、駕駛",
+    "example_ja": "車を運転することができます。",
+    "example_zh": "會開車。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "練習します",
+    "kana": "れんしゅうします",
+    "romaji": "renshuu shimasu",
+    "part_of_speech": "動詞（III類）",
+    "meaning": "練習",
+    "example_ja": "毎日漢字を練習します。",
+    "example_zh": "每天練習漢字。",
+    "category": "動詞"
+  },
+  {
+    "kanji": "新しい",
+    "kana": "あたらしい",
+    "romaji": "atarashii",
+    "part_of_speech": "い形容詞",
+    "meaning": "新的",
+    "example_ja": "新しい靴を買いました。",
+    "example_zh": "買了新鞋。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "古い",
+    "kana": "ふるい",
+    "romaji": "furui",
+    "part_of_speech": "い形容詞",
+    "meaning": "舊的",
+    "example_ja": "この建物は古いです。",
+    "example_zh": "這棟建築很舊。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "暑い",
+    "kana": "あつい",
+    "romaji": "atsui",
+    "part_of_speech": "い形容詞",
+    "meaning": "（天氣）熱的",
+    "example_ja": "今日はとても暑いです。",
+    "example_zh": "今天非常熱。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "熱い",
+    "kana": "あつい",
+    "romaji": "atsui",
+    "part_of_speech": "い形容詞",
+    "meaning": "（東西）燙的、熱的",
+    "example_ja": "熱いお茶をください。",
+    "example_zh": "請給我熱茶。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "寒い",
+    "kana": "さむい",
+    "romaji": "samui",
+    "part_of_speech": "い形容詞",
+    "meaning": "（天氣）冷的",
+    "example_ja": "冬は寒いです。",
+    "example_zh": "冬天很冷。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "冷たい",
+    "kana": "つめたい",
+    "romaji": "tsumetai",
+    "part_of_speech": "い形容詞",
+    "meaning": "（東西）冰的、冷的",
+    "example_ja": "冷たい水が飲みたいです。",
+    "example_zh": "想喝冰水。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "高い",
+    "kana": "たかい",
+    "romaji": "takai",
+    "part_of_speech": "い形容詞",
+    "meaning": "貴的；高的",
+    "example_ja": "この時計は高いです。",
+    "example_zh": "這支錶很貴。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "安い",
+    "kana": "やすい",
+    "romaji": "yasui",
+    "part_of_speech": "い形容詞",
+    "meaning": "便宜的",
+    "example_ja": "あの店は安いです。",
+    "example_zh": "那家店很便宜。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "低い",
+    "kana": "ひくい",
+    "romaji": "hikui",
+    "part_of_speech": "い形容詞",
+    "meaning": "低的、矮的",
+    "example_ja": "この机は低いです。",
+    "example_zh": "這張桌子很矮。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "大きい",
+    "kana": "おおきい",
+    "romaji": "ookii",
+    "part_of_speech": "い形容詞",
+    "meaning": "大的",
+    "example_ja": "大きいかばんがほしいです。",
+    "example_zh": "想要大的包包。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "小さい",
+    "kana": "ちいさい",
+    "romaji": "chiisai",
+    "part_of_speech": "い形容詞",
+    "meaning": "小的",
+    "example_ja": "字が小さくて、読めません。",
+    "example_zh": "字太小，看不清楚。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "長い",
+    "kana": "ながい",
+    "romaji": "nagai",
+    "part_of_speech": "い形容詞",
+    "meaning": "長的",
+    "example_ja": "彼女は髪が長いです。",
+    "example_zh": "她的頭髮很長。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "短い",
+    "kana": "みじかい",
+    "romaji": "mijikai",
+    "part_of_speech": "い形容詞",
+    "meaning": "短的",
+    "example_ja": "夏休みは短かったです。",
+    "example_zh": "暑假很短。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "広い",
+    "kana": "ひろい",
+    "romaji": "hiroi",
+    "part_of_speech": "い形容詞",
+    "meaning": "寬敞的",
+    "example_ja": "この部屋は広いです。",
+    "example_zh": "這個房間很寬敞。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "狭い",
+    "kana": "せまい",
+    "romaji": "semai",
+    "part_of_speech": "い形容詞",
+    "meaning": "狹窄的",
+    "example_ja": "私の部屋は狭いです。",
+    "example_zh": "我的房間很小。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "重い",
+    "kana": "おもい",
+    "romaji": "omoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "重的",
+    "example_ja": "この荷物は重いです。",
+    "example_zh": "這件行李很重。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "軽い",
+    "kana": "かるい",
+    "romaji": "karui",
+    "part_of_speech": "い形容詞",
+    "meaning": "輕的",
+    "example_ja": "このパソコンは軽いです。",
+    "example_zh": "這台電腦很輕。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "近い",
+    "kana": "ちかい",
+    "romaji": "chikai",
+    "part_of_speech": "い形容詞",
+    "meaning": "近的",
+    "example_ja": "駅はここから近いです。",
+    "example_zh": "車站離這裡很近。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "遠い",
+    "kana": "とおい",
+    "romaji": "tooi",
+    "part_of_speech": "い形容詞",
+    "meaning": "遠的",
+    "example_ja": "学校は家から遠いです。",
+    "example_zh": "學校離家很遠。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "速い",
+    "kana": "はやい",
+    "romaji": "hayai",
+    "part_of_speech": "い形容詞",
+    "meaning": "（速度）快的",
+    "example_ja": "新幹線は速いです。",
+    "example_zh": "新幹線很快。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "早い",
+    "kana": "はやい",
+    "romaji": "hayai",
+    "part_of_speech": "い形容詞",
+    "meaning": "（時間）早的",
+    "example_ja": "明日は早く起きます。",
+    "example_zh": "明天要早起。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "遅い",
+    "kana": "おそい",
+    "romaji": "osoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "慢的；晚的",
+    "example_ja": "バスは遅いです。",
+    "example_zh": "公車很慢。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "多い",
+    "kana": "おおい",
+    "romaji": "ooi",
+    "part_of_speech": "い形容詞",
+    "meaning": "多的",
+    "example_ja": "この町は人が多いです。",
+    "example_zh": "這個城鎮人很多。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "少ない",
+    "kana": "すくない",
+    "romaji": "sukunai",
+    "part_of_speech": "い形容詞",
+    "meaning": "少的",
+    "example_ja": "今日は客が少ないです。",
+    "example_zh": "今天客人很少。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "いい／良い",
+    "kana": "いい／よい",
+    "romaji": "ii / yoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "好的（否定・過去用「よ」：よくない、よかった）",
+    "example_ja": "天気がいいですね。",
+    "example_zh": "天氣真好。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "悪い",
+    "kana": "わるい",
+    "romaji": "warui",
+    "part_of_speech": "い形容詞",
+    "meaning": "壞的、不好的",
+    "example_ja": "天気が悪いです。",
+    "example_zh": "天氣不好。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "忙しい",
+    "kana": "いそがしい",
+    "romaji": "isogashii",
+    "part_of_speech": "い形容詞",
+    "meaning": "忙碌的",
+    "example_ja": "今週はとても忙しいです。",
+    "example_zh": "這週非常忙。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "楽しい",
+    "kana": "たのしい",
+    "romaji": "tanoshii",
+    "part_of_speech": "い形容詞",
+    "meaning": "開心的、愉快的",
+    "example_ja": "旅行は楽しかったです。",
+    "example_zh": "旅行很開心。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "面白い",
+    "kana": "おもしろい",
+    "romaji": "omoshiroi",
+    "part_of_speech": "い形容詞",
+    "meaning": "有趣的",
+    "example_ja": "この映画は面白いです。",
+    "example_zh": "這部電影很有趣。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "つまらない",
+    "kana": "つまらない",
+    "romaji": "tsumaranai",
+    "part_of_speech": "い形容詞",
+    "meaning": "無聊的",
+    "example_ja": "この本はつまらなかったです。",
+    "example_zh": "這本書很無聊。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "難しい",
+    "kana": "むずかしい",
+    "romaji": "muzukashii",
+    "part_of_speech": "い形容詞",
+    "meaning": "難的",
+    "example_ja": "漢字は難しいです。",
+    "example_zh": "漢字很難。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "易しい",
+    "kana": "やさしい",
+    "romaji": "yasashii",
+    "part_of_speech": "い形容詞",
+    "meaning": "簡單的",
+    "example_ja": "この問題は易しいです。",
+    "example_zh": "這題很簡單。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "優しい",
+    "kana": "やさしい",
+    "romaji": "yasashii",
+    "part_of_speech": "い形容詞",
+    "meaning": "溫柔的、體貼的",
+    "example_ja": "田中さんは優しい人です。",
+    "example_zh": "田中先生是溫柔的人。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "美味しい",
+    "kana": "おいしい",
+    "romaji": "oishii",
+    "part_of_speech": "い形容詞",
+    "meaning": "好吃的",
+    "example_ja": "このケーキは美味しいです。",
+    "example_zh": "這個蛋糕很好吃。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "まずい",
+    "kana": "まずい",
+    "romaji": "mazui",
+    "part_of_speech": "い形容詞",
+    "meaning": "難吃的",
+    "example_ja": "この料理はまずいです。",
+    "example_zh": "這道菜很難吃。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "甘い",
+    "kana": "あまい",
+    "romaji": "amai",
+    "part_of_speech": "い形容詞",
+    "meaning": "甜的",
+    "example_ja": "このみかんは甘いです。",
+    "example_zh": "這個橘子很甜。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "辛い",
+    "kana": "からい",
+    "romaji": "karai",
+    "part_of_speech": "い形容詞",
+    "meaning": "辣的",
+    "example_ja": "このカレーは辛いです。",
+    "example_zh": "這個咖哩很辣。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "汚い",
+    "kana": "きたない",
+    "romaji": "kitanai",
+    "part_of_speech": "い形容詞",
+    "meaning": "髒的",
+    "example_ja": "部屋が汚いです。",
+    "example_zh": "房間很髒。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "明るい",
+    "kana": "あかるい",
+    "romaji": "akarui",
+    "part_of_speech": "い形容詞",
+    "meaning": "明亮的；開朗的",
+    "example_ja": "この部屋は明るいです。",
+    "example_zh": "這個房間很明亮。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "暗い",
+    "kana": "くらい",
+    "romaji": "kurai",
+    "part_of_speech": "い形容詞",
+    "meaning": "暗的",
+    "example_ja": "外はもう暗いです。",
+    "example_zh": "外面已經天黑了。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "強い",
+    "kana": "つよい",
+    "romaji": "tsuyoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "強的",
+    "example_ja": "風が強いです。",
+    "example_zh": "風很強。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "弱い",
+    "kana": "よわい",
+    "romaji": "yowai",
+    "part_of_speech": "い形容詞",
+    "meaning": "弱的",
+    "example_ja": "弟は体が弱いです。",
+    "example_zh": "弟弟身體很弱。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "若い",
+    "kana": "わかい",
+    "romaji": "wakai",
+    "part_of_speech": "い形容詞",
+    "meaning": "年輕的",
+    "example_ja": "母は若く見えます。",
+    "example_zh": "媽媽看起來很年輕。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "危ない",
+    "kana": "あぶない",
+    "romaji": "abunai",
+    "part_of_speech": "い形容詞",
+    "meaning": "危險的",
+    "example_ja": "危ないですから、触らないでください。",
+    "example_zh": "很危險，請不要碰。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "痛い",
+    "kana": "いたい",
+    "romaji": "itai",
+    "part_of_speech": "い形容詞",
+    "meaning": "痛的",
+    "example_ja": "頭が痛いです。",
+    "example_zh": "頭很痛。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "欲しい",
+    "kana": "ほしい",
+    "romaji": "hoshii",
+    "part_of_speech": "い形容詞",
+    "meaning": "想要的",
+    "example_ja": "新しいパソコンが欲しいです。",
+    "example_zh": "想要新電腦。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "丸い",
+    "kana": "まるい",
+    "romaji": "marui",
+    "part_of_speech": "い形容詞",
+    "meaning": "圓的",
+    "example_ja": "丸いテーブルを買いました。",
+    "example_zh": "買了圓桌。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "太い",
+    "kana": "ふとい",
+    "romaji": "futoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "粗的",
+    "example_ja": "太いペンで書いてください。",
+    "example_zh": "請用粗的筆寫。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "細い",
+    "kana": "ほそい",
+    "romaji": "hosoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "細的",
+    "example_ja": "この道は細いです。",
+    "example_zh": "這條路很窄。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "白い",
+    "kana": "しろい",
+    "romaji": "shiroi",
+    "part_of_speech": "い形容詞",
+    "meaning": "白色的",
+    "example_ja": "白いシャツを着ています。",
+    "example_zh": "穿著白襯衫。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "黒い",
+    "kana": "くろい",
+    "romaji": "kuroi",
+    "part_of_speech": "い形容詞",
+    "meaning": "黑色的",
+    "example_ja": "黒い猫がいます。",
+    "example_zh": "有隻黑貓。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "赤い",
+    "kana": "あかい",
+    "romaji": "akai",
+    "part_of_speech": "い形容詞",
+    "meaning": "紅色的",
+    "example_ja": "赤い花が咲いています。",
+    "example_zh": "開著紅色的花。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "青い",
+    "kana": "あおい",
+    "romaji": "aoi",
+    "part_of_speech": "い形容詞",
+    "meaning": "藍色的",
+    "example_ja": "空が青いです。",
+    "example_zh": "天空很藍。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "黄色い",
+    "kana": "きいろい",
+    "romaji": "kiiroi",
+    "part_of_speech": "い形容詞",
+    "meaning": "黃色的",
+    "example_ja": "黄色い帽子をかぶっています。",
+    "example_zh": "戴著黃色帽子。",
+    "category": "い形容詞"
+  },
+  {
+    "kanji": "きれい",
+    "kana": "きれい",
+    "romaji": "kirei",
+    "part_of_speech": "な形容詞",
+    "meaning": "漂亮的；乾淨的",
+    "example_ja": "京都はきれいな町です。",
+    "example_zh": "京都是漂亮的城鎮。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "静か",
+    "kana": "しずか",
+    "romaji": "shizuka",
+    "part_of_speech": "な形容詞",
+    "meaning": "安靜的",
+    "example_ja": "図書館は静かです。",
+    "example_zh": "圖書館很安靜。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "賑やか",
+    "kana": "にぎやか",
+    "romaji": "nigiyaka",
+    "part_of_speech": "な形容詞",
+    "meaning": "熱鬧的",
+    "example_ja": "この町は賑やかです。",
+    "example_zh": "這個城鎮很熱鬧。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "有名",
+    "kana": "ゆうめい",
+    "romaji": "yuumei",
+    "part_of_speech": "な形容詞",
+    "meaning": "有名的",
+    "example_ja": "富士山は有名な山です。",
+    "example_zh": "富士山是有名的山。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "親切",
+    "kana": "しんせつ",
+    "romaji": "shinsetsu",
+    "part_of_speech": "な形容詞",
+    "meaning": "親切的",
+    "example_ja": "店の人はとても親切です。",
+    "example_zh": "店員非常親切。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "元気",
+    "kana": "げんき",
+    "romaji": "genki",
+    "part_of_speech": "な形容詞",
+    "meaning": "有精神的、健康的",
+    "example_ja": "おばあさんはとても元気です。",
+    "example_zh": "奶奶非常健康。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "暇",
+    "kana": "ひま",
+    "romaji": "hima",
+    "part_of_speech": "な形容詞",
+    "meaning": "有空的、閒的",
+    "example_ja": "明日は暇です。",
+    "example_zh": "明天有空。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "便利",
+    "kana": "べんり",
+    "romaji": "benri",
+    "part_of_speech": "な形容詞",
+    "meaning": "方便的",
+    "example_ja": "地下鉄は便利です。",
+    "example_zh": "地鐵很方便。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "不便",
+    "kana": "ふべん",
+    "romaji": "fuben",
+    "part_of_speech": "な形容詞",
+    "meaning": "不方便的",
+    "example_ja": "この村は交通が不便です。",
+    "example_zh": "這個村子交通不便。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "好き",
+    "kana": "すき",
+    "romaji": "suki",
+    "part_of_speech": "な形容詞",
+    "meaning": "喜歡的",
+    "example_ja": "私は音楽が好きです。",
+    "example_zh": "我喜歡音樂。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "嫌い",
+    "kana": "きらい",
+    "romaji": "kirai",
+    "part_of_speech": "な形容詞",
+    "meaning": "討厭的",
+    "example_ja": "野菜が嫌いです。",
+    "example_zh": "討厭蔬菜。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "上手",
+    "kana": "じょうず",
+    "romaji": "jouzu",
+    "part_of_speech": "な形容詞",
+    "meaning": "擅長的",
+    "example_ja": "彼は歌が上手です。",
+    "example_zh": "他很會唱歌。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "下手",
+    "kana": "へた",
+    "romaji": "heta",
+    "part_of_speech": "な形容詞",
+    "meaning": "不擅長的",
+    "example_ja": "私は料理が下手です。",
+    "example_zh": "我不會做菜。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "大切",
+    "kana": "たいせつ",
+    "romaji": "taisetsu",
+    "part_of_speech": "な形容詞",
+    "meaning": "重要的、珍貴的",
+    "example_ja": "家族は大切です。",
+    "example_zh": "家人很重要。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "大変",
+    "kana": "たいへん",
+    "romaji": "taihen",
+    "part_of_speech": "な形容詞",
+    "meaning": "辛苦的、不得了的",
+    "example_ja": "仕事が大変です。",
+    "example_zh": "工作很辛苦。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "立派",
+    "kana": "りっぱ",
+    "romaji": "rippa",
+    "part_of_speech": "な形容詞",
+    "meaning": "氣派的、出色的",
+    "example_ja": "立派な建物ですね。",
+    "example_zh": "好氣派的建築。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "丈夫",
+    "kana": "じょうぶ",
+    "romaji": "joubu",
+    "part_of_speech": "な形容詞",
+    "meaning": "堅固的；強壯的",
+    "example_ja": "このかばんは丈夫です。",
+    "example_zh": "這個包包很堅固。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "同じ",
+    "kana": "おなじ",
+    "romaji": "onaji",
+    "part_of_speech": "な形容詞",
+    "meaning": "相同的（修飾名詞不加な：同じ本）",
+    "example_ja": "私たちは同じクラスです。",
+    "example_zh": "我們同班。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "色々",
+    "kana": "いろいろ",
+    "romaji": "iroiro",
+    "part_of_speech": "な形容詞",
+    "meaning": "各式各樣的",
+    "example_ja": "色々な国へ行きたいです。",
+    "example_zh": "想去各種國家。",
+    "category": "な形容詞"
+  },
+  {
+    "kanji": "あまり",
+    "kana": "あまり",
+    "romaji": "amari",
+    "part_of_speech": "副詞",
+    "meaning": "不太～（接否定）",
+    "example_ja": "肉はあまり好きではありません。",
+    "example_zh": "不太喜歡吃肉。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "いつも",
+    "kana": "いつも",
+    "romaji": "itsumo",
+    "part_of_speech": "副詞",
+    "meaning": "總是",
+    "example_ja": "いつも七時に起きます。",
+    "example_zh": "總是七點起床。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "すぐに",
+    "kana": "すぐに",
+    "romaji": "suguni",
+    "part_of_speech": "副詞",
+    "meaning": "馬上",
+    "example_ja": "すぐに行きます。",
+    "example_zh": "馬上去。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "少し",
+    "kana": "すこし",
+    "romaji": "sukoshi",
+    "part_of_speech": "副詞",
+    "meaning": "一點點",
+    "example_ja": "日本語が少し分かります。",
+    "example_zh": "懂一點日文。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "ちょっと",
+    "kana": "ちょっと",
+    "romaji": "chotto",
+    "part_of_speech": "副詞",
+    "meaning": "稍微、一下",
+    "example_ja": "ちょっと待ってください。",
+    "example_zh": "請稍等一下。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "たくさん",
+    "kana": "たくさん",
+    "romaji": "takusan",
+    "part_of_speech": "副詞",
+    "meaning": "很多",
+    "example_ja": "本をたくさん読みます。",
+    "example_zh": "讀很多書。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "たぶん",
+    "kana": "たぶん",
+    "romaji": "tabun",
+    "part_of_speech": "副詞",
+    "meaning": "大概",
+    "example_ja": "明日はたぶん晴れでしょう。",
+    "example_zh": "明天大概是晴天吧。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "だんだん",
+    "kana": "だんだん",
+    "romaji": "dandan",
+    "part_of_speech": "副詞",
+    "meaning": "漸漸地",
+    "example_ja": "だんだん暖かくなります。",
+    "example_zh": "漸漸變暖。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "時々",
+    "kana": "ときどき",
+    "romaji": "tokidoki",
+    "part_of_speech": "副詞",
+    "meaning": "有時",
+    "example_ja": "時々映画を見ます。",
+    "example_zh": "有時看電影。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "とても",
+    "kana": "とても",
+    "romaji": "totemo",
+    "part_of_speech": "副詞",
+    "meaning": "非常",
+    "example_ja": "この本はとても面白いです。",
+    "example_zh": "這本書非常有趣。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "初めて",
+    "kana": "はじめて",
+    "romaji": "hajimete",
+    "part_of_speech": "副詞",
+    "meaning": "第一次",
+    "example_ja": "初めて日本へ来ました。",
+    "example_zh": "第一次來日本。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "また",
+    "kana": "また",
+    "romaji": "mata",
+    "part_of_speech": "副詞",
+    "meaning": "又、再",
+    "example_ja": "また明日会いましょう。",
+    "example_zh": "明天再見吧。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "まだ",
+    "kana": "まだ",
+    "romaji": "mada",
+    "part_of_speech": "副詞",
+    "meaning": "還、尚未",
+    "example_ja": "宿題はまだ終わっていません。",
+    "example_zh": "作業還沒做完。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "もう",
+    "kana": "もう",
+    "romaji": "mou",
+    "part_of_speech": "副詞",
+    "meaning": "已經；再",
+    "example_ja": "もう昼ご飯を食べました。",
+    "example_zh": "已經吃過午餐了。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "もっと",
+    "kana": "もっと",
+    "romaji": "motto",
+    "part_of_speech": "副詞",
+    "meaning": "更加",
+    "example_ja": "もっとゆっくり話してください。",
+    "example_zh": "請說得更慢一點。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "ゆっくり",
+    "kana": "ゆっくり",
+    "romaji": "yukkuri",
+    "part_of_speech": "副詞",
+    "meaning": "慢慢地",
+    "example_ja": "ゆっくり休んでください。",
+    "example_zh": "請好好休息。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "よく",
+    "kana": "よく",
+    "romaji": "yoku",
+    "part_of_speech": "副詞",
+    "meaning": "常常；好好地",
+    "example_ja": "よく図書館へ行きます。",
+    "example_zh": "常去圖書館。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "一緒に",
+    "kana": "いっしょに",
+    "romaji": "isshoni",
+    "part_of_speech": "副詞",
+    "meaning": "一起",
+    "example_ja": "一緒に帰りましょう。",
+    "example_zh": "一起回家吧。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "全部",
+    "kana": "ぜんぶ",
+    "romaji": "zenbu",
+    "part_of_speech": "副詞",
+    "meaning": "全部",
+    "example_ja": "宿題は全部終わりました。",
+    "example_zh": "作業全部做完了。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "本当に",
+    "kana": "ほんとうに",
+    "romaji": "hontouni",
+    "part_of_speech": "副詞",
+    "meaning": "真的",
+    "example_ja": "本当にありがとうございます。",
+    "example_zh": "真的很感謝。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "まっすぐ",
+    "kana": "まっすぐ",
+    "romaji": "massugu",
+    "part_of_speech": "副詞",
+    "meaning": "直直地",
+    "example_ja": "この道をまっすぐ行ってください。",
+    "example_zh": "請沿這條路直走。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "一人で",
+    "kana": "ひとりで",
+    "romaji": "hitoride",
+    "part_of_speech": "副詞",
+    "meaning": "獨自一人",
+    "example_ja": "一人で旅行しました。",
+    "example_zh": "一個人去旅行。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "そして",
+    "kana": "そして",
+    "romaji": "soshite",
+    "part_of_speech": "接續詞",
+    "meaning": "然後、而且",
+    "example_ja": "朝ご飯を食べました。そして、出かけました。",
+    "example_zh": "吃了早餐。然後出門了。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "それから",
+    "kana": "それから",
+    "romaji": "sorekara",
+    "part_of_speech": "接續詞",
+    "meaning": "接著、之後",
+    "example_ja": "買い物をしました。それから、映画を見ました。",
+    "example_zh": "買了東西。之後看了電影。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "でも",
+    "kana": "でも",
+    "romaji": "demo",
+    "part_of_speech": "接續詞",
+    "meaning": "但是",
+    "example_ja": "高いです。でも、買います。",
+    "example_zh": "很貴。但是還是買。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "しかし",
+    "kana": "しかし",
+    "romaji": "shikashi",
+    "part_of_speech": "接續詞",
+    "meaning": "但是（書面）",
+    "example_ja": "行きたいです。しかし、時間がありません。",
+    "example_zh": "想去。但是沒有時間。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "では／じゃ",
+    "kana": "では／じゃ",
+    "romaji": "dewa / ja",
+    "part_of_speech": "接續詞",
+    "meaning": "那麼",
+    "example_ja": "では、始めましょう。",
+    "example_zh": "那麼，開始吧。",
+    "category": "副詞・接續詞"
+  },
+  {
+    "kanji": "映画",
+    "kana": "えいが",
+    "romaji": "eiga",
+    "part_of_speech": "名詞",
+    "meaning": "電影",
+    "example_ja": "週末に映画を見ます。",
+    "example_zh": "週末看電影。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "音楽",
+    "kana": "おんがく",
+    "romaji": "ongaku",
+    "part_of_speech": "名詞",
+    "meaning": "音樂",
+    "example_ja": "音楽を聞くことが好きです。",
+    "example_zh": "喜歡聽音樂。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "歌",
+    "kana": "うた",
+    "romaji": "uta",
+    "part_of_speech": "名詞",
+    "meaning": "歌",
+    "example_ja": "日本の歌を歌います。",
+    "example_zh": "唱日本的歌。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "絵",
+    "kana": "え",
+    "romaji": "e",
+    "part_of_speech": "名詞",
+    "meaning": "畫、圖畫",
+    "example_ja": "絵を描くことが趣味です。",
+    "example_zh": "興趣是畫畫。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "スポーツ",
+    "kana": "スポーツ",
+    "romaji": "supootsu",
+    "part_of_speech": "名詞",
+    "meaning": "運動",
+    "example_ja": "どんなスポーツが好きですか。",
+    "example_zh": "喜歡什麼運動？",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "テニス",
+    "kana": "テニス",
+    "romaji": "tenisu",
+    "part_of_speech": "名詞",
+    "meaning": "網球",
+    "example_ja": "友達とテニスをします。",
+    "example_zh": "和朋友打網球。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "サッカー",
+    "kana": "サッカー",
+    "romaji": "sakkaa",
+    "part_of_speech": "名詞",
+    "meaning": "足球",
+    "example_ja": "弟はサッカーが上手です。",
+    "example_zh": "弟弟很會踢足球。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "ギター",
+    "kana": "ギター",
+    "romaji": "gitaa",
+    "part_of_speech": "名詞",
+    "meaning": "吉他",
+    "example_ja": "ギターを弾くことができます。",
+    "example_zh": "會彈吉他。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "ピアノ",
+    "kana": "ピアノ",
+    "romaji": "piano",
+    "part_of_speech": "名詞",
+    "meaning": "鋼琴",
+    "example_ja": "姉はピアノが上手です。",
+    "example_zh": "姊姊很會彈鋼琴。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "パーティー",
+    "kana": "パーティー",
+    "romaji": "paatii",
+    "part_of_speech": "名詞",
+    "meaning": "派對",
+    "example_ja": "土曜日にパーティーがあります。",
+    "example_zh": "星期六有派對。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "プレゼント",
+    "kana": "プレゼント",
+    "romaji": "purezento",
+    "part_of_speech": "名詞",
+    "meaning": "禮物",
+    "example_ja": "母にプレゼントをあげました。",
+    "example_zh": "送禮物給媽媽。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "旅行",
+    "kana": "りょこう",
+    "romaji": "ryokou",
+    "part_of_speech": "名詞",
+    "meaning": "旅行",
+    "example_ja": "旅行が好きです。",
+    "example_zh": "喜歡旅行。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "散歩",
+    "kana": "さんぽ",
+    "romaji": "sanpo",
+    "part_of_speech": "名詞",
+    "meaning": "散步",
+    "example_ja": "朝の散歩は気持ちがいいです。",
+    "example_zh": "早晨散步很舒服。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "買い物",
+    "kana": "かいもの",
+    "romaji": "kaimono",
+    "part_of_speech": "名詞",
+    "meaning": "購物",
+    "example_ja": "母と買い物に行きます。",
+    "example_zh": "和媽媽去買東西。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "仕事",
+    "kana": "しごと",
+    "romaji": "shigoto",
+    "part_of_speech": "名詞",
+    "meaning": "工作",
+    "example_ja": "仕事は五時に終わります。",
+    "example_zh": "工作五點結束。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "趣味",
+    "kana": "しゅみ",
+    "romaji": "shumi",
+    "part_of_speech": "名詞",
+    "meaning": "興趣",
+    "example_ja": "趣味は映画を見ることです。",
+    "example_zh": "興趣是看電影。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "ニュース",
+    "kana": "ニュース",
+    "romaji": "nyuusu",
+    "part_of_speech": "名詞",
+    "meaning": "新聞",
+    "example_ja": "毎晩ニュースを見ます。",
+    "example_zh": "每晚看新聞。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "パソコン",
+    "kana": "パソコン",
+    "romaji": "pasokon",
+    "part_of_speech": "名詞",
+    "meaning": "電腦",
+    "example_ja": "パソコンで仕事をします。",
+    "example_zh": "用電腦工作。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "メール",
+    "kana": "メール",
+    "romaji": "meeru",
+    "part_of_speech": "名詞",
+    "meaning": "電子郵件",
+    "example_ja": "友達にメールを送ります。",
+    "example_zh": "寄電子郵件給朋友。",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "色",
+    "kana": "いろ",
+    "romaji": "iro",
+    "part_of_speech": "名詞",
+    "meaning": "顏色",
+    "example_ja": "どの色が好きですか。",
+    "example_zh": "喜歡哪個顏色？",
+    "category": "興趣・生活"
+  },
+  {
+    "kanji": "音",
+    "kana": "おと",
+    "romaji": "oto",
+    "part_of_speech": "名詞",
+    "meaning": "（物體的）聲音",
+    "example_ja": "変な音がします。",
+    "example_zh": "有奇怪的聲音。",
+    "category": "興趣・生活"
+  }
+]

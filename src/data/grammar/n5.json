@@ -1,0 +1,5745 @@
+[
+  {
+    "lesson_number": 1,
+    "lesson_title": "發音基礎與基本打招呼",
+    "vocabulary": [
+      {
+        "kanji": "私",
+        "kana": "わたし",
+        "romaji": "watashi",
+        "part_of_speech": "代名詞",
+        "meaning": "我",
+        "example_ja": "私は学生です。",
+        "example_zh": "我是學生。"
+      },
+      {
+        "kanji": "あなた",
+        "kana": "あなた",
+        "romaji": "anata",
+        "part_of_speech": "代名詞",
+        "meaning": "你",
+        "example_ja": "あなたは先生ですか。",
+        "example_zh": "你是老師嗎？"
+      },
+      {
+        "kanji": "先生",
+        "kana": "せんせい",
+        "romaji": "sensei",
+        "part_of_speech": "名詞",
+        "meaning": "老師",
+        "example_ja": "田中さんは先生です。",
+        "example_zh": "田中先生是老師。"
+      },
+      {
+        "kanji": "学生",
+        "kana": "がくせい",
+        "romaji": "gakusei",
+        "part_of_speech": "名詞",
+        "meaning": "學生",
+        "example_ja": "山田さんは学生です。",
+        "example_zh": "山田先生是學生。"
+      },
+      {
+        "kanji": "日本人",
+        "kana": "にほんじん",
+        "romaji": "nihonjin",
+        "part_of_speech": "名詞",
+        "meaning": "日本人",
+        "example_ja": "鈴木さんは日本人です。",
+        "example_zh": "鈴木先生是日本人。"
+      },
+      {
+        "kanji": "台湾人",
+        "kana": "たいわんじん",
+        "romaji": "taiwanjin",
+        "part_of_speech": "名詞",
+        "meaning": "台灣人",
+        "example_ja": "私は台湾人です。",
+        "example_zh": "我是台灣人。"
+      },
+      {
+        "kanji": "はじめまして",
+        "kana": "はじめまして",
+        "romaji": "hajimemashite",
+        "part_of_speech": "招呼語",
+        "meaning": "初次見面",
+        "example_ja": "はじめまして、林です。",
+        "example_zh": "初次見面，我姓林。"
+      },
+      {
+        "kanji": "おはようございます",
+        "kana": "おはようございます",
+        "romaji": "ohayou gozaimasu",
+        "part_of_speech": "招呼語",
+        "meaning": "早安",
+        "example_ja": "先生、おはようございます。",
+        "example_zh": "老師，早安。"
+      },
+      {
+        "kanji": "こんにちは",
+        "kana": "こんにちは",
+        "romaji": "konnichiwa",
+        "part_of_speech": "招呼語",
+        "meaning": "你好、午安",
+        "example_ja": "こんにちは、田中です。",
+        "example_zh": "你好，我是田中。"
+      },
+      {
+        "kanji": "こんばんは",
+        "kana": "こんばんは",
+        "romaji": "konbanwa",
+        "part_of_speech": "招呼語",
+        "meaning": "晚上好",
+        "example_ja": "こんばんは、山田さん。",
+        "example_zh": "晚上好，山田先生。"
+      },
+      {
+        "kanji": "ありがとうございます",
+        "kana": "ありがとうございます",
+        "romaji": "arigatou gozaimasu",
+        "part_of_speech": "招呼語",
+        "meaning": "謝謝",
+        "example_ja": "どうもありがとうございます。",
+        "example_zh": "非常感謝。"
+      },
+      {
+        "kanji": "すみません",
+        "kana": "すみません",
+        "romaji": "sumimasen",
+        "part_of_speech": "招呼語",
+        "meaning": "不好意思、對不起",
+        "example_ja": "すみません、先生。",
+        "example_zh": "不好意思，老師。"
+      },
+      {
+        "kanji": "はい",
+        "kana": "はい",
+        "romaji": "hai",
+        "part_of_speech": "感嘆詞",
+        "meaning": "是、對",
+        "example_ja": "はい、学生です。",
+        "example_zh": "是的，我是學生。"
+      },
+      {
+        "kanji": "いいえ",
+        "kana": "いいえ",
+        "romaji": "iie",
+        "part_of_speech": "感嘆詞",
+        "meaning": "不、不是",
+        "example_ja": "いいえ、先生ではありません。",
+        "example_zh": "不，我不是老師。"
+      },
+      {
+        "kanji": "さようなら",
+        "kana": "さようなら",
+        "romaji": "sayounara",
+        "part_of_speech": "招呼語",
+        "meaning": "再見",
+        "example_ja": "先生、さようなら。",
+        "example_zh": "老師，再見。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "名詞肯定句",
+        "formula": "[名詞A] は [名詞B] です。",
+        "explanation": "「は」為主題助詞，標示句子的主題。「です」是斷定助動詞，表示禮貌的肯定判斷，相當於中文的「是」。",
+        "alert": "助詞「は」書寫為「は」，但發音必須念作「wa」，不可念成「ha」。",
+        "examples": [
+          {
+            "ja": "私は台湾人です。",
+            "zh": "我是台灣人。"
+          },
+          {
+            "ja": "田中さんは先生です。",
+            "zh": "田中先生是老師。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "わたし（　）学生です。",
+            "options": [
+              "が",
+              "は",
+              "を",
+              "に"
+            ],
+            "correct_answer": "は",
+            "explanation": "「AはBです」的主題用助詞「は」標示，表示「我是學生」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "田中さんは先生（　）。",
+            "options": [
+              "です",
+              "ですか",
+              "でした",
+              "ます"
+            ],
+            "correct_answer": "です",
+            "explanation": "名詞肯定判斷句以「です」結尾，表示禮貌的「是」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「私は台湾人です」中，助詞「は」的發音是？",
+            "options": [
+              "wa",
+              "ha",
+              "ba",
+              "e"
+            ],
+            "correct_answer": "wa",
+            "explanation": "「は」當主題助詞時必須念作「wa」，不可念成「ha」。"
+          }
+        ]
+      },
+      {
+        "point_title": "名詞否定句",
+        "formula": "[名詞A] は [名詞B] ではありません。",
+        "explanation": "將「です」改為「ではありません」即可表示否定，相當於中文的「不是」。口語中常說成「じゃありません」。",
+        "alert": "「ではありません」中的「は」同樣念作「wa」。",
+        "examples": [
+          {
+            "ja": "私は学生ではありません。",
+            "zh": "我不是學生。"
+          },
+          {
+            "ja": "山田さんは日本人じゃありません。",
+            "zh": "山田先生不是日本人。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "私は医者（　）。─ 我「不是」醫生",
+            "options": [
+              "ではありません",
+              "です",
+              "ですか",
+              "でした"
+            ],
+            "correct_answer": "ではありません",
+            "explanation": "名詞否定句將「です」改為「ではありません」，表示「不是」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「ではありません」在口語中常說成？",
+            "options": [
+              "じゃありません",
+              "でありません",
+              "ないです",
+              "ませんです"
+            ],
+            "correct_answer": "じゃありません",
+            "explanation": "口語中「では」常縮約為「じゃ」，說成「じゃありません」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "山田さんは学生では（　）ません。",
+            "options": [
+              "あり",
+              "い",
+              "し",
+              "なり"
+            ],
+            "correct_answer": "あり",
+            "explanation": "否定形固定為「ではありません」，中間是「あり」。"
+          }
+        ]
+      },
+      {
+        "point_title": "疑問句「～か」",
+        "formula": "[名詞A] は [名詞B] ですか。",
+        "explanation": "在句尾加上終助詞「か」即成為疑問句，語調上揚。回答時以「はい」或「いいえ」開頭。",
+        "alert": "日文疑問句句尾使用句號「。」，一般不加問號。",
+        "examples": [
+          {
+            "ja": "あなたは学生ですか。",
+            "zh": "你是學生嗎？"
+          },
+          {
+            "ja": "はい、学生です。",
+            "zh": "是的，我是學生。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "あなたは先生です（　）。─ 詢問對方",
+            "options": [
+              "か",
+              "よ",
+              "ね",
+              "の"
+            ],
+            "correct_answer": "か",
+            "explanation": "句尾加終助詞「か」即成疑問句，語調上揚。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「あなたは学生ですか」的肯定回答是？",
+            "options": [
+              "はい、学生です。",
+              "いいえ、学生です。",
+              "はい、学生ではありません。",
+              "学生ですか。"
+            ],
+            "correct_answer": "はい、学生です。",
+            "explanation": "疑問句用「はい」開頭作肯定回答，後接肯定句。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "日文疑問句句尾一般使用哪個標點？",
+            "options": [
+              "。",
+              "？",
+              "！",
+              "、"
+            ],
+            "correct_answer": "。",
+            "explanation": "日文疑問句已有「か」表示疑問，句尾一般用句號「。」，不加問號。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "わたし（ ）田中ではありません。",
+        "options": [
+          "が",
+          "は",
+          "の",
+          "を"
+        ],
+        "correct_answer": "は",
+        "explanation": "此句為名詞否定判斷句「A は B ではありません」，主題用助詞「は」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "山田さんは学生です（ ）。",
+        "options": [
+          "か",
+          "は",
+          "の",
+          "も"
+        ],
+        "correct_answer": "か",
+        "explanation": "句尾加上終助詞「か」即為疑問句，表示「山田先生是學生嗎？」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "A：あなたは先生ですか。 B：（ ）、学生です。",
+        "options": [
+          "はい",
+          "いいえ",
+          "すみません",
+          "さようなら"
+        ],
+        "correct_answer": "いいえ",
+        "explanation": "B 回答「我是學生」，表示否定對方的問題，因此開頭應用「いいえ」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 2,
+    "lesson_title": "名詞判斷句與自我介紹",
+    "vocabulary": [
+      {
+        "kanji": "会社員",
+        "kana": "かいしゃいん",
+        "romaji": "kaishain",
+        "part_of_speech": "名詞",
+        "meaning": "公司職員",
+        "example_ja": "父は会社員です。",
+        "example_zh": "爸爸是公司職員。"
+      },
+      {
+        "kanji": "医者",
+        "kana": "いしゃ",
+        "romaji": "isha",
+        "part_of_speech": "名詞",
+        "meaning": "醫生",
+        "example_ja": "姉は医者です。",
+        "example_zh": "姊姊是醫生。"
+      },
+      {
+        "kanji": "銀行員",
+        "kana": "ぎんこういん",
+        "romaji": "ginkouin",
+        "part_of_speech": "名詞",
+        "meaning": "銀行員",
+        "example_ja": "山田さんは銀行員です。",
+        "example_zh": "山田先生是銀行員。"
+      },
+      {
+        "kanji": "大学",
+        "kana": "だいがく",
+        "romaji": "daigaku",
+        "part_of_speech": "名詞",
+        "meaning": "大學",
+        "example_ja": "私は台湾大学の学生です。",
+        "example_zh": "我是台灣大學的學生。"
+      },
+      {
+        "kanji": "会社",
+        "kana": "かいしゃ",
+        "romaji": "kaisha",
+        "part_of_speech": "名詞",
+        "meaning": "公司",
+        "example_ja": "これは私の会社です。",
+        "example_zh": "這是我的公司。"
+      },
+      {
+        "kanji": "国",
+        "kana": "くに",
+        "romaji": "kuni",
+        "part_of_speech": "名詞",
+        "meaning": "國家",
+        "example_ja": "お国はどちらですか。",
+        "example_zh": "您來自哪個國家？"
+      },
+      {
+        "kanji": "中国人",
+        "kana": "ちゅうごくじん",
+        "romaji": "chuugokujin",
+        "part_of_speech": "名詞",
+        "meaning": "中國人",
+        "example_ja": "王さんは中国人です。",
+        "example_zh": "王先生是中國人。"
+      },
+      {
+        "kanji": "アメリカ人",
+        "kana": "アメリカじん",
+        "romaji": "amerikajin",
+        "part_of_speech": "名詞",
+        "meaning": "美國人",
+        "example_ja": "ジョンさんはアメリカ人です。",
+        "example_zh": "約翰先生是美國人。"
+      },
+      {
+        "kanji": "何",
+        "kana": "なん／なに",
+        "romaji": "nan / nani",
+        "part_of_speech": "疑問詞",
+        "meaning": "什麼",
+        "example_ja": "お名前は何ですか。",
+        "example_zh": "您叫什麼名字？"
+      },
+      {
+        "kanji": "誰",
+        "kana": "だれ",
+        "romaji": "dare",
+        "part_of_speech": "疑問詞",
+        "meaning": "誰",
+        "example_ja": "あの人は誰ですか。",
+        "example_zh": "那個人是誰？"
+      },
+      {
+        "kanji": "友達",
+        "kana": "ともだち",
+        "romaji": "tomodachi",
+        "part_of_speech": "名詞",
+        "meaning": "朋友",
+        "example_ja": "田中さんは私の友達です。",
+        "example_zh": "田中先生是我的朋友。"
+      },
+      {
+        "kanji": "名前",
+        "kana": "なまえ",
+        "romaji": "namae",
+        "part_of_speech": "名詞",
+        "meaning": "名字",
+        "example_ja": "名前は林です。",
+        "example_zh": "我的名字是林。"
+      },
+      {
+        "kanji": "何歳",
+        "kana": "なんさい",
+        "romaji": "nansai",
+        "part_of_speech": "疑問詞",
+        "meaning": "幾歲",
+        "example_ja": "田中さんは何歳ですか。",
+        "example_zh": "田中先生幾歲？"
+      },
+      {
+        "kanji": "～さん",
+        "kana": "～さん",
+        "romaji": "-san",
+        "part_of_speech": "接尾詞",
+        "meaning": "～先生、～小姐",
+        "example_ja": "鈴木さんは会社員です。",
+        "example_zh": "鈴木先生是公司職員。"
+      },
+      {
+        "kanji": "どうぞよろしく",
+        "kana": "どうぞよろしく",
+        "romaji": "douzo yoroshiku",
+        "part_of_speech": "招呼語",
+        "meaning": "請多指教",
+        "example_ja": "林です。どうぞよろしく。",
+        "example_zh": "我是林，請多指教。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "所屬的「の」",
+        "formula": "[名詞A] の [名詞B]",
+        "explanation": "助詞「の」連接兩個名詞，表示名詞B屬於名詞A的範圍、機構或所有，相當於中文的「的」。",
+        "alert": "中文有時可省略「的」（如「台大學生」），但日文的「の」不可省略。",
+        "examples": [
+          {
+            "ja": "私は台湾大学の学生です。",
+            "zh": "我是台灣大學的學生。"
+          },
+          {
+            "ja": "田中さんはABCの社員です。",
+            "zh": "田中先生是ABC公司的員工。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "私は台湾大学（　）学生です。",
+            "options": [
+              "の",
+              "は",
+              "も",
+              "を"
+            ],
+            "correct_answer": "の",
+            "explanation": "「の」連接兩個名詞，表示所屬關係：「台灣大學的學生」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "田中さんはABC（　）社員です。",
+            "options": [
+              "の",
+              "が",
+              "に",
+              "と"
+            ],
+            "correct_answer": "の",
+            "explanation": "「ABC公司的員工」中的「的」用「の」表示。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "中文可說「台大學生」，日文的「の」可以省略嗎？",
+            "options": [
+              "不可省略",
+              "可以省略",
+              "口語可省略",
+              "書面可省略"
+            ],
+            "correct_answer": "不可省略",
+            "explanation": "中文的「的」有時可省，但日文名詞連接名詞時「の」不可省略。"
+          }
+        ]
+      },
+      {
+        "point_title": "添加的「も」",
+        "formula": "[名詞A] も [名詞B] です。",
+        "explanation": "「も」取代「は」，表示「也」，用於前後兩者情況相同時。",
+        "alert": "「も」直接取代「は」，不可寫成「はも」。",
+        "examples": [
+          {
+            "ja": "田中さんは会社員です。山田さんも会社員です。",
+            "zh": "田中先生是公司職員。山田先生也是公司職員。"
+          },
+          {
+            "ja": "私も台湾人です。",
+            "zh": "我也是台灣人。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "田中さんは会社員です。山田さん（　）会社員です。",
+            "options": [
+              "も",
+              "は",
+              "の",
+              "が"
+            ],
+            "correct_answer": "も",
+            "explanation": "前後兩者情況相同時，用「も」表示「也」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "使用「も」時，正確的做法是？",
+            "options": [
+              "直接取代「は」",
+              "加在「は」後面",
+              "加在「は」前面",
+              "與「が」並用"
+            ],
+            "correct_answer": "直接取代「は」",
+            "explanation": "「も」直接取代「は」的位置，不可寫成「はも」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "私（　）台湾人です。─「我也是台灣人」",
+            "options": [
+              "も",
+              "は",
+              "が",
+              "と"
+            ],
+            "correct_answer": "も",
+            "explanation": "表示「也」時用「も」取代「は」。"
+          }
+        ]
+      },
+      {
+        "point_title": "疑問詞疑問句「何・誰」",
+        "formula": "[名詞] は 何／誰 ですか。",
+        "explanation": "疑問詞放在原本答案的位置，句尾仍需加「か」。回答時不使用「はい／いいえ」，直接說出答案。",
+        "alert": "「何」在「です」前讀作「なん」，單獨使用時讀作「なに」。",
+        "examples": [
+          {
+            "ja": "お名前は何ですか。",
+            "zh": "您叫什麼名字？"
+          },
+          {
+            "ja": "あの人は誰ですか。",
+            "zh": "那個人是誰？"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "お名前は（　）ですか。",
+            "options": [
+              "何",
+              "誰",
+              "どこ",
+              "どれ"
+            ],
+            "correct_answer": "何",
+            "explanation": "詢問名字（事物）用疑問詞「何」，放在答案的位置。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "あの人は（　）ですか。",
+            "options": [
+              "誰",
+              "何",
+              "どこ",
+              "いつ"
+            ],
+            "correct_answer": "誰",
+            "explanation": "詢問人用疑問詞「誰」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「何」在「です」前面讀作？",
+            "options": [
+              "なん",
+              "なに",
+              "なの",
+              "どう"
+            ],
+            "correct_answer": "なん",
+            "explanation": "「何ですか」中讀「なん」；單獨使用時讀「なに」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "田中さんは会社員です。山田さん（ ）会社員です。",
+        "options": [
+          "も",
+          "は",
+          "の",
+          "か"
+        ],
+        "correct_answer": "も",
+        "explanation": "前後兩人情況相同（都是公司職員），第二句應使用表示「也」的助詞「も」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "A：あの人は（ ）ですか。 B：鈴木さんです。",
+        "options": [
+          "なん",
+          "だれ",
+          "どこ",
+          "いくら"
+        ],
+        "correct_answer": "だれ",
+        "explanation": "回答是人名，因此問句應使用詢問人物的疑問詞「誰（だれ）」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "私はABC（ ）社員です。",
+        "options": [
+          "の",
+          "は",
+          "も",
+          "か"
+        ],
+        "correct_answer": "の",
+        "explanation": "「ABC」與「社員」為所屬關係，兩個名詞之間須用助詞「の」連接。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 3,
+    "lesson_title": "指示詞與歸屬",
+    "vocabulary": [
+      {
+        "kanji": "これ",
+        "kana": "これ",
+        "romaji": "kore",
+        "part_of_speech": "指示代名詞",
+        "meaning": "這個（近說話者）",
+        "example_ja": "これは本です。",
+        "example_zh": "這是書。"
+      },
+      {
+        "kanji": "それ",
+        "kana": "それ",
+        "romaji": "sore",
+        "part_of_speech": "指示代名詞",
+        "meaning": "那個（近聽話者）",
+        "example_ja": "それは辞書です。",
+        "example_zh": "那是字典。"
+      },
+      {
+        "kanji": "あれ",
+        "kana": "あれ",
+        "romaji": "are",
+        "part_of_speech": "指示代名詞",
+        "meaning": "那個（離兩者都遠）",
+        "example_ja": "あれは私の車です。",
+        "example_zh": "那是我的車。"
+      },
+      {
+        "kanji": "この",
+        "kana": "この",
+        "romaji": "kono",
+        "part_of_speech": "連體詞",
+        "meaning": "這個～",
+        "example_ja": "この本は私のです。",
+        "example_zh": "這本書是我的。"
+      },
+      {
+        "kanji": "その",
+        "kana": "その",
+        "romaji": "sono",
+        "part_of_speech": "連體詞",
+        "meaning": "那個～",
+        "example_ja": "その傘は田中さんのです。",
+        "example_zh": "那把傘是田中先生的。"
+      },
+      {
+        "kanji": "あの",
+        "kana": "あの",
+        "romaji": "ano",
+        "part_of_speech": "連體詞",
+        "meaning": "那個～（遠）",
+        "example_ja": "あの人は先生です。",
+        "example_zh": "那個人是老師。"
+      },
+      {
+        "kanji": "本",
+        "kana": "ほん",
+        "romaji": "hon",
+        "part_of_speech": "名詞",
+        "meaning": "書",
+        "example_ja": "これは日本語の本です。",
+        "example_zh": "這是日文書。"
+      },
+      {
+        "kanji": "辞書",
+        "kana": "じしょ",
+        "romaji": "jisho",
+        "part_of_speech": "名詞",
+        "meaning": "字典",
+        "example_ja": "それは私の辞書です。",
+        "example_zh": "那是我的字典。"
+      },
+      {
+        "kanji": "傘",
+        "kana": "かさ",
+        "romaji": "kasa",
+        "part_of_speech": "名詞",
+        "meaning": "傘",
+        "example_ja": "この傘は誰のですか。",
+        "example_zh": "這把傘是誰的？"
+      },
+      {
+        "kanji": "鍵",
+        "kana": "かぎ",
+        "romaji": "kagi",
+        "part_of_speech": "名詞",
+        "meaning": "鑰匙",
+        "example_ja": "これは車の鍵です。",
+        "example_zh": "這是車子的鑰匙。"
+      },
+      {
+        "kanji": "時計",
+        "kana": "とけい",
+        "romaji": "tokei",
+        "part_of_speech": "名詞",
+        "meaning": "手錶、時鐘",
+        "example_ja": "あれは日本の時計です。",
+        "example_zh": "那是日本的手錶。"
+      },
+      {
+        "kanji": "携帯電話",
+        "kana": "けいたいでんわ",
+        "romaji": "keitai denwa",
+        "part_of_speech": "名詞",
+        "meaning": "手機",
+        "example_ja": "これは私の携帯電話です。",
+        "example_zh": "這是我的手機。"
+      },
+      {
+        "kanji": "車",
+        "kana": "くるま",
+        "romaji": "kuruma",
+        "part_of_speech": "名詞",
+        "meaning": "車子",
+        "example_ja": "あの車は先生のです。",
+        "example_zh": "那輛車是老師的。"
+      },
+      {
+        "kanji": "かばん",
+        "kana": "かばん",
+        "romaji": "kaban",
+        "part_of_speech": "名詞",
+        "meaning": "包包",
+        "example_ja": "このかばんは新しいです。",
+        "example_zh": "這個包包是新的。"
+      },
+      {
+        "kanji": "どれ",
+        "kana": "どれ",
+        "romaji": "dore",
+        "part_of_speech": "疑問詞",
+        "meaning": "哪一個",
+        "example_ja": "あなたの傘はどれですか。",
+        "example_zh": "你的傘是哪一把？"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "指示代名詞「これ・それ・あれ」",
+        "formula": "これ／それ／あれ は [名詞] です。",
+        "explanation": "「これ」指靠近說話者的東西，「それ」指靠近聽話者的東西，「あれ」指離雙方都遠的東西。三者本身即為名詞，可直接當主題。",
+        "alert": "「これ・それ・あれ」是代名詞，後面不可直接接名詞。「これ本」是錯誤的，須用「この本」。",
+        "examples": [
+          {
+            "ja": "これは辞書です。",
+            "zh": "這是字典。"
+          },
+          {
+            "ja": "あれは何ですか。",
+            "zh": "那是什麼？"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "（　）は辞書です。─ 指自己手上的東西",
+            "options": [
+              "これ",
+              "それ",
+              "あれ",
+              "どれ"
+            ],
+            "correct_answer": "これ",
+            "explanation": "「これ」指靠近說話者的東西。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "離說話者和聽話者都遠的東西用哪個指示詞？",
+            "options": [
+              "あれ",
+              "これ",
+              "それ",
+              "この"
+            ],
+            "correct_answer": "あれ",
+            "explanation": "「あれ」指離雙方都遠的東西。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "下列哪一句是「錯誤」的？",
+            "options": [
+              "あれ人は田中さんです。",
+              "これは本です。",
+              "それはかばんです。",
+              "あれは何ですか。"
+            ],
+            "correct_answer": "あれ人は田中さんです。",
+            "explanation": "「これ・それ・あれ」是代名詞，不可直接接名詞，須用「あの人」。"
+          }
+        ]
+      },
+      {
+        "point_title": "連體詞「この・その・あの」＋名詞",
+        "formula": "この／その／あの [名詞] は ～です。",
+        "explanation": "「この・その・あの」必須接名詞使用，距離的區分與「これ・それ・あれ」相同。「この本」相當於中文的「這本書」。",
+        "alert": "「この・その・あの」後面必須接名詞，不可單獨使用。",
+        "examples": [
+          {
+            "ja": "この本は私のです。",
+            "zh": "這本書是我的。"
+          },
+          {
+            "ja": "あの人は田中さんです。",
+            "zh": "那個人是田中先生。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "（　）本は私のです。─「這本書」",
+            "options": [
+              "この",
+              "これ",
+              "それ",
+              "どれ"
+            ],
+            "correct_answer": "この",
+            "explanation": "後面接名詞時要用連體詞「この」，不可用「これ」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「この・その・あの」後面必須接什麼？",
+            "options": [
+              "名詞",
+              "動詞",
+              "形容詞",
+              "助詞"
+            ],
+            "correct_answer": "名詞",
+            "explanation": "連體詞不能單獨使用，後面必須接名詞。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "あの（　）は田中さんです。",
+            "options": [
+              "人",
+              "は",
+              "です",
+              "か"
+            ],
+            "correct_answer": "人",
+            "explanation": "「あの」後面須接名詞，「あの人」即「那個人」。"
+          }
+        ]
+      },
+      {
+        "point_title": "所有的「の」與省略",
+        "formula": "[人] の [物] ／ [人] の",
+        "explanation": "「の」表示所有關係，相當於「的」。當所指的物品已明確時，「の」後面的名詞可省略，如「私のです」即「是我的（東西）」。",
+        "alert": "詢問所有者用「誰の」，如「これは誰のかばんですか」。",
+        "examples": [
+          {
+            "ja": "これは田中さんの傘です。",
+            "zh": "這是田中先生的傘。"
+          },
+          {
+            "ja": "その辞書は私のです。",
+            "zh": "那本字典是我的。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "これは田中さん（　）傘です。",
+            "options": [
+              "の",
+              "は",
+              "が",
+              "を"
+            ],
+            "correct_answer": "の",
+            "explanation": "「の」表示所有關係：「田中先生的傘」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "その辞書は私（　）です。─「是我的」",
+            "options": [
+              "の",
+              "は",
+              "が",
+              "も"
+            ],
+            "correct_answer": "の",
+            "explanation": "物品已明確時，「の」後面的名詞可省略，「私の」即「我的（東西）」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "詢問所有者時說：これは（　）のかばんですか。",
+            "options": [
+              "誰",
+              "何",
+              "どこ",
+              "いつ"
+            ],
+            "correct_answer": "誰",
+            "explanation": "詢問所有者用「誰の」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "（手拿著包包）（ ）はわたしのかばんです。",
+        "options": [
+          "これ",
+          "それ",
+          "あれ",
+          "この"
+        ],
+        "correct_answer": "これ",
+        "explanation": "物品在說話者手上，屬於近距離，用「これ」。「この」後面須接名詞，不可直接接「は」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "（ ）本は田中さんのです。",
+        "options": [
+          "これ",
+          "この",
+          "それ",
+          "どれ"
+        ],
+        "correct_answer": "この",
+        "explanation": "空格後面直接接名詞「本」，因此須使用連體詞「この」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "A：これは誰の傘ですか。 B：山田さん（ ）です。",
+        "options": [
+          "の",
+          "は",
+          "も",
+          "か"
+        ],
+        "correct_answer": "の",
+        "explanation": "表示所有者時用「の」，且物品「傘」已明確，故可省略為「山田さんのです」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 4,
+    "lesson_title": "場所方位與存在句",
+    "vocabulary": [
+      {
+        "kanji": "ここ",
+        "kana": "ここ",
+        "romaji": "koko",
+        "part_of_speech": "指示代名詞",
+        "meaning": "這裡",
+        "example_ja": "ここは教室です。",
+        "example_zh": "這裡是教室。"
+      },
+      {
+        "kanji": "そこ",
+        "kana": "そこ",
+        "romaji": "soko",
+        "part_of_speech": "指示代名詞",
+        "meaning": "那裡（近聽話者）",
+        "example_ja": "そこはトイレです。",
+        "example_zh": "那裡是廁所。"
+      },
+      {
+        "kanji": "あそこ",
+        "kana": "あそこ",
+        "romaji": "asoko",
+        "part_of_speech": "指示代名詞",
+        "meaning": "那裡（遠）",
+        "example_ja": "あそこは駅です。",
+        "example_zh": "那裡是車站。"
+      },
+      {
+        "kanji": "どこ",
+        "kana": "どこ",
+        "romaji": "doko",
+        "part_of_speech": "疑問詞",
+        "meaning": "哪裡",
+        "example_ja": "トイレはどこですか。",
+        "example_zh": "廁所在哪裡？"
+      },
+      {
+        "kanji": "上",
+        "kana": "うえ",
+        "romaji": "ue",
+        "part_of_speech": "名詞",
+        "meaning": "上面",
+        "example_ja": "机の上に本があります。",
+        "example_zh": "桌子上有書。"
+      },
+      {
+        "kanji": "下",
+        "kana": "した",
+        "romaji": "shita",
+        "part_of_speech": "名詞",
+        "meaning": "下面",
+        "example_ja": "いすの下に猫がいます。",
+        "example_zh": "椅子下面有貓。"
+      },
+      {
+        "kanji": "中",
+        "kana": "なか",
+        "romaji": "naka",
+        "part_of_speech": "名詞",
+        "meaning": "裡面",
+        "example_ja": "かばんの中に辞書があります。",
+        "example_zh": "包包裡面有字典。"
+      },
+      {
+        "kanji": "前",
+        "kana": "まえ",
+        "romaji": "mae",
+        "part_of_speech": "名詞",
+        "meaning": "前面",
+        "example_ja": "駅の前にコンビニがあります。",
+        "example_zh": "車站前面有便利商店。"
+      },
+      {
+        "kanji": "後ろ",
+        "kana": "うしろ",
+        "romaji": "ushiro",
+        "part_of_speech": "名詞",
+        "meaning": "後面",
+        "example_ja": "学校の後ろに公園があります。",
+        "example_zh": "學校後面有公園。"
+      },
+      {
+        "kanji": "隣",
+        "kana": "となり",
+        "romaji": "tonari",
+        "part_of_speech": "名詞",
+        "meaning": "旁邊、隔壁",
+        "example_ja": "銀行の隣に郵便局があります。",
+        "example_zh": "銀行旁邊有郵局。"
+      },
+      {
+        "kanji": "机",
+        "kana": "つくえ",
+        "romaji": "tsukue",
+        "part_of_speech": "名詞",
+        "meaning": "桌子",
+        "example_ja": "机の上に時計があります。",
+        "example_zh": "桌子上有時鐘。"
+      },
+      {
+        "kanji": "猫",
+        "kana": "ねこ",
+        "romaji": "neko",
+        "part_of_speech": "名詞",
+        "meaning": "貓",
+        "example_ja": "部屋に猫がいます。",
+        "example_zh": "房間裡有貓。"
+      },
+      {
+        "kanji": "犬",
+        "kana": "いぬ",
+        "romaji": "inu",
+        "part_of_speech": "名詞",
+        "meaning": "狗",
+        "example_ja": "犬は車の下にいます。",
+        "example_zh": "狗在車子下面。"
+      },
+      {
+        "kanji": "駅",
+        "kana": "えき",
+        "romaji": "eki",
+        "part_of_speech": "名詞",
+        "meaning": "車站",
+        "example_ja": "駅はあそこです。",
+        "example_zh": "車站在那裡。"
+      },
+      {
+        "kanji": "コンビニ",
+        "kana": "コンビニ",
+        "romaji": "konbini",
+        "part_of_speech": "名詞",
+        "meaning": "便利商店",
+        "example_ja": "コンビニは駅の前です。",
+        "example_zh": "便利商店在車站前面。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "存在句「あります／います」",
+        "formula": "[場所] に [物／人] が あります／います。",
+        "explanation": "表示某處存在某物或某人。無生命的物品（書、車、建築物）用「あります」，有生命的人與動物用「います」。存在的場所用助詞「に」，存在的主體用「が」。",
+        "alert": "植物雖是生物，但因不會移動，日文中用「あります」。",
+        "examples": [
+          {
+            "ja": "机の上に本があります。",
+            "zh": "桌子上有書。"
+          },
+          {
+            "ja": "教室に学生がいます。",
+            "zh": "教室裡有學生。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "机の上に本が（　）。",
+            "options": [
+              "あります",
+              "います",
+              "です",
+              "します"
+            ],
+            "correct_answer": "あります",
+            "explanation": "書是無生命物品，存在用「あります」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "教室に学生が（　）。",
+            "options": [
+              "います",
+              "あります",
+              "です",
+              "します"
+            ],
+            "correct_answer": "います",
+            "explanation": "人是有生命的，存在用「います」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "庭に木が（　）。─ 植物用哪個？",
+            "options": [
+              "あります",
+              "います",
+              "できます",
+              "します"
+            ],
+            "correct_answer": "あります",
+            "explanation": "植物雖是生物，但不會移動，日文中用「あります」。"
+          }
+        ]
+      },
+      {
+        "point_title": "方位表現「～の上／下／中／前／後ろ／隣」",
+        "formula": "[名詞] の [方位詞] に ～があります／います。",
+        "explanation": "方位詞為名詞，須以「の」連接參照物，再加「に」表示位置。",
+        "alert": "中文說「桌上」，日文必須說「机の上」，「の」不可省略。",
+        "examples": [
+          {
+            "ja": "かばんの中に鍵があります。",
+            "zh": "包包裡有鑰匙。"
+          },
+          {
+            "ja": "いすの下に猫がいます。",
+            "zh": "椅子下面有貓。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "かばん（　）中に鍵があります。",
+            "options": [
+              "の",
+              "に",
+              "で",
+              "を"
+            ],
+            "correct_answer": "の",
+            "explanation": "方位詞是名詞，須以「の」連接參照物：「かばんの中」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "いすの下（　）猫がいます。",
+            "options": [
+              "に",
+              "で",
+              "を",
+              "へ"
+            ],
+            "correct_answer": "に",
+            "explanation": "存在的場所用助詞「に」標示。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "中文「桌上」的正確日文說法是？",
+            "options": [
+              "机の上",
+              "机上",
+              "上の机",
+              "机うえ"
+            ],
+            "correct_answer": "机の上",
+            "explanation": "日文必須說「机の上」，「の」不可省略。"
+          }
+        ]
+      },
+      {
+        "point_title": "場所詢問「～はどこですか」",
+        "formula": "[名詞] は どこですか。／ [名詞] は [場所] です。",
+        "explanation": "詢問某物或某人的位置時，以該對象為主題，用「どこ」提問。回答可用「ここ・そこ・あそこ」或具體場所。",
+        "alert": "「[物] は [場所] です」與「[場所] に [物] があります」語意相近，但前者主題是物品，後者主題是場所。",
+        "examples": [
+          {
+            "ja": "トイレはどこですか。",
+            "zh": "廁所在哪裡？"
+          },
+          {
+            "ja": "駅はあそこです。",
+            "zh": "車站在那裡。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "トイレは（　）ですか。─ 問位置",
+            "options": [
+              "どこ",
+              "どれ",
+              "誰",
+              "何"
+            ],
+            "correct_answer": "どこ",
+            "explanation": "詢問場所位置用疑問詞「どこ」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "駅は（　）です。─ 指離雙方都遠的地方",
+            "options": [
+              "あそこ",
+              "ここ",
+              "そこ",
+              "どこ"
+            ],
+            "correct_answer": "あそこ",
+            "explanation": "「あそこ」指離說話者與聽話者都遠的場所。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「駅はあそこです」這句話的主題是？",
+            "options": [
+              "駅",
+              "あそこ",
+              "です",
+              "場所"
+            ],
+            "correct_answer": "駅",
+            "explanation": "「[物]は[場所]です」以物（駅）為主題，說明它的位置。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "机の上に猫が（ ）。",
+        "options": [
+          "あります",
+          "います",
+          "です",
+          "ではありません"
+        ],
+        "correct_answer": "います",
+        "explanation": "「猫」是有生命的動物，存在句須用「います」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "トイレは（ ）ですか。",
+        "options": [
+          "どれ",
+          "どこ",
+          "だれ",
+          "なん"
+        ],
+        "correct_answer": "どこ",
+        "explanation": "詢問場所或位置時使用疑問詞「どこ」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "教室（ ）机があります。",
+        "options": [
+          "に",
+          "を",
+          "は",
+          "で"
+        ],
+        "correct_answer": "に",
+        "explanation": "存在句「～があります」中，表示存在場所的助詞是「に」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 5,
+    "lesson_title": "時間日程",
+    "vocabulary": [
+      {
+        "kanji": "今",
+        "kana": "いま",
+        "romaji": "ima",
+        "part_of_speech": "名詞",
+        "meaning": "現在",
+        "example_ja": "今、何時ですか。",
+        "example_zh": "現在幾點？"
+      },
+      {
+        "kanji": "～時",
+        "kana": "～じ",
+        "romaji": "-ji",
+        "part_of_speech": "數量詞",
+        "meaning": "～點（鐘）",
+        "example_ja": "今、三時です。",
+        "example_zh": "現在三點。"
+      },
+      {
+        "kanji": "～分",
+        "kana": "～ふん／～ぷん",
+        "romaji": "-fun / -pun",
+        "part_of_speech": "數量詞",
+        "meaning": "～分",
+        "example_ja": "今、九時十分です。",
+        "example_zh": "現在九點十分。"
+      },
+      {
+        "kanji": "半",
+        "kana": "はん",
+        "romaji": "han",
+        "part_of_speech": "名詞",
+        "meaning": "半（三十分）",
+        "example_ja": "六時半に起きます。",
+        "example_zh": "六點半起床。"
+      },
+      {
+        "kanji": "午前",
+        "kana": "ごぜん",
+        "romaji": "gozen",
+        "part_of_speech": "名詞",
+        "meaning": "上午",
+        "example_ja": "午前九時に会社へ行きます。",
+        "example_zh": "上午九點去公司。"
+      },
+      {
+        "kanji": "午後",
+        "kana": "ごご",
+        "romaji": "gogo",
+        "part_of_speech": "名詞",
+        "meaning": "下午",
+        "example_ja": "午後五時に帰ります。",
+        "example_zh": "下午五點回家。"
+      },
+      {
+        "kanji": "月曜日",
+        "kana": "げつようび",
+        "romaji": "getsuyoubi",
+        "part_of_speech": "名詞",
+        "meaning": "星期一",
+        "example_ja": "今日は月曜日です。",
+        "example_zh": "今天是星期一。"
+      },
+      {
+        "kanji": "日曜日",
+        "kana": "にちようび",
+        "romaji": "nichiyoubi",
+        "part_of_speech": "名詞",
+        "meaning": "星期日",
+        "example_ja": "日曜日は休みです。",
+        "example_zh": "星期日休息。"
+      },
+      {
+        "kanji": "今日",
+        "kana": "きょう",
+        "romaji": "kyou",
+        "part_of_speech": "名詞",
+        "meaning": "今天",
+        "example_ja": "今日は何曜日ですか。",
+        "example_zh": "今天是星期幾？"
+      },
+      {
+        "kanji": "明日",
+        "kana": "あした",
+        "romaji": "ashita",
+        "part_of_speech": "名詞",
+        "meaning": "明天",
+        "example_ja": "明日は火曜日です。",
+        "example_zh": "明天是星期二。"
+      },
+      {
+        "kanji": "昨日",
+        "kana": "きのう",
+        "romaji": "kinou",
+        "part_of_speech": "名詞",
+        "meaning": "昨天",
+        "example_ja": "昨日は日曜日でした。",
+        "example_zh": "昨天是星期日。"
+      },
+      {
+        "kanji": "毎日",
+        "kana": "まいにち",
+        "romaji": "mainichi",
+        "part_of_speech": "名詞",
+        "meaning": "每天",
+        "example_ja": "毎日七時に起きます。",
+        "example_zh": "每天七點起床。"
+      },
+      {
+        "kanji": "起きます",
+        "kana": "おきます",
+        "romaji": "okimasu",
+        "part_of_speech": "動詞",
+        "meaning": "起床",
+        "example_ja": "六時に起きます。",
+        "example_zh": "六點起床。"
+      },
+      {
+        "kanji": "寝ます",
+        "kana": "ねます",
+        "romaji": "nemasu",
+        "part_of_speech": "動詞",
+        "meaning": "睡覺",
+        "example_ja": "十一時に寝ます。",
+        "example_zh": "十一點睡覺。"
+      },
+      {
+        "kanji": "働きます",
+        "kana": "はたらきます",
+        "romaji": "hatarakimasu",
+        "part_of_speech": "動詞",
+        "meaning": "工作",
+        "example_ja": "九時から五時まで働きます。",
+        "example_zh": "從九點工作到五點。"
+      },
+      {
+        "kanji": "休み",
+        "kana": "やすみ",
+        "romaji": "yasumi",
+        "part_of_speech": "名詞",
+        "meaning": "休息、休假",
+        "example_ja": "土曜日は休みです。",
+        "example_zh": "星期六休假。"
+      },
+      {
+        "kanji": "何時",
+        "kana": "なんじ",
+        "romaji": "nanji",
+        "part_of_speech": "疑問詞",
+        "meaning": "幾點",
+        "example_ja": "何時に寝ますか。",
+        "example_zh": "幾點睡覺？"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "時間表達「～時～分です」",
+        "formula": "今 [數字] 時 [數字] 分 です。",
+        "explanation": "報時使用「～時（じ）」與「～分（ふん／ぷん）」。詢問時間用「今、何時ですか」。",
+        "alert": "注意特殊讀音：四時（よじ）、七時（しちじ）、九時（くじ）。「分」在1、3、4、6、8、10後讀「ぷん」，其他讀「ふん」。",
+        "examples": [
+          {
+            "ja": "今、四時十五分です。",
+            "zh": "現在四點十五分。"
+          },
+          {
+            "ja": "今、九時半です。",
+            "zh": "現在九點半。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「四時」的正確讀音是？",
+            "options": [
+              "よじ",
+              "しじ",
+              "よんじ",
+              "よつじ"
+            ],
+            "correct_answer": "よじ",
+            "explanation": "四時是特殊讀音「よじ」，不讀「しじ」或「よんじ」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「九時」的正確讀音是？",
+            "options": [
+              "くじ",
+              "きゅうじ",
+              "ここのじ",
+              "くうじ"
+            ],
+            "correct_answer": "くじ",
+            "explanation": "九時是特殊讀音「くじ」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「十分」的正確讀音是？",
+            "options": [
+              "じゅっぷん",
+              "じゅうふん",
+              "とおふん",
+              "じゅうぶん"
+            ],
+            "correct_answer": "じゅっぷん",
+            "explanation": "「分」在 10 後面讀「ぷん」：じゅっぷん（也可讀じっぷん）。"
+          }
+        ]
+      },
+      {
+        "point_title": "時間點助詞「に」",
+        "formula": "[時間] に [動詞ます]。",
+        "explanation": "表示動作發生的具體時間點時，在時間名詞後加「に」。動詞禮貌形以「～ます」結尾，否定為「～ません」。",
+        "alert": "具體時刻、星期、日期後加「に」；但「今日、明日、毎日、今、来週」等相對時間名詞後不加「に」。",
+        "examples": [
+          {
+            "ja": "毎朝七時に起きます。",
+            "zh": "每天早上七點起床。"
+          },
+          {
+            "ja": "日曜日に働きません。",
+            "zh": "星期日不工作。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "毎朝七時（　）起きます。",
+            "options": [
+              "に",
+              "で",
+              "を",
+              "へ"
+            ],
+            "correct_answer": "に",
+            "explanation": "具體時刻後加「に」表示動作發生的時間點。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "下列哪個時間詞後面「不」加「に」？",
+            "options": [
+              "明日",
+              "七時",
+              "日曜日",
+              "三月三日"
+            ],
+            "correct_answer": "明日",
+            "explanation": "「明日、今日、毎日」等相對時間名詞後不加「に」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "日曜日（　）働きません。",
+            "options": [
+              "に",
+              "で",
+              "から",
+              "まで"
+            ],
+            "correct_answer": "に",
+            "explanation": "星期後面加「に」表示時間點。"
+          }
+        ]
+      },
+      {
+        "point_title": "時間範圍「～から～まで」",
+        "formula": "[時間A] から [時間B] まで",
+        "explanation": "「から」表示起點（從～），「まで」表示終點（到～）。兩者可單獨使用，也可搭配使用。也可用於場所的起點與終點。",
+        "alert": "「～から～まで」後面可直接加「です」，如「銀行は九時から三時までです」。",
+        "examples": [
+          {
+            "ja": "会社は九時から五時までです。",
+            "zh": "公司從九點到五點。"
+          },
+          {
+            "ja": "月曜日から金曜日まで働きます。",
+            "zh": "從星期一工作到星期五。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "会社は九時（　）五時までです。",
+            "options": [
+              "から",
+              "まで",
+              "に",
+              "で"
+            ],
+            "correct_answer": "から",
+            "explanation": "「から」表示起點（從九點）。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "月曜日から金曜日（　）働きます。",
+            "options": [
+              "まで",
+              "から",
+              "に",
+              "と"
+            ],
+            "correct_answer": "まで",
+            "explanation": "「まで」表示終點（到星期五）。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「から」表示的是？",
+            "options": [
+              "起點（從～）",
+              "終點（到～）",
+              "一起的對象",
+              "動作的場所"
+            ],
+            "correct_answer": "起點（從～）",
+            "explanation": "「から」表示時間或場所的起點，「まで」表示終點。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "毎朝七時（ ）起きます。",
+        "options": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
+        "correct_answer": "に",
+        "explanation": "「七時」是具體時刻，表示動作發生時間點須用助詞「に」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "銀行は九時（ ）三時までです。",
+        "options": [
+          "から",
+          "まで",
+          "に",
+          "と"
+        ],
+        "correct_answer": "から",
+        "explanation": "「～から～まで」表示時間範圍，起點用「から」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "A：今日は（ ）ですか。 B：月曜日です。",
+        "options": [
+          "何時",
+          "何曜日",
+          "何日",
+          "いつ"
+        ],
+        "correct_answer": "何曜日",
+        "explanation": "回答為「月曜日」（星期一），因此問句應使用詢問星期的「何曜日」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 6,
+    "lesson_title": "移動動詞與交通",
+    "vocabulary": [
+      {
+        "kanji": "行きます",
+        "kana": "いきます",
+        "romaji": "ikimasu",
+        "part_of_speech": "動詞",
+        "meaning": "去",
+        "example_ja": "明日、東京へ行きます。",
+        "example_zh": "明天去東京。"
+      },
+      {
+        "kanji": "来ます",
+        "kana": "きます",
+        "romaji": "kimasu",
+        "part_of_speech": "動詞",
+        "meaning": "來",
+        "example_ja": "友達がうちへ来ます。",
+        "example_zh": "朋友來我家。"
+      },
+      {
+        "kanji": "帰ります",
+        "kana": "かえります",
+        "romaji": "kaerimasu",
+        "part_of_speech": "動詞",
+        "meaning": "回去、回家",
+        "example_ja": "六時にうちへ帰ります。",
+        "example_zh": "六點回家。"
+      },
+      {
+        "kanji": "電車",
+        "kana": "でんしゃ",
+        "romaji": "densha",
+        "part_of_speech": "名詞",
+        "meaning": "電車",
+        "example_ja": "電車で会社へ行きます。",
+        "example_zh": "搭電車去公司。"
+      },
+      {
+        "kanji": "バス",
+        "kana": "バス",
+        "romaji": "basu",
+        "part_of_speech": "名詞",
+        "meaning": "公車",
+        "example_ja": "バスで学校へ行きます。",
+        "example_zh": "搭公車去學校。"
+      },
+      {
+        "kanji": "タクシー",
+        "kana": "タクシー",
+        "romaji": "takushii",
+        "part_of_speech": "名詞",
+        "meaning": "計程車",
+        "example_ja": "タクシーで駅へ行きます。",
+        "example_zh": "搭計程車去車站。"
+      },
+      {
+        "kanji": "自転車",
+        "kana": "じてんしゃ",
+        "romaji": "jitensha",
+        "part_of_speech": "名詞",
+        "meaning": "腳踏車",
+        "example_ja": "自転車で来ました。",
+        "example_zh": "騎腳踏車來的。"
+      },
+      {
+        "kanji": "飛行機",
+        "kana": "ひこうき",
+        "romaji": "hikouki",
+        "part_of_speech": "名詞",
+        "meaning": "飛機",
+        "example_ja": "飛行機で日本へ行きます。",
+        "example_zh": "搭飛機去日本。"
+      },
+      {
+        "kanji": "歩いて",
+        "kana": "あるいて",
+        "romaji": "aruite",
+        "part_of_speech": "副詞",
+        "meaning": "走路、步行",
+        "example_ja": "歩いて駅へ行きます。",
+        "example_zh": "走路去車站。"
+      },
+      {
+        "kanji": "学校",
+        "kana": "がっこう",
+        "romaji": "gakkou",
+        "part_of_speech": "名詞",
+        "meaning": "學校",
+        "example_ja": "毎日学校へ行きます。",
+        "example_zh": "每天去學校。"
+      },
+      {
+        "kanji": "家",
+        "kana": "うち",
+        "romaji": "uchi",
+        "part_of_speech": "名詞",
+        "meaning": "家",
+        "example_ja": "何時にうちへ帰りますか。",
+        "example_zh": "幾點回家？"
+      },
+      {
+        "kanji": "一人で",
+        "kana": "ひとりで",
+        "romaji": "hitori de",
+        "part_of_speech": "副詞",
+        "meaning": "一個人、獨自",
+        "example_ja": "一人で日本へ行きます。",
+        "example_zh": "一個人去日本。"
+      },
+      {
+        "kanji": "いつ",
+        "kana": "いつ",
+        "romaji": "itsu",
+        "part_of_speech": "疑問詞",
+        "meaning": "什麼時候",
+        "example_ja": "いつ日本へ行きますか。",
+        "example_zh": "什麼時候去日本？"
+      },
+      {
+        "kanji": "来週",
+        "kana": "らいしゅう",
+        "romaji": "raishuu",
+        "part_of_speech": "名詞",
+        "meaning": "下週",
+        "example_ja": "来週、大阪へ行きます。",
+        "example_zh": "下週去大阪。"
+      },
+      {
+        "kanji": "先月",
+        "kana": "せんげつ",
+        "romaji": "sengetsu",
+        "part_of_speech": "名詞",
+        "meaning": "上個月",
+        "example_ja": "先月、台湾へ帰りました。",
+        "example_zh": "上個月回台灣了。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "移動動詞與方向助詞「へ」",
+        "formula": "[場所] へ 行きます／来ます／帰ります。",
+        "explanation": "「行きます・来ます・帰ります」為移動動詞，移動的目的地用助詞「へ」標示。也可以用「に」代替「へ」。過去式為「～ました」。",
+        "alert": "助詞「へ」書寫為「へ」，但發音必須念作「e」。",
+        "examples": [
+          {
+            "ja": "明日、京都へ行きます。",
+            "zh": "明天去京都。"
+          },
+          {
+            "ja": "昨日、うちへ帰りませんでした。",
+            "zh": "昨天沒有回家。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "明日、京都（　）行きます。",
+            "options": [
+              "へ",
+              "を",
+              "が",
+              "と"
+            ],
+            "correct_answer": "へ",
+            "explanation": "移動的目的地用助詞「へ」（也可用「に」）。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "助詞「へ」的發音是？",
+            "options": [
+              "e",
+              "he",
+              "we",
+              "ha"
+            ],
+            "correct_answer": "e",
+            "explanation": "「へ」當助詞時念作「e」，不念「he」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "昨日、うちへ（　）。─「昨天沒有回家」",
+            "options": [
+              "帰りませんでした",
+              "帰りません",
+              "帰ります",
+              "帰りました"
+            ],
+            "correct_answer": "帰りませんでした",
+            "explanation": "過去否定用「～ませんでした」。"
+          }
+        ]
+      },
+      {
+        "point_title": "交通手段「～で」",
+        "formula": "[交通工具] で [場所] へ 行きます。",
+        "explanation": "表示使用的交通工具時，在交通工具後加助詞「で」，相當於「搭～」「坐～」。",
+        "alert": "走路去要說「歩いて行きます」，「歩いて」後面不加「で」。",
+        "examples": [
+          {
+            "ja": "電車で会社へ行きます。",
+            "zh": "搭電車去公司。"
+          },
+          {
+            "ja": "歩いて駅へ行きます。",
+            "zh": "走路去車站。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "電車（　）会社へ行きます。",
+            "options": [
+              "で",
+              "に",
+              "を",
+              "へ"
+            ],
+            "correct_answer": "で",
+            "explanation": "交通工具後加「で」，表示「搭電車」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「走路去車站」的正確說法是？",
+            "options": [
+              "歩いて駅へ行きます。",
+              "歩いてで駅へ行きます。",
+              "歩くで駅へ行きます。",
+              "歩きますで駅へ行きます。"
+            ],
+            "correct_answer": "歩いて駅へ行きます。",
+            "explanation": "走路用「歩いて」，後面不加「で」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "バス（　）学校へ来ます。",
+            "options": [
+              "で",
+              "に",
+              "と",
+              "が"
+            ],
+            "correct_answer": "で",
+            "explanation": "交通手段用「で」：搭公車來學校。"
+          }
+        ]
+      },
+      {
+        "point_title": "同伴「～と」與「一人で」",
+        "formula": "[人] と [場所] へ 行きます。／ 一人で 行きます。",
+        "explanation": "「と」表示一起行動的對象，相當於「和～」。獨自一人時用「一人で」。詢問對象用「誰と」。",
+        "alert": "「一人で」的「で」不可省略。",
+        "examples": [
+          {
+            "ja": "友達と日本へ行きます。",
+            "zh": "和朋友去日本。"
+          },
+          {
+            "ja": "一人で映画館へ行きました。",
+            "zh": "一個人去了電影院。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "友達（　）日本へ行きます。─「和朋友」",
+            "options": [
+              "と",
+              "で",
+              "に",
+              "を"
+            ],
+            "correct_answer": "と",
+            "explanation": "一起行動的對象用「と」，相當於「和～」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「一個人（做某事）」的正確說法是？",
+            "options": [
+              "一人で",
+              "一人と",
+              "一人に",
+              "一人へ"
+            ],
+            "correct_answer": "一人で",
+            "explanation": "獨自一人用「一人で」，「で」不可省略。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "詢問一起去的對象時用？",
+            "options": [
+              "誰と",
+              "誰が",
+              "誰を",
+              "誰で"
+            ],
+            "correct_answer": "誰と",
+            "explanation": "詢問同行對象用「誰と」（和誰）。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "私はバス（ ）会社へ行きます。",
+        "options": [
+          "で",
+          "に",
+          "を",
+          "と"
+        ],
+        "correct_answer": "で",
+        "explanation": "「バス」是交通工具，表示交通手段須用助詞「で」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "明日、友達（ ）京都へ行きます。",
+        "options": [
+          "と",
+          "で",
+          "に",
+          "が"
+        ],
+        "correct_answer": "と",
+        "explanation": "「友達」是一起行動的對象，表示同伴須用助詞「と」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "日曜日、どこ（ ）行きますか。",
+        "options": [
+          "へ",
+          "で",
+          "を",
+          "は"
+        ],
+        "correct_answer": "へ",
+        "explanation": "「行きます」是移動動詞，目的地用助詞「へ」（發音為 e）。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 7,
+    "lesson_title": "動作受詞與助詞",
+    "vocabulary": [
+      {
+        "kanji": "食べます",
+        "kana": "たべます",
+        "romaji": "tabemasu",
+        "part_of_speech": "動詞",
+        "meaning": "吃",
+        "example_ja": "パンを食べます。",
+        "example_zh": "吃麵包。"
+      },
+      {
+        "kanji": "飲みます",
+        "kana": "のみます",
+        "romaji": "nomimasu",
+        "part_of_speech": "動詞",
+        "meaning": "喝",
+        "example_ja": "コーヒーを飲みます。",
+        "example_zh": "喝咖啡。"
+      },
+      {
+        "kanji": "見ます",
+        "kana": "みます",
+        "romaji": "mimasu",
+        "part_of_speech": "動詞",
+        "meaning": "看",
+        "example_ja": "テレビを見ます。",
+        "example_zh": "看電視。"
+      },
+      {
+        "kanji": "読みます",
+        "kana": "よみます",
+        "romaji": "yomimasu",
+        "part_of_speech": "動詞",
+        "meaning": "讀、閱讀",
+        "example_ja": "新聞を読みます。",
+        "example_zh": "看報紙。"
+      },
+      {
+        "kanji": "聞きます",
+        "kana": "ききます",
+        "romaji": "kikimasu",
+        "part_of_speech": "動詞",
+        "meaning": "聽",
+        "example_ja": "音楽を聞きます。",
+        "example_zh": "聽音樂。"
+      },
+      {
+        "kanji": "買います",
+        "kana": "かいます",
+        "romaji": "kaimasu",
+        "part_of_speech": "動詞",
+        "meaning": "買",
+        "example_ja": "スーパーで野菜を買います。",
+        "example_zh": "在超市買蔬菜。"
+      },
+      {
+        "kanji": "します",
+        "kana": "します",
+        "romaji": "shimasu",
+        "part_of_speech": "動詞",
+        "meaning": "做",
+        "example_ja": "日曜日、何をしますか。",
+        "example_zh": "星期日要做什麼？"
+      },
+      {
+        "kanji": "勉強します",
+        "kana": "べんきょうします",
+        "romaji": "benkyou shimasu",
+        "part_of_speech": "動詞",
+        "meaning": "學習、念書",
+        "example_ja": "図書館で日本語を勉強します。",
+        "example_zh": "在圖書館學日文。"
+      },
+      {
+        "kanji": "ご飯",
+        "kana": "ごはん",
+        "romaji": "gohan",
+        "part_of_speech": "名詞",
+        "meaning": "飯、餐",
+        "example_ja": "七時にご飯を食べます。",
+        "example_zh": "七點吃飯。"
+      },
+      {
+        "kanji": "パン",
+        "kana": "パン",
+        "romaji": "pan",
+        "part_of_speech": "名詞",
+        "meaning": "麵包",
+        "example_ja": "朝、パンを食べます。",
+        "example_zh": "早上吃麵包。"
+      },
+      {
+        "kanji": "水",
+        "kana": "みず",
+        "romaji": "mizu",
+        "part_of_speech": "名詞",
+        "meaning": "水",
+        "example_ja": "水を飲みます。",
+        "example_zh": "喝水。"
+      },
+      {
+        "kanji": "コーヒー",
+        "kana": "コーヒー",
+        "romaji": "koohii",
+        "part_of_speech": "名詞",
+        "meaning": "咖啡",
+        "example_ja": "毎朝コーヒーを飲みます。",
+        "example_zh": "每天早上喝咖啡。"
+      },
+      {
+        "kanji": "新聞",
+        "kana": "しんぶん",
+        "romaji": "shinbun",
+        "part_of_speech": "名詞",
+        "meaning": "報紙",
+        "example_ja": "父は毎日新聞を読みます。",
+        "example_zh": "爸爸每天看報紙。"
+      },
+      {
+        "kanji": "映画",
+        "kana": "えいが",
+        "romaji": "eiga",
+        "part_of_speech": "名詞",
+        "meaning": "電影",
+        "example_ja": "一緒に映画を見ませんか。",
+        "example_zh": "要不要一起看電影？"
+      },
+      {
+        "kanji": "音楽",
+        "kana": "おんがく",
+        "romaji": "ongaku",
+        "part_of_speech": "名詞",
+        "meaning": "音樂",
+        "example_ja": "部屋で音楽を聞きます。",
+        "example_zh": "在房間聽音樂。"
+      },
+      {
+        "kanji": "一緒に",
+        "kana": "いっしょに",
+        "romaji": "issho ni",
+        "part_of_speech": "副詞",
+        "meaning": "一起",
+        "example_ja": "一緒に食べましょう。",
+        "example_zh": "一起吃吧。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "受詞助詞「を」",
+        "formula": "[名詞] を [他動詞]。",
+        "explanation": "「を」標示動作的對象（受詞），接在名詞後面，後接他動詞。詢問受詞時用「何を」。",
+        "alert": "助詞「を」發音與「お」相同，念作「o」。",
+        "examples": [
+          {
+            "ja": "毎朝パンを食べます。",
+            "zh": "每天早上吃麵包。"
+          },
+          {
+            "ja": "何を飲みますか。",
+            "zh": "要喝什麼？"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "毎朝パン（　）食べます。",
+            "options": [
+              "を",
+              "は",
+              "が",
+              "に"
+            ],
+            "correct_answer": "を",
+            "explanation": "動作的受詞用助詞「を」標示。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "何（　）飲みますか。",
+            "options": [
+              "を",
+              "が",
+              "は",
+              "で"
+            ],
+            "correct_answer": "を",
+            "explanation": "詢問受詞時用「何を」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "助詞「を」的發音是？",
+            "options": [
+              "o",
+              "wo",
+              "u",
+              "ho"
+            ],
+            "correct_answer": "o",
+            "explanation": "助詞「を」發音與「お」相同，念作「o」。"
+          }
+        ]
+      },
+      {
+        "point_title": "動作場所「～で」",
+        "formula": "[場所] で [動詞]。",
+        "explanation": "表示動作進行的場所時，場所後接助詞「で」。與表示存在場所的「に」不同。",
+        "alert": "存在（あります・います）用「に」，動作發生的地點用「で」。例如「教室に学生がいます」但「教室で勉強します」。",
+        "examples": [
+          {
+            "ja": "図書館で本を読みます。",
+            "zh": "在圖書館看書。"
+          },
+          {
+            "ja": "レストランでご飯を食べました。",
+            "zh": "在餐廳吃了飯。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "図書館（　）本を読みます。",
+            "options": [
+              "で",
+              "に",
+              "へ",
+              "を"
+            ],
+            "correct_answer": "で",
+            "explanation": "動作進行的場所用「で」：在圖書館看書。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "教室（　）学生がいます。",
+            "options": [
+              "に",
+              "で",
+              "を",
+              "と"
+            ],
+            "correct_answer": "に",
+            "explanation": "存在（います・あります）的場所用「に」，動作的場所才用「で」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "レストラン（　）ご飯を食べました。",
+            "options": [
+              "で",
+              "に",
+              "へ",
+              "から"
+            ],
+            "correct_answer": "で",
+            "explanation": "「吃飯」是動作，場所用「で」。"
+          }
+        ]
+      },
+      {
+        "point_title": "邀約「～ませんか／～ましょう」",
+        "formula": "[動詞ます形去ます] ませんか。／ [動詞ます形去ます] ましょう。",
+        "explanation": "「～ませんか」是禮貌的邀請，相當於「要不要～？」；「～ましょう」是積極的提議或回應邀請，相當於「～吧」。",
+        "alert": "「～ませんか」雖為否定形，但語意是邀請，不是否定。",
+        "examples": [
+          {
+            "ja": "一緒に映画を見ませんか。",
+            "zh": "要不要一起看電影？"
+          },
+          {
+            "ja": "ええ、見ましょう。",
+            "zh": "好，一起看吧。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "一緒に映画を見（　）か。─ 禮貌邀請",
+            "options": [
+              "ません",
+              "ます",
+              "ました",
+              "ましょう"
+            ],
+            "correct_answer": "ません",
+            "explanation": "「～ませんか」是禮貌的邀請：「要不要一起看？」"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "回應邀請說「好，一起看吧」：",
+            "options": [
+              "ええ、見ましょう。",
+              "いいえ、見ます。",
+              "はい、見ません。",
+              "ええ、見ましたか。"
+            ],
+            "correct_answer": "ええ、見ましょう。",
+            "explanation": "接受邀請用「～ましょう」積極回應。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「～ませんか」的語意是？",
+            "options": [
+              "邀請",
+              "否定",
+              "過去",
+              "禁止"
+            ],
+            "correct_answer": "邀請",
+            "explanation": "雖是否定形，但「～ませんか」的語意是邀請，不是否定。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "毎朝コーヒー（ ）飲みます。",
+        "options": [
+          "を",
+          "に",
+          "で",
+          "が"
+        ],
+        "correct_answer": "を",
+        "explanation": "「コーヒー」是動作「飲みます」的受詞，須用助詞「を」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "図書館（ ）本を読みます。",
+        "options": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
+        "correct_answer": "で",
+        "explanation": "「読みます」是動作，表示動作進行的場所須用助詞「で」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "A：一緒に映画を（ ）。 B：ええ、いいですね。",
+        "options": [
+          "見ませんか",
+          "見ません",
+          "見ました",
+          "見ませんでした"
+        ],
+        "correct_answer": "見ませんか",
+        "explanation": "B 的回答是接受邀請，因此 A 應使用邀約句型「～ませんか」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 8,
+    "lesson_title": "授受動詞與工具手段",
+    "vocabulary": [
+      {
+        "kanji": "あげます",
+        "kana": "あげます",
+        "romaji": "agemasu",
+        "part_of_speech": "動詞",
+        "meaning": "給（我給別人）",
+        "example_ja": "友達に花をあげます。",
+        "example_zh": "送花給朋友。"
+      },
+      {
+        "kanji": "もらいます",
+        "kana": "もらいます",
+        "romaji": "moraimasu",
+        "part_of_speech": "動詞",
+        "meaning": "得到、收到",
+        "example_ja": "母にプレゼントをもらいました。",
+        "example_zh": "從媽媽那裡收到了禮物。"
+      },
+      {
+        "kanji": "くれます",
+        "kana": "くれます",
+        "romaji": "kuremasu",
+        "part_of_speech": "動詞",
+        "meaning": "給（別人給我）",
+        "example_ja": "田中さんは私に本をくれました。",
+        "example_zh": "田中先生給了我書。"
+      },
+      {
+        "kanji": "貸します",
+        "kana": "かします",
+        "romaji": "kashimasu",
+        "part_of_speech": "動詞",
+        "meaning": "借出",
+        "example_ja": "友達に傘を貸しました。",
+        "example_zh": "把傘借給了朋友。"
+      },
+      {
+        "kanji": "借ります",
+        "kana": "かります",
+        "romaji": "karimasu",
+        "part_of_speech": "動詞",
+        "meaning": "借入",
+        "example_ja": "図書館で本を借ります。",
+        "example_zh": "在圖書館借書。"
+      },
+      {
+        "kanji": "教えます",
+        "kana": "おしえます",
+        "romaji": "oshiemasu",
+        "part_of_speech": "動詞",
+        "meaning": "教、告訴",
+        "example_ja": "先生は学生に日本語を教えます。",
+        "example_zh": "老師教學生日文。"
+      },
+      {
+        "kanji": "習います",
+        "kana": "ならいます",
+        "romaji": "naraimasu",
+        "part_of_speech": "動詞",
+        "meaning": "學習（向人學）",
+        "example_ja": "田中さんに日本語を習います。",
+        "example_zh": "向田中先生學日文。"
+      },
+      {
+        "kanji": "書きます",
+        "kana": "かきます",
+        "romaji": "kakimasu",
+        "part_of_speech": "動詞",
+        "meaning": "寫",
+        "example_ja": "ペンで手紙を書きます。",
+        "example_zh": "用筆寫信。"
+      },
+      {
+        "kanji": "切ります",
+        "kana": "きります",
+        "romaji": "kirimasu",
+        "part_of_speech": "動詞",
+        "meaning": "切",
+        "example_ja": "ナイフでパンを切ります。",
+        "example_zh": "用刀切麵包。"
+      },
+      {
+        "kanji": "はし",
+        "kana": "はし",
+        "romaji": "hashi",
+        "part_of_speech": "名詞",
+        "meaning": "筷子",
+        "example_ja": "はしでご飯を食べます。",
+        "example_zh": "用筷子吃飯。"
+      },
+      {
+        "kanji": "ナイフ",
+        "kana": "ナイフ",
+        "romaji": "naifu",
+        "part_of_speech": "名詞",
+        "meaning": "刀子",
+        "example_ja": "ナイフで肉を切ります。",
+        "example_zh": "用刀切肉。"
+      },
+      {
+        "kanji": "プレゼント",
+        "kana": "プレゼント",
+        "romaji": "purezento",
+        "part_of_speech": "名詞",
+        "meaning": "禮物",
+        "example_ja": "友達にプレゼントをあげました。",
+        "example_zh": "送了禮物給朋友。"
+      },
+      {
+        "kanji": "手紙",
+        "kana": "てがみ",
+        "romaji": "tegami",
+        "part_of_speech": "名詞",
+        "meaning": "信",
+        "example_ja": "母に手紙を書きます。",
+        "example_zh": "寫信給媽媽。"
+      },
+      {
+        "kanji": "日本語",
+        "kana": "にほんご",
+        "romaji": "nihongo",
+        "part_of_speech": "名詞",
+        "meaning": "日文",
+        "example_ja": "日本語でレポートを書きます。",
+        "example_zh": "用日文寫報告。"
+      },
+      {
+        "kanji": "もう",
+        "kana": "もう",
+        "romaji": "mou",
+        "part_of_speech": "副詞",
+        "meaning": "已經",
+        "example_ja": "もう昼ご飯を食べました。",
+        "example_zh": "已經吃過午飯了。"
+      },
+      {
+        "kanji": "まだ",
+        "kana": "まだ",
+        "romaji": "mada",
+        "part_of_speech": "副詞",
+        "meaning": "還沒、還",
+        "example_ja": "まだ宿題をしていません。",
+        "example_zh": "還沒做功課。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "授受動詞「あげます／もらいます」",
+        "formula": "[人A] は [人B] に [物] を あげます。／ [人A] は [人B] に／から [物] を もらいます。",
+        "explanation": "「あげます」表示給予，接受者用「に」標示。「もらいます」表示接受，給予者用「に」或「から」標示。物品用「を」。",
+        "alert": "別人給「我」時不用「あげます」，要用「くれます」，如「田中さんは私に本をくれました」。",
+        "examples": [
+          {
+            "ja": "私は友達に本をあげました。",
+            "zh": "我送了書給朋友。"
+          },
+          {
+            "ja": "私は田中さんに花をもらいました。",
+            "zh": "我從田中先生那裡收到了花。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "私は友達に本を（　）。─ 我送書給朋友",
+            "options": [
+              "あげました",
+              "もらいました",
+              "くれました",
+              "ありました"
+            ],
+            "correct_answer": "あげました",
+            "explanation": "給予用「あげます」，接受者用「に」標示。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "私は田中さん（　）花をもらいました。",
+            "options": [
+              "に",
+              "を",
+              "が",
+              "は"
+            ],
+            "correct_answer": "に",
+            "explanation": "「もらいます」的給予者用「に」或「から」標示。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "別人給「我」東西時用哪個動詞？田中さんは私に本を（　）。",
+            "options": [
+              "くれました",
+              "あげました",
+              "もらいました",
+              "しました"
+            ],
+            "correct_answer": "くれました",
+            "explanation": "別人給我時不用「あげます」，要用「くれます」。"
+          }
+        ]
+      },
+      {
+        "point_title": "工具與手段「～で」",
+        "formula": "[工具／手段／語言] で [動詞]。",
+        "explanation": "「で」可表示進行動作時使用的工具、手段或語言，相當於中文的「用～」。",
+        "alert": "「日本語で話します」是「用日文說」，「日本語を話します」是「說日文」，助詞不同語意不同。",
+        "examples": [
+          {
+            "ja": "はしでご飯を食べます。",
+            "zh": "用筷子吃飯。"
+          },
+          {
+            "ja": "日本語で手紙を書きました。",
+            "zh": "用日文寫了信。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "はし（　）ご飯を食べます。",
+            "options": [
+              "で",
+              "を",
+              "に",
+              "と"
+            ],
+            "correct_answer": "で",
+            "explanation": "使用的工具後加「で」：「用筷子」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「用日文說」的正確說法是？",
+            "options": [
+              "日本語で話します。",
+              "日本語を話します。",
+              "日本語に話します。",
+              "日本語が話します。"
+            ],
+            "correct_answer": "日本語で話します。",
+            "explanation": "「で」表示使用的語言（用日文說）；「を」則是「說日文」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "日本語（　）手紙を書きました。─ 用日文寫",
+            "options": [
+              "で",
+              "を",
+              "に",
+              "から"
+            ],
+            "correct_answer": "で",
+            "explanation": "手段、語言用「で」標示。"
+          }
+        ]
+      },
+      {
+        "point_title": "完成與未完成「もう～ました／まだです」",
+        "formula": "もう [動詞] ました。／ いいえ、まだです。",
+        "explanation": "「もう」與過去式搭配表示「已經～了」。回答尚未完成時用「まだです」，不可直接回答「まだ～ませんでした」。",
+        "alert": "回答「還沒」時應說「まだです」或「まだ～ていません」，不可說「まだ～ませんでした」。",
+        "examples": [
+          {
+            "ja": "もう宿題をしましたか。",
+            "zh": "已經做功課了嗎？"
+          },
+          {
+            "ja": "いいえ、まだです。",
+            "zh": "不，還沒。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "（　）宿題をしましたか。─「已經做了嗎」",
+            "options": [
+              "もう",
+              "まだ",
+              "よく",
+              "とても"
+            ],
+            "correct_answer": "もう",
+            "explanation": "「もう」搭配過去式表示「已經～了」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "被問「もう食べましたか」，回答「還沒」應該說？",
+            "options": [
+              "いいえ、まだです。",
+              "いいえ、まだ食べませんでした。",
+              "はい、まだです。",
+              "いいえ、もうです。"
+            ],
+            "correct_answer": "いいえ、まだです。",
+            "explanation": "回答「還沒」用「まだです」，不可說「まだ～ませんでした」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "もう昼ご飯を（　）か。",
+            "options": [
+              "食べました",
+              "食べます",
+              "食べましょう",
+              "食べません"
+            ],
+            "correct_answer": "食べました",
+            "explanation": "「もう」（已經）搭配過去式「～ました」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "私は田中さん（ ）花をもらいました。",
+        "options": [
+          "に",
+          "を",
+          "で",
+          "へ"
+        ],
+        "correct_answer": "に",
+        "explanation": "「もらいます」的給予者用助詞「に」（或「から」）標示。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "日本人ははし（ ）ご飯を食べます。",
+        "options": [
+          "で",
+          "に",
+          "を",
+          "と"
+        ],
+        "correct_answer": "で",
+        "explanation": "「はし」是吃飯使用的工具，表示工具手段須用助詞「で」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "A：もう宿題をしましたか。 B：いいえ、（ ）。",
+        "options": [
+          "まだです",
+          "もうです",
+          "しました",
+          "まだしませんでした"
+        ],
+        "correct_answer": "まだです",
+        "explanation": "回答尚未完成時使用「まだです」，「まだしませんでした」是錯誤用法。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 9,
+    "lesson_title": "い形容詞",
+    "vocabulary": [
+      {
+        "kanji": "大きい",
+        "kana": "おおきい",
+        "romaji": "ookii",
+        "part_of_speech": "い形容詞",
+        "meaning": "大的",
+        "example_ja": "この犬は大きいです。",
+        "example_zh": "這隻狗很大。"
+      },
+      {
+        "kanji": "小さい",
+        "kana": "ちいさい",
+        "romaji": "chiisai",
+        "part_of_speech": "い形容詞",
+        "meaning": "小的",
+        "example_ja": "小さいかばんを買いました。",
+        "example_zh": "買了小包包。"
+      },
+      {
+        "kanji": "高い",
+        "kana": "たかい",
+        "romaji": "takai",
+        "part_of_speech": "い形容詞",
+        "meaning": "貴的、高的",
+        "example_ja": "この時計は高いです。",
+        "example_zh": "這隻手錶很貴。"
+      },
+      {
+        "kanji": "安い",
+        "kana": "やすい",
+        "romaji": "yasui",
+        "part_of_speech": "い形容詞",
+        "meaning": "便宜的",
+        "example_ja": "この店は安いです。",
+        "example_zh": "這家店很便宜。"
+      },
+      {
+        "kanji": "新しい",
+        "kana": "あたらしい",
+        "romaji": "atarashii",
+        "part_of_speech": "い形容詞",
+        "meaning": "新的",
+        "example_ja": "新しい車がほしいです。",
+        "example_zh": "想要新車。"
+      },
+      {
+        "kanji": "古い",
+        "kana": "ふるい",
+        "romaji": "furui",
+        "part_of_speech": "い形容詞",
+        "meaning": "舊的",
+        "example_ja": "この本は古いです。",
+        "example_zh": "這本書很舊。"
+      },
+      {
+        "kanji": "おいしい",
+        "kana": "おいしい",
+        "romaji": "oishii",
+        "part_of_speech": "い形容詞",
+        "meaning": "好吃的",
+        "example_ja": "このラーメンはおいしいです。",
+        "example_zh": "這碗拉麵很好吃。"
+      },
+      {
+        "kanji": "忙しい",
+        "kana": "いそがしい",
+        "romaji": "isogashii",
+        "part_of_speech": "い形容詞",
+        "meaning": "忙碌的",
+        "example_ja": "今日はとても忙しいです。",
+        "example_zh": "今天非常忙。"
+      },
+      {
+        "kanji": "楽しい",
+        "kana": "たのしい",
+        "romaji": "tanoshii",
+        "part_of_speech": "い形容詞",
+        "meaning": "愉快的",
+        "example_ja": "旅行は楽しかったです。",
+        "example_zh": "旅行很愉快。"
+      },
+      {
+        "kanji": "暑い",
+        "kana": "あつい",
+        "romaji": "atsui",
+        "part_of_speech": "い形容詞",
+        "meaning": "熱的（天氣）",
+        "example_ja": "台湾の夏は暑いです。",
+        "example_zh": "台灣的夏天很熱。"
+      },
+      {
+        "kanji": "寒い",
+        "kana": "さむい",
+        "romaji": "samui",
+        "part_of_speech": "い形容詞",
+        "meaning": "冷的（天氣）",
+        "example_ja": "昨日は寒かったです。",
+        "example_zh": "昨天很冷。"
+      },
+      {
+        "kanji": "いい",
+        "kana": "いい",
+        "romaji": "ii",
+        "part_of_speech": "い形容詞",
+        "meaning": "好的",
+        "example_ja": "今日は天気がいいです。",
+        "example_zh": "今天天氣很好。"
+      },
+      {
+        "kanji": "難しい",
+        "kana": "むずかしい",
+        "romaji": "muzukashii",
+        "part_of_speech": "い形容詞",
+        "meaning": "困難的",
+        "example_ja": "日本語はあまり難しくないです。",
+        "example_zh": "日文不太難。"
+      },
+      {
+        "kanji": "とても",
+        "kana": "とても",
+        "romaji": "totemo",
+        "part_of_speech": "副詞",
+        "meaning": "非常",
+        "example_ja": "この映画はとてもおもしろいです。",
+        "example_zh": "這部電影非常有趣。"
+      },
+      {
+        "kanji": "あまり",
+        "kana": "あまり",
+        "romaji": "amari",
+        "part_of_speech": "副詞",
+        "meaning": "不太（與否定搭配）",
+        "example_ja": "この店はあまり高くないです。",
+        "example_zh": "這家店不太貴。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "い形容詞現在肯定與否定",
+        "formula": "[い形容詞] です。／ [い形容詞去い] くないです。",
+        "explanation": "い形容詞以「い」結尾，直接加「です」即為肯定。否定時將語尾「い」改為「くない」再加「です」，也可說「～くありません」。",
+        "alert": "「いい」是特殊變化，否定為「よくないです」，不可說「いくないです」。",
+        "examples": [
+          {
+            "ja": "このかばんは高いです。",
+            "zh": "這個包包很貴。"
+          },
+          {
+            "ja": "この本はあまり難しくないです。",
+            "zh": "這本書不太難。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "このかばんは高（　）です。─「不貴」",
+            "options": [
+              "くない",
+              "いない",
+              "じゃない",
+              "かった"
+            ],
+            "correct_answer": "くない",
+            "explanation": "い形容詞否定：去「い」加「くない」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「いい」的否定形是？",
+            "options": [
+              "よくないです",
+              "いくないです",
+              "いいではありません",
+              "よいくないです"
+            ],
+            "correct_answer": "よくないです",
+            "explanation": "「いい」是特殊變化，否定用「よくない」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "この本はあまり難し（　）ないです。",
+            "options": [
+              "く",
+              "い",
+              "くて",
+              "かっ"
+            ],
+            "correct_answer": "く",
+            "explanation": "否定形「難しくない」：去「い」加「く」再接「ない」。"
+          }
+        ]
+      },
+      {
+        "point_title": "い形容詞過去肯定與否定",
+        "formula": "[い形容詞去い] かったです。／ [い形容詞去い] くなかったです。",
+        "explanation": "過去肯定將「い」改為「かった」，過去否定將「い」改為「くなかった」，再加「です」。",
+        "alert": "不可說「～いでした」，如「寒いでした」是錯誤的，正確是「寒かったです」。「いい」的過去式為「よかったです」。",
+        "examples": [
+          {
+            "ja": "昨日はとても寒かったです。",
+            "zh": "昨天非常冷。"
+          },
+          {
+            "ja": "テストは難しくなかったです。",
+            "zh": "考試不難。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "昨日はとても寒（　）です。─ 過去",
+            "options": [
+              "かった",
+              "いでした",
+              "くない",
+              "い"
+            ],
+            "correct_answer": "かった",
+            "explanation": "い形容詞過去式：去「い」加「かった」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「寒いでした」這個說法正確嗎？",
+            "options": [
+              "錯誤，應為「寒かったです」",
+              "正確",
+              "口語中可以",
+              "書面中可以"
+            ],
+            "correct_answer": "錯誤，應為「寒かったです」",
+            "explanation": "い形容詞不可用「～いでした」，過去式須變化為「～かったです」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「いい」的過去式是？",
+            "options": [
+              "よかったです",
+              "いかったです",
+              "いいでした",
+              "よいでした"
+            ],
+            "correct_answer": "よかったです",
+            "explanation": "「いい」的過去式為特殊變化「よかったです」。"
+          }
+        ]
+      },
+      {
+        "point_title": "い形容詞修飾名詞與程度副詞",
+        "formula": "[い形容詞] ＋ [名詞] ／ とても・あまり ＋ [い形容詞]",
+        "explanation": "い形容詞可直接放在名詞前修飾名詞。「とても」表示「非常」，用於肯定句；「あまり」表示「不太」，必須與否定形搭配。",
+        "alert": "「あまり」後面一定要接否定，「あまり高いです」是錯誤的。",
+        "examples": [
+          {
+            "ja": "新しい車を買いました。",
+            "zh": "買了新車。"
+          },
+          {
+            "ja": "この店はあまり安くないです。",
+            "zh": "這家店不太便宜。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "（　）車を買いました。─「新車」",
+            "options": [
+              "新しい",
+              "新しいな",
+              "新しく",
+              "新しいの"
+            ],
+            "correct_answer": "新しい",
+            "explanation": "い形容詞直接放在名詞前修飾，不加「な」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「あまり」後面必須搭配什麼？",
+            "options": [
+              "否定形",
+              "肯定形",
+              "過去形",
+              "疑問形"
+            ],
+            "correct_answer": "否定形",
+            "explanation": "「あまり」（不太）必須與否定形搭配使用。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "この店は（　）安くないです。─「不太便宜」",
+            "options": [
+              "あまり",
+              "とても",
+              "よく",
+              "たくさん"
+            ],
+            "correct_answer": "あまり",
+            "explanation": "「あまり＋否定」表示「不太～」；「とても」用於肯定句。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "この店のラーメンはあまり（ ）。",
+        "options": [
+          "おいしくないです",
+          "おいしいです",
+          "おいしくなかったです",
+          "おいしいではありません"
+        ],
+        "correct_answer": "おいしくないです",
+        "explanation": "「あまり」須與否定搭配，且句子為現在式，因此選「おいしくないです」。「おいしいではありません」是錯誤的形式。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "昨日はとても（ ）。",
+        "options": [
+          "寒かったです",
+          "寒いでした",
+          "寒いです",
+          "寒くないです"
+        ],
+        "correct_answer": "寒かったです",
+        "explanation": "「昨日」表示過去，い形容詞過去式為「～かったです」。「寒いでした」是常見錯誤。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "A：旅行はどうでしたか。 B：とても（ ）です。",
+        "options": [
+          "よかった",
+          "いかった",
+          "いいでした",
+          "いくなかった"
+        ],
+        "correct_answer": "よかった",
+        "explanation": "「いい」的過去式為特殊變化「よかった」，不可寫成「いかった」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 10,
+    "lesson_title": "な形容詞與好惡",
+    "vocabulary": [
+      {
+        "kanji": "きれい",
+        "kana": "きれい",
+        "romaji": "kirei",
+        "part_of_speech": "な形容詞",
+        "meaning": "漂亮的、乾淨的",
+        "example_ja": "この部屋はきれいです。",
+        "example_zh": "這個房間很乾淨。"
+      },
+      {
+        "kanji": "静か",
+        "kana": "しずか",
+        "romaji": "shizuka",
+        "part_of_speech": "な形容詞",
+        "meaning": "安靜的",
+        "example_ja": "この町は静かです。",
+        "example_zh": "這個城鎮很安靜。"
+      },
+      {
+        "kanji": "にぎやか",
+        "kana": "にぎやか",
+        "romaji": "nigiyaka",
+        "part_of_speech": "な形容詞",
+        "meaning": "熱鬧的",
+        "example_ja": "夜市はにぎやかです。",
+        "example_zh": "夜市很熱鬧。"
+      },
+      {
+        "kanji": "有名",
+        "kana": "ゆうめい",
+        "romaji": "yuumei",
+        "part_of_speech": "な形容詞",
+        "meaning": "有名的",
+        "example_ja": "富士山は有名な山です。",
+        "example_zh": "富士山是有名的山。"
+      },
+      {
+        "kanji": "親切",
+        "kana": "しんせつ",
+        "romaji": "shinsetsu",
+        "part_of_speech": "な形容詞",
+        "meaning": "親切的",
+        "example_ja": "先生はとても親切です。",
+        "example_zh": "老師非常親切。"
+      },
+      {
+        "kanji": "元気",
+        "kana": "げんき",
+        "romaji": "genki",
+        "part_of_speech": "な形容詞",
+        "meaning": "有精神的、健康的",
+        "example_ja": "お元気ですか。",
+        "example_zh": "你好嗎？"
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "part_of_speech": "な形容詞",
+        "meaning": "方便的",
+        "example_ja": "地下鉄は便利です。",
+        "example_zh": "地下鐵很方便。"
+      },
+      {
+        "kanji": "暇",
+        "kana": "ひま",
+        "romaji": "hima",
+        "part_of_speech": "な形容詞",
+        "meaning": "空閒的",
+        "example_ja": "明日は暇です。",
+        "example_zh": "明天有空。"
+      },
+      {
+        "kanji": "好き",
+        "kana": "すき",
+        "romaji": "suki",
+        "part_of_speech": "な形容詞",
+        "meaning": "喜歡",
+        "example_ja": "私は音楽が好きです。",
+        "example_zh": "我喜歡音樂。"
+      },
+      {
+        "kanji": "嫌い",
+        "kana": "きらい",
+        "romaji": "kirai",
+        "part_of_speech": "な形容詞",
+        "meaning": "討厭",
+        "example_ja": "野菜が嫌いです。",
+        "example_zh": "討厭蔬菜。"
+      },
+      {
+        "kanji": "上手",
+        "kana": "じょうず",
+        "romaji": "jouzu",
+        "part_of_speech": "な形容詞",
+        "meaning": "擅長的",
+        "example_ja": "田中さんは料理が上手です。",
+        "example_zh": "田中先生很會做菜。"
+      },
+      {
+        "kanji": "下手",
+        "kana": "へた",
+        "romaji": "heta",
+        "part_of_speech": "な形容詞",
+        "meaning": "不擅長的",
+        "example_ja": "私は歌が下手です。",
+        "example_zh": "我不擅長唱歌。"
+      },
+      {
+        "kanji": "わかります",
+        "kana": "わかります",
+        "romaji": "wakarimasu",
+        "part_of_speech": "動詞",
+        "meaning": "懂、明白",
+        "example_ja": "日本語がわかります。",
+        "example_zh": "懂日文。"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "part_of_speech": "名詞",
+        "meaning": "料理、菜",
+        "example_ja": "日本料理が好きです。",
+        "example_zh": "喜歡日本料理。"
+      },
+      {
+        "kanji": "どんな",
+        "kana": "どんな",
+        "romaji": "donna",
+        "part_of_speech": "連體詞",
+        "meaning": "什麼樣的",
+        "example_ja": "どんな町ですか。",
+        "example_zh": "是什麼樣的城鎮？"
+      },
+      {
+        "kanji": "町",
+        "kana": "まち",
+        "romaji": "machi",
+        "part_of_speech": "名詞",
+        "meaning": "城鎮",
+        "example_ja": "京都はきれいな町です。",
+        "example_zh": "京都是漂亮的城鎮。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "な形容詞的肯定、否定與過去",
+        "formula": "[な形容詞] です／ではありません／でした／ではありませんでした。",
+        "explanation": "な形容詞的活用方式與名詞相同：肯定加「です」，否定加「ではありません」，過去加「でした」，過去否定加「ではありませんでした」。",
+        "alert": "「きれい」「嫌い」「有名」雖以「い」結尾，但都是な形容詞，否定為「きれいではありません」，不可說「きれくないです」。",
+        "examples": [
+          {
+            "ja": "この町は静かです。",
+            "zh": "這個城鎮很安靜。"
+          },
+          {
+            "ja": "先週は暇ではありませんでした。",
+            "zh": "上週沒有空。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "この町は静か（　）。",
+            "options": [
+              "です",
+              "いです",
+              "だです",
+              "くです"
+            ],
+            "correct_answer": "です",
+            "explanation": "な形容詞的活用與名詞相同，肯定直接加「です」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「きれい」的否定形是？",
+            "options": [
+              "きれいではありません",
+              "きれくないです",
+              "きれいくないです",
+              "きれいじゃない形"
+            ],
+            "correct_answer": "きれいではありません",
+            "explanation": "「きれい」是な形容詞，否定與名詞相同用「ではありません」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "先週は暇（　）。─「上週沒有空」",
+            "options": [
+              "ではありませんでした",
+              "くなかったです",
+              "じゃないでした",
+              "でした"
+            ],
+            "correct_answer": "ではありませんでした",
+            "explanation": "な形容詞過去否定：「ではありませんでした」。"
+          }
+        ]
+      },
+      {
+        "point_title": "な形容詞修飾名詞與「どんな」",
+        "formula": "[な形容詞] な ＋ [名詞] ／ どんな ＋ [名詞]",
+        "explanation": "な形容詞修飾名詞時，必須在形容詞與名詞之間加「な」。「どんな＋名詞」用於詢問性質或種類。",
+        "alert": "い形容詞修飾名詞不加「な」（如「高い山」），な形容詞才加（如「有名な山」）。",
+        "examples": [
+          {
+            "ja": "京都はきれいな町です。",
+            "zh": "京都是漂亮的城鎮。"
+          },
+          {
+            "ja": "どんな人ですか。",
+            "zh": "是什麼樣的人？"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "京都は（　）町です。",
+            "options": [
+              "きれいな",
+              "きれい",
+              "きれいの",
+              "きれいだ"
+            ],
+            "correct_answer": "きれいな",
+            "explanation": "な形容詞修飾名詞時，中間必須加「な」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "い形容詞修飾名詞的方式是？",
+            "options": [
+              "直接接名詞（高い山）",
+              "加「な」（高いな山）",
+              "加「の」（高いの山）",
+              "加「に」（高いに山）"
+            ],
+            "correct_answer": "直接接名詞（高い山）",
+            "explanation": "い形容詞直接修飾名詞；只有な形容詞才加「な」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "（　）人ですか。─ 問「什麼樣的人」",
+            "options": [
+              "どんな",
+              "どの",
+              "どれ",
+              "どう"
+            ],
+            "correct_answer": "どんな",
+            "explanation": "詢問性質或種類用「どんな＋名詞」。"
+          }
+        ]
+      },
+      {
+        "point_title": "好惡與能力「～が好きです／上手です／わかります」",
+        "formula": "[名詞] が 好きです／嫌いです／上手です／下手です／わかります。",
+        "explanation": "表示喜好、擅長、理解的對象時，對象用助詞「が」而非「を」。可搭配「～から」說明理由。",
+        "alert": "「好きです」的對象用「が」，「音楽を好きです」是錯誤的。",
+        "examples": [
+          {
+            "ja": "私は日本料理が好きです。",
+            "zh": "我喜歡日本料理。"
+          },
+          {
+            "ja": "山田さんは英語がわかります。",
+            "zh": "山田先生懂英文。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "私は日本料理（　）好きです。",
+            "options": [
+              "が",
+              "を",
+              "に",
+              "は"
+            ],
+            "correct_answer": "が",
+            "explanation": "「好きです」的對象用「が」，不用「を」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "山田さんは英語（　）わかります。",
+            "options": [
+              "が",
+              "を",
+              "に",
+              "で"
+            ],
+            "correct_answer": "が",
+            "explanation": "「わかります」的對象也用「が」標示。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「音楽を好きです」這個說法？",
+            "options": [
+              "錯誤，應用「が」",
+              "正確",
+              "較禮貌",
+              "口語常用"
+            ],
+            "correct_answer": "錯誤，應用「が」",
+            "explanation": "好惡的對象用「が」：「音楽が好きです」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "京都は（ ）町です。",
+        "options": [
+          "きれいな",
+          "きれい",
+          "きれいの",
+          "きれいい"
+        ],
+        "correct_answer": "きれいな",
+        "explanation": "「きれい」是な形容詞，修飾名詞時須加「な」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "私は日本料理（ ）好きです。",
+        "options": [
+          "が",
+          "を",
+          "に",
+          "で"
+        ],
+        "correct_answer": "が",
+        "explanation": "表示喜好的對象時，助詞須用「が」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "先週は（ ）。",
+        "options": [
+          "暇でした",
+          "暇かったです",
+          "暇だったです",
+          "暇いでした"
+        ],
+        "correct_answer": "暇でした",
+        "explanation": "「暇」是な形容詞，過去式與名詞相同，用「～でした」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 11,
+    "lesson_title": "數量詞與比較句型",
+    "vocabulary": [
+      {
+        "kanji": "一つ",
+        "kana": "ひとつ",
+        "romaji": "hitotsu",
+        "part_of_speech": "數量詞",
+        "meaning": "一個",
+        "example_ja": "りんごを一つください。",
+        "example_zh": "請給我一個蘋果。"
+      },
+      {
+        "kanji": "二つ",
+        "kana": "ふたつ",
+        "romaji": "futatsu",
+        "part_of_speech": "數量詞",
+        "meaning": "兩個",
+        "example_ja": "みかんを二つ食べました。",
+        "example_zh": "吃了兩個橘子。"
+      },
+      {
+        "kanji": "三つ",
+        "kana": "みっつ",
+        "romaji": "mittsu",
+        "part_of_speech": "數量詞",
+        "meaning": "三個",
+        "example_ja": "卵を三つ買いました。",
+        "example_zh": "買了三個蛋。"
+      },
+      {
+        "kanji": "いくつ",
+        "kana": "いくつ",
+        "romaji": "ikutsu",
+        "part_of_speech": "疑問詞",
+        "meaning": "幾個",
+        "example_ja": "りんごはいくつありますか。",
+        "example_zh": "有幾個蘋果？"
+      },
+      {
+        "kanji": "一人",
+        "kana": "ひとり",
+        "romaji": "hitori",
+        "part_of_speech": "數量詞",
+        "meaning": "一個人",
+        "example_ja": "教室に学生が一人います。",
+        "example_zh": "教室裡有一位學生。"
+      },
+      {
+        "kanji": "二人",
+        "kana": "ふたり",
+        "romaji": "futari",
+        "part_of_speech": "數量詞",
+        "meaning": "兩個人",
+        "example_ja": "兄弟が二人います。",
+        "example_zh": "有兩個兄弟姊妹。"
+      },
+      {
+        "kanji": "～枚",
+        "kana": "～まい",
+        "romaji": "-mai",
+        "part_of_speech": "數量詞",
+        "meaning": "～張、～件（薄平物）",
+        "example_ja": "切手を三枚ください。",
+        "example_zh": "請給我三張郵票。"
+      },
+      {
+        "kanji": "～台",
+        "kana": "～だい",
+        "romaji": "-dai",
+        "part_of_speech": "數量詞",
+        "meaning": "～台、～輛（機器車輛）",
+        "example_ja": "車が二台あります。",
+        "example_zh": "有兩輛車。"
+      },
+      {
+        "kanji": "～本",
+        "kana": "～ほん／～ぼん／～ぽん",
+        "romaji": "-hon / -bon / -pon",
+        "part_of_speech": "數量詞",
+        "meaning": "～支、～瓶（細長物）",
+        "example_ja": "ビールを二本飲みました。",
+        "example_zh": "喝了兩瓶啤酒。"
+      },
+      {
+        "kanji": "～冊",
+        "kana": "～さつ",
+        "romaji": "-satsu",
+        "part_of_speech": "數量詞",
+        "meaning": "～本、～冊（書籍）",
+        "example_ja": "本を五冊借りました。",
+        "example_zh": "借了五本書。"
+      },
+      {
+        "kanji": "いくら",
+        "kana": "いくら",
+        "romaji": "ikura",
+        "part_of_speech": "疑問詞",
+        "meaning": "多少錢",
+        "example_ja": "これはいくらですか。",
+        "example_zh": "這個多少錢？"
+      },
+      {
+        "kanji": "より",
+        "kana": "より",
+        "romaji": "yori",
+        "part_of_speech": "助詞",
+        "meaning": "比～",
+        "example_ja": "東京は大阪より大きいです。",
+        "example_zh": "東京比大阪大。"
+      },
+      {
+        "kanji": "一番",
+        "kana": "いちばん",
+        "romaji": "ichiban",
+        "part_of_speech": "副詞",
+        "meaning": "最",
+        "example_ja": "夏が一番好きです。",
+        "example_zh": "最喜歡夏天。"
+      },
+      {
+        "kanji": "どちら",
+        "kana": "どちら",
+        "romaji": "dochira",
+        "part_of_speech": "疑問詞",
+        "meaning": "哪一個（二選一）",
+        "example_ja": "コーヒーと紅茶とどちらが好きですか。",
+        "example_zh": "咖啡和紅茶你喜歡哪一個？"
+      },
+      {
+        "kanji": "全部で",
+        "kana": "ぜんぶで",
+        "romaji": "zenbu de",
+        "part_of_speech": "副詞",
+        "meaning": "總共",
+        "example_ja": "全部で千円です。",
+        "example_zh": "總共一千日圓。"
+      },
+      {
+        "kanji": "ぐらい",
+        "kana": "ぐらい",
+        "romaji": "gurai",
+        "part_of_speech": "助詞",
+        "meaning": "大約（數量）",
+        "example_ja": "一時間ぐらい勉強します。",
+        "example_zh": "念大約一小時的書。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "數量詞的用法",
+        "formula": "[名詞] を [數量詞] [動詞]。／ [場所] に [名詞] が [數量詞] あります／います。",
+        "explanation": "數量詞放在動詞前面，直接修飾動詞，後面不加任何助詞。人數用「～人」，一般物品用「一つ、二つ」，其他依形狀使用「枚、台、本、冊」等。",
+        "alert": "數量詞後面不加助詞，「りんごを三つを買います」是錯誤的。「一人（ひとり）」「二人（ふたり）」為特殊讀音。",
+        "examples": [
+          {
+            "ja": "りんごを三つ買いました。",
+            "zh": "買了三個蘋果。"
+          },
+          {
+            "ja": "教室に学生が五人います。",
+            "zh": "教室裡有五位學生。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "りんごを三つ買いました──數量詞「三つ」後面？",
+            "options": [
+              "不加任何助詞",
+              "要加「を」",
+              "要加「が」",
+              "要加「は」"
+            ],
+            "correct_answer": "不加任何助詞",
+            "explanation": "數量詞直接放在動詞前，後面不加助詞。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "教室に学生が五（　）います。",
+            "options": [
+              "人",
+              "つ",
+              "枚",
+              "台"
+            ],
+            "correct_answer": "人",
+            "explanation": "數人用量詞「～人（にん）」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「一人」的正確讀音是？",
+            "options": [
+              "ひとり",
+              "いちにん",
+              "いちじん",
+              "ひとにん"
+            ],
+            "correct_answer": "ひとり",
+            "explanation": "「一人（ひとり）」「二人（ふたり）」是特殊讀音。"
+          }
+        ]
+      },
+      {
+        "point_title": "比較句「AはBより～です／AとBとどちらが～ですか」",
+        "formula": "[A] は [B] より [形容詞] です。／ [A] と [B] と どちらが [形容詞] ですか。",
+        "explanation": "「より」表示比較的基準，「AはBより～」即「A比B～」。詢問兩者比較時用「どちら」，回答用「～のほうが～です」。",
+        "alert": "二選一時用「どちら」，不用「何」或「どれ」。",
+        "examples": [
+          {
+            "ja": "東京は台北より大きいです。",
+            "zh": "東京比台北大。"
+          },
+          {
+            "ja": "コーヒーと紅茶とどちらが好きですか。",
+            "zh": "咖啡和紅茶你喜歡哪一個？"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "東京は台北（　）大きいです。─「比台北大」",
+            "options": [
+              "より",
+              "から",
+              "まで",
+              "ほど"
+            ],
+            "correct_answer": "より",
+            "explanation": "「より」表示比較的基準：A比B～。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "コーヒーと紅茶と（　）が好きですか。",
+            "options": [
+              "どちら",
+              "何",
+              "どれ",
+              "誰"
+            ],
+            "correct_answer": "どちら",
+            "explanation": "二選一的疑問用「どちら」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "回答「コーヒーと紅茶とどちらが好きですか」用哪句？",
+            "options": [
+              "コーヒーのほうが好きです。",
+              "はい、好きです。",
+              "コーヒーは一番好きです。",
+              "いいえ、どちらです。"
+            ],
+            "correct_answer": "コーヒーのほうが好きです。",
+            "explanation": "二者比較的回答用「～のほうが～です」。"
+          }
+        ]
+      },
+      {
+        "point_title": "最高級「～で［疑問詞］が一番～ですか」",
+        "formula": "[範圍] で [疑問詞] が 一番 [形容詞] ですか。／ [名詞] が 一番 [形容詞] です。",
+        "explanation": "在三者以上的範圍中選出最～者時，範圍用「で」，疑問詞依對象選擇「何、誰、どこ、いつ」，再加「一番」。",
+        "alert": "三者以上用「何・どれ・どこ」等疑問詞，二選一才用「どちら」。",
+        "examples": [
+          {
+            "ja": "スポーツで何が一番好きですか。",
+            "zh": "運動當中最喜歡什麼？"
+          },
+          {
+            "ja": "日本で富士山が一番高いです。",
+            "zh": "在日本富士山最高。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "スポーツ（　）何が一番好きですか。",
+            "options": [
+              "で",
+              "に",
+              "は",
+              "を"
+            ],
+            "correct_answer": "で",
+            "explanation": "最高級句型中，範圍用助詞「で」標示。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "日本で富士山が（　）高いです。",
+            "options": [
+              "一番",
+              "とても",
+              "もっと",
+              "より"
+            ],
+            "correct_answer": "一番",
+            "explanation": "「一番」表示「最」，用於三者以上的最高級。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "三者以上的範圍中詢問時，用哪類疑問詞？",
+            "options": [
+              "何・どれ・どこ等",
+              "どちら",
+              "どっちか",
+              "はい・いいえ"
+            ],
+            "correct_answer": "何・どれ・どこ等",
+            "explanation": "三者以上用「何・どれ・どこ・誰」等；二選一才用「どちら」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "りんごを（ ）買いました。",
+        "options": [
+          "三つ",
+          "三つを",
+          "三枚",
+          "三本"
+        ],
+        "correct_answer": "三つ",
+        "explanation": "蘋果用一般數量詞「～つ」，且數量詞後不加助詞，故選「三つ」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "東京は台北（ ）大きいです。",
+        "options": [
+          "より",
+          "ほど",
+          "で",
+          "が"
+        ],
+        "correct_answer": "より",
+        "explanation": "比較句「AはBより～です」中，比較基準用「より」。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "スポーツ（ ）何が一番好きですか。",
+        "options": [
+          "で",
+          "に",
+          "は",
+          "を"
+        ],
+        "correct_answer": "で",
+        "explanation": "最高級句型中，表示選擇範圍的助詞是「で」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 12,
+    "lesson_title": "動詞分類與ます形",
+    "vocabulary": [
+      {
+        "kanji": "話します",
+        "kana": "はなします",
+        "romaji": "hanashimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "說、講",
+        "example_ja": "先生と日本語で話します。",
+        "example_zh": "和老師用日文交談。"
+      },
+      {
+        "kanji": "待ちます",
+        "kana": "まちます",
+        "romaji": "machimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "等待",
+        "example_ja": "駅で友達を待ちます。",
+        "example_zh": "在車站等朋友。"
+      },
+      {
+        "kanji": "泳ぎます",
+        "kana": "およぎます",
+        "romaji": "oyogimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "游泳",
+        "example_ja": "夏はプールで泳ぎます。",
+        "example_zh": "夏天在游泳池游泳。"
+      },
+      {
+        "kanji": "遊びます",
+        "kana": "あそびます",
+        "romaji": "asobimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "玩",
+        "example_ja": "公園で子供が遊びます。",
+        "example_zh": "小孩在公園玩。"
+      },
+      {
+        "kanji": "立ちます",
+        "kana": "たちます",
+        "romaji": "tachimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "站立",
+        "example_ja": "学生が立ちます。",
+        "example_zh": "學生站起來。"
+      },
+      {
+        "kanji": "座ります",
+        "kana": "すわります",
+        "romaji": "suwarimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "坐",
+        "example_ja": "いすに座ります。",
+        "example_zh": "坐在椅子上。"
+      },
+      {
+        "kanji": "入ります",
+        "kana": "はいります",
+        "romaji": "hairimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "進入",
+        "example_ja": "教室に入ります。",
+        "example_zh": "進教室。"
+      },
+      {
+        "kanji": "出ます",
+        "kana": "でます",
+        "romaji": "demasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "出去、離開",
+        "example_ja": "八時にうちを出ます。",
+        "example_zh": "八點出門。"
+      },
+      {
+        "kanji": "開けます",
+        "kana": "あけます",
+        "romaji": "akemasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "打開",
+        "example_ja": "窓を開けます。",
+        "example_zh": "打開窗戶。"
+      },
+      {
+        "kanji": "閉めます",
+        "kana": "しめます",
+        "romaji": "shimemasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "關閉",
+        "example_ja": "ドアを閉めます。",
+        "example_zh": "關門。"
+      },
+      {
+        "kanji": "見せます",
+        "kana": "みせます",
+        "romaji": "misemasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "出示、給人看",
+        "example_ja": "写真を見せます。",
+        "example_zh": "給人看照片。"
+      },
+      {
+        "kanji": "着ます",
+        "kana": "きます",
+        "romaji": "kimasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "穿（上衣）",
+        "example_ja": "コートを着ます。",
+        "example_zh": "穿外套。"
+      },
+      {
+        "kanji": "歌います",
+        "kana": "うたいます",
+        "romaji": "utaimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "唱歌",
+        "example_ja": "カラオケで歌を歌います。",
+        "example_zh": "在卡拉OK唱歌。"
+      },
+      {
+        "kanji": "来ます",
+        "kana": "きます",
+        "romaji": "kimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "來",
+        "example_ja": "明日、田中さんが来ます。",
+        "example_zh": "明天田中先生會來。"
+      },
+      {
+        "kanji": "します",
+        "kana": "します",
+        "romaji": "shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "做",
+        "example_ja": "毎日運動をします。",
+        "example_zh": "每天做運動。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "動詞的三大分類",
+        "formula": "I類（五段動詞）／II類（一段動詞）／III類（不規則動詞）",
+        "explanation": "I類動詞：ます形中「ます」前一個音為い段音（き、ぎ、し、ち、に、び、み、り、い），如「書きます、読みます、待ちます」。II類動詞：「ます」前一個音為え段音（け、せ、て、ね、べ、め、れ、え），如「食べます、開けます、寝ます」。III類動詞：只有「します（含～します）」與「来ます」兩個。",
+        "alert": "分類是後續學習て形、ない形、辭書形、た形的基礎，必須先熟記每個動詞的類別。",
+        "examples": [
+          {
+            "ja": "書きます（I類）、話します（I類）、待ちます（I類）",
+            "zh": "寫（I類）、說（I類）、等（I類）"
+          },
+          {
+            "ja": "食べます（II類）、開けます（II類）、勉強します（III類）",
+            "zh": "吃（II類）、打開（II類）、學習（III類）"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「書きます」屬於哪一類動詞？",
+            "options": [
+              "I類",
+              "II類",
+              "III類",
+              "な形容詞"
+            ],
+            "correct_answer": "I類",
+            "explanation": "「ます」前是い段音「き」，屬於I類（五段動詞）。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「食べます」屬於哪一類動詞？",
+            "options": [
+              "II類",
+              "I類",
+              "III類",
+              "例外動詞"
+            ],
+            "correct_answer": "II類",
+            "explanation": "「ます」前是え段音「べ」，屬於II類（一段動詞）。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "III類（不規則動詞）有哪些？",
+            "options": [
+              "します與来ます",
+              "食べます與見ます",
+              "行きます與書きます",
+              "います與あります"
+            ],
+            "correct_answer": "します與来ます",
+            "explanation": "III類只有「します（含～します）」與「来ます」兩個。"
+          }
+        ]
+      },
+      {
+        "point_title": "II類動詞的例外",
+        "formula": "「ます」前為い段音，但屬於II類的動詞",
+        "explanation": "少數動詞「ます」前雖是い段音，卻是II類動詞。N5 常見的有：見ます、います、起きます、着ます、浴びます、できます、降ります（下車）。這些動詞必須個別記憶。",
+        "alert": "「見ます」「起きます」「います」是最常考的例外，變化時要按II類規則（直接去「ます」）。",
+        "examples": [
+          {
+            "ja": "見ます（II類）、起きます（II類）、います（II類）",
+            "zh": "看（II類）、起床（II類）、在／有（II類）"
+          },
+          {
+            "ja": "着ます（II類）、浴びます（II類）",
+            "zh": "穿（II類）、淋浴（II類）"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「見ます」屬於哪一類動詞？",
+            "options": [
+              "II類（例外）",
+              "I類",
+              "III類",
+              "形容詞"
+            ],
+            "correct_answer": "II類（例外）",
+            "explanation": "「見ます」的「み」雖是い段音，但屬II類例外動詞，須個別記憶。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "下列何者是「ます」前為い段音、卻屬II類的例外動詞？",
+            "options": [
+              "起きます",
+              "書きます",
+              "読みます",
+              "話します"
+            ],
+            "correct_answer": "起きます",
+            "explanation": "「起きます」是II類例外；其餘三個都是規則的I類。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「います」屬於哪一類動詞？",
+            "options": [
+              "II類（例外）",
+              "I類",
+              "III類",
+              "助動詞"
+            ],
+            "correct_answer": "II類（例外）",
+            "explanation": "「います」是II類例外動詞，變化時直接去「ます」。"
+          }
+        ]
+      },
+      {
+        "point_title": "ます形的四種時態",
+        "formula": "～ます（現在／未來肯定）／～ません（現在／未來否定）／～ました（過去肯定）／～ませんでした（過去否定）",
+        "explanation": "日文動詞禮貌形只分「非過去」與「過去」，各有肯定與否定。現在的習慣與未來的動作都用「～ます」。",
+        "alert": "過去否定是「～ませんでした」，不可寫成「～ませんかった」。",
+        "examples": [
+          {
+            "ja": "毎朝新聞を読みます。",
+            "zh": "每天早上看報紙。"
+          },
+          {
+            "ja": "昨日は日本語を勉強しませんでした。",
+            "zh": "昨天沒有念日文。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "動詞的過去否定形是？",
+            "options": [
+              "～ませんでした",
+              "～ませんかった",
+              "～ないでした",
+              "～ましたせん"
+            ],
+            "correct_answer": "～ませんでした",
+            "explanation": "過去否定固定為「～ませんでした」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "昨日は日本語を勉強（　）。─「昨天沒念」",
+            "options": [
+              "しませんでした",
+              "しません",
+              "しました",
+              "します"
+            ],
+            "correct_answer": "しませんでした",
+            "explanation": "過去的否定用「～ませんでした」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "明天要做的動作用哪個形？",
+            "options": [
+              "～ます",
+              "～ました",
+              "～ませんでした",
+              "～ています"
+            ],
+            "correct_answer": "～ます",
+            "explanation": "日文動詞只分「非過去」與「過去」，未來的動作用「～ます」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "「読みます」屬於哪一類動詞？",
+        "options": [
+          "I類（五段動詞）",
+          "II類（一段動詞）",
+          "III類（不規則動詞）",
+          "い形容詞"
+        ],
+        "correct_answer": "I類（五段動詞）",
+        "explanation": "「読みます」中「ます」前為い段音「み」，屬於I類動詞。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "「起きます」屬於哪一類動詞？",
+        "options": [
+          "II類（一段動詞）",
+          "I類（五段動詞）",
+          "III類（不規則動詞）",
+          "な形容詞"
+        ],
+        "correct_answer": "II類（一段動詞）",
+        "explanation": "「起きます」的「ます」前雖為い段音「き」，但屬於II類動詞的例外，須特別記憶。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "昨日は日本語を（ ）。",
+        "options": [
+          "勉強しませんでした",
+          "勉強しません",
+          "勉強しました か",
+          "勉強しませんかった"
+        ],
+        "correct_answer": "勉強しませんでした",
+        "explanation": "「昨日」為過去，過去否定為「～ませんでした」。「～ませんかった」是錯誤形式。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 13,
+    "lesson_title": "動詞て形",
+    "vocabulary": [
+      {
+        "kanji": "急ぎます",
+        "kana": "いそぎます",
+        "romaji": "isogimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "趕、急",
+        "example_ja": "時間がありませんから、急いでください。",
+        "example_zh": "因為沒時間了，請快一點。"
+      },
+      {
+        "kanji": "呼びます",
+        "kana": "よびます",
+        "romaji": "yobimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "叫、呼喚",
+        "example_ja": "タクシーを呼んでください。",
+        "example_zh": "請叫計程車。"
+      },
+      {
+        "kanji": "手伝います",
+        "kana": "てつだいます",
+        "romaji": "tetsudaimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "幫忙",
+        "example_ja": "ちょっと手伝ってください。",
+        "example_zh": "請幫我一下。"
+      },
+      {
+        "kanji": "持ちます",
+        "kana": "もちます",
+        "romaji": "mochimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "拿、持有",
+        "example_ja": "かばんを持ってください。",
+        "example_zh": "請拿包包。"
+      },
+      {
+        "kanji": "消します",
+        "kana": "けします",
+        "romaji": "keshimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "關掉、擦掉",
+        "example_ja": "電気を消してください。",
+        "example_zh": "請關燈。"
+      },
+      {
+        "kanji": "使います",
+        "kana": "つかいます",
+        "romaji": "tsukaimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "使用",
+        "example_ja": "この辞書を使ってください。",
+        "example_zh": "請使用這本字典。"
+      },
+      {
+        "kanji": "住みます",
+        "kana": "すみます",
+        "romaji": "sumimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "住",
+        "example_ja": "台北に住んでいます。",
+        "example_zh": "住在台北。"
+      },
+      {
+        "kanji": "撮ります",
+        "kana": "とります",
+        "romaji": "torimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "拍（照）",
+        "example_ja": "写真を撮ってください。",
+        "example_zh": "請拍照。"
+      },
+      {
+        "kanji": "降ります",
+        "kana": "ふります",
+        "romaji": "furimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "下（雨、雪）",
+        "example_ja": "今、雨が降っています。",
+        "example_zh": "現在正在下雨。"
+      },
+      {
+        "kanji": "結婚します",
+        "kana": "けっこんします",
+        "romaji": "kekkon shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "結婚",
+        "example_ja": "姉は結婚しています。",
+        "example_zh": "姊姊已經結婚了。"
+      },
+      {
+        "kanji": "ちょっと",
+        "kana": "ちょっと",
+        "romaji": "chotto",
+        "part_of_speech": "副詞",
+        "meaning": "稍微、一下",
+        "example_ja": "ちょっと待ってください。",
+        "example_zh": "請稍等一下。"
+      },
+      {
+        "kanji": "ゆっくり",
+        "kana": "ゆっくり",
+        "romaji": "yukkuri",
+        "part_of_speech": "副詞",
+        "meaning": "慢慢地",
+        "example_ja": "ゆっくり話してください。",
+        "example_zh": "請慢慢說。"
+      },
+      {
+        "kanji": "電気",
+        "kana": "でんき",
+        "romaji": "denki",
+        "part_of_speech": "名詞",
+        "meaning": "電燈、電",
+        "example_ja": "電気をつけてください。",
+        "example_zh": "請開燈。"
+      },
+      {
+        "kanji": "住所",
+        "kana": "じゅうしょ",
+        "romaji": "juusho",
+        "part_of_speech": "名詞",
+        "meaning": "地址",
+        "example_ja": "ここに住所を書いてください。",
+        "example_zh": "請在這裡寫地址。"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "part_of_speech": "名詞",
+        "meaning": "照片",
+        "example_ja": "写真を見せてください。",
+        "example_zh": "請給我看照片。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "て形的變化規則",
+        "formula": "I類：い・ち・り→って／み・び・に→んで／き→いて／ぎ→いで／し→して　II類：去ます＋て　III類：します→して／来ます→来て",
+        "explanation": "て形是連接動詞與其他句型的基本形式。I類動詞依「ます」前一個音節分五組變化；II類動詞直接去掉「ます」加「て」；III類為「して」與「来て（きて）」。",
+        "alert": "「行きます」是特殊例外，て形為「行って」，不是「行いて」。",
+        "examples": [
+          {
+            "ja": "買います→買って、待ちます→待って、帰ります→帰って、飲みます→飲んで、書きます→書いて、急ぎます→急いで、話します→話して",
+            "zh": "I類動詞て形變化範例"
+          },
+          {
+            "ja": "食べます→食べて、見ます→見て、します→して、来ます→来て",
+            "zh": "II類與III類動詞て形變化範例"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「買います」的て形是？",
+            "options": [
+              "買って",
+              "買いて",
+              "買んで",
+              "買て"
+            ],
+            "correct_answer": "買って",
+            "explanation": "I類「い→って」：買います→買って。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「飲みます」的て形是？",
+            "options": [
+              "飲んで",
+              "飲って",
+              "飲みて",
+              "飲いで"
+            ],
+            "correct_answer": "飲んで",
+            "explanation": "I類「み→んで」：飲みます→飲んで。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「行きます」的て形是？",
+            "options": [
+              "行って",
+              "行いて",
+              "行んで",
+              "行きて"
+            ],
+            "correct_answer": "行って",
+            "explanation": "「行きます」是特殊例外，て形為「行って」，不是「行いて」。"
+          }
+        ]
+      },
+      {
+        "point_title": "請求「～てください」",
+        "formula": "[動詞て形] ください。",
+        "explanation": "「～てください」用於請求或指示對方做某事，相當於中文的「請～」。語氣禮貌但帶有指示性。",
+        "alert": "對上司或長輩使用時，可在前面加「すみませんが」以緩和語氣。",
+        "examples": [
+          {
+            "ja": "ちょっと待ってください。",
+            "zh": "請稍等一下。"
+          },
+          {
+            "ja": "ここに名前を書いてください。",
+            "zh": "請在這裡寫名字。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "ちょっと待っ（　）ください。",
+            "options": [
+              "て",
+              "た",
+              "ない",
+              "たり"
+            ],
+            "correct_answer": "て",
+            "explanation": "請求句型「～てください」：て形＋ください。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "ここに名前を（　）ください。",
+            "options": [
+              "書いて",
+              "書きて",
+              "書かて",
+              "書くて"
+            ],
+            "correct_answer": "書いて",
+            "explanation": "「書きます」的て形是「書いて」（き→いて）。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "對上司或長輩請求時，可在句前加什麼緩和語氣？",
+            "options": [
+              "すみませんが",
+              "おい",
+              "ねえ",
+              "あのう禁止"
+            ],
+            "correct_answer": "すみませんが",
+            "explanation": "加「すみませんが」可使「～てください」的指示語氣更委婉。"
+          }
+        ]
+      },
+      {
+        "point_title": "進行與狀態「～ています」",
+        "formula": "[動詞て形] います。",
+        "explanation": "「～ています」有兩種主要用法：一是表示動作正在進行（正在～），如「雨が降っています」；二是表示動作結果持續的狀態，如「結婚しています」「住んでいます」。",
+        "alert": "「住みます」「知ります」「結婚します」表示狀態時幾乎都用「～ています」形，如「台北に住んでいます」。",
+        "examples": [
+          {
+            "ja": "田中さんは今、電話をかけています。",
+            "zh": "田中先生現在正在打電話。"
+          },
+          {
+            "ja": "私は台北に住んでいます。",
+            "zh": "我住在台北。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "雨が（　）います。─「正在下雨」",
+            "options": [
+              "降って",
+              "降りて",
+              "降んで",
+              "降た"
+            ],
+            "correct_answer": "降って",
+            "explanation": "「降ります」的て形是「降って」，「～ています」表示正在進行。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "私は台北に（　）います。─「住在台北」",
+            "options": [
+              "住んで",
+              "住みて",
+              "住って",
+              "住で"
+            ],
+            "correct_answer": "住んで",
+            "explanation": "「住みます」用「住んでいます」表示居住的狀態。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「結婚しています」表示什麼？",
+            "options": [
+              "狀態（已婚）",
+              "正要結婚",
+              "曾經結婚",
+              "想結婚"
+            ],
+            "correct_answer": "狀態（已婚）",
+            "explanation": "「～ています」在此表示動作結果持續的狀態：已婚。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "「待ちます」的て形是？",
+        "options": [
+          "待って",
+          "待ちて",
+          "待んで",
+          "待いて"
+        ],
+        "correct_answer": "待って",
+        "explanation": "「待ちます」為I類動詞，「ます」前為「ち」，變化規則為「ち→って」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "すみません、ちょっと（ ）ください。",
+        "options": [
+          "待って",
+          "待ちます",
+          "待ち",
+          "待ちません"
+        ],
+        "correct_answer": "待って",
+        "explanation": "「～てください」前面須接動詞て形。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "田中さんは今、電話を（ ）。",
+        "options": [
+          "かけています",
+          "かけます",
+          "かけて",
+          "かけました"
+        ],
+        "correct_answer": "かけています",
+        "explanation": "「今」表示現在正在進行的動作，須用「～ています」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 14,
+    "lesson_title": "動詞ない形",
+    "vocabulary": [
+      {
+        "kanji": "吸います",
+        "kana": "すいます",
+        "romaji": "suimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "吸（菸）",
+        "example_ja": "ここでたばこを吸わないでください。",
+        "example_zh": "請不要在這裡抽菸。"
+      },
+      {
+        "kanji": "触ります",
+        "kana": "さわります",
+        "romaji": "sawarimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "觸摸",
+        "example_ja": "触らないでください。",
+        "example_zh": "請不要觸摸。"
+      },
+      {
+        "kanji": "心配します",
+        "kana": "しんぱいします",
+        "romaji": "shinpai shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "擔心",
+        "example_ja": "心配しないでください。",
+        "example_zh": "請不要擔心。"
+      },
+      {
+        "kanji": "忘れます",
+        "kana": "わすれます",
+        "romaji": "wasuremasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "忘記",
+        "example_ja": "傘を忘れないでください。",
+        "example_zh": "請不要忘記傘。"
+      },
+      {
+        "kanji": "出します",
+        "kana": "だします",
+        "romaji": "dashimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "提出、拿出",
+        "example_ja": "レポートを出さなければなりません。",
+        "example_zh": "必須交報告。"
+      },
+      {
+        "kanji": "払います",
+        "kana": "はらいます",
+        "romaji": "haraimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "付款",
+        "example_ja": "お金を払わなければなりません。",
+        "example_zh": "必須付錢。"
+      },
+      {
+        "kanji": "返します",
+        "kana": "かえします",
+        "romaji": "kaeshimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "歸還",
+        "example_ja": "本を返さなければなりません。",
+        "example_zh": "必須還書。"
+      },
+      {
+        "kanji": "脱ぎます",
+        "kana": "ぬぎます",
+        "romaji": "nugimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "脫",
+        "example_ja": "靴を脱がなくてもいいです。",
+        "example_zh": "不脫鞋也可以。"
+      },
+      {
+        "kanji": "薬",
+        "kana": "くすり",
+        "romaji": "kusuri",
+        "part_of_speech": "名詞",
+        "meaning": "藥",
+        "example_ja": "薬を飲まなければなりません。",
+        "example_zh": "必須吃藥。"
+      },
+      {
+        "kanji": "たばこ",
+        "kana": "たばこ",
+        "romaji": "tabako",
+        "part_of_speech": "名詞",
+        "meaning": "香菸",
+        "example_ja": "たばこを吸いません。",
+        "example_zh": "不抽菸。"
+      },
+      {
+        "kanji": "宿題",
+        "kana": "しゅくだい",
+        "romaji": "shukudai",
+        "part_of_speech": "名詞",
+        "meaning": "作業、功課",
+        "example_ja": "宿題をしなければなりません。",
+        "example_zh": "必須做功課。"
+      },
+      {
+        "kanji": "靴",
+        "kana": "くつ",
+        "romaji": "kutsu",
+        "part_of_speech": "名詞",
+        "meaning": "鞋子",
+        "example_ja": "ここで靴を脱いでください。",
+        "example_zh": "請在這裡脫鞋。"
+      },
+      {
+        "kanji": "レポート",
+        "kana": "レポート",
+        "romaji": "repooto",
+        "part_of_speech": "名詞",
+        "meaning": "報告",
+        "example_ja": "金曜日までにレポートを出します。",
+        "example_zh": "在星期五前交報告。"
+      },
+      {
+        "kanji": "大丈夫",
+        "kana": "だいじょうぶ",
+        "romaji": "daijoubu",
+        "part_of_speech": "な形容詞",
+        "meaning": "沒問題、不要緊",
+        "example_ja": "大丈夫です。心配しないでください。",
+        "example_zh": "沒問題，請不要擔心。"
+      },
+      {
+        "kanji": "危ない",
+        "kana": "あぶない",
+        "romaji": "abunai",
+        "part_of_speech": "い形容詞",
+        "meaning": "危險的",
+        "example_ja": "危ないですから、触らないでください。",
+        "example_zh": "因為很危險，請不要觸摸。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "ない形的變化規則",
+        "formula": "I類：い段音→あ段音＋ない（い→わ）　II類：去ます＋ない　III類：します→しない／来ます→来ない",
+        "explanation": "ない形為動詞的否定普通形。I類動詞將「ます」前的い段音改為同行的あ段音再加「ない」；「ます」前為「い」的動詞須改為「わ」，如「買います→買わない」。II類直接去「ます」加「ない」。III類為「しない」與「来ない（こない）」。",
+        "alert": "「あります」的ない形是「ない」，不是「あらない」。「買います」是「買わない」，不是「買あない」。",
+        "examples": [
+          {
+            "ja": "書きます→書かない、飲みます→飲まない、買います→買わない、帰ります→帰らない",
+            "zh": "I類動詞ない形變化範例"
+          },
+          {
+            "ja": "食べます→食べない、見ます→見ない、します→しない、来ます→来ない",
+            "zh": "II類與III類動詞ない形變化範例"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「買います」的ない形是？",
+            "options": [
+              "買わない",
+              "買あない",
+              "買いない",
+              "買らない"
+            ],
+            "correct_answer": "買わない",
+            "explanation": "I類「ます」前為「い」時改為「わ」：買います→買わない。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「あります」的ない形是？",
+            "options": [
+              "ない",
+              "あらない",
+              "ありない",
+              "あるない"
+            ],
+            "correct_answer": "ない",
+            "explanation": "「あります」是特殊例外，ない形就是「ない」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「来ます」的ない形是？",
+            "options": [
+              "来ない（こない）",
+              "来ない（きない）",
+              "来なくて",
+              "来らない"
+            ],
+            "correct_answer": "来ない（こない）",
+            "explanation": "III類「来ます」的ない形讀作「こない」。"
+          }
+        ]
+      },
+      {
+        "point_title": "禁止請求「～ないでください」",
+        "formula": "[動詞ない形] でください。",
+        "explanation": "「～ないでください」用於請求對方不要做某事，相當於「請不要～」。語氣比命令形溫和。",
+        "alert": "「～ないでください」的「で」不可省略，「触らないください」是錯誤的。",
+        "examples": [
+          {
+            "ja": "ここで写真を撮らないでください。",
+            "zh": "請不要在這裡拍照。"
+          },
+          {
+            "ja": "心配しないでください。",
+            "zh": "請不要擔心。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "ここで写真を（　）でください。",
+            "options": [
+              "撮らない",
+              "撮りない",
+              "撮って",
+              "撮らなくて"
+            ],
+            "correct_answer": "撮らない",
+            "explanation": "禁止請求「～ないでください」：ない形＋でください。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "心配（　）でください。─「請不要擔心」",
+            "options": [
+              "しない",
+              "しなくて",
+              "しません",
+              "せず"
+            ],
+            "correct_answer": "しない",
+            "explanation": "「します」的ない形是「しない」：心配しないでください。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「触らないください」這個說法？",
+            "options": [
+              "錯誤，「で」不可省略",
+              "正確",
+              "口語可以",
+              "更客氣"
+            ],
+            "correct_answer": "錯誤，「で」不可省略",
+            "explanation": "正確說法是「触らないでください」，「で」不可省略。"
+          }
+        ]
+      },
+      {
+        "point_title": "義務與免除「～なければなりません／～なくてもいいです」",
+        "formula": "[動詞ない形去ない] なければなりません。／ [動詞ない形去ない] なくてもいいです。",
+        "explanation": "「～なければなりません」表示義務、必要，相當於「必須～」。「～なくてもいいです」表示不必要，相當於「不～也可以」。兩者都接在ない形去掉「ない」之後。",
+        "alert": "「～なければなりません」雖為雙重否定的形式，但語意是肯定的「必須」。",
+        "examples": [
+          {
+            "ja": "毎日薬を飲まなければなりません。",
+            "zh": "每天必須吃藥。"
+          },
+          {
+            "ja": "明日は休みですから、早く起きなくてもいいです。",
+            "zh": "明天放假，所以不必早起。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "毎日薬を飲ま（　）なりません。",
+            "options": [
+              "なければ",
+              "なくても",
+              "ないで",
+              "なかった"
+            ],
+            "correct_answer": "なければ",
+            "explanation": "義務句型：「～なければなりません」（必須～）。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「明天不必早起」的說法是？",
+            "options": [
+              "早く起きなくてもいいです。",
+              "早く起きなければなりません。",
+              "早く起きないでください。",
+              "早く起きません。"
+            ],
+            "correct_answer": "早く起きなくてもいいです。",
+            "explanation": "「～なくてもいいです」表示「不～也可以」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「～なければなりません」的語意是？",
+            "options": [
+              "必須（義務）",
+              "禁止",
+              "不必",
+              "邀請"
+            ],
+            "correct_answer": "必須（義務）",
+            "explanation": "雖是雙重否定的形式，但語意是肯定的「必須」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "「飲みます」的ない形是？",
+        "options": [
+          "飲まない",
+          "飲みない",
+          "飲めない",
+          "飲んない"
+        ],
+        "correct_answer": "飲まない",
+        "explanation": "「飲みます」為I類動詞，「み」改為あ段音「ま」再加「ない」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "ここで写真を（ ）ください。",
+        "options": [
+          "撮らないで",
+          "撮らない",
+          "撮って",
+          "撮りません"
+        ],
+        "correct_answer": "撮らないで",
+        "explanation": "禁止請求句型為「～ないでください」，「で」不可省略。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "明日は休みですから、早く（ ）。",
+        "options": [
+          "起きなくてもいいです",
+          "起きなければなりません",
+          "起きないでください",
+          "起きてください"
+        ],
+        "correct_answer": "起きなくてもいいです",
+        "explanation": "「明天放假」是理由，因此後句應表示「不必早起」，用「～なくてもいいです」。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 15,
+    "lesson_title": "動詞辭書形",
+    "vocabulary": [
+      {
+        "kanji": "書く",
+        "kana": "かく",
+        "romaji": "kaku",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "寫",
+        "example_ja": "漢字を書くことができます。",
+        "example_zh": "會寫漢字。"
+      },
+      {
+        "kanji": "泳ぐ",
+        "kana": "およぐ",
+        "romaji": "oyogu",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "游泳",
+        "example_ja": "私は泳ぐことができません。",
+        "example_zh": "我不會游泳。"
+      },
+      {
+        "kanji": "話す",
+        "kana": "はなす",
+        "romaji": "hanasu",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "說",
+        "example_ja": "日本語を話すことができます。",
+        "example_zh": "會說日文。"
+      },
+      {
+        "kanji": "待つ",
+        "kana": "まつ",
+        "romaji": "matsu",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "等",
+        "example_ja": "ここで待つことができますか。",
+        "example_zh": "可以在這裡等嗎？"
+      },
+      {
+        "kanji": "遊ぶ",
+        "kana": "あそぶ",
+        "romaji": "asobu",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "玩",
+        "example_ja": "遊ぶ前に宿題をします。",
+        "example_zh": "玩之前先做功課。"
+      },
+      {
+        "kanji": "読む",
+        "kana": "よむ",
+        "romaji": "yomu",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "讀",
+        "example_ja": "趣味は本を読むことです。",
+        "example_zh": "興趣是看書。"
+      },
+      {
+        "kanji": "帰る",
+        "kana": "かえる",
+        "romaji": "kaeru",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "回去",
+        "example_ja": "帰る前に電話をします。",
+        "example_zh": "回去前先打電話。"
+      },
+      {
+        "kanji": "買う",
+        "kana": "かう",
+        "romaji": "kau",
+        "part_of_speech": "動詞（I類・辭書形）",
+        "meaning": "買",
+        "example_ja": "買う前によく見ます。",
+        "example_zh": "買之前先仔細看。"
+      },
+      {
+        "kanji": "食べる",
+        "kana": "たべる",
+        "romaji": "taberu",
+        "part_of_speech": "動詞（II類・辭書形）",
+        "meaning": "吃",
+        "example_ja": "食べる前に手を洗います。",
+        "example_zh": "吃之前先洗手。"
+      },
+      {
+        "kanji": "見る",
+        "kana": "みる",
+        "romaji": "miru",
+        "part_of_speech": "動詞（II類・辭書形）",
+        "meaning": "看",
+        "example_ja": "趣味は映画を見ることです。",
+        "example_zh": "興趣是看電影。"
+      },
+      {
+        "kanji": "する",
+        "kana": "する",
+        "romaji": "suru",
+        "part_of_speech": "動詞（III類・辭書形）",
+        "meaning": "做",
+        "example_ja": "スポーツをすることが好きです。",
+        "example_zh": "喜歡做運動。"
+      },
+      {
+        "kanji": "来る",
+        "kana": "くる",
+        "romaji": "kuru",
+        "part_of_speech": "動詞（III類・辭書形）",
+        "meaning": "來",
+        "example_ja": "来る前に連絡してください。",
+        "example_zh": "來之前請先聯絡。"
+      },
+      {
+        "kanji": "趣味",
+        "kana": "しゅみ",
+        "romaji": "shumi",
+        "part_of_speech": "名詞",
+        "meaning": "興趣、嗜好",
+        "example_ja": "趣味は何ですか。",
+        "example_zh": "你的興趣是什麼？"
+      },
+      {
+        "kanji": "運転",
+        "kana": "うんてん",
+        "romaji": "unten",
+        "part_of_speech": "名詞",
+        "meaning": "駕駛",
+        "example_ja": "車の運転ができます。",
+        "example_zh": "會開車。"
+      },
+      {
+        "kanji": "漢字",
+        "kana": "かんじ",
+        "romaji": "kanji",
+        "part_of_speech": "名詞",
+        "meaning": "漢字",
+        "example_ja": "漢字を読むことができます。",
+        "example_zh": "會讀漢字。"
+      },
+      {
+        "kanji": "できます",
+        "kana": "できます",
+        "romaji": "dekimasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "會、能夠",
+        "example_ja": "日本語ができます。",
+        "example_zh": "會日文。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "辭書形的變化規則",
+        "formula": "I類：い段音→う段音　II類：去ます＋る　III類：します→する／来ます→来る",
+        "explanation": "辭書形是字典中收錄的動詞原形，也稱為「原形」或「基本形」。I類動詞將「ます」前的い段音改為同行的う段音；II類去「ます」加「る」；III類為「する」與「来る（くる）」。",
+        "alert": "「来る」讀作「くる」，與ます形「来ます（きます）」讀音不同，須注意。",
+        "examples": [
+          {
+            "ja": "書きます→書く、泳ぎます→泳ぐ、話します→話す、待ちます→待つ、読みます→読む、買います→買う",
+            "zh": "I類動詞辭書形變化範例"
+          },
+          {
+            "ja": "食べます→食べる、見ます→見る、します→する、来ます→来る",
+            "zh": "II類與III類動詞辭書形變化範例"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「書きます」的辭書形是？",
+            "options": [
+              "書く",
+              "書きる",
+              "書け",
+              "書か"
+            ],
+            "correct_answer": "書く",
+            "explanation": "I類：い段音改為う段音，「き→く」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「食べます」的辭書形是？",
+            "options": [
+              "食べる",
+              "食べく",
+              "食ぶ",
+              "食べう"
+            ],
+            "correct_answer": "食べる",
+            "explanation": "II類：去「ます」加「る」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "辭書形「来る」的讀音是？",
+            "options": [
+              "くる",
+              "きる",
+              "こる",
+              "かる"
+            ],
+            "correct_answer": "くる",
+            "explanation": "「来る」讀「くる」，與ます形「来ます（きます）」讀音不同。"
+          }
+        ]
+      },
+      {
+        "point_title": "能力「～ことができます」",
+        "formula": "[動詞辭書形] ことができます。／ [名詞] ができます。",
+        "explanation": "「～ことができます」表示有能力做某事或某事被允許。動詞須先改為辭書形再加「こと」，使其名詞化。若對象為名詞（如日本語、運転），直接用「[名詞]ができます」。",
+        "alert": "「こと」前面必須是辭書形，「話しますことができます」是錯誤的。",
+        "examples": [
+          {
+            "ja": "私は日本語を話すことができます。",
+            "zh": "我會說日文。"
+          },
+          {
+            "ja": "田中さんは車の運転ができます。",
+            "zh": "田中先生會開車。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "私は日本語を（　）ことができます。",
+            "options": [
+              "話す",
+              "話します",
+              "話して",
+              "話した"
+            ],
+            "correct_answer": "話す",
+            "explanation": "「～ことができます」前面必須接辭書形。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "田中さんは車の運転（　）できます。",
+            "options": [
+              "が",
+              "を",
+              "に",
+              "で"
+            ],
+            "correct_answer": "が",
+            "explanation": "對象為名詞時用「[名詞]ができます」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「話しますことができます」這個說法？",
+            "options": [
+              "錯誤，「こと」前須接辭書形",
+              "正確",
+              "更禮貌",
+              "口語常用"
+            ],
+            "correct_answer": "錯誤，「こと」前須接辭書形",
+            "explanation": "正確說法是「話すことができます」。"
+          }
+        ]
+      },
+      {
+        "point_title": "興趣「趣味は～ことです」與「～前に」",
+        "formula": "趣味は [動詞辭書形] ことです。／ [動詞辭書形] 前に [動詞]。",
+        "explanation": "說明興趣時，用辭書形加「こと」將動作名詞化。「～前に」表示「在～之前」，前面接動詞辭書形；若接名詞則為「[名詞]の前に」。",
+        "alert": "「～前に」前面接辭書形，不論主句是現在或過去，都不可改為過去形。",
+        "examples": [
+          {
+            "ja": "趣味は映画を見ることです。",
+            "zh": "我的興趣是看電影。"
+          },
+          {
+            "ja": "寝る前に本を読みます。",
+            "zh": "睡前看書。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "趣味は映画を（　）ことです。",
+            "options": [
+              "見る",
+              "見ます",
+              "見て",
+              "見た"
+            ],
+            "correct_answer": "見る",
+            "explanation": "說明興趣用「辭書形＋ことです」使動作名詞化。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "（　）前に、本を読みます。─「睡前」",
+            "options": [
+              "寝る",
+              "寝た",
+              "寝て",
+              "寝ます"
+            ],
+            "correct_answer": "寝る",
+            "explanation": "「～前に」前面接辭書形，不論主句時態。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "名詞接「前に」的方式是？",
+            "options": [
+              "名詞＋の＋前に",
+              "名詞＋前に",
+              "名詞＋な＋前に",
+              "名詞＋で＋前に"
+            ],
+            "correct_answer": "名詞＋の＋前に",
+            "explanation": "名詞須加「の」：「食事の前に」。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "「泳ぎます」的辭書形是？",
+        "options": [
+          "泳ぐ",
+          "泳ぎる",
+          "泳ぐる",
+          "泳く"
+        ],
+        "correct_answer": "泳ぐ",
+        "explanation": "「泳ぎます」為I類動詞，「ぎ」改為う段音「ぐ」即為辭書形。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "私は漢字を（ ）ことができます。",
+        "options": [
+          "読む",
+          "読みます",
+          "読んで",
+          "読まない"
+        ],
+        "correct_answer": "読む",
+        "explanation": "「～ことができます」前面必須接動詞辭書形。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "寝る（ ）、本を読みます。",
+        "options": [
+          "前に",
+          "後で",
+          "から",
+          "まで"
+        ],
+        "correct_answer": "前に",
+        "explanation": "「寝る」是辭書形，辭書形後面接「前に」表示「睡覺之前」。「後で」須接た形。"
+      }
+    ]
+  },
+  {
+    "lesson_number": 16,
+    "lesson_title": "動詞た形",
+    "vocabulary": [
+      {
+        "kanji": "登ります",
+        "kana": "のぼります",
+        "romaji": "noborimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "登、爬",
+        "example_ja": "富士山に登ったことがあります。",
+        "example_zh": "曾經爬過富士山。"
+      },
+      {
+        "kanji": "乗ります",
+        "kana": "のります",
+        "romaji": "norimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "搭乘",
+        "example_ja": "新幹線に乗ったことがあります。",
+        "example_zh": "曾經搭過新幹線。"
+      },
+      {
+        "kanji": "泊まります",
+        "kana": "とまります",
+        "romaji": "tomarimasu",
+        "part_of_speech": "動詞（I類）",
+        "meaning": "住宿",
+        "example_ja": "旅館に泊まったことがありますか。",
+        "example_zh": "曾經住過日式旅館嗎？"
+      },
+      {
+        "kanji": "掃除します",
+        "kana": "そうじします",
+        "romaji": "souji shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "打掃",
+        "example_ja": "週末は部屋を掃除したり、洗濯したりします。",
+        "example_zh": "週末打掃房間、洗衣服。"
+      },
+      {
+        "kanji": "洗濯します",
+        "kana": "せんたくします",
+        "romaji": "sentaku shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "洗衣服",
+        "example_ja": "毎週洗濯します。",
+        "example_zh": "每週洗衣服。"
+      },
+      {
+        "kanji": "散歩します",
+        "kana": "さんぽします",
+        "romaji": "sanpo shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "散步",
+        "example_ja": "ご飯を食べた後で、散歩します。",
+        "example_zh": "吃完飯後散步。"
+      },
+      {
+        "kanji": "疲れます",
+        "kana": "つかれます",
+        "romaji": "tsukaremasu",
+        "part_of_speech": "動詞（II類）",
+        "meaning": "疲累",
+        "example_ja": "今日はとても疲れました。",
+        "example_zh": "今天非常累。"
+      },
+      {
+        "kanji": "卒業します",
+        "kana": "そつぎょうします",
+        "romaji": "sotsugyou shimasu",
+        "part_of_speech": "動詞（III類）",
+        "meaning": "畢業",
+        "example_ja": "大学を卒業した後で、日本へ行きます。",
+        "example_zh": "大學畢業後去日本。"
+      },
+      {
+        "kanji": "富士山",
+        "kana": "ふじさん",
+        "romaji": "fujisan",
+        "part_of_speech": "名詞",
+        "meaning": "富士山",
+        "example_ja": "富士山は日本で一番高い山です。",
+        "example_zh": "富士山是日本最高的山。"
+      },
+      {
+        "kanji": "温泉",
+        "kana": "おんせん",
+        "romaji": "onsen",
+        "part_of_speech": "名詞",
+        "meaning": "溫泉",
+        "example_ja": "日本の温泉に入ったことがあります。",
+        "example_zh": "曾經泡過日本的溫泉。"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "part_of_speech": "名詞",
+        "meaning": "經驗",
+        "example_ja": "いい経験でした。",
+        "example_zh": "是很好的經驗。"
+      },
+      {
+        "kanji": "一度",
+        "kana": "いちど",
+        "romaji": "ichido",
+        "part_of_speech": "副詞",
+        "meaning": "一次",
+        "example_ja": "一度日本へ行ったことがあります。",
+        "example_zh": "曾去過日本一次。"
+      },
+      {
+        "kanji": "一度も",
+        "kana": "いちども",
+        "romaji": "ichido mo",
+        "part_of_speech": "副詞",
+        "meaning": "一次也（沒有）",
+        "example_ja": "一度も飛行機に乗ったことがありません。",
+        "example_zh": "一次也沒有搭過飛機。"
+      },
+      {
+        "kanji": "週末",
+        "kana": "しゅうまつ",
+        "romaji": "shuumatsu",
+        "part_of_speech": "名詞",
+        "meaning": "週末",
+        "example_ja": "週末は何をしますか。",
+        "example_zh": "週末要做什麼？"
+      },
+      {
+        "kanji": "後で",
+        "kana": "あとで",
+        "romaji": "ato de",
+        "part_of_speech": "副詞",
+        "meaning": "之後",
+        "example_ja": "仕事の後で、飲みに行きます。",
+        "example_zh": "工作之後去喝一杯。"
+      }
+    ],
+    "grammar_points": [
+      {
+        "point_title": "た形的變化規則",
+        "formula": "た形 ＝ て形的「て」→「た」、「で」→「だ」",
+        "explanation": "た形是動詞的過去普通形，變化規則與て形完全相同，只需將「て」改為「た」、「で」改為「だ」。I類：って→った、んで→んだ、いて→いた、いで→いだ、して→した。II類：去ます＋た。III類：した／来た（きた）。",
+        "alert": "「行きます」的た形是「行った」，與て形「行って」同為特殊變化。",
+        "examples": [
+          {
+            "ja": "書きます→書いた、読みます→読んだ、買います→買った、行きます→行った",
+            "zh": "I類動詞た形變化範例"
+          },
+          {
+            "ja": "食べます→食べた、見ます→見た、します→した、来ます→来た",
+            "zh": "II類與III類動詞た形變化範例"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "「読みます」的た形是？",
+            "options": [
+              "読んだ",
+              "読った",
+              "読みた",
+              "読いた"
+            ],
+            "correct_answer": "読んだ",
+            "explanation": "た形與て形規則相同：「読んで」→「読んだ」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "「行きます」的た形是？",
+            "options": [
+              "行った",
+              "行いた",
+              "行んだ",
+              "行きた"
+            ],
+            "correct_answer": "行った",
+            "explanation": "「行きます」是特殊變化，た形為「行った」。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "た形的變化規則與哪個形完全相同？",
+            "options": [
+              "て形",
+              "ない形",
+              "辭書形",
+              "ます形"
+            ],
+            "correct_answer": "て形",
+            "explanation": "た形＝て形的「て→た」「で→だ」，規則完全相同。"
+          }
+        ]
+      },
+      {
+        "point_title": "經驗「～たことがあります」",
+        "formula": "[動詞た形] ことがあります。／ [動詞た形] ことがありません。",
+        "explanation": "「～たことがあります」表示過去曾有過某種經驗，相當於「曾經～過」。否定為「～たことがありません」，可搭配「一度も」加強語氣。",
+        "alert": "此句型表示「經驗」，不同於單純的過去式。「昨日日本へ行ったことがあります」是錯誤的，太近的過去事件只用「～ました」。",
+        "examples": [
+          {
+            "ja": "富士山に登ったことがあります。",
+            "zh": "曾經爬過富士山。"
+          },
+          {
+            "ja": "一度も温泉に入ったことがありません。",
+            "zh": "一次也沒有泡過溫泉。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "富士山に（　）ことがあります。─「曾經爬過」",
+            "options": [
+              "登った",
+              "登る",
+              "登って",
+              "登ります"
+            ],
+            "correct_answer": "登った",
+            "explanation": "經驗句型「～たことがあります」前接た形。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "一度も温泉に入った（　）。─「一次也沒泡過」",
+            "options": [
+              "ことがありません",
+              "ことがあります",
+              "ことでした",
+              "ことです"
+            ],
+            "correct_answer": "ことがありません",
+            "explanation": "否定為「～たことがありません」，「一度も」加強語氣。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「昨日日本へ行ったことがあります」這句話？",
+            "options": [
+              "錯誤，太近的過去用「行きました」",
+              "正確",
+              "更自然",
+              "表示習慣"
+            ],
+            "correct_answer": "錯誤，太近的過去用「行きました」",
+            "explanation": "「～たことがあります」表示經驗，太近的過去事件只用「～ました」。"
+          }
+        ]
+      },
+      {
+        "point_title": "列舉與先後「～たり～たりします／～た後で」",
+        "formula": "[動詞た形] り、[動詞た形] り します。／ [動詞た形] 後で、[動詞]。",
+        "explanation": "「～たり～たりします」用於列舉數個代表性的動作，表示「做～、做～等等」，沒有先後順序。「～た後で」表示「～之後」，前面接た形；若接名詞則為「[名詞]の後で」。",
+        "alert": "「～たり～たり」句尾一定要加「します」，時態由「します」決定（過去為「しました」）。",
+        "examples": [
+          {
+            "ja": "週末は掃除をしたり、洗濯をしたりします。",
+            "zh": "週末打掃、洗衣服。"
+          },
+          {
+            "ja": "ご飯を食べた後で、散歩します。",
+            "zh": "吃完飯後散步。"
+          }
+        ],
+        "quizzes": [
+          {
+            "question_id": 1,
+            "type": "multiple_choice",
+            "question_text": "週末は掃除を（　）、洗濯をしたりします。",
+            "options": [
+              "したり",
+              "して",
+              "した",
+              "します"
+            ],
+            "correct_answer": "したり",
+            "explanation": "列舉句型「～たり～たりします」。"
+          },
+          {
+            "question_id": 2,
+            "type": "multiple_choice",
+            "question_text": "ご飯を食べた（　）、散歩します。─「吃完飯後」",
+            "options": [
+              "後で",
+              "前に",
+              "たり",
+              "から"
+            ],
+            "correct_answer": "後で",
+            "explanation": "「～た後で」表示「～之後」，前面接た形。"
+          },
+          {
+            "question_id": 3,
+            "type": "multiple_choice",
+            "question_text": "「～たり～たり」句尾必須加什麼？",
+            "options": [
+              "します",
+              "です",
+              "ます",
+              "あります"
+            ],
+            "correct_answer": "します",
+            "explanation": "句尾一定要加「します」，時態由它決定。"
+          }
+        ]
+      }
+    ],
+    "quizzes": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "question_text": "「行きます」的た形是？",
+        "options": [
+          "行った",
+          "行きた",
+          "行いた",
+          "行んだ"
+        ],
+        "correct_answer": "行った",
+        "explanation": "「行きます」是特殊變化，て形為「行って」，因此た形為「行った」。"
+      },
+      {
+        "question_id": 2,
+        "type": "multiple_choice",
+        "question_text": "富士山に（ ）ことがありますか。",
+        "options": [
+          "登った",
+          "登る",
+          "登って",
+          "登り"
+        ],
+        "correct_answer": "登った",
+        "explanation": "表示經驗的句型「～たことがあります」前面須接動詞た形。"
+      },
+      {
+        "question_id": 3,
+        "type": "multiple_choice",
+        "question_text": "週末は掃除を（ ）、洗濯を（ ）します。",
+        "options": [
+          "したり／したり",
+          "して／して",
+          "した／した",
+          "する／する"
+        ],
+        "correct_answer": "したり／したり",
+        "explanation": "列舉代表性動作的句型為「～たり～たりします」，前面接た形加「り」。"
+      }
+    ]
+  }
+]
