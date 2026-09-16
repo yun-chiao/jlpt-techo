@@ -493,5 +493,21 @@
   { "kanji": "熟練工", "kana": "じゅくれんこう", "romaji": "jukurenkou", "part_of_speech": "名詞", "meaning": "熟練工人", "example_ja": "熟練工が不足している。", "example_zh": "熟練工人不足。", "category": "職業・身分" },
   { "kanji": "見習い", "kana": "みならい", "romaji": "minarai", "part_of_speech": "名詞", "meaning": "見習", "example_ja": "見習い期間を終える。", "example_zh": "結束見習期間。", "category": "職業・身分" },
   { "kanji": "新人", "kana": "しんじん", "romaji": "shinjin", "part_of_speech": "名詞", "meaning": "新人", "example_ja": "新人を指導する。", "example_zh": "指導新人。", "category": "職業・身分" },
-  { "kanji": "ベテラン", "kana": "ベテラン", "romaji": "beteran", "part_of_speech": "名詞", "meaning": "資深老手", "example_ja": "ベテランの職人に教わる。", "example_zh": "向資深的工匠請教。", "category": "外來語" }
+  { "kanji": "ベテラン", "kana": "ベテラン", "romaji": "beteran", "part_of_speech": "名詞", "meaning": "資深老手", "example_ja": "ベテランの職人に教わる。", "example_zh": "向資深的工匠請教。", "category": "外來語" },
+  { "kanji": "見当たります", "kana": "みあたります", "romaji": "miatarimasu", "part_of_speech": "動詞（I類）", "meaning": "被找到、發現", "example_ja": "落とし物が見当たった。", "example_zh": "找到了遺失物。", "category": "動詞" },
+  { "kanji": "見受けます", "kana": "みうけます", "romaji": "miukemasu", "part_of_speech": "動詞（II類）", "meaning": "看起來、看得出", "example_ja": "元気そうに見受けられる。", "example_zh": "看起來似乎很精神。", "category": "動詞" },
+  { "kanji": "見なします", "kana": "みなします", "romaji": "minashimasu", "part_of_speech": "動詞（I類）", "meaning": "視為", "example_ja": "遅刻は欠席と見なす。", "example_zh": "遲到視為缺席。", "category": "動詞" },
+  { "kanji": "見合わせます", "kana": "みあわせます", "romaji": "miawasemasu", "part_of_speech": "動詞（II類）", "meaning": "暫緩", "example_ja": "旅行を見合わせる。", "example_zh": "暫緩旅行。", "category": "動詞" },
+  { "kanji": "食い違います", "kana": "くいちがいます", "romaji": "kuichigaimasu", "part_of_speech": "動詞（I類）", "meaning": "有出入", "example_ja": "証言が食い違う。", "example_zh": "證詞有出入。", "category": "動詞" },
+  { "kanji": "矛盾します", "kana": "むじゅんします", "romaji": "mujun shimasu", "part_of_speech": "動詞（III類）", "meaning": "矛盾", "example_ja": "話が矛盾している。", "example_zh": "話語矛盾。", "category": "動詞" },
+  { "kanji": "一致します", "kana": "いっちします", "romaji": "icchi shimasu", "part_of_speech": "動詞（III類）", "meaning": "一致", "example_ja": "意見が一致した。", "example_zh": "意見一致了。", "category": "動詞" },
+  { "kanji": "合致します", "kana": "がっちします", "romaji": "gacchi shimasu", "part_of_speech": "動詞（III類）", "meaning": "符合", "example_ja": "条件に合致する。", "example_zh": "符合條件。", "category": "動詞" },
+  { "kanji": "該当します", "kana": "がいとうします", "romaji": "gaitou shimasu", "part_of_speech": "動詞（III類）", "meaning": "符合、屬於", "example_ja": "条件に該当する。", "example_zh": "符合條件。", "category": "動詞" },
+  { "kanji": "相当します", "kana": "そうとうします", "romaji": "soutou shimasu", "part_of_speech": "動詞（III類）", "meaning": "相當於", "example_ja": "十万円に相当する。", "example_zh": "相當於十萬日圓。", "category": "動詞" },
+  { "kanji": "対応します", "kana": "たいおうします", "romaji": "taiou shimasu", "part_of_speech": "動詞（III類）", "meaning": "應對", "example_ja": "クレームに対応する。", "example_zh": "應對客訴。", "category": "動詞" },
+  { "kanji": "臨みます", "kana": "のぞみます", "romaji": "nozomimasu", "part_of_speech": "動詞（I類）", "meaning": "面對", "example_ja": "試験に臨む。", "example_zh": "面對考試。", "category": "動詞" },
+  { "kanji": "挑みます", "kana": "いどみます", "romaji": "idomimasu", "part_of_speech": "動詞（I類）", "meaning": "挑戰", "example_ja": "難問に挑む。", "example_zh": "挑戰難題。", "category": "動詞" },
+  { "kanji": "立ち向かいます", "kana": "たちむかいます", "romaji": "tachimukaimasu", "part_of_speech": "動詞（I類）", "meaning": "面對、迎戰", "example_ja": "困難に立ち向かう。", "example_zh": "面對困難。", "category": "動詞" },
+  { "kanji": "耐えます", "kana": "たえます", "romaji": "taemasu", "part_of_speech": "動詞（II類）", "meaning": "忍耐、承受", "example_ja": "痛みに耐える。", "example_zh": "忍耐疼痛。", "category": "動詞" },
+  { "kanji": "堪えます", "kana": "こらえます", "romaji": "koraemasu", "part_of_speech": "動詞（II類）", "meaning": "忍住", "example_ja": "涙をこらえる。", "example_zh": "忍住眼淚。", "category": "動詞" }
 ]
