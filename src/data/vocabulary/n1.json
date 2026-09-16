@@ -440,5 +440,20 @@
   { "kanji": "急進的", "kana": "きゅうしんてき", "romaji": "kyuushinteki", "part_of_speech": "な形容詞", "meaning": "急進的", "example_ja": "急進的な改革を求める。", "example_zh": "要求急進的改革。", "category": "な形容詞" },
   { "kanji": "漸進的", "kana": "ぜんしんてき", "romaji": "zenshinteki", "part_of_speech": "な形容詞", "meaning": "漸進的", "example_ja": "漸進的な改革を目指す。", "example_zh": "以漸進式的改革為目標。", "category": "な形容詞" },
   { "kanji": "保守的", "kana": "ほしゅてき", "romaji": "hoshuteki", "part_of_speech": "な形容詞", "meaning": "保守的", "example_ja": "保守的な考え方の人だ。", "example_zh": "是想法保守的人。", "category": "な形容詞" },
-  { "kanji": "前衛的", "kana": "ぜんえいてき", "romaji": "zen-eiteki", "part_of_speech": "な形容詞", "meaning": "前衛的", "example_ja": "前衛的なアートを展示する。", "example_zh": "展示前衛的藝術。", "category": "な形容詞" }
+  { "kanji": "前衛的", "kana": "ぜんえいてき", "romaji": "zen-eiteki", "part_of_speech": "な形容詞", "meaning": "前衛的", "example_ja": "前衛的なアートを展示する。", "example_zh": "展示前衛的藝術。", "category": "な形容詞" },
+  { "kanji": "有耶無耶", "kana": "うやむや", "romaji": "uyamuya", "part_of_speech": "な形容詞", "meaning": "含糊不清、不了了之", "example_ja": "問題は有耶無耶のまま終わった。", "example_zh": "問題就這樣含糊不清地不了了之了。", "category": "な形容詞" },
+  { "kanji": "曖昧模糊", "kana": "あいまいもこ", "romaji": "aimai moko", "part_of_speech": "名詞", "meaning": "曖昧模糊", "example_ja": "曖昧模糊とした返答だった。", "example_zh": "是曖昧模糊的回答。", "category": "文語・表現" },
+  { "kanji": "煙に巻きます", "kana": "けむにまきます", "romaji": "kemu ni makimasu", "part_of_speech": "動詞句", "meaning": "使人摸不著頭腦、蒙混", "example_ja": "話をそらして煙に巻いた。", "example_zh": "轉移話題蒙混過去了。", "category": "動詞" },
+  { "kanji": "はぐらかします", "kana": "はぐらかします", "romaji": "hagurakashimasu", "part_of_speech": "動詞（I類）", "meaning": "打岔、迴避（問題）", "example_ja": "質問をはぐらかされた。", "example_zh": "問題被打岔迴避了。", "category": "動詞" },
+  { "kanji": "うやむやにします", "kana": "うやむやにします", "romaji": "uyamuya ni shimasu", "part_of_speech": "動詞句", "meaning": "使含糊不清、蒙混過去", "example_ja": "責任をうやむやにしてはいけない。", "example_zh": "不可以將責任蒙混過去。", "category": "動詞" },
+  { "kanji": "有無を言わせず", "kana": "うむをいわせず", "romaji": "umu o iwasezu", "part_of_speech": "副詞句", "meaning": "不由分說地", "example_ja": "有無を言わせず連れて行かれた。", "example_zh": "不由分說地就被帶走了。", "category": "副詞・書面語" },
+  { "kanji": "問答無用", "kana": "もんどうむよう", "romaji": "mondou muyou", "part_of_speech": "名詞", "meaning": "不容分說", "example_ja": "問答無用とばかりに却下された。", "example_zh": "被以不容分說的方式駁回了。", "category": "文語・表現" },
+  { "kanji": "有無を言わさず", "kana": "うむをいわさず", "romaji": "umu o iwasazu", "part_of_speech": "副詞句", "meaning": "不容分說地", "example_ja": "有無を言わさず決められた。", "example_zh": "不容分說地就被決定了。", "category": "副詞・書面語" },
+  { "kanji": "四の五の言わずに", "kana": "しのごのいわずに", "romaji": "shinogono iwazuni", "part_of_speech": "副詞句", "meaning": "別廢話、二話不說地", "example_ja": "四の五の言わずにやってみろ。", "example_zh": "別廢話，做做看吧。", "category": "副詞・書面語" },
+  { "kanji": "とかく", "kana": "とかく", "romaji": "tokaku", "part_of_speech": "副詞", "meaning": "動不動就、總是", "example_ja": "若い頃はとかく無茶をしがちだ。", "example_zh": "年輕時總是容易亂來。", "category": "副詞・書面語" },
+  { "kanji": "得てして", "kana": "えてして", "romaji": "eteshite", "part_of_speech": "副詞", "meaning": "往往、容易", "example_ja": "うまくいく時ほど、得てして油断しがちだ。", "example_zh": "越是順利的時候，往往越容易掉以輕心。", "category": "副詞・書面語" },
+  { "kanji": "ともすれば", "kana": "ともすれば", "romaji": "tomosureba", "part_of_speech": "副詞", "meaning": "動輒、容易（傾向於）", "example_ja": "ともすれば忘れがちな基本を再確認する。", "example_zh": "重新確認容易被遺忘的基本原則。", "category": "副詞・書面語" },
+  { "kanji": "よもすれば", "kana": "よもすれば", "romaji": "yomosureba", "part_of_speech": "副詞", "meaning": "動輒（古典表現，同ともすれば）", "example_ja": "よもすれば批判の的になりかねない。", "example_zh": "動輒可能成為批評的對象。", "category": "副詞・書面語" },
+  { "kanji": "いやが上にも", "kana": "いやがうえにも", "romaji": "iyagauenimo", "part_of_speech": "副詞", "meaning": "更加、越發", "example_ja": "期待はいやが上にも高まった。", "example_zh": "期待更加高漲了。", "category": "副詞・書面語" },
+  { "kanji": "なおのこと", "kana": "なおのこと", "romaji": "naonokoto", "part_of_speech": "副詞", "meaning": "更加、更是", "example_ja": "反対されると、なおのこと挑戦したくなる。", "example_zh": "越被反對，就越想挑戰。", "category": "副詞・書面語" }
 ]
