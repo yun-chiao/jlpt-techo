@@ -517,5 +517,19 @@
   { "kanji": "規制します", "kana": "きせいします", "romaji": "kisei shimasu", "part_of_speech": "動詞（III類）", "meaning": "規範、限制", "example_ja": "排出量を規制する。", "example_zh": "規範排放量。", "category": "動詞" },
   { "kanji": "緩和します", "kana": "かんわします", "romaji": "kanwa shimasu", "part_of_speech": "動詞（III類）", "meaning": "緩和", "example_ja": "規制を緩和する。", "example_zh": "緩和規範。", "category": "動詞" },
   { "kanji": "強化します", "kana": "きょうかします", "romaji": "kyouka shimasu", "part_of_speech": "動詞（III類）", "meaning": "強化", "example_ja": "セキュリティを強化する。", "example_zh": "強化資安。", "category": "動詞" },
-  { "kanji": "厳格化します", "kana": "げんかくかします", "romaji": "genkakuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "使更加嚴格化", "example_ja": "審査基準を厳格化する。", "example_zh": "使審查標準更加嚴格化。", "category": "動詞" }
+  { "kanji": "厳格化します", "kana": "げんかくかします", "romaji": "genkakuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "使更加嚴格化", "example_ja": "審査基準を厳格化する。", "example_zh": "使審查標準更加嚴格化。", "category": "動詞" },
+  { "kanji": "陳腐", "kana": "ちんぷ", "romaji": "chinpu", "part_of_speech": "な形容詞", "meaning": "陳腐、老套", "example_ja": "陳腐な表現を避ける。", "example_zh": "避免陳腐老套的表現方式。", "category": "な形容詞" },
+  { "kanji": "凡庸", "kana": "ぼんよう", "romaji": "bon-you", "part_of_speech": "な形容詞", "meaning": "平庸", "example_ja": "凡庸な作品だと評された。", "example_zh": "被評為平庸的作品。", "category": "な形容詞" },
+  { "kanji": "月並み", "kana": "つきなみ", "romaji": "tsukinami", "part_of_speech": "な形容詞", "meaning": "老套、平凡無奇", "example_ja": "月並みな感想しか言えなかった。", "example_zh": "只能說出老套的感想。", "category": "な形容詞" },
+  { "kanji": "非凡", "kana": "ひぼん", "romaji": "hibon", "part_of_speech": "な形容詞", "meaning": "非凡", "example_ja": "非凡な才能を発揮した。", "example_zh": "發揮了非凡的才能。", "category": "な形容詞" },
+  { "kanji": "卓越", "kana": "たくえつ", "romaji": "takuetsu", "part_of_speech": "な形容詞", "meaning": "卓越", "example_ja": "卓越した技術を持つ。", "example_zh": "擁有卓越的技術。", "category": "な形容詞" },
+  { "kanji": "秀逸", "kana": "しゅういつ", "romaji": "shuuitsu", "part_of_speech": "な形容詞", "meaning": "秀逸、出眾", "example_ja": "秀逸な出来栄えだ。", "example_zh": "是出眾的成果。", "category": "な形容詞" },
+  { "kanji": "傑出", "kana": "けっしゅつ", "romaji": "kesshutsu", "part_of_speech": "名詞", "meaning": "傑出", "example_ja": "傑出した業績を残した。", "example_zh": "留下了傑出的業績。", "category": "文語・表現" },
+  { "kanji": "群を抜きます", "kana": "ぐんをぬきます", "romaji": "gun o nukimasu", "part_of_speech": "動詞句", "meaning": "出類拔萃", "example_ja": "彼の実力は群を抜いている。", "example_zh": "他的實力出類拔萃。", "category": "動詞" },
+  { "kanji": "折り紙付き", "kana": "おりがみつき", "romaji": "origamitsuki", "part_of_speech": "名詞", "meaning": "有保證、備受肯定", "example_ja": "折り紙付きの技術者だ。", "example_zh": "是備受肯定的技術人員。", "category": "文語・表現" },
+  { "kanji": "折紙付き", "kana": "おりがみつき", "romaji": "origamitsuki", "part_of_speech": "名詞", "meaning": "有保證、備受肯定（另一寫法）", "example_ja": "折紙付きの品質だ。", "example_zh": "是有保證的品質。", "category": "文語・表現" },
+  { "kanji": "お墨付き", "kana": "おすみつき", "romaji": "osumitsuki", "part_of_speech": "名詞", "meaning": "背書、掛保證", "example_ja": "専門家のお墨付きを得た。", "example_zh": "得到了專家的背書。", "category": "文語・表現" },
+  { "kanji": "定評", "kana": "ていひょう", "romaji": "teihyou", "part_of_speech": "名詞", "meaning": "公認的評價", "example_ja": "使いやすさに定評がある。", "example_zh": "在易用性上有公認的好評。", "category": "文語・表現" },
+  { "kanji": "折り紙をつけます", "kana": "おりがみをつけます", "romaji": "origami o tsukemasu", "part_of_speech": "動詞句", "meaning": "掛保證、給予認證", "example_ja": "専門家が折り紙をつけた品質だ。", "example_zh": "是專家掛保證的品質。", "category": "動詞" },
+  { "kanji": "折紙", "kana": "おりがみ", "romaji": "origami", "part_of_speech": "名詞", "meaning": "保證書（引申義，非摺紙）", "example_ja": "品質に折紙がつく製品だ。", "example_zh": "是品質有保證的產品。", "category": "文語・表現" }
 ]
