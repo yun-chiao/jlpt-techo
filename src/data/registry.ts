@@ -27,7 +27,7 @@ export const registry: Registry = {
   },
   vocabulary: {
     n1: () => import('./vocabulary/n1.json').then((m) => m.default as unknown as VocabSet),
-    n2: null,
+    n2: () => import('./vocabulary/n2.json').then((m) => m.default as unknown as VocabSet),
     n3: () => import('./vocabulary/n3.json').then((m) => m.default as unknown as VocabSet),
     n4: () => import('./vocabulary/n4.json').then((m) => m.default as unknown as VocabSet),
     n5: () => import('./vocabulary/n5.json').then((m) => m.default as unknown as VocabSet),
