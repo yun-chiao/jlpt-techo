@@ -597,5 +597,6 @@
   { "kanji": "本領", "kana": "ほんりょう", "romaji": "honryou", "part_of_speech": "名詞", "meaning": "本領、拿手本事", "example_ja": "彼の本領はここにある。", "example_zh": "他的本領就在於此。", "category": "文語・表現" },
   { "kanji": "十八番", "kana": "おはこ", "romaji": "ohako", "part_of_speech": "名詞", "meaning": "拿手好戲", "example_ja": "これは彼の十八番だ。", "example_zh": "這是他的拿手好戲。", "category": "文語・表現" },
   { "kanji": "得意技", "kana": "とくいわざ", "romaji": "tokui waza", "part_of_speech": "名詞", "meaning": "拿手絕活", "example_ja": "得意技を披露する。", "example_zh": "展現拿手絕活。", "category": "文語・表現" },
-  { "kanji": "看板", "kana": "かんばん", "romaji": "kanban", "part_of_speech": "名詞", "meaning": "招牌（引申義：代表性）", "example_ja": "会社の看板商品だ。", "example_zh": "是公司的招牌商品。", "category": "科學・技術" }
+  { "kanji": "看板", "kana": "かんばん", "romaji": "kanban", "part_of_speech": "名詞", "meaning": "招牌（引申義：代表性）", "example_ja": "会社の看板商品だ。", "example_zh": "是公司的招牌商品。", "category": "科學・技術" },
+  { "kanji": "顔役", "kana": "かおやく", "romaji": "kaoyaku", "part_of_speech": "名詞", "meaning": "地方上有頭有臉的人物", "example_ja": "地元の顔役として知られている。", "example_zh": "以地方上有頭有臉的人物聞名。", "category": "文語・表現" }
 ]
