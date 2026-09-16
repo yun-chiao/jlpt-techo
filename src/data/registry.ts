@@ -19,7 +19,7 @@ interface Registry {
 
 export const registry: Registry = {
   grammar: {
-    n1: null,
+    n1: () => import('./grammar/n1.json').then((m) => m.default as unknown as LessonSet),
     n2: null,
     n3: () => import('./grammar/n3.json').then((m) => m.default as unknown as LessonSet),
     n4: () => import('./grammar/n4.json').then((m) => m.default as unknown as LessonSet),
