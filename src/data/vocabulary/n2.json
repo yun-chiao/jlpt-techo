@@ -597,5 +597,6 @@
   { "kanji": "放送します", "kana": "ほうそうします", "romaji": "housou shimasu", "part_of_speech": "動詞（III類）", "meaning": "播放、廣播", "example_ja": "番組を放送する。", "example_zh": "播放節目。", "category": "動詞" },
   { "kanji": "中継します", "kana": "ちゅうけいします", "romaji": "chuukei shimasu", "part_of_speech": "動詞（III類）", "meaning": "轉播", "example_ja": "試合を中継する。", "example_zh": "轉播比賽。", "category": "動詞" },
   { "kanji": "録画します", "kana": "ろくがします", "romaji": "rokuga shimasu", "part_of_speech": "動詞（III類）", "meaning": "錄影", "example_ja": "番組を録画する。", "example_zh": "錄下節目。", "category": "動詞" },
-  { "kanji": "収録します", "kana": "しゅうろくします", "romaji": "shuuroku shimasu", "part_of_speech": "動詞（III類）", "meaning": "收錄、錄製", "example_ja": "番組を収録する。", "example_zh": "錄製節目。", "category": "動詞" }
+  { "kanji": "収録します", "kana": "しゅうろくします", "romaji": "shuuroku shimasu", "part_of_speech": "動詞（III類）", "meaning": "收錄、錄製", "example_ja": "番組を収録する。", "example_zh": "錄製節目。", "category": "動詞" },
+  { "kanji": "生放送します", "kana": "なまほうそうします", "romaji": "namahousou shimasu", "part_of_speech": "動詞（III類）", "meaning": "現場直播", "example_ja": "試合を生放送する。", "example_zh": "現場直播比賽。", "category": "動詞" }
 ]
