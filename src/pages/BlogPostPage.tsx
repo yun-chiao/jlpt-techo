@@ -52,7 +52,7 @@ export function BlogPostPage() {
             <span className="rounded border-2 border-paper-sumi bg-paper-butter px-1.5 py-0.5 font-medium text-paper-sumi">
               {post.category}
             </span>
-            <time dateTime={post.date}>{post.date}</time>
+            <time dateTime={post.date.slice(0, 10)}>{post.date.slice(0, 10)}</time>
           </p>
           <h1 className="mt-4 font-display text-2xl font-black leading-snug md:text-4xl">{post.title}</h1>
         </header>

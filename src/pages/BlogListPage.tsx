@@ -49,7 +49,7 @@ export function BlogListPage() {
               <span className="rounded border-2 border-paper-sumi bg-paper-butter px-1.5 py-0.5 font-medium text-paper-sumi">
                 {post.category}
               </span>
-              <time dateTime={post.date}>{post.date}</time>
+              <time dateTime={post.date.slice(0, 10)}>{post.date.slice(0, 10)}</time>
             </p>
             <h2 className="mt-3 font-display text-lg font-bold leading-snug md:text-2xl">{post.title}</h2>
             {post.excerpt && <p className="mt-2 text-sm text-paper-sumi/70 md:text-base">{post.excerpt}</p>}
