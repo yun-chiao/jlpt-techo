@@ -585,5 +585,17 @@
   { "kanji": "書き換えます", "kana": "かきかえます", "romaji": "kakikaemasu", "part_of_speech": "動詞（II類）", "meaning": "改寫", "example_ja": "記録を書き換える。", "example_zh": "改寫紀錄。", "category": "動詞" },
   { "kanji": "書き加えます", "kana": "かきくわえます", "romaji": "kakikuwaemasu", "part_of_speech": "動詞（II類）", "meaning": "補寫、加註", "example_ja": "注釈を書き加える。", "example_zh": "加註註解。", "category": "動詞" },
   { "kanji": "読み取ります", "kana": "よみとります", "romaji": "yomitorimasu", "part_of_speech": "動詞（I類）", "meaning": "解讀、看出", "example_ja": "意図を読み取る。", "example_zh": "解讀意圖。", "category": "動詞" },
-  { "kanji": "読み解きます", "kana": "よみときます", "romaji": "yomitokimasu", "part_of_speech": "動詞（I類）", "meaning": "解讀", "example_ja": "文章の意味を読み解く。", "example_zh": "解讀文章的意思。", "category": "動詞" }
+  { "kanji": "読み解きます", "kana": "よみときます", "romaji": "yomitokimasu", "part_of_speech": "動詞（I類）", "meaning": "解讀", "example_ja": "文章の意味を読み解く。", "example_zh": "解讀文章的意思。", "category": "動詞" },
+  { "kanji": "書き記します", "kana": "かきしるします", "romaji": "kakishirushimasu", "part_of_speech": "動詞（I類）", "meaning": "記載、寫下", "example_ja": "日記に書き記す。", "example_zh": "寫在日記裡。", "category": "動詞" },
+  { "kanji": "綴ります", "kana": "つづります", "romaji": "tsudjurimasu", "part_of_speech": "動詞（I類）", "meaning": "撰寫、綴寫", "example_ja": "思い出を綴る。", "example_zh": "綴寫回憶。", "category": "動詞" },
+  { "kanji": "著します", "kana": "あらわします", "romaji": "arawashimasu", "part_of_speech": "動詞（I類）", "meaning": "著述", "example_ja": "小説を著す。", "example_zh": "著述小說。", "category": "動詞" },
+  { "kanji": "刊行します", "kana": "かんこうします", "romaji": "kankou shimasu", "part_of_speech": "動詞（III類）", "meaning": "刊行", "example_ja": "新刊を刊行する。", "example_zh": "刊行新書。", "category": "動詞" },
+  { "kanji": "出版します", "kana": "しゅっぱんします", "romaji": "shuppan shimasu", "part_of_speech": "動詞（III類）", "meaning": "出版", "example_ja": "本を出版する。", "example_zh": "出版書籍。", "category": "動詞" },
+  { "kanji": "掲載します", "kana": "けいさいします", "romaji": "keisai shimasu", "part_of_speech": "動詞（III類）", "meaning": "刊登", "example_ja": "記事を掲載する。", "example_zh": "刊登報導。", "category": "動詞" },
+  { "kanji": "連載します", "kana": "れんさいします", "romaji": "rensai shimasu", "part_of_speech": "動詞（III類）", "meaning": "連載", "example_ja": "雑誌に連載する。", "example_zh": "在雜誌上連載。", "category": "動詞" },
+  { "kanji": "配信します", "kana": "はいしんします", "romaji": "haishin shimasu", "part_of_speech": "動詞（III類）", "meaning": "發布、傳送", "example_ja": "ニュースを配信する。", "example_zh": "發布新聞。", "category": "動詞" },
+  { "kanji": "放送します", "kana": "ほうそうします", "romaji": "housou shimasu", "part_of_speech": "動詞（III類）", "meaning": "播放、廣播", "example_ja": "番組を放送する。", "example_zh": "播放節目。", "category": "動詞" },
+  { "kanji": "中継します", "kana": "ちゅうけいします", "romaji": "chuukei shimasu", "part_of_speech": "動詞（III類）", "meaning": "轉播", "example_ja": "試合を中継する。", "example_zh": "轉播比賽。", "category": "動詞" },
+  { "kanji": "録画します", "kana": "ろくがします", "romaji": "rokuga shimasu", "part_of_speech": "動詞（III類）", "meaning": "錄影", "example_ja": "番組を録画する。", "example_zh": "錄下節目。", "category": "動詞" },
+  { "kanji": "収録します", "kana": "しゅうろくします", "romaji": "shuuroku shimasu", "part_of_speech": "動詞（III類）", "meaning": "收錄、錄製", "example_ja": "番組を収録する。", "example_zh": "錄製節目。", "category": "動詞" }
 ]
