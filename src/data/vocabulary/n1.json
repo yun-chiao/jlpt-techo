@@ -488,5 +488,20 @@
   { "kanji": "捻出します", "kana": "ねんしゅつします", "romaji": "nenshutsu shimasu", "part_of_speech": "動詞（III類）", "meaning": "設法擠出（時間、金錢）", "example_ja": "資金を捻出するのに苦労した。", "example_zh": "為擠出資金費盡苦心。", "category": "動詞" },
   { "kanji": "工面します", "kana": "くめんします", "romaji": "kumen shimasu", "part_of_speech": "動詞（III類）", "meaning": "籌措（資金）", "example_ja": "学費を工面する。", "example_zh": "籌措學費。", "category": "動詞" },
   { "kanji": "調達します", "kana": "ちょうたつします", "romaji": "choutatsu shimasu", "part_of_speech": "動詞（III類）", "meaning": "籌措、採購", "example_ja": "資金を調達する。", "example_zh": "籌措資金。", "category": "動詞" },
-  { "kanji": "融通します", "kana": "ゆうずうします", "romaji": "yuuzuu shimasu", "part_of_speech": "動詞（III類）", "meaning": "融通、周轉", "example_ja": "資金を融通してもらう。", "example_zh": "請對方融通資金。", "category": "動詞" }
+  { "kanji": "融通します", "kana": "ゆうずうします", "romaji": "yuuzuu shimasu", "part_of_speech": "動詞（III類）", "meaning": "融通、周轉", "example_ja": "資金を融通してもらう。", "example_zh": "請對方融通資金。", "category": "動詞" },
+  { "kanji": "崇高", "kana": "すうこう", "romaji": "suukou", "part_of_speech": "な形容詞", "meaning": "崇高", "example_ja": "崇高な理念を掲げる。", "example_zh": "揭櫫崇高的理念。", "category": "な形容詞" },
+  { "kanji": "尊厳", "kana": "そんげん", "romaji": "songen", "part_of_speech": "名詞", "meaning": "尊嚴", "example_ja": "人間の尊厳を守る。", "example_zh": "守護人的尊嚴。", "category": "文語・表現" },
+  { "kanji": "威信をかけます", "kana": "いしんをかけます", "romaji": "ishin o kakemasu", "part_of_speech": "動詞句", "meaning": "賭上威信", "example_ja": "国の威信をかけたプロジェクトだ。", "example_zh": "是賭上國家威信的專案。", "category": "動詞" },
+  { "kanji": "名誉挽回", "kana": "めいよばんかい", "romaji": "meiyo bankai", "part_of_speech": "名詞", "meaning": "挽回名譽", "example_ja": "名誉挽回のチャンスを得た。", "example_zh": "獲得了挽回名譽的機會。", "category": "文語・表現" },
+  { "kanji": "汚名返上", "kana": "おめいへんじょう", "romaji": "omei henjou", "part_of_speech": "名詞", "meaning": "洗刷污名", "example_ja": "汚名返上を目指して努力する。", "example_zh": "以洗刷污名為目標而努力。", "category": "文語・表現" },
+  { "kanji": "雪辱を果たします", "kana": "せつじょくをはたします", "romaji": "setsujoku o hatashimasu", "part_of_speech": "動詞句", "meaning": "一雪前恥", "example_ja": "前回の敗戦の雪辱を果たした。", "example_zh": "一雪上次戰敗的前恥。", "category": "動詞" },
+  { "kanji": "起死回生", "kana": "きしかいせい", "romaji": "kishikaisei", "part_of_speech": "名詞", "meaning": "起死回生", "example_ja": "起死回生の一手を打つ。", "example_zh": "打出起死回生的一手。", "category": "文語・表現" },
+  { "kanji": "捲土重来", "kana": "けんどちょうらい", "romaji": "kendo chourai", "part_of_speech": "名詞", "meaning": "捲土重來", "example_ja": "捲土重来を期して再挑戦する。", "example_zh": "抱著捲土重來的期待再度挑戰。", "category": "文語・表現" },
+  { "kanji": "巻き返します", "kana": "まきかえします", "romaji": "makikaeshimasu", "part_of_speech": "動詞（I類）", "meaning": "反攻、扳回劣勢", "example_ja": "後半で巻き返しに成功した。", "example_zh": "後半段成功扳回了劣勢。", "category": "動詞" },
+  { "kanji": "逆転します", "kana": "ぎゃくてんします", "romaji": "gyakuten shimasu", "part_of_speech": "動詞（III類）", "meaning": "逆轉", "example_ja": "劣勢を逆転した。", "example_zh": "逆轉了劣勢。", "category": "動詞" },
+  { "kanji": "一発逆転", "kana": "いっぱつぎゃくてん", "romaji": "ippatsu gyakuten", "part_of_speech": "名詞", "meaning": "一舉逆轉", "example_ja": "一発逆転を狙う戦略だ。", "example_zh": "是瞄準一舉逆轉的戰略。", "category": "文語・表現" },
+  { "kanji": "土壇場", "kana": "どたんば", "romaji": "dotanba", "part_of_speech": "名詞", "meaning": "最後關頭", "example_ja": "土壇場で逆転した。", "example_zh": "在最後關頭逆轉了。", "category": "文語・表現" },
+  { "kanji": "崖っぷち", "kana": "がけっぷち", "romaji": "gakeppuchi", "part_of_speech": "名詞", "meaning": "懸崖邊緣、絕境", "example_ja": "崖っぷちに立たされている。", "example_zh": "正被逼到懸崖邊緣。", "category": "文語・表現" },
+  { "kanji": "背水の陣", "kana": "はいすいのじん", "romaji": "haisui no jin", "part_of_speech": "名詞", "meaning": "背水一戰", "example_ja": "背水の陣で臨む。", "example_zh": "抱著背水一戰的心態面對。", "category": "文語・表現" },
+  { "kanji": "正念場", "kana": "しょうねんば", "romaji": "shounenba", "part_of_speech": "名詞", "meaning": "關鍵時刻", "example_ja": "今が正念場だ。", "example_zh": "現在正是關鍵時刻。", "category": "文語・表現" }
 ]
