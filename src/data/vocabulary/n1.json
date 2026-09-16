@@ -503,5 +503,19 @@
   { "kanji": "土壇場", "kana": "どたんば", "romaji": "dotanba", "part_of_speech": "名詞", "meaning": "最後關頭", "example_ja": "土壇場で逆転した。", "example_zh": "在最後關頭逆轉了。", "category": "文語・表現" },
   { "kanji": "崖っぷち", "kana": "がけっぷち", "romaji": "gakeppuchi", "part_of_speech": "名詞", "meaning": "懸崖邊緣、絕境", "example_ja": "崖っぷちに立たされている。", "example_zh": "正被逼到懸崖邊緣。", "category": "文語・表現" },
   { "kanji": "背水の陣", "kana": "はいすいのじん", "romaji": "haisui no jin", "part_of_speech": "名詞", "meaning": "背水一戰", "example_ja": "背水の陣で臨む。", "example_zh": "抱著背水一戰的心態面對。", "category": "文語・表現" },
-  { "kanji": "正念場", "kana": "しょうねんば", "romaji": "shounenba", "part_of_speech": "名詞", "meaning": "關鍵時刻", "example_ja": "今が正念場だ。", "example_zh": "現在正是關鍵時刻。", "category": "文語・表現" }
+  { "kanji": "正念場", "kana": "しょうねんば", "romaji": "shounenba", "part_of_speech": "名詞", "meaning": "關鍵時刻", "example_ja": "今が正念場だ。", "example_zh": "現在正是關鍵時刻。", "category": "文語・表現" },
+  { "kanji": "無我夢中", "kana": "むがむちゅう", "romaji": "muga muchuu", "part_of_speech": "名詞", "meaning": "全神貫注、忘我", "example_ja": "無我夢中で作業を続けた。", "example_zh": "全神貫注地持續作業。", "category": "文語・表現" },
+  { "kanji": "一心不乱", "kana": "いっしんふらん", "romaji": "isshin furan", "part_of_speech": "名詞", "meaning": "一心一意、專心致志", "example_ja": "一心不乱に練習に励んだ。", "example_zh": "一心一意地努力練習。", "category": "文語・表現" },
+  { "kanji": "全身全霊", "kana": "ぜんしんぜんれい", "romaji": "zenshin zenrei", "part_of_speech": "名詞", "meaning": "全心全力", "example_ja": "全身全霊で取り組む。", "example_zh": "全心全力地投入。", "category": "文語・表現" },
+  { "kanji": "率先します", "kana": "そっせんします", "romaji": "sossen shimasu", "part_of_speech": "動詞（III類）", "meaning": "率先", "example_ja": "上司が率先して動く。", "example_zh": "上司率先行動。", "category": "動詞" },
+  { "kanji": "先陣を切ります", "kana": "せんじんをきります", "romaji": "senjin o kirimasu", "part_of_speech": "動詞句", "meaning": "打頭陣", "example_ja": "彼が先陣を切って発言した。", "example_zh": "他打頭陣發言了。", "category": "動詞" },
+  { "kanji": "陣頭指揮", "kana": "じんとうしき", "romaji": "jintou shiki", "part_of_speech": "名詞", "meaning": "親自帶頭指揮", "example_ja": "社長自ら陣頭指揮を執る。", "example_zh": "社長親自帶頭指揮。", "category": "文語・表現" },
+  { "kanji": "先鞭をつけます", "kana": "せんべんをつけます", "romaji": "senben o tsukemasu", "part_of_speech": "動詞句", "meaning": "首開先例、率先開創", "example_ja": "業界に先鞭をつけた企業だ。", "example_zh": "是在業界首開先例的企業。", "category": "動詞" },
+  { "kanji": "牽引します", "kana": "けんいんします", "romaji": "ken-in shimasu", "part_of_speech": "動詞（III類）", "meaning": "牽引、帶動", "example_ja": "業界を牽引する存在だ。", "example_zh": "是帶動業界的存在。", "category": "動詞" },
+  { "kanji": "先導します", "kana": "せんどうします", "romaji": "sendou shimasu", "part_of_speech": "動詞（III類）", "meaning": "先導、引領", "example_ja": "変革を先導する役割を担う。", "example_zh": "肩負引領變革的角色。", "category": "動詞" },
+  { "kanji": "牽制します", "kana": "けんせいします", "romaji": "kensei shimasu", "part_of_speech": "動詞（III類）", "meaning": "牽制", "example_ja": "相手の動きを牽制する。", "example_zh": "牽制對方的動作。", "category": "動詞" },
+  { "kanji": "規制します", "kana": "きせいします", "romaji": "kisei shimasu", "part_of_speech": "動詞（III類）", "meaning": "規範、限制", "example_ja": "排出量を規制する。", "example_zh": "規範排放量。", "category": "動詞" },
+  { "kanji": "緩和します", "kana": "かんわします", "romaji": "kanwa shimasu", "part_of_speech": "動詞（III類）", "meaning": "緩和", "example_ja": "規制を緩和する。", "example_zh": "緩和規範。", "category": "動詞" },
+  { "kanji": "強化します", "kana": "きょうかします", "romaji": "kyouka shimasu", "part_of_speech": "動詞（III類）", "meaning": "強化", "example_ja": "セキュリティを強化する。", "example_zh": "強化資安。", "category": "動詞" },
+  { "kanji": "厳格化します", "kana": "げんかくかします", "romaji": "genkakuka shimasu", "part_of_speech": "動詞（III類）", "meaning": "使更加嚴格化", "example_ja": "審査基準を厳格化する。", "example_zh": "使審查標準更加嚴格化。", "category": "動詞" }
 ]
