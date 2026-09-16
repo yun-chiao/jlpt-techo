@@ -583,5 +583,19 @@
   { "kanji": "臨場感", "kana": "りんじょうかん", "romaji": "rinjoukan", "part_of_speech": "名詞", "meaning": "臨場感", "example_ja": "臨場感あふれる映像だ。", "example_zh": "是充滿臨場感的影像。", "category": "科學・技術" },
   { "kanji": "没入感", "kana": "ぼつにゅうかん", "romaji": "botsunyuukan", "part_of_speech": "名詞", "meaning": "沉浸感", "example_ja": "没入感の高いゲームだ。", "example_zh": "是沉浸感很高的遊戲。", "category": "科學・技術" },
   { "kanji": "臨界点", "kana": "りんかいてん", "romaji": "rinkaiten", "part_of_speech": "名詞", "meaning": "臨界點", "example_ja": "我慢の臨界点に達した。", "example_zh": "忍耐已達到臨界點。", "category": "科學・技術" },
-  { "kanji": "飽和状態", "kana": "ほうわじょうたい", "romaji": "houwa joutai", "part_of_speech": "名詞", "meaning": "飽和狀態", "example_ja": "市場は飽和状態にある。", "example_zh": "市場正處於飽和狀態。", "category": "科學・技術" }
+  { "kanji": "飽和状態", "kana": "ほうわじょうたい", "romaji": "houwa joutai", "part_of_speech": "名詞", "meaning": "飽和狀態", "example_ja": "市場は飽和状態にある。", "example_zh": "市場正處於飽和狀態。", "category": "科學・技術" },
+  { "kanji": "臨機", "kana": "りんき", "romaji": "rinki", "part_of_speech": "名詞", "meaning": "臨機（因應時機）", "example_ja": "臨機の判断が求められる。", "example_zh": "需要臨機的判斷。", "category": "文語・表現" },
+  { "kanji": "機転が利きます", "kana": "きてんがききます", "romaji": "kiten ga kikimasu", "part_of_speech": "い形容詞句", "meaning": "機靈、反應快", "example_ja": "彼は機転が利く人だ。", "example_zh": "他是很機靈的人。", "category": "い形容詞" },
+  { "kanji": "機知に富みます", "kana": "きちにとみます", "romaji": "kichi ni tomimasu", "part_of_speech": "動詞句", "meaning": "富有機智", "example_ja": "機知に富んだ受け答えだった。", "example_zh": "是富有機智的應答。", "category": "動詞" },
+  { "kanji": "頓知", "kana": "とんち", "romaji": "tonchi", "part_of_speech": "名詞", "meaning": "機智、急智", "example_ja": "頓知を利かせて答えた。", "example_zh": "運用機智回答了。", "category": "文語・表現" },
+  { "kanji": "機微", "kana": "きび", "romaji": "kibi", "part_of_speech": "名詞", "meaning": "微妙之處、內情", "example_ja": "人情の機微に通じている。", "example_zh": "通曉人情的微妙之處。", "category": "文語・表現" },
+  { "kanji": "妙味", "kana": "みょうみ", "romaji": "myoumi", "part_of_speech": "名詞", "meaning": "妙處、趣味", "example_ja": "この仕事の妙味を知る。", "example_zh": "了解這份工作的妙處。", "category": "文語・表現" },
+  { "kanji": "醍醐味", "kana": "だいごみ", "romaji": "daigomi", "part_of_speech": "名詞", "meaning": "真正的樂趣、精髓", "example_ja": "登山の醍醐味を味わう。", "example_zh": "體會登山的真正樂趣。", "category": "文語・表現" },
+  { "kanji": "真骨頂", "kana": "しんこっちょう", "romaji": "shinkocchou", "part_of_speech": "名詞", "meaning": "真本事、真正實力", "example_ja": "ここからが彼の真骨頂だ。", "example_zh": "從這裡開始才是他真正的實力。", "category": "文語・表現" },
+  { "kanji": "面目躍如", "kana": "めんもくやくじょ", "romaji": "menmoku yakujo", "part_of_speech": "名詞", "meaning": "展現本色、名副其實", "example_ja": "面目躍如の活躍を見せた。", "example_zh": "展現了名副其實的活躍表現。", "category": "文語・表現" },
+  { "kanji": "本領を発揮します", "kana": "ほんりょうをはっきします", "romaji": "honryou o hakki shimasu", "part_of_speech": "動詞句", "meaning": "發揮本領", "example_ja": "土壇場で本領を発揮した。", "example_zh": "在最後關頭發揮了本領。", "category": "動詞" },
+  { "kanji": "本領", "kana": "ほんりょう", "romaji": "honryou", "part_of_speech": "名詞", "meaning": "本領、拿手本事", "example_ja": "彼の本領はここにある。", "example_zh": "他的本領就在於此。", "category": "文語・表現" },
+  { "kanji": "十八番", "kana": "おはこ", "romaji": "ohako", "part_of_speech": "名詞", "meaning": "拿手好戲", "example_ja": "これは彼の十八番だ。", "example_zh": "這是他的拿手好戲。", "category": "文語・表現" },
+  { "kanji": "得意技", "kana": "とくいわざ", "romaji": "tokui waza", "part_of_speech": "名詞", "meaning": "拿手絕活", "example_ja": "得意技を披露する。", "example_zh": "展現拿手絕活。", "category": "文語・表現" },
+  { "kanji": "看板", "kana": "かんばん", "romaji": "kanban", "part_of_speech": "名詞", "meaning": "招牌（引申義：代表性）", "example_ja": "会社の看板商品だ。", "example_zh": "是公司的招牌商品。", "category": "科學・技術" }
 ]
