@@ -35,6 +35,29 @@ export function BlogPostPage() {
 
   useDocumentTitle(state.status === 'ready' ? `${state.post.title}｜${BLOG_LABEL}` : BLOG_LABEL);
 
+  // GEO/AEO：注入 BlogPosting 結構化資料，讓搜尋引擎與 AI 引擎理解並引用文章
+  useEffect(() => {
+    if (state.status !== 'ready') return;
+    const { post } = state;
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date.slice(0, 10),
+      inLanguage: 'zh-Hant',
+      author: { '@type': 'Organization', name: '日檢手帖' },
+      publisher: { '@type': 'Organization', name: '日檢手帖' },
+      mainEntityOfPage: `https://jlpt.chiaoban.com/blog/${post.slug}`,
+    });
+    document.head.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, [state]);
+
   if (state.status === 'loading') return <LoadingState />;
   if (state.status === 'notfound') return <NotFoundPage />;
 
