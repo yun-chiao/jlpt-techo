@@ -1,5 +1,7 @@
 import { SITE_NAME, SITE_NAME_EN } from '../data/meta';
 
+const BMC_URL = 'https://buymeacoffee.com/chiaoban';
+
 export function Footer() {
   return (
     <footer className="mt-16 border-t-2 border-paper-sumi bg-paper-card">
@@ -14,6 +16,17 @@ export function Footer() {
             className="ml-1 font-mono underline decoration-2 underline-offset-4 hover:bg-paper-butter"
           >
             jojo050872@gmail.com
+          </a>
+        </p>
+        <p className="text-xs md:text-sm">
+          覺得日檢手帖有幫助嗎？
+          <a
+            href={BMC_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-1 underline decoration-2 underline-offset-4 hover:bg-paper-butter"
+          >
+            請我喝杯咖啡 ☕
           </a>
         </p>
         <p className="text-xs md:text-sm">© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>

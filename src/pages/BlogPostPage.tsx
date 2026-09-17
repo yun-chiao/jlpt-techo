@@ -85,7 +85,22 @@ export function BlogPostPage() {
         </div>
       </article>
 
-      <div className="mt-14">
+      <div className="mt-12 rounded-xl border-2 border-paper-sumi bg-paper-butter px-5 py-4 text-center shadow-retro">
+        <p className="font-display font-bold">這篇文章對你有幫助嗎？</p>
+        <p className="mt-1 text-sm">
+          日檢手帖的所有內容都免費。如果想支持我繼續更新，歡迎
+          <a
+            href="https://buymeacoffee.com/chiaoban"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-1 font-bold underline decoration-2 underline-offset-4 hover:bg-paper-card"
+          >
+            請我喝杯咖啡 ☕
+          </a>
+        </p>
+      </div>
+
+      <div className="mt-10">
         <Link to="/blog" className="btn-retro">
           ← 回到{BLOG_LABEL}
         </Link>
