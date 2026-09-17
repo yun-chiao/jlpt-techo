@@ -2,7 +2,7 @@ import { Fragment, type ReactNode } from 'react';
 
 /**
  * 極簡 Markdown 渲染器（不引入外部套件）。
- * 支援：#/##/### 標題、段落、- 清單、1. 有序清單、> 引用、--- 分隔線，
+ * 支援：#/##/### 標題、段落、- 清單、1. 有序清單、> 引用、--- 分隔線、| 表格，
  * 以及行內 **粗體**、`程式碼`、[連結](url)。
  */
 
@@ -82,6 +82,50 @@ export function MarkdownView({ body }: { body: string }) {
         }
 
         const lines = block.split('\n');
+
+        if (
+          lines.length >= 2 &&
+          lines.every((l) => l.startsWith('|')) &&
+          /^\|[\s:|-]+\|$/.test(lines[1])
+        ) {
+          const parseRow = (l: string) =>
+            l
+              .replace(/^\|/, '')
+              .replace(/\|$/, '')
+              .split('|')
+              .map((c) => c.trim());
+          const header = parseRow(lines[0]);
+          const rows = lines.slice(2).map(parseRow);
+          return (
+            <div key={i} className="overflow-x-auto">
+              <table className="w-full border-collapse border-2 border-paper-sumi text-sm md:text-base">
+                <thead>
+                  <tr className="bg-paper-butter">
+                    {header.map((cell, j) => (
+                      <th
+                        key={j}
+                        className="border-2 border-paper-sumi px-3 py-2 text-left font-bold"
+                      >
+                        {renderInline(cell)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((row, j) => (
+                    <tr key={j} className={j % 2 === 1 ? 'bg-paper-oatmeal/50' : undefined}>
+                      {row.map((cell, k) => (
+                        <td key={k} className="border-2 border-paper-sumi px-3 py-2 align-top">
+                          {renderInline(cell)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
 
         if (lines.every((l) => l.startsWith('- '))) {
           return (
