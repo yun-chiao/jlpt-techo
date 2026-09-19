@@ -20,10 +20,9 @@ on:
       action:
         description: '手動執行項目'
         required: true
-        default: 'all'
+        default: 'vocab'
         type: choice
         options:
-          - all
           - vocab
           - quiz_easy
           - grammar
@@ -31,12 +30,13 @@ on:
           - quiz_hard
           - reply_quiz_easy
           - reply_quiz_hard
+          - all
           - refresh_token
           - insights
       dry_run:
-        description: '乾跑模式（勾選時只印出貼文、不實際發到 Threads）'
+        description: '乾跑模式（不勾選＝直接發到 Threads；勾選＝只印在紀錄裡不發文）'
         required: true
-        default: true
+        default: false
         type: boolean
 
 permissions:
@@ -62,13 +62,19 @@ jobs:
         run: |
           set -euo pipefail
 
-          # 若尚未設定 Threads Secrets 或手動勾選 dry_run，自動以乾跑模式執行
           DRY_FLAG=""
-          if [ -z "${THREADS_USER_ID:-}" ] || [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
-            echo "ℹ️ 尚未設定 THREADS_USER_ID / THREADS_ACCESS_TOKEN，自動切換為 --dry-run 乾跑預覽模式"
-            DRY_FLAG="--dry-run"
-          elif [ "${EVENT_NAME}" = "workflow_dispatch" ] && [ "${INPUT_DRY_RUN}" = "true" ]; then
-            DRY_FLAG="--dry-run"
+          if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+            if [ "${INPUT_DRY_RUN}" = "true" ]; then
+              DRY_FLAG="--dry-run"
+            elif [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
+              echo "❌ 找不到 THREADS_ACCESS_TOKEN Secret！請確認已新增於 GitHub Settings -> Secrets and variables -> Actions -> Repository secrets"
+              exit 1
+            fi
+          else
+            if [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
+              echo "ℹ️ 尚未設定 THREADS_ACCESS_TOKEN，排程自動切換為 --dry-run 乾跑模式"
+              DRY_FLAG="--dry-run"
+            fi
           fi
 
           if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then

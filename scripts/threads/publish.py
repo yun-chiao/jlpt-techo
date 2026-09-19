@@ -162,6 +162,23 @@ def publish_threads_text(
   return published["id"]
 
 
+def resolve_credentials() -> tuple[str, str]:
+  """取得 (user_id, token)。若未設定 THREADS_USER_ID，自動用 token 呼叫 /v1.0/me 查詢。"""
+  token = os.environ.get("THREADS_ACCESS_TOKEN", "").strip()
+  if not token:
+    raise RuntimeError("缺少 THREADS_ACCESS_TOKEN 環境變數（請至 GitHub Settings -> Secrets and variables -> Actions 新增）。")
+  user_id = os.environ.get("THREADS_USER_ID", "").strip()
+  if not user_id:
+    me = http_json(
+      f"{GRAPH_BASE}/me",
+      method="GET",
+      params={"fields": "id,username", "access_token": token},
+    )
+    user_id = str(me["id"])
+    print(f"ℹ️ 已透過 /v1.0/me 自動取得 THREADS_USER_ID = {user_id} (@{me.get('username', '')})")
+  return user_id, token
+
+
 def run_publish_slot(date_obj: dt.date, slot: str, dry_run: bool) -> None:
   post = get_post_for_date_and_slot(date_obj, slot)
   text = post["text"]
@@ -175,10 +192,7 @@ def run_publish_slot(date_obj: dt.date, slot: str, dry_run: bool) -> None:
     print("🟡 [DRY_RUN] 乾跑模式：未實際呼叫 Threads API。")
     return
 
-  user_id = os.environ.get("THREADS_USER_ID", "").strip()
-  token = os.environ.get("THREADS_ACCESS_TOKEN", "").strip()
-  if not user_id or not token:
-    raise RuntimeError("缺少 THREADS_USER_ID 或 THREADS_ACCESS_TOKEN 環境變數。")
+  user_id, token = resolve_credentials()
 
   recent = list_recent_threads(user_id, token, limit=20)
   existing = find_today_post_by_prefix(recent, date_obj, header_line)
@@ -206,10 +220,7 @@ def run_reply_quiz(date_obj: dt.date, slot: str, dry_run: bool) -> None:
     print("🟡 [DRY_RUN] 乾跑模式：未實際呼叫 Threads API。")
     return
 
-  user_id = os.environ.get("THREADS_USER_ID", "").strip()
-  token = os.environ.get("THREADS_ACCESS_TOKEN", "").strip()
-  if not user_id or not token:
-    raise RuntimeError("缺少 THREADS_USER_ID 或 THREADS_ACCESS_TOKEN 環境變數。")
+  user_id, token = resolve_credentials()
 
   recent = list_recent_threads(user_id, token, limit=20)
   quiz_thread = find_today_post_by_prefix(recent, date_obj, header_line)
@@ -249,10 +260,7 @@ def run_insights_report(dry_run: bool) -> None:
   if dry_run:
     print("🟡 [DRY_RUN] 將拉取最近 25 則貼文的 views/likes/replies/reposts 產出成效表。")
     return
-  user_id = os.environ.get("THREADS_USER_ID", "").strip()
-  token = os.environ.get("THREADS_ACCESS_TOKEN", "").strip()
-  if not user_id or not token:
-    raise RuntimeError("缺少 THREADS_USER_ID 或 THREADS_ACCESS_TOKEN 環境變數。")
+  user_id, token = resolve_credentials()
 
   recent = list_recent_threads(user_id, token, limit=25)
   stats_by_col: dict[str, list[dict[str, int]]] = {}
