@@ -1,0 +1,57 @@
+name: Threads 每週佇列生成・Token 續期・成效週報
+
+on:
+  schedule:
+    # 每週日台北時間 03:17 執行（避開整點尖峰，同時維持 repo 每週 commit 避免 GitHub 60 天停用排程）
+    - cron: '17 19 * * 6'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  weekly-maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 生成未來 7 天 Threads 貼文佇列（35 則）
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          NEXT_MONDAY=$(python3 -c '
+          import datetime as dt
+          tpe = dt.timezone(dt.timedelta(hours=8))
+          today = dt.datetime.now(tpe).date()
+          days_ahead = (7 - today.weekday()) % 7 or 7
+          print((today + dt.timedelta(days=days_ahead)).isoformat())
+          ')
+          echo "生成起始日（下週一）：${NEXT_MONDAY}"
+          python3 scripts/threads/generate_week.py --start "${NEXT_MONDAY}" --days 7
+
+      - name: 續期 Threads 60 天長期 Token 並拉取專欄成效週報
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          if [ -n "${THREADS_USER_ID:-}" ] && [ -n "${THREADS_ACCESS_TOKEN:-}" ]; then
+            python3 scripts/threads/publish.py --refresh-token || true
+            python3 scripts/threads/publish.py --insights || true
+          else
+            echo "ℹ️ 尚未設定 Threads Secrets，略過 Token 續期與 Insights 拉取"
+          fi
+
+      - name: Commit 下週貼文佇列回 Repository（維持排程活躍並供審稿）
+        run: |
+          git config user.name "yunchiao"
+          git config user.email "jojo050872@gmail.com"
+          git add content/threads-queue/
+          if git diff --cached --quiet; then
+            echo "無新增或變更的佇列檔案"
+          else
+            git commit -m "chore(threads): 產生下週自動發文佇列與成效統計"
+            git push
+          fi

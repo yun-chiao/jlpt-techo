@@ -1,0 +1,129 @@
+name: Threads 每日自動發文
+
+on:
+  schedule:
+    # 台北時間 08:03 — 📖 每日五單字
+    - cron: '3 0 * * *'
+    # 台北時間 12:33 — ✏️ 今日一題（N4/N5）
+    - cron: '33 4 * * *'
+    # 台北時間 15:33 — 公布午間題解答 ＋ 🔍 每日文法
+    - cron: '33 7 * * *'
+    # 台北時間 18:33 — 🍂 今日一句
+    - cron: '33 10 * * *'
+    # 台北時間 21:03 — 🌙 睡前一題（N1–N3）
+    - cron: '3 13 * * *'
+    # 台北時間 23:57 — 公布睡前題解答（維持同日日期避免跨日）
+    - cron: '57 15 * * *'
+
+  workflow_dispatch:
+    inputs:
+      action:
+        description: '手動執行項目'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - vocab
+          - quiz_easy
+          - grammar
+          - quote
+          - quiz_hard
+          - reply_quiz_easy
+          - reply_quiz_hard
+          - refresh_token
+          - insights
+      dry_run:
+        description: '乾跑模式（勾選時只印出貼文、不實際發到 Threads）'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 執行 Threads 排程或手動任務
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE_CRON: ${{ github.event.schedule }}
+          INPUT_ACTION: ${{ inputs.action }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+
+          # 若尚未設定 Threads Secrets 或手動勾選 dry_run，自動以乾跑模式執行
+          DRY_FLAG=""
+          if [ -z "${THREADS_USER_ID:-}" ] || [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
+            echo "ℹ️ 尚未設定 THREADS_USER_ID / THREADS_ACCESS_TOKEN，自動切換為 --dry-run 乾跑預覽模式"
+            DRY_FLAG="--dry-run"
+          elif [ "${EVENT_NAME}" = "workflow_dispatch" ] && [ "${INPUT_DRY_RUN}" = "true" ]; then
+            DRY_FLAG="--dry-run"
+          fi
+
+          if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+            case "${INPUT_ACTION}" in
+              all|vocab|quiz_easy|grammar|quote|quiz_hard)
+                python3 scripts/threads/publish.py --slot "${INPUT_ACTION}" ${DRY_FLAG}
+                ;;
+              reply_quiz_easy)
+                python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
+                ;;
+              reply_quiz_hard)
+                python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
+                ;;
+              refresh_token)
+                python3 scripts/threads/publish.py --refresh-token ${DRY_FLAG}
+                ;;
+              insights)
+                python3 scripts/threads/publish.py --insights ${DRY_FLAG}
+                ;;
+            esac
+          else
+            case "${SCHEDULE_CRON}" in
+              "3 0 * * *")
+                python3 scripts/threads/publish.py --slot vocab ${DRY_FLAG}
+                ;;
+              "33 4 * * *")
+                python3 scripts/threads/publish.py --slot quiz_easy ${DRY_FLAG}
+                ;;
+              "33 7 * * *")
+                python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
+                python3 scripts/threads/publish.py --slot grammar ${DRY_FLAG}
+                ;;
+              "33 10 * * *")
+                python3 scripts/threads/publish.py --slot quote ${DRY_FLAG}
+                ;;
+              "3 13 * * *")
+                python3 scripts/threads/publish.py --slot quiz_hard ${DRY_FLAG}
+                ;;
+              "57 15 * * *")
+                python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
+                ;;
+              *)
+                python3 scripts/threads/publish.py --slot all --dry-run
+                ;;
+            esac
+          fi
+
+      - name: 發送失敗時自動開 Issue 告警 (Dead Man's Switch)
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `⚠️ Threads 自動發文執行失敗 (${new Date().toISOString().slice(0, 10)})`,
+              body: `請檢查 GitHub Actions 執行紀錄：${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n常見原因：\n1. \`THREADS_ACCESS_TOKEN\` 過期或權限變更\n2. Threads API 暫時性錯誤`
+            });
