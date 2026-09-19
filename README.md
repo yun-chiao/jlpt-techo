@@ -84,6 +84,29 @@ export interface VocabEntry extends VocabularyItem {
 把 `n4.json`（VocabEntry 陣列）放到 `src/data/vocabulary/`，在 `registry.ts` 的
 `vocabulary.n4` 填入 loader，執行 `npm run validate:data` 即可。
 
+#### 漢字標音（振假名）
+
+單字頁會把讀音標在漢字正上方。為了讓「彼女／かのじょ」這種連續漢字也能看出
+每個字各唸什麼，逐字對位是**離線算好**存在資料裡的 `furigana` 欄位，前端只負責渲染：
+
+```jsonc
+{ "kanji": "彼女", "kana": "かのじょ", "furigana": [["彼", "かの"], ["女", "じょ"]] }
+```
+
+格式是 `[文字, 讀音]` 的陣列，讀音為 `null` 代表該段不標音（送假名等）。
+新增或修改單字後，重新產生這個欄位：
+
+```bash
+python3 -m venv /tmp/jpenv
+/tmp/jpenv/bin/pip install pykakasi
+/tmp/jpenv/bin/python scripts/generate_furigana.py
+```
+
+腳本用 pykakasi 的漢字讀音辭典做回溯搜尋，並處理連濁（ひと＋ひと → ひとびと）與
+促音便（がく＋こう → がっこう）。只有能「完全重建原本假名」的拆法才會被採用；
+「明日／あした」這類熟字訓拆不開，會自動保留整組標音——這正是正確的處理方式。
+
+
 ### 例三：開通練習題
 
 `quiz` 區使用課程教材格式，指向含 `quizzes` 欄位的課程 JSON 即可：

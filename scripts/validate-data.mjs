@@ -7,6 +7,8 @@ import { z } from 'zod';
 
 const dataDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../src/data');
 
+const furiganaSegmentSchema = z.tuple([z.string(), z.string().nullable()]);
+
 const vocabularyItemSchema = z.object({
   kanji: z.string(),
   kana: z.string(),
@@ -15,6 +17,7 @@ const vocabularyItemSchema = z.object({
   meaning: z.string(),
   example_ja: z.string(),
   example_zh: z.string(),
+  furigana: z.array(furiganaSegmentSchema).optional(),
 });
 
 const grammarExampleSchema = z.object({ ja: z.string(), zh: z.string() });

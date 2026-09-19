@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import type { Level, VocabEntry } from '../data/types';
+import type { FuriganaSegment, Level, VocabEntry } from '../data/types';
 import { LEVEL_LABELS, isLevel } from '../data/meta';
 import { useVocabSet } from '../hooks/useVocabSet';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
@@ -327,11 +327,6 @@ function speak(text: string) {
   window.speechSynthesis.speak(utterance);
 }
 
-interface FuriganaSegment {
-  text: string;
-  reading?: string;
-}
-
 function toHiragana(str: string): string {
   return str.replace(/[\u30a1-\u30f6]/g, (ch) =>
     String.fromCharCode(ch.charCodeAt(0) - 0x60),
@@ -353,12 +348,13 @@ function escapeRegExp(str: string): string {
 }
 
 /**
- * 智慧拆解漢字與送假名（例如「お願いします」+「おねがいします」→ お + 願(ねが) + いします），
- * 只在漢字正上方標註對應的假名讀音。
+ * 後備切分：只切出「漢字段 vs 送假名段」，同一段連續漢字共用一個讀音。
+ * 正常情況下會使用資料中由 scripts/generate_furigana.py 產生的逐字對位；
+ * 這個函式只在資料缺少 furigana 欄位時作為保底。
  */
 function splitFurigana(kanji: string, kana: string): FuriganaSegment[] {
   if (kanji === kana || ![...kanji].some(isKanjiChar)) {
-    return [{ text: kanji }];
+    return [[kanji, null]];
   }
 
   const segments: { text: string; isKanji: boolean }[] = [];
@@ -383,35 +379,36 @@ function splitFurigana(kanji: string, kana: string): FuriganaSegment[] {
 
   const match = new RegExp(pattern).exec(toHiragana(kana));
   if (match) {
-    return segments.map((seg, idx) => ({
-      text: seg.text,
-      reading: seg.isKanji ? match[idx + 1] : undefined,
-    }));
+    return segments.map(
+      (seg, idx) => [seg.text, seg.isKanji ? match[idx + 1] : null] as FuriganaSegment,
+    );
   }
 
-  return [{ text: kanji, reading: kana }];
+  return [[kanji, kana]];
 }
 
 function RubyWord({
-  kanji,
-  kana,
+  entry,
   showFurigana,
   kanaMasked,
   onReveal,
 }: {
-  kanji: string;
-  kana: string;
+  entry: VocabEntry;
   showFurigana: boolean;
   kanaMasked: boolean;
   onReveal: () => void;
 }) {
-  const segments = useMemo(() => splitFurigana(kanji, kana), [kanji, kana]);
-  const hasKanji = segments.some((s) => s.reading !== undefined);
+  // 優先使用資料中預先算好的逐字對位，缺少時才即時切分
+  const segments = useMemo(
+    () => entry.furigana ?? splitFurigana(entry.kanji, entry.kana),
+    [entry.furigana, entry.kanji, entry.kana],
+  );
+  const hasReading = segments.some((seg) => seg[1] !== null);
 
-  if (!showFurigana || !hasKanji) {
+  if (!showFurigana || !hasReading) {
     return (
       <span lang="ja" className="text-xl font-bold">
-        {kanji}
+        {entry.kanji}
       </span>
     );
   }
@@ -432,23 +429,25 @@ function RubyWord({
         title="點擊顯示振假名"
         className="ruby-word cursor-pointer text-xl font-bold underline decoration-dashed decoration-paper-sumi/40 underline-offset-4 hover:text-level"
       >
-        {kanji}
+        {entry.kanji}
       </span>
     );
   }
 
   return (
-    <span lang="ja" className="ruby-word text-xl font-bold leading-loose">
-      {segments.map((seg, idx) =>
-        seg.reading ? (
+    <span lang="ja" className="ruby-word text-xl font-bold">
+      {segments.map(([text, reading], idx) =>
+        reading ? (
           <ruby key={idx}>
-            {seg.text}
+            {text}
             <rp>(</rp>
-            <rt>{seg.reading}</rt>
+            <rt>{reading}</rt>
             <rp>)</rp>
           </ruby>
         ) : (
-          <span key={idx}>{seg.text}</span>
+          <span key={idx} className="ruby-okurigana">
+            {text}
+          </span>
         ),
       )}
     </span>
@@ -473,8 +472,7 @@ function VocabCard({
       <div className="flex items-start justify-between gap-2">
         <p className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
           <RubyWord
-            kanji={entry.kanji}
-            kana={entry.kana}
+            entry={entry}
             showFurigana={showFurigana}
             kanaMasked={kanaMasked}
             onReveal={() => setKanaRevealed(true)}

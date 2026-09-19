@@ -1,6 +1,13 @@
 export type Level = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
 export type Section = 'grammar' | 'vocabulary' | 'quiz';
 
+/**
+ * 振假名對位的一段：[文字, 讀音]。
+ * 讀音為 null 代表這段不需要標音（送假名、助詞等非漢字部分）。
+ * 由 scripts/generate_furigana.py 離線產生，前端只負責渲染。
+ */
+export type FuriganaSegment = [string, string | null];
+
 export interface VocabularyItem {
   kanji: string;
   kana: string;
@@ -9,6 +16,8 @@ export interface VocabularyItem {
   meaning: string;
   example_ja: string;
   example_zh: string;
+  /** 逐字振假名對位資料；沒有漢字的單字不會有這個欄位 */
+  furigana?: FuriganaSegment[];
 }
 
 export interface GrammarExample {

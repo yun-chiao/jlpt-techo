@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import type { LessonSet, VocabSet } from './types';
 
+const furiganaSegmentSchema = z.tuple([z.string(), z.string().nullable()]);
+
 const vocabularyItemSchema = z.object({
   kanji: z.string(),
   kana: z.string(),
@@ -9,6 +11,7 @@ const vocabularyItemSchema = z.object({
   meaning: z.string(),
   example_ja: z.string(),
   example_zh: z.string(),
+  furigana: z.array(furiganaSegmentSchema).optional(),
 });
 
 const grammarExampleSchema = z.object({

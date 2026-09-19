@@ -104,17 +104,35 @@ body {
     box-shadow: var(--shadow-retro-lg);
   }
 
-  /* 振假名（Ruby）手帖排版 */
+  /* ── 振假名（Ruby）手帖排版 ───────────────────────────────
+     目標：連續漢字時，一眼就看出哪段假名對應哪個漢字。
+     手法：每個「漢字＋讀音」是一個 ruby 盒，盒與盒之間留空隙，
+     並在漢字底下畫一條與該字等寬的細底線，形成清楚的配對區塊。 */
+  .ruby-word {
+    /* 讀音浮在上方需要額外行高，避免被上一行壓到 */
+    line-height: 2.35;
+  }
   .ruby-word ruby {
     ruby-align: center;
     ruby-position: over;
+    /* 相鄰 ruby 之間的呼吸空間：讀音區塊因此不會黏在一起 */
+    margin-inline: 0.1em;
+    padding-inline: 0.04em;
+    /* 與該漢字等寬的底線，把「這個字」和「上面那段假名」綁在一起 */
+    border-bottom: 2px solid var(--level-tint);
   }
   .ruby-word rt {
-    font-size: 0.58em;
-    font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
-    color: rgba(43, 37, 35, 0.78);
+    font-size: 0.56em;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    /* 讀音與漢字之間留一點距離，避免視覺黏連 */
+    padding-bottom: 0.12em;
+    color: rgba(43, 37, 35, 0.72);
     user-select: none;
+  }
+  /* 送假名（不標音的部分）淡一階，凸顯「需要記讀音的是漢字」 */
+  .ruby-word .ruby-okurigana {
+    color: rgba(43, 37, 35, 0.75);
   }
 }

@@ -7,7 +7,8 @@
     "meaning": "我",
     "example_ja": "私は学生です。",
     "example_zh": "我是學生。",
-    "category": "代名詞・指示詞"
+    "category": "代名詞・指示詞",
+    "furigana": [["私", "わたし"]]
   },
   {
     "kanji": "あなた",
@@ -27,7 +28,8 @@
     "meaning": "他",
     "example_ja": "彼は日本人です。",
     "example_zh": "他是日本人。",
-    "category": "代名詞・指示詞"
+    "category": "代名詞・指示詞",
+    "furigana": [["彼", "かれ"]]
   },
   {
     "kanji": "彼女",
@@ -37,7 +39,8 @@
     "meaning": "她",
     "example_ja": "彼女は私の友達です。",
     "example_zh": "她是我的朋友。",
-    "category": "代名詞・指示詞"
+    "category": "代名詞・指示詞",
+    "furigana": [["彼", "かの"], ["女", "じょ"]]
   },
   {
     "kanji": "私たち",
@@ -47,7 +50,8 @@
     "meaning": "我們",
     "example_ja": "私たちは留学生です。",
     "example_zh": "我們是留學生。",
-    "category": "代名詞・指示詞"
+    "category": "代名詞・指示詞",
+    "furigana": [["私", "わたし"], ["たち", null]]
   },
   {
     "kanji": "皆さん",
@@ -57,7 +61,8 @@
     "meaning": "大家、各位",
     "example_ja": "皆さん、おはようございます。",
     "example_zh": "各位，早安。",
-    "category": "代名詞・指示詞"
+    "category": "代名詞・指示詞",
+    "furigana": [["皆", "みな"], ["さん", null]]
   },
   {
     "kanji": "みんな",
@@ -227,7 +232,8 @@
     "meaning": "什麼",
     "example_ja": "これは何ですか。",
     "example_zh": "這是什麼？",
-    "category": "疑問詞"
+    "category": "疑問詞",
+    "furigana": [["何", "なに／なん"]]
   },
   {
     "kanji": "誰",
@@ -237,7 +243,8 @@
     "meaning": "誰",
     "example_ja": "あの人は誰ですか。",
     "example_zh": "那個人是誰？",
-    "category": "疑問詞"
+    "category": "疑問詞",
+    "furigana": [["誰", "だれ"]]
   },
   {
     "kanji": "どなた",
@@ -447,7 +454,8 @@
     "meaning": "拜託、麻煩你",
     "example_ja": "コーヒーをお願いします。",
     "example_zh": "麻煩給我咖啡。",
-    "category": "寒暄・常用表現"
+    "category": "寒暄・常用表現",
+    "furigana": [["お", null], ["願", "ねが"], ["いします", null]]
   },
   {
     "kanji": "初めまして",
@@ -457,7 +465,8 @@
     "meaning": "初次見面",
     "example_ja": "初めまして、田中です。",
     "example_zh": "初次見面，我是田中。",
-    "category": "寒暄・常用表現"
+    "category": "寒暄・常用表現",
+    "furigana": [["初", "はじ"], ["めまして", null]]
   },
   {
     "kanji": "どうぞよろしく",
@@ -547,7 +556,8 @@
     "meaning": "你回來啦",
     "example_ja": "お帰りなさい。",
     "example_zh": "你回來啦。",
-    "category": "寒暄・常用表現"
+    "category": "寒暄・常用表現",
+    "furigana": [["お", null], ["帰", "かえ"], ["りなさい", null]]
   },
   {
     "kanji": "失礼します",
@@ -557,7 +567,8 @@
     "meaning": "打擾了、失陪了",
     "example_ja": "では、失礼します。",
     "example_zh": "那麼，我先失陪了。",
-    "category": "寒暄・常用表現"
+    "category": "寒暄・常用表現",
+    "furigana": [["失", "しつ"], ["礼", "れい"], ["します", null]]
   },
   {
     "kanji": "もしもし",
@@ -577,7 +588,8 @@
     "meaning": "你好嗎？",
     "example_ja": "皆さん、お元気ですか。",
     "example_zh": "大家都好嗎？",
-    "category": "寒暄・常用表現"
+    "category": "寒暄・常用表現",
+    "furigana": [["お", null], ["元", "げん"], ["気", "き"], ["ですか", null]]
   },
   {
     "kanji": "大丈夫",
@@ -587,7 +599,8 @@
     "meaning": "沒問題、不要緊",
     "example_ja": "大丈夫ですか。",
     "example_zh": "你還好嗎？",
-    "category": "寒暄・常用表現"
+    "category": "寒暄・常用表現",
+    "furigana": [["大", "だい"], ["丈", "じょう"], ["夫", "ぶ"]]
   },
   {
     "kanji": "零／ゼロ",
@@ -597,7 +610,8 @@
     "meaning": "零",
     "example_ja": "電話番号は零三の……です。",
     "example_zh": "電話號碼是 03-……。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["零", "れい"], ["／ゼロ", null]]
   },
   {
     "kanji": "一",
@@ -607,7 +621,8 @@
     "meaning": "一",
     "example_ja": "一から十まで数えます。",
     "example_zh": "從一數到十。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["一", "いち"]]
   },
   {
     "kanji": "二",
@@ -617,7 +632,8 @@
     "meaning": "二",
     "example_ja": "二番の出口です。",
     "example_zh": "是二號出口。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["二", "に"]]
   },
   {
     "kanji": "三",
@@ -627,7 +643,8 @@
     "meaning": "三",
     "example_ja": "三人で行きます。",
     "example_zh": "三個人一起去。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["三", "さん"]]
   },
   {
     "kanji": "四",
@@ -637,7 +654,8 @@
     "meaning": "四",
     "example_ja": "四時に会いましょう。",
     "example_zh": "四點見吧。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["四", "し／よん"]]
   },
   {
     "kanji": "五",
@@ -647,7 +665,8 @@
     "meaning": "五",
     "example_ja": "五分待ってください。",
     "example_zh": "請等五分鐘。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["五", "ご"]]
   },
   {
     "kanji": "六",
@@ -657,7 +676,8 @@
     "meaning": "六",
     "example_ja": "六時に起きます。",
     "example_zh": "六點起床。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["六", "ろく"]]
   },
   {
     "kanji": "七",
@@ -667,7 +687,8 @@
     "meaning": "七",
     "example_ja": "七時に帰ります。",
     "example_zh": "七點回家。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["七", "しち／なな"]]
   },
   {
     "kanji": "八",
@@ -677,7 +698,8 @@
     "meaning": "八",
     "example_ja": "八階へ行きます。",
     "example_zh": "去八樓。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["八", "はち"]]
   },
   {
     "kanji": "九",
@@ -687,7 +709,8 @@
     "meaning": "九",
     "example_ja": "九時から授業です。",
     "example_zh": "九點開始上課。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["九", "きゅう／く"]]
   },
   {
     "kanji": "十",
@@ -697,7 +720,8 @@
     "meaning": "十",
     "example_ja": "十人の学生がいます。",
     "example_zh": "有十位學生。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["十", "じゅう"]]
   },
   {
     "kanji": "百",
@@ -707,7 +731,8 @@
     "meaning": "百",
     "example_ja": "百円のパンを買いました。",
     "example_zh": "買了一百日圓的麵包。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["百", "ひゃく"]]
   },
   {
     "kanji": "千",
@@ -717,7 +742,8 @@
     "meaning": "千",
     "example_ja": "千円札があります。",
     "example_zh": "有一千日圓紙鈔。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["千", "せん"]]
   },
   {
     "kanji": "万",
@@ -727,7 +753,8 @@
     "meaning": "萬",
     "example_ja": "一万円です。",
     "example_zh": "是一萬日圓。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["万", "まん"]]
   },
   {
     "kanji": "一つ",
@@ -737,7 +764,8 @@
     "meaning": "一個",
     "example_ja": "りんごを一つください。",
     "example_zh": "請給我一個蘋果。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["一", "ひと"], ["つ", null]]
   },
   {
     "kanji": "二つ",
@@ -747,7 +775,8 @@
     "meaning": "兩個",
     "example_ja": "卵を二つ使います。",
     "example_zh": "用兩顆蛋。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["二", "ふた"], ["つ", null]]
   },
   {
     "kanji": "三つ",
@@ -757,7 +786,8 @@
     "meaning": "三個",
     "example_ja": "箱が三つあります。",
     "example_zh": "有三個箱子。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["三", "みっ"], ["つ", null]]
   },
   {
     "kanji": "四つ",
@@ -767,7 +797,8 @@
     "meaning": "四個",
     "example_ja": "椅子が四つあります。",
     "example_zh": "有四張椅子。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["四", "よっ"], ["つ", null]]
   },
   {
     "kanji": "五つ",
@@ -777,7 +808,8 @@
     "meaning": "五個",
     "example_ja": "みかんを五つ買いました。",
     "example_zh": "買了五個橘子。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["五", "いつ"], ["つ", null]]
   },
   {
     "kanji": "六つ",
@@ -787,7 +819,8 @@
     "meaning": "六個",
     "example_ja": "お菓子が六つあります。",
     "example_zh": "有六個點心。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["六", "むっ"], ["つ", null]]
   },
   {
     "kanji": "七つ",
@@ -797,7 +830,8 @@
     "meaning": "七個",
     "example_ja": "コップが七つあります。",
     "example_zh": "有七個杯子。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["七", "なな"], ["つ", null]]
   },
   {
     "kanji": "八つ",
@@ -807,7 +841,8 @@
     "meaning": "八個",
     "example_ja": "お皿が八つあります。",
     "example_zh": "有八個盤子。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["八", "やっ"], ["つ", null]]
   },
   {
     "kanji": "九つ",
@@ -817,7 +852,8 @@
     "meaning": "九個",
     "example_ja": "石が九つあります。",
     "example_zh": "有九顆石頭。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["九", "ここの"], ["つ", null]]
   },
   {
     "kanji": "十",
@@ -827,7 +863,8 @@
     "meaning": "十個",
     "example_ja": "卵を十ください。",
     "example_zh": "請給我十顆蛋。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["十", "とお"]]
   },
   {
     "kanji": "～人",
@@ -837,7 +874,8 @@
     "meaning": "～人（一人ひとり、二人ふたり為特殊讀音）",
     "example_ja": "家族は四人です。",
     "example_zh": "家裡有四個人。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["人", "にん"]]
   },
   {
     "kanji": "～歳",
@@ -847,7 +885,8 @@
     "meaning": "～歲",
     "example_ja": "私は二十歳です。",
     "example_zh": "我二十歲。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["歳", "さい"]]
   },
   {
     "kanji": "～円",
@@ -857,7 +896,8 @@
     "meaning": "～日圓",
     "example_ja": "これは五百円です。",
     "example_zh": "這個五百日圓。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["円", "えん"]]
   },
   {
     "kanji": "～番",
@@ -867,7 +907,8 @@
     "meaning": "～號",
     "example_ja": "三番の窓口へ行ってください。",
     "example_zh": "請到三號窗口。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["番", "ばん"]]
   },
   {
     "kanji": "～回",
@@ -877,7 +918,8 @@
     "meaning": "～次",
     "example_ja": "週に二回テニスをします。",
     "example_zh": "一週打兩次網球。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["回", "かい"]]
   },
   {
     "kanji": "～階",
@@ -887,7 +929,8 @@
     "meaning": "～樓",
     "example_ja": "本屋は五階にあります。",
     "example_zh": "書店在五樓。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["階", "かい"]]
   },
   {
     "kanji": "～個",
@@ -897,7 +940,8 @@
     "meaning": "～個",
     "example_ja": "卵を三個ください。",
     "example_zh": "請給我三顆蛋。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["個", "こ"]]
   },
   {
     "kanji": "～枚",
@@ -907,7 +951,8 @@
     "meaning": "～張、～件（薄平物）",
     "example_ja": "切手を二枚買いました。",
     "example_zh": "買了兩張郵票。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["枚", "まい"]]
   },
   {
     "kanji": "～台",
@@ -917,7 +962,8 @@
     "meaning": "～台（機器、車輛）",
     "example_ja": "車が二台あります。",
     "example_zh": "有兩台車。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["台", "だい"]]
   },
   {
     "kanji": "～冊",
@@ -927,7 +973,8 @@
     "meaning": "～本（書籍）",
     "example_ja": "ノートを三冊買いました。",
     "example_zh": "買了三本筆記本。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["冊", "さつ"]]
   },
   {
     "kanji": "～本",
@@ -937,7 +984,8 @@
     "meaning": "～枝、～瓶（細長物）",
     "example_ja": "ビールを二本飲みました。",
     "example_zh": "喝了兩瓶啤酒。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["本", "ほん"]]
   },
   {
     "kanji": "～杯",
@@ -947,7 +995,8 @@
     "meaning": "～杯",
     "example_ja": "コーヒーを一杯ください。",
     "example_zh": "請給我一杯咖啡。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["杯", "はい"]]
   },
   {
     "kanji": "～匹",
@@ -957,7 +1006,8 @@
     "meaning": "～隻（小動物）",
     "example_ja": "猫が二匹います。",
     "example_zh": "有兩隻貓。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["～", null], ["匹", "ひき"]]
   },
   {
     "kanji": "～ページ",
@@ -977,7 +1027,8 @@
     "meaning": "一半",
     "example_ja": "パンを半分食べました。",
     "example_zh": "吃了一半的麵包。",
-    "category": "數字・量詞"
+    "category": "數字・量詞",
+    "furigana": [["半", "はん"], ["分", "ぶん"]]
   },
   {
     "kanji": "今",
@@ -987,7 +1038,8 @@
     "meaning": "現在",
     "example_ja": "今、何時ですか。",
     "example_zh": "現在幾點？",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今", "いま"]]
   },
   {
     "kanji": "～時",
@@ -997,7 +1049,8 @@
     "meaning": "～點（鐘）",
     "example_ja": "今、三時です。",
     "example_zh": "現在三點。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～", null], ["時", "じ"]]
   },
   {
     "kanji": "～分",
@@ -1007,7 +1060,8 @@
     "meaning": "～分（鐘）",
     "example_ja": "九時十五分に始まります。",
     "example_zh": "九點十五分開始。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～", null], ["分", "ふん／ぷん"]]
   },
   {
     "kanji": "半",
@@ -1017,7 +1071,8 @@
     "meaning": "半（三十分）",
     "example_ja": "七時半に起きます。",
     "example_zh": "七點半起床。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["半", "はん"]]
   },
   {
     "kanji": "時間",
@@ -1027,7 +1082,8 @@
     "meaning": "時間；～小時",
     "example_ja": "時間がありません。",
     "example_zh": "沒有時間。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["時", "じ"], ["間", "かん"]]
   },
   {
     "kanji": "今日",
@@ -1037,7 +1093,8 @@
     "meaning": "今天",
     "example_ja": "今日はいい天気です。",
     "example_zh": "今天天氣很好。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今日", "きょう"]]
   },
   {
     "kanji": "明日",
@@ -1047,7 +1104,8 @@
     "meaning": "明天",
     "example_ja": "明日、学校へ行きます。",
     "example_zh": "明天去學校。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["明日", "あした"]]
   },
   {
     "kanji": "昨日",
@@ -1057,7 +1115,8 @@
     "meaning": "昨天",
     "example_ja": "昨日は雨でした。",
     "example_zh": "昨天下雨。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["昨日", "きのう"]]
   },
   {
     "kanji": "おととい",
@@ -1087,7 +1146,8 @@
     "meaning": "每天",
     "example_ja": "毎日日本語を勉強します。",
     "example_zh": "每天學日文。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["毎", "まい"], ["日", "にち"]]
   },
   {
     "kanji": "毎朝",
@@ -1097,7 +1157,8 @@
     "meaning": "每天早上",
     "example_ja": "毎朝コーヒーを飲みます。",
     "example_zh": "每天早上喝咖啡。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["毎", "まい"], ["朝", "あさ"]]
   },
   {
     "kanji": "毎晩",
@@ -1107,7 +1168,8 @@
     "meaning": "每天晚上",
     "example_ja": "毎晩十一時に寝ます。",
     "example_zh": "每晚十一點睡覺。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["毎", "まい"], ["晩", "ばん"]]
   },
   {
     "kanji": "毎週",
@@ -1117,7 +1179,8 @@
     "meaning": "每週",
     "example_ja": "毎週日曜日に掃除をします。",
     "example_zh": "每週日打掃。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["毎", "まい"], ["週", "しゅう"]]
   },
   {
     "kanji": "朝",
@@ -1127,7 +1190,8 @@
     "meaning": "早上",
     "example_ja": "朝、パンを食べます。",
     "example_zh": "早上吃麵包。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["朝", "あさ"]]
   },
   {
     "kanji": "昼",
@@ -1137,7 +1201,8 @@
     "meaning": "中午、白天",
     "example_ja": "昼に友達と会います。",
     "example_zh": "中午和朋友見面。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["昼", "ひる"]]
   },
   {
     "kanji": "夜",
@@ -1147,7 +1212,8 @@
     "meaning": "晚上、夜裡",
     "example_ja": "夜、本を読みます。",
     "example_zh": "晚上看書。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["夜", "よる"]]
   },
   {
     "kanji": "晩",
@@ -1157,7 +1223,8 @@
     "meaning": "晚上",
     "example_ja": "晩ご飯を作ります。",
     "example_zh": "做晚飯。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["晩", "ばん"]]
   },
   {
     "kanji": "午前",
@@ -1167,7 +1234,8 @@
     "meaning": "上午",
     "example_ja": "午前九時に来てください。",
     "example_zh": "請上午九點來。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["午", "ご"], ["前", "ぜん"]]
   },
   {
     "kanji": "午後",
@@ -1177,7 +1245,8 @@
     "meaning": "下午",
     "example_ja": "午後、図書館へ行きます。",
     "example_zh": "下午去圖書館。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["午", "ご"], ["後", "ご"]]
   },
   {
     "kanji": "夕方",
@@ -1187,7 +1256,8 @@
     "meaning": "傍晚",
     "example_ja": "夕方、散歩します。",
     "example_zh": "傍晚散步。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["夕", "ゆう"], ["方", "がた"]]
   },
   {
     "kanji": "今朝",
@@ -1197,7 +1267,8 @@
     "meaning": "今天早上",
     "example_ja": "今朝、何を食べましたか。",
     "example_zh": "今天早上吃了什麼？",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今朝", "けさ"]]
   },
   {
     "kanji": "今晩",
@@ -1207,7 +1278,8 @@
     "meaning": "今晚",
     "example_ja": "今晩、電話します。",
     "example_zh": "今晚打電話。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今", "こん"], ["晩", "ばん"]]
   },
   {
     "kanji": "今週",
@@ -1217,7 +1289,8 @@
     "meaning": "這週",
     "example_ja": "今週は忙しいです。",
     "example_zh": "這週很忙。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今", "こん"], ["週", "しゅう"]]
   },
   {
     "kanji": "先週",
@@ -1227,7 +1300,8 @@
     "meaning": "上週",
     "example_ja": "先週、京都へ行きました。",
     "example_zh": "上週去了京都。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["先", "せん"], ["週", "しゅう"]]
   },
   {
     "kanji": "来週",
@@ -1237,7 +1311,8 @@
     "meaning": "下週",
     "example_ja": "来週、テストがあります。",
     "example_zh": "下週有考試。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["来", "らい"], ["週", "しゅう"]]
   },
   {
     "kanji": "今月",
@@ -1247,7 +1322,8 @@
     "meaning": "這個月",
     "example_ja": "今月は仕事が多いです。",
     "example_zh": "這個月工作很多。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今", "こん"], ["月", "げつ"]]
   },
   {
     "kanji": "先月",
@@ -1257,7 +1333,8 @@
     "meaning": "上個月",
     "example_ja": "先月、日本へ来ました。",
     "example_zh": "上個月來到日本。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["先", "せん"], ["月", "げつ"]]
   },
   {
     "kanji": "来月",
@@ -1267,7 +1344,8 @@
     "meaning": "下個月",
     "example_ja": "来月、国へ帰ります。",
     "example_zh": "下個月回國。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["来", "らい"], ["月", "げつ"]]
   },
   {
     "kanji": "今年",
@@ -1277,7 +1355,8 @@
     "meaning": "今年",
     "example_ja": "今年、二十歳になります。",
     "example_zh": "今年滿二十歲。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["今年", "ことし"]]
   },
   {
     "kanji": "去年",
@@ -1287,7 +1366,8 @@
     "meaning": "去年",
     "example_ja": "去年の夏は暑かったです。",
     "example_zh": "去年夏天很熱。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["去", "きょ"], ["年", "ねん"]]
   },
   {
     "kanji": "来年",
@@ -1297,7 +1377,8 @@
     "meaning": "明年",
     "example_ja": "来年、結婚します。",
     "example_zh": "明年結婚。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["来", "らい"], ["年", "ねん"]]
   },
   {
     "kanji": "～年",
@@ -1307,7 +1388,8 @@
     "meaning": "～年",
     "example_ja": "日本に三年住んでいます。",
     "example_zh": "在日本住了三年。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～", null], ["年", "ねん"]]
   },
   {
     "kanji": "～月",
@@ -1317,7 +1399,8 @@
     "meaning": "～月（四月しがつ、七月しちがつ、九月くがつ）",
     "example_ja": "誕生日は五月です。",
     "example_zh": "生日在五月。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～", null], ["月", "がつ"]]
   },
   {
     "kanji": "～日",
@@ -1327,7 +1410,8 @@
     "meaning": "～日、～號（一日ついたち等特殊讀音）",
     "example_ja": "十日に会いましょう。",
     "example_zh": "十號見面吧。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～", null], ["日", "にち"]]
   },
   {
     "kanji": "～週間",
@@ -1337,7 +1421,8 @@
     "meaning": "～週、～個星期",
     "example_ja": "一週間休みました。",
     "example_zh": "休息了一個星期。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～", null], ["週", "しゅう"], ["間", "かん"]]
   },
   {
     "kanji": "～か月",
@@ -1347,7 +1432,8 @@
     "meaning": "～個月",
     "example_ja": "三か月日本語を勉強しました。",
     "example_zh": "學了三個月日文。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["～か", null], ["月", "げつ"]]
   },
   {
     "kanji": "月曜日",
@@ -1357,7 +1443,8 @@
     "meaning": "星期一",
     "example_ja": "月曜日から働きます。",
     "example_zh": "從星期一開始工作。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["月", "げつ"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "火曜日",
@@ -1367,7 +1454,8 @@
     "meaning": "星期二",
     "example_ja": "火曜日にテストがあります。",
     "example_zh": "星期二有考試。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["火", "か"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "水曜日",
@@ -1377,7 +1465,8 @@
     "meaning": "星期三",
     "example_ja": "水曜日は暇です。",
     "example_zh": "星期三有空。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["水", "すい"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "木曜日",
@@ -1387,7 +1476,8 @@
     "meaning": "星期四",
     "example_ja": "木曜日に映画を見ます。",
     "example_zh": "星期四看電影。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["木", "もく"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "金曜日",
@@ -1397,7 +1487,8 @@
     "meaning": "星期五",
     "example_ja": "金曜日の夜は楽しいです。",
     "example_zh": "星期五的晚上很開心。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["金", "きん"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "土曜日",
@@ -1407,7 +1498,8 @@
     "meaning": "星期六",
     "example_ja": "土曜日に買い物します。",
     "example_zh": "星期六去買東西。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["土", "ど"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "日曜日",
@@ -1417,7 +1509,8 @@
     "meaning": "星期日",
     "example_ja": "日曜日は働きません。",
     "example_zh": "星期日不工作。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["日", "にち"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "何曜日",
@@ -1427,7 +1520,8 @@
     "meaning": "星期幾",
     "example_ja": "今日は何曜日ですか。",
     "example_zh": "今天星期幾？",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["何", "なん"], ["曜", "よう"], ["日", "び"]]
   },
   {
     "kanji": "誕生日",
@@ -1437,7 +1531,8 @@
     "meaning": "生日",
     "example_ja": "誕生日おめでとうございます。",
     "example_zh": "生日快樂。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["誕", "たん"], ["生", "じょう"], ["日", "び"]]
   },
   {
     "kanji": "休み",
@@ -1447,7 +1542,8 @@
     "meaning": "休息、休假",
     "example_ja": "明日は休みです。",
     "example_zh": "明天放假。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["休", "やす"], ["み", null]]
   },
   {
     "kanji": "夏休み",
@@ -1457,7 +1553,8 @@
     "meaning": "暑假",
     "example_ja": "夏休みに海へ行きます。",
     "example_zh": "暑假去海邊。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["夏", "なつ"], ["休", "やす"], ["み", null]]
   },
   {
     "kanji": "春",
@@ -1467,7 +1564,8 @@
     "meaning": "春天",
     "example_ja": "春に桜が咲きます。",
     "example_zh": "春天櫻花開。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["春", "はる"]]
   },
   {
     "kanji": "夏",
@@ -1477,7 +1575,8 @@
     "meaning": "夏天",
     "example_ja": "夏は暑いです。",
     "example_zh": "夏天很熱。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["夏", "なつ"]]
   },
   {
     "kanji": "秋",
@@ -1487,7 +1586,8 @@
     "meaning": "秋天",
     "example_ja": "秋は涼しいです。",
     "example_zh": "秋天很涼爽。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["秋", "あき"]]
   },
   {
     "kanji": "冬",
@@ -1497,7 +1597,8 @@
     "meaning": "冬天",
     "example_ja": "冬に雪が降ります。",
     "example_zh": "冬天下雪。",
-    "category": "時間・日期"
+    "category": "時間・日期",
+    "furigana": [["冬", "ふゆ"]]
   },
   {
     "kanji": "人",
@@ -1507,7 +1608,8 @@
     "meaning": "人",
     "example_ja": "あの人は誰ですか。",
     "example_zh": "那個人是誰？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["人", "ひと"]]
   },
   {
     "kanji": "家族",
@@ -1517,7 +1619,8 @@
     "meaning": "家人、家族",
     "example_ja": "家族は五人です。",
     "example_zh": "家裡有五個人。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["家", "か"], ["族", "ぞく"]]
   },
   {
     "kanji": "両親",
@@ -1527,7 +1630,8 @@
     "meaning": "父母、雙親",
     "example_ja": "両親は台湾にいます。",
     "example_zh": "父母在台灣。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["両", "りょう"], ["親", "しん"]]
   },
   {
     "kanji": "父",
@@ -1537,7 +1641,8 @@
     "meaning": "（自己的）父親",
     "example_ja": "父は会社員です。",
     "example_zh": "我父親是公司職員。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["父", "ちち"]]
   },
   {
     "kanji": "母",
@@ -1547,7 +1652,8 @@
     "meaning": "（自己的）母親",
     "example_ja": "母は料理が上手です。",
     "example_zh": "我母親很會做菜。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["母", "はは"]]
   },
   {
     "kanji": "お父さん",
@@ -1557,7 +1663,8 @@
     "meaning": "父親（稱呼別人的或叫自己爸爸）",
     "example_ja": "お父さんはお元気ですか。",
     "example_zh": "令尊身體好嗎？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["お", null], ["父", "とう"], ["さん", null]]
   },
   {
     "kanji": "お母さん",
@@ -1567,7 +1674,8 @@
     "meaning": "母親（稱呼別人的或叫自己媽媽）",
     "example_ja": "お母さんは何歳ですか。",
     "example_zh": "令堂幾歲？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["お", null], ["母", "かあ"], ["さん", null]]
   },
   {
     "kanji": "兄",
@@ -1577,7 +1685,8 @@
     "meaning": "（自己的）哥哥",
     "example_ja": "兄は東京にいます。",
     "example_zh": "我哥哥在東京。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["兄", "あに"]]
   },
   {
     "kanji": "お兄さん",
@@ -1587,7 +1696,8 @@
     "meaning": "哥哥（稱呼別人的）",
     "example_ja": "お兄さんは学生ですか。",
     "example_zh": "你哥哥是學生嗎？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["お", null], ["兄", "にい"], ["さん", null]]
   },
   {
     "kanji": "姉",
@@ -1597,7 +1707,8 @@
     "meaning": "（自己的）姊姊",
     "example_ja": "姉は医者です。",
     "example_zh": "我姊姊是醫生。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["姉", "あね"]]
   },
   {
     "kanji": "お姉さん",
@@ -1607,7 +1718,8 @@
     "meaning": "姊姊（稱呼別人的）",
     "example_ja": "お姉さんはきれいですね。",
     "example_zh": "你姊姊真漂亮。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["お", null], ["姉", "ねえ"], ["さん", null]]
   },
   {
     "kanji": "弟",
@@ -1617,7 +1729,8 @@
     "meaning": "弟弟",
     "example_ja": "弟は高校生です。",
     "example_zh": "我弟弟是高中生。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["弟", "おとうと"]]
   },
   {
     "kanji": "妹",
@@ -1627,7 +1740,8 @@
     "meaning": "妹妹",
     "example_ja": "妹は歌が好きです。",
     "example_zh": "我妹妹喜歡唱歌。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["妹", "いもうと"]]
   },
   {
     "kanji": "兄弟",
@@ -1637,7 +1751,8 @@
     "meaning": "兄弟姊妹",
     "example_ja": "兄弟がいますか。",
     "example_zh": "你有兄弟姊妹嗎？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["兄弟", "きょうだい"]]
   },
   {
     "kanji": "おじいさん",
@@ -1687,7 +1802,8 @@
     "meaning": "（別人的）先生、丈夫",
     "example_ja": "ご主人はお元気ですか。",
     "example_zh": "您先生好嗎？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["ご", null], ["主", "しゅ"], ["人", "じん"]]
   },
   {
     "kanji": "奥さん",
@@ -1697,7 +1813,8 @@
     "meaning": "（別人的）太太、夫人",
     "example_ja": "奥さんは親切な人です。",
     "example_zh": "他太太是親切的人。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["奥", "おく"], ["さん", null]]
   },
   {
     "kanji": "子ども",
@@ -1707,7 +1824,8 @@
     "meaning": "小孩",
     "example_ja": "公園に子どもがいます。",
     "example_zh": "公園裡有小孩。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["子", "こ"], ["ども", null]]
   },
   {
     "kanji": "大人",
@@ -1717,7 +1835,8 @@
     "meaning": "大人",
     "example_ja": "大人は千円、子どもは五百円です。",
     "example_zh": "大人一千日圓，小孩五百日圓。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["大人", "おとな"]]
   },
   {
     "kanji": "男",
@@ -1727,7 +1846,8 @@
     "meaning": "男性",
     "example_ja": "男の声が聞こえます。",
     "example_zh": "聽得到男人的聲音。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["男", "おとこ"]]
   },
   {
     "kanji": "女",
@@ -1737,7 +1857,8 @@
     "meaning": "女性",
     "example_ja": "女の人が立っています。",
     "example_zh": "有位女性站著。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["女", "おんな"]]
   },
   {
     "kanji": "男の子",
@@ -1747,7 +1868,8 @@
     "meaning": "男孩",
     "example_ja": "男の子が走っています。",
     "example_zh": "男孩在跑步。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["男", "おとこ"], ["の", null], ["子", "こ"]]
   },
   {
     "kanji": "女の子",
@@ -1757,7 +1879,8 @@
     "meaning": "女孩",
     "example_ja": "女の子が歌っています。",
     "example_zh": "女孩在唱歌。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["女", "おんな"], ["の", null], ["子", "こ"]]
   },
   {
     "kanji": "友達",
@@ -1767,7 +1890,8 @@
     "meaning": "朋友",
     "example_ja": "友達と旅行します。",
     "example_zh": "和朋友去旅行。",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["友", "とも"], ["達", "だち"]]
   },
   {
     "kanji": "名前",
@@ -1777,7 +1901,8 @@
     "meaning": "名字",
     "example_ja": "お名前は何ですか。",
     "example_zh": "您叫什麼名字？",
-    "category": "人・家族"
+    "category": "人・家族",
+    "furigana": [["名", "な"], ["前", "まえ"]]
   },
   {
     "kanji": "～さん",
@@ -1797,7 +1922,8 @@
     "meaning": "老師",
     "example_ja": "先生に質問します。",
     "example_zh": "向老師提問。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["先", "せん"], ["生", "せい"]]
   },
   {
     "kanji": "学生",
@@ -1807,7 +1933,8 @@
     "meaning": "學生",
     "example_ja": "私は大学の学生です。",
     "example_zh": "我是大學生。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["学", "がく"], ["生", "せい"]]
   },
   {
     "kanji": "生徒",
@@ -1817,7 +1944,8 @@
     "meaning": "（中小學）學生",
     "example_ja": "このクラスの生徒は三十人です。",
     "example_zh": "這個班有三十位學生。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["生", "せい"], ["徒", "と"]]
   },
   {
     "kanji": "留学生",
@@ -1827,7 +1955,8 @@
     "meaning": "留學生",
     "example_ja": "彼は台湾の留学生です。",
     "example_zh": "他是來自台灣的留學生。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["留", "りゅう"], ["学", "がく"], ["生", "せい"]]
   },
   {
     "kanji": "医者",
@@ -1837,7 +1966,8 @@
     "meaning": "醫生",
     "example_ja": "医者になりたいです。",
     "example_zh": "想成為醫生。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["医", "い"], ["者", "しゃ"]]
   },
   {
     "kanji": "会社員",
@@ -1847,7 +1977,8 @@
     "meaning": "公司職員",
     "example_ja": "父は会社員です。",
     "example_zh": "我父親是公司職員。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["会", "かい"], ["社", "しゃ"], ["員", "いん"]]
   },
   {
     "kanji": "お巡りさん",
@@ -1857,7 +1988,8 @@
     "meaning": "警察（口語）",
     "example_ja": "お巡りさんに道を聞きました。",
     "example_zh": "向警察問路。",
-    "category": "職業・身分"
+    "category": "職業・身分",
+    "furigana": [["お", null], ["巡", "まわ"], ["りさん", null]]
   },
   {
     "kanji": "体",
@@ -1867,7 +1999,8 @@
     "meaning": "身體",
     "example_ja": "体に気をつけてください。",
     "example_zh": "請注意身體。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["体", "からだ"]]
   },
   {
     "kanji": "頭",
@@ -1877,7 +2010,8 @@
     "meaning": "頭；頭腦",
     "example_ja": "頭が痛いです。",
     "example_zh": "頭很痛。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["頭", "あたま"]]
   },
   {
     "kanji": "顔",
@@ -1887,7 +2021,8 @@
     "meaning": "臉",
     "example_ja": "朝、顔を洗います。",
     "example_zh": "早上洗臉。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["顔", "かお"]]
   },
   {
     "kanji": "目",
@@ -1897,7 +2032,8 @@
     "meaning": "眼睛",
     "example_ja": "目が大きいですね。",
     "example_zh": "眼睛真大。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["目", "め"]]
   },
   {
     "kanji": "耳",
@@ -1907,7 +2043,8 @@
     "meaning": "耳朵",
     "example_ja": "うさぎは耳が長いです。",
     "example_zh": "兔子耳朵很長。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["耳", "みみ"]]
   },
   {
     "kanji": "鼻",
@@ -1917,7 +2054,8 @@
     "meaning": "鼻子",
     "example_ja": "象は鼻が長いです。",
     "example_zh": "大象鼻子很長。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["鼻", "はな"]]
   },
   {
     "kanji": "口",
@@ -1927,7 +2065,8 @@
     "meaning": "嘴巴",
     "example_ja": "口を開けてください。",
     "example_zh": "請張開嘴。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["口", "くち"]]
   },
   {
     "kanji": "歯",
@@ -1937,7 +2076,8 @@
     "meaning": "牙齒",
     "example_ja": "毎晩、歯を磨きます。",
     "example_zh": "每晚刷牙。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["歯", "は"]]
   },
   {
     "kanji": "手",
@@ -1947,7 +2087,8 @@
     "meaning": "手",
     "example_ja": "手を洗ってください。",
     "example_zh": "請洗手。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["手", "て"]]
   },
   {
     "kanji": "足",
@@ -1957,7 +2098,8 @@
     "meaning": "腳、腿",
     "example_ja": "足が疲れました。",
     "example_zh": "腳很累。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["足", "あし"]]
   },
   {
     "kanji": "お腹",
@@ -1967,7 +2109,8 @@
     "meaning": "肚子",
     "example_ja": "お腹が空きました。",
     "example_zh": "肚子餓了。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["お", null], ["腹", "なか"]]
   },
   {
     "kanji": "背",
@@ -1977,7 +2120,8 @@
     "meaning": "身高；背",
     "example_ja": "彼は背が高いです。",
     "example_zh": "他個子很高。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["背", "せ"]]
   },
   {
     "kanji": "声",
@@ -1987,7 +2131,8 @@
     "meaning": "（人的）聲音",
     "example_ja": "大きい声で読んでください。",
     "example_zh": "請大聲讀。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["声", "こえ"]]
   },
   {
     "kanji": "病気",
@@ -1997,7 +2142,8 @@
     "meaning": "生病、疾病",
     "example_ja": "病気で学校を休みました。",
     "example_zh": "因為生病沒去學校。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["病", "びょう"], ["気", "き"]]
   },
   {
     "kanji": "風邪",
@@ -2007,7 +2153,8 @@
     "meaning": "感冒",
     "example_ja": "風邪を引きました。",
     "example_zh": "感冒了。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["風邪", "かぜ"]]
   },
   {
     "kanji": "熱",
@@ -2017,7 +2164,8 @@
     "meaning": "發燒；熱度",
     "example_ja": "熱があります。",
     "example_zh": "發燒了。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["熱", "ねつ"]]
   },
   {
     "kanji": "薬",
@@ -2027,7 +2175,8 @@
     "meaning": "藥",
     "example_ja": "薬を飲んでください。",
     "example_zh": "請吃藥。",
-    "category": "身體・健康"
+    "category": "身體・健康",
+    "furigana": [["薬", "くすり"]]
   },
   {
     "kanji": "食べ物",
@@ -2037,7 +2186,8 @@
     "meaning": "食物",
     "example_ja": "好きな食べ物は何ですか。",
     "example_zh": "喜歡的食物是什麼？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["食", "た"], ["べ", null], ["物", "もの"]]
   },
   {
     "kanji": "飲み物",
@@ -2047,7 +2197,8 @@
     "meaning": "飲料",
     "example_ja": "飲み物は何がいいですか。",
     "example_zh": "飲料要什麼好呢？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["飲", "の"], ["み", null], ["物", "もの"]]
   },
   {
     "kanji": "ご飯",
@@ -2057,7 +2208,8 @@
     "meaning": "飯；米飯",
     "example_ja": "ご飯を食べましょう。",
     "example_zh": "吃飯吧。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["ご", null], ["飯", "はん"]]
   },
   {
     "kanji": "朝ご飯",
@@ -2067,7 +2219,8 @@
     "meaning": "早餐",
     "example_ja": "朝ご飯を食べましたか。",
     "example_zh": "吃早餐了嗎？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["朝", "あさ"], ["ご", null], ["飯", "はん"]]
   },
   {
     "kanji": "昼ご飯",
@@ -2077,7 +2230,8 @@
     "meaning": "午餐",
     "example_ja": "昼ご飯は何を食べますか。",
     "example_zh": "午餐要吃什麼？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["昼", "ひる"], ["ご", null], ["飯", "はん"]]
   },
   {
     "kanji": "晩ご飯",
@@ -2087,7 +2241,8 @@
     "meaning": "晚餐",
     "example_ja": "晩ご飯を作ります。",
     "example_zh": "做晚餐。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["晩", "ばん"], ["ご", null], ["飯", "はん"]]
   },
   {
     "kanji": "パン",
@@ -2107,7 +2262,8 @@
     "meaning": "蛋",
     "example_ja": "卵を三つ買いました。",
     "example_zh": "買了三顆蛋。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["卵", "たまご"]]
   },
   {
     "kanji": "肉",
@@ -2117,7 +2273,8 @@
     "meaning": "肉",
     "example_ja": "肉と野菜を買います。",
     "example_zh": "買肉和蔬菜。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["肉", "にく"]]
   },
   {
     "kanji": "鶏肉",
@@ -2127,7 +2284,8 @@
     "meaning": "雞肉",
     "example_ja": "鶏肉のカレーが好きです。",
     "example_zh": "喜歡雞肉咖哩。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["鶏", "とり"], ["肉", "にく"]]
   },
   {
     "kanji": "豚肉",
@@ -2137,7 +2295,8 @@
     "meaning": "豬肉",
     "example_ja": "豚肉を五百グラムください。",
     "example_zh": "請給我五百克豬肉。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["豚", "ぶた"], ["肉", "にく"]]
   },
   {
     "kanji": "牛肉",
@@ -2147,7 +2306,8 @@
     "meaning": "牛肉",
     "example_ja": "牛肉は高いです。",
     "example_zh": "牛肉很貴。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["牛", "ぎゅう"], ["肉", "にく"]]
   },
   {
     "kanji": "魚",
@@ -2157,7 +2317,8 @@
     "meaning": "魚",
     "example_ja": "魚が好きです。",
     "example_zh": "喜歡吃魚。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["魚", "さかな"]]
   },
   {
     "kanji": "野菜",
@@ -2167,7 +2328,8 @@
     "meaning": "蔬菜",
     "example_ja": "野菜をたくさん食べてください。",
     "example_zh": "請多吃蔬菜。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["野", "や"], ["菜", "さい"]]
   },
   {
     "kanji": "果物",
@@ -2177,7 +2339,8 @@
     "meaning": "水果",
     "example_ja": "果物の中でりんごが一番好きです。",
     "example_zh": "水果當中最喜歡蘋果。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["果物", "くだもの"]]
   },
   {
     "kanji": "りんご",
@@ -2207,7 +2370,8 @@
     "meaning": "水",
     "example_ja": "水をください。",
     "example_zh": "請給我水。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["水", "みず"]]
   },
   {
     "kanji": "お茶",
@@ -2217,7 +2381,8 @@
     "meaning": "茶",
     "example_ja": "お茶を飲みませんか。",
     "example_zh": "要不要喝茶？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["お", null], ["茶", "ちゃ"]]
   },
   {
     "kanji": "紅茶",
@@ -2227,7 +2392,8 @@
     "meaning": "紅茶",
     "example_ja": "紅茶に砂糖を入れます。",
     "example_zh": "紅茶裡加糖。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["紅", "こう"], ["茶", "ちゃ"]]
   },
   {
     "kanji": "牛乳",
@@ -2237,7 +2403,8 @@
     "meaning": "牛奶",
     "example_ja": "毎朝牛乳を飲みます。",
     "example_zh": "每天早上喝牛奶。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["牛", "ぎゅう"], ["乳", "にゅう"]]
   },
   {
     "kanji": "コーヒー",
@@ -2267,7 +2434,8 @@
     "meaning": "酒",
     "example_ja": "お酒を飲みますか。",
     "example_zh": "你喝酒嗎？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["お", null], ["酒", "さけ"]]
   },
   {
     "kanji": "ビール",
@@ -2287,7 +2455,8 @@
     "meaning": "料理、菜餚",
     "example_ja": "日本料理が好きです。",
     "example_zh": "喜歡日本料理。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["料", "りょう"], ["理", "り"]]
   },
   {
     "kanji": "塩",
@@ -2297,7 +2466,8 @@
     "meaning": "鹽",
     "example_ja": "塩を取ってください。",
     "example_zh": "請把鹽遞給我。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["塩", "しお"]]
   },
   {
     "kanji": "砂糖",
@@ -2307,7 +2477,8 @@
     "meaning": "糖",
     "example_ja": "コーヒーに砂糖を入れますか。",
     "example_zh": "咖啡要加糖嗎？",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["砂", "さ"], ["糖", "とう"]]
   },
   {
     "kanji": "醤油",
@@ -2317,7 +2488,8 @@
     "meaning": "醬油",
     "example_ja": "醤油を少し入れます。",
     "example_zh": "加一點醬油。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["醤", "しょう"], ["油", "ゆ"]]
   },
   {
     "kanji": "バター",
@@ -2347,7 +2519,8 @@
     "meaning": "點心、零食",
     "example_ja": "お菓子を買って帰ります。",
     "example_zh": "買點心回家。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["お", null], ["菓", "か"], ["子", "し"]]
   },
   {
     "kanji": "お弁当",
@@ -2357,7 +2530,8 @@
     "meaning": "便當",
     "example_ja": "お弁当を持って行きます。",
     "example_zh": "帶便當去。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["お", null], ["弁", "べん"], ["当", "とう"]]
   },
   {
     "kanji": "箸",
@@ -2367,7 +2541,8 @@
     "meaning": "筷子",
     "example_ja": "箸でご飯を食べます。",
     "example_zh": "用筷子吃飯。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["箸", "はし"]]
   },
   {
     "kanji": "茶碗",
@@ -2377,7 +2552,8 @@
     "meaning": "飯碗、茶碗",
     "example_ja": "茶碗を洗います。",
     "example_zh": "洗碗。",
-    "category": "食物・飲料"
+    "category": "食物・飲料",
+    "furigana": [["茶", "ちゃ"], ["碗", "わん"]]
   },
   {
     "kanji": "コップ",
@@ -2437,7 +2613,8 @@
     "meaning": "衣服",
     "example_ja": "新しい服を買いました。",
     "example_zh": "買了新衣服。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["服", "ふく"]]
   },
   {
     "kanji": "洋服",
@@ -2447,7 +2624,8 @@
     "meaning": "（西式）衣服",
     "example_ja": "洋服の店で働いています。",
     "example_zh": "在服飾店工作。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["洋", "よう"], ["服", "ふく"]]
   },
   {
     "kanji": "シャツ",
@@ -2517,7 +2695,8 @@
     "meaning": "帽子",
     "example_ja": "帽子をかぶります。",
     "example_zh": "戴帽子。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["帽", "ぼう"], ["子", "し"]]
   },
   {
     "kanji": "靴",
@@ -2527,7 +2706,8 @@
     "meaning": "鞋子",
     "example_ja": "靴を脱いでください。",
     "example_zh": "請脫鞋。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["靴", "くつ"]]
   },
   {
     "kanji": "靴下",
@@ -2537,7 +2717,8 @@
     "meaning": "襪子",
     "example_ja": "靴下を履きます。",
     "example_zh": "穿襪子。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["靴", "くつ"], ["下", "した"]]
   },
   {
     "kanji": "スリッパ",
@@ -2557,7 +2738,8 @@
     "meaning": "眼鏡",
     "example_ja": "眼鏡をかけています。",
     "example_zh": "戴著眼鏡。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["眼鏡", "めがね"]]
   },
   {
     "kanji": "ネクタイ",
@@ -2607,7 +2789,8 @@
     "meaning": "傘",
     "example_ja": "傘を持って行ってください。",
     "example_zh": "請帶傘去。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["傘", "かさ"]]
   },
   {
     "kanji": "かばん",
@@ -2627,7 +2810,8 @@
     "meaning": "錢包",
     "example_ja": "財布を忘れました。",
     "example_zh": "忘了帶錢包。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["財布", "さいふ"]]
   },
   {
     "kanji": "時計",
@@ -2637,7 +2821,8 @@
     "meaning": "時鐘、手錶",
     "example_ja": "この時計は高かったです。",
     "example_zh": "這支錶很貴。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["時計", "とけい"]]
   },
   {
     "kanji": "お金",
@@ -2647,7 +2832,8 @@
     "meaning": "錢",
     "example_ja": "お金が足りません。",
     "example_zh": "錢不夠。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["お", null], ["金", "かね"]]
   },
   {
     "kanji": "荷物",
@@ -2657,7 +2843,8 @@
     "meaning": "行李",
     "example_ja": "荷物が重いです。",
     "example_zh": "行李很重。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["荷", "に"], ["物", "もつ"]]
   },
   {
     "kanji": "鍵",
@@ -2667,7 +2854,8 @@
     "meaning": "鑰匙；鎖",
     "example_ja": "部屋の鍵をかけます。",
     "example_zh": "鎖上房間的門。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["鍵", "かぎ"]]
   },
   {
     "kanji": "カメラ",
@@ -2687,7 +2875,8 @@
     "meaning": "信",
     "example_ja": "母に手紙を書きました。",
     "example_zh": "寫信給母親。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["手", "て"], ["紙", "がみ"]]
   },
   {
     "kanji": "葉書",
@@ -2697,7 +2886,8 @@
     "meaning": "明信片",
     "example_ja": "京都から葉書を出しました。",
     "example_zh": "從京都寄了明信片。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["葉", "は"], ["書", "がき"]]
   },
   {
     "kanji": "切手",
@@ -2707,7 +2897,8 @@
     "meaning": "郵票",
     "example_ja": "八十円の切手をください。",
     "example_zh": "請給我八十日圓的郵票。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["切手", "きって"]]
   },
   {
     "kanji": "封筒",
@@ -2717,7 +2908,8 @@
     "meaning": "信封",
     "example_ja": "封筒に切手を貼ります。",
     "example_zh": "在信封上貼郵票。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["封", "ふう"], ["筒", "とう"]]
   },
   {
     "kanji": "新聞",
@@ -2727,7 +2919,8 @@
     "meaning": "報紙",
     "example_ja": "毎朝新聞を読みます。",
     "example_zh": "每天早上看報紙。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["新", "しん"], ["聞", "ぶん"]]
   },
   {
     "kanji": "雑誌",
@@ -2737,7 +2930,8 @@
     "meaning": "雜誌",
     "example_ja": "雑誌を二冊買いました。",
     "example_zh": "買了兩本雜誌。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["雑", "ざっ"], ["誌", "し"]]
   },
   {
     "kanji": "地図",
@@ -2747,7 +2941,8 @@
     "meaning": "地圖",
     "example_ja": "地図を見ながら歩きます。",
     "example_zh": "邊看地圖邊走。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["地", "ち"], ["図", "ず"]]
   },
   {
     "kanji": "写真",
@@ -2757,7 +2952,8 @@
     "meaning": "照片",
     "example_ja": "ここで写真を撮らないでください。",
     "example_zh": "請不要在這裡拍照。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["写", "しゃ"], ["真", "しん"]]
   },
   {
     "kanji": "煙草",
@@ -2767,7 +2963,8 @@
     "meaning": "香菸",
     "example_ja": "ここで煙草を吸わないでください。",
     "example_zh": "請不要在這裡抽菸。",
-    "category": "衣物・隨身物品"
+    "category": "衣物・隨身物品",
+    "furigana": [["煙草", "たばこ"]]
   },
   {
     "kanji": "家",
@@ -2777,7 +2974,8 @@
     "meaning": "家、房子",
     "example_ja": "家から駅まで十分です。",
     "example_zh": "從家到車站十分鐘。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["家", "いえ"]]
   },
   {
     "kanji": "うち",
@@ -2797,7 +2995,8 @@
     "meaning": "房間",
     "example_ja": "部屋を掃除します。",
     "example_zh": "打掃房間。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["部屋", "へや"]]
   },
   {
     "kanji": "玄関",
@@ -2807,7 +3006,8 @@
     "meaning": "玄關",
     "example_ja": "玄関で靴を脱ぎます。",
     "example_zh": "在玄關脫鞋。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["玄", "げん"], ["関", "かん"]]
   },
   {
     "kanji": "台所",
@@ -2817,7 +3017,8 @@
     "meaning": "廚房",
     "example_ja": "母は台所にいます。",
     "example_zh": "媽媽在廚房。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["台", "だい"], ["所", "どころ"]]
   },
   {
     "kanji": "お風呂",
@@ -2827,7 +3028,8 @@
     "meaning": "浴室、洗澡",
     "example_ja": "お風呂に入ります。",
     "example_zh": "洗澡。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["お", null], ["風呂", "ふろ"]]
   },
   {
     "kanji": "トイレ",
@@ -2847,7 +3049,8 @@
     "meaning": "洗手間（禮貌說法）",
     "example_ja": "お手洗いを借りてもいいですか。",
     "example_zh": "可以借用洗手間嗎？",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["お", null], ["手", "て"], ["洗", "あら"], ["い", null]]
   },
   {
     "kanji": "庭",
@@ -2857,7 +3060,8 @@
     "meaning": "庭院",
     "example_ja": "庭に花があります。",
     "example_zh": "院子裡有花。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["庭", "にわ"]]
   },
   {
     "kanji": "窓",
@@ -2867,7 +3071,8 @@
     "meaning": "窗戶",
     "example_ja": "窓を開けてください。",
     "example_zh": "請打開窗戶。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["窓", "まど"]]
   },
   {
     "kanji": "ドア",
@@ -2887,7 +3092,8 @@
     "meaning": "門（日式拉門）",
     "example_ja": "戸を開けます。",
     "example_zh": "開門。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["戸", "と"]]
   },
   {
     "kanji": "門",
@@ -2897,7 +3103,8 @@
     "meaning": "大門",
     "example_ja": "学校の門の前で待ちます。",
     "example_zh": "在校門前等。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["門", "もん"]]
   },
   {
     "kanji": "机",
@@ -2907,7 +3114,8 @@
     "meaning": "桌子、書桌",
     "example_ja": "机の上に本があります。",
     "example_zh": "桌上有書。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["机", "つくえ"]]
   },
   {
     "kanji": "椅子",
@@ -2917,7 +3125,8 @@
     "meaning": "椅子",
     "example_ja": "椅子に座ってください。",
     "example_zh": "請坐在椅子上。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["椅", "い"], ["子", "す"]]
   },
   {
     "kanji": "テーブル",
@@ -2947,7 +3156,8 @@
     "meaning": "書架",
     "example_ja": "本棚に辞書があります。",
     "example_zh": "書架上有字典。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["本", "ほん"], ["棚", "だな"]]
   },
   {
     "kanji": "布団",
@@ -2957,7 +3167,8 @@
     "meaning": "棉被、被褥",
     "example_ja": "布団を敷きます。",
     "example_zh": "鋪棉被。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["布団", "ふとん"]]
   },
   {
     "kanji": "箱",
@@ -2967,7 +3178,8 @@
     "meaning": "箱子、盒子",
     "example_ja": "箱の中に何がありますか。",
     "example_zh": "箱子裡有什麼？",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["箱", "はこ"]]
   },
   {
     "kanji": "電気",
@@ -2977,7 +3189,8 @@
     "meaning": "電；電燈",
     "example_ja": "電気をつけてください。",
     "example_zh": "請開燈。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["電", "でん"], ["気", "き"]]
   },
   {
     "kanji": "電話",
@@ -2987,7 +3200,8 @@
     "meaning": "電話",
     "example_ja": "友達に電話をかけます。",
     "example_zh": "打電話給朋友。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["電", "でん"], ["話", "わ"]]
   },
   {
     "kanji": "電話番号",
@@ -2997,7 +3211,8 @@
     "meaning": "電話號碼",
     "example_ja": "電話番号を教えてください。",
     "example_zh": "請告訴我電話號碼。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["電", "でん"], ["話", "わ"], ["番", "ばん"], ["号", "ごう"]]
   },
   {
     "kanji": "テレビ",
@@ -3027,7 +3242,8 @@
     "meaning": "冰箱",
     "example_ja": "冷蔵庫に牛乳があります。",
     "example_zh": "冰箱裡有牛奶。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["冷", "れい"], ["蔵", "ぞう"], ["庫", "こ"]]
   },
   {
     "kanji": "洗濯機",
@@ -3037,7 +3253,8 @@
     "meaning": "洗衣機",
     "example_ja": "洗濯機で服を洗います。",
     "example_zh": "用洗衣機洗衣服。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["洗", "せん"], ["濯", "たく"], ["機", "き"]]
   },
   {
     "kanji": "ストーブ",
@@ -3057,7 +3274,8 @@
     "meaning": "肥皂",
     "example_ja": "石鹸で手を洗います。",
     "example_zh": "用肥皂洗手。",
-    "category": "家・生活用品"
+    "category": "家・生活用品",
+    "furigana": [["石", "せっ"], ["鹸", "けん"]]
   },
   {
     "kanji": "タオル",
@@ -3097,7 +3315,8 @@
     "meaning": "學校",
     "example_ja": "バスで学校へ行きます。",
     "example_zh": "搭公車去學校。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["学", "がっ"], ["校", "こう"]]
   },
   {
     "kanji": "大学",
@@ -3107,7 +3326,8 @@
     "meaning": "大學",
     "example_ja": "大学で経済を勉強しています。",
     "example_zh": "在大學念經濟。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["大", "だい"], ["学", "がく"]]
   },
   {
     "kanji": "教室",
@@ -3117,7 +3337,8 @@
     "meaning": "教室",
     "example_ja": "教室に学生がいます。",
     "example_zh": "教室裡有學生。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["教", "きょう"], ["室", "しつ"]]
   },
   {
     "kanji": "クラス",
@@ -3137,7 +3358,8 @@
     "meaning": "上課、課程",
     "example_ja": "授業は九時からです。",
     "example_zh": "九點開始上課。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["授", "じゅ"], ["業", "ぎょう"]]
   },
   {
     "kanji": "宿題",
@@ -3147,7 +3369,8 @@
     "meaning": "作業、功課",
     "example_ja": "宿題をしてから、寝ます。",
     "example_zh": "做完作業再睡覺。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["宿", "しゅく"], ["題", "だい"]]
   },
   {
     "kanji": "テスト",
@@ -3167,7 +3390,8 @@
     "meaning": "考試",
     "example_ja": "試験は難しかったです。",
     "example_zh": "考試很難。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["試", "し"], ["験", "けん"]]
   },
   {
     "kanji": "問題",
@@ -3177,7 +3401,8 @@
     "meaning": "問題、題目",
     "example_ja": "この問題はやさしいです。",
     "example_zh": "這題很簡單。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["問", "もん"], ["題", "だい"]]
   },
   {
     "kanji": "質問",
@@ -3187,7 +3412,8 @@
     "meaning": "提問、問題",
     "example_ja": "質問がありますか。",
     "example_zh": "有問題嗎？",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["質", "しつ"], ["問", "もん"]]
   },
   {
     "kanji": "意味",
@@ -3197,7 +3423,8 @@
     "meaning": "意思",
     "example_ja": "この言葉の意味がわかりません。",
     "example_zh": "不懂這個詞的意思。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["意", "い"], ["味", "み"]]
   },
   {
     "kanji": "言葉",
@@ -3207,7 +3434,8 @@
     "meaning": "詞語、語言",
     "example_ja": "新しい言葉を覚えます。",
     "example_zh": "記新的單字。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["言", "こと"], ["葉", "ば"]]
   },
   {
     "kanji": "話",
@@ -3217,7 +3445,8 @@
     "meaning": "話、談話；故事",
     "example_ja": "先生の話を聞きます。",
     "example_zh": "聽老師說話。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["話", "はなし"]]
   },
   {
     "kanji": "字",
@@ -3227,7 +3456,8 @@
     "meaning": "字",
     "example_ja": "きれいな字を書きますね。",
     "example_zh": "你的字寫得真漂亮。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["字", "じ"]]
   },
   {
     "kanji": "漢字",
@@ -3237,7 +3467,8 @@
     "meaning": "漢字",
     "example_ja": "漢字を百個覚えました。",
     "example_zh": "記了一百個漢字。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["漢", "かん"], ["字", "じ"]]
   },
   {
     "kanji": "平仮名",
@@ -3247,7 +3478,8 @@
     "meaning": "平假名",
     "example_ja": "平仮名で書いてください。",
     "example_zh": "請用平假名寫。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["平", "ひら"], ["仮", "が"], ["名", "な"]]
   },
   {
     "kanji": "片仮名",
@@ -3257,7 +3489,8 @@
     "meaning": "片假名",
     "example_ja": "名前を片仮名で書きます。",
     "example_zh": "用片假名寫名字。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["片", "かた"], ["仮", "か"], ["名", "な"]]
   },
   {
     "kanji": "作文",
@@ -3267,7 +3500,8 @@
     "meaning": "作文",
     "example_ja": "日本語で作文を書きました。",
     "example_zh": "用日文寫了作文。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["作", "さく"], ["文", "ぶん"]]
   },
   {
     "kanji": "辞書",
@@ -3277,7 +3511,8 @@
     "meaning": "字典",
     "example_ja": "辞書で言葉を調べます。",
     "example_zh": "用字典查單字。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["辞", "じ"], ["書", "しょ"]]
   },
   {
     "kanji": "本",
@@ -3287,7 +3522,8 @@
     "meaning": "書",
     "example_ja": "寝る前に本を読みます。",
     "example_zh": "睡前看書。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["本", "ほん"]]
   },
   {
     "kanji": "ノート",
@@ -3307,7 +3543,8 @@
     "meaning": "鉛筆",
     "example_ja": "鉛筆で書きます。",
     "example_zh": "用鉛筆寫。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["鉛", "えん"], ["筆", "ぴつ"]]
   },
   {
     "kanji": "ペン",
@@ -3337,7 +3574,8 @@
     "meaning": "橡皮擦",
     "example_ja": "消しゴムで消してください。",
     "example_zh": "請用橡皮擦擦掉。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["消", "け"], ["しゴム", null]]
   },
   {
     "kanji": "紙",
@@ -3347,7 +3585,8 @@
     "meaning": "紙",
     "example_ja": "紙に書いてください。",
     "example_zh": "請寫在紙上。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["紙", "かみ"]]
   },
   {
     "kanji": "英語",
@@ -3357,7 +3596,8 @@
     "meaning": "英文",
     "example_ja": "英語がわかりますか。",
     "example_zh": "你懂英文嗎？",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["英", "えい"], ["語", "ご"]]
   },
   {
     "kanji": "日本語",
@@ -3367,7 +3607,8 @@
     "meaning": "日文",
     "example_ja": "日本語で話してください。",
     "example_zh": "請用日文說。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["日", "に"], ["本", "ほん"], ["語", "ご"]]
   },
   {
     "kanji": "外国語",
@@ -3377,7 +3618,8 @@
     "meaning": "外語",
     "example_ja": "外国語の勉強は楽しいです。",
     "example_zh": "學外語很有趣。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["外", "がい"], ["国", "こく"], ["語", "ご"]]
   },
   {
     "kanji": "練習",
@@ -3387,7 +3629,8 @@
     "meaning": "練習",
     "example_ja": "毎日漢字の練習をします。",
     "example_zh": "每天練習漢字。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["練", "れん"], ["習", "しゅう"]]
   },
   {
     "kanji": "勉強",
@@ -3397,7 +3640,8 @@
     "meaning": "學習、念書",
     "example_ja": "日本語の勉強は面白いです。",
     "example_zh": "學日文很有趣。",
-    "category": "學校・學習"
+    "category": "學校・學習",
+    "furigana": [["勉", "べん"], ["強", "きょう"]]
   },
   {
     "kanji": "所",
@@ -3407,7 +3651,8 @@
     "meaning": "地方",
     "example_ja": "ここは静かな所です。",
     "example_zh": "這裡是安靜的地方。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["所", "ところ"]]
   },
   {
     "kanji": "駅",
@@ -3417,7 +3662,8 @@
     "meaning": "車站",
     "example_ja": "駅まで歩いて行きます。",
     "example_zh": "走路去車站。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["駅", "えき"]]
   },
   {
     "kanji": "銀行",
@@ -3427,7 +3673,8 @@
     "meaning": "銀行",
     "example_ja": "銀行は九時から三時までです。",
     "example_zh": "銀行從九點開到三點。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["銀", "ぎん"], ["行", "こう"]]
   },
   {
     "kanji": "郵便局",
@@ -3437,7 +3684,8 @@
     "meaning": "郵局",
     "example_ja": "郵便局で切手を買います。",
     "example_zh": "在郵局買郵票。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["郵", "ゆう"], ["便", "びん"], ["局", "きょく"]]
   },
   {
     "kanji": "病院",
@@ -3447,7 +3695,8 @@
     "meaning": "醫院",
     "example_ja": "病院へ行ったほうがいいですよ。",
     "example_zh": "最好去醫院喔。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["病", "びょう"], ["院", "いん"]]
   },
   {
     "kanji": "店",
@@ -3457,7 +3706,8 @@
     "meaning": "商店",
     "example_ja": "あの店は安いです。",
     "example_zh": "那家店很便宜。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["店", "みせ"]]
   },
   {
     "kanji": "喫茶店",
@@ -3467,7 +3717,8 @@
     "meaning": "咖啡廳",
     "example_ja": "喫茶店でコーヒーを飲みます。",
     "example_zh": "在咖啡廳喝咖啡。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["喫", "きっ"], ["茶", "さ"], ["店", "てん"]]
   },
   {
     "kanji": "食堂",
@@ -3477,7 +3728,8 @@
     "meaning": "食堂、餐廳",
     "example_ja": "大学の食堂で昼ご飯を食べます。",
     "example_zh": "在大學食堂吃午餐。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["食", "しょく"], ["堂", "どう"]]
   },
   {
     "kanji": "レストラン",
@@ -3527,7 +3779,8 @@
     "meaning": "蔬果店",
     "example_ja": "八百屋でりんごを買いました。",
     "example_zh": "在蔬果店買了蘋果。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["八百屋", "やおや"]]
   },
   {
     "kanji": "本屋",
@@ -3537,7 +3790,8 @@
     "meaning": "書店",
     "example_ja": "本屋で雑誌を買います。",
     "example_zh": "在書店買雜誌。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["本", "ほん"], ["屋", "や"]]
   },
   {
     "kanji": "映画館",
@@ -3547,7 +3801,8 @@
     "meaning": "電影院",
     "example_ja": "映画館で映画を見ます。",
     "example_zh": "在電影院看電影。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["映", "えい"], ["画", "が"], ["館", "かん"]]
   },
   {
     "kanji": "図書館",
@@ -3557,7 +3812,8 @@
     "meaning": "圖書館",
     "example_ja": "図書館で本を借ります。",
     "example_zh": "在圖書館借書。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["図", "と"], ["書", "しょ"], ["館", "かん"]]
   },
   {
     "kanji": "公園",
@@ -3567,7 +3823,8 @@
     "meaning": "公園",
     "example_ja": "公園を散歩します。",
     "example_zh": "在公園散步。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["公", "こう"], ["園", "えん"]]
   },
   {
     "kanji": "ホテル",
@@ -3587,7 +3844,8 @@
     "meaning": "大使館",
     "example_ja": "大使館はどこにありますか。",
     "example_zh": "大使館在哪裡？",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["大", "たい"], ["使", "し"], ["館", "かん"]]
   },
   {
     "kanji": "会社",
@@ -3597,7 +3855,8 @@
     "meaning": "公司",
     "example_ja": "電車で会社へ行きます。",
     "example_zh": "搭電車去公司。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["会", "かい"], ["社", "しゃ"]]
   },
   {
     "kanji": "交番",
@@ -3607,7 +3866,8 @@
     "meaning": "派出所",
     "example_ja": "交番で道を聞きました。",
     "example_zh": "在派出所問路。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["交", "こう"], ["番", "ばん"]]
   },
   {
     "kanji": "プール",
@@ -3627,7 +3887,8 @@
     "meaning": "動物園",
     "example_ja": "子どもと動物園へ行きます。",
     "example_zh": "和小孩去動物園。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["動", "どう"], ["物", "ぶつ"], ["園", "えん"]]
   },
   {
     "kanji": "町",
@@ -3637,7 +3898,8 @@
     "meaning": "城鎮、街上",
     "example_ja": "この町は静かです。",
     "example_zh": "這個城鎮很安靜。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["町", "まち"]]
   },
   {
     "kanji": "村",
@@ -3647,7 +3909,8 @@
     "meaning": "村莊",
     "example_ja": "小さい村に住んでいます。",
     "example_zh": "住在小村莊。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["村", "むら"]]
   },
   {
     "kanji": "国",
@@ -3657,7 +3920,8 @@
     "meaning": "國家；故鄉",
     "example_ja": "お国はどちらですか。",
     "example_zh": "您是哪國人？",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["国", "くに"]]
   },
   {
     "kanji": "外国",
@@ -3667,7 +3931,8 @@
     "meaning": "外國",
     "example_ja": "外国へ行ったことがありますか。",
     "example_zh": "你去過外國嗎？",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["外", "がい"], ["国", "こく"]]
   },
   {
     "kanji": "道",
@@ -3677,7 +3942,8 @@
     "meaning": "路、道路",
     "example_ja": "この道をまっすぐ行ってください。",
     "example_zh": "請沿這條路直走。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["道", "みち"]]
   },
   {
     "kanji": "交差点",
@@ -3687,7 +3953,8 @@
     "meaning": "十字路口",
     "example_ja": "交差点を右へ曲がってください。",
     "example_zh": "請在十字路口右轉。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["交", "こう"], ["差", "さ"], ["点", "てん"]]
   },
   {
     "kanji": "角",
@@ -3697,7 +3964,8 @@
     "meaning": "轉角",
     "example_ja": "あの角を左へ曲がります。",
     "example_zh": "在那個轉角左轉。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["角", "かど"]]
   },
   {
     "kanji": "橋",
@@ -3707,7 +3975,8 @@
     "meaning": "橋",
     "example_ja": "橋を渡ってください。",
     "example_zh": "請過橋。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["橋", "はし"]]
   },
   {
     "kanji": "建物",
@@ -3717,7 +3986,8 @@
     "meaning": "建築物",
     "example_ja": "あの白い建物は病院です。",
     "example_zh": "那棟白色建築物是醫院。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["建", "たて"], ["物", "もの"]]
   },
   {
     "kanji": "入口",
@@ -3727,7 +3997,8 @@
     "meaning": "入口",
     "example_ja": "入口はあちらです。",
     "example_zh": "入口在那邊。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["入", "いり"], ["口", "ぐち"]]
   },
   {
     "kanji": "出口",
@@ -3737,7 +4008,8 @@
     "meaning": "出口",
     "example_ja": "東の出口で会いましょう。",
     "example_zh": "在東出口見面吧。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["出", "で"], ["口", "ぐち"]]
   },
   {
     "kanji": "受付",
@@ -3747,7 +4019,8 @@
     "meaning": "接待處、櫃檯",
     "example_ja": "受付で名前を書いてください。",
     "example_zh": "請在櫃檯寫名字。",
-    "category": "場所・設施"
+    "category": "場所・設施",
+    "furigana": [["受付", "うけつけ"]]
   },
   {
     "kanji": "エレベーター",
@@ -3787,7 +4060,8 @@
     "meaning": "電車",
     "example_ja": "電車で会社へ行きます。",
     "example_zh": "搭電車去公司。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["電", "でん"], ["車", "しゃ"]]
   },
   {
     "kanji": "地下鉄",
@@ -3797,7 +4071,8 @@
     "meaning": "地鐵",
     "example_ja": "地下鉄のほうが速いです。",
     "example_zh": "地鐵比較快。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["地", "ち"], ["下", "か"], ["鉄", "てつ"]]
   },
   {
     "kanji": "バス",
@@ -3827,7 +4102,8 @@
     "meaning": "車、汽車",
     "example_ja": "車で海へ行きました。",
     "example_zh": "開車去了海邊。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["車", "くるま"]]
   },
   {
     "kanji": "自動車",
@@ -3837,7 +4113,8 @@
     "meaning": "汽車",
     "example_ja": "自動車の会社で働いています。",
     "example_zh": "在汽車公司工作。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["自", "じ"], ["動", "どう"], ["車", "しゃ"]]
   },
   {
     "kanji": "自転車",
@@ -3847,7 +4124,8 @@
     "meaning": "腳踏車",
     "example_ja": "自転車で駅へ行きます。",
     "example_zh": "騎腳踏車去車站。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["自", "じ"], ["転", "てん"], ["車", "しゃ"]]
   },
   {
     "kanji": "飛行機",
@@ -3857,7 +4135,8 @@
     "meaning": "飛機",
     "example_ja": "飛行機で日本へ来ました。",
     "example_zh": "搭飛機來日本。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["飛", "ひ"], ["行", "こう"], ["機", "き"]]
   },
   {
     "kanji": "船",
@@ -3867,7 +4146,8 @@
     "meaning": "船",
     "example_ja": "船で島へ行きます。",
     "example_zh": "搭船去島上。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["船", "ふね"]]
   },
   {
     "kanji": "切符",
@@ -3877,7 +4157,8 @@
     "meaning": "車票、票",
     "example_ja": "切符を二枚買いました。",
     "example_zh": "買了兩張票。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["切符", "きっぷ"]]
   },
   {
     "kanji": "空港",
@@ -3887,7 +4168,8 @@
     "meaning": "機場",
     "example_ja": "空港まで一時間かかります。",
     "example_zh": "到機場要一小時。",
-    "category": "交通"
+    "category": "交通",
+    "furigana": [["空", "くう"], ["港", "こう"]]
   },
   {
     "kanji": "天気",
@@ -3897,7 +4179,8 @@
     "meaning": "天氣",
     "example_ja": "今日はいい天気ですね。",
     "example_zh": "今天天氣真好。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["天", "てん"], ["気", "き"]]
   },
   {
     "kanji": "晴れ",
@@ -3907,7 +4190,8 @@
     "meaning": "晴天",
     "example_ja": "明日は晴れでしょう。",
     "example_zh": "明天應該是晴天。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["晴", "は"], ["れ", null]]
   },
   {
     "kanji": "雨",
@@ -3917,7 +4201,8 @@
     "meaning": "雨",
     "example_ja": "雨が降っています。",
     "example_zh": "正在下雨。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["雨", "あめ"]]
   },
   {
     "kanji": "雪",
@@ -3927,7 +4212,8 @@
     "meaning": "雪",
     "example_ja": "北海道は雪が多いです。",
     "example_zh": "北海道雪很多。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["雪", "ゆき"]]
   },
   {
     "kanji": "風",
@@ -3937,7 +4223,8 @@
     "meaning": "風",
     "example_ja": "今日は風が強いです。",
     "example_zh": "今天風很大。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["風", "かぜ"]]
   },
   {
     "kanji": "空",
@@ -3947,7 +4234,8 @@
     "meaning": "天空",
     "example_ja": "空が青いです。",
     "example_zh": "天空很藍。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["空", "そら"]]
   },
   {
     "kanji": "山",
@@ -3957,7 +4245,8 @@
     "meaning": "山",
     "example_ja": "日本で富士山が一番高いです。",
     "example_zh": "在日本富士山最高。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["山", "やま"]]
   },
   {
     "kanji": "川",
@@ -3967,7 +4256,8 @@
     "meaning": "河川",
     "example_ja": "川で泳がないでください。",
     "example_zh": "請不要在河裡游泳。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["川", "かわ"]]
   },
   {
     "kanji": "海",
@@ -3977,7 +4267,8 @@
     "meaning": "海",
     "example_ja": "夏休みに海へ行きます。",
     "example_zh": "暑假去海邊。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["海", "うみ"]]
   },
   {
     "kanji": "池",
@@ -3987,7 +4278,8 @@
     "meaning": "池塘",
     "example_ja": "公園に池があります。",
     "example_zh": "公園裡有池塘。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["池", "いけ"]]
   },
   {
     "kanji": "木",
@@ -3997,7 +4289,8 @@
     "meaning": "樹木",
     "example_ja": "庭に大きい木があります。",
     "example_zh": "院子裡有大樹。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["木", "き"]]
   },
   {
     "kanji": "花",
@@ -4007,7 +4300,8 @@
     "meaning": "花",
     "example_ja": "きれいな花ですね。",
     "example_zh": "好漂亮的花。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["花", "はな"]]
   },
   {
     "kanji": "桜",
@@ -4017,7 +4311,8 @@
     "meaning": "櫻花",
     "example_ja": "春に桜を見に行きます。",
     "example_zh": "春天去賞櫻。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["桜", "さくら"]]
   },
   {
     "kanji": "犬",
@@ -4027,7 +4322,8 @@
     "meaning": "狗",
     "example_ja": "犬が好きです。",
     "example_zh": "喜歡狗。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["犬", "いぬ"]]
   },
   {
     "kanji": "猫",
@@ -4037,7 +4333,8 @@
     "meaning": "貓",
     "example_ja": "うちに猫が二匹います。",
     "example_zh": "家裡有兩隻貓。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["猫", "ねこ"]]
   },
   {
     "kanji": "鳥",
@@ -4047,7 +4344,8 @@
     "meaning": "鳥",
     "example_ja": "鳥が鳴いています。",
     "example_zh": "鳥在叫。",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["鳥", "とり"]]
   },
   {
     "kanji": "動物",
@@ -4057,7 +4355,8 @@
     "meaning": "動物",
     "example_ja": "どんな動物が好きですか。",
     "example_zh": "你喜歡什麼動物？",
-    "category": "自然・天氣"
+    "category": "自然・天氣",
+    "furigana": [["動", "どう"], ["物", "ぶつ"]]
   },
   {
     "kanji": "上",
@@ -4067,7 +4366,8 @@
     "meaning": "上面",
     "example_ja": "机の上に本があります。",
     "example_zh": "桌上有書。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["上", "うえ"]]
   },
   {
     "kanji": "下",
@@ -4077,7 +4377,8 @@
     "meaning": "下面",
     "example_ja": "椅子の下に猫がいます。",
     "example_zh": "椅子下有貓。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["下", "した"]]
   },
   {
     "kanji": "中",
@@ -4087,7 +4388,8 @@
     "meaning": "裡面",
     "example_ja": "かばんの中に何がありますか。",
     "example_zh": "包包裡有什麼？",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["中", "なか"]]
   },
   {
     "kanji": "外",
@@ -4097,7 +4399,8 @@
     "meaning": "外面",
     "example_ja": "外は寒いです。",
     "example_zh": "外面很冷。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["外", "そと"]]
   },
   {
     "kanji": "前",
@@ -4107,7 +4410,8 @@
     "meaning": "前面；之前",
     "example_ja": "駅の前で待っています。",
     "example_zh": "在車站前等。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["前", "まえ"]]
   },
   {
     "kanji": "後ろ",
@@ -4117,7 +4421,8 @@
     "meaning": "後面",
     "example_ja": "学校の後ろに山があります。",
     "example_zh": "學校後面有山。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["後", "うし"], ["ろ", null]]
   },
   {
     "kanji": "左",
@@ -4127,7 +4432,8 @@
     "meaning": "左邊",
     "example_ja": "左へ曲がってください。",
     "example_zh": "請左轉。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["左", "ひだり"]]
   },
   {
     "kanji": "右",
@@ -4137,7 +4443,8 @@
     "meaning": "右邊",
     "example_ja": "銀行は右にあります。",
     "example_zh": "銀行在右邊。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["右", "みぎ"]]
   },
   {
     "kanji": "隣",
@@ -4147,7 +4454,8 @@
     "meaning": "隔壁、旁邊",
     "example_ja": "銀行は郵便局の隣です。",
     "example_zh": "銀行在郵局隔壁。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["隣", "となり"]]
   },
   {
     "kanji": "横",
@@ -4157,7 +4465,8 @@
     "meaning": "旁邊、側面",
     "example_ja": "テレビの横に花があります。",
     "example_zh": "電視旁邊有花。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["横", "よこ"]]
   },
   {
     "kanji": "側",
@@ -4167,7 +4476,8 @@
     "meaning": "旁邊、附近",
     "example_ja": "駅の側に住んでいます。",
     "example_zh": "住在車站附近。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["側", "そば"]]
   },
   {
     "kanji": "近く",
@@ -4177,7 +4487,8 @@
     "meaning": "附近",
     "example_ja": "この近くに銀行がありますか。",
     "example_zh": "這附近有銀行嗎？",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["近", "ちか"], ["く", null]]
   },
   {
     "kanji": "間",
@@ -4187,7 +4498,8 @@
     "meaning": "之間",
     "example_ja": "銀行は本屋と花屋の間にあります。",
     "example_zh": "銀行在書店和花店之間。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["間", "あいだ"]]
   },
   {
     "kanji": "東",
@@ -4197,7 +4509,8 @@
     "meaning": "東邊",
     "example_ja": "東の空が明るいです。",
     "example_zh": "東邊的天空很亮。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["東", "ひがし"]]
   },
   {
     "kanji": "西",
@@ -4207,7 +4520,8 @@
     "meaning": "西邊",
     "example_ja": "西口から出てください。",
     "example_zh": "請從西出口出去。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["西", "にし"]]
   },
   {
     "kanji": "南",
@@ -4217,7 +4531,8 @@
     "meaning": "南邊",
     "example_ja": "南の島へ旅行したいです。",
     "example_zh": "想去南方的島旅行。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["南", "みなみ"]]
   },
   {
     "kanji": "北",
@@ -4227,7 +4542,8 @@
     "meaning": "北邊",
     "example_ja": "北海道は日本の北にあります。",
     "example_zh": "北海道在日本的北邊。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["北", "きた"]]
   },
   {
     "kanji": "向こう",
@@ -4237,7 +4553,8 @@
     "meaning": "對面、那邊",
     "example_ja": "川の向こうに公園があります。",
     "example_zh": "河的對岸有公園。",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["向", "む"], ["こう", null]]
   },
   {
     "kanji": "辺",
@@ -4247,7 +4564,8 @@
     "meaning": "一帶、附近",
     "example_ja": "この辺にコンビニがありますか。",
     "example_zh": "這一帶有便利商店嗎？",
-    "category": "方位・位置"
+    "category": "方位・位置",
+    "furigana": [["辺", "へん"]]
   },
   {
     "kanji": "会います",
@@ -4257,7 +4575,8 @@
     "meaning": "見面",
     "example_ja": "駅で友達に会います。",
     "example_zh": "在車站和朋友見面。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["会", "あ"], ["います", null]]
   },
   {
     "kanji": "開きます",
@@ -4267,7 +4586,8 @@
     "meaning": "（門窗）開",
     "example_ja": "ドアが開きます。",
     "example_zh": "門會開。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["開", "あ"], ["きます", null]]
   },
   {
     "kanji": "開けます",
@@ -4277,7 +4597,8 @@
     "meaning": "打開",
     "example_ja": "窓を開けてください。",
     "example_zh": "請打開窗戶。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["開", "あ"], ["けます", null]]
   },
   {
     "kanji": "あげます",
@@ -4297,7 +4618,8 @@
     "meaning": "玩",
     "example_ja": "公園で遊びます。",
     "example_zh": "在公園玩。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["遊", "あそ"], ["びます", null]]
   },
   {
     "kanji": "浴びます",
@@ -4307,7 +4629,8 @@
     "meaning": "淋（浴）",
     "example_ja": "シャワーを浴びます。",
     "example_zh": "淋浴。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["浴", "あ"], ["びます", null]]
   },
   {
     "kanji": "洗います",
@@ -4317,7 +4640,8 @@
     "meaning": "洗",
     "example_ja": "手を洗ってください。",
     "example_zh": "請洗手。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["洗", "あら"], ["います", null]]
   },
   {
     "kanji": "あります",
@@ -4337,7 +4661,8 @@
     "meaning": "走路",
     "example_ja": "駅まで歩きます。",
     "example_zh": "走路到車站。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["歩", "ある"], ["きます", null]]
   },
   {
     "kanji": "言います",
@@ -4347,7 +4672,8 @@
     "meaning": "說",
     "example_ja": "もう一度言ってください。",
     "example_zh": "請再說一次。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["言", "い"], ["います", null]]
   },
   {
     "kanji": "行きます",
@@ -4357,7 +4683,8 @@
     "meaning": "去",
     "example_ja": "明日、京都へ行きます。",
     "example_zh": "明天去京都。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["行", "い"], ["きます", null]]
   },
   {
     "kanji": "います",
@@ -4377,7 +4704,8 @@
     "meaning": "需要",
     "example_ja": "お金が要ります。",
     "example_zh": "需要錢。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["要", "い"], ["ります", null]]
   },
   {
     "kanji": "入れます",
@@ -4387,7 +4715,8 @@
     "meaning": "放入、加入",
     "example_ja": "コーヒーに砂糖を入れます。",
     "example_zh": "咖啡裡加糖。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["入", "い"], ["れます", null]]
   },
   {
     "kanji": "歌います",
@@ -4397,7 +4726,8 @@
     "meaning": "唱歌",
     "example_ja": "日本の歌を歌います。",
     "example_zh": "唱日本的歌。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["歌", "うた"], ["います", null]]
   },
   {
     "kanji": "生まれます",
@@ -4407,7 +4737,8 @@
     "meaning": "出生",
     "example_ja": "私は台北で生まれました。",
     "example_zh": "我在台北出生。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["生", "う"], ["まれます", null]]
   },
   {
     "kanji": "売ります",
@@ -4417,7 +4748,8 @@
     "meaning": "賣",
     "example_ja": "この店は果物を売っています。",
     "example_zh": "這家店賣水果。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["売", "う"], ["ります", null]]
   },
   {
     "kanji": "起きます",
@@ -4427,7 +4759,8 @@
     "meaning": "起床",
     "example_ja": "毎朝六時に起きます。",
     "example_zh": "每天早上六點起床。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["起", "お"], ["きます", null]]
   },
   {
     "kanji": "置きます",
@@ -4437,7 +4770,8 @@
     "meaning": "放置",
     "example_ja": "かばんをここに置いてください。",
     "example_zh": "請把包包放這裡。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["置", "お"], ["きます", null]]
   },
   {
     "kanji": "教えます",
@@ -4447,7 +4781,8 @@
     "meaning": "教；告訴",
     "example_ja": "日本語を教えています。",
     "example_zh": "在教日文。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["教", "おし"], ["えます", null]]
   },
   {
     "kanji": "押します",
@@ -4457,7 +4792,8 @@
     "meaning": "按、推",
     "example_ja": "このボタンを押してください。",
     "example_zh": "請按這個按鈕。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["押", "お"], ["します", null]]
   },
   {
     "kanji": "覚えます",
@@ -4467,7 +4803,8 @@
     "meaning": "記住",
     "example_ja": "単語を覚えます。",
     "example_zh": "背單字。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["覚", "おぼ"], ["えます", null]]
   },
   {
     "kanji": "泳ぎます",
@@ -4477,7 +4814,8 @@
     "meaning": "游泳",
     "example_ja": "海で泳ぎました。",
     "example_zh": "在海裡游泳。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["泳", "およ"], ["ぎます", null]]
   },
   {
     "kanji": "降ります",
@@ -4487,7 +4825,8 @@
     "meaning": "下（車）",
     "example_ja": "次の駅で降ります。",
     "example_zh": "在下一站下車。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["降", "お"], ["ります", null]]
   },
   {
     "kanji": "終わります",
@@ -4497,7 +4836,8 @@
     "meaning": "結束",
     "example_ja": "授業は五時に終わります。",
     "example_zh": "五點下課。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["終", "お"], ["わります", null]]
   },
   {
     "kanji": "買います",
@@ -4507,7 +4847,8 @@
     "meaning": "買",
     "example_ja": "スーパーで野菜を買います。",
     "example_zh": "在超市買蔬菜。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["買", "か"], ["います", null]]
   },
   {
     "kanji": "返します",
@@ -4517,7 +4858,8 @@
     "meaning": "歸還",
     "example_ja": "図書館に本を返します。",
     "example_zh": "還書給圖書館。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["返", "かえ"], ["します", null]]
   },
   {
     "kanji": "帰ります",
@@ -4527,7 +4869,8 @@
     "meaning": "回去、回家",
     "example_ja": "七時にうちへ帰ります。",
     "example_zh": "七點回家。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["帰", "かえ"], ["ります", null]]
   },
   {
     "kanji": "かかります",
@@ -4547,7 +4890,8 @@
     "meaning": "寫",
     "example_ja": "ここに名前を書いてください。",
     "example_zh": "請在這裡寫名字。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["書", "か"], ["きます", null]]
   },
   {
     "kanji": "かけます",
@@ -4567,7 +4911,8 @@
     "meaning": "借出、借給",
     "example_ja": "傘を貸してください。",
     "example_zh": "請借我傘。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["貸", "か"], ["します", null]]
   },
   {
     "kanji": "借ります",
@@ -4577,7 +4922,8 @@
     "meaning": "借入",
     "example_ja": "図書館で本を借ります。",
     "example_zh": "在圖書館借書。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["借", "か"], ["ります", null]]
   },
   {
     "kanji": "消えます",
@@ -4587,7 +4933,8 @@
     "meaning": "（燈火）熄滅、消失",
     "example_ja": "電気が消えました。",
     "example_zh": "燈熄了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["消", "き"], ["えます", null]]
   },
   {
     "kanji": "聞きます",
@@ -4597,7 +4944,8 @@
     "meaning": "聽；問",
     "example_ja": "音楽を聞きます。",
     "example_zh": "聽音樂。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["聞", "き"], ["きます", null]]
   },
   {
     "kanji": "切ります",
@@ -4607,7 +4955,8 @@
     "meaning": "切、剪",
     "example_ja": "ナイフで野菜を切ります。",
     "example_zh": "用刀切菜。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["切", "き"], ["ります", null]]
   },
   {
     "kanji": "着ます",
@@ -4617,7 +4966,8 @@
     "meaning": "穿（上衣）",
     "example_ja": "コートを着ます。",
     "example_zh": "穿大衣。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["着", "き"], ["ます", null]]
   },
   {
     "kanji": "来ます",
@@ -4627,7 +4977,8 @@
     "meaning": "來",
     "example_ja": "明日、うちへ来てください。",
     "example_zh": "明天請來我家。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["来", "き"], ["ます", null]]
   },
   {
     "kanji": "消します",
@@ -4637,7 +4988,8 @@
     "meaning": "關（燈）；擦掉",
     "example_ja": "電気を消してください。",
     "example_zh": "請關燈。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["消", "け"], ["します", null]]
   },
   {
     "kanji": "答えます",
@@ -4647,7 +4999,8 @@
     "meaning": "回答",
     "example_ja": "質問に答えてください。",
     "example_zh": "請回答問題。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["答", "こた"], ["えます", null]]
   },
   {
     "kanji": "困ります",
@@ -4657,7 +5010,8 @@
     "meaning": "困擾、為難",
     "example_ja": "お金がなくて、困っています。",
     "example_zh": "沒有錢，很困擾。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["困", "こま"], ["ります", null]]
   },
   {
     "kanji": "咲きます",
@@ -4667,7 +5021,8 @@
     "meaning": "（花）開",
     "example_ja": "桜が咲きました。",
     "example_zh": "櫻花開了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["咲", "さ"], ["きます", null]]
   },
   {
     "kanji": "差します",
@@ -4677,7 +5032,8 @@
     "meaning": "撐（傘）",
     "example_ja": "傘を差して歩きます。",
     "example_zh": "撐著傘走。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["差", "さ"], ["します", null]]
   },
   {
     "kanji": "死にます",
@@ -4687,7 +5043,8 @@
     "meaning": "死",
     "example_ja": "ペットの金魚が死にました。",
     "example_zh": "寵物金魚死了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["死", "し"], ["にます", null]]
   },
   {
     "kanji": "閉まります",
@@ -4697,7 +5054,8 @@
     "meaning": "（門窗）關閉",
     "example_ja": "ドアが閉まります。",
     "example_zh": "門要關了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["閉", "し"], ["まります", null]]
   },
   {
     "kanji": "閉めます",
@@ -4707,7 +5065,8 @@
     "meaning": "關上",
     "example_ja": "窓を閉めてください。",
     "example_zh": "請關窗。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["閉", "し"], ["めます", null]]
   },
   {
     "kanji": "締めます",
@@ -4717,7 +5076,8 @@
     "meaning": "繫上（領帶、安全帶）",
     "example_ja": "ネクタイを締めます。",
     "example_zh": "打領帶。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["締", "し"], ["めます", null]]
   },
   {
     "kanji": "知ります",
@@ -4727,7 +5087,8 @@
     "meaning": "知道",
     "example_ja": "その話を知っていますか。",
     "example_zh": "你知道那件事嗎？",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["知", "し"], ["ります", null]]
   },
   {
     "kanji": "吸います",
@@ -4737,7 +5098,8 @@
     "meaning": "吸（菸）",
     "example_ja": "煙草を吸わないでください。",
     "example_zh": "請不要抽菸。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["吸", "す"], ["います", null]]
   },
   {
     "kanji": "住みます",
@@ -4747,7 +5109,8 @@
     "meaning": "住",
     "example_ja": "台北に住んでいます。",
     "example_zh": "住在台北。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["住", "す"], ["みます", null]]
   },
   {
     "kanji": "します",
@@ -4767,7 +5130,8 @@
     "meaning": "坐",
     "example_ja": "ここに座ってもいいですか。",
     "example_zh": "可以坐這裡嗎？",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["座", "すわ"], ["ります", null]]
   },
   {
     "kanji": "出します",
@@ -4777,7 +5141,8 @@
     "meaning": "拿出；寄出",
     "example_ja": "手紙を出します。",
     "example_zh": "寄信。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["出", "だ"], ["します", null]]
   },
   {
     "kanji": "立ちます",
@@ -4787,7 +5152,8 @@
     "meaning": "站立",
     "example_ja": "あそこに立っている人は誰ですか。",
     "example_zh": "站在那裡的人是誰？",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["立", "た"], ["ちます", null]]
   },
   {
     "kanji": "頼みます",
@@ -4797,7 +5163,8 @@
     "meaning": "拜託、點（餐）",
     "example_ja": "コーヒーを頼みました。",
     "example_zh": "點了咖啡。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["頼", "たの"], ["みます", null]]
   },
   {
     "kanji": "食べます",
@@ -4807,7 +5174,8 @@
     "meaning": "吃",
     "example_ja": "朝ご飯を食べましたか。",
     "example_zh": "吃早餐了嗎？",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["食", "た"], ["べます", null]]
   },
   {
     "kanji": "違います",
@@ -4817,7 +5185,8 @@
     "meaning": "不同；不對",
     "example_ja": "いいえ、違います。",
     "example_zh": "不，不對。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["違", "ちが"], ["います", null]]
   },
   {
     "kanji": "使います",
@@ -4827,7 +5196,8 @@
     "meaning": "使用",
     "example_ja": "箸を使ってご飯を食べます。",
     "example_zh": "用筷子吃飯。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["使", "つか"], ["います", null]]
   },
   {
     "kanji": "疲れます",
@@ -4837,7 +5207,8 @@
     "meaning": "疲累",
     "example_ja": "今日はとても疲れました。",
     "example_zh": "今天非常累。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["疲", "つか"], ["れます", null]]
   },
   {
     "kanji": "着きます",
@@ -4847,7 +5218,8 @@
     "meaning": "到達",
     "example_ja": "九時に駅に着きます。",
     "example_zh": "九點到車站。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["着", "つ"], ["きます", null]]
   },
   {
     "kanji": "作ります",
@@ -4857,7 +5229,8 @@
     "meaning": "做、製作",
     "example_ja": "晩ご飯を作ります。",
     "example_zh": "做晚餐。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["作", "つく"], ["ります", null]]
   },
   {
     "kanji": "つけます",
@@ -4877,7 +5250,8 @@
     "meaning": "任職於",
     "example_ja": "銀行に勤めています。",
     "example_zh": "在銀行工作。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["勤", "つと"], ["めます", null]]
   },
   {
     "kanji": "できます",
@@ -4897,7 +5271,8 @@
     "meaning": "外出",
     "example_ja": "十時に出かけます。",
     "example_zh": "十點出門。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["出", "で"], ["かけます", null]]
   },
   {
     "kanji": "出ます",
@@ -4907,7 +5282,8 @@
     "meaning": "出去、離開",
     "example_ja": "七時にうちを出ます。",
     "example_zh": "七點出門。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["出", "で"], ["ます", null]]
   },
   {
     "kanji": "飛びます",
@@ -4917,7 +5293,8 @@
     "meaning": "飛",
     "example_ja": "鳥が空を飛んでいます。",
     "example_zh": "鳥在天上飛。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["飛", "と"], ["びます", null]]
   },
   {
     "kanji": "止まります",
@@ -4927,7 +5304,8 @@
     "meaning": "停止",
     "example_ja": "バスが止まりました。",
     "example_zh": "公車停了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["止", "と"], ["まります", null]]
   },
   {
     "kanji": "撮ります",
@@ -4937,7 +5315,8 @@
     "meaning": "拍（照）",
     "example_ja": "写真を撮ってもいいですか。",
     "example_zh": "可以拍照嗎？",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["撮", "と"], ["ります", null]]
   },
   {
     "kanji": "取ります",
@@ -4947,7 +5326,8 @@
     "meaning": "拿、取",
     "example_ja": "塩を取ってください。",
     "example_zh": "請把鹽遞給我。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["取", "と"], ["ります", null]]
   },
   {
     "kanji": "鳴きます",
@@ -4957,7 +5337,8 @@
     "meaning": "（動物）叫",
     "example_ja": "鳥が鳴いています。",
     "example_zh": "鳥在叫。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["鳴", "な"], ["きます", null]]
   },
   {
     "kanji": "習います",
@@ -4967,7 +5348,8 @@
     "meaning": "學習（跟人學）",
     "example_ja": "先生にピアノを習います。",
     "example_zh": "跟老師學鋼琴。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["習", "なら"], ["います", null]]
   },
   {
     "kanji": "並びます",
@@ -4977,7 +5359,8 @@
     "meaning": "排隊、排列",
     "example_ja": "店の前に人が並んでいます。",
     "example_zh": "店門前有人排隊。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["並", "なら"], ["びます", null]]
   },
   {
     "kanji": "並べます",
@@ -4987,7 +5370,8 @@
     "meaning": "排列、擺放",
     "example_ja": "お皿をテーブルに並べます。",
     "example_zh": "把盤子擺到桌上。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["並", "なら"], ["べます", null]]
   },
   {
     "kanji": "なります",
@@ -5007,7 +5391,8 @@
     "meaning": "脫（衣、鞋）",
     "example_ja": "ここで靴を脱いでください。",
     "example_zh": "請在這裡脫鞋。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["脱", "ぬ"], ["ぎます", null]]
   },
   {
     "kanji": "寝ます",
@@ -5017,7 +5402,8 @@
     "meaning": "睡覺",
     "example_ja": "毎晩十二時に寝ます。",
     "example_zh": "每晚十二點睡。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["寝", "ね"], ["ます", null]]
   },
   {
     "kanji": "登ります",
@@ -5027,7 +5413,8 @@
     "meaning": "爬（山）",
     "example_ja": "富士山に登ったことがあります。",
     "example_zh": "爬過富士山。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["登", "のぼ"], ["ります", null]]
   },
   {
     "kanji": "飲みます",
@@ -5037,7 +5424,8 @@
     "meaning": "喝；吃（藥）",
     "example_ja": "毎朝コーヒーを飲みます。",
     "example_zh": "每天早上喝咖啡。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["飲", "の"], ["みます", null]]
   },
   {
     "kanji": "乗ります",
@@ -5047,7 +5435,8 @@
     "meaning": "搭乘",
     "example_ja": "ここでバスに乗ります。",
     "example_zh": "在這裡搭公車。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["乗", "の"], ["ります", null]]
   },
   {
     "kanji": "入ります",
@@ -5057,7 +5446,8 @@
     "meaning": "進入；泡（澡）",
     "example_ja": "どうぞ、入ってください。",
     "example_zh": "請進。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["入", "はい"], ["ります", null]]
   },
   {
     "kanji": "履きます",
@@ -5067,7 +5457,8 @@
     "meaning": "穿（鞋、褲、裙）",
     "example_ja": "新しい靴を履きます。",
     "example_zh": "穿新鞋。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["履", "は"], ["きます", null]]
   },
   {
     "kanji": "始まります",
@@ -5077,7 +5468,8 @@
     "meaning": "開始",
     "example_ja": "映画は七時に始まります。",
     "example_zh": "電影七點開始。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["始", "はじ"], ["まります", null]]
   },
   {
     "kanji": "走ります",
@@ -5087,7 +5479,8 @@
     "meaning": "跑",
     "example_ja": "毎朝公園を走ります。",
     "example_zh": "每天早上在公園跑步。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["走", "はし"], ["ります", null]]
   },
   {
     "kanji": "働きます",
@@ -5097,7 +5490,8 @@
     "meaning": "工作",
     "example_ja": "銀行で働いています。",
     "example_zh": "在銀行工作。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["働", "はたら"], ["きます", null]]
   },
   {
     "kanji": "話します",
@@ -5107,7 +5501,8 @@
     "meaning": "說話",
     "example_ja": "日本語で話しましょう。",
     "example_zh": "用日文說吧。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["話", "はな"], ["します", null]]
   },
   {
     "kanji": "貼ります",
@@ -5117,7 +5512,8 @@
     "meaning": "貼",
     "example_ja": "封筒に切手を貼ります。",
     "example_zh": "在信封上貼郵票。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["貼", "は"], ["ります", null]]
   },
   {
     "kanji": "晴れます",
@@ -5127,7 +5523,8 @@
     "meaning": "放晴",
     "example_ja": "午後から晴れます。",
     "example_zh": "下午開始放晴。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["晴", "は"], ["れます", null]]
   },
   {
     "kanji": "引きます",
@@ -5137,7 +5534,8 @@
     "meaning": "拉；得（感冒）",
     "example_ja": "風邪を引きました。",
     "example_zh": "感冒了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["引", "ひ"], ["きます", null]]
   },
   {
     "kanji": "弾きます",
@@ -5147,7 +5545,8 @@
     "meaning": "彈（樂器）",
     "example_ja": "ピアノを弾くことができます。",
     "example_zh": "會彈鋼琴。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["弾", "ひ"], ["きます", null]]
   },
   {
     "kanji": "吹きます",
@@ -5157,7 +5556,8 @@
     "meaning": "（風）吹",
     "example_ja": "強い風が吹いています。",
     "example_zh": "吹著強風。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["吹", "ふ"], ["きます", null]]
   },
   {
     "kanji": "降ります",
@@ -5167,7 +5567,8 @@
     "meaning": "下（雨、雪）",
     "example_ja": "雨が降っています。",
     "example_zh": "正在下雨。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["降", "ふ"], ["ります", null]]
   },
   {
     "kanji": "曲がります",
@@ -5177,7 +5578,8 @@
     "meaning": "轉彎",
     "example_ja": "次の角を右へ曲がってください。",
     "example_zh": "請在下個轉角右轉。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["曲", "ま"], ["がります", null]]
   },
   {
     "kanji": "待ちます",
@@ -5187,7 +5589,8 @@
     "meaning": "等待",
     "example_ja": "ちょっと待ってください。",
     "example_zh": "請稍等。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["待", "ま"], ["ちます", null]]
   },
   {
     "kanji": "磨きます",
@@ -5197,7 +5600,8 @@
     "meaning": "刷（牙）、擦亮",
     "example_ja": "寝る前に歯を磨きます。",
     "example_zh": "睡前刷牙。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["磨", "みが"], ["きます", null]]
   },
   {
     "kanji": "見せます",
@@ -5207,7 +5611,8 @@
     "meaning": "給～看",
     "example_ja": "写真を見せてください。",
     "example_zh": "請給我看照片。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["見", "み"], ["せます", null]]
   },
   {
     "kanji": "見ます",
@@ -5217,7 +5622,8 @@
     "meaning": "看",
     "example_ja": "毎晩テレビを見ます。",
     "example_zh": "每晚看電視。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["見", "み"], ["ます", null]]
   },
   {
     "kanji": "もらいます",
@@ -5247,7 +5653,8 @@
     "meaning": "拿、持有",
     "example_ja": "傘を持って行きます。",
     "example_zh": "帶傘去。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["持", "も"], ["ちます", null]]
   },
   {
     "kanji": "休みます",
@@ -5257,7 +5664,8 @@
     "meaning": "休息；請假",
     "example_ja": "病気で会社を休みました。",
     "example_zh": "因為生病向公司請假。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["休", "やす"], ["みます", null]]
   },
   {
     "kanji": "呼びます",
@@ -5267,7 +5675,8 @@
     "meaning": "叫、呼喚",
     "example_ja": "タクシーを呼んでください。",
     "example_zh": "請叫計程車。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["呼", "よ"], ["びます", null]]
   },
   {
     "kanji": "読みます",
@@ -5277,7 +5686,8 @@
     "meaning": "讀、唸",
     "example_ja": "毎日新聞を読みます。",
     "example_zh": "每天看報紙。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["読", "よ"], ["みます", null]]
   },
   {
     "kanji": "分かります",
@@ -5287,7 +5697,8 @@
     "meaning": "懂、明白",
     "example_ja": "意味が分かりますか。",
     "example_zh": "懂意思嗎？",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["分", "わ"], ["かります", null]]
   },
   {
     "kanji": "忘れます",
@@ -5297,7 +5708,8 @@
     "meaning": "忘記",
     "example_ja": "宿題を忘れました。",
     "example_zh": "忘了寫作業。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["忘", "わす"], ["れます", null]]
   },
   {
     "kanji": "渡します",
@@ -5307,7 +5719,8 @@
     "meaning": "交給",
     "example_ja": "先生にレポートを渡しました。",
     "example_zh": "把報告交給老師。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["渡", "わた"], ["します", null]]
   },
   {
     "kanji": "渡ります",
@@ -5317,7 +5730,8 @@
     "meaning": "過（橋、馬路）",
     "example_ja": "橋を渡って、まっすぐ行きます。",
     "example_zh": "過橋後直走。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["渡", "わた"], ["ります", null]]
   },
   {
     "kanji": "勉強します",
@@ -5327,7 +5741,8 @@
     "meaning": "學習、念書",
     "example_ja": "毎日日本語を勉強します。",
     "example_zh": "每天念日文。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["勉", "べん"], ["強", "きょう"], ["します", null]]
   },
   {
     "kanji": "掃除します",
@@ -5337,7 +5752,8 @@
     "meaning": "打掃",
     "example_ja": "週末に部屋を掃除します。",
     "example_zh": "週末打掃房間。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["掃", "そう"], ["除", "じ"], ["します", null]]
   },
   {
     "kanji": "洗濯します",
@@ -5347,7 +5763,8 @@
     "meaning": "洗衣服",
     "example_ja": "日曜日に洗濯します。",
     "example_zh": "星期日洗衣服。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["洗", "せん"], ["濯", "たく"], ["します", null]]
   },
   {
     "kanji": "結婚します",
@@ -5357,7 +5774,8 @@
     "meaning": "結婚",
     "example_ja": "兄は去年結婚しました。",
     "example_zh": "哥哥去年結婚了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["結", "けっ"], ["婚", "こん"], ["します", null]]
   },
   {
     "kanji": "旅行します",
@@ -5367,7 +5785,8 @@
     "meaning": "旅行",
     "example_ja": "来月、日本を旅行します。",
     "example_zh": "下個月去日本旅行。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["旅", "りょ"], ["行", "こう"], ["します", null]]
   },
   {
     "kanji": "散歩します",
@@ -5377,7 +5796,8 @@
     "meaning": "散步",
     "example_ja": "朝、公園を散歩します。",
     "example_zh": "早上在公園散步。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["散", "さん"], ["歩", "ぽ"], ["します", null]]
   },
   {
     "kanji": "買い物します",
@@ -5387,7 +5807,8 @@
     "meaning": "購物",
     "example_ja": "デパートで買い物します。",
     "example_zh": "在百貨公司購物。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["買", "か"], ["い", null], ["物", "もの"], ["します", null]]
   },
   {
     "kanji": "電話します",
@@ -5397,7 +5818,8 @@
     "meaning": "打電話",
     "example_ja": "後で電話します。",
     "example_zh": "待會打電話。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["電", "でん"], ["話", "わ"], ["します", null]]
   },
   {
     "kanji": "質問します",
@@ -5407,7 +5829,8 @@
     "meaning": "提問",
     "example_ja": "先生に質問しました。",
     "example_zh": "向老師提問了。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["質", "しつ"], ["問", "もん"], ["します", null]]
   },
   {
     "kanji": "運転します",
@@ -5417,7 +5840,8 @@
     "meaning": "開車、駕駛",
     "example_ja": "車を運転することができます。",
     "example_zh": "會開車。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["運", "うん"], ["転", "てん"], ["します", null]]
   },
   {
     "kanji": "練習します",
@@ -5427,7 +5851,8 @@
     "meaning": "練習",
     "example_ja": "毎日漢字を練習します。",
     "example_zh": "每天練習漢字。",
-    "category": "動詞"
+    "category": "動詞",
+    "furigana": [["練", "れん"], ["習", "しゅう"], ["します", null]]
   },
   {
     "kanji": "新しい",
@@ -5437,7 +5862,8 @@
     "meaning": "新的",
     "example_ja": "新しい靴を買いました。",
     "example_zh": "買了新鞋。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["新", "あたら"], ["しい", null]]
   },
   {
     "kanji": "古い",
@@ -5447,7 +5873,8 @@
     "meaning": "舊的",
     "example_ja": "この建物は古いです。",
     "example_zh": "這棟建築很舊。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["古", "ふる"], ["い", null]]
   },
   {
     "kanji": "暑い",
@@ -5457,7 +5884,8 @@
     "meaning": "（天氣）熱的",
     "example_ja": "今日はとても暑いです。",
     "example_zh": "今天非常熱。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["暑", "あつ"], ["い", null]]
   },
   {
     "kanji": "熱い",
@@ -5467,7 +5895,8 @@
     "meaning": "（東西）燙的、熱的",
     "example_ja": "熱いお茶をください。",
     "example_zh": "請給我熱茶。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["熱", "あつ"], ["い", null]]
   },
   {
     "kanji": "寒い",
@@ -5477,7 +5906,8 @@
     "meaning": "（天氣）冷的",
     "example_ja": "冬は寒いです。",
     "example_zh": "冬天很冷。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["寒", "さむ"], ["い", null]]
   },
   {
     "kanji": "冷たい",
@@ -5487,7 +5917,8 @@
     "meaning": "（東西）冰的、冷的",
     "example_ja": "冷たい水が飲みたいです。",
     "example_zh": "想喝冰水。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["冷", "つめ"], ["たい", null]]
   },
   {
     "kanji": "高い",
@@ -5497,7 +5928,8 @@
     "meaning": "貴的；高的",
     "example_ja": "この時計は高いです。",
     "example_zh": "這支錶很貴。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["高", "たか"], ["い", null]]
   },
   {
     "kanji": "安い",
@@ -5507,7 +5939,8 @@
     "meaning": "便宜的",
     "example_ja": "あの店は安いです。",
     "example_zh": "那家店很便宜。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["安", "やす"], ["い", null]]
   },
   {
     "kanji": "低い",
@@ -5517,7 +5950,8 @@
     "meaning": "低的、矮的",
     "example_ja": "この机は低いです。",
     "example_zh": "這張桌子很矮。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["低", "ひく"], ["い", null]]
   },
   {
     "kanji": "大きい",
@@ -5527,7 +5961,8 @@
     "meaning": "大的",
     "example_ja": "大きいかばんがほしいです。",
     "example_zh": "想要大的包包。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["大", "おお"], ["きい", null]]
   },
   {
     "kanji": "小さい",
@@ -5537,7 +5972,8 @@
     "meaning": "小的",
     "example_ja": "字が小さくて、読めません。",
     "example_zh": "字太小，看不清楚。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["小", "ちい"], ["さい", null]]
   },
   {
     "kanji": "長い",
@@ -5547,7 +5983,8 @@
     "meaning": "長的",
     "example_ja": "彼女は髪が長いです。",
     "example_zh": "她的頭髮很長。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["長", "なが"], ["い", null]]
   },
   {
     "kanji": "短い",
@@ -5557,7 +5994,8 @@
     "meaning": "短的",
     "example_ja": "夏休みは短かったです。",
     "example_zh": "暑假很短。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["短", "みじか"], ["い", null]]
   },
   {
     "kanji": "広い",
@@ -5567,7 +6005,8 @@
     "meaning": "寬敞的",
     "example_ja": "この部屋は広いです。",
     "example_zh": "這個房間很寬敞。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["広", "ひろ"], ["い", null]]
   },
   {
     "kanji": "狭い",
@@ -5577,7 +6016,8 @@
     "meaning": "狹窄的",
     "example_ja": "私の部屋は狭いです。",
     "example_zh": "我的房間很小。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["狭", "せま"], ["い", null]]
   },
   {
     "kanji": "重い",
@@ -5587,7 +6027,8 @@
     "meaning": "重的",
     "example_ja": "この荷物は重いです。",
     "example_zh": "這件行李很重。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["重", "おも"], ["い", null]]
   },
   {
     "kanji": "軽い",
@@ -5597,7 +6038,8 @@
     "meaning": "輕的",
     "example_ja": "このパソコンは軽いです。",
     "example_zh": "這台電腦很輕。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["軽", "かる"], ["い", null]]
   },
   {
     "kanji": "近い",
@@ -5607,7 +6049,8 @@
     "meaning": "近的",
     "example_ja": "駅はここから近いです。",
     "example_zh": "車站離這裡很近。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["近", "ちか"], ["い", null]]
   },
   {
     "kanji": "遠い",
@@ -5617,7 +6060,8 @@
     "meaning": "遠的",
     "example_ja": "学校は家から遠いです。",
     "example_zh": "學校離家很遠。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["遠", "とお"], ["い", null]]
   },
   {
     "kanji": "速い",
@@ -5627,7 +6071,8 @@
     "meaning": "（速度）快的",
     "example_ja": "新幹線は速いです。",
     "example_zh": "新幹線很快。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["速", "はや"], ["い", null]]
   },
   {
     "kanji": "早い",
@@ -5637,7 +6082,8 @@
     "meaning": "（時間）早的",
     "example_ja": "明日は早く起きます。",
     "example_zh": "明天要早起。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["早", "はや"], ["い", null]]
   },
   {
     "kanji": "遅い",
@@ -5647,7 +6093,8 @@
     "meaning": "慢的；晚的",
     "example_ja": "バスは遅いです。",
     "example_zh": "公車很慢。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["遅", "おそ"], ["い", null]]
   },
   {
     "kanji": "多い",
@@ -5657,7 +6104,8 @@
     "meaning": "多的",
     "example_ja": "この町は人が多いです。",
     "example_zh": "這個城鎮人很多。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["多", "おお"], ["い", null]]
   },
   {
     "kanji": "少ない",
@@ -5667,7 +6115,8 @@
     "meaning": "少的",
     "example_ja": "今日は客が少ないです。",
     "example_zh": "今天客人很少。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["少", "すく"], ["ない", null]]
   },
   {
     "kanji": "いい／良い",
@@ -5677,7 +6126,8 @@
     "meaning": "好的（否定・過去用「よ」：よくない、よかった）",
     "example_ja": "天気がいいですね。",
     "example_zh": "天氣真好。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["いい／", null], ["良", "よ"], ["い", null]]
   },
   {
     "kanji": "悪い",
@@ -5687,7 +6137,8 @@
     "meaning": "壞的、不好的",
     "example_ja": "天気が悪いです。",
     "example_zh": "天氣不好。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["悪", "わる"], ["い", null]]
   },
   {
     "kanji": "忙しい",
@@ -5697,7 +6148,8 @@
     "meaning": "忙碌的",
     "example_ja": "今週はとても忙しいです。",
     "example_zh": "這週非常忙。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["忙", "いそが"], ["しい", null]]
   },
   {
     "kanji": "楽しい",
@@ -5707,7 +6159,8 @@
     "meaning": "開心的、愉快的",
     "example_ja": "旅行は楽しかったです。",
     "example_zh": "旅行很開心。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["楽", "たの"], ["しい", null]]
   },
   {
     "kanji": "面白い",
@@ -5717,7 +6170,8 @@
     "meaning": "有趣的",
     "example_ja": "この映画は面白いです。",
     "example_zh": "這部電影很有趣。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["面", "おも"], ["白", "しろ"], ["い", null]]
   },
   {
     "kanji": "つまらない",
@@ -5737,7 +6191,8 @@
     "meaning": "難的",
     "example_ja": "漢字は難しいです。",
     "example_zh": "漢字很難。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["難", "むずか"], ["しい", null]]
   },
   {
     "kanji": "易しい",
@@ -5747,7 +6202,8 @@
     "meaning": "簡單的",
     "example_ja": "この問題は易しいです。",
     "example_zh": "這題很簡單。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["易", "やさ"], ["しい", null]]
   },
   {
     "kanji": "優しい",
@@ -5757,7 +6213,8 @@
     "meaning": "溫柔的、體貼的",
     "example_ja": "田中さんは優しい人です。",
     "example_zh": "田中先生是溫柔的人。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["優", "やさ"], ["しい", null]]
   },
   {
     "kanji": "美味しい",
@@ -5767,7 +6224,8 @@
     "meaning": "好吃的",
     "example_ja": "このケーキは美味しいです。",
     "example_zh": "這個蛋糕很好吃。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["美味", "おい"], ["しい", null]]
   },
   {
     "kanji": "まずい",
@@ -5787,7 +6245,8 @@
     "meaning": "甜的",
     "example_ja": "このみかんは甘いです。",
     "example_zh": "這個橘子很甜。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["甘", "あま"], ["い", null]]
   },
   {
     "kanji": "辛い",
@@ -5797,7 +6256,8 @@
     "meaning": "辣的",
     "example_ja": "このカレーは辛いです。",
     "example_zh": "這個咖哩很辣。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["辛", "から"], ["い", null]]
   },
   {
     "kanji": "汚い",
@@ -5807,7 +6267,8 @@
     "meaning": "髒的",
     "example_ja": "部屋が汚いです。",
     "example_zh": "房間很髒。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["汚", "きたな"], ["い", null]]
   },
   {
     "kanji": "明るい",
@@ -5817,7 +6278,8 @@
     "meaning": "明亮的；開朗的",
     "example_ja": "この部屋は明るいです。",
     "example_zh": "這個房間很明亮。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["明", "あか"], ["るい", null]]
   },
   {
     "kanji": "暗い",
@@ -5827,7 +6289,8 @@
     "meaning": "暗的",
     "example_ja": "外はもう暗いです。",
     "example_zh": "外面已經天黑了。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["暗", "くら"], ["い", null]]
   },
   {
     "kanji": "強い",
@@ -5837,7 +6300,8 @@
     "meaning": "強的",
     "example_ja": "風が強いです。",
     "example_zh": "風很強。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["強", "つよ"], ["い", null]]
   },
   {
     "kanji": "弱い",
@@ -5847,7 +6311,8 @@
     "meaning": "弱的",
     "example_ja": "弟は体が弱いです。",
     "example_zh": "弟弟身體很弱。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["弱", "よわ"], ["い", null]]
   },
   {
     "kanji": "若い",
@@ -5857,7 +6322,8 @@
     "meaning": "年輕的",
     "example_ja": "母は若く見えます。",
     "example_zh": "媽媽看起來很年輕。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["若", "わか"], ["い", null]]
   },
   {
     "kanji": "危ない",
@@ -5867,7 +6333,8 @@
     "meaning": "危險的",
     "example_ja": "危ないですから、触らないでください。",
     "example_zh": "很危險，請不要碰。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["危", "あぶ"], ["ない", null]]
   },
   {
     "kanji": "痛い",
@@ -5877,7 +6344,8 @@
     "meaning": "痛的",
     "example_ja": "頭が痛いです。",
     "example_zh": "頭很痛。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["痛", "いた"], ["い", null]]
   },
   {
     "kanji": "欲しい",
@@ -5887,7 +6355,8 @@
     "meaning": "想要的",
     "example_ja": "新しいパソコンが欲しいです。",
     "example_zh": "想要新電腦。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["欲", "ほ"], ["しい", null]]
   },
   {
     "kanji": "丸い",
@@ -5897,7 +6366,8 @@
     "meaning": "圓的",
     "example_ja": "丸いテーブルを買いました。",
     "example_zh": "買了圓桌。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["丸", "まる"], ["い", null]]
   },
   {
     "kanji": "太い",
@@ -5907,7 +6377,8 @@
     "meaning": "粗的",
     "example_ja": "太いペンで書いてください。",
     "example_zh": "請用粗的筆寫。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["太", "ふと"], ["い", null]]
   },
   {
     "kanji": "細い",
@@ -5917,7 +6388,8 @@
     "meaning": "細的",
     "example_ja": "この道は細いです。",
     "example_zh": "這條路很窄。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["細", "ほそ"], ["い", null]]
   },
   {
     "kanji": "白い",
@@ -5927,7 +6399,8 @@
     "meaning": "白色的",
     "example_ja": "白いシャツを着ています。",
     "example_zh": "穿著白襯衫。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["白", "しろ"], ["い", null]]
   },
   {
     "kanji": "黒い",
@@ -5937,7 +6410,8 @@
     "meaning": "黑色的",
     "example_ja": "黒い猫がいます。",
     "example_zh": "有隻黑貓。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["黒", "くろ"], ["い", null]]
   },
   {
     "kanji": "赤い",
@@ -5947,7 +6421,8 @@
     "meaning": "紅色的",
     "example_ja": "赤い花が咲いています。",
     "example_zh": "開著紅色的花。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["赤", "あか"], ["い", null]]
   },
   {
     "kanji": "青い",
@@ -5957,7 +6432,8 @@
     "meaning": "藍色的",
     "example_ja": "空が青いです。",
     "example_zh": "天空很藍。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["青", "あお"], ["い", null]]
   },
   {
     "kanji": "黄色い",
@@ -5967,7 +6443,8 @@
     "meaning": "黃色的",
     "example_ja": "黄色い帽子をかぶっています。",
     "example_zh": "戴著黃色帽子。",
-    "category": "い形容詞"
+    "category": "い形容詞",
+    "furigana": [["黄", "き"], ["色", "いろ"], ["い", null]]
   },
   {
     "kanji": "きれい",
@@ -5987,7 +6464,8 @@
     "meaning": "安靜的",
     "example_ja": "図書館は静かです。",
     "example_zh": "圖書館很安靜。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["静", "しず"], ["か", null]]
   },
   {
     "kanji": "賑やか",
@@ -5997,7 +6475,8 @@
     "meaning": "熱鬧的",
     "example_ja": "この町は賑やかです。",
     "example_zh": "這個城鎮很熱鬧。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["賑", "にぎ"], ["やか", null]]
   },
   {
     "kanji": "有名",
@@ -6007,7 +6486,8 @@
     "meaning": "有名的",
     "example_ja": "富士山は有名な山です。",
     "example_zh": "富士山是有名的山。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["有", "ゆう"], ["名", "めい"]]
   },
   {
     "kanji": "親切",
@@ -6017,7 +6497,8 @@
     "meaning": "親切的",
     "example_ja": "店の人はとても親切です。",
     "example_zh": "店員非常親切。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["親", "しん"], ["切", "せつ"]]
   },
   {
     "kanji": "元気",
@@ -6027,7 +6508,8 @@
     "meaning": "有精神的、健康的",
     "example_ja": "おばあさんはとても元気です。",
     "example_zh": "奶奶非常健康。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["元", "げん"], ["気", "き"]]
   },
   {
     "kanji": "暇",
@@ -6037,7 +6519,8 @@
     "meaning": "有空的、閒的",
     "example_ja": "明日は暇です。",
     "example_zh": "明天有空。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["暇", "ひま"]]
   },
   {
     "kanji": "便利",
@@ -6047,7 +6530,8 @@
     "meaning": "方便的",
     "example_ja": "地下鉄は便利です。",
     "example_zh": "地鐵很方便。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["便", "べん"], ["利", "り"]]
   },
   {
     "kanji": "不便",
@@ -6057,7 +6541,8 @@
     "meaning": "不方便的",
     "example_ja": "この村は交通が不便です。",
     "example_zh": "這個村子交通不便。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["不", "ふ"], ["便", "べん"]]
   },
   {
     "kanji": "好き",
@@ -6067,7 +6552,8 @@
     "meaning": "喜歡的",
     "example_ja": "私は音楽が好きです。",
     "example_zh": "我喜歡音樂。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["好", "す"], ["き", null]]
   },
   {
     "kanji": "嫌い",
@@ -6077,7 +6563,8 @@
     "meaning": "討厭的",
     "example_ja": "野菜が嫌いです。",
     "example_zh": "討厭蔬菜。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["嫌", "きら"], ["い", null]]
   },
   {
     "kanji": "上手",
@@ -6087,7 +6574,8 @@
     "meaning": "擅長的",
     "example_ja": "彼は歌が上手です。",
     "example_zh": "他很會唱歌。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["上手", "じょうず"]]
   },
   {
     "kanji": "下手",
@@ -6097,7 +6585,8 @@
     "meaning": "不擅長的",
     "example_ja": "私は料理が下手です。",
     "example_zh": "我不會做菜。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["下手", "へた"]]
   },
   {
     "kanji": "大切",
@@ -6107,7 +6596,8 @@
     "meaning": "重要的、珍貴的",
     "example_ja": "家族は大切です。",
     "example_zh": "家人很重要。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["大", "たい"], ["切", "せつ"]]
   },
   {
     "kanji": "大変",
@@ -6117,7 +6607,8 @@
     "meaning": "辛苦的、不得了的",
     "example_ja": "仕事が大変です。",
     "example_zh": "工作很辛苦。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["大", "たい"], ["変", "へん"]]
   },
   {
     "kanji": "立派",
@@ -6127,7 +6618,8 @@
     "meaning": "氣派的、出色的",
     "example_ja": "立派な建物ですね。",
     "example_zh": "好氣派的建築。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["立", "りっ"], ["派", "ぱ"]]
   },
   {
     "kanji": "丈夫",
@@ -6137,7 +6629,8 @@
     "meaning": "堅固的；強壯的",
     "example_ja": "このかばんは丈夫です。",
     "example_zh": "這個包包很堅固。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["丈", "じょう"], ["夫", "ぶ"]]
   },
   {
     "kanji": "同じ",
@@ -6147,7 +6640,8 @@
     "meaning": "相同的（修飾名詞不加な：同じ本）",
     "example_ja": "私たちは同じクラスです。",
     "example_zh": "我們同班。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["同", "おな"], ["じ", null]]
   },
   {
     "kanji": "色々",
@@ -6157,7 +6651,8 @@
     "meaning": "各式各樣的",
     "example_ja": "色々な国へ行きたいです。",
     "example_zh": "想去各種國家。",
-    "category": "な形容詞"
+    "category": "な形容詞",
+    "furigana": [["色", "いろ"], ["々", "いろ"]]
   },
   {
     "kanji": "あまり",
@@ -6197,7 +6692,8 @@
     "meaning": "一點點",
     "example_ja": "日本語が少し分かります。",
     "example_zh": "懂一點日文。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["少", "すこ"], ["し", null]]
   },
   {
     "kanji": "ちょっと",
@@ -6247,7 +6743,8 @@
     "meaning": "有時",
     "example_ja": "時々映画を見ます。",
     "example_zh": "有時看電影。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["時", "とき"], ["々", "どき"]]
   },
   {
     "kanji": "とても",
@@ -6267,7 +6764,8 @@
     "meaning": "第一次",
     "example_ja": "初めて日本へ来ました。",
     "example_zh": "第一次來日本。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["初", "はじ"], ["めて", null]]
   },
   {
     "kanji": "また",
@@ -6337,7 +6835,8 @@
     "meaning": "一起",
     "example_ja": "一緒に帰りましょう。",
     "example_zh": "一起回家吧。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["一", "いっ"], ["緒", "しょ"], ["に", null]]
   },
   {
     "kanji": "全部",
@@ -6347,7 +6846,8 @@
     "meaning": "全部",
     "example_ja": "宿題は全部終わりました。",
     "example_zh": "作業全部做完了。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["全", "ぜん"], ["部", "ぶ"]]
   },
   {
     "kanji": "本当に",
@@ -6357,7 +6857,8 @@
     "meaning": "真的",
     "example_ja": "本当にありがとうございます。",
     "example_zh": "真的很感謝。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["本", "ほん"], ["当", "とう"], ["に", null]]
   },
   {
     "kanji": "まっすぐ",
@@ -6377,7 +6878,8 @@
     "meaning": "獨自一人",
     "example_ja": "一人で旅行しました。",
     "example_zh": "一個人去旅行。",
-    "category": "副詞・接續詞"
+    "category": "副詞・接續詞",
+    "furigana": [["一人", "ひとり"], ["で", null]]
   },
   {
     "kanji": "そして",
@@ -6437,7 +6939,8 @@
     "meaning": "電影",
     "example_ja": "週末に映画を見ます。",
     "example_zh": "週末看電影。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["映", "えい"], ["画", "が"]]
   },
   {
     "kanji": "音楽",
@@ -6447,7 +6950,8 @@
     "meaning": "音樂",
     "example_ja": "音楽を聞くことが好きです。",
     "example_zh": "喜歡聽音樂。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["音", "おん"], ["楽", "がく"]]
   },
   {
     "kanji": "歌",
@@ -6457,7 +6961,8 @@
     "meaning": "歌",
     "example_ja": "日本の歌を歌います。",
     "example_zh": "唱日本的歌。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["歌", "うた"]]
   },
   {
     "kanji": "絵",
@@ -6467,7 +6972,8 @@
     "meaning": "畫、圖畫",
     "example_ja": "絵を描くことが趣味です。",
     "example_zh": "興趣是畫畫。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["絵", "え"]]
   },
   {
     "kanji": "スポーツ",
@@ -6547,7 +7053,8 @@
     "meaning": "旅行",
     "example_ja": "旅行が好きです。",
     "example_zh": "喜歡旅行。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["旅", "りょ"], ["行", "こう"]]
   },
   {
     "kanji": "散歩",
@@ -6557,7 +7064,8 @@
     "meaning": "散步",
     "example_ja": "朝の散歩は気持ちがいいです。",
     "example_zh": "早晨散步很舒服。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["散", "さん"], ["歩", "ぽ"]]
   },
   {
     "kanji": "買い物",
@@ -6567,7 +7075,8 @@
     "meaning": "購物",
     "example_ja": "母と買い物に行きます。",
     "example_zh": "和媽媽去買東西。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["買", "か"], ["い", null], ["物", "もの"]]
   },
   {
     "kanji": "仕事",
@@ -6577,7 +7086,8 @@
     "meaning": "工作",
     "example_ja": "仕事は五時に終わります。",
     "example_zh": "工作五點結束。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["仕", "し"], ["事", "ごと"]]
   },
   {
     "kanji": "趣味",
@@ -6587,7 +7097,8 @@
     "meaning": "興趣",
     "example_ja": "趣味は映画を見ることです。",
     "example_zh": "興趣是看電影。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["趣", "しゅ"], ["味", "み"]]
   },
   {
     "kanji": "ニュース",
@@ -6627,7 +7138,8 @@
     "meaning": "顏色",
     "example_ja": "どの色が好きですか。",
     "example_zh": "喜歡哪個顏色？",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["色", "いろ"]]
   },
   {
     "kanji": "音",
@@ -6637,6 +7149,7 @@
     "meaning": "（物體的）聲音",
     "example_ja": "変な音がします。",
     "example_zh": "有奇怪的聲音。",
-    "category": "興趣・生活"
+    "category": "興趣・生活",
+    "furigana": [["音", "おと"]]
   }
 ]
