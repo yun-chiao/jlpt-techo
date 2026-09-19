@@ -224,7 +224,7 @@ def generate_grounded_quiz_with_three_gates(
   return draft
 
 
-def build_vocab_post(date_obj: dt.date, data: dict[str, Any]) -> dict[str, Any]:
+def build_vocab_post(date_obj: dt.date, data: dict[str, Any], api_key: str | None = None) -> dict[str, Any]:
   levels = ["n5", "n4", "n3", "n2", "n1"]
   lv = levels[date_obj.toordinal() % len(levels)]
   lv_upper = lv.upper()
@@ -263,32 +263,53 @@ def build_vocab_post(date_obj: dt.date, data: dict[str, Any]) -> dict[str, Any]:
     .replace("味覚", "味覺")
   )
 
-  lines = [
-    SLOT_HEADERS["vocab"],
-    "",
-    f"今天一起記 5 個 {lv_upper}「{cat_zh}」高頻單字：",
-    "",
-  ]
+  numbered_items = []
   for idx, w in enumerate(selected, 1):
     ruby = format_ruby_word(w)
     meaning = w["meaning"].split("（")[0]
-    lines.append(f"{idx}. {ruby}｜{meaning}")
+    numbered_items.append(f"{idx}. {ruby}｜{meaning}")
 
-  ex_word = selected[0]
-  lines.extend([
+  hook_line = f"今天一起記 5 個 {lv_upper}「{cat_zh}」高頻單字："
+  shortcut_block = (
+    f"💡 實用造句：\n"
+    f"{selected[0]['example_ja']}\n"
+    f"（{selected[0]['example_zh']}）"
+  )
+
+  if api_key:
+    prompt = f"""你是日語教學雜誌《日檢手帖》總編輯。請針對以下 5 個 {lv_upper} 單字，用台灣繁體中文寫出：
+1. `hook`：一句吸引人停下來看的開場鉤子（35字內，點出這五個字的共同點、易錯點或記憶亮點，不要寫死板的「今天一起記5個單字」）
+2. `memory_tip`：一段「💡 記憶捷徑：」（65字內，教讀者用字根、音讀訓讀規律或情境秒記這組字）
+
+五個單字：
+{chr(10).join(numbered_items)}
+
+請輸出 JSON：{{"hook": "...", "memory_tip": "..."}}"""
+    ai_res = call_gemini_json(prompt, api_key)
+    if ai_res and ai_res.get("hook") and ai_res.get("memory_tip"):
+      hook_line = str(ai_res["hook"]).strip()
+      tip_body = str(ai_res["memory_tip"]).strip()
+      if not tip_body.startswith("💡"):
+        tip_body = f"💡 記憶捷徑：\n{tip_body}"
+      shortcut_block = tip_body
+
+  lines = [
+    SLOT_HEADERS["vocab"],
     "",
-    f"💡 實用造句：",
-    f"{ex_word['example_ja']}",
-    f"（{ex_word['example_zh']}）",
+    hook_line,
+    "",
+    *numbered_items,
+    "",
+    shortcut_block,
     "",
     FOOTER,
-  ])
+  ]
   text = "\n".join(lines)
   return {
     "slot": "vocab",
     "scheduled_time": SLOT_TIMES["vocab"],
     "level": lv_upper,
-    "topic": f"{lv_upper} {chosen_cat}",
+    "topic": f"{lv_upper} {cat_zh}",
     "text": text,
     "reply_text": None,
   }
@@ -548,7 +569,7 @@ def generate_day_posts(
   api_key: str | None = None,
 ) -> list[dict[str, Any]]:
   posts = [
-    build_vocab_post(date_obj, data),
+    build_vocab_post(date_obj, data, api_key),
     build_quiz_post(date_obj, data, "quiz_easy", ["n5", "n4"], "15:30", api_key),
     build_grammar_post(date_obj, data),
     build_quote_post(date_obj, data),
@@ -605,20 +626,13 @@ def main() -> None:
   parser.add_argument("--start", type=str, default="", help="起始日期 YYYY-MM-DD（預設為今天台北時間）")
   parser.add_argument("--days", type=int, default=7, help="生成天數（預設 7 天 = 35 則）")
   parser.add_argument("--offline", action="store_true", help="強制使用離線結構化模板，不呼叫 Gemini API")
+  parser.add_argument("--skip-existing", action="store_true", help="若該週佇列已存在（已由 AI 親手寫好），則直接保留不覆蓋")
   args = parser.parse_args()
 
   if args.start:
     start_date = dt.date.fromisoformat(args.start)
   else:
     start_date = dt.datetime.now(TAIPEI_TZ).date()
-
-  api_key = None if args.offline else os.environ.get("GEMINI_API_KEY")
-  data = load_all_data()
-
-  all_posts: list[dict[str, Any]] = []
-  for offset in range(args.days):
-    d = start_date + dt.timedelta(days=offset)
-    all_posts.extend(generate_day_posts(d, data, api_key=api_key))
 
   end_date = start_date + dt.timedelta(days=args.days - 1)
   iso_year, iso_week, _ = start_date.isocalendar()
@@ -627,6 +641,18 @@ def main() -> None:
   QUEUE_DIR.mkdir(parents=True, exist_ok=True)
   json_path = QUEUE_DIR / f"{week_label}.json"
   md_path = QUEUE_DIR / f"{week_label}.md"
+
+  if args.skip_existing and json_path.exists():
+    print(f"⏭️ {json_path.relative_to(REPO_ROOT)} 已存在（保留 AI 手寫精修佇列，不覆蓋）")
+    return
+
+  api_key = None if args.offline else os.environ.get("GEMINI_API_KEY")
+  data = load_all_data()
+
+  all_posts: list[dict[str, Any]] = []
+  for offset in range(args.days):
+    d = start_date + dt.timedelta(days=offset)
+    all_posts.extend(generate_day_posts(d, data, api_key=api_key))
 
   queue_payload = {
     "week": week_label,

@@ -31,7 +31,7 @@ jobs:
           print((today + dt.timedelta(days=days_ahead)).isoformat())
           ')
           echo "生成起始日（下週一）：${NEXT_MONDAY}"
-          python3 scripts/threads/generate_week.py --start "${NEXT_MONDAY}" --days 7
+          python3 scripts/threads/generate_week.py --start "${NEXT_MONDAY}" --days 7 --skip-existing
 
       - name: 續期 Threads 60 天長期 Token 並拉取專欄成效週報
         env:
