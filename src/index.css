@@ -103,4 +103,18 @@ body {
     transform: translate(-2px, -2px);
     box-shadow: var(--shadow-retro-lg);
   }
+
+  /* 振假名（Ruby）手帖排版 */
+  .ruby-word ruby {
+    ruby-align: center;
+    ruby-position: over;
+  }
+  .ruby-word rt {
+    font-size: 0.58em;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: rgba(43, 37, 35, 0.78);
+    user-select: none;
+  }
 }

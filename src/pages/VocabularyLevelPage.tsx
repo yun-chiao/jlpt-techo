@@ -58,6 +58,7 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
   const [query, setQuery] = useState('');
   const [group, setGroup] = useState<'全部' | Group>('全部');
   const [theme, setTheme] = useState('全部');
+  const [showFurigana, setShowFurigana] = useState(true);
   const [hideKana, setHideKana] = useState(false);
   const [hideMeaning, setHideMeaning] = useState(false);
   const [showRomaji, setShowRomaji] = useState(false);
@@ -123,7 +124,7 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
         </p>
       </header>
 
-      {/* 控制列：搜尋＋自測模式 */}
+      {/* 控制列：搜尋＋拼音與自測模式 */}
       <RetroCard shadow="sm" className="mt-6 p-4 md:mt-8 md:p-5">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <input
@@ -134,20 +135,46 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
             aria-label="搜尋單字"
             className="w-full rounded-lg border-2 border-paper-sumi bg-paper-card px-3 py-2 text-sm md:max-w-xs"
           />
-          <div className="flex flex-wrap gap-2" role="group" aria-label="自測模式">
-            <button type="button" aria-pressed={hideKana} onClick={() => setHideKana((v) => !v)} className={toggleChip(hideKana)}>
+          <div className="flex flex-wrap gap-2" role="group" aria-label="顯示與自測模式">
+            <button
+              type="button"
+              aria-pressed={showFurigana}
+              onClick={() => setShowFurigana((v) => !v)}
+              className={toggleChip(showFurigana)}
+              title="切換漢字上方振假名或並列假名"
+            >
+              漢字標音
+            </button>
+            <button
+              type="button"
+              aria-pressed={hideKana}
+              onClick={() => setHideKana((v) => !v)}
+              className={toggleChip(hideKana)}
+            >
               隱藏假名
             </button>
-            <button type="button" aria-pressed={hideMeaning} onClick={() => setHideMeaning((v) => !v)} className={toggleChip(hideMeaning)}>
+            <button
+              type="button"
+              aria-pressed={hideMeaning}
+              onClick={() => setHideMeaning((v) => !v)}
+              className={toggleChip(hideMeaning)}
+            >
               隱藏中譯
             </button>
-            <button type="button" aria-pressed={showRomaji} onClick={() => setShowRomaji((v) => !v)} className={toggleChip(showRomaji)}>
+            <button
+              type="button"
+              aria-pressed={showRomaji}
+              onClick={() => setShowRomaji((v) => !v)}
+              className={toggleChip(showRomaji)}
+            >
               羅馬字
             </button>
           </div>
         </div>
         {(hideKana || hideMeaning) && (
-          <p className="mt-3 font-mono text-xs text-paper-sumi/60">自測中：點擊「？？？」可顯示答案</p>
+          <p className="mt-3 font-mono text-xs text-paper-sumi/60">
+            自測中：點擊漢字或「？？？」可顯示答案
+          </p>
         )}
       </RetroCard>
 
@@ -212,14 +239,26 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
                             {t}
                             <span className="ml-1.5 font-mono text-xs font-normal text-paper-sumi/60">{sub.length}</span>
                           </h3>
-                          <VocabGrid entries={sub} hideKana={hideKana} hideMeaning={hideMeaning} showRomaji={showRomaji} />
+                          <VocabGrid
+                            entries={sub}
+                            showFurigana={showFurigana}
+                            hideKana={hideKana}
+                            hideMeaning={hideMeaning}
+                            showRomaji={showRomaji}
+                          />
                         </section>
                       );
                     })}
                   </div>
                 ) : (
                   <div className="mt-3">
-                    <VocabGrid entries={list} hideKana={hideKana} hideMeaning={hideMeaning} showRomaji={showRomaji} />
+                    <VocabGrid
+                      entries={list}
+                      showFurigana={showFurigana}
+                      hideKana={hideKana}
+                      hideMeaning={hideMeaning}
+                      showRomaji={showRomaji}
+                    />
                   </div>
                 )}
               </details>
@@ -235,7 +274,13 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
             </RetroCard>
           ) : (
             <div className="mt-3">
-              <VocabGrid entries={filtered} hideKana={hideKana} hideMeaning={hideMeaning} showRomaji={showRomaji} />
+              <VocabGrid
+                entries={filtered}
+                showFurigana={showFurigana}
+                hideKana={hideKana}
+                hideMeaning={hideMeaning}
+                showRomaji={showRomaji}
+              />
             </div>
           )}
         </>
@@ -245,18 +290,26 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
 }
 
 interface VocabDisplayOptions {
+  showFurigana: boolean;
   hideKana: boolean;
   hideMeaning: boolean;
   showRomaji: boolean;
 }
 
-function VocabGrid({ entries, hideKana, hideMeaning, showRomaji }: { entries: VocabEntry[] } & VocabDisplayOptions) {
+function VocabGrid({
+  entries,
+  showFurigana,
+  hideKana,
+  hideMeaning,
+  showRomaji,
+}: { entries: VocabEntry[] } & VocabDisplayOptions) {
   return (
     <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
       {entries.map((entry, i) => (
         <VocabCard
           key={`${entry.kanji}-${entry.kana}-${i}-${hideKana}-${hideMeaning}`}
           entry={entry}
+          showFurigana={showFurigana}
           hideKana={hideKana}
           hideMeaning={hideMeaning}
           showRomaji={showRomaji}
@@ -274,7 +327,141 @@ function speak(text: string) {
   window.speechSynthesis.speak(utterance);
 }
 
-function VocabCard({ entry, hideKana, hideMeaning, showRomaji }: { entry: VocabEntry } & VocabDisplayOptions) {
+interface FuriganaSegment {
+  text: string;
+  reading?: string;
+}
+
+function toHiragana(str: string): string {
+  return str.replace(/[\u30a1-\u30f6]/g, (ch) =>
+    String.fromCharCode(ch.charCodeAt(0) - 0x60),
+  );
+}
+
+function isKanjiChar(ch: string): boolean {
+  const code = ch.charCodeAt(0);
+  return (
+    (code >= 0x4e00 && code <= 0x9fff) ||
+    ch === '々' ||
+    ch === 'ヶ' ||
+    ch === 'ヵ'
+  );
+}
+
+function escapeRegExp(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * 智慧拆解漢字與送假名（例如「お願いします」+「おねがいします」→ お + 願(ねが) + いします），
+ * 只在漢字正上方標註對應的假名讀音。
+ */
+function splitFurigana(kanji: string, kana: string): FuriganaSegment[] {
+  if (kanji === kana || ![...kanji].some(isKanjiChar)) {
+    return [{ text: kanji }];
+  }
+
+  const segments: { text: string; isKanji: boolean }[] = [];
+  for (const ch of kanji) {
+    const isK = isKanjiChar(ch);
+    const last = segments[segments.length - 1];
+    if (last && last.isKanji === isK) {
+      last.text += ch;
+    } else {
+      segments.push({ text: ch, isKanji: isK });
+    }
+  }
+
+  const pattern =
+    '^' +
+    segments
+      .map((seg) =>
+        seg.isKanji ? '(.+)' : `(${escapeRegExp(toHiragana(seg.text))})`,
+      )
+      .join('') +
+    '$';
+
+  const match = new RegExp(pattern).exec(toHiragana(kana));
+  if (match) {
+    return segments.map((seg, idx) => ({
+      text: seg.text,
+      reading: seg.isKanji ? match[idx + 1] : undefined,
+    }));
+  }
+
+  return [{ text: kanji, reading: kana }];
+}
+
+function RubyWord({
+  kanji,
+  kana,
+  showFurigana,
+  kanaMasked,
+  onReveal,
+}: {
+  kanji: string;
+  kana: string;
+  showFurigana: boolean;
+  kanaMasked: boolean;
+  onReveal: () => void;
+}) {
+  const segments = useMemo(() => splitFurigana(kanji, kana), [kanji, kana]);
+  const hasKanji = segments.some((s) => s.reading !== undefined);
+
+  if (!showFurigana || !hasKanji) {
+    return (
+      <span lang="ja" className="text-xl font-bold">
+        {kanji}
+      </span>
+    );
+  }
+
+  if (kanaMasked) {
+    return (
+      <span
+        lang="ja"
+        role="button"
+        tabIndex={0}
+        onClick={onReveal}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onReveal();
+          }
+        }}
+        title="點擊顯示振假名"
+        className="ruby-word cursor-pointer text-xl font-bold underline decoration-dashed decoration-paper-sumi/40 underline-offset-4 hover:text-level"
+      >
+        {kanji}
+      </span>
+    );
+  }
+
+  return (
+    <span lang="ja" className="ruby-word text-xl font-bold leading-loose">
+      {segments.map((seg, idx) =>
+        seg.reading ? (
+          <ruby key={idx}>
+            {seg.text}
+            <rp>(</rp>
+            <rt>{seg.reading}</rt>
+            <rp>)</rp>
+          </ruby>
+        ) : (
+          <span key={idx}>{seg.text}</span>
+        ),
+      )}
+    </span>
+  );
+}
+
+function VocabCard({
+  entry,
+  showFurigana,
+  hideKana,
+  hideMeaning,
+  showRomaji,
+}: { entry: VocabEntry } & VocabDisplayOptions) {
   const [kanaRevealed, setKanaRevealed] = useState(false);
   const [meaningRevealed, setMeaningRevealed] = useState(false);
   const kanaMasked = hideKana && !kanaRevealed;
@@ -285,9 +472,13 @@ function VocabCard({ entry, hideKana, hideMeaning, showRomaji }: { entry: VocabE
     <RetroCard shadow="sm" className="p-4">
       <div className="flex items-start justify-between gap-2">
         <p className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-          <span lang="ja" className="text-xl font-bold">
-            {entry.kanji}
-          </span>
+          <RubyWord
+            kanji={entry.kanji}
+            kana={entry.kana}
+            showFurigana={showFurigana}
+            kanaMasked={kanaMasked}
+            onReveal={() => setKanaRevealed(true)}
+          />
           {!sameAsKana &&
             (kanaMasked ? (
               <button
@@ -299,11 +490,15 @@ function VocabCard({ entry, hideKana, hideMeaning, showRomaji }: { entry: VocabE
                 ？？？
               </button>
             ) : (
-              <span lang="ja" className="text-base">
-                {entry.kana}
-              </span>
+              !showFurigana && (
+                <span lang="ja" className="text-base text-paper-sumi/80">
+                  {entry.kana}
+                </span>
+              )
             ))}
-          {showRomaji && <span className="font-mono text-xs text-paper-sumi/50">{entry.romaji}</span>}
+          {showRomaji && (
+            <span className="font-mono text-xs text-paper-sumi/50">{entry.romaji}</span>
+          )}
         </p>
         <button
           type="button"
