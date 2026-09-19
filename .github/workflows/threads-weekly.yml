@@ -21,7 +21,7 @@ jobs:
 
       - name: 生成未來 7 天 Threads 貼文佇列（35 則）
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || vars.GEMINI_API_KEY }}
         run: |
           NEXT_MONDAY=$(python3 -c '
           import datetime as dt
@@ -35,8 +35,8 @@ jobs:
 
       - name: 續期 Threads 60 天長期 Token 並拉取專欄成效週報
         env:
-          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID || vars.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN || vars.THREADS_ACCESS_TOKEN }}
         run: |
           if [ -n "${THREADS_USER_ID:-}" ] && [ -n "${THREADS_ACCESS_TOKEN:-}" ]; then
             python3 scripts/threads/publish.py --refresh-token || true
