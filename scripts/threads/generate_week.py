@@ -256,10 +256,17 @@ def build_vocab_post(date_obj: dt.date, data: dict[str, Any]) -> dict[str, Any]:
       if len(selected) == 5:
         break
 
+  cat_zh = (
+    chosen_cat
+    .replace("経済", "經濟")
+    .replace("接続詞", "接續詞")
+    .replace("味覚", "味覺")
+  )
+
   lines = [
     SLOT_HEADERS["vocab"],
     "",
-    f"今天一起記 5 個 {lv_upper}「{chosen_cat}」高頻單字：",
+    f"今天一起記 5 個 {lv_upper}「{cat_zh}」高頻單字：",
     "",
   ]
   for idx, w in enumerate(selected, 1):
