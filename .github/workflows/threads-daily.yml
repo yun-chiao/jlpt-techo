@@ -63,73 +63,81 @@ jobs:
           set -euo pipefail
 
           DRY_FLAG=""
-          if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
-            if [ "${INPUT_DRY_RUN}" = "true" ]; then
-              DRY_FLAG="--dry-run"
-            elif [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
-              echo "❌ 找不到 THREADS_ACCESS_TOKEN Secret！請確認已新增於 GitHub Settings -> Secrets and variables -> Actions -> Repository secrets"
-              exit 1
+          {
+            if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+              if [ "${INPUT_DRY_RUN}" = "true" ]; then
+                DRY_FLAG="--dry-run"
+              elif [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
+                echo "❌ 找不到 THREADS_ACCESS_TOKEN Secret！請確認已新增於 GitHub Settings -> Secrets and variables -> Actions -> Repository secrets"
+                exit 1
+              fi
+            else
+              if [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
+                echo "ℹ️ 尚未設定 THREADS_ACCESS_TOKEN，排程自動切換為 --dry-run 乾跑模式"
+                DRY_FLAG="--dry-run"
+              fi
             fi
-          else
-            if [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
-              echo "ℹ️ 尚未設定 THREADS_ACCESS_TOKEN，排程自動切換為 --dry-run 乾跑模式"
-              DRY_FLAG="--dry-run"
+            if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+              case "${INPUT_ACTION}" in
+                all|vocab|quiz_easy|grammar|quote|quiz_hard)
+                  python3 scripts/threads/publish.py --slot "${INPUT_ACTION}" ${DRY_FLAG}
+                  ;;
+                reply_quiz_easy)
+                  python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
+                  ;;
+                reply_quiz_hard)
+                  python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
+                  ;;
+                refresh_token)
+                  python3 scripts/threads/publish.py --refresh-token ${DRY_FLAG}
+                  ;;
+                insights)
+                  python3 scripts/threads/publish.py --insights ${DRY_FLAG}
+                  ;;
+              esac
+            else
+              case "${SCHEDULE_CRON}" in
+                "3 0 * * *")
+                  python3 scripts/threads/publish.py --slot vocab ${DRY_FLAG}
+                  ;;
+                "33 4 * * *")
+                  python3 scripts/threads/publish.py --slot quiz_easy ${DRY_FLAG}
+                  ;;
+                "33 7 * * *")
+                  python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
+                  python3 scripts/threads/publish.py --slot grammar ${DRY_FLAG}
+                  ;;
+                "33 10 * * *")
+                  python3 scripts/threads/publish.py --slot quote ${DRY_FLAG}
+                  ;;
+                "3 13 * * *")
+                  python3 scripts/threads/publish.py --slot quiz_hard ${DRY_FLAG}
+                  ;;
+                "57 15 * * *")
+                  python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
+                  ;;
+                *)
+                  python3 scripts/threads/publish.py --slot all --dry-run
+                  ;;
+              esac
             fi
-          fi
-
-          if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
-            case "${INPUT_ACTION}" in
-              all|vocab|quiz_easy|grammar|quote|quiz_hard)
-                python3 scripts/threads/publish.py --slot "${INPUT_ACTION}" ${DRY_FLAG}
-                ;;
-              reply_quiz_easy)
-                python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
-                ;;
-              reply_quiz_hard)
-                python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
-                ;;
-              refresh_token)
-                python3 scripts/threads/publish.py --refresh-token ${DRY_FLAG}
-                ;;
-              insights)
-                python3 scripts/threads/publish.py --insights ${DRY_FLAG}
-                ;;
-            esac
-          else
-            case "${SCHEDULE_CRON}" in
-              "3 0 * * *")
-                python3 scripts/threads/publish.py --slot vocab ${DRY_FLAG}
-                ;;
-              "33 4 * * *")
-                python3 scripts/threads/publish.py --slot quiz_easy ${DRY_FLAG}
-                ;;
-              "33 7 * * *")
-                python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
-                python3 scripts/threads/publish.py --slot grammar ${DRY_FLAG}
-                ;;
-              "33 10 * * *")
-                python3 scripts/threads/publish.py --slot quote ${DRY_FLAG}
-                ;;
-              "3 13 * * *")
-                python3 scripts/threads/publish.py --slot quiz_hard ${DRY_FLAG}
-                ;;
-              "57 15 * * *")
-                python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
-                ;;
-              *)
-                python3 scripts/threads/publish.py --slot all --dry-run
-                ;;
-            esac
-          fi
+          } 2>&1 | tee /tmp/publish.log
 
       - name: 發送失敗時自動開 Issue 告警 (Dead Man's Switch)
         if: failure()
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
+            let logText = '';
+            try {
+              logText = fs.readFileSync('/tmp/publish.log', 'utf8').slice(-1500);
+            } catch (e) {
+              logText = '無法讀取 /tmp/publish.log（可能因缺少 THREADS_ACCESS_TOKEN Secret 而中止）';
+            }
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `⚠️ Threads 自動發文執行失敗 (${new Date().toISOString().slice(0, 10)})`,
-              body: `請檢查 GitHub Actions 執行紀錄：${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n常見原因：\n1. \`THREADS_ACCESS_TOKEN\` 過期或權限變更\n2. Threads API 暫時性錯誤`
+              body: `請檢查 GitHub Actions 執行紀錄：${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n### 錯誤訊息摘要\n\`\`\`text\n${logText}\n\`\`\``
             });
