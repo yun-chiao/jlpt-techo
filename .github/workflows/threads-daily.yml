@@ -15,9 +15,6 @@ on:
     # 台北時間 23:57 — 公布睡前題解答（維持同日日期避免跨日）
     - cron: '57 15 * * *'
 
-  push:
-    branches: [main]
-
   workflow_dispatch:
     inputs:
       action:
