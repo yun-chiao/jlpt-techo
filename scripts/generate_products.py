@@ -955,6 +955,78 @@ body {{
   border-radius: 4px;
   color: #2b2523;
 }}
+
+@media screen and (max-width: 680px) {{
+  .page-container {{
+    padding: 8px 8px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }}
+  .cover-page {{
+    padding: 20px 14px;
+    min-height: auto;
+    border-width: 2px;
+    margin-bottom: 16px;
+  }}
+  .mag-brand {{
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    padding-bottom: 8px;
+  }}
+  .cover-stamp {{
+    font-size: 38px;
+    padding: 6px 20px;
+    margin: 16px 0 8px 0;
+    border-width: 2px;
+  }}
+  .cover-title {{
+    font-size: 18px;
+    margin: 10px 0 4px 0;
+  }}
+  .cover-sub {{
+    font-size: 12px;
+  }}
+  .cover-stats {{
+    gap: 8px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }}
+  .stat-box {{
+    padding: 6px 10px;
+  }}
+  .stat-num {{
+    font-size: 18px;
+  }}
+  .stat-label {{
+    font-size: 10.5px;
+  }}
+  .cover-footer {{
+    font-size: 10px;
+    padding-top: 10px;
+  }}
+  .section-title {{
+    font-size: 16px;
+  }}
+  .data-table {{
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    font-size: 11px;
+    -webkit-overflow-scrolling: touch;
+  }}
+  .data-table th, .data-table td {{
+    padding: 6px 8px;
+    white-space: normal;
+  }}
+  .card-box, .quiz-box {{
+    padding: 10px 8px;
+    margin-bottom: 10px;
+  }}
+  .card-point {{
+    font-size: 15px;
+  }}
+}}
 </style>
 </head>
 {screen_header_html}

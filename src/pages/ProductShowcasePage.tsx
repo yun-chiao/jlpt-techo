@@ -361,94 +361,79 @@ export function ProductShowcasePage() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-3.5 py-6 sm:px-4 sm:py-8 md:py-12">
+    <div className="mx-auto max-w-5xl px-3 py-5 sm:px-4 sm:py-8 md:py-12">
       {/* 頂部標題 */}
       <div className="text-center">
-        <span className="inline-block rounded-lg border-2 border-paper-sumi bg-paper-butter px-3 py-1 font-display text-[11px] font-black shadow-retro-sm sm:text-xs md:text-sm">
+        <span className="inline-block rounded-lg border-2 border-paper-sumi bg-paper-butter px-2.5 py-0.5 font-display text-[10.5px] font-black shadow-retro-sm sm:text-xs md:text-sm">
           FUDGE / CLUEL 日雜風格・全自學數位教材
         </span>
-        <h1 className="mt-3 font-display text-2xl font-black sm:mt-4 sm:text-3xl md:text-5xl">
+        <h1 className="mt-2.5 font-display text-xl font-black sm:mt-4 sm:text-3xl md:text-5xl">
           日檢手帖・獨立分級數位備考套組
         </h1>
-        <p className="mx-auto mt-2.5 max-w-2xl text-xs leading-relaxed text-paper-sumi/75 sm:mt-3 sm:text-sm md:text-base">
-          專為喜愛用 <span className="font-bold text-paper-sumi">iPad 平板筆記</span> 與 <span className="font-bold text-paper-sumi">Anki 智慧間隔記憶</span> 的自學者打造。考前不用自己花 40 小時手刻字卡，一次帶走逐字振假名字卡包與 FUDGE 日雜風 A4 考場速查講義！
+        <p className="mx-auto mt-2 max-w-2xl text-xs leading-relaxed text-paper-sumi/75 sm:mt-3 sm:text-sm md:text-base">
+          專為喜愛用 <span className="font-bold text-paper-sumi">iPad 平板筆記</span> 與 <span className="font-bold text-paper-sumi">Anki 智慧間隔記憶</span> 的自學者打造。逐字振假名記憶字卡包與 FUDGE 日雜風 A4 考場速查講義！
         </p>
       </div>
 
-      {/* 為什麼數位學習比實體書強大的四大理由（手機 2x2 精巧排列，電腦 4 欄） */}
-      <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4 md:mt-10">
-        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
-          <div className="text-2xl sm:text-3xl">📱</div>
-          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">iPad / 平板筆記</h3>
-          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-            向量高解析 PDF，放進 GoodNotes 放大不失真，隨心畫線筆記。
-          </p>
-        </RetroCard>
-        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
-          <div className="text-2xl sm:text-3xl">⚡</div>
-          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">Anki 間隔記憶</h3>
-          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-            記憶科學演算法，在快忘記時提醒你，每天 15 分鐘勝過死背 2 小時。
-          </p>
-        </RetroCard>
-        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
-          <div className="text-2xl sm:text-3xl">✈️</div>
-          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">100% 離線隨身翻</h3>
-          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-            捷運通勤、搭機出差，沒有網路隨時拿出手機刷卡、看講義。
-          </p>
-        </RetroCard>
-        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
-          <div className="text-2xl sm:text-3xl">🖨️</div>
-          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">考場紙本隨印隨讀</h3>
-          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-            進考場手機必須關機！支援 A4 雙面列印，考前 30 分鐘安心神手冊。
-          </p>
-        </RetroCard>
-      </div>
+      {/* 級別切換：上方 5 級別對稱一列，下方全套包橫幅（手機絕對整齊對齊） */}
+      <div className="mt-5 sm:mt-8">
+        <div className="grid grid-cols-5 gap-1.5 sm:gap-2.5">
+          {(['n5', 'n4', 'n3', 'n2', 'n1'] as LevelKey[]).map((lvl) => {
+            const item = PRODUCTS[lvl];
+            const active = selectedLevel === lvl;
+            return (
+              <button
+                key={lvl}
+                type="button"
+                onClick={() => handleLevelChange(lvl)}
+                className={`flex flex-col items-center justify-center rounded-xl border-2 border-paper-sumi py-1.5 transition-all sm:py-2.5 ${
+                  active
+                    ? 'bg-paper-sumi text-paper-card shadow-retro'
+                    : 'bg-paper-card text-paper-sumi shadow-retro-sm hover:translate-y-[-1px]'
+                }`}
+              >
+                <span
+                  className="h-2 w-2 rounded-full sm:h-2.5 sm:w-2.5"
+                  style={{ backgroundColor: item.color }}
+                />
+                <span className="mt-0.5 font-display text-xs font-black sm:mt-1 sm:text-sm">{item.upper}</span>
+              </button>
+            );
+          })}
+        </div>
 
-      {/* 級別切換 Tabs */}
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 md:mt-10">
-        {(['n5', 'n4', 'n3', 'n2', 'n1', 'all'] as LevelKey[]).map((lvl) => {
-          const item = PRODUCTS[lvl];
-          const active = selectedLevel === lvl;
-          return (
-            <button
-              key={lvl}
-              type="button"
-              onClick={() => handleLevelChange(lvl)}
-              className={`inline-flex items-center gap-1.5 rounded-xl border-2 border-paper-sumi px-3 py-1.5 font-display text-xs font-black transition-all sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm ${
-                active
-                  ? 'bg-paper-sumi text-paper-card shadow-retro'
-                  : 'bg-paper-card text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px]'
-              }`}
-            >
-              <span
-                className="h-2 w-2 rounded-full sm:h-2.5 sm:w-2.5"
-                style={{ backgroundColor: item.color }}
-              />
-              {lvl === 'all' ? '👑 N1～N5 終身包' : `${item.upper} 套組`}
-            </button>
-          );
-        })}
+        <div className="mt-2 sm:mt-2.5">
+          <button
+            type="button"
+            onClick={() => handleLevelChange('all')}
+            className={`flex w-full items-center justify-center gap-1.5 rounded-xl border-2 border-paper-sumi py-2 px-3 font-display text-xs font-black transition-all sm:py-2.5 sm:text-sm ${
+              selectedLevel === 'all'
+                ? 'bg-paper-sumi text-paper-card shadow-retro'
+                : 'bg-paper-butter text-paper-sumi shadow-retro-sm hover:translate-y-[-1px]'
+            }`}
+          >
+            <span>👑</span>
+            <span>N1～N5 終身全套典藏包（一次買齊 5 級・現省 42%）</span>
+          </button>
+        </div>
       </div>
 
       {/* 當前選中產品的展示主卡片 */}
-      <div className="mt-5 rounded-2xl border-2 border-paper-sumi bg-paper-card p-4 shadow-retro sm:mt-6 sm:border-3 sm:p-6 sm:shadow-retro-lg md:p-8">
+      <div className="mt-4 rounded-2xl border-2 border-paper-sumi bg-paper-card p-3.5 shadow-retro sm:mt-6 sm:border-3 sm:p-6 sm:shadow-retro-lg md:p-8">
         
         {/* 產品頭部與價格 */}
-        <div className="flex flex-col gap-4 border-b-2 border-dashed border-paper-sumi pb-5 sm:pb-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-3 border-b-2 border-dashed border-paper-sumi pb-4 sm:pb-5 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <span
-                className="rounded-lg border-2 border-paper-sumi px-2.5 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
+                className="rounded-lg border-2 border-paper-sumi px-2 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
                 style={{ backgroundColor: prod.color }}
               >
                 {prod.upper}
               </span>
-              <h2 className="font-display text-xl font-black sm:text-2xl md:text-3xl">{prod.title}</h2>
+              <h2 className="font-display text-lg font-black sm:text-2xl md:text-3xl">{prod.title}</h2>
             </div>
-            <p className="mt-1.5 text-xs font-bold text-paper-sumi/70 sm:mt-2 sm:text-sm">{prod.subTitle}</p>
+            <p className="mt-1 text-xs font-bold text-paper-sumi/70 sm:mt-1.5 sm:text-sm">{prod.subTitle}</p>
           </div>
 
           <div className="flex flex-col items-start gap-1 md:items-end">
@@ -460,121 +445,101 @@ export function ProductShowcasePage() {
               href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
               rel="noreferrer"
-              className="btn-retro mt-1.5 inline-flex w-full items-center justify-center gap-2 bg-paper-butter !py-2.5 text-xs font-black sm:mt-2 sm:text-sm sm:w-auto"
+              className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
             >
               🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
             </a>
           </div>
         </div>
 
-        {/* 規格四宮格 */}
-        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
-            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.cards}</div>
-            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">Anki 智慧字卡</div>
-          </div>
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
-            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.grammar}</div>
-            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">必考核心句型</div>
-          </div>
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
-            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.vocab}</div>
-            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">逐字振假名單字</div>
-          </div>
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
-            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.quizzes}</div>
-            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">實戰演練測驗</div>
-          </div>
-        </div>
-
-        {/* 雙欄實體預覽：左邊 Anki 翻牌模擬器，右邊講義手冊滾動式預覽 */}
-        <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
+        {/* 雙欄實體預覽：直接接字卡與手冊（刪除中間四格數據，緊湊有型） */}
+        <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
           
-          {/* 左欄：Anki 實體字卡動態翻牌模擬器 */}
-          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
+          {/* 左欄：Anki 實體字卡動態翻牌模擬器（比例精緻緊湊） */}
+          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
             <div>
               <div className="flex items-center justify-between">
-                <h3 className="font-display text-sm font-black sm:text-base">📱 Anki 智慧字卡線上試玩</h3>
-                <span className="rounded bg-paper-sumi px-2 py-0.5 font-mono text-[11px] font-bold text-paper-card sm:text-xs">
-                  範例 {activeSampleIdx + 1} / {sampleList.length}
+                <h3 className="font-display text-xs font-black sm:text-sm">📱 Anki 智慧字卡線上試玩</h3>
+                <span className="rounded bg-paper-sumi px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-paper-card sm:text-xs">
+                  {activeSampleIdx + 1} / {sampleList.length}
                 </span>
               </div>
-              <p className="mt-1 text-[11px] text-paper-sumi/60 sm:text-xs">點擊卡片任何地方即可翻面查看背面讀音與詳解：</p>
+              <p className="mt-0.5 text-[11px] text-paper-sumi/60">點擊卡片任何地方即可翻面查看背面：</p>
 
-              {/* 卡片本體（點擊翻面） */}
+              {/* 卡片本體（點擊翻面，小巧精緻） */}
               <div
                 role="button"
                 tabIndex={0}
                 onClick={() => setIsCardFlipped((v) => !v)}
                 onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsCardFlipped((v) => !v); }}
-                className="mt-3.5 flex min-h-[260px] cursor-pointer flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-card p-4 shadow-retro transition-transform hover:translate-y-[-2px] sm:min-h-[300px] sm:p-5"
+                className="mt-2.5 flex min-h-[220px] cursor-pointer flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-card p-3 shadow-retro transition-transform hover:translate-y-[-2px] sm:min-h-[260px] sm:p-4.5"
               >
                 {/* 卡片標籤列 */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   <span
-                    className="rounded px-2 py-0.5 text-[10px] font-black text-paper-card sm:text-[11px]"
+                    className="rounded px-1.5 py-0.5 text-[10px] font-black text-paper-card"
                     style={{ backgroundColor: prod.color }}
                   >
                     {currentSample.title}
                   </span>
-                  <span className="rounded border border-paper-sumi/30 bg-paper-canvas px-2 py-0.5 text-[10px] font-bold sm:text-[11px]">
+                  <span className="rounded border border-paper-sumi/30 bg-paper-canvas px-1.5 py-0.5 text-[10px] font-bold">
                     {currentSample.category}
                   </span>
-                  <span className="ml-auto font-mono text-[9.5px] text-paper-sumi/40 sm:text-[10px]">日檢手帖 NIKKEN TECHO</span>
+                  <span className="ml-auto font-mono text-[9px] text-paper-sumi/40 sm:text-[10px]">日檢手帖 TECHO</span>
                 </div>
 
                 {/* 正面內容 */}
                 {!isCardFlipped ? (
-                  <div className="my-5 text-center sm:my-6">
-                    <div className="font-serif text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">
+                  <div className="my-4 text-center sm:my-5">
+                    <div className="font-serif text-xl font-black text-paper-sumi sm:text-2xl md:text-3xl">
                       {currentSample.front}
                     </div>
-                    <div className="mt-2.5 font-mono text-xs text-paper-sumi/50 sm:mt-3">
+                    <div className="mt-2 font-mono text-[11px] text-paper-sumi/50 sm:text-xs">
                       {currentSample.promptTip}
                     </div>
                   </div>
                 ) : (
                   /* 背面內容 */
-                  <div className="my-2.5 text-left sm:my-3">
+                  <div className="my-2 text-left sm:my-2.5">
                     <div
-                      className="text-center font-serif text-xl font-black sm:text-2xl md:text-3xl"
+                      className="text-center font-serif text-lg font-black sm:text-xl md:text-2xl"
                       dangerouslySetInnerHTML={{ __html: currentSample.ruby }}
                     />
-                    <div className="mt-1 text-center font-mono text-[11px] text-paper-sumi/60 sm:text-xs">
+                    <div className="mt-0.5 text-center font-mono text-[10.5px] text-paper-sumi/60 sm:text-xs">
                       {currentSample.subMeta}
                     </div>
 
                     <div
-                      className="mt-2.5 rounded-r-lg border-l-4 p-2 text-xs font-bold sm:mt-3 sm:p-2.5 sm:text-sm"
+                      className="mt-2 rounded-r border-l-3 p-1.5 text-xs font-bold sm:mt-2.5 sm:p-2 sm:text-sm"
                       style={{ borderLeftColor: prod.color, backgroundColor: prod.tint }}
                     >
                       💡 {currentSample.meaning}
                     </div>
 
                     {currentSample.alert && (
-                      <div className="mt-2 rounded border border-amber-400 bg-amber-50 p-2 text-[11px] text-amber-900 sm:text-[11.5px]">
-                        ⚠️ <strong>考場陷阱提示：</strong>{currentSample.alert}
+                      <div className="mt-1.5 rounded border border-amber-400 bg-amber-50 p-1.5 text-[10.5px] text-amber-900 sm:text-[11px]">
+                        ⚠️ <strong>陷阱提示：</strong>{currentSample.alert}
                       </div>
                     )}
 
-                    <div className="mt-2.5 rounded border border-paper-sumi/20 bg-paper-canvas p-2 text-xs sm:mt-3 sm:p-2.5">
+                    <div className="mt-2 rounded border border-paper-sumi/20 bg-paper-canvas p-1.5 text-[11px] sm:mt-2.5 sm:p-2 sm:text-xs">
                       <p className="font-serif text-paper-sumi">{currentSample.exampleJa}</p>
-                      <p className="mt-1 font-mono text-[11px] text-paper-sumi/70 sm:text-xs">{currentSample.exampleZh}</p>
+                      <p className="mt-0.5 font-mono text-[10.5px] text-paper-sumi/70 sm:text-xs">{currentSample.exampleZh}</p>
                     </div>
                   </div>
                 )}
 
                 {/* 卡片底端 */}
-                <div className="border-t border-dashed border-paper-sumi/30 pt-2 text-center text-[10.5px] text-paper-sumi/50 sm:text-xs">
-                  {!isCardFlipped ? '👆 點擊卡片看解答與例句' : '🔄 再次點擊翻回正面'}
+                <div className="border-t border-dashed border-paper-sumi/30 pt-1.5 text-center text-[10px] text-paper-sumi/50 sm:text-[11px]">
+                  {!isCardFlipped ? '👆 點擊翻面查看讀音與詳解' : '🔄 點擊翻回正面'}
                 </div>
               </div>
             </div>
 
             {/* 切換題目按鈕 */}
-            <div className="mt-3 flex items-center justify-between text-xs">
-              <span className="text-paper-sumi/60">
-                每套收錄 700+ 張逐字振假名字卡
+            <div className="mt-2.5 flex items-center justify-between text-xs">
+              <span className="text-[11px] text-paper-sumi/60">
+                每套收錄 700+ 張字卡
               </span>
               <button
                 type="button"
@@ -582,28 +547,28 @@ export function ProductShowcasePage() {
                   setActiveSampleIdx((i) => (i + 1) % sampleList.length);
                   setIsCardFlipped(false);
                 }}
-                className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display text-xs font-bold hover:bg-paper-butter"
+                className="rounded-lg border border-paper-sumi bg-paper-card px-2 py-1 font-display text-[11px] font-bold hover:bg-paper-butter sm:text-xs"
               >
-                換下一張範例卡 ›
+                換下一張 ›
               </button>
             </div>
           </div>
 
-          {/* 右欄：A4 講義手冊滾動預覽（直接上下捲動翻閱整本） */}
-          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
+          {/* 右欄：A4 講義手冊滾動預覽（直接上下滑動翻閱） */}
+          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
             <div>
               <div className="flex items-center justify-between">
-                <h3 className="font-display text-sm font-black sm:text-base">📑 A4 考場速查手冊線上試閱</h3>
-                <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[11px] font-bold sm:text-xs">
+                <h3 className="font-display text-xs font-black sm:text-sm">📑 A4 考場速查手冊線上試閱</h3>
+                <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-bold sm:text-[11px]">
                   日雜 FUDGE 排版
                 </span>
               </div>
-              <p className="mt-1 text-[11px] text-paper-sumi/60 sm:text-xs">
-                可在下方框內直接上下滾動翻閱各章節實體排版：
+              <p className="mt-0.5 text-[11px] text-paper-sumi/60">
+                可在框內直接滑動翻閱各章節排版：
               </p>
 
-              {/* 滾動式 A4 講義手冊預覽窗 */}
-              <div className="relative mt-3.5 h-[340px] w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[420px] md:h-[460px]">
+              {/* 滾動式 A4 講義手冊預覽窗（自適應容器，絕不跑版） */}
+              <div className="relative mt-2.5 h-[320px] w-full max-w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[380px] md:h-[420px]">
                 <iframe
                   src={prod.handbookUrl}
                   title={`${prod.upper} A4 講義手冊試閱`}
@@ -614,7 +579,7 @@ export function ProductShowcasePage() {
             </div>
 
             {/* 下方全螢幕連結 */}
-            <div className="mt-3 flex flex-col gap-1.5 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
+            <div className="mt-2.5 flex flex-col gap-1 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
               <span className="text-paper-sumi/60">💡 支援 iPad GoodNotes 筆記或 A4 列印</span>
               <a
                 href={prod.handbookUrl}
@@ -630,13 +595,13 @@ export function ProductShowcasePage() {
         </div>
 
         {/* 包含內容清單 */}
-        <div className="mt-6 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
-          <h3 className="font-display text-xs font-black sm:text-sm md:text-base">
+        <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+          <h3 className="font-display text-xs font-black sm:text-sm">
             📦 {prod.title} 包含完整內容：
           </h3>
-          <ul className="mt-2.5 space-y-1.5 text-xs text-paper-sumi/85 sm:text-sm">
+          <ul className="mt-2 space-y-1 text-xs text-paper-sumi/85 sm:text-sm">
             {prod.features.map((feat, idx) => (
-              <li key={idx} className="flex items-start gap-2">
+              <li key={idx} className="flex items-start gap-1.5">
                 <span className="font-bold text-level">✔</span>
                 <span>{feat}</span>
               </li>
@@ -644,15 +609,54 @@ export function ProductShowcasePage() {
           </ul>
         </div>
 
+        {/* 為什麼數位學習比實體書強大的四大理由（移動至產品下方作為下單信心支撐） */}
+        <div className="mt-5 border-t-2 border-dashed border-paper-sumi/40 pt-5">
+          <div className="text-center">
+            <h3 className="font-display text-sm font-black sm:text-base">
+              為什麼推薦「數位 Anki ＋ A4 講義」而不是買厚重參考書？
+            </h3>
+          </div>
+          <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
+            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+              <div className="text-xl sm:text-2xl">📱</div>
+              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">iPad 平板筆記</h4>
+              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                向量高解析 PDF，放進 GoodNotes 隨心畫線做標記。
+              </p>
+            </RetroCard>
+            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+              <div className="text-xl sm:text-2xl">⚡</div>
+              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">Anki 間隔記憶</h4>
+              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                在快忘記時提醒你，每天 15 分鐘勝過死背 2 小時。
+              </p>
+            </RetroCard>
+            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+              <div className="text-xl sm:text-2xl">✈️</div>
+              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">100% 離線翻閱</h4>
+              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                捷運通勤、搭機出差，隨時拿出手機刷卡、看講義。
+              </p>
+            </RetroCard>
+            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+              <div className="text-xl sm:text-2xl">🖨️</div>
+              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">考場紙本隨印</h4>
+              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                進考場手機關機！支援 A4 列印，考前 30 分鐘安心神冊。
+              </p>
+            </RetroCard>
+          </div>
+        </div>
+
         {/* 底部行動呼籲 CTA */}
-        <div className="mt-6 rounded-xl border-2 border-paper-sumi bg-paper-butter p-4 text-center sm:mt-8 sm:p-6">
-          <h3 className="font-display text-lg font-black sm:text-xl md:text-2xl">
+        <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-butter p-4 text-center sm:mt-6 sm:p-6">
+          <h3 className="font-display text-base font-black sm:text-xl md:text-2xl">
             準備好一次通過 {prod.upper} 了嗎？
           </h3>
-          <p className="mx-auto mt-2 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
+          <p className="mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
             贊助日檢手帖，立即獲取完整 <strong>{prod.title}</strong>（含 Anki 逐字振假名字卡包 ＋ FUDGE 日雜風 A4 講義手冊）。付款後系統自動寄送下載連結，永久離線複習！
           </p>
-          <div className="mt-3.5 flex flex-col items-center justify-center gap-2.5 sm:mt-4 sm:flex-row sm:gap-3">
+          <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
             <a
               href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
