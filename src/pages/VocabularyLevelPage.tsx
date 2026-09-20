@@ -140,12 +140,12 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
               👀 線上試玩字卡 ＆ 預覽手冊 →
             </Link>
             <a
-              href="https://buymeacoffee.com/chiaoban"
+              href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
               rel="noreferrer"
               className="btn-retro bg-paper-butter text-xs md:text-sm"
             >
-              ☕ 贊助解鎖 {levelLabel}
+              🛒 立即購買 {levelLabel} 套組
             </a>
           </div>
         </div>

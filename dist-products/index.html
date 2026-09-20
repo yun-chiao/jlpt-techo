@@ -403,11 +403,11 @@ body {
         </div>
       </div>
       <div class="download-bar">
-        <a id="dlZip" href="./日檢手帖-N3-完全備考套組.zip" download class="btn-dl">
-          📦 下載完整套組 ZIP (0.23 MB)
+        <a id="btnBuyLevel" href="https://buymeacoffee.com/chiaoban/shop" target="_blank" class="btn-dl" style="background:var(--butter-yellow); font-size:14px;">
+          🛒 前往商店購買本級套組 ($9.99) ↗
         </a>
-        <a id="dlApkg" href="./n3/日檢手帖-N3-單字文法手帖.apkg" download class="btn-dl" style="background:#ffffff;">
-          📱 下載 Anki 牌組 (.apkg)
+        <a href="https://buymeacoffee.com/chiaoban/shop" target="_blank" class="btn-dl" style="background:#ffffff; font-size:13px;">
+          👑 購買 N1～N5 終身全套典藏包 ($29.99) ↗
         </a>
       </div>
     </div>
@@ -658,8 +658,8 @@ function switchLevel(lv) {
   document.getElementById('prodSub').innerText = data.sub;
   document.getElementById('ankiCount').innerText = data.count;
 
-  document.getElementById('dlZip').href = data.zip;
-  document.getElementById('dlApkg').href = data.apkg;
+  const prices = { n5: "$7.99", n4: "$8.99", n3: "$9.99", n2: "$11.99", n1: "$12.99" };
+  document.getElementById('btnBuyLevel').innerHTML = `🛒 前往商店購買 ${data.upper} 套組 (${prices[lv] || '$9.99'}) ↗`;
   document.getElementById('handbookFrame').src = data.html;
   document.getElementById('btnOpenHandbook').href = data.html;
 

@@ -458,12 +458,12 @@ export function ProductShowcasePage() {
               <span className="font-mono text-xs text-paper-sumi/60">{prod.priceTwdApprox}</span>
             </div>
             <a
-              href="https://buymeacoffee.com/chiaoban"
+              href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
               rel="noreferrer"
-              className="btn-retro mt-2 inline-flex w-full items-center justify-center gap-2 bg-paper-butter !py-2.5 text-sm md:w-auto"
+              className="btn-retro mt-2 inline-flex w-full items-center justify-center gap-2 bg-paper-butter !py-2.5 text-sm font-black md:w-auto"
             >
-              ☕ 贊助解鎖下載 {prod.upper} 套組 →
+              🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
             </a>
           </div>
         </div>
@@ -732,19 +732,19 @@ export function ProductShowcasePage() {
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://buymeacoffee.com/chiaoban"
+              href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
               rel="noreferrer"
-              className="btn-retro bg-paper-card text-sm md:text-base"
+              className="btn-retro bg-paper-card text-sm font-black md:text-base"
             >
-              ☕ 前往 Buy Me a Coffee 贊助解鎖 ({prod.priceUsd}) →
+              🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
             </a>
             <button
               type="button"
               onClick={() => handleLevelChange('all')}
               className="btn-retro text-xs md:text-sm"
             >
-              👑 看看 N1～N5 終身全套包（省 42%）
+              👑 看看 N1～N5 終身全套包 ($29.99)
             </button>
           </div>
         </div>

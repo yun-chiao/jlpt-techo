@@ -98,7 +98,7 @@ export function BlogPostPage() {
             📦 線上試玩 Anki 字卡 ＆ 預覽 A4 講義手冊 →
           </Link>
           <a
-            href="https://buymeacoffee.com/chiaoban"
+            href="https://buymeacoffee.com/chiaoban/shop"
             target="_blank"
             rel="noreferrer"
             className="btn-retro inline-flex items-center gap-2 bg-paper-butter text-sm"
