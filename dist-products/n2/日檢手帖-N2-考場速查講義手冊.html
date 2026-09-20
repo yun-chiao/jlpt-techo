@@ -249,35 +249,82 @@ body {
   margin-top: 8px;
 }
 
-/* 速查表格 */
+/* 速查表格與滾動包裝 */
+.table-scroll-hint {
+  display: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.6);
+  margin-bottom: 6px;
+  text-align: right;
+}
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+  border: 2px solid var(--sumi-black);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px var(--sumi-black);
+  background: #ffffff;
+}
 .data-table {
   width: 100%;
+  min-width: 680px;
   border-collapse: collapse;
   background: #ffffff;
-  border: 2px solid var(--sumi-black);
-  box-shadow: 3px 3px 0px var(--sumi-black);
-  margin-bottom: 24px;
+  border: none;
+  margin-bottom: 0;
 }
 .data-table th {
   background: var(--sumi-black);
   color: #ffffff;
   font-size: 11.5px;
   font-weight: 800;
-  padding: 8px 10px;
+  padding: 9px 12px;
   text-align: left;
+  white-space: nowrap;
 }
 .data-table td {
-  border-top: 1px solid rgba(43,37,35,0.2);
-  padding: 8px 10px;
+  border-top: 1px solid rgba(43,37,35,0.15);
+  padding: 8px 12px;
   vertical-align: middle;
 }
 .data-table tr:nth-child(even) {
   background: var(--paper-bg);
 }
+.td-num {
+  width: 40px;
+  min-width: 40px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(43,37,35,0.6);
+}
+.td-title {
+  width: 130px;
+  min-width: 110px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.td-formula {
+  width: 200px;
+  min-width: 180px;
+  font-family: monospace;
+}
+.td-expl {
+  min-width: 260px;
+  line-height: 1.55;
+  color: rgba(43,37,35,0.85);
+}
 .td-idx {
-  width: 32px;
+  width: 36px;
+  min-width: 36px;
   font-size: 11px;
   font-weight: 700;
+  color: rgba(43,37,35,0.5);
+  text-align: center;
+}
   color: rgba(43,37,35,0.5);
 }
 .ruby-cell ruby {
@@ -403,16 +450,12 @@ body {
   .section-title {
     font-size: 16px;
   }
-  .data-table {
+  .table-scroll-hint {
     display: block;
-    overflow-x: auto;
-    width: 100%;
-    font-size: 11px;
-    -webkit-overflow-scrolling: touch;
   }
   .data-table th, .data-table td {
-    padding: 6px 8px;
-    white-space: normal;
+    padding: 7px 10px;
+    font-size: 11px;
   }
   .card-box, .quiz-box {
     padding: 10px 8px;
@@ -465,17 +508,19 @@ body {
     <span class="sec-pill">CHAPTER 01</span>
     <h2 class="sec-title">N2 文法公式速查清單（考前必背）</h2>
   </div>
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th style="width:36px;">課</th>
-        <th style="width:140px;">句型</th>
-        <th style="width:240px;">接續公式</th>
-        <th>核心語意</th>
-      </tr>
-    </thead>
-    <tbody>
-      
+  <div class="table-scroll-hint">👈 可左右滑動查看完整公式與核心語意 👉</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:40px; text-align:center;">課</th>
+          <th style="width:130px; white-space:nowrap;">句型</th>
+          <th style="width:200px;">接續公式</th>
+          <th style="min-width:260px;">核心語意</th>
+        </tr>
+      </thead>
+      <tbody>
+        
       <tr>
         <td class="td-num">1</td>
         <td class="td-title">「〜わけがない」不可能…、絕不會…</td>
@@ -1316,8 +1361,9 @@ body {
         <td class="td-expl">表示如果照目前這種不理想的狀態持續下去，將會導致不好的結果，帶有擔憂、警告的語感，常用於提醒對方...</td>
       </tr>
       
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 
   <!-- 第二章：文法核心深度解構卡片 -->
   <div class="section-header page-break">
@@ -3382,18 +3428,20 @@ body {
     <span class="sec-pill">CHAPTER 04</span>
     <h2 class="sec-title">N2 完整高頻單字手帖（逐字振假名標註）</h2>
   </div>
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th style="width:120px;">單字（標音）</th>
-        <th style="width:70px;">詞性</th>
-        <th style="width:140px;">中文釋義</th>
-        <th>實用日文例句與翻譯</th>
-      </tr>
-    </thead>
-    <tbody>
-      
+  <div class="table-scroll-hint">👈 可左右滑動查看完整單字標音、釋義與例句 👉</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:40px; text-align:center;">#</th>
+          <th style="width:130px; white-space:nowrap;">單字（標音）</th>
+          <th style="width:70px; text-align:center;">詞性</th>
+          <th style="width:140px;">中文釋義</th>
+          <th style="min-width:260px;">實用日文例句與翻譯</th>
+        </tr>
+      </thead>
+      <tbody>
+        
     <tr>
       <td class="td-idx">1</td>
       <td class="td-word"><div class="ruby-cell"><ruby>実<rt style='border-bottom:2px solid #fff0e8;'>じつ</rt></ruby><ruby>現<rt style='border-bottom:2px solid #fff0e8;'>げん</rt></ruby><span class='ruby-okurigana'>します</span></div><span class="romaji-sub">jitsugen shimasu</span></td>
@@ -8194,8 +8242,9 @@ body {
       <td class="td-ex"><strong>試合を生放送する。</strong><br><span class="ex-zh">現場直播比賽。</span></td>
     </tr>
     
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 
   <div style="text-align:center; padding: 30px 0; font-size:12px; font-weight:700; color:rgba(43,37,35,0.5);">
     ── 日檢手帖 NIKKEN TECHO 祝您順利合格・jlpt.chiaoban.com ──
