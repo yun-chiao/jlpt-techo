@@ -2,27 +2,31 @@ name: Threads 每日自動發文
 
 on:
   schedule:
-    # 台北時間 08:03 — 📖 每日五單字
-    - cron: '3 0 * * *'
-    # 台北時間 12:33 — ✏️ 今日一題（N4/N5）
-    - cron: '33 4 * * *'
-    # 台北時間 15:33 — 公布午間題解答 ＋ 🔍 每日文法
-    - cron: '33 7 * * *'
-    # 台北時間 18:33 — 🍂 今日一句
-    - cron: '33 10 * * *'
-    # 台北時間 21:03 — 🌙 睡前一題（N1–N3）
-    - cron: '3 13 * * *'
-    # 台北時間 23:57 — 公布睡前題解答（維持同日日期避免跨日）
-    - cron: '57 15 * * *'
+    # 台北時間 08:03 & 08:18（雙重排程防 GitHub 00:00 UTC 全球尖峰延遲）— 📖 每日五單字
+    - cron: '3,18 0 * * *'
+    # 台北時間 12:33 & 12:48 — ✏️ 今日一題（N4/N5）
+    - cron: '33,48 4 * * *'
+    # 台北時間 15:33 & 15:48 — 公布午間題解答 ＋ 🔍 每日文法
+    - cron: '33,48 7 * * *'
+    # 台北時間 18:33 & 18:48 — 🍂 今日一句
+    - cron: '33,48 10 * * *'
+    # 台北時間 21:03 & 21:18 — 🌙 睡前一題（N1–N3）
+    - cron: '3,18 13 * * *'
+    # 台北時間 23:52 & 23:57 — 公布睡前題解答
+    - cron: '52,57 15 * * *'
+
+  push:
+    branches: [main]
 
   workflow_dispatch:
     inputs:
       action:
         description: '手動執行項目'
         required: true
-        default: 'vocab'
+        default: 'catchup'
         type: choice
         options:
+          - catchup
           - vocab
           - quiz_easy
           - grammar
@@ -69,7 +73,7 @@ jobs:
               if [ "${INPUT_DRY_RUN}" = "true" ]; then
                 DRY_FLAG="--dry-run"
               elif [ -z "${THREADS_ACCESS_TOKEN:-}" ]; then
-                echo "❌ 找不到 THREADS_ACCESS_TOKEN Secret！請確認已新增於 GitHub Settings -> Secrets and variables -> Actions -> Repository secrets"
+                echo "❌ 找不到 THREADS_ACCESS_TOKEN Secret！請確認已新增於 GitHub Settings -> Secrets and variables -> Actions"
                 exit 1
               fi
             else
@@ -80,6 +84,9 @@ jobs:
             fi
             if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
               case "${INPUT_ACTION}" in
+                catchup)
+                  python3 scripts/threads/publish.py --catchup ${DRY_FLAG}
+                  ;;
                 all|vocab|quiz_easy|grammar|quote|quiz_hard)
                   python3 scripts/threads/publish.py --slot "${INPUT_ACTION}" ${DRY_FLAG}
                   ;;
@@ -96,35 +103,9 @@ jobs:
                   python3 scripts/threads/publish.py --insights ${DRY_FLAG}
                   ;;
               esac
-            elif [ "${EVENT_NAME}" = "push" ]; then
-              python3 scripts/threads/publish.py --slot quiz_hard ${DRY_FLAG}
-              sleep 5
-              python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
             else
-              case "${SCHEDULE_CRON}" in
-                "3 0 * * *")
-                  python3 scripts/threads/publish.py --slot vocab ${DRY_FLAG}
-                  ;;
-                "33 4 * * *")
-                  python3 scripts/threads/publish.py --slot quiz_easy ${DRY_FLAG}
-                  ;;
-                "33 7 * * *")
-                  python3 scripts/threads/publish.py --reply-quiz quiz_easy ${DRY_FLAG}
-                  python3 scripts/threads/publish.py --slot grammar ${DRY_FLAG}
-                  ;;
-                "33 10 * * *")
-                  python3 scripts/threads/publish.py --slot quote ${DRY_FLAG}
-                  ;;
-                "3 13 * * *")
-                  python3 scripts/threads/publish.py --slot quiz_hard ${DRY_FLAG}
-                  ;;
-                "57 15 * * *")
-                  python3 scripts/threads/publish.py --reply-quiz quiz_hard ${DRY_FLAG}
-                  ;;
-                *)
-                  python3 scripts/threads/publish.py --slot all --dry-run
-                  ;;
-              esac
+              # 無論是 schedule 還是 push，一律執行 --catchup：自動補發當日所有已到點且未發的專欄與解答
+              python3 scripts/threads/publish.py --catchup ${DRY_FLAG}
             fi
           } 2>&1 | tee /tmp/publish.log
 

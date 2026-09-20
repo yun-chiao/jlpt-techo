@@ -302,6 +302,26 @@ def run_insights_report(dry_run: bool) -> None:
   print(f"\n✅ 已寫入 {out_path.relative_to(REPO_ROOT)}")
 
 
+def run_catchup(date_obj: dt.date, now_hhmm: str, dry_run: bool) -> None:
+  """檢查當日截至目前台北時間 (HH:MM) 所有已到點的時段與解答回覆，未發者自動補發，已發者自動跳過。"""
+  schedule_plan = [
+    ("08:00", "slot", "vocab"),
+    ("12:30", "slot", "quiz_easy"),
+    ("15:30", "reply", "quiz_easy"),
+    ("15:30", "slot", "grammar"),
+    ("18:30", "slot", "quote"),
+    ("21:00", "slot", "quiz_hard"),
+    ("23:50", "reply", "quiz_hard"),
+  ]
+  print(f"⏱️ [Catchup 巡檢] 台北日期={date_obj.isoformat()} 目前時間={now_hhmm}")
+  for due_hhmm, kind, target in schedule_plan:
+    if now_hhmm >= due_hhmm:
+      if kind == "slot":
+        run_publish_slot(date_obj, target, dry_run)
+      else:
+        run_reply_quiz(date_obj, target, dry_run)
+
+
 def main() -> None:
   parser = argparse.ArgumentParser(description="日檢手帖 Threads 自動發送與管理工具")
   parser.add_argument("--date", type=str, default="", help="指定日期 YYYY-MM-DD（預設台北今日）")
@@ -315,19 +335,24 @@ def main() -> None:
     choices=["quiz_easy", "quiz_hard"],
     help="在當日題目串底下自動回覆公布解答",
   )
+  parser.add_argument("--catchup", action="store_true", help="自動巡檢當日所有已到點時段，未發者補發、已發者跳過")
   parser.add_argument("--refresh-token", action="store_true", help="續期 60 天長期 Threads Access Token")
   parser.add_argument("--insights", action="store_true", help="拉取 Threads Insights 產出專欄成效表")
   parser.add_argument("--dry-run", action="store_true", help="只印出內容不實際發送")
   args = parser.parse_args()
 
   dry_run = args.dry_run or os.environ.get("DRY_RUN") == "1"
-  date_obj = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(TAIPEI_TZ).date()
+  now_tpe = dt.datetime.now(TAIPEI_TZ)
+  date_obj = dt.date.fromisoformat(args.date) if args.date else now_tpe.date()
 
   if args.refresh_token:
     run_refresh_token(dry_run)
     return
   if args.insights:
     run_insights_report(dry_run)
+    return
+  if args.catchup:
+    run_catchup(date_obj, now_tpe.strftime("%H:%M"), dry_run)
     return
   if args.reply_quiz:
     run_reply_quiz(date_obj, args.reply_quiz, dry_run)
