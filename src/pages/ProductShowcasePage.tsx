@@ -124,8 +124,8 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
     tint: '#fff0e8',
     title: '【日檢手帖】JLPT N2 完全備考套組',
     subTitle: '日本留學與赴日求職黃金門檻・商務時事與長文理解',
-    priceUsd: '$11.99',
-    priceTwdApprox: '約 NT$370',
+    priceUsd: '$12.99',
+    priceTwdApprox: '約 NT$400',
     stats: {
       cards: '720 張智慧字卡',
       grammar: '120 個文法點',

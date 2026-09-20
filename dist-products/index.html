@@ -658,7 +658,7 @@ function switchLevel(lv) {
   document.getElementById('prodSub').innerText = data.sub;
   document.getElementById('ankiCount').innerText = data.count;
 
-  const prices = { n5: "$7.99", n4: "$8.99", n3: "$9.99", n2: "$11.99", n1: "$12.99" };
+  const prices = { n5: "$7.99", n4: "$8.99", n3: "$9.99", n2: "$12.99", n1: "$12.99" };
   document.getElementById('btnBuyLevel').innerHTML = `🛒 前往商店購買 ${data.upper} 套組 (${prices[lv] || '$9.99'}) ↗`;
   document.getElementById('handbookFrame').src = data.html;
   document.getElementById('btnOpenHandbook').href = data.html;
