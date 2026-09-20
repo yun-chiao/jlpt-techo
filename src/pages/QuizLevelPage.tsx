@@ -146,28 +146,28 @@ function QuizLevelContent({ level }: { level: Level }) {
   const passageCount = state.data.passageQuizzes.reduce((n, p) => n + p.questions.length, 0);
 
   return (
-    <div className="flex flex-col gap-5 md:gap-6">
+    <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
       {/* 級別大標色塊 */}
-      <header className="rounded-xl border-3 border-paper-sumi bg-level-tint px-5 py-5 shadow-retro md:px-8 md:py-7">
-        <h1 className="font-display text-2xl font-black md:text-4xl">
-          <span className="mr-2.5 inline-block rounded-lg border-2 border-paper-sumi bg-level px-2.5 py-0.5 text-paper-card md:px-3 md:py-1">
+      <header className="rounded-xl border-3 border-paper-sumi bg-level-tint px-4 py-4 shadow-retro sm:px-6 sm:py-5 md:px-8 md:py-7">
+        <h1 className="font-display text-xl font-black sm:text-2xl md:text-4xl">
+          <span className="mr-2 inline-block rounded-lg border-2 border-paper-sumi bg-level px-2 py-0.5 text-paper-card sm:mr-2.5 sm:px-3 sm:py-1">
             {levelLabel}
           </span>
           練習題
         </h1>
-        <p className="mt-2 font-mono text-xs text-paper-sumi/70 md:text-sm">
+        <p className="mt-1.5 font-mono text-[11px] text-paper-sumi/70 sm:mt-2 sm:text-xs md:text-sm">
           全真日檢規格題庫・共 {allQuestions.length} 題
         </p>
       </header>
 
-      {/* 篩選與題號導航列（框框外面・同一水平線・像素級對齊） */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-paper-sumi/15 pb-2.5">
-        {/* 左側分類按鈕 */}
-        <div className="flex flex-wrap items-center gap-1.5">
+      {/* 篩選與題號導航列（針對手機優化：Filter 橫向滑動，Stepper 與按鈕絕對水平對齊） */}
+      <div className="flex flex-col gap-2.5 border-b border-paper-sumi/15 pb-2.5 sm:flex-row sm:items-center sm:justify-between">
+        {/* 左側分類按鈕（手機上支援水平順暢滑動，不換行擠壓） */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
           <button
             type="button"
             onClick={() => handleSwitchFilter('all')}
-            className={`inline-flex h-8 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
+            className={`inline-flex h-8 shrink-0 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
               filter === 'all'
                 ? 'border-2 border-paper-sumi bg-paper-sumi text-white shadow-retro-sm font-black'
                 : 'border border-paper-sumi/30 bg-paper-card text-paper-sumi/80 hover:bg-paper-butter'
@@ -178,7 +178,7 @@ function QuizLevelContent({ level }: { level: Level }) {
           <button
             type="button"
             onClick={() => handleSwitchFilter('sentence')}
-            className={`inline-flex h-8 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
+            className={`inline-flex h-8 shrink-0 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
               filter === 'sentence'
                 ? 'border-2 border-paper-sumi bg-paper-sumi text-white shadow-retro-sm font-black'
                 : 'border border-paper-sumi/30 bg-paper-card text-paper-sumi/80 hover:bg-paper-butter'
@@ -189,7 +189,7 @@ function QuizLevelContent({ level }: { level: Level }) {
           <button
             type="button"
             onClick={() => handleSwitchFilter('star')}
-            className={`inline-flex h-8 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
+            className={`inline-flex h-8 shrink-0 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
               filter === 'star'
                 ? 'border-2 border-paper-sumi bg-paper-sumi text-white shadow-retro-sm font-black'
                 : 'border border-paper-sumi/30 bg-paper-card text-paper-sumi/80 hover:bg-paper-butter'
@@ -200,7 +200,7 @@ function QuizLevelContent({ level }: { level: Level }) {
           <button
             type="button"
             onClick={() => handleSwitchFilter('passage')}
-            className={`inline-flex h-8 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
+            className={`inline-flex h-8 shrink-0 items-center rounded-lg px-3 font-mono text-xs font-bold transition-all md:px-3.5 md:text-sm ${
               filter === 'passage'
                 ? 'border-2 border-paper-sumi bg-paper-sumi text-white shadow-retro-sm font-black'
                 : 'border border-paper-sumi/30 bg-paper-card text-paper-sumi/80 hover:bg-paper-butter'
@@ -211,54 +211,62 @@ function QuizLevelContent({ level }: { level: Level }) {
         </div>
 
         {/* 右側：一體成型、尺寸緊湊、水平幾何絕對居中的 Stepper 控制群組 */}
-        <div className="inline-flex h-8 items-stretch rounded-lg border-2 border-paper-sumi bg-paper-card shadow-retro-sm">
-          {/* 左箭頭（小巧 SVG，垂直 100% 幾何居中） */}
-          <button
-            type="button"
-            disabled={safeIdx === 0}
-            onClick={handlePrev}
-            className="flex w-7 items-center justify-center border-r border-paper-sumi/25 text-paper-sumi/80 transition-colors hover:bg-paper-butter disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent"
-            title="上一題"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-          </button>
+        <div className="flex w-full items-center justify-between sm:w-auto sm:justify-end">
+          <span className="font-mono text-[11px] font-bold text-paper-sumi/60 sm:hidden">
+            {filter === 'all' && '全題型混合練習'}
+            {filter === 'sentence' && 'PART 01 挖空專攻'}
+            {filter === 'star' && 'PART 02 ★重組專攻'}
+            {filter === 'passage' && 'PART 03 篇章專攻'}
+          </span>
+          <div className="inline-flex h-8 items-stretch rounded-lg border-2 border-paper-sumi bg-paper-card shadow-retro-sm">
+            {/* 左箭頭（小巧 SVG，垂直 100% 幾何居中） */}
+            <button
+              type="button"
+              disabled={safeIdx === 0}
+              onClick={handlePrev}
+              className="flex w-7 items-center justify-center border-r border-paper-sumi/25 text-paper-sumi/80 transition-colors hover:bg-paper-butter disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent"
+              title="上一題"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
 
-          {/* 題號與展開箭頭（高度、字重與垂直中線絕對齊平） */}
-          <button
-            type="button"
-            onClick={() => setShowJumpPanel((v) => !v)}
-            className="flex items-center gap-1.5 px-3 font-mono text-xs font-black text-paper-sumi transition-colors hover:bg-paper-butter"
-            title="點擊展開快速跳題面板"
-          >
-            <span>Q.{String(safeIdx + 1).padStart(2, '0')}</span>
-            <span className="text-paper-sumi/35">/</span>
-            <span className="text-paper-sumi/60">{String(filteredQuestions.length).padStart(2, '0')}</span>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-sumi/60" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
+            {/* 題號與展開箭頭 */}
+            <button
+              type="button"
+              onClick={() => setShowJumpPanel((v) => !v)}
+              className="flex items-center gap-1.5 px-3 font-mono text-xs font-black text-paper-sumi transition-colors hover:bg-paper-butter"
+              title="點擊展開快速跳題面板"
+            >
+              <span>Q.{String(safeIdx + 1).padStart(2, '0')}</span>
+              <span className="text-paper-sumi/35">/</span>
+              <span className="text-paper-sumi/60">{String(filteredQuestions.length).padStart(2, '0')}</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-sumi/60" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
 
-          {/* 右箭頭（小巧 SVG，垂直 100% 幾何居中） */}
-          <button
-            type="button"
-            disabled={safeIdx === filteredQuestions.length - 1}
-            onClick={handleNext}
-            className="flex w-7 items-center justify-center border-l border-paper-sumi/25 text-paper-sumi/80 transition-colors hover:bg-paper-butter disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent"
-            title="下一題"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
+            {/* 右箭頭（小巧 SVG，垂直 100% 幾何居中） */}
+            <button
+              type="button"
+              disabled={safeIdx === filteredQuestions.length - 1}
+              onClick={handleNext}
+              className="flex w-7 items-center justify-center border-l border-paper-sumi/25 text-paper-sumi/80 transition-colors hover:bg-paper-butter disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent"
+              title="下一題"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* 展開式快速跳題面板（位於框框外部） */}
+      {/* 展開式快速跳題面板（手機版優化為 5 欄網格，觸控超輕鬆） */}
       {showJumpPanel && (
-        <div className="rounded-xl border-2 border-paper-sumi bg-paper-card p-4 shadow-retro animate-in fade-in duration-150">
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-paper-sumi/15 pb-2.5">
+        <div className="rounded-xl border-2 border-paper-sumi bg-paper-card p-3.5 shadow-retro animate-in fade-in duration-150 sm:p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2.5 border-b border-paper-sumi/15 pb-2.5">
             <span className="font-display text-xs font-bold text-paper-sumi">
               快速跳題（共 {filteredQuestions.length} 題）
             </span>
@@ -285,9 +293,9 @@ function QuizLevelContent({ level }: { level: Level }) {
             </form>
           </div>
 
-          {/* 題號方塊網格 */}
-          <div className="mt-3 max-h-[160px] overflow-y-auto pr-1">
-            <div className="grid grid-cols-8 gap-1.5 sm:grid-cols-10 md:grid-cols-12">
+          {/* 題號方塊網格：手機 5 欄，平板 8 欄，電腦 12 欄 */}
+          <div className="mt-3 max-h-[180px] overflow-y-auto pr-1">
+            <div className="grid grid-cols-5 gap-1.5 sm:grid-cols-8 md:grid-cols-12">
               {filteredQuestions.map((q, idx) => {
                 const isCur = idx === safeIdx;
                 let isDone = false;
@@ -320,26 +328,26 @@ function QuizLevelContent({ level }: { level: Level }) {
         </div>
       )}
 
-      {/* 核心作答卡片 */}
+      {/* 核心作答卡片（內距針對手機優化為 p-3.5 sm:p-5 md:p-7） */}
       {activeQuestion && (
-        <div className="rounded-2xl border-3 border-paper-sumi bg-white p-4 shadow-retro md:p-7">
+        <div className="rounded-2xl border-3 border-paper-sumi bg-white p-3.5 shadow-retro sm:p-5 md:p-7">
           {/* 卡片頂部標籤 */}
-          <div className="flex items-center justify-between border-b border-paper-sumi/15 pb-3">
-            <span className="rounded border border-paper-sumi/30 bg-paper-oatmeal px-2.5 py-0.5 font-mono text-xs font-bold text-paper-sumi/80">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-paper-sumi/15 pb-2.5">
+            <span className="rounded border border-paper-sumi/30 bg-paper-oatmeal px-2 py-0.5 font-mono text-[11px] font-bold text-paper-sumi/80 sm:text-xs">
               {activeQuestion.type === 'sentence' && 'PART 01 ・ 文法形式挖空'}
               {activeQuestion.type === 'star' && 'PART 02 ・ ★ 號排序重組'}
               {activeQuestion.type === 'passage' && 'PART 03 ・ 篇章脈絡填空'}
             </span>
 
-            <span className="font-mono text-xs text-paper-sumi/50">
-              {activeQuestion.type === 'sentence' && activeQuestion.data.targetGrammar
-                ? `考點：${activeQuestion.data.targetGrammar}`
-                : `題號：${safeIdx + 1} / ${filteredQuestions.length}`}
-            </span>
+            {activeQuestion.type === 'sentence' && activeQuestion.data.targetGrammar ? (
+              <span className="max-w-[200px] truncate font-mono text-[11px] text-paper-sumi/60 sm:max-w-none sm:text-xs">
+                考點：{activeQuestion.data.targetGrammar}
+              </span>
+            ) : null}
           </div>
 
           {/* 題目主體渲染 */}
-          <div className="mt-4">
+          <div className="mt-3 sm:mt-4">
             {activeQuestion.type === 'sentence' && (
               <SentenceQuestionCard
                 quiz={activeQuestion.data}
@@ -373,12 +381,12 @@ function QuizLevelContent({ level }: { level: Level }) {
           </div>
 
           {/* 卡片底部翻頁按鈕 */}
-          <div className="mt-6 flex items-center justify-between border-t border-paper-sumi/15 pt-3.5">
+          <div className="mt-5 flex items-center justify-between border-t border-paper-sumi/15 pt-3">
             <button
               type="button"
               disabled={safeIdx === 0}
               onClick={handlePrev}
-              className="rounded-lg border border-paper-sumi/30 bg-paper-card px-3.5 py-1.5 font-mono text-xs font-bold text-paper-sumi hover:bg-paper-butter disabled:opacity-30"
+              className="rounded-lg border border-paper-sumi/30 bg-paper-card px-3 py-1.5 font-mono text-xs font-bold text-paper-sumi hover:bg-paper-butter disabled:opacity-30"
             >
               ← PREV
             </button>
@@ -389,7 +397,7 @@ function QuizLevelContent({ level }: { level: Level }) {
               type="button"
               disabled={safeIdx === filteredQuestions.length - 1}
               onClick={handleNext}
-              className="rounded-lg border-2 border-paper-sumi bg-paper-butter px-4 py-1.5 font-mono text-xs font-black text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px] disabled:opacity-30"
+              className="rounded-lg border-2 border-paper-sumi bg-paper-butter px-3.5 py-1.5 font-mono text-xs font-black text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px] disabled:opacity-30"
             >
               NEXT →
             </button>
@@ -401,7 +409,7 @@ function QuizLevelContent({ level }: { level: Level }) {
 }
 
 /* ─────────────────────────────────────────────────────────────
- * 子元件：第 1 部 挖空填空（零刺眼綠色，素雅日系質感）
+ * 子元件：第 1 部 挖空填空
  * ──────────────────────────────────────────────────────────── */
 function SentenceQuestionCard({
   quiz,
@@ -420,13 +428,13 @@ function SentenceQuestionCard({
       {/* 句子文字 */}
       <div
         lang="ja"
-        className="my-4 font-body text-base font-bold leading-relaxed text-paper-sumi md:text-lg"
+        className="my-3.5 font-body text-base font-bold leading-relaxed text-paper-sumi sm:my-4 md:text-lg"
       >
         {quiz.question.split('（　　）').map((part, idx, arr) => (
           <span key={idx}>
             {part}
             {idx < arr.length - 1 && (
-              <span className="mx-1 inline-block min-w-[56px] rounded border-b-2 border-paper-sumi bg-paper-butter/80 px-2 py-0.5 text-center font-mono text-xs font-black text-[#ff6b35] md:text-sm">
+              <span className="mx-1 inline-block min-w-[50px] rounded border-b-2 border-paper-sumi bg-paper-butter/80 px-1.5 py-0.5 text-center font-mono text-xs font-black text-[#ff6b35] sm:min-w-[56px] sm:text-sm">
                 {hasAnswered ? quiz.options[userChoice - 1] : '（　　）'}
               </span>
             )}
@@ -434,8 +442,8 @@ function SentenceQuestionCard({
         ))}
       </div>
 
-      {/* 選項四宮格：正解以奶油黃優雅高亮，不用刺眼綠色 */}
-      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:gap-3">
+      {/* 選項清單 */}
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-3">
         {quiz.options.map((opt, optIdx) => {
           const optNum = optIdx + 1;
           const isSelected = userChoice === optNum;
@@ -445,11 +453,9 @@ function SentenceQuestionCard({
             'bg-paper-card border-paper-sumi hover:bg-paper-butter text-paper-sumi';
           if (hasAnswered) {
             if (isRight) {
-              // 正解：經典奶油黃 ＋ 粗黑外框
               optStyle =
                 'bg-paper-butter border-2 border-paper-sumi text-paper-sumi font-black shadow-retro-sm';
             } else if (isSelected) {
-              // 選錯：柔和刪除線
               optStyle =
                 'bg-paper-oatmeal border border-paper-sumi/40 text-paper-sumi/60 line-through';
             } else {
@@ -464,9 +470,9 @@ function SentenceQuestionCard({
               lang="ja"
               disabled={hasAnswered}
               onClick={() => onSelect(optNum)}
-              className={`flex items-center justify-between rounded-xl border-2 p-3 text-left font-body text-sm font-bold shadow-retro-sm transition-all md:p-3.5 md:text-base ${optStyle}`}
+              className={`flex items-center justify-between rounded-xl border-2 p-2.5 text-left font-body text-xs font-bold shadow-retro-sm transition-all sm:p-3 sm:text-sm md:p-3.5 md:text-base ${optStyle}`}
             >
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-1.5 border-current font-mono text-xs font-black">
                   {optNum}
                 </span>
@@ -480,10 +486,10 @@ function SentenceQuestionCard({
         })}
       </div>
 
-      {/* 詳解：素雅紙質底色 */}
+      {/* 詳解 */}
       {hasAnswered && (
-        <div className="mt-4 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 shadow-retro-sm md:p-4">
-          <div className="font-display text-sm font-bold text-paper-sumi md:text-base">
+        <div className="mt-3.5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 shadow-retro-sm sm:p-3.5 md:p-4">
+          <div className="font-display text-xs font-bold text-paper-sumi sm:text-sm md:text-base">
             {isCorrect ? (
               <span>○ 答對了！</span>
             ) : (
@@ -492,7 +498,7 @@ function SentenceQuestionCard({
               </span>
             )}
           </div>
-          <p className="mt-1.5 font-body text-xs font-medium leading-relaxed text-paper-sumi/90 md:text-sm">
+          <p className="mt-1 font-body text-xs font-medium leading-relaxed text-paper-sumi/90 sm:mt-1.5 md:text-sm">
             <strong className="font-bold text-paper-sumi">💡 考點解析：</strong>
             {quiz.explanation}
           </p>
@@ -503,7 +509,7 @@ function SentenceQuestionCard({
 }
 
 /* ─────────────────────────────────────────────────────────────
- * 子元件：第 2 部 ★ 號排序重組（零刺眼綠色，素雅日系質感）
+ * 子元件：第 2 部 ★ 號排序重組（針對手機排版徹底優化！）
  * ──────────────────────────────────────────────────────────── */
 function StarQuestionCard({
   quiz,
@@ -514,9 +520,20 @@ function StarQuestionCard({
   slots: number[];
   onChangeSlots: (newSlots: number[]) => void;
 }) {
-  const handleAddChunk = (chunkNum: number) => {
-    if (slots.length >= 4 || slots.includes(chunkNum)) return;
-    onChangeSlots([...slots, chunkNum]);
+  const handleToggleChunk = (chunkNum: number) => {
+    if (slots.includes(chunkNum)) {
+      onChangeSlots(slots.filter((num) => num !== chunkNum));
+    } else {
+      if (slots.length >= 4) return;
+      onChangeSlots([...slots, chunkNum]);
+    }
+  };
+
+  const handleRemoveSlot = (slotIdx: number) => {
+    const chunkToRemove = slots[slotIdx];
+    if (chunkToRemove) {
+      onChangeSlots(slots.filter((num) => num !== chunkToRemove));
+    }
   };
 
   const handleReset = () => {
@@ -536,51 +553,60 @@ function StarQuestionCard({
         點選下方 4 個詞塊填入橫線，找出落在 <strong>★ 號位置</strong> 的選項：
       </p>
 
-      {/* 題目句子主體 */}
-      <div className="my-4 rounded-xl border border-paper-sumi/20 bg-paper-canvas p-4 md:p-5">
-        <p
-          lang="ja"
-          className="font-body text-base font-bold leading-loose text-paper-sumi md:text-lg"
-        >
-          <span>{quiz.preText}</span>
+      {/* 題目句子主體：手機版採用「前置句 ➔ 4 欄均分插槽 ➔ 後置句」架構，100% 絕對不跑版！ */}
+      <div className="my-3.5 rounded-xl border border-paper-sumi/20 bg-paper-canvas p-3 sm:p-4 md:p-5">
+        {quiz.preText && (
+          <p lang="ja" className="mb-2 font-body text-sm font-bold text-paper-sumi sm:text-base md:text-lg">
+            {quiz.preText}
+          </p>
+        )}
 
-          {/* 4 個連續插槽 */}
+        {/* 4 個插槽：採用 grid-cols-4 均分，在手機寬度下平整對稱 */}
+        <div className="my-2 grid grid-cols-4 gap-1.5 sm:gap-2">
           {[0, 1, 2, 3].map((slotIdx) => {
             const placedChunkNum = slots[slotIdx];
             const isStarSlot = slotIdx === quiz.starIndex;
 
             return (
-              <span
+              <div
                 key={slotIdx}
-                className={`mx-1 inline-flex min-h-[32px] min-w-[62px] items-center justify-center rounded border-b-2.5 px-2 py-0.5 align-middle font-body text-xs font-black transition-all md:min-w-[76px] md:text-sm ${
+                onClick={() => placedChunkNum && handleRemoveSlot(slotIdx)}
+                className={`flex min-h-[40px] flex-col items-center justify-center rounded border-b-3 px-1 py-1 text-center transition-all sm:min-h-[44px] ${
                   isStarSlot
                     ? 'border-[#ff6b35] bg-[#ffe5a3] text-[#ff6b35] shadow-sm'
                     : 'border-paper-sumi bg-white text-paper-sumi shadow-sm'
-                } ${placedChunkNum ? '' : 'border-dashed opacity-60'}`}
+                } ${placedChunkNum ? 'cursor-pointer hover:opacity-80 active:scale-95' : 'border-dashed opacity-60'}`}
+                title={placedChunkNum ? '點擊可移除此詞塊' : undefined}
               >
-                {isStarSlot && <span className="mr-0.5 text-[11px]">★</span>}
+                {isStarSlot && (
+                  <span className="text-[10px] font-black leading-none text-[#ff6b35]">★</span>
+                )}
                 {placedChunkNum ? (
-                  <span>
+                  <span className="break-words font-body text-[11px] font-black leading-tight sm:text-xs md:text-sm">
                     {placedChunkNum}. {quiz.chunks[placedChunkNum - 1]}
                   </span>
                 ) : (
                   <span className="font-mono text-xs text-paper-sumi/40">
-                    {isStarSlot ? '★ ?' : '?'}
+                    {isStarSlot ? '★ ?' : `${slotIdx + 1}`}
                   </span>
                 )}
-              </span>
+              </div>
             );
           })}
+        </div>
 
-          <span>{quiz.postText}</span>
-        </p>
+        {quiz.postText && (
+          <p lang="ja" className="mt-2 font-body text-sm font-bold text-paper-sumi sm:text-base md:text-lg">
+            {quiz.postText}
+          </p>
+        )}
       </div>
 
       {/* 詞塊碎片點選區 */}
-      <div className="mt-4 border-t border-paper-sumi/10 pt-3">
+      <div className="mt-3.5 border-t border-paper-sumi/10 pt-3">
         <div className="flex items-center justify-between">
           <span className="font-display text-xs font-bold text-paper-sumi/70">
-            👇 點擊詞塊依序填入：
+            👇 點擊詞塊依序填入（再次點擊可取消）：
           </span>
           {slots.length > 0 && (
             <button
@@ -594,7 +620,8 @@ function StarQuestionCard({
           )}
         </div>
 
-        <div className="mt-2.5 grid grid-cols-2 gap-2 sm:grid-cols-4 md:gap-2.5">
+        {/* 詞塊按鈕：字體不截斷 (break-words)，在手機上自然折行 */}
+        <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4 md:gap-2.5">
           {quiz.chunks.map((chunkText, cIdx) => {
             const chunkNum = cIdx + 1;
             const isUsed = slots.includes(chunkNum);
@@ -604,29 +631,29 @@ function StarQuestionCard({
                 key={cIdx}
                 type="button"
                 lang="ja"
-                disabled={isUsed || isCompleted}
-                onClick={() => handleAddChunk(chunkNum)}
-                className={`flex items-center gap-2 rounded-xl border-2 border-paper-sumi p-2.5 text-left font-body text-xs font-bold shadow-retro-sm transition-all md:p-3 md:text-sm ${
+                onClick={() => handleToggleChunk(chunkNum)}
+                className={`flex items-start gap-1.5 rounded-xl border-2 border-paper-sumi p-2 text-left font-body text-xs font-bold shadow-retro-sm transition-all sm:p-2.5 sm:text-sm md:p-3 ${
                   isUsed
-                    ? 'cursor-not-allowed border-paper-sumi/20 bg-paper-oatmeal/60 opacity-30 shadow-none'
+                    ? 'border-paper-sumi/30 bg-paper-oatmeal/70 text-paper-sumi/60 shadow-none'
                     : 'bg-white hover:bg-paper-butter active:translate-y-0.5'
                 }`}
+                title={isUsed ? '已填入，點擊可取消選取' : '點擊填入橫線'}
               >
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-paper-sumi font-mono text-[11px] font-black">
+                <span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-paper-sumi font-mono text-[11px] font-black ${isUsed ? 'bg-paper-sumi/10' : ''}`}>
                   {chunkNum}
                 </span>
-                <span className="truncate">{chunkText}</span>
+                <span className="break-words leading-tight">{chunkText}</span>
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* 完成驗證回饋卡：素雅紙質底色 */}
+      {/* 完成驗證回饋卡 */}
       {isCompleted && (
-        <div className="mt-4 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-4 shadow-retro-sm animate-in fade-in duration-150">
-          <div className="flex flex-wrap items-center justify-between gap-2.5">
-            <div className="font-display text-sm font-black text-paper-sumi md:text-base">
+        <div className="mt-3.5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 shadow-retro-sm animate-in fade-in duration-150 sm:p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="font-display text-xs font-black text-paper-sumi sm:text-sm md:text-base">
               {isOrderCorrect ? (
                 <span>○ 重組順序完全正確！</span>
               ) : (
@@ -637,7 +664,7 @@ function StarQuestionCard({
             </div>
 
             {/* ★ 號選項公佈徽章 */}
-            <div className="rounded-lg border-2 border-paper-sumi bg-white px-3 py-1 font-body text-xs font-black shadow-retro-sm md:text-sm">
+            <div className="rounded-lg border-2 border-paper-sumi bg-white px-2.5 py-0.5 font-body text-xs font-black shadow-retro-sm sm:px-3 sm:py-1 md:text-sm">
               落在 ★ 號位置的是：
               <span className="text-[#ff6b35]">
                 【 {starPlacedNum} 號：{quiz.chunks[starPlacedNum - 1]} 】
@@ -646,7 +673,7 @@ function StarQuestionCard({
             </div>
           </div>
 
-          <div className="mt-3 border-t border-paper-sumi/15 pt-2.5">
+          <div className="mt-2.5 border-t border-paper-sumi/15 pt-2 sm:mt-3 sm:pt-2.5">
             <p className="font-body text-xs font-medium leading-relaxed text-paper-sumi md:text-sm">
               <strong className="font-bold">正確完整句：</strong>
               <span lang="ja" className="ml-1 font-bold text-paper-sumi">
@@ -657,7 +684,7 @@ function StarQuestionCard({
               <strong className="font-bold">中文對照：</strong>
               {quiz.translation}
             </p>
-            <p className="mt-1.5 font-body text-xs leading-relaxed text-paper-sumi/90 md:text-sm">
+            <p className="mt-1 font-body text-xs leading-relaxed text-paper-sumi/90 sm:mt-1.5 md:text-sm">
               <strong className="font-bold text-paper-sumi">💡 語法拆解：</strong>
               {quiz.explanation}
             </p>
@@ -669,7 +696,7 @@ function StarQuestionCard({
 }
 
 /* ─────────────────────────────────────────────────────────────
- * 子元件：第 3 部 篇章脈絡填空（零刺眼綠色，素雅日系質感）
+ * 子元件：第 3 部 篇章脈絡填空
  * ──────────────────────────────────────────────────────────── */
 function PassageQuestionCard({
   passage,
@@ -689,10 +716,10 @@ function PassageQuestionCard({
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h3 className="font-display text-base font-black text-paper-sumi md:text-lg">
+        <h3 className="font-display text-sm font-black text-paper-sumi sm:text-base md:text-lg">
           📖 {passage.title}
         </h3>
-        <span className="rounded border border-paper-sumi/20 bg-paper-oatmeal px-2 py-0.5 font-mono text-[11px] font-bold text-paper-sumi">
+        <span className="rounded border border-paper-sumi/20 bg-paper-oatmeal px-2 py-0.5 font-mono text-[10px] font-bold text-paper-sumi sm:text-[11px]">
           {passage.genre}
         </span>
       </div>
@@ -700,7 +727,7 @@ function PassageQuestionCard({
       {/* 篇章閱讀文字框 */}
       <div
         lang="ja"
-        className="my-4 max-h-[220px] overflow-y-auto rounded-xl border border-paper-sumi/20 bg-paper-canvas p-4 font-body text-sm font-normal leading-relaxed text-paper-sumi/90 md:text-base md:leading-loose"
+        className="my-3 max-h-[220px] overflow-y-auto rounded-xl border border-paper-sumi/20 bg-paper-canvas p-3 font-body text-xs font-normal leading-relaxed text-paper-sumi/90 sm:my-4 sm:p-4 sm:text-sm md:text-base md:leading-loose"
       >
         {passage.passage.split(/(【\s*\d+\s*】)/).map((segment, sIdx) => {
           const match = segment.match(/【\s*(\d+)\s*】/);
@@ -711,7 +738,7 @@ function PassageQuestionCard({
             return (
               <span
                 key={sIdx}
-                className={`mx-1 inline-flex items-center justify-center rounded border px-2 py-0.5 align-middle font-body text-xs font-black shadow-sm ${
+                className={`mx-0.5 inline-flex items-center justify-center rounded border px-1.5 py-0.5 align-middle font-body text-[11px] font-black shadow-sm sm:mx-1 sm:px-2 sm:text-xs ${
                   isCurrentBlank
                     ? 'border-[#ff6b35] bg-[#ffe5a3] text-[#ff6b35] ring-2 ring-[#ff6b35]/50'
                     : hasAnswered && isCurrentBlank
@@ -728,7 +755,7 @@ function PassageQuestionCard({
       </div>
 
       {/* 中文翻譯收合鈕 */}
-      <div className="mb-3">
+      <div className="mb-2.5">
         <button
           type="button"
           onClick={() => setShowTranslation((v) => !v)}
@@ -737,14 +764,14 @@ function PassageQuestionCard({
           {showTranslation ? '▲ 收合中文翻譯' : '▼ 展開中日對照全文翻譯'}
         </button>
         {showTranslation && (
-          <div className="mt-2 rounded-lg border border-paper-sumi/20 bg-paper-canvas p-3 font-body text-xs leading-relaxed text-paper-sumi/80">
+          <div className="mt-2 rounded-lg border border-paper-sumi/20 bg-paper-canvas p-2.5 font-body text-xs leading-relaxed text-paper-sumi/80 sm:p-3">
             {passage.translation}
           </div>
         )}
       </div>
 
       {/* 本題選項 */}
-      <div className="border-t border-paper-sumi/10 pt-3">
+      <div className="border-t border-paper-sumi/10 pt-2.5">
         <div className="mb-2 font-display text-xs font-bold text-paper-sumi md:text-sm">
           請選擇【 空白 {String(subQ.blankNumber).padStart(2, '0')} 】應填入的最適當選項：
         </div>
@@ -759,14 +786,13 @@ function PassageQuestionCard({
               'bg-paper-card border-paper-sumi hover:bg-paper-butter text-paper-sumi';
             if (hasAnswered) {
               if (isRight) {
-                // 正解：奶油黃高亮
                 btnStyle =
                   'bg-paper-butter border-2 border-paper-sumi text-paper-sumi font-black shadow-retro-sm';
               } else if (isSelected) {
                 btnStyle =
                   'bg-paper-oatmeal border border-paper-sumi/40 text-paper-sumi/60 line-through';
               } else {
-                btnStyle = 'bg-paper-card border-paper-sumi/30 opacity-40 shadow-none';
+                btnStyle = 'bg-paper-card border-paper-sumi/20 opacity-40 shadow-none';
               }
             }
 
@@ -777,7 +803,7 @@ function PassageQuestionCard({
                 lang="ja"
                 disabled={hasAnswered}
                 onClick={() => onSelect(optNum)}
-                className={`flex items-center justify-between rounded-xl border-2 p-2.5 text-left font-body text-xs font-bold shadow-retro-sm transition-all md:p-3 md:text-sm ${btnStyle}`}
+                className={`flex items-center justify-between rounded-xl border-2 p-2.5 text-left font-body text-xs font-bold shadow-retro-sm transition-all sm:text-sm md:p-3 ${btnStyle}`}
               >
                 <div className="flex items-center gap-2">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-1.5 border-current font-mono text-[11px] font-black">
@@ -794,7 +820,7 @@ function PassageQuestionCard({
         </div>
 
         {hasAnswered && (
-          <div className="mt-3.5 rounded-lg border-2 border-paper-sumi bg-paper-canvas p-3 font-body text-xs leading-relaxed text-paper-sumi shadow-retro-sm md:text-sm">
+          <div className="mt-3 rounded-lg border-2 border-paper-sumi bg-paper-canvas p-2.5 font-body text-xs leading-relaxed text-paper-sumi shadow-retro-sm sm:p-3 md:text-sm">
             <div className="font-display font-bold">
               {isCorrect ? (
                 <span>○ 答對了！</span>
