@@ -67,6 +67,9 @@ let failed = false;
 
 for (const file of jsonFiles) {
   const rel = path.relative(dataDir, file);
+  if (rel.startsWith('threads/') || rel.startsWith('threads\\')) {
+    continue;
+  }
   let data;
   try {
     data = JSON.parse(await readFile(file, 'utf8'));

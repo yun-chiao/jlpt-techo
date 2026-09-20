@@ -339,7 +339,7 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
       '📑 5 冊 FUDGE 日雜風 A4 講義手冊（支援存為 PDF 或放入 GoodNotes）',
       '💡 一次投資，陪伴你從五十音初學直通 N1 最高殿堂！',
     ],
-    handbookUrl: '/dist-products/n3/日檢手帖-N3-考場速查講義手冊.html',
+    handbookUrl: '/dist-products/n3/日檢手帖-N3-試閱講義手冊.html',
     samples: [],
   },
 };
@@ -676,8 +676,8 @@ export function ProductShowcasePage() {
                 <div className="space-y-2 text-xs">
                   <div className="border-b pb-1 font-bold text-paper-sumi/50">第三章：實戰測驗題（附選項即答詳解）</div>
                   <div className="rounded border p-2">
-                    <p className="font-bold">第 1 題：たまに朝ご飯を（　）ことがあるので、注意された。</p>
-                    <p className="text-paper-sumi/70">(A) 食べて　(B) 食べよう　(C) 食べなかった　(D) 食べない</p>
+                    <p className="font-bold">第 1 題：たまに朝ご飯を（ ___ ）ことがあるので、注意された。</p>
+                    <p className="text-paper-sumi/70">(A) 食べて / (B) 食べよう / (C) 食べなかった / (D) 食べない</p>
                     <p className="mt-1 rounded bg-paper-canvas p-1 text-[11px]">
                       正解：<strong>D（食べない）</strong> ｜ 偶爾發生的習慣用ない形＋ことがある。
                     </p>

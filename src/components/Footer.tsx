@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SITE_NAME, SITE_NAME_EN } from '../data/meta';
 
-const BMC_URL = 'https://buymeacoffee.com/chiaoban/shop';
-
 export function Footer() {
   return (
     <footer className="mt-16 border-t-2 border-paper-sumi bg-paper-card">
