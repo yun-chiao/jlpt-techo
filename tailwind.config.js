@@ -32,6 +32,7 @@ export default {
       fontFamily: {
         body: ['"Zen Kaku Gothic New"', '"Noto Sans TC"', '"Noto Sans JP"', 'sans-serif'],
         display: ['"Zen Maru Gothic"', '"Zen Kaku Gothic New"', 'sans-serif'],
+        serif: ['"Noto Serif JP"', '"Noto Serif TC"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'],
         mono: ['"DM Mono"', '"Courier New"', 'monospace'],
       },
     },

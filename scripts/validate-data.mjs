@@ -53,6 +53,51 @@ const lessonSetSchema = z.array(lessonSchema);
 const vocabEntrySchema = vocabularyItemSchema.extend({ category: z.string() });
 const vocabSetSchema = z.array(vocabEntrySchema);
 
+const sentenceQuizSchema = z.object({
+  id: z.string(),
+  question: z.string(),
+  options: z.array(z.string()),
+  correctIndex: z.number(),
+  explanation: z.string(),
+  targetGrammar: z.string().optional(),
+});
+
+const starScrambleQuizSchema = z.object({
+  id: z.string(),
+  preText: z.string(),
+  postText: z.string(),
+  starIndex: z.number(),
+  chunks: z.array(z.string()),
+  correctOrder: z.array(z.number()),
+  explanation: z.string(),
+  fullSentence: z.string(),
+  translation: z.string(),
+});
+
+const passageSubQuestionSchema = z.object({
+  blankNumber: z.number(),
+  options: z.array(z.string()),
+  correctIndex: z.number(),
+  explanation: z.string(),
+});
+
+const passageQuizSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  genre: z.string(),
+  passage: z.string(),
+  questions: z.array(passageSubQuestionSchema),
+  translation: z.string(),
+});
+
+const levelQuizSetSchema = z.object({
+  level: z.string(),
+  levelLabel: z.string(),
+  sentenceQuizzes: z.array(sentenceQuizSchema),
+  starQuizzes: z.array(starScrambleQuizSchema),
+  passageQuizzes: z.array(passageQuizSchema),
+});
+
 const entries = await readdir(dataDir, { recursive: true, withFileTypes: true });
 const jsonFiles = entries
   .filter((e) => e.isFile() && e.name.endsWith('.json'))
@@ -78,7 +123,20 @@ for (const file of jsonFiles) {
     failed = true;
     continue;
   }
-  // 依形狀判斷：課程教材（有 lesson_number）或單字總表（有 category）
+  // 依路徑與形狀判斷：題型專攻題庫（quiz/）、單字總表（category）或課程教材（lesson_number）
+  if (rel.startsWith('quiz/') || rel.startsWith('quiz\\')) {
+    const result = levelQuizSetSchema.safeParse(data);
+    if (result.success) {
+      console.log(`✓ ${rel}：包含句子挖空、★號重組與篇章文法，格式正確`);
+    } else {
+      failed = true;
+      for (const issue of result.error.issues) {
+        console.error(`✗ ${rel} → 欄位 "${issue.path.join('.')}"：${issue.message}`);
+      }
+    }
+    continue;
+  }
+
   const isVocabSet = Array.isArray(data) && data.length > 0 && 'category' in data[0];
   const schema = isVocabSet ? vocabSetSchema : lessonSetSchema;
   const kind = isVocabSet ? '筆單字' : '課';

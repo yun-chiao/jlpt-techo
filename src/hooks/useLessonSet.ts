@@ -10,14 +10,14 @@ export interface LessonSetState {
   data?: LessonSet;
 }
 
-/** 課程教材（文法／練習題）用的 section；單字總表請用 useVocabSet。 */
-type LessonSection = 'grammar' | 'quiz';
+/** 課程教材（文法）用的 section；單字請用 useVocabSet，題庫請用 useQuizSet。 */
+type LessonSection = 'grammar';
 
 /**
- * 所有頁面透過此 Hook 取教材資料，不得在元件內直接 import JSON。
+ * 文法頁面透過此 Hook 取教材資料，不得在元件內直接 import JSON。
  */
 export function useLessonSet(section: LessonSection, level: Level): LessonSetState {
-  const loader = registry[section][level];
+  const loader = registry.grammar[level];
   const [state, setState] = useState<LessonSetState>(() =>
     loader ? { status: 'loading' } : { status: 'unavailable' },
   );

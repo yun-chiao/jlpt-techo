@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日檢手帖｜全真日檢題庫 UI 設計提案預覽</title>
+<style>
+  :root {
+    --sumi: #2b2523;
+    --paper: #faf7f2;
+    --card: #ffffff;
+    --butter: #ffe5a3;
+    --orange: #ff6b35;
+    --orange-tint: #fff0e8;
+    --green: #2a9d8f;
+    --red: #e76f51;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ece7de;
+    font-family: 'Zen Kaku Gothic New', -apple-system, sans-serif;
+    color: var(--sumi);
+  }
+
+  /* 頂部提案切換導航列 */
+  .demo-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--sumi);
+    color: #ffffff;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .demo-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+  }
+  .demo-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .demo-tab-btn {
+    background: rgba(255,255,255,0.12);
+    color: #ffffff;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .demo-tab-btn:hover {
+    background: rgba(255,255,255,0.25);
+  }
+  .demo-tab-btn.active {
+    background: var(--butter);
+    color: var(--sumi);
+    border-color: var(--butter);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .view-toggles {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.25);
+    padding: 3px 6px;
+    border-radius: 6px;
+  }
+  .view-btn {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .view-btn.active {
+    background: #ffffff;
+    color: var(--sumi);
+  }
+
+  /* 主舞台容器（支援桌機與手機模擬） */
+  .stage-container {
+    max-width: 960px;
+    margin: 28px auto 60px auto;
+    padding: 0 20px;
+    transition: max-width 0.3s ease;
+  }
+  .stage-container.mobile-view {
+    max-width: 410px;
+    padding: 0 12px;
+  }
+
+  .concept-desc {
+    background: #ffffff;
+    border: 2px solid var(--sumi);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    box-shadow: 4px 4px 0px var(--sumi);
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .concept-desc strong {
+    color: var(--orange);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     方案 A：【全真考場・日檢官方紙卷模考風格】(Official Mock Exam)
+     ═══════════════════════════════════════════════════════════ */
+  .exam-paper {
+    background: #ffffff;
+    border: 3px solid var(--sumi);
+    border-radius: 14px;
+    padding: 32px 36px;
+    box-shadow: 8px 8px 0px var(--sumi);
+  }
+  .exam-header {
+    border-bottom: 2px solid var(--sumi);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .exam-stamp {
+    background: var(--sumi);
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+  .exam-timer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--paper);
+    border: 1.5px solid var(--sumi);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .exam-inst {
+    font-size: 13px;
+    font-weight: 800;
+    color: rgba(43,37,35,0.75);
+    background: var(--paper);
+    border-left: 4px solid var(--sumi);
+    padding: 8px 12px;
+    margin-bottom: 24px;
+  }
+  .exam-q-box {
+    margin-bottom: 24px;
+  }
+  .exam-q-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .exam-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 600px) {
+    .exam-options-grid { grid-template-columns: 1fr; }
+    .exam-paper { padding: 20px 16px; }
+  }
+  .exam-opt-btn {
+    background: #ffffff;
+    border: 2px solid var(--sumi);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 2.5px 2.5px 0px var(--sumi);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.1s ease;
+  }
+  .exam-opt-btn:hover {
+    background: var(--butter);
+    transform: translate(-1px, -1px);
+  }
+  .exam-opt-btn.selected {
+    background: var(--sumi);
+    color: #ffffff;
+    box-shadow: 1px 1px 0px var(--sumi);
+  }
+  .opt-num {
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .exam-footer-bar {
+    border-top: 2px dashed rgba(43,37,35,0.3);
+    padding-top: 20px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btn-submit-exam {
+    background: var(--orange);
+    color: #fff;
+    border: 2px solid var(--sumi);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--sumi);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     方案 B：【每日刷題・日雜手帳卡片流】(Daily Techo Flash-Quiz)
+     ═══════════════════════════════════════════════════════════ */
+  .flash-card-wrap {
+    background: var(--paper);
+    border: 3px solid var(--sumi);
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 8px 8px 0px var(--sumi);
+    position: relative;
+    overflow: hidden;
+  }
+  .flash-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .streak-badge {
+    background: var(--orange-tint);
+    color: var(--orange);
+    border: 1.5px solid var(--orange);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .progress-pill {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 800;
+    color: rgba(43,37,35,0.6);
+  }
+  .flash-q-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 2px solid var(--sumi);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 4px 4px 0px var(--sumi);
+  }
+  .flash-opt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .flash-opt-item {
+    background: #ffffff;
+    border: 2px solid var(--sumi);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 3px 0px var(--sumi);
+    transition: all 0.15s ease;
+  }
+  .flash-opt-item:hover {
+    background: var(--butter);
+  }
+  .flash-opt-item.correct {
+    background: #e8f7f5;
+    border-color: var(--green);
+    color: var(--green);
+  }
+  .flash-opt-item.wrong {
+    background: #fdeee9;
+    border-color: var(--red);
+    color: var(--red);
+  }
+  .feedback-box {
+    margin-top: 20px;
+    background: #ffffff;
+    border: 2px solid var(--sumi);
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 4px 4px 0px var(--sumi);
+    animation: fadeIn 0.25s ease;
+  }
+  .feedback-title {
+    font-size: 14px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .feedback-content {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(43,37,35,0.85);
+  }
+  .btn-next-flash {
+    margin-top: 14px;
+    background: var(--sumi);
+    color: #fff;
+    border: 2px solid var(--sumi);
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     方案 C：【題型專攻・日檢三部曲闖關書】(Section-by-Section Mastery)
+     ═══════════════════════════════════════════════════════════ */
+  .section-book {
+    background: #ffffff;
+    border: 3px solid var(--sumi);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 8px 8px 0px var(--sumi);
+  }
+  .section-tab-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+  .sec-tab-btn {
+    background: var(--paper);
+    border: 2px solid var(--sumi);
+    border-radius: 8px;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .sec-tab-btn.active {
+    background: var(--sumi);
+    color: #ffffff;
+  }
+  /* ★ 號排序題互動插槽 */
+  .star-puzzle-box {
+    background: var(--orange-tint);
+    border: 2px solid var(--orange);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .star-q-headline {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+  .sentence-line {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 2.2;
+    margin: 12px 0;
+  }
+  .slot {
+    display: inline-block;
+    min-width: 68px;
+    height: 32px;
+    border-bottom: 2.5px solid var(--sumi);
+    background: rgba(255,255,255,0.7);
+    margin: 0 4px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--orange);
+    vertical-align: middle;
+    border-radius: 4px 4px 0 0;
+  }
+  .slot.target-star {
+    border-bottom: 3px solid var(--orange);
+    background: #ffe5a3;
+    font-weight: 900;
+  }
+  .scramble-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .chip-btn {
+    background: #ffffff;
+    border: 2px solid var(--sumi);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--sumi);
+  }
+  .chip-btn.used {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- 頂部提案導航列 -->
+<nav class="demo-nav">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <span class="demo-brand">NIKKEN TECHO</span>
+    <span style="font-size:12px; opacity:0.7;">｜ 全真日檢題庫 UI 方案比較</span>
+  </div>
+
+  <div class="demo-tabs">
+    <button class="demo-tab-btn active" onclick="switchConcept('A')">
+      📋 方案 A：全真考場模考卷
+    </button>
+    <button class="demo-tab-btn" onclick="switchConcept('B')">
+      ⚡ 方案 B：每日刷題手帳卡
+    </button>
+    <button class="demo-tab-btn" onclick="switchConcept('C')">
+      🎯 方案 C：題型專攻闖關書 (含★重組)
+    </button>
+  </div>
+
+  <div class="view-toggles">
+    <button class="view-btn active" id="btnDesktop" onclick="setView('desktop')">💻 電腦版</button>
+    <button class="view-btn" id="btnMobile" onclick="setView('mobile')">📱 手機版</button>
+  </div>
+</nav>
+
+<div class="stage-container" id="stageContainer">
+
+  <!-- 說明看板 -->
+  <div class="concept-desc" id="conceptDesc">
+    <!-- 動態更換文案 -->
+  </div>
+
+  <!-- ════ 方案 A：全真考場模考卷 ════ -->
+  <div id="viewA" style="display:block;">
+    <div class="exam-paper">
+      <div class="exam-header">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="exam-stamp">JLPT N2 實戰模擬</span>
+          <strong style="font-size:15px;">言語知識（文法）第 1 回</strong>
+        </div>
+        <div class="exam-timer">
+          ⏱️ 剩餘時間：<span id="timerText">42:15</span>
+        </div>
+      </div>
+
+      <div class="exam-inst">
+        問題 1：次の文の（　　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。
+      </div>
+
+      <div class="exam-q-box">
+        <div style="font-size:12px; font-weight:800; color:rgba(43,37,35,0.5); margin-bottom:6px;">第 1 題 / 共 20 題</div>
+        <div class="exam-q-title">
+          今回のプロジェクトは、どんなに困難が予想されようと、途中で投げ出す（　　）にはいかない。
+        </div>
+
+        <div class="exam-options-grid">
+          <button class="exam-opt-btn" onclick="selectExamOpt(this, 1)">
+            <span class="opt-num">1</span> こと
+          </button>
+          <button class="exam-opt-btn" onclick="selectExamOpt(this, 2)">
+            <span class="opt-num">2</span> わけ
+          </button>
+          <button class="exam-opt-btn" onclick="selectExamOpt(this, 3)">
+            <span class="opt-num">3</span> もの
+          </button>
+          <button class="exam-opt-btn" onclick="selectExamOpt(this, 4)">
+            <span class="opt-num">4</span> はず
+          </button>
+        </div>
+      </div>
+
+      <div class="exam-footer-bar">
+        <div style="font-size:12px; color:rgba(43,37,35,0.6); font-weight:700;">
+          📌 已作答：1 / 20 題 ｜ 答題卡進度：[ 1 ] 2 3 4 5 ...
+        </div>
+        <button class="btn-submit-exam" onclick="submitExamMock()">
+          🏁 交卷結算成績 ➔
+        </button>
+      </div>
+
+      <div id="examResult" style="display:none; margin-top:20px; background:var(--paper); border:2px solid var(--sumi); border-radius:10px; padding:16px;">
+        <h4 style="margin:0 0 6px 0;">🎉 成績單生成中...</h4>
+        <p style="font-size:13px; margin:0;">正解為 <strong>(2) わけ</strong> ｜ 考點：動詞辭書形＋わけにはいかない（礙於情理責任不能放棄）。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 方案 B：每日刷題手帳卡 ════ -->
+  <div id="viewB" style="display:none;">
+    <div class="flash-card-wrap">
+      <div class="flash-top">
+        <div class="streak-badge">
+          🔥 <strong>3 連勝！</strong> Combo x3
+        </div>
+        <div class="progress-pill">
+          CARD 04 / 10
+        </div>
+      </div>
+
+      <div style="font-size:12px; font-weight:800; color:var(--orange); margin-bottom:8px;">
+        ⚡ 秒殺判斷 ｜ N2 易混淆情境對決
+      </div>
+
+      <div class="flash-q-text">
+        「明日の全体会議、山田さんは出席するでしょうか。」<br>
+        「ええ、さっき熱心に資料を準備していましたから、出席する（　　）。」
+      </div>
+
+      <div class="flash-opt-list" id="flashOptList">
+        <div class="flash-opt-item" onclick="answerFlash(this, false, 'わけにはいきません')">
+          <span>(A) わけにはいきません</span>
+          <span style="font-size:12px; opacity:0.4;">常理不能</span>
+        </div>
+        <div class="flash-opt-item" onclick="answerFlash(this, true, 'はずですよ')">
+          <span>(B) はずですよ</span>
+          <span style="font-size:12px; opacity:0.4;">客觀推算</span>
+        </div>
+        <div class="flash-opt-item" onclick="answerFlash(this, false, 'べきではありません')">
+          <span>(C) べきではありません</span>
+          <span style="font-size:12px; opacity:0.4;">道德義務</span>
+        </div>
+        <div class="flash-opt-item" onclick="answerFlash(this, false, 'どころではありません')">
+          <span>(D) どころではありません</span>
+          <span style="font-size:12px; opacity:0.4;">豈有此理</span>
+        </div>
+      </div>
+
+      <div id="flashFeedback" style="display:none;" class="feedback-box">
+        <div class="feedback-title" id="feedbackHead"></div>
+        <div class="feedback-content">
+          <strong>💡 考點秒殺解析：</strong><br>
+          句中「さっき熱心に資料を準備していましたから（剛剛看他很認真在備料）」是說話者親眼看見的<strong>客觀依據</strong>，因此後半句用來表達高度推測「按理應該會（〜はずだ）」。<br>
+          ⚠️ (A) わけにはいかない 是心理或責任上的無法，此處不合語境。
+        </div>
+        <button class="btn-next-flash" onclick="resetFlash()">
+          刷下一題 ➔ (Enter)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 方案 C：題型專攻闖關書 (含★重組) ════ -->
+  <div id="viewC" style="display:none;">
+    <div class="section-book">
+      <!-- 三大題型頁籤 -->
+      <div class="section-tab-row">
+        <button class="sec-tab-btn">
+          第 1 部<br>文法形式挖空 (60題)
+        </button>
+        <button class="sec-tab-btn active">
+          第 2 部<br>★號排序重組 (40題)
+        </button>
+        <button class="sec-tab-btn">
+          第 3 部<br>篇章脈絡填空 (20篇)
+        </button>
+      </div>
+
+      <!-- 重組題互動體驗卡 -->
+      <div class="star-puzzle-box">
+        <div class="star-q-headline">
+          ⭐ 題型特訓：文の組み立て（重組排列）
+        </div>
+        <p style="font-size:12px; margin:0 0 10px 0; color:rgba(43,37,35,0.7);">
+          說明：請點擊下方 4 個碎片依序填入橫線，找出應該排在 <strong>★ 號位置</strong> 的碎片！
+        </p>
+
+        <div class="sentence-line">
+          彼の実力からすれば、今回の試験に<br>
+          <span class="slot" id="slot0">?</span>
+          <span class="slot" id="slot1">?</span>
+          <span class="slot target-star" id="slot2">★ ?</span>
+          <span class="slot" id="slot3">?</span>
+          <br>と思う。
+        </div>
+
+        <div style="font-size:12px; font-weight:800; margin-top:14px;">點擊下方詞塊填入順序：</div>
+        <div class="scramble-chips" id="chipsRow">
+          <button class="chip-btn" onclick="addSlot('1. わけが', 1, this)">1. わけが</button>
+          <button class="chip-btn" onclick="addSlot('2. 落ちる', 2, this)">2. 落ちる</button>
+          <button class="chip-btn" onclick="addSlot('3. ない', 3, this)">3. ない</button>
+          <button class="chip-btn" onclick="addSlot('4. など', 4, this)">4. など</button>
+          <button class="chip-btn" style="background:#ece7de; margin-left:auto;" onclick="resetSlots()">↺ 重排</button>
+        </div>
+
+        <div id="starResult" style="display:none; margin-top:16px; background:#fff; border:2px solid var(--sumi); border-radius:8px; padding:12px;">
+          <div style="font-weight:900; font-size:14px; color:var(--green);" id="starFeedbackText"></div>
+          <div style="font-size:12.5px; margin-top:4px; line-height:1.5;">
+            完整句型組合：<strong>落ちる (2) ➔ など (4) ➔ わけが (1) ➔ ない (3)</strong><br>
+            「落ちるなどわけがない（絕不可能會落榜）」！因此排在第 3 格 ★ 號位置的是 <strong>1 號（わけが）</strong>！
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const descriptions = {
+  'A': '<strong>📋 方案 A【全真考場模考卷】特色：</strong><br>• 100% 模擬 7 月/12 月正式日檢試題樣式（Official Test Booklet）。<br>• 附帶正式考場倒數計時器 ＋ 題號作答卡矩陣。<br>• 適合「考前最後一個月」衝刺檢驗實力，交卷後產出雷達圖與錯題解析報告。',
+  'B': '<strong>⚡ 方案 B【每日刷題手帳卡】特色：</strong><br>• 延續日檢手帖 FUDGE 日雜風格，每組 5～10 題，隨開隨練。<br>• 即點即知對錯（蓋上復古 ⭕/❌ 印章），立刻彈出「考點解構 ＋ 避坑陷阱」。<br>• 附帶 🔥 連勝 Combo 計數器，通勤滑手機體驗最絲滑、無壓力！',
+  'C': '<strong>🎯 方案 C【題型專攻闖關書】特色：</strong><br>• 依據日檢官方三大題型分類：【1. 挖空選填】、【2. ★號重組排序】、【3. 篇章文法】。<br>• 獨家設計「★ 號重組排序互動器」，讓學生點擊碎片親手組裝句子（如右下示範）！<br>• 針對弱項各個擊破，自學滿意度極高。'
+};
+
+function switchConcept(concept) {
+  document.querySelectorAll('.demo-tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  document.getElementById('viewA').style.display = concept === 'A' ? 'block' : 'none';
+  document.getElementById('viewB').style.display = concept === 'B' ? 'block' : 'none';
+  document.getElementById('viewC').style.display = concept === 'C' ? 'block' : 'none';
+
+  document.getElementById('conceptDesc').innerHTML = descriptions[concept];
+}
+
+function setView(view) {
+  const c = document.getElementById('stageContainer');
+  const btnD = document.getElementById('btnDesktop');
+  const btnM = document.getElementById('btnMobile');
+  if (view === 'mobile') {
+    c.classList.add('mobile-view');
+    btnM.classList.add('active');
+    btnD.classList.remove('active');
+  } else {
+    c.classList.remove('mobile-view');
+    btnD.classList.add('active');
+    btnM.classList.remove('active');
+  }
+}
+
+// 方案 A 點選
+function selectExamOpt(btn, num) {
+  document.querySelectorAll('.exam-opt-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+function submitExamMock() {
+  document.getElementById('examResult').style.display = 'block';
+}
+
+// 方案 B 答題反饋
+function answerFlash(item, isCorrect, text) {
+  document.querySelectorAll('.flash-opt-item').forEach(b => b.style.pointerEvents = 'none');
+  const fb = document.getElementById('flashFeedback');
+  const head = document.getElementById('feedbackHead');
+  fb.style.display = 'block';
+
+  if (isCorrect) {
+    item.classList.add('correct');
+    head.innerHTML = '⭕ <strong>正解！完全答對！</strong> (+10 pts)';
+    head.style.color = 'var(--green)';
+  } else {
+    item.classList.add('wrong');
+    head.innerHTML = '❌ <strong>惜しい！答錯了</strong> (正確是：B. はずですよ)';
+    head.style.color = 'var(--red)';
+  }
+}
+function resetFlash() {
+  document.querySelectorAll('.flash-opt-item').forEach(b => {
+    b.classList.remove('correct', 'wrong');
+    b.style.pointerEvents = 'auto';
+  });
+  document.getElementById('flashFeedback').style.display = 'none';
+}
+
+// 方案 C ★號排序互動邏輯
+let currentSlots = [];
+function addSlot(text, id, btn) {
+  if (currentSlots.length >= 4 || btn.classList.contains('used')) return;
+  btn.classList.add('used');
+  const slotIdx = currentSlots.length;
+  currentSlots.push({ id, text, btn });
+  
+  const slotEl = document.getElementById('slot' + slotIdx);
+  slotEl.innerText = slotIdx === 2 ? ('★ ' + text) : text;
+  slotEl.style.background = '#ffffff';
+
+  if (currentSlots.length === 4) {
+    checkStarAnswer();
+  }
+}
+function resetSlots() {
+  currentSlots = [];
+  for (let i = 0; i < 4; i++) {
+    const el = document.getElementById('slot' + i);
+    el.innerText = i === 2 ? '★ ?' : '?';
+    el.style.background = '';
+  }
+  document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('used'));
+  document.getElementById('starResult').style.display = 'none';
+}
+function checkStarAnswer() {
+  const resultDiv = document.getElementById('starResult');
+  const fbText = document.getElementById('starFeedbackText');
+  resultDiv.style.display = 'block';
+
+  // 正確順序：2 (落ちる), 4 (など), 1 (わけが), 3 (ない)
+  const isCorrect = (currentSlots[0].id === 2 && currentSlots[1].id === 4 && currentSlots[2].id === 1 && currentSlots[3].id === 3);
+  if (isCorrect) {
+    fbText.innerHTML = '🎉 恭喜！重組順序 100% 正確！';
+    fbText.style.color = 'var(--green)';
+  } else {
+    fbText.innerHTML = '💡 重組順序有誤，再試一次看看！';
+    fbText.style.color = 'var(--red)';
+  }
+}
+
+// 預設初始化
+document.getElementById('conceptDesc').innerHTML = descriptions['A'];
+</script>
+
+</body>
+</html>
