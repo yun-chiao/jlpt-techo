@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { SITE_NAME, SITE_NAME_EN } from '../data/meta';
 
 const BMC_URL = 'https://buymeacoffee.com/chiaoban';
@@ -19,15 +20,13 @@ export function Footer() {
           </a>
         </p>
         <div className="my-2 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border-2 border-paper-sumi bg-paper-canvas px-4 py-2.5 text-xs font-medium shadow-retro-sm md:text-sm">
-          <span>📦 想要離線背單字、刷 Anki 字卡或考場列印講義？</span>
-          <a
-            href={BMC_URL}
-            target="_blank"
-            rel="noreferrer"
+          <span>📦 想要離線背單字、iPad 筆記或考場列印講義？</span>
+          <Link
+            to="/products"
             className="font-bold underline decoration-2 underline-offset-4 hover:bg-paper-butter"
           >
-            獲取 N1～N5 獨立分級 Anki 牌組＆速查手冊 ☕
-          </a>
+            線上試玩 Anki 字卡 ＆ 預覽 A4 考場速查手冊 ↗
+          </Link>
         </div>
         <p className="text-xs text-paper-sumi/60">© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
       </div>

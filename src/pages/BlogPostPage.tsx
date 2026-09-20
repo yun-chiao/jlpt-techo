@@ -90,14 +90,20 @@ export function BlogPostPage() {
         <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-paper-sumi">
           日檢手帖全站免費閱讀。如果想將 <span className="font-bold">N1～N5 分級逐字振假名 Anki 記憶牌組（3,593 張）</span> 與 <span className="font-bold">考場最後 30 分鐘文法公式＆速查講義手冊</span> 帶回離線複習，歡迎前往贊助支持領取！
         </p>
-        <div className="mt-4">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <Link
+            to="/products"
+            className="btn-retro inline-flex items-center gap-2 bg-paper-card text-sm"
+          >
+            📦 線上試玩 Anki 字卡 ＆ 預覽 A4 講義手冊 →
+          </Link>
           <a
             href="https://buymeacoffee.com/chiaoban"
             target="_blank"
             rel="noreferrer"
-            className="btn-retro inline-flex items-center gap-2 bg-paper-card"
+            className="btn-retro inline-flex items-center gap-2 bg-paper-butter text-sm"
           >
-            ☕ 贊助日檢手帖・獲取分級 Anki 牌組與速查手冊 →
+            ☕ 直接前往贊助支持
           </a>
         </div>
       </div>

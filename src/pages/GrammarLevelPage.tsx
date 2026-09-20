@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import type { Level } from '../data/types';
 import { LEVEL_LABELS, isLevel } from '../data/meta';
 import { useLessonSet } from '../hooks/useLessonSet';
@@ -48,14 +48,22 @@ function GrammarLevelContent({ level }: { level: Level }) {
               想要帶紙本進考場？下載《{levelLabel} 文法公式＆必考陷阱速查手冊（A4 可列印）＋ Anki 記憶卡》
             </p>
           </div>
-          <a
-            href="https://buymeacoffee.com/chiaoban"
-            target="_blank"
-            rel="noreferrer"
-            className="btn-retro text-xs md:text-sm"
-          >
-            📦 贊助解鎖 {levelLabel} 套組 ☕
-          </a>
+          <div className="flex flex-wrap items-center gap-2">
+            <Link
+              to="/products"
+              className="btn-retro text-xs md:text-sm"
+            >
+              👀 線上試玩字卡 ＆ 預覽手冊 →
+            </Link>
+            <a
+              href="https://buymeacoffee.com/chiaoban"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-retro bg-paper-butter text-xs md:text-sm"
+            >
+              ☕ 贊助解鎖 {levelLabel}
+            </a>
+          </div>
         </div>
       </header>
 

@@ -102,6 +102,15 @@ export function NavBar() {
               {BLOG_LABEL}
             </Link>
           </li>
+          <li>
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-1.5 rounded-lg border-2 border-paper-sumi bg-paper-butter px-3 py-1.5 font-display text-sm font-black shadow-retro-sm transition-transform hover:translate-x-[-1px] hover:translate-y-[-1px]"
+            >
+              <span>📦</span>
+              <span>數位備考套組</span>
+            </Link>
+          </li>
         </ul>
 
         {/* 手機漢堡按鈕 */}
@@ -170,6 +179,15 @@ export function NavBar() {
           <Link to="/blog" className="block py-3 font-display text-base font-bold hover:bg-paper-oatmeal">
             {BLOG_LABEL}
           </Link>
+          <div className="pt-2">
+            <Link
+              to="/products"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-paper-sumi bg-paper-butter py-2.5 font-display text-sm font-black shadow-retro-sm"
+            >
+              <span>📦</span>
+              <span>數位備考套組（Anki 牌組＆A4 講義）</span>
+            </Link>
+          </div>
         </div>
       )}
     </header>

@@ -7,6 +7,7 @@ import { VocabularyLevelPage } from './pages/VocabularyLevelPage';
 import { QuizLevelPage } from './pages/QuizLevelPage';
 import { BlogListPage } from './pages/BlogListPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { ProductShowcasePage } from './pages/ProductShowcasePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="grammar/:level/:lessonNumber/:pointNumber" element={<GrammarLessonPage />} />
         <Route path="vocabulary/:level" element={<VocabularyLevelPage />} />
         <Route path="quiz/:level" element={<QuizLevelPage />} />
+        <Route path="products" element={<ProductShowcasePage />} />
         <Route path="blog" element={<BlogListPage />} />
         <Route path="blog/:slug" element={<BlogPostPage />} />
         <Route path="*" element={<NotFoundPage />} />
