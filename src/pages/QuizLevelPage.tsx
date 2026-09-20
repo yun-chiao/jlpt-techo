@@ -341,7 +341,7 @@ function QuizLevelContent({ level }: { level: Level }) {
             </div>
 
             {activeQuestion.type === 'sentence' && activeQuestion.data.targetGrammar ? (
-              <span className="font-mono text-[11px] text-paper-sumi/60">
+              <span className="shrink-0 max-w-[170px] truncate font-mono text-[11px] text-paper-sumi/60 sm:max-w-none">
                 考點：{activeQuestion.data.targetGrammar}
               </span>
             ) : null}
@@ -721,11 +721,11 @@ function PassageQuestionCard({
 
   return (
     <div>
-      <div className="flex items-center justify-between">
-        <h3 className="font-display text-sm font-black text-paper-sumi sm:text-base md:text-lg">
+      <div className="flex items-start justify-between gap-2.5">
+        <h3 className="min-w-0 flex-1 font-display text-sm font-black leading-snug text-paper-sumi sm:text-base md:text-lg">
           📖 {passage.title}
         </h3>
-        <span className="rounded border border-paper-sumi/20 bg-paper-oatmeal px-2 py-0.5 font-mono text-[10px] font-bold text-paper-sumi sm:text-[11px]">
+        <span className="shrink-0 whitespace-nowrap rounded border border-paper-sumi/20 bg-paper-oatmeal px-2 py-0.5 font-mono text-[10px] font-bold text-paper-sumi sm:text-[11px]">
           {passage.genre}
         </span>
       </div>
