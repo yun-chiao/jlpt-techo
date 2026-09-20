@@ -349,7 +349,6 @@ export function ProductShowcasePage() {
   const [selectedLevel, setSelectedLevel] = useState<LevelKey>('n3');
   const [activeSampleIdx, setActiveSampleIdx] = useState(0);
   const [isCardFlipped, setIsCardFlipped] = useState(false);
-  const [activeHandbookTab, setActiveHandbookTab] = useState<'cover' | 'formula' | 'cards' | 'quizzes' | 'vocab'>('cover');
 
   const prod = PRODUCTS[selectedLevel];
   const sampleList = selectedLevel === 'all' ? PRODUCTS.n3.samples : prod.samples;
@@ -362,54 +361,54 @@ export function ProductShowcasePage() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8 md:py-12">
+    <div className="mx-auto max-w-5xl px-3.5 py-6 sm:px-4 sm:py-8 md:py-12">
       {/* 頂部標題 */}
       <div className="text-center">
-        <span className="inline-block rounded-lg border-2 border-paper-sumi bg-paper-butter px-3 py-1 font-display text-xs font-black shadow-retro-sm md:text-sm">
+        <span className="inline-block rounded-lg border-2 border-paper-sumi bg-paper-butter px-3 py-1 font-display text-[11px] font-black shadow-retro-sm sm:text-xs md:text-sm">
           FUDGE / CLUEL 日雜風格・全自學數位教材
         </span>
-        <h1 className="mt-4 font-display text-3xl font-black md:text-5xl">
+        <h1 className="mt-3 font-display text-2xl font-black sm:mt-4 sm:text-3xl md:text-5xl">
           日檢手帖・獨立分級數位備考套組
         </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-paper-sumi/75 md:text-base">
+        <p className="mx-auto mt-2.5 max-w-2xl text-xs leading-relaxed text-paper-sumi/75 sm:mt-3 sm:text-sm md:text-base">
           專為喜愛用 <span className="font-bold text-paper-sumi">iPad 平板筆記</span> 與 <span className="font-bold text-paper-sumi">Anki 智慧間隔記憶</span> 的自學者打造。考前不用自己花 40 小時手刻字卡，一次帶走逐字振假名字卡包與 FUDGE 日雜風 A4 考場速查講義！
         </p>
       </div>
 
-      {/* 為什麼數位學習比實體書強大的四大理由 */}
-      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-10">
-        <RetroCard shadow="sm" className="p-4 text-center">
-          <div className="text-3xl">📱</div>
-          <h3 className="mt-2 font-display text-base font-bold">iPad / 平板筆記</h3>
-          <p className="mt-1 text-xs text-paper-sumi/70">
-            向量高解析 PDF，放進 GoodNotes / Notability 放大不失真，隨心畫線做標記。
+      {/* 為什麼數位學習比實體書強大的四大理由（手機 2x2 精巧排列，電腦 4 欄） */}
+      <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4 md:mt-10">
+        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
+          <div className="text-2xl sm:text-3xl">📱</div>
+          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">iPad / 平板筆記</h3>
+          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+            向量高解析 PDF，放進 GoodNotes 放大不失真，隨心畫線筆記。
           </p>
         </RetroCard>
-        <RetroCard shadow="sm" className="p-4 text-center">
-          <div className="text-3xl">⚡</div>
-          <h3 className="mt-2 font-display text-base font-bold">Anki 間隔記憶</h3>
-          <p className="mt-1 text-xs text-paper-sumi/70">
-            記憶科學演算法，專門在你快忘記時提醒你，每天 15 分鐘勝過死背 2 小時。
+        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
+          <div className="text-2xl sm:text-3xl">⚡</div>
+          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">Anki 間隔記憶</h3>
+          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+            記憶科學演算法，在快忘記時提醒你，每天 15 分鐘勝過死背 2 小時。
           </p>
         </RetroCard>
-        <RetroCard shadow="sm" className="p-4 text-center">
-          <div className="text-3xl">✈️</div>
-          <h3 className="mt-2 font-display text-base font-bold">100% 離線隨身翻</h3>
-          <p className="mt-1 text-xs text-paper-sumi/70">
-            捷運通勤、飛機上、沒有網路的地方隨時隨地拿出手機刷卡、翻閱講義。
+        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
+          <div className="text-2xl sm:text-3xl">✈️</div>
+          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">100% 離線隨身翻</h3>
+          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+            捷運通勤、搭機出差，沒有網路隨時拿出手機刷卡、看講義。
           </p>
         </RetroCard>
-        <RetroCard shadow="sm" className="p-4 text-center">
-          <div className="text-3xl">🖨️</div>
-          <h3 className="mt-2 font-display text-base font-bold">考場紙本隨印隨讀</h3>
-          <p className="mt-1 text-xs text-paper-sumi/70">
-            進考場手機必須關機！支援一鍵以 A4 格式雙面列印，考前 30 分鐘安心神手冊。
+        <RetroCard shadow="sm" className="p-3 text-center sm:p-4">
+          <div className="text-2xl sm:text-3xl">🖨️</div>
+          <h3 className="mt-1.5 font-display text-sm font-bold sm:mt-2 sm:text-base">考場紙本隨印隨讀</h3>
+          <p className="mt-1 text-[11px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+            進考場手機必須關機！支援 A4 雙面列印，考前 30 分鐘安心神手冊。
           </p>
         </RetroCard>
       </div>
 
       {/* 級別切換 Tabs */}
-      <div className="mt-10 flex flex-wrap items-center justify-center gap-2.5">
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 md:mt-10">
         {(['n5', 'n4', 'n3', 'n2', 'n1', 'all'] as LevelKey[]).map((lvl) => {
           const item = PRODUCTS[lvl];
           const active = selectedLevel === lvl;
@@ -418,50 +417,50 @@ export function ProductShowcasePage() {
               key={lvl}
               type="button"
               onClick={() => handleLevelChange(lvl)}
-              className={`inline-flex items-center gap-2 rounded-xl border-2 border-paper-sumi px-4 py-2.5 font-display text-sm font-black transition-all ${
+              className={`inline-flex items-center gap-1.5 rounded-xl border-2 border-paper-sumi px-3 py-1.5 font-display text-xs font-black transition-all sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm ${
                 active
                   ? 'bg-paper-sumi text-paper-card shadow-retro'
                   : 'bg-paper-card text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px]'
               }`}
             >
               <span
-                className="h-2.5 w-2.5 rounded-full"
+                className="h-2 w-2 rounded-full sm:h-2.5 sm:w-2.5"
                 style={{ backgroundColor: item.color }}
               />
-              {lvl === 'all' ? '👑 N1～N5 終身典藏包' : `${item.upper} 套組`}
+              {lvl === 'all' ? '👑 N1～N5 終身包' : `${item.upper} 套組`}
             </button>
           );
         })}
       </div>
 
       {/* 當前選中產品的展示主卡片 */}
-      <div className="mt-6 rounded-2xl border-3 border-paper-sumi bg-paper-card p-6 shadow-retro-lg md:p-8">
+      <div className="mt-5 rounded-2xl border-2 border-paper-sumi bg-paper-card p-4 shadow-retro sm:mt-6 sm:border-3 sm:p-6 sm:shadow-retro-lg md:p-8">
         
         {/* 產品頭部與價格 */}
-        <div className="flex flex-col gap-4 border-b-2 border-dashed border-paper-sumi pb-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 border-b-2 border-dashed border-paper-sumi pb-5 sm:pb-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5 sm:gap-3">
               <span
-                className="rounded-lg border-2 border-paper-sumi px-3 py-1 font-mono text-sm font-black text-paper-card"
+                className="rounded-lg border-2 border-paper-sumi px-2.5 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
                 style={{ backgroundColor: prod.color }}
               >
                 {prod.upper}
               </span>
-              <h2 className="font-display text-2xl font-black md:text-3xl">{prod.title}</h2>
+              <h2 className="font-display text-xl font-black sm:text-2xl md:text-3xl">{prod.title}</h2>
             </div>
-            <p className="mt-2 text-xs font-bold text-paper-sumi/70 md:text-sm">{prod.subTitle}</p>
+            <p className="mt-1.5 text-xs font-bold text-paper-sumi/70 sm:mt-2 sm:text-sm">{prod.subTitle}</p>
           </div>
 
           <div className="flex flex-col items-start gap-1 md:items-end">
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-3xl font-black text-paper-sumi md:text-4xl">{prod.priceUsd}</span>
+              <span className="font-display text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">{prod.priceUsd}</span>
               <span className="font-mono text-xs text-paper-sumi/60">{prod.priceTwdApprox}</span>
             </div>
             <a
               href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
               rel="noreferrer"
-              className="btn-retro mt-2 inline-flex w-full items-center justify-center gap-2 bg-paper-butter !py-2.5 text-sm font-black md:w-auto"
+              className="btn-retro mt-1.5 inline-flex w-full items-center justify-center gap-2 bg-paper-butter !py-2.5 text-xs font-black sm:mt-2 sm:text-sm sm:w-auto"
             >
               🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
             </a>
@@ -469,280 +468,203 @@ export function ProductShowcasePage() {
         </div>
 
         {/* 規格四宮格 */}
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-3 text-center">
-            <div className="font-display text-base font-black text-paper-sumi">{prod.stats.cards}</div>
-            <div className="mt-0.5 text-xs text-paper-sumi/60">Anki 智慧字卡</div>
+        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
+            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.cards}</div>
+            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">Anki 智慧字卡</div>
           </div>
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-3 text-center">
-            <div className="font-display text-base font-black text-paper-sumi">{prod.stats.grammar}</div>
-            <div className="mt-0.5 text-xs text-paper-sumi/60">必考核心句型</div>
+          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
+            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.grammar}</div>
+            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">必考核心句型</div>
           </div>
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-3 text-center">
-            <div className="font-display text-base font-black text-paper-sumi">{prod.stats.vocab}</div>
-            <div className="mt-0.5 text-xs text-paper-sumi/60">逐字振假名單字</div>
+          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
+            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.vocab}</div>
+            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">逐字振假名單字</div>
           </div>
-          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-3 text-center">
-            <div className="font-display text-base font-black text-paper-sumi">{prod.stats.quizzes}</div>
-            <div className="mt-0.5 text-xs text-paper-sumi/60">實戰演練測驗</div>
+          <div className="rounded-xl border border-paper-sumi/30 bg-paper-canvas p-2.5 text-center sm:p-3">
+            <div className="font-display text-sm font-black text-paper-sumi sm:text-base">{prod.stats.quizzes}</div>
+            <div className="mt-0.5 text-[11px] text-paper-sumi/60 sm:text-xs">實戰演練測驗</div>
           </div>
         </div>
 
-        {/* 雙欄實體預覽：左邊 Anki 翻牌模擬器，右邊講義手冊預覽 */}
-        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {/* 雙欄實體預覽：左邊 Anki 翻牌模擬器，右邊講義手冊滾動式預覽 */}
+        <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
           
           {/* 左欄：Anki 實體字卡動態翻牌模擬器 */}
-          <div className="rounded-xl border-2 border-paper-sumi bg-paper-canvas p-5">
-            <div className="flex items-center justify-between">
-              <h3 className="font-display text-base font-black">📱 Anki 智慧字卡線上試玩</h3>
-              <span className="rounded bg-paper-sumi px-2 py-0.5 font-mono text-xs font-bold text-paper-card">
-                範例 {activeSampleIdx + 1} / {sampleList.length}
-              </span>
-            </div>
-            <p className="mt-1 text-xs text-paper-sumi/60">點擊卡片任何地方即可翻面查看背面讀音與詳解：</p>
-
-            {/* 卡片本體（點擊翻面） */}
-            <div
-              role="button"
-              tabIndex={0}
-              onClick={() => setIsCardFlipped((v) => !v)}
-              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsCardFlipped((v) => !v); }}
-              className="mt-4 flex min-h-[300px] cursor-pointer flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-card p-5 shadow-retro transition-transform hover:translate-y-[-2px]"
-            >
-              {/* 卡片標籤列 */}
-              <div className="flex items-center gap-2">
-                <span
-                  className="rounded px-2 py-0.5 text-[11px] font-black text-paper-card"
-                  style={{ backgroundColor: prod.color }}
-                >
-                  {currentSample.title}
+          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
+            <div>
+              <div className="flex items-center justify-between">
+                <h3 className="font-display text-sm font-black sm:text-base">📱 Anki 智慧字卡線上試玩</h3>
+                <span className="rounded bg-paper-sumi px-2 py-0.5 font-mono text-[11px] font-bold text-paper-card sm:text-xs">
+                  範例 {activeSampleIdx + 1} / {sampleList.length}
                 </span>
-                <span className="rounded border border-paper-sumi/30 bg-paper-canvas px-2 py-0.5 text-[11px] font-bold">
-                  {currentSample.category}
-                </span>
-                <span className="ml-auto font-mono text-[10px] text-paper-sumi/40">日檢手帖 NIKKEN TECHO</span>
               </div>
+              <p className="mt-1 text-[11px] text-paper-sumi/60 sm:text-xs">點擊卡片任何地方即可翻面查看背面讀音與詳解：</p>
 
-              {/* 正面內容 */}
-              {!isCardFlipped ? (
-                <div className="my-6 text-center">
-                  <div className="font-serif text-3xl font-black text-paper-sumi md:text-4xl">
-                    {currentSample.front}
-                  </div>
-                  <div className="mt-3 font-mono text-xs text-paper-sumi/50">
-                    {currentSample.promptTip}
-                  </div>
-                </div>
-              ) : (
-                /* 背面內容 */
-                <div className="my-3 text-left">
-                  <div
-                    className="text-center font-serif text-2xl font-black md:text-3xl"
-                    dangerouslySetInnerHTML={{ __html: currentSample.ruby }}
-                  />
-                  <div className="mt-1 text-center font-mono text-xs text-paper-sumi/60">
-                    {currentSample.subMeta}
-                  </div>
-
-                  <div
-                    className="mt-3 rounded-r-lg border-l-4 p-2.5 text-xs font-bold md:text-sm"
-                    style={{ borderLeftColor: prod.color, backgroundColor: prod.tint }}
+              {/* 卡片本體（點擊翻面） */}
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={() => setIsCardFlipped((v) => !v)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsCardFlipped((v) => !v); }}
+                className="mt-3.5 flex min-h-[260px] cursor-pointer flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-card p-4 shadow-retro transition-transform hover:translate-y-[-2px] sm:min-h-[300px] sm:p-5"
+              >
+                {/* 卡片標籤列 */}
+                <div className="flex items-center gap-2">
+                  <span
+                    className="rounded px-2 py-0.5 text-[10px] font-black text-paper-card sm:text-[11px]"
+                    style={{ backgroundColor: prod.color }}
                   >
-                    💡 {currentSample.meaning}
-                  </div>
-
-                  {currentSample.alert && (
-                    <div className="mt-2 rounded border border-amber-400 bg-amber-50 p-2 text-[11.5px] text-amber-900">
-                      ⚠️ <strong>考場陷阱提示：</strong>{currentSample.alert}
-                    </div>
-                  )}
-
-                  <div className="mt-3 rounded border border-paper-sumi/20 bg-paper-canvas p-2.5 text-xs">
-                    <div className="font-bold">{currentSample.exampleJa}</div>
-                    <div className="mt-0.5 text-paper-sumi/70">{currentSample.exampleZh}</div>
-                  </div>
+                    {currentSample.title}
+                  </span>
+                  <span className="rounded border border-paper-sumi/30 bg-paper-canvas px-2 py-0.5 text-[10px] font-bold sm:text-[11px]">
+                    {currentSample.category}
+                  </span>
+                  <span className="ml-auto font-mono text-[9.5px] text-paper-sumi/40 sm:text-[10px]">日檢手帖 NIKKEN TECHO</span>
                 </div>
-              )}
 
-              {/* 翻牌提示列 */}
-              <div className="rounded border border-dashed border-paper-sumi/30 bg-paper-canvas py-1 text-center font-mono text-xs font-bold text-paper-sumi/50">
-                {isCardFlipped ? '🔄 點擊翻回正面' : '👆 點擊卡片查看背面讀音與解說'}
+                {/* 正面內容 */}
+                {!isCardFlipped ? (
+                  <div className="my-5 text-center sm:my-6">
+                    <div className="font-serif text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">
+                      {currentSample.front}
+                    </div>
+                    <div className="mt-2.5 font-mono text-xs text-paper-sumi/50 sm:mt-3">
+                      {currentSample.promptTip}
+                    </div>
+                  </div>
+                ) : (
+                  /* 背面內容 */
+                  <div className="my-2.5 text-left sm:my-3">
+                    <div
+                      className="text-center font-serif text-xl font-black sm:text-2xl md:text-3xl"
+                      dangerouslySetInnerHTML={{ __html: currentSample.ruby }}
+                    />
+                    <div className="mt-1 text-center font-mono text-[11px] text-paper-sumi/60 sm:text-xs">
+                      {currentSample.subMeta}
+                    </div>
+
+                    <div
+                      className="mt-2.5 rounded-r-lg border-l-4 p-2 text-xs font-bold sm:mt-3 sm:p-2.5 sm:text-sm"
+                      style={{ borderLeftColor: prod.color, backgroundColor: prod.tint }}
+                    >
+                      💡 {currentSample.meaning}
+                    </div>
+
+                    {currentSample.alert && (
+                      <div className="mt-2 rounded border border-amber-400 bg-amber-50 p-2 text-[11px] text-amber-900 sm:text-[11.5px]">
+                        ⚠️ <strong>考場陷阱提示：</strong>{currentSample.alert}
+                      </div>
+                    )}
+
+                    <div className="mt-2.5 rounded border border-paper-sumi/20 bg-paper-canvas p-2 text-xs sm:mt-3 sm:p-2.5">
+                      <p className="font-serif text-paper-sumi">{currentSample.exampleJa}</p>
+                      <p className="mt-1 font-mono text-[11px] text-paper-sumi/70 sm:text-xs">{currentSample.exampleZh}</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* 卡片底端 */}
+                <div className="border-t border-dashed border-paper-sumi/30 pt-2 text-center text-[10.5px] text-paper-sumi/50 sm:text-xs">
+                  {!isCardFlipped ? '👆 點擊卡片看解答與例句' : '🔄 再次點擊翻回正面'}
+                </div>
               </div>
             </div>
 
-            {/* 切換下一張範例按鈕 */}
+            {/* 切換題目按鈕 */}
             <div className="mt-3 flex items-center justify-between text-xs">
-              <span className="text-paper-sumi/60">支援手機 AnkiMobile、AnkiDroid 與電腦一鍵匯入</span>
+              <span className="text-paper-sumi/60">
+                每套收錄 700+ 張逐字振假名字卡
+              </span>
               <button
                 type="button"
                 onClick={() => {
                   setActiveSampleIdx((i) => (i + 1) % sampleList.length);
                   setIsCardFlipped(false);
                 }}
-                className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display font-bold hover:bg-paper-butter"
+                className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display text-xs font-bold hover:bg-paper-butter"
               >
                 換下一張範例卡 ›
               </button>
             </div>
           </div>
 
-          {/* 右欄：A4 講義手冊各章節線上翻閱預覽 */}
-          <div className="rounded-xl border-2 border-paper-sumi bg-paper-canvas p-5">
-            <div className="flex items-center justify-between">
-              <h3 className="font-display text-base font-black">📑 A4 考場速查講義手冊預覽</h3>
-              <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-xs font-bold">
-                日雜 FUDGE 排版
-              </span>
-            </div>
-            <p className="mt-1 text-xs text-paper-sumi/60">支援 iPad GoodNotes 手寫做筆記，或以 A4 列印成實體講義：</p>
+          {/* 右欄：A4 講義手冊滾動預覽（直接上下捲動翻閱整本） */}
+          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
+            <div>
+              <div className="flex items-center justify-between">
+                <h3 className="font-display text-sm font-black sm:text-base">📑 A4 考場速查手冊線上試閱</h3>
+                <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[11px] font-bold sm:text-xs">
+                  日雜 FUDGE 排版
+                </span>
+              </div>
+              <p className="mt-1 text-[11px] text-paper-sumi/60 sm:text-xs">
+                可在下方框內直接上下滾動翻閱各章節實體排版：
+              </p>
 
-            {/* 章節切換 Tab */}
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {[
-                { id: 'cover', label: '📖 雜誌封面' },
-                { id: 'formula', label: '📊 公式速查表' },
-                { id: 'cards', label: '🔍 深度解構卡' },
-                { id: 'quizzes', label: '📝 實戰演練題' },
-                { id: 'vocab', label: '🔤 逐字標音單字' },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  type="button"
-                  onClick={() => setActiveHandbookTab(tab.id as typeof activeHandbookTab)}
-                  className={`rounded-md border border-paper-sumi px-2 py-1 text-xs font-bold transition-colors ${
-                    activeHandbookTab === tab.id
-                      ? 'bg-paper-sumi text-paper-card'
-                      : 'bg-paper-card text-paper-sumi hover:bg-paper-butter'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+              {/* 滾動式 A4 講義手冊預覽窗 */}
+              <div className="relative mt-3.5 h-[340px] w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[420px] md:h-[460px]">
+                <iframe
+                  src={prod.handbookUrl}
+                  title={`${prod.upper} A4 講義手冊試閱`}
+                  className="h-full w-full border-0 bg-[#faf7f2]"
+                  loading="lazy"
+                />
+              </div>
             </div>
 
-            {/* 靜態視覺模擬預覽窗 */}
-            <div className="mt-3 overflow-hidden rounded-xl border-2 border-paper-sumi bg-paper-card p-4 shadow-retro-sm">
-              {activeHandbookTab === 'cover' && (
-                <div className="flex min-h-[220px] flex-col items-center justify-center border-2 border-paper-sumi p-6 text-center">
-                  <span className="font-serif text-xs font-bold tracking-widest text-paper-sumi/60">NIKKEN TECHO ・ JLPT {prod.upper}</span>
-                  <div
-                    className="mt-3 inline-block rounded-lg border-2 border-paper-sumi px-6 py-2 font-mono text-4xl font-black text-paper-card shadow-retro-sm"
-                    style={{ backgroundColor: prod.color }}
-                  >
-                    {prod.upper}
-                  </div>
-                  <h4 className="mt-3 font-serif text-lg font-black">考場最後 30 分鐘文法公式＆單字速查手冊</h4>
-                  <p className="mt-1 text-xs text-paper-sumi/70">{prod.subTitle}</p>
-                </div>
-              )}
-
-              {activeHandbookTab === 'formula' && (
-                <div className="space-y-2 text-xs">
-                  <div className="border-b pb-1 font-bold text-paper-sumi/50">第一章：文法公式速查清單（摘錄）</div>
-                  <div className="flex items-center justify-between rounded bg-paper-canvas p-1.5 font-mono">
-                    <span className="font-bold">第 1 課・〜はおろか</span>
-                    <code>[名詞] はおろか、〜も／さえ</code>
-                  </div>
-                  <div className="flex items-center justify-between rounded bg-paper-canvas p-1.5 font-mono">
-                    <span className="font-bold">第 9 課・〜をめぐって</span>
-                    <code>[名詞] をめぐって＋爭議動詞</code>
-                  </div>
-                  <div className="flex items-center justify-between rounded bg-paper-canvas p-1.5 font-mono">
-                    <span className="font-bold">第 15 課・〜というと</span>
-                    <code>[名詞] というと＋直覺聯想</code>
-                  </div>
-                  <div className="flex items-center justify-between rounded bg-paper-canvas p-1.5 font-mono">
-                    <span className="font-bold">第 28 課・〜わけがない</span>
-                    <code>[普通形] わけがない（情理反駁）</code>
-                  </div>
-                </div>
-              )}
-
-              {activeHandbookTab === 'cards' && (
-                <div className="space-y-2 text-xs">
-                  <div className="border-b pb-1 font-bold text-paper-sumi/50">第二章：文法點完全解析卡片（公式・真例句・陷阱）</div>
-                  <div className="rounded-lg border border-paper-sumi/30 p-2.5">
-                    <span className="rounded bg-paper-canvas px-1.5 py-0.5 text-[10px] font-bold">第 28 課</span>
-                    <strong className="ml-2 font-display text-sm">〜わけがない</strong>
-                    <div className="mt-1 font-mono text-[11px] text-paper-sumi/70">🔹 公式：普通形＋わけがない</div>
-                    <div className="mt-1.5 rounded bg-amber-50 p-1.5 text-[11px] text-amber-900">
-                      ⚠️ 考場陷阱提示：わけがない 強調主觀反駁，はずがない 是客觀推算。
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeHandbookTab === 'quizzes' && (
-                <div className="space-y-2 text-xs">
-                  <div className="border-b pb-1 font-bold text-paper-sumi/50">第三章：實戰測驗題（附選項即答詳解）</div>
-                  <div className="rounded border p-2">
-                    <p className="font-bold">第 1 題：たまに朝ご飯を（ ___ ）ことがあるので、注意された。</p>
-                    <p className="text-paper-sumi/70">(A) 食べて / (B) 食べよう / (C) 食べなかった / (D) 食べない</p>
-                    <p className="mt-1 rounded bg-paper-canvas p-1 text-[11px]">
-                      正解：<strong>D（食べない）</strong> ｜ 偶爾發生的習慣用ない形＋ことがある。
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {activeHandbookTab === 'vocab' && (
-                <div className="space-y-1.5 text-xs">
-                  <div className="border-b pb-1 font-bold text-paper-sumi/50">第四章：逐字標音單字手帖（連續漢字等寬底線）</div>
-                  <div className="flex items-center justify-between border-b py-1">
-                    <span><ruby>受<rt>う</rt></ruby>け<ruby>付<rt>つ</rt></ruby>けます</span>
-                    <span className="text-paper-sumi/60">他動詞</span>
-                    <strong>受理、接待</strong>
-                  </div>
-                  <div className="flex items-center justify-between border-b py-1">
-                    <span><ruby>壊<rt>こわ</rt></ruby>れます</span>
-                    <span className="text-paper-sumi/60">自動詞</span>
-                    <strong>壞掉、故障</strong>
-                  </div>
-                  <div className="flex items-center justify-between py-1">
-                    <span><ruby>約<rt>やく</rt></ruby><ruby>束<rt>そく</rt></ruby></span>
-                    <span className="text-paper-sumi/60">名詞</span>
-                    <strong>約定、諾言</strong>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* 前往全螢幕閱讀或列印按鈕 */}
-            <div className="mt-4 text-center">
+            {/* 下方全螢幕連結 */}
+            <div className="mt-3 flex flex-col gap-1.5 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
+              <span className="text-paper-sumi/60">💡 支援 iPad GoodNotes 筆記或 A4 列印</span>
               <a
                 href={prod.handbookUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 font-display text-xs font-bold underline decoration-2 underline-offset-4 hover:text-level"
+                className="inline-flex items-center gap-1 font-display font-bold underline decoration-2 underline-offset-4 hover:text-level"
               >
-                🔍 開啟全頁高解析 A4 講義【精華試閱版】/ 試閱體驗 ↗
+                🔍 開啟全頁高解析 A4 講義【精華試閱版】↗
               </a>
             </div>
           </div>
 
         </div>
 
+        {/* 包含內容清單 */}
+        <div className="mt-6 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
+          <h3 className="font-display text-xs font-black sm:text-sm md:text-base">
+            📦 {prod.title} 包含完整內容：
+          </h3>
+          <ul className="mt-2.5 space-y-1.5 text-xs text-paper-sumi/85 sm:text-sm">
+            {prod.features.map((feat, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="font-bold text-level">✔</span>
+                <span>{feat}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* 底部行動呼籲 CTA */}
-        <div className="mt-8 rounded-xl border-2 border-paper-sumi bg-paper-butter p-6 text-center">
-          <h3 className="font-display text-xl font-black md:text-2xl">
+        <div className="mt-6 rounded-xl border-2 border-paper-sumi bg-paper-butter p-4 text-center sm:mt-8 sm:p-6">
+          <h3 className="font-display text-lg font-black sm:text-xl md:text-2xl">
             準備好一次通過 {prod.upper} 了嗎？
           </h3>
-          <p className="mx-auto mt-2 max-w-lg text-xs leading-relaxed text-paper-sumi/80 md:text-sm">
+          <p className="mx-auto mt-2 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
             贊助日檢手帖，立即獲取完整 <strong>{prod.title}</strong>（含 Anki 逐字振假名字卡包 ＋ FUDGE 日雜風 A4 講義手冊）。付款後系統自動寄送下載連結，永久離線複習！
           </p>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-3.5 flex flex-col items-center justify-center gap-2.5 sm:mt-4 sm:flex-row sm:gap-3">
             <a
               href="https://buymeacoffee.com/chiaoban/shop"
               target="_blank"
               rel="noreferrer"
-              className="btn-retro bg-paper-card text-sm font-black md:text-base"
+              className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
             >
               🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
             </a>
             <button
               type="button"
               onClick={() => handleLevelChange('all')}
-              className="btn-retro text-xs md:text-sm"
+              className="btn-retro w-full text-xs sm:w-auto sm:text-sm"
             >
               👑 看看 N1～N5 終身全套包 ($29.99)
             </button>
