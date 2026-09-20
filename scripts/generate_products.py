@@ -566,8 +566,8 @@ def generate_printable_html_handbook(
     <p style="font-size:12.5px; color:rgba(43,37,35,0.75); margin:6px auto 14px auto; max-width:480px;">
       贊助解鎖即可獲取本級別完整講義手冊（支援存為高解析 A4 PDF 與 iPad 筆記）＋ 逐字振假名 Anki 智慧字卡包！
     </p>
-    <a href="https://buymeacoffee.com/chiaoban" target="_blank" style="display:inline-block; background:var(--level-color); color:#ffffff; font-weight:800; text-decoration:none; padding:8px 20px; border-radius:6px; font-size:13px; border:1.5px solid var(--sumi-black); box-shadow:3px 3px 0px var(--sumi-black);">
-      ☕ 立即贊助解鎖完整版講義＆Anki 牌組 →
+    <a href="https://buymeacoffee.com/chiaoban/shop" target="_blank" style="display:inline-block; background:var(--level-color); color:#ffffff; font-weight:800; text-decoration:none; padding:8px 20px; border-radius:6px; font-size:13px; border:1.5px solid var(--sumi-black); box-shadow:3px 3px 0px var(--sumi-black);">
+      ☕ 立即前往商店贊助解鎖完整版講義＆Anki 牌組 →
     </a>
   </div>
   """
@@ -596,6 +596,12 @@ def generate_printable_html_handbook(
 
   sample_tag_html = "<span style='background:#ff4757; color:#ffffff; font-size:13px; font-weight:800; padding:3px 10px; border-radius:4px; margin-left:10px; vertical-align:middle;'>精華試閱版 SAMPLE</span>" if is_sample else ""
   doc_title_suffix = "（精華試閱版）" if is_sample else "（完整正式版）"
+  screen_header_html = "<body>" if is_sample else f"""<body>
+<div class="screen-header">
+  <div>📖 日檢手帖 {lv_upper} 完整備考講義手冊（已設定 A4 最佳列印排版）</div>
+  <button class="screen-btn" onclick="window.print()">🖨️ 立即列印或儲存為 PDF</button>
+</div>
+"""
 
   html_content = f"""<!DOCTYPE html>
 <html lang="zh-TW">
@@ -951,12 +957,7 @@ body {{
 }}
 </style>
 </head>
-<body>
-
-<div class="screen-header">
-  <div>📖 日檢手帖 {lv_upper} 完整備考講義手冊（已設定 A4 最佳列印排版）</div>
-  <button class="screen-btn" onclick="window.print()">🖨️ 立即列印或儲存為 PDF</button>
-</div>
+{screen_header_html}
 
 <div class="page-container">
 
