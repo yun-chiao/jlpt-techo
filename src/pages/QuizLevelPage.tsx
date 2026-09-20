@@ -417,14 +417,6 @@ function SentenceQuestionCard({
 
   return (
     <div>
-      {quiz.targetGrammar && (
-        <div className="mb-2">
-          <span className="rounded border border-paper-sumi/20 bg-paper-oatmeal px-2 py-0.5 font-mono text-[11px] font-bold text-paper-sumi">
-            考點：{quiz.targetGrammar}
-          </span>
-        </div>
-      )}
-
       {/* 句子文字 */}
       <div
         lang="ja"
