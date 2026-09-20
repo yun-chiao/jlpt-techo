@@ -122,6 +122,25 @@ function VocabBrowser({ levelLabel, entries }: { levelLabel: string; entries: Vo
         <p className="mt-3 font-mono text-xs text-paper-sumi/70 md:mt-4 md:text-sm">
           全 {entries.length} 個單字・依詞性分類
         </p>
+
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border-2 border-paper-sumi bg-paper-card p-3.5 shadow-retro-sm md:p-4">
+          <div className="text-left">
+            <span className="inline-block rounded bg-level px-2 py-0.5 font-display text-xs font-bold text-paper-card">
+              數位備考套組
+            </span>
+            <p className="mt-1 text-xs font-bold md:text-sm">
+              想要離線刷字卡？下載《{levelLabel} 逐字振假名 Anki 牌組 ＋ 考場速查講義手冊》
+            </p>
+          </div>
+          <a
+            href="https://buymeacoffee.com/chiaoban"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-retro text-xs md:text-sm"
+          >
+            📦 贊助解鎖 {levelLabel} 套組 ☕
+          </a>
+        </div>
       </header>
 
       {/* 控制列：搜尋＋拼音與自測模式 */}

@@ -18,18 +18,18 @@ export function Footer() {
             jojo050872@gmail.com
           </a>
         </p>
-        <p className="text-xs md:text-sm">
-          覺得日檢手帖有幫助嗎？
+        <div className="my-2 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border-2 border-paper-sumi bg-paper-canvas px-4 py-2.5 text-xs font-medium shadow-retro-sm md:text-sm">
+          <span>📦 想要離線背單字、刷 Anki 字卡或考場列印講義？</span>
           <a
             href={BMC_URL}
             target="_blank"
             rel="noreferrer"
-            className="ml-1 underline decoration-2 underline-offset-4 hover:bg-paper-butter"
+            className="font-bold underline decoration-2 underline-offset-4 hover:bg-paper-butter"
           >
-            請我喝杯咖啡 ☕
+            獲取 N1～N5 獨立分級 Anki 牌組＆速查手冊 ☕
           </a>
-        </p>
-        <p className="text-xs md:text-sm">© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
+        </div>
+        <p className="text-xs text-paper-sumi/60">© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
       </div>
     </footer>
   );

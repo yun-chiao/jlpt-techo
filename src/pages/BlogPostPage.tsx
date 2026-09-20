@@ -85,19 +85,21 @@ export function BlogPostPage() {
         </div>
       </article>
 
-      <div className="mt-12 rounded-xl border-2 border-paper-sumi bg-paper-butter px-5 py-4 text-center shadow-retro">
-        <p className="font-display font-bold">這篇文章對你有幫助嗎？</p>
-        <p className="mt-1 text-sm">
-          日檢手帖的所有內容都免費。如果想支持我繼續更新，歡迎
+      <div className="mt-12 rounded-xl border-2 border-paper-sumi bg-paper-butter p-6 text-center shadow-retro">
+        <p className="font-display text-base font-black md:text-lg">📖 想要隨身刷字卡、帶紙本講義進考場嗎？</p>
+        <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-paper-sumi">
+          日檢手帖全站免費閱讀。如果想將 <span className="font-bold">N1～N5 分級逐字振假名 Anki 記憶牌組（3,593 張）</span> 與 <span className="font-bold">考場最後 30 分鐘文法公式＆速查講義手冊</span> 帶回離線複習，歡迎前往贊助支持領取！
+        </p>
+        <div className="mt-4">
           <a
             href="https://buymeacoffee.com/chiaoban"
             target="_blank"
             rel="noreferrer"
-            className="mx-1 font-bold underline decoration-2 underline-offset-4 hover:bg-paper-card"
+            className="btn-retro inline-flex items-center gap-2 bg-paper-card"
           >
-            請我喝杯咖啡 ☕
+            ☕ 贊助日檢手帖・獲取分級 Anki 牌組與速查手冊 →
           </a>
-        </p>
+        </div>
       </div>
 
       <div className="mt-10">
