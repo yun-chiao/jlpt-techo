@@ -468,8 +468,14 @@ def create_anki_deck_package(level_key: str, vocab_list: list[dict[str, Any]], g
   return card_count
 
 
-def generate_printable_html_handbook(level_key: str, vocab_list: list[dict[str, Any]], grammar_list: list[dict[str, Any]], out_html_path: Path) -> None:
-  """產生日雜風（FUDGE / CLUEL 復古摩登撞色）A4 可列印講義手冊，支援瀏覽器一鍵列印或另存 PDF。"""
+def generate_printable_html_handbook(
+  level_key: str,
+  vocab_list: list[dict[str, Any]],
+  grammar_list: list[dict[str, Any]],
+  out_html_path: Path,
+  is_sample: bool = False,
+) -> None:
+  """產生日雜風（FUDGE / CLUEL 復古摩登撞色）A4 可列印講義手冊。is_sample=True 時僅展示試閱樣章，保護完整版數位資產。"""
   conf = LEVEL_CONFIG[level_key]
   lv_upper = conf["upper"]
   lv_color = conf["color"]
@@ -550,6 +556,46 @@ def generate_printable_html_handbook(level_key: str, vocab_list: list[dict[str, 
       <td class="td-ex"><strong>{w.get('example_ja','')}</strong><br><span class="ex-zh">{w.get('example_zh','')}</span></td>
     </tr>
     """)
+
+  lock_banner = """
+  <div style="background:var(--level-tint); border:2px dashed var(--sumi-black); border-radius:10px; padding:24px 20px; text-align:center; margin:24px 0;">
+    <div style="font-size:26px;">🔒</div>
+    <div style="font-weight:900; font-size:16px; margin-top:6px; color:var(--sumi-black);">
+      【試閱版結束】其餘 {remaining} 項完整教材內容，收錄於正式版套組中
+    </div>
+    <p style="font-size:12.5px; color:rgba(43,37,35,0.75); margin:6px auto 14px auto; max-width:480px;">
+      贊助解鎖即可獲取本級別完整講義手冊（支援存為高解析 A4 PDF 與 iPad 筆記）＋ 逐字振假名 Anki 智慧字卡包！
+    </p>
+    <a href="https://buymeacoffee.com/chiaoban" target="_blank" style="display:inline-block; background:var(--level-color); color:#ffffff; font-weight:800; text-decoration:none; padding:8px 20px; border-radius:6px; font-size:13px; border:1.5px solid var(--sumi-black); box-shadow:3px 3px 0px var(--sumi-black);">
+      ☕ 立即贊助解鎖完整版講義＆Anki 牌組 →
+    </a>
+  </div>
+  """
+
+  if is_sample:
+    cheat_sheet_rows = cheat_sheet_rows[:5]
+    cheat_sheet_rows.append(f"""
+    <tr>
+      <td colspan="4" style="text-align:center; padding:16px; background:var(--level-tint); font-weight:800; font-size:12.5px;">
+        🔒 更多 {total_grammar - 5} 個文法公式速查，收錄於正式版手冊中（全 {total_grammar} 個句型完整收錄）
+      </td>
+    </tr>
+    """)
+    grammar_cards_html = grammar_cards_html[:3]
+    grammar_cards_html.append(lock_banner.format(remaining=f"{total_grammar - 3} 個深度解構卡"))
+    quiz_section_html = quiz_section_html[:2]
+    quiz_section_html.append(lock_banner.format(remaining=f"{total_quizzes - 2} 題實戰測驗"))
+    vocab_rows = vocab_rows[:10]
+    vocab_rows.append(f"""
+    <tr>
+      <td colspan="5" style="text-align:center; padding:16px; background:var(--level-tint); font-weight:800; font-size:12.5px;">
+        🔒 更多 {total_vocab - 10} 個逐字振假名高頻單字，收錄於正式版手冊與 Anki 牌組中（全 {total_vocab} 字完整收錄）
+      </td>
+    </tr>
+    """)
+
+  sample_tag_html = "<span style='background:#ff4757; color:#ffffff; font-size:13px; font-weight:800; padding:3px 10px; border-radius:4px; margin-left:10px; vertical-align:middle;'>精華試閱版 SAMPLE</span>" if is_sample else ""
+  doc_title_suffix = "（精華試閱版）" if is_sample else "（完整正式版）"
 
   html_content = f"""<!DOCTYPE html>
 <html lang="zh-TW">
@@ -1034,13 +1080,17 @@ def main() -> None:
 
     apkg_file = lv_out_dir / f"日檢手帖-{lv_upper}-單字文法手帖.apkg"
     html_file = lv_out_dir / f"日檢手帖-{lv_upper}-考場速查講義手冊.html"
+    sample_html_file = lv_out_dir / f"日檢手帖-{lv_upper}-試閱講義手冊.html"
     readme_file = lv_out_dir / f"README-使用說明.txt"
 
     # 1. 產生 Anki 牌組
     card_count = create_anki_deck_package(lv_key, vocab_data, grammar_data, apkg_file)
 
-    # 2. 產生 FUDGE 日雜風 A4 列印講義
-    generate_printable_html_handbook(lv_key, vocab_data, grammar_data, html_file)
+    # 2. 產生 FUDGE 日雜風 A4 列印講義 (完整付費版，僅打包進 ZIP)
+    generate_printable_html_handbook(lv_key, vocab_data, grammar_data, html_file, is_sample=False)
+
+    # 3. 產生 FUDGE 日雜風 A4 試閱樣章 (僅展示前數篇＋解鎖遮罩，供網頁公開預覽)
+    generate_printable_html_handbook(lv_key, vocab_data, grammar_data, sample_html_file, is_sample=True)
 
     # 3. 附上 README 說明檔
     readme_content = f"""【日檢手帖】{lv_upper} 完整備考數位套組

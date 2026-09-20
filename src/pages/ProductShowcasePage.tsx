@@ -61,7 +61,7 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
       '✍️ GoodNotes / Notability 完美支援：向量高清排版，隨心手寫註記與畫線重點',
       '🖨️ A4 高解析列印支援：考場進場手機關機後的考前最後 30 分鐘複習神手冊',
     ],
-    handbookUrl: '/dist-products/n3/日檢手帖-N3-考場速查講義手冊.html',
+    handbookUrl: '/dist-products/n3/日檢手帖-N3-試閱講義手冊.html',
     samples: [
       {
         type: 'vocab',
@@ -138,7 +138,7 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
       '✍️ GoodNotes / Notability 完美支援：平板無縫雙開做筆記，字體極致清晰',
       '🖨️ A4 格式高解析列印支援：考前 30 分鐘文法秒殺清單隨身帶',
     ],
-    handbookUrl: '/dist-products/n2/日檢手帖-N2-考場速查講義手冊.html',
+    handbookUrl: '/dist-products/n2/日檢手帖-N2-試閱講義手冊.html',
     samples: [
       {
         type: 'vocab',
@@ -188,7 +188,7 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
       '📑 FUDGE 日雜風 A4 講義手冊：120 個 N1 最高難度文法公式與前後呼應否定詞速查',
       '✍️ iPad 電子手帳與列印雙模式：向量清晰排版，考前最後衝刺專用',
     ],
-    handbookUrl: '/dist-products/n1/日檢手帖-N1-考場速查講義手冊.html',
+    handbookUrl: '/dist-products/n1/日檢手帖-N1-試閱講義手冊.html',
     samples: [
       {
         type: 'vocab',
@@ -238,7 +238,7 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
       '📑 FUDGE 日雜風 A4 講義手冊：條件句（と/ば/たら/なら）與形式名詞完全手冊',
       '✍️ 平板 GoodNotes 做筆記最舒服的間距與字體大小設計',
     ],
-    handbookUrl: '/dist-products/n4/日檢手帖-N4-考場速查講義手冊.html',
+    handbookUrl: '/dist-products/n4/日檢手帖-N4-試閱講義手冊.html',
     samples: [
       {
         type: 'vocab',
@@ -288,7 +288,7 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
       '📑 FUDGE 日雜風 A4 講義手冊：助詞入門、基本句型公式與第一次考場指南',
       '✍️ 支援手機、平板、電腦與列印紙本複習',
     ],
-    handbookUrl: '/dist-products/n5/日檢手帖-N5-考場速查講義手冊.html',
+    handbookUrl: '/dist-products/n5/日檢手帖-N5-試閱講義手冊.html',
     samples: [
       {
         type: 'vocab',
@@ -715,7 +715,7 @@ export function ProductShowcasePage() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 font-display text-xs font-bold underline decoration-2 underline-offset-4 hover:text-level"
               >
-                🔍 開啟全頁高解析 A4 講義預覽 / 一鍵轉存 PDF ↗
+                🔍 開啟全頁高解析 A4 講義【精華試閱版】/ 試閱體驗 ↗
               </a>
             </div>
           </div>
