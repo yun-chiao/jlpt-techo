@@ -56,7 +56,7 @@ function GrammarLevelContent({ level }: { level: Level }) {
               👀 線上試玩字卡 ＆ 預覽手冊 →
             </Link>
             <a
-              href="https://buymeacoffee.com/chiaoban/shop"
+              href="https://buymeacoffee.com/chiaoban/extras"
               target="_blank"
               rel="noreferrer"
               className="btn-retro bg-paper-butter text-xs md:text-sm"

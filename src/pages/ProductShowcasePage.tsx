@@ -442,7 +442,7 @@ export function ProductShowcasePage() {
               <span className="font-mono text-xs text-paper-sumi/60">{prod.priceTwdApprox}</span>
             </div>
             <a
-              href="https://buymeacoffee.com/chiaoban/shop"
+              href="https://buymeacoffee.com/chiaoban/extras"
               target="_blank"
               rel="noreferrer"
               className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
@@ -658,7 +658,7 @@ export function ProductShowcasePage() {
           </p>
           <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
             <a
-              href="https://buymeacoffee.com/chiaoban/shop"
+              href="https://buymeacoffee.com/chiaoban/extras"
               target="_blank"
               rel="noreferrer"
               className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
