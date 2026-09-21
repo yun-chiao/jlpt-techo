@@ -675,8 +675,8 @@ export function ProductShowcasePage() {
     levelParam && ['n1', 'n2', 'n3', 'n4', 'n5', 'all'].includes(levelParam) ? levelParam : 'n2'
   );
   
-  // 題本樣張切換：'blank'（實戰空白本）| 'solution'（逐題手寫詳解本）
-  const [quizSampleMode, setQuizSampleMode] = useState<'blank' | 'solution'>('solution');
+  // 題本樣張翻面狀態
+  const [isQuizCardFlipped, setIsQuizCardFlipped] = useState(false);
   const [activeQuizSampleIdx, setActiveQuizSampleIdx] = useState(0);
 
   // 教材樣張翻牌
@@ -708,6 +708,7 @@ export function ProductShowcasePage() {
   const handleLevelChange = (lvl: LevelKey) => {
     setSelectedLevel(lvl);
     setActiveQuizSampleIdx(0);
+    setIsQuizCardFlipped(false);
     setActiveTextbookSampleIdx(0);
     setIsCardFlipped(false);
   };
@@ -871,86 +872,104 @@ export function ProductShowcasePage() {
 
           {/* 左右分欄展示：左欄實體手帳樣張，右欄 A4 題本試閱視窗 */}
           <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
-            {/* 左欄：手帳樣張互動對比 */}
+            {/* 左欄：手帳樣張互動對比（點擊卡片翻面看詳解，與教材端 100% 對齊） */}
             <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
               <div>
                 <div className="flex items-center justify-between">
-                  <h3 className="font-display text-xs font-black sm:text-sm">✍️ iPad / 列印手帳真實樣張</h3>
-                  {/* 切換樣張模式 */}
-                  <div className="inline-flex rounded-lg border border-paper-sumi bg-paper-card p-0.5 font-mono text-[10.5px] font-bold">
-                    <button
-                      type="button"
-                      onClick={() => setQuizSampleMode('solution')}
-                      className={`rounded px-2 py-0.5 transition-all ${quizSampleMode === 'solution' ? 'bg-paper-butter text-paper-sumi font-black' : 'text-paper-sumi/60'}`}
-                    >
-                      手寫詳解本
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setQuizSampleMode('blank')}
-                      className={`rounded px-2 py-0.5 transition-all ${quizSampleMode === 'blank' ? 'bg-paper-sumi text-white font-black' : 'text-paper-sumi/60'}`}
-                    >
-                      實戰空白本
-                    </button>
-                  </div>
+                  <h3 className="font-display text-xs font-black sm:text-sm">✍️ 手帳題本真實樣張</h3>
+                  <span className="font-mono text-[10.5px] text-paper-sumi/60">點擊卡片翻面看詳解</span>
                 </div>
 
                 {curQuizSample && (
-                  <div className="mt-3 rounded-xl border-2 border-paper-sumi bg-white p-3.5 shadow-retro-sm sm:p-4">
+                  <div
+                    onClick={() => setIsQuizCardFlipped((v) => !v)}
+                    className="mt-3 cursor-pointer rounded-xl border-2 border-paper-sumi bg-white p-3.5 shadow-retro-sm transition-all hover:scale-[1.01] sm:p-5"
+                  >
                     <div className="flex items-center justify-between border-b border-paper-sumi/15 pb-2">
-                      <span className="font-mono text-xs font-black text-[#ff6b35]">{curQuizSample.part} ・ {curQuizSample.title}</span>
-                      <span className="font-mono text-[11px] text-paper-sumi/60">
-                        {quizSampleMode === 'solution' ? '逐題詳解訂正本' : '考場實戰純題目本'}
+                      <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-black text-paper-sumi">
+                        {curQuizSample.part} ｜ {curQuizSample.title}
+                      </span>
+                      <span className="font-mono text-[11px] font-bold text-paper-sumi/60">
+                        {isQuizCardFlipped ? '【背面：逐題手寫詳解】' : '【正面：考場實戰空白本】'}
                       </span>
                     </div>
 
-                    <div className="my-3 font-serif text-sm font-bold leading-relaxed text-paper-sumi sm:text-base">
-                      {curQuizSample.question}
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-1.5 font-serif text-xs">
-                      {curQuizSample.options.map((opt, oIdx) => {
-                        const isRight = oIdx + 1 === curQuizSample.correctNum;
-                        return (
-                          <div
-                            key={oIdx}
-                            className={`flex items-center gap-1.5 rounded-lg border p-1.5 ${
-                              quizSampleMode === 'solution' && isRight
-                                ? 'border-paper-sumi bg-paper-butter font-bold'
-                                : 'border-paper-sumi/20 bg-paper-canvas'
-                            }`}
-                          >
-                            <span className="font-mono text-[11px] font-bold">{oIdx + 1}.</span>
-                            <span>{opt}</span>
-                            {quizSampleMode === 'solution' && isRight && <span className="ml-auto font-mono text-[10px] font-black">✓ 正解</span>}
-                          </div>
-                        );
-                      })}
-                    </div>
-
-                    {/* 詳解筆記欄（訂正模式下顯示） */}
-                    {quizSampleMode === 'solution' ? (
-                      <div className="mt-3 rounded-lg border-l-3 border-paper-sumi bg-paper-canvas p-2.5 text-xs text-paper-sumi/90">
-                        {curQuizSample.fullSentence && (
-                          <div className="font-serif font-bold text-paper-sumi">
-                            <strong>完整句：</strong>{curQuizSample.fullSentence}
-                          </div>
-                        )}
-                        {curQuizSample.translation && (
-                          <div className="mt-0.5 text-paper-sumi/75">
-                            <strong>中文：</strong>{curQuizSample.translation}
-                          </div>
-                        )}
-                        <div className="mt-1 font-body leading-relaxed">
-                          <strong>💡 考點拆解：</strong>{curQuizSample.explanation}
+                    {!isQuizCardFlipped ? (
+                      /* 正面：實戰空白做題樣式 */
+                      <div className="my-4">
+                        <div className="font-serif text-sm font-bold leading-relaxed text-paper-sumi sm:text-base">
+                          {curQuizSample.question}
                         </div>
-                        <div className="mt-2 rounded border border-dashed border-paper-sumi/30 bg-white p-1.5 font-mono text-[10.5px] text-paper-sumi/40">
-                          ✍️ 我的錯題筆記與 Apple Pencil 註記欄...
+
+                        <div className="mt-3.5 grid grid-cols-1 gap-2 sm:grid-cols-2 font-serif text-xs sm:text-sm">
+                          {curQuizSample.options.map((opt, oIdx) => (
+                            <div
+                              key={oIdx}
+                              className="flex items-center gap-2 rounded-lg border border-paper-sumi/30 bg-paper-canvas px-3 py-2 text-paper-sumi"
+                            >
+                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-paper-sumi bg-white font-mono text-xs font-black">
+                                {oIdx + 1}
+                              </span>
+                              <span className="leading-snug">{opt}</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="mt-4 text-center font-mono text-xs font-bold text-[#ff6b35]">
+                          💡 點擊卡片翻面 ➔ 查看正確答案與手寫訂正筆記
                         </div>
                       </div>
                     ) : (
-                      <div className="mt-3 rounded border border-dashed border-paper-sumi/30 bg-paper-canvas p-2 text-center font-mono text-[11px] text-paper-sumi/40">
-                        ［ 此處預留 3 行手寫空白，供計時做題圈選 ］
+                      /* 背面：逐題手寫風詳解樣式（手機端單欄絕不跑版，正解標籤完整對齊） */
+                      <div className="my-3 space-y-2 text-xs leading-relaxed text-paper-sumi sm:text-sm">
+                        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 font-serif">
+                          {curQuizSample.options.map((opt, oIdx) => {
+                            const isRight = oIdx + 1 === curQuizSample.correctNum;
+                            return (
+                              <div
+                                key={oIdx}
+                                className={`flex items-center justify-between rounded-lg border px-3 py-2 ${
+                                  isRight
+                                    ? 'border-2 border-paper-sumi bg-paper-butter font-bold shadow-retro-sm text-paper-sumi'
+                                    : 'border-paper-sumi/20 bg-paper-canvas text-paper-sumi/50 line-through'
+                                }`}
+                              >
+                                <div className="flex items-center gap-2">
+                                  <span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border font-mono text-xs font-black ${isRight ? 'border-paper-sumi bg-white text-paper-sumi' : 'border-paper-sumi/40 bg-transparent'}`}>
+                                    {oIdx + 1}
+                                  </span>
+                                  <span className="leading-snug">{opt}</span>
+                                </div>
+                                {isRight && (
+                                  <span className="shrink-0 whitespace-nowrap rounded bg-paper-sumi px-1.5 py-0.5 font-mono text-[10px] font-black text-white">
+                                    ✓ 正解
+                                  </span>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        <div className="border-t border-paper-sumi/15 pt-2.5 space-y-1.5">
+                          {curQuizSample.fullSentence && (
+                            <div className="font-serif">
+                              <strong>完整句：</strong>
+                              <span className="font-bold text-paper-sumi">{curQuizSample.fullSentence}</span>
+                            </div>
+                          )}
+                          {curQuizSample.translation && (
+                            <div className="text-paper-sumi/80">
+                              <strong>中文：</strong>
+                              <span>{curQuizSample.translation}</span>
+                            </div>
+                          )}
+                          <div className="rounded bg-paper-canvas p-2 font-body text-xs sm:text-sm leading-relaxed text-paper-sumi/90">
+                            <strong>💡 考點拆解：</strong>{curQuizSample.explanation}
+                          </div>
+                          <div className="rounded border border-dashed border-paper-sumi/30 bg-white p-2 font-mono text-[10.5px] text-paper-sumi/50">
+                            ✍️ 我的錯題筆記與 Apple Pencil 註記欄（考前 30 分鐘複習重點）...
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -964,7 +983,10 @@ export function ProductShowcasePage() {
                 </span>
                 <button
                   type="button"
-                  onClick={() => setActiveQuizSampleIdx((i) => (i + 1) % quizSamples.length)}
+                  onClick={() => {
+                    setActiveQuizSampleIdx((i) => (i + 1) % quizSamples.length);
+                    setIsQuizCardFlipped(false);
+                  }}
                   className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display text-xs font-bold hover:bg-paper-butter"
                 >
                   換下一題樣張 ›
