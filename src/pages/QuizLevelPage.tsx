@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import type {
   Level,
   SentenceQuizItem,
@@ -318,8 +318,41 @@ function QuizLevelContent({ level }: { level: Level }) {
               })}
             </div>
           </div>
+
+          {/* 抽屜底部：iPad / 列印版手帳題本連結 */}
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-paper-sumi/15 pt-2 font-mono text-xs">
+            <span className="text-paper-sumi/70">想離線一口氣手寫刷完這 {filteredQuestions.length} 題？</span>
+            <Link
+              to="/products"
+              className="font-bold text-paper-sumi hover:text-[#ff6b35] underline decoration-paper-sumi/30 underline-offset-2"
+            >
+              📥 下載 iPad / A4 列印版手帳題本 PDF →
+            </Link>
+          </div>
         </div>
       )}
+
+      {/* 日雜手帳風：PDF 題本下載隨身條（極致美感、零打擾、文青手帳質感） */}
+      <div className="flex flex-wrap items-center justify-between gap-2.5 rounded-xl border border-paper-sumi/25 bg-paper-canvas px-3.5 py-2.5 shadow-retro-sm">
+        <div className="flex items-center gap-2">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-paper-sumi bg-paper-butter font-mono text-xs font-black">
+            ✎
+          </span>
+          <p className="font-display text-xs font-black text-paper-sumi sm:text-sm">
+            習慣用紙筆刷題？<span className="hidden sm:inline">可下載</span>《{levelLabel} 全真題本・GoodNotes / A4 列印手帳》
+          </p>
+          <span className="hidden rounded bg-paper-oatmeal px-1.5 py-0.5 font-mono text-[10px] font-bold text-paper-sumi/70 md:inline">
+            含空白題本＋手寫訂正詳解
+          </span>
+        </div>
+        <Link
+          to="/products"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border-1.5 border-paper-sumi bg-paper-butter px-3 py-1 font-mono text-xs font-black text-paper-sumi shadow-retro-sm transition-all hover:bg-paper-sumi hover:text-white active:scale-95"
+        >
+          <span>📥 下載 PDF 題本</span>
+          <span className="font-mono">→</span>
+        </Link>
+      </div>
 
       {/* 核心作答卡片（border-2 + shadow-retro-sm 輕盈化，拒絕厚重囚籠感） */}
       {activeQuestion && (
