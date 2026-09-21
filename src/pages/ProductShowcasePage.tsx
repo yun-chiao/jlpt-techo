@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams, Link } from 'react-router-dom';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { RetroCard } from '../components/RetroCard';
 
 type LevelKey = 'n5' | 'n4' | 'n3' | 'n2' | 'n1' | 'all';
+type ProductLine = 'quiz' | 'textbook';
 
 interface CardSample {
   type: 'vocab' | 'grammar';
@@ -38,6 +40,325 @@ interface ProductInfo {
   handbookUrl: string;
   samples: CardSample[];
 }
+
+interface QuizSampleItem {
+  part: string;
+  title: string;
+  question: string;
+  options: string[];
+  correctNum: number;
+  explanation: string;
+  fullSentence?: string;
+  translation?: string;
+}
+
+interface QuizProductInfo {
+  key: LevelKey;
+  upper: string;
+  color: string;
+  tint: string;
+  title: string;
+  subTitle: string;
+  priceUsd: string;
+  priceTwdApprox: string;
+  stats: {
+    cloze: string;
+    star: string;
+    passage: string;
+    solutions: string;
+  };
+  features: string[];
+  handbookUrl: string;
+  samples: QuizSampleItem[];
+}
+
+const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
+  n2: {
+    key: 'n2',
+    upper: 'N2',
+    color: '#ff6b35',
+    tint: '#fff0e8',
+    title: '【日檢手帖】JLPT N2 題型專攻・500 題厚切全真手帳題本',
+    subTitle: '日本留學與赴日求職黃金門檻・商務時事與長文理解實戰雙版本',
+    priceUsd: '$12.99',
+    priceTwdApprox: '約 NT$400',
+    stats: {
+      cloze: '300 題 文法挖空',
+      star: '125 題 ★ 語序重組',
+      passage: '25 篇 長文 (75題)',
+      solutions: '500 題 逐題手寫詳解',
+    },
+    features: [
+      '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
+      '📑 【逐題詳解訂正神手帳】：500 題完整日文句、中日對照、💡 考點解析與專屬錯題筆記欄',
+      '📊 【答案速查矩陣卡】：卷末附標準正解快速對照表，做完即時對分驗算',
+      '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
+      '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
+    ],
+    handbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
+    samples: [
+      {
+        part: 'PART 01',
+        title: '文法形式挖空',
+        question: '山田さんは、どんなに忙しくても、毎日日本語の勉強を（　　）。',
+        options: ['おこたる', 'おこたりかねない', 'おこたることはない', 'おこたらざるを得ない'],
+        correctNum: 3,
+        explanation: '「〜ことはない」表示「絕不會… / 沒必要…」。句意為「山田先生無論多忙，每天絕不疏忽日文的學習」。',
+      },
+      {
+        part: 'PART 02',
+        title: '★ 號排序重組',
+        question: '会議の準備が ＿＿ ＿＿ ★ ＿＿ と言われた。',
+        options: ['遅れる', 'ないように', '急ぐ', 'ように'],
+        correctNum: 3,
+        fullSentence: '会議の準備が遅れないように急ぐようにと言われた。',
+        translation: '被交代說為了不讓會議準備有所延誤，要趕快進行。',
+        explanation: '排序順序為「遅れる（1）＋ ないように（2）＋ 急ぐ（3）＋ ように（4）」。落在 ★ 號位置的是 3 號「急ぐ」。',
+      },
+      {
+        part: 'PART 03',
+        title: '篇章脈絡填空',
+        question: '【 01 】現代のビジネスにおいて、単なる効率性だけでは生き残れない。むしろ重要なのは... ',
+        options: ['しかしながら', 'したがって', 'それどころか', 'つまり'],
+        correctNum: 1,
+        explanation: '前後兩句在語意上構成明確的轉折反思關係，填入表示轉折的「しかしながら」最為自然合適。',
+      },
+    ],
+  },
+  n1: {
+    key: 'n1',
+    upper: 'N1',
+    color: '#e63956',
+    tint: '#ffeaef',
+    title: '【日檢手帖】JLPT N1 題型專攻・500 題厚切全真手帳題本',
+    subTitle: '最高殿堂抽象文語、深層邏輯與學術長文・雙版本實戰套組',
+    priceUsd: '$14.99',
+    priceTwdApprox: '約 NT$460',
+    stats: {
+      cloze: '300 題 文法挖空',
+      star: '125 題 ★ 語序重組',
+      passage: '25 篇 長文 (75題)',
+      solutions: '500 題 逐題手寫詳解',
+    },
+    features: [
+      '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
+      '📑 【逐題詳解訂正神手帳】：500 題完整日文句、中日對照、💡 考點解析與專屬錯題筆記欄',
+      '📊 【答案速查矩陣卡】：卷末附標準正解快速對照表，做完即時對分驗算',
+      '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
+      '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
+    ],
+    handbookUrl: '/dist-products/quiz/日檢手帖-N1-500題全真手帳題本-試閱版.html',
+    samples: [
+      {
+        part: 'PART 01',
+        title: '文法形式挖空',
+        question: 'プロの登山家（　　）、この険しい冬山を前にしては慎重にならざるを得ない。',
+        options: ['たるもの', 'にあって', 'に即して', 'をおいて'],
+        correctNum: 1,
+        explanation: '「〜たるもの」表示「身為具備某資格/身份者，理當…」。句意為「身為專業登山家，面對這險峻冬山也必須謹慎」。',
+      },
+      {
+        part: 'PART 02',
+        title: '★ 號排序重組',
+        question: 'いかに厳しい ＿＿ ＿＿ ★ ＿＿ あきらめてはならない。',
+        options: ['状況で', 'あろうと', '夢を', 'も'],
+        correctNum: 4,
+        fullSentence: 'いかに厳しい状況であろうとも夢をあきらめてはならない。',
+        translation: '無論處於多麼嚴苛的境遇之中，也絕不能放棄夢想。',
+        explanation: '排序順序為「状況で（1）＋ あろうと（2）＋ も（4）＋ 夢を（3）」。落在 ★ 號位置的是 4 號「も」。',
+      },
+      {
+        part: 'PART 03',
+        title: '篇章脈絡填空',
+        question: '【 01 】日本の伝統美学における「陰翳礼讚」は、単なる暗闇の肯定ではない。...',
+        options: ['いわば', 'とはいえ', 'それゆえに', 'あえて'],
+        correctNum: 1,
+        explanation: '後文對前述概念進行深入本質性詮釋說明，填入「いわば（換言之 / 可謂）」最為流暢自然。',
+      },
+    ],
+  },
+  n3: {
+    key: 'n3',
+    upper: 'N3',
+    color: '#7cb518',
+    tint: '#f2f8e6',
+    title: '【日檢手帖】JLPT N3 題型專攻・500 題厚切全真手帳題本',
+    subTitle: '跨越日檢分水嶺・日常複雜情境與職場銜接 500 題實戰雙版本',
+    priceUsd: '$9.99',
+    priceTwdApprox: '約 NT$310',
+    stats: {
+      cloze: '300 題 文法挖空',
+      star: '125 題 ★ 語序重組',
+      passage: '25 篇 長文 (75題)',
+      solutions: '500 題 逐題手寫詳解',
+    },
+    features: [
+      '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
+      '📑 【逐題詳解訂正神手帳】：500 題完整日文句、中日對照、💡 考點解析與專屬錯題筆記欄',
+      '📊 【答案速查矩陣卡】：卷末附標準正解快速對照表，做完即時對分驗算',
+      '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
+      '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
+    ],
+    handbookUrl: '/dist-products/quiz/日檢手帖-N3-500題全真手帳題本-試閱版.html',
+    samples: [
+      {
+        part: 'PART 01',
+        title: '文法形式挖空',
+        question: 'よく考えた（　　）で、最終的な進路を決めることにした。',
+        options: ['うわ', 'うえ', 'あいだ', 'おり'],
+        correctNum: 2,
+        explanation: '「動詞た形 ＋ 上（うえ）で」表示「在充分進行某前項動作之後，再做出後續行為/決定」。',
+      },
+      {
+        part: 'PART 02',
+        title: '★ 號排序重組',
+        question: '雨が ＿＿ ＿＿ ★ ＿＿ 散歩に出かけた。',
+        options: ['やんだ', 'うちに', '急いで', 'すきに'],
+        correctNum: 2,
+        fullSentence: '雨がやんだすきに急いで散歩に出かけた。',
+        translation: '趁著雨停的空檔，趕忙出門散步了。',
+        explanation: '排序順序為「やんだ（1）＋ すきに（4）＋ 急いで（3）＋ うちに（2）... 」，正解為 2 號。',
+      },
+      {
+        part: 'PART 03',
+        title: '篇章脈絡填空',
+        question: '【 01 】読書という行為は、単に知識を得るだけのものではない。...',
+        options: ['なぜなら', '要するに', 'むしろ', 'ただし'],
+        correctNum: 3,
+        explanation: '承接前句的「単に〜だけのものではない」，後項以「むしろ（倒不如說）」帶出閱讀的深層心靈價值。',
+      },
+    ],
+  },
+  n4: {
+    key: 'n4',
+    upper: 'N4',
+    color: '#0096c7',
+    tint: '#e2f4fa',
+    title: '【日檢手帖】JLPT N4 題型專攻・500 題厚切全真手帳題本',
+    subTitle: '進階基礎・日常動詞活用、敬語使役被動與生活指南 500 題',
+    priceUsd: '$7.99',
+    priceTwdApprox: '約 NT$250',
+    stats: {
+      cloze: '300 題 文法挖空',
+      star: '125 題 ★ 語序重組',
+      passage: '25 篇 長文 (75題)',
+      solutions: '500 題 逐題手寫詳解',
+    },
+    features: [
+      '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
+      '📑 【逐題詳解訂正神手帳】：500 題完整日文句、中日對照、💡 考點解析與專屬錯題筆記欄',
+      '📊 【答案速查矩陣卡】：卷末附標準正解快速對照表，做完即時對分驗算',
+      '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
+      '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
+    ],
+    handbookUrl: '/dist-products/quiz/日檢手帖-N4-500題全真手帳題本-試閱版.html',
+    samples: [
+      {
+        part: 'PART 01',
+        title: '文法形式挖空',
+        question: '先生、この本を（　　）もよろしいでしょうか。',
+        options: ['拝見して', 'ご覧になって', 'お目にかけて', 'いらっしゃって'],
+        correctNum: 1,
+        explanation: '「拝見する」為「見る」的謙讓語，用於講話者自己觀看對方物品時表達最高禮貌。',
+      },
+      {
+        part: 'PART 02',
+        title: '★ 號排序重組',
+        question: '風邪を ＿＿ ＿＿ ★ ＿＿ 暖かくして寝てください。',
+        options: ['ひかない', 'ように', '服を', '厚い'],
+        correctNum: 3,
+        fullSentence: '風邪をひかないように厚い服を着て暖かくして寝てください。',
+        translation: '為了不感冒，請穿上厚衣服並保暖睡覺。',
+        explanation: '排序順序為「ひかない（1）＋ ように（2）＋ 厚い服を（4+3）」，落在第 3 格的是「服を」。',
+      },
+      {
+        part: 'PART 03',
+        title: '篇章脈絡填空',
+        question: '【 01 】日本では、地震が起きたときのために、家具を固定しておくことが大切です。...',
+        options: ['たとえば', 'そのため', 'しかし', 'ところで'],
+        correctNum: 1,
+        explanation: '後文列舉具體的防災固定用品與使用方法，填入「たとえば（例如）」引導舉例最合適。',
+      },
+    ],
+  },
+  n5: {
+    key: 'n5',
+    upper: 'N5',
+    color: '#8338ec',
+    tint: '#f2e8fd',
+    title: '【日檢手帖】JLPT N5 題型專攻・500 題厚切全真手帳題本',
+    subTitle: '零基礎入門首選・基礎格助詞、日常對話與生活記事 500 題實戰',
+    priceUsd: '$5.99',
+    priceTwdApprox: '約 NT$190',
+    stats: {
+      cloze: '300 題 文法挖空',
+      star: '125 題 ★ 語序重組',
+      passage: '25 篇 長文 (75題)',
+      solutions: '500 題 逐題手寫詳解',
+    },
+    features: [
+      '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
+      '📑 【逐題詳解訂正神手帳】：500 題完整日文句、中日對照、💡 考點解析與專屬錯題筆記欄',
+      '📊 【答案速查矩陣卡】：卷末附標準正解快速對照表，做完即時對分驗算',
+      '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
+      '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
+    ],
+    handbookUrl: '/dist-products/quiz/日檢手帖-N5-500題全真手帳題本-試閱版.html',
+    samples: [
+      {
+        part: 'PART 01',
+        title: '文法形式挖空',
+        question: 'わたしは 毎朝 ７時（　　） 起きます。',
+        options: ['で', 'に', 'を', 'へ'],
+        correctNum: 2,
+        explanation: '具體特定的時間點（如 7點、星期一、8月等）後面，必須使用格助詞「に」表示時間。',
+      },
+      {
+        part: 'PART 02',
+        title: '★ 號排序重組',
+        question: '机の ＿＿ ＿＿ ★ ＿＿ あります。',
+        options: ['上に', '辞書が', 'きれいに', '並べて'],
+        correctNum: 4,
+        fullSentence: '机の上に辞書がきれいに並べてあります。',
+        translation: '書桌上整齊地擺放著字典。',
+        explanation: '排序為「上に（1）＋ 辞書が（2）＋ きれいに（3）＋ 並べて（4）」，第 3 格是 4 號「並べて」。',
+      },
+      {
+        part: 'PART 03',
+        title: '篇章脈絡填空',
+        question: '【 01 】きのう、友だちといっしょに デパートへ行きました。...',
+        options: ['そして', 'でも', 'だから', 'では'],
+        correctNum: 1,
+        explanation: '接續前項行程並陳述接下來買東西與吃飯的動作，填入順接連詞「そして（然後）」最為合適。',
+      },
+    ],
+  },
+  all: {
+    key: 'all',
+    upper: 'N1～N5',
+    color: '#2b2523',
+    tint: '#faf7f2',
+    title: '【日檢手帖】JLPT N1～N5 題型專攻・全真 2,500 題終身典藏題本包',
+    subTitle: '一次買齊五大級別共 10 冊手帳題本（5冊實戰空白本＋5冊逐題手寫風詳解訂正手帳）',
+    priceUsd: '$24.99',
+    priceTwdApprox: '約 NT$770',
+    stats: {
+      cloze: '1,500 題形式挖空',
+      star: '625 題 ★ 語序重組',
+      passage: '125 篇長文 (375題)',
+      solutions: '2,500 題完整手寫詳解',
+    },
+    features: [
+      '👑 包含 N5、N4、N3、N2、N1 全部 5 個獨立級別的 500 題全真題本套組（共 2,500 題）',
+      '✍️ 5 冊【考場實戰純題空白手寫本】：完整收錄全 2,500 題，隨心在 iPad 或紙本計時刷題',
+      '📑 5 冊【逐題詳解訂正神手帳】：2,500 題逐題日文原句、中日對照、考點拆解與錯題筆記欄',
+      '📊 5 份【標準正解 Answer Key 矩陣卡】：考前 30 分鐘快速對分核對',
+      '💡 現省 55% 終身大特惠：一次付費，永久獲取 N1～N5 題本檔案，直通最高殿堂！',
+    ],
+    handbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
+    samples: [],
+  },
+};
 
 const PRODUCTS: Record<LevelKey, ProductInfo> = {
   n3: {
@@ -248,23 +569,23 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
         promptTip: '壊れます 是自動詞還是他動詞？他動詞怎麼說？',
         ruby: '<ruby>壊<rt>こわ</rt></ruby>れます',
         subMeta: '/ kowaremasu / ｜ 動詞（II類・自動詞）',
-        meaning: '壞掉、故障、破裂（物品自己壞了）',
-        exampleJa: '📌 洗濯機が壊れてしまったので、コインランドリーへ行った。',
-        exampleZh: '洗衣機壞掉了，所以去了投幣式洗衣店。（⚠️ 他動詞是 壊します）',
+        meaning: '壞掉、破碎、倒塌、破滅',
+        exampleJa: '📌 パソコンが突然壊れて、仕事が進まない。',
+        exampleZh: '電腦突然壞掉了，工作無法進行。',
       },
       {
         type: 'grammar',
-        title: 'N4 文法第6課',
-        category: '動作名詞化・人與事區分',
-        front: '〜のは…です',
-        promptTip: 'きのう来た（　）は田中さんです，為什麼不能選「こと」？',
-        ruby: '［動詞普通形］＋ のは ［說明／評價］ です',
-        subMeta: '「の」可代指人、物、事；「こと」只能指抽象的事',
-        meaning: '把前面的動作變成主題「…的是…」',
-        formula: '動詞普通形 ＋ のは [人／物／事] です',
-        alert: '代指「人」的時候只能用「の」不能用「こと」！不能說「来たことは田中さんです」。',
-        exampleJa: '✅ きのう遅れて来たのは田中さんです。',
-        exampleZh: '昨天遲到的人是田中先生。',
+        title: 'N4 文法第8課',
+        category: '義務與必須',
+        front: '〜なければならない',
+        promptTip: '必須、不得不（ない形去掉い接續）',
+        ruby: '［動詞ない形（去掉い）］＋ なければならない',
+        subMeta: '口語常縮約為：〜なきゃ、〜なくちゃ',
+        meaning: '必須…、不得不…（客觀規則或生理必然）',
+        formula: '動詞ない形（去 い） ＋ なければならない',
+        alert: '常與「〜てはいけない（禁止）」做對比測驗；口語化縮約在聽力極常出現！',
+        exampleJa: '✅ 明日は試験だから、早く寝なければならない。',
+        exampleZh: '明天有考試，所以必須早點睡。',
       },
     ],
   },
@@ -274,59 +595,59 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
     color: '#8338ec',
     tint: '#f2e8fd',
     title: '【日檢手帖】JLPT N5 完全備考套組',
-    subTitle: '零基礎安心指南・生活招呼、基礎助詞與第一次考日檢的定心丸',
-    priceUsd: '$7.99',
-    priceTwdApprox: '約 NT$250',
+    subTitle: '入門基石・五十音後第一哩路，生活招呼與基礎句型大通關',
+    priceUsd: '$5.99',
+    priceTwdApprox: '約 NT$190',
     stats: {
-      cards: '712 張智慧字卡',
-      grammar: '48 個入門文法',
-      vocab: '664 個高頻單字',
+      cards: '716 張智慧字卡',
+      grammar: '48 個文法點',
+      vocab: '664 個基礎單字',
       quizzes: '144 題實戰測驗',
     },
     features: [
-      '📱 712 張 Anki 智慧字卡：初學者必備逐字振假名標音，完全不用怕看不懂漢字',
-      '📑 FUDGE 日雜風 A4 講義手冊：助詞入門、基本句型公式與第一次考場指南',
-      '✍️ 支援手機、平板、電腦與列印紙本複習',
+      '📱 716 張 Anki 智慧字卡：初學者必備動詞三類分類、形容詞肯定否定、格助詞用法',
+      '📑 FUDGE 日雜風 A4 講義手冊：全彩平假名片假名對位、初級 48 核心文法整理',
+      '✍️ iPad 電子手帳與列印雙模式：適合第一次考日檢的安心夥伴',
     ],
     handbookUrl: '/dist-products/n5/日檢手帖-N5-試閱講義手冊.html',
     samples: [
       {
         type: 'vocab',
         title: 'N5 單字',
-        category: '動詞（I類）',
-        front: '行きます',
-        promptTip: '請回想讀音、ます形變形與常用場所助詞',
-        ruby: '<ruby>行<rt>い</rt></ruby>きます',
-        subMeta: '/ ikimasu / ｜ 五段動詞',
-        meaning: '去、前往（表示朝遠離說話者的方向移動）',
-        exampleJa: '📌 毎朝８時に地下鉄で会社へ行きます。',
-        exampleZh: '每天早上 8 點搭捷運去公司。',
+        category: '名詞・親屬稱謂',
+        front: '両親',
+        promptTip: '對別人稱呼自己的父母，該怎麼說？',
+        ruby: '<ruby>両<rt>りょう</rt></ruby><ruby>親<rt>しん</rt></ruby>',
+        subMeta: '/ ryoushin / ｜ 音讀名詞',
+        meaning: '父母親、雙親（稱呼自己的父母）',
+        exampleJa: '📌 両親は台湾に住んでいます。',
+        exampleZh: '父母親住在台灣。',
       },
       {
         type: 'grammar',
-        title: 'N5 文法第6課',
-        category: '委婉請求與指示',
-        front: '〜てください',
-        promptTip: '請做…（動詞要用什麼形接續？）',
-        ruby: '［動詞て形］＋ ください',
-        subMeta: '對上司或長輩可在前面加 すみませんが 緩和語氣',
-        meaning: '請…（請對方做某個動作的親切說法）',
-        formula: '動詞て形 ＋ ください',
-        alert: '不能直接對極高位者使用，職場對客戶要用更高級的「〜ていただけますでしょうか」。',
-        exampleJa: '✅ すみませんが、名前をここに書いてください。',
-        exampleZh: '不好意思，請在這裡寫下您的名字。',
+        title: 'N5 文法第3課',
+        category: '欲望與願望表達',
+        front: '〜たい・〜たくない',
+        promptTip: '我想…、我不想…（助詞要用 が 還是 を？）',
+        ruby: '［動詞ます形（去掉ます）］＋ たい',
+        subMeta: '只用於自己（第一人稱）的願望，不能直接詢問長輩',
+        meaning: '想要（做某動作）',
+        formula: '名詞 を／が ＋ 動詞ます形（去 ます） ＋ たい',
+        alert: '願望對象名詞助詞用「が」或「を」皆可（が 偏重欲望對象，を 偏重動作）。',
+        exampleJa: '✅ 日本へ旅行に行きたいです。',
+        exampleZh: '我很想去日本旅行。',
       },
     ],
   },
   all: {
     key: 'all',
-    upper: 'ALL',
+    upper: 'N1～N5',
     color: '#2b2523',
-    tint: '#ffe5a3',
-    title: '【日檢手帖】N1～N5 終身全套典藏包',
-    subTitle: '全級別大禮包・一次買齊 5 年份自學教材（原價 $52 美金，現省 42%！）',
+    tint: '#faf7f2',
+    title: '【日檢手帖】JLPT N1～N5 終身全套典藏包',
+    subTitle: '一次帶走 N1～N5 全部 5 個獨立級別，陪伴你從入門直到最高殿堂',
     priceUsd: '$29.99',
-    priceTwdApprox: '約 NT$950',
+    priceTwdApprox: '約 NT$930',
     stats: {
       cards: '3,593 張全級別字卡',
       grammar: '528 個文法點',
@@ -345,41 +666,111 @@ const PRODUCTS: Record<LevelKey, ProductInfo> = {
 };
 
 export function ProductShowcasePage() {
-  useDocumentTitle('數位備考套組｜日檢手帖 N1～N5 Anki 牌組＆考場速查手冊');
-  const [selectedLevel, setSelectedLevel] = useState<LevelKey>('n3');
-  const [activeSampleIdx, setActiveSampleIdx] = useState(0);
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab');
+  const levelParam = searchParams.get('level') as LevelKey;
+
+  const [activeLine, setActiveLine] = useState<ProductLine>(tabParam === 'quiz' ? 'quiz' : 'quiz');
+  const [selectedLevel, setSelectedLevel] = useState<LevelKey>(
+    levelParam && ['n1', 'n2', 'n3', 'n4', 'n5', 'all'].includes(levelParam) ? levelParam : 'n2'
+  );
+  
+  // 題本樣張切換：'blank'（實戰空白本）| 'solution'（逐題手寫詳解本）
+  const [quizSampleMode, setQuizSampleMode] = useState<'blank' | 'solution'>('solution');
+  const [activeQuizSampleIdx, setActiveQuizSampleIdx] = useState(0);
+
+  // 教材樣張翻牌
+  const [activeTextbookSampleIdx, setActiveTextbookSampleIdx] = useState(0);
   const [isCardFlipped, setIsCardFlipped] = useState(false);
 
-  const prod = PRODUCTS[selectedLevel];
-  const sampleList = selectedLevel === 'all' ? PRODUCTS.n3.samples : prod.samples;
-  const currentSample = sampleList[activeSampleIdx % sampleList.length];
+  useEffect(() => {
+    if (tabParam === 'textbook') setActiveLine('textbook');
+    else if (tabParam === 'quiz') setActiveLine('quiz');
+    if (levelParam && ['n1', 'n2', 'n3', 'n4', 'n5', 'all'].includes(levelParam)) {
+      setSelectedLevel(levelParam);
+    }
+  }, [tabParam, levelParam]);
+
+  useDocumentTitle(
+    activeLine === 'quiz'
+      ? '500 題全真手帳題本｜日檢手帖 N1～N5 GoodNotes / A4 列印雙版本套組'
+      : '數位備考套組｜日檢手帖 N1～N5 Anki 牌組＆考場速查手冊'
+  );
+
+  const currentQuizProd = QUIZ_PRODUCTS[selectedLevel];
+  const quizSamples = selectedLevel === 'all' ? QUIZ_PRODUCTS.n2.samples : currentQuizProd.samples;
+  const curQuizSample = quizSamples[activeQuizSampleIdx % quizSamples.length];
+
+  const currentTextbookProd = PRODUCTS[selectedLevel];
+  const tbSamples = selectedLevel === 'all' ? PRODUCTS.n3.samples : currentTextbookProd.samples;
+  const curTbSample = tbSamples[activeTextbookSampleIdx % tbSamples.length];
 
   const handleLevelChange = (lvl: LevelKey) => {
     setSelectedLevel(lvl);
-    setActiveSampleIdx(0);
+    setActiveQuizSampleIdx(0);
+    setActiveTextbookSampleIdx(0);
     setIsCardFlipped(false);
   };
 
   return (
     <div className="mx-auto max-w-5xl px-3 py-5 sm:px-4 sm:py-8 md:py-12">
-      {/* 頂部標題 */}
-      <div className="text-center">
+      {/* 頂部雙商品線切換（日雜文青質感） */}
+      <div className="mx-auto max-w-xl">
+        <div className="grid grid-cols-2 gap-2 rounded-2xl border-2 border-paper-sumi bg-paper-canvas p-1.5 shadow-retro">
+          <button
+            type="button"
+            onClick={() => setActiveLine('quiz')}
+            className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 font-display text-xs font-black transition-all sm:gap-2 sm:text-sm ${
+              activeLine === 'quiz'
+                ? 'bg-paper-sumi text-white shadow-retro-sm'
+                : 'text-paper-sumi hover:bg-paper-butter'
+            }`}
+          >
+            <span>✍️</span>
+            <span>【題庫】500 題手帳題本</span>
+            <span className="rounded bg-[#ff6b35] px-1.5 py-0.5 font-mono text-[9.5px] font-black text-white">HOT</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveLine('textbook')}
+            className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 font-display text-xs font-black transition-all sm:gap-2 sm:text-sm ${
+              activeLine === 'textbook'
+                ? 'bg-paper-sumi text-white shadow-retro-sm'
+                : 'text-paper-sumi hover:bg-paper-butter'
+            }`}
+          >
+            <span>📱</span>
+            <span>【教材】Anki 牌組＆手冊</span>
+          </button>
+        </div>
+      </div>
+
+      {/* 頂部標題說明 */}
+      <div className="mt-6 text-center sm:mt-8">
         <span className="inline-block rounded-lg border-2 border-paper-sumi bg-paper-butter px-2.5 py-0.5 font-display text-[10.5px] font-black shadow-retro-sm sm:text-xs md:text-sm">
-          FUDGE / CLUEL 日雜風格・全自學數位教材
+          {activeLine === 'quiz' ? 'GoodNotes / Notability / A4 實體列印雙版本手帳' : 'FUDGE / CLUEL 日雜風格・全自學數位教材'}
         </span>
-        <h1 className="mt-2.5 font-display text-xl font-black sm:mt-4 sm:text-3xl md:text-5xl">
-          日檢手帖・獨立分級數位備考套組
+        <h1 className="mt-2.5 font-display text-xl font-black sm:mt-3 sm:text-3xl md:text-4xl">
+          {activeLine === 'quiz' ? '日檢手帖・500 題厚切全真手帳題本' : '日檢手帖・獨立分級數位備考套組'}
         </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-xs leading-relaxed text-paper-sumi/75 sm:mt-3 sm:text-sm md:text-base">
-          專為喜愛用 <span className="font-bold text-paper-sumi">iPad 平板筆記</span> 與 <span className="font-bold text-paper-sumi">Anki 智慧間隔記憶</span> 的自學者打造。逐字振假名記憶字卡包與 FUDGE 日雜風 A4 考場速查講義！
+        <p className="mx-auto mt-2 max-w-2xl text-xs leading-relaxed text-paper-sumi/75 sm:mt-2.5 sm:text-sm md:text-base">
+          {activeLine === 'quiz' ? (
+            <>
+              專為喜愛在 <span className="font-bold text-paper-sumi">iPad 筆記軟體（GoodNotes / Notability）手寫刷題</span> 與 <span className="font-bold text-paper-sumi">A4 實體紙本模擬考場</span> 的考生打造。包含【實戰空白做題本】＋【逐題手寫風詳解訂正神手帳】雙版本！
+            </>
+          ) : (
+            <>
+              專為喜愛用 <span className="font-bold text-paper-sumi">iPad 平板筆記</span> 與 <span className="font-bold text-paper-sumi">Anki 智慧間隔記憶</span> 的自學者打造。逐字振假名記憶字卡包與 FUDGE 日雜風 A4 考場速查講義！
+            </>
+          )}
         </p>
       </div>
 
-      {/* 級別切換：上方 5 級別對稱一列，下方全套包橫幅（手機絕對整齊對齊） */}
-      <div className="mt-5 sm:mt-8">
+      {/* 級別切換按鈕列 */}
+      <div className="mt-5 sm:mt-7">
         <div className="grid grid-cols-5 gap-1.5 sm:gap-2.5">
           {(['n5', 'n4', 'n3', 'n2', 'n1'] as LevelKey[]).map((lvl) => {
-            const item = PRODUCTS[lvl];
+            const item = activeLine === 'quiz' ? QUIZ_PRODUCTS[lvl] : PRODUCTS[lvl];
             const active = selectedLevel === lvl;
             return (
               <button
@@ -413,269 +804,523 @@ export function ProductShowcasePage() {
             }`}
           >
             <span>👑</span>
-            <span>N1～N5 終身全套典藏包（一次買齊 5 級・現省 42%）</span>
+            <span>
+              {activeLine === 'quiz'
+                ? 'N1～N5 全真 2,500 題終身典藏題本包（共 10 冊・現省 55%）'
+                : 'N1～N5 終身全套典藏包（一次買齊 5 級教材・現省 42%）'}
+            </span>
           </button>
         </div>
       </div>
 
-      {/* 當前選中產品的展示主卡片 */}
-      <div className="mt-4 rounded-2xl border-2 border-paper-sumi bg-paper-card p-3.5 shadow-retro sm:mt-6 sm:border-3 sm:p-6 sm:shadow-retro-lg md:p-8">
-        
-        {/* 產品頭部與價格 */}
-        <div className="flex flex-col gap-3 border-b-2 border-dashed border-paper-sumi pb-4 sm:pb-5 md:flex-row md:items-center md:justify-between">
-          <div>
-            <div className="flex items-center gap-2 sm:gap-3">
-              <span
-                className="rounded-lg border-2 border-paper-sumi px-2 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
-                style={{ backgroundColor: prod.color }}
-              >
-                {prod.upper}
-              </span>
-              <h2 className="font-display text-lg font-black sm:text-2xl md:text-3xl">{prod.title}</h2>
-            </div>
-            <p className="mt-1 text-xs font-bold text-paper-sumi/70 sm:mt-1.5 sm:text-sm">{prod.subTitle}</p>
-          </div>
-
-          <div className="flex flex-col items-start gap-1 md:items-end">
-            <div className="flex items-baseline gap-2">
-              <span className="font-display text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">{prod.priceUsd}</span>
-              <span className="font-mono text-xs text-paper-sumi/60">{prod.priceTwdApprox}</span>
-            </div>
-            <a
-              href="https://buymeacoffee.com/chiaoban/extras"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
-            >
-              🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
-            </a>
-          </div>
-        </div>
-
-        {/* 雙欄實體預覽：直接接字卡與手冊（刪除中間四格數據，緊湊有型） */}
-        <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
-          
-          {/* 左欄：Anki 實體字卡動態翻牌模擬器（比例精緻緊湊） */}
-          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+      {/* ─────────────────────────────────────────────────────────────
+       * 情況 A：【題庫系列】展示主卡片
+       * ──────────────────────────────────────────────────────────── */}
+      {activeLine === 'quiz' && (
+        <div className="mt-4 rounded-2xl border-2 border-paper-sumi bg-paper-card p-3.5 shadow-retro sm:mt-6 sm:border-3 sm:p-6 sm:shadow-retro-lg md:p-8">
+          {/* 題本標頭與價格 */}
+          <div className="flex flex-col gap-3 border-b-2 border-dashed border-paper-sumi pb-4 sm:pb-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <div className="flex items-center justify-between">
-                <h3 className="font-display text-xs font-black sm:text-sm">📱 Anki 智慧字卡線上試玩</h3>
-                <span className="rounded bg-paper-sumi px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-paper-card sm:text-xs">
-                  {activeSampleIdx + 1} / {sampleList.length}
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span
+                  className="rounded-lg border-2 border-paper-sumi px-2 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
+                  style={{ backgroundColor: currentQuizProd.color }}
+                >
+                  {currentQuizProd.upper} 題型專攻
                 </span>
+                <h2 className="font-display text-lg font-black sm:text-2xl md:text-3xl">{currentQuizProd.title}</h2>
               </div>
-              <p className="mt-0.5 text-[11px] text-paper-sumi/60">點擊卡片任何地方即可翻面查看背面：</p>
-
-              {/* 卡片本體（點擊翻面，小巧精緻） */}
-              <div
-                role="button"
-                tabIndex={0}
-                onClick={() => setIsCardFlipped((v) => !v)}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsCardFlipped((v) => !v); }}
-                className="mt-2.5 flex min-h-[220px] cursor-pointer flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-card p-3 shadow-retro transition-transform hover:translate-y-[-2px] sm:min-h-[260px] sm:p-4.5"
-              >
-                {/* 卡片標籤列 */}
-                <div className="flex items-center gap-1.5">
-                  <span
-                    className="rounded px-1.5 py-0.5 text-[10px] font-black text-paper-card"
-                    style={{ backgroundColor: prod.color }}
-                  >
-                    {currentSample.title}
-                  </span>
-                  <span className="rounded border border-paper-sumi/30 bg-paper-canvas px-1.5 py-0.5 text-[10px] font-bold">
-                    {currentSample.category}
-                  </span>
-                  <span className="ml-auto font-mono text-[9px] text-paper-sumi/40 sm:text-[10px]">日檢手帖 TECHO</span>
-                </div>
-
-                {/* 正面內容 */}
-                {!isCardFlipped ? (
-                  <div className="my-4 text-center sm:my-5">
-                    <div className="font-serif text-xl font-black text-paper-sumi sm:text-2xl md:text-3xl">
-                      {currentSample.front}
-                    </div>
-                    <div className="mt-2 font-mono text-[11px] text-paper-sumi/50 sm:text-xs">
-                      {currentSample.promptTip}
-                    </div>
-                  </div>
-                ) : (
-                  /* 背面內容 */
-                  <div className="my-2 text-left sm:my-2.5">
-                    <div
-                      className="text-center font-serif text-lg font-black sm:text-xl md:text-2xl"
-                      dangerouslySetInnerHTML={{ __html: currentSample.ruby }}
-                    />
-                    <div className="mt-0.5 text-center font-mono text-[10.5px] text-paper-sumi/60 sm:text-xs">
-                      {currentSample.subMeta}
-                    </div>
-
-                    <div
-                      className="mt-2 rounded-r border-l-3 p-1.5 text-xs font-bold sm:mt-2.5 sm:p-2 sm:text-sm"
-                      style={{ borderLeftColor: prod.color, backgroundColor: prod.tint }}
-                    >
-                      💡 {currentSample.meaning}
-                    </div>
-
-                    {currentSample.alert && (
-                      <div className="mt-1.5 rounded border border-amber-400 bg-amber-50 p-1.5 text-[10.5px] text-amber-900 sm:text-[11px]">
-                        ⚠️ <strong>陷阱提示：</strong>{currentSample.alert}
-                      </div>
-                    )}
-
-                    <div className="mt-2 rounded border border-paper-sumi/20 bg-paper-canvas p-1.5 text-[11px] sm:mt-2.5 sm:p-2 sm:text-xs">
-                      <p className="font-serif text-paper-sumi">{currentSample.exampleJa}</p>
-                      <p className="mt-0.5 font-mono text-[10.5px] text-paper-sumi/70 sm:text-xs">{currentSample.exampleZh}</p>
-                    </div>
-                  </div>
-                )}
-
-                {/* 卡片底端 */}
-                <div className="border-t border-dashed border-paper-sumi/30 pt-1.5 text-center text-[10px] text-paper-sumi/50 sm:text-[11px]">
-                  {!isCardFlipped ? '👆 點擊翻面查看讀音與詳解' : '🔄 點擊翻回正面'}
-                </div>
-              </div>
+              <p className="mt-1 text-xs font-bold text-paper-sumi/70 sm:mt-1.5 sm:text-sm">{currentQuizProd.subTitle}</p>
             </div>
 
-            {/* 切換題目按鈕 */}
-            <div className="mt-2.5 flex items-center justify-between text-xs">
-              <span className="text-[11px] text-paper-sumi/60">
-                每套收錄 700+ 張字卡
-              </span>
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveSampleIdx((i) => (i + 1) % sampleList.length);
-                  setIsCardFlipped(false);
-                }}
-                className="rounded-lg border border-paper-sumi bg-paper-card px-2 py-1 font-display text-[11px] font-bold hover:bg-paper-butter sm:text-xs"
-              >
-                換下一張 ›
-              </button>
-            </div>
-          </div>
-
-          {/* 右欄：A4 講義手冊滾動預覽（直接上下滑動翻閱） */}
-          <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
-            <div>
-              <div className="flex items-center justify-between">
-                <h3 className="font-display text-xs font-black sm:text-sm">📑 A4 考場速查手冊線上試閱</h3>
-                <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-bold sm:text-[11px]">
-                  日雜 FUDGE 排版
-                </span>
+            <div className="flex flex-col items-start gap-1 md:items-end">
+              <div className="flex items-baseline gap-2">
+                <span className="font-display text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">{currentQuizProd.priceUsd}</span>
+                <span className="font-mono text-xs text-paper-sumi/60">{currentQuizProd.priceTwdApprox}</span>
               </div>
-              <p className="mt-0.5 text-[11px] text-paper-sumi/60">
-                可在框內直接滑動翻閱各章節排版：
-              </p>
-
-              {/* 滾動式 A4 講義手冊預覽窗（自適應容器，絕不跑版） */}
-              <div className="relative mt-2.5 h-[320px] w-full max-w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[380px] md:h-[420px]">
-                <iframe
-                  src={prod.handbookUrl}
-                  title={`${prod.upper} A4 講義手冊試閱`}
-                  className="h-full w-full border-0 bg-[#faf7f2]"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            {/* 下方全螢幕連結 */}
-            <div className="mt-2.5 flex flex-col gap-1 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
-              <span className="text-paper-sumi/60">💡 支援 iPad GoodNotes 筆記或 A4 列印</span>
               <a
-                href={prod.handbookUrl}
+                href="https://buymeacoffee.com/chiaoban/extras"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 font-display font-bold underline decoration-2 underline-offset-4 hover:text-level"
+                className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
               >
-                🔍 開啟全頁高解析 A4 講義【精華試閱版】↗
+                🛒 前往商店購買 {currentQuizProd.upper} 題本套組 ({currentQuizProd.priceUsd}) →
               </a>
             </div>
           </div>
 
-        </div>
+          {/* 4 大規格指標 */}
+          <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:grid-cols-4 sm:gap-3">
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.cloze}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">Part 1 文法挖空</div>
+            </div>
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.star}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">Part 2 ★ 號語序重組</div>
+            </div>
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.passage}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">Part 3 篇章長文專欄</div>
+            </div>
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.solutions}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">考點陷阱與錯題欄</div>
+            </div>
+          </div>
 
-        {/* 包含內容清單 */}
-        <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
-          <h3 className="font-display text-xs font-black sm:text-sm">
-            📦 {prod.title} 包含完整內容：
-          </h3>
-          <ul className="mt-2 space-y-1 text-xs text-paper-sumi/85 sm:text-sm">
-            {prod.features.map((feat, idx) => (
-              <li key={idx} className="flex items-start gap-1.5">
-                <span className="font-bold text-level">✔</span>
-                <span>{feat}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* 左右分欄展示：左欄實體手帳樣張，右欄 A4 題本試閱視窗 */}
+          <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
+            {/* 左欄：手帳樣張互動對比 */}
+            <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-display text-xs font-black sm:text-sm">✍️ iPad / 列印手帳真實樣張</h3>
+                  {/* 切換樣張模式 */}
+                  <div className="inline-flex rounded-lg border border-paper-sumi bg-paper-card p-0.5 font-mono text-[10.5px] font-bold">
+                    <button
+                      type="button"
+                      onClick={() => setQuizSampleMode('solution')}
+                      className={`rounded px-2 py-0.5 transition-all ${quizSampleMode === 'solution' ? 'bg-paper-butter text-paper-sumi font-black' : 'text-paper-sumi/60'}`}
+                    >
+                      手寫詳解本
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setQuizSampleMode('blank')}
+                      className={`rounded px-2 py-0.5 transition-all ${quizSampleMode === 'blank' ? 'bg-paper-sumi text-white font-black' : 'text-paper-sumi/60'}`}
+                    >
+                      實戰空白本
+                    </button>
+                  </div>
+                </div>
 
-        {/* 為什麼數位學習比實體書強大的四大理由（移動至產品下方作為下單信心支撐） */}
-        <div className="mt-5 border-t-2 border-dashed border-paper-sumi/40 pt-5">
-          <div className="text-center">
-            <h3 className="font-display text-sm font-black sm:text-base">
-              為什麼推薦「數位 Anki ＋ A4 講義」而不是買厚重參考書？
+                {curQuizSample && (
+                  <div className="mt-3 rounded-xl border-2 border-paper-sumi bg-white p-3.5 shadow-retro-sm sm:p-4">
+                    <div className="flex items-center justify-between border-b border-paper-sumi/15 pb-2">
+                      <span className="font-mono text-xs font-black text-[#ff6b35]">{curQuizSample.part} ・ {curQuizSample.title}</span>
+                      <span className="font-mono text-[11px] text-paper-sumi/60">
+                        {quizSampleMode === 'solution' ? '逐題詳解訂正本' : '考場實戰純題目本'}
+                      </span>
+                    </div>
+
+                    <div className="my-3 font-serif text-sm font-bold leading-relaxed text-paper-sumi sm:text-base">
+                      {curQuizSample.question}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-1.5 font-serif text-xs">
+                      {curQuizSample.options.map((opt, oIdx) => {
+                        const isRight = oIdx + 1 === curQuizSample.correctNum;
+                        return (
+                          <div
+                            key={oIdx}
+                            className={`flex items-center gap-1.5 rounded-lg border p-1.5 ${
+                              quizSampleMode === 'solution' && isRight
+                                ? 'border-paper-sumi bg-paper-butter font-bold'
+                                : 'border-paper-sumi/20 bg-paper-canvas'
+                            }`}
+                          >
+                            <span className="font-mono text-[11px] font-bold">{oIdx + 1}.</span>
+                            <span>{opt}</span>
+                            {quizSampleMode === 'solution' && isRight && <span className="ml-auto font-mono text-[10px] font-black">✓ 正解</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* 詳解筆記欄（訂正模式下顯示） */}
+                    {quizSampleMode === 'solution' ? (
+                      <div className="mt-3 rounded-lg border-l-3 border-paper-sumi bg-paper-canvas p-2.5 text-xs text-paper-sumi/90">
+                        {curQuizSample.fullSentence && (
+                          <div className="font-serif font-bold text-paper-sumi">
+                            <strong>完整句：</strong>{curQuizSample.fullSentence}
+                          </div>
+                        )}
+                        {curQuizSample.translation && (
+                          <div className="mt-0.5 text-paper-sumi/75">
+                            <strong>中文：</strong>{curQuizSample.translation}
+                          </div>
+                        )}
+                        <div className="mt-1 font-body leading-relaxed">
+                          <strong>💡 考點拆解：</strong>{curQuizSample.explanation}
+                        </div>
+                        <div className="mt-2 rounded border border-dashed border-paper-sumi/30 bg-white p-1.5 font-mono text-[10.5px] text-paper-sumi/40">
+                          ✍️ 我的錯題筆記與 Apple Pencil 註記欄...
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="mt-3 rounded border border-dashed border-paper-sumi/30 bg-paper-canvas p-2 text-center font-mono text-[11px] text-paper-sumi/40">
+                        ［ 此處預留 3 行手寫空白，供計時做題圈選 ］
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* 切換題型按鈕 */}
+              <div className="mt-3 flex items-center justify-between border-t border-paper-sumi/15 pt-2">
+                <span className="font-mono text-xs text-paper-sumi/60">
+                  樣張 { (activeQuizSampleIdx % quizSamples.length) + 1 } / { quizSamples.length }
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setActiveQuizSampleIdx((i) => (i + 1) % quizSamples.length)}
+                  className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display text-xs font-bold hover:bg-paper-butter"
+                >
+                  換下一題樣張 ›
+                </button>
+              </div>
+            </div>
+
+            {/* 右欄：A4 題本線上試閱視窗 */}
+            <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-display text-xs font-black sm:text-sm">📖 A4 手帳題本線上試閱視窗</h3>
+                  <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-bold sm:text-[11px]">
+                    30 題精選試閱
+                  </span>
+                </div>
+                <p className="mt-0.5 text-[11px] text-paper-sumi/60">
+                  可在框內直接滑動翻閱真實 A4 排版與考場格式：
+                </p>
+
+                <div className="relative mt-2.5 h-[320px] w-full max-w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[380px] md:h-[420px]">
+                  <iframe
+                    src={currentQuizProd.handbookUrl}
+                    title={`${currentQuizProd.upper} 500題手帳題本試閱`}
+                    className="h-full w-full border-0 bg-[#faf7f2]"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-2.5 flex flex-col gap-1 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
+                <span className="text-paper-sumi/60">💡 支援 iPad GoodNotes 向量筆記與 A4 列印</span>
+                <a
+                  href={currentQuizProd.handbookUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 font-display font-bold underline decoration-2 underline-offset-4 hover:text-[#ff6b35]"
+                >
+                  🔍 開啟全頁高解析 A4 題本【30 題試閱版】↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* 包含內容清單 */}
+          <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+            <h3 className="font-display text-xs font-black sm:text-sm">
+              📦 {currentQuizProd.title} 包含完整內容：
             </h3>
+            <ul className="mt-2 space-y-1 text-xs text-paper-sumi/85 sm:text-sm">
+              {currentQuizProd.features.map((feat, idx) => (
+                <li key={idx} className="flex items-start gap-1.5">
+                  <span className="font-bold text-[#ff6b35]">✔</span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
-            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
-              <div className="text-xl sm:text-2xl">📱</div>
-              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">iPad 平板筆記</h4>
-              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-                向量高解析 PDF，放進 GoodNotes 隨心畫線做標記。
-              </p>
-            </RetroCard>
-            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
-              <div className="text-xl sm:text-2xl">⚡</div>
-              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">Anki 間隔記憶</h4>
-              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-                在快忘記時提醒你，每天 15 分鐘勝過死背 2 小時。
-              </p>
-            </RetroCard>
-            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
-              <div className="text-xl sm:text-2xl">✈️</div>
-              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">100% 離線翻閱</h4>
-              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-                捷運通勤、搭機出差，隨時拿出手機刷卡、看講義。
-              </p>
-            </RetroCard>
-            <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
-              <div className="text-xl sm:text-2xl">🖨️</div>
-              <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">考場紙本隨印</h4>
-              <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
-                進考場手機關機！支援 A4 列印，考前 30 分鐘安心神冊。
-              </p>
-            </RetroCard>
-          </div>
-        </div>
 
-        {/* 底部行動呼籲 CTA */}
-        <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-butter p-4 text-center sm:mt-6 sm:p-6">
-          <h3 className="font-display text-base font-black sm:text-xl md:text-2xl">
-            準備好一次通過 {prod.upper} 了嗎？
-          </h3>
-          <p className="mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
-            贊助日檢手帖，立即獲取完整 <strong>{prod.title}</strong>（含 Anki 逐字振假名字卡包 ＋ FUDGE 日雜風 A4 講義手冊）。付款後系統自動寄送下載連結，永久離線複習！
-          </p>
-          <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
-            <a
-              href="https://buymeacoffee.com/chiaoban/extras"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
-            >
-              🛒 前往商店購買 {prod.upper} 套組 ({prod.priceUsd}) →
-            </a>
-            <button
-              type="button"
-              onClick={() => handleLevelChange('all')}
-              className="btn-retro w-full text-xs sm:w-auto sm:text-sm"
-            >
-              👑 看看 N1～N5 終身全套包 ($29.99)
-            </button>
+          {/* 為什麼手寫刷題是通過日檢關鍵 */}
+          <div className="mt-5 border-t-2 border-dashed border-paper-sumi/40 pt-5">
+            <div className="text-center">
+              <h3 className="font-display text-sm font-black sm:text-base">
+                為什麼考前最後衝刺，手寫題本是「提分關鍵」？
+              </h3>
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
+              <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+                <div className="text-xl sm:text-2xl">✍️</div>
+                <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">圈詞劃重點記憶</h4>
+                <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                  手寫圈出接續詞與助詞，建立大腦對文法骨架的肌肉記憶。
+                </p>
+              </RetroCard>
+              <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+                <div className="text-xl sm:text-2xl">⏱️</div>
+                <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">考場真實限時感</h4>
+                <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                  用空白本計時刷題，克服考場上的閱讀速度與畫卡焦慮。
+                </p>
+              </RetroCard>
+              <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+                <div className="text-xl sm:text-2xl">📖</div>
+                <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">一本隨身錯題本</h4>
+                <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                  訂正本自帶手寫錯題欄，考前 30 分鐘只需看這本自己的盲點筆記。
+                </p>
+              </RetroCard>
+              <RetroCard shadow="sm" className="p-2.5 text-center sm:p-3">
+                <div className="text-xl sm:text-2xl">📱</div>
+                <h4 className="mt-1 font-display text-xs font-bold sm:text-sm">iPad / 紙本雙通</h4>
+                <p className="mt-0.5 text-[10.5px] leading-relaxed text-paper-sumi/70 sm:text-xs">
+                  向量高清無損，GoodNotes 翻頁無卡頓，也能列印帶入考場。
+                </p>
+              </RetroCard>
+            </div>
           </div>
-        </div>
 
-      </div>
+          {/* 底部行動呼籲 CTA */}
+          <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-butter p-4 text-center sm:mt-6 sm:p-6">
+            <h3 className="font-display text-base font-black sm:text-xl md:text-2xl">
+              準備好用 500 題手帳題本征服 {currentQuizProd.upper} 了嗎？
+            </h3>
+            <p className="mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
+              贊助日檢手帖，立即獲取 <strong>{currentQuizProd.title}</strong>（含實戰空白題本 ＋ 逐題手寫風詳解訂正手帳雙 PDF 檔案）。付款後系統自動寄送下載連結，永久離線複習！
+            </p>
+            <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
+              <a
+                href="https://buymeacoffee.com/chiaoban/extras"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
+              >
+                🛒 前往商店購買 {currentQuizProd.upper} 題本套組 ({currentQuizProd.priceUsd}) →
+              </a>
+              <button
+                type="button"
+                onClick={() => handleLevelChange('all')}
+                className="btn-retro w-full text-xs sm:w-auto sm:text-sm"
+              >
+                👑 看看 N1～N5 全真 2,500 題終身典藏包 ($24.99)
+              </button>
+            </div>
+            <div className="mt-3 text-center">
+              <Link
+                to={selectedLevel === 'all' ? '/quiz/n2' : `/quiz/${selectedLevel}`}
+                className="font-mono text-xs font-bold text-paper-sumi/80 hover:text-[#ff6b35] underline underline-offset-4"
+              >
+                👉 想要直接在線上免費刷題？前往 {currentQuizProd.upper} 線上全真題庫（500 題）→
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      )}
+
+      {/* ─────────────────────────────────────────────────────────────
+       * 情況 B：【教材系列】展示主卡片（Anki + 講義）
+       * ──────────────────────────────────────────────────────────── */}
+      {activeLine === 'textbook' && (
+        <div className="mt-4 rounded-2xl border-2 border-paper-sumi bg-paper-card p-3.5 shadow-retro sm:mt-6 sm:border-3 sm:p-6 sm:shadow-retro-lg md:p-8">
+          
+          {/* 產品頭部與價格 */}
+          <div className="flex flex-col gap-3 border-b-2 border-dashed border-paper-sumi pb-4 sm:pb-5 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span
+                  className="rounded-lg border-2 border-paper-sumi px-2 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
+                  style={{ backgroundColor: currentTextbookProd.color }}
+                >
+                  {currentTextbookProd.upper}
+                </span>
+                <h2 className="font-display text-lg font-black sm:text-2xl md:text-3xl">{currentTextbookProd.title}</h2>
+              </div>
+              <p className="mt-1 text-xs font-bold text-paper-sumi/70 sm:mt-1.5 sm:text-sm">{currentTextbookProd.subTitle}</p>
+            </div>
+
+            <div className="flex flex-col items-start gap-1 md:items-end">
+              <div className="flex items-baseline gap-2">
+                <span className="font-display text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">{currentTextbookProd.priceUsd}</span>
+                <span className="font-mono text-xs text-paper-sumi/60">{currentTextbookProd.priceTwdApprox}</span>
+              </div>
+              <a
+                href="https://buymeacoffee.com/chiaoban/extras"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
+              >
+                🛒 前往商店購買 {currentTextbookProd.upper} 套組 ({currentTextbookProd.priceUsd}) →
+              </a>
+            </div>
+          </div>
+
+          {/* 4 大指標 */}
+          <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:grid-cols-4 sm:gap-3">
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentTextbookProd.stats.cards}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">Anki 智慧字卡</div>
+            </div>
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentTextbookProd.stats.grammar}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">文法公式清單</div>
+            </div>
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentTextbookProd.stats.vocab}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">必背高頻單字</div>
+            </div>
+            <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
+              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentTextbookProd.stats.quizzes}</div>
+              <div className="text-[11px] font-bold text-paper-sumi/60">隨堂測驗題</div>
+            </div>
+          </div>
+
+          {/* 左右分欄展示：左欄 Anki 卡片翻牌，右欄 A4 手冊預覽 */}
+          <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
+            <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-display text-xs font-black sm:text-sm">📱 Anki 智慧字卡真實樣式</h3>
+                  <span className="font-mono text-[10.5px] text-paper-sumi/60">點擊卡片翻面看解析</span>
+                </div>
+
+                {curTbSample && (
+                  <div
+                    onClick={() => setIsCardFlipped((v) => !v)}
+                    className="mt-3 cursor-pointer rounded-xl border-2 border-paper-sumi bg-white p-4 shadow-retro-sm transition-all hover:scale-[1.01] sm:p-5"
+                  >
+                    <div className="flex items-center justify-between border-b border-paper-sumi/15 pb-2">
+                      <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-black text-paper-sumi">
+                        {curTbSample.title} ｜ {curTbSample.category}
+                      </span>
+                      <span className="font-mono text-[11px] font-bold text-paper-sumi/60">
+                        {isCardFlipped ? '【背面：公式詳解】' : '【正面：考點回想】'}
+                      </span>
+                    </div>
+
+                    {!isCardFlipped ? (
+                      <div className="my-6 text-center">
+                        <div className="font-serif text-2xl font-black text-paper-sumi sm:text-3xl">
+                          {curTbSample.front}
+                        </div>
+                        <div className="mt-2 text-xs font-bold text-[#ff6b35]">
+                          💡 {curTbSample.promptTip}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="my-3 space-y-2 text-xs leading-relaxed text-paper-sumi">
+                        <div
+                          className="font-serif text-lg font-black"
+                          dangerouslySetInnerHTML={{ __html: curTbSample.ruby }}
+                        />
+                        <div className="font-mono text-[11px] text-paper-sumi/60">{curTbSample.subMeta}</div>
+                        <div className="border-t border-paper-sumi/15 pt-2">
+                          <strong>中文含義：</strong>{curTbSample.meaning}
+                        </div>
+                        {curTbSample.formula && (
+                          <div className="rounded bg-paper-canvas p-1.5 font-mono">
+                            <strong>公式：</strong>{curTbSample.formula}
+                          </div>
+                        )}
+                        <div>
+                          <strong>例句：</strong>{curTbSample.exampleJa}
+                          <div className="text-paper-sumi/65">{curTbSample.exampleZh}</div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-3 flex items-center justify-between border-t border-paper-sumi/15 pt-2">
+                <span className="font-mono text-xs text-paper-sumi/60">
+                  樣張 { (activeTextbookSampleIdx % tbSamples.length) + 1 } / { tbSamples.length }
+                </span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveTextbookSampleIdx((i) => (i + 1) % tbSamples.length);
+                    setIsCardFlipped(false);
+                  }}
+                  className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display text-xs font-bold hover:bg-paper-butter"
+                >
+                  換下一張 ›
+                </button>
+              </div>
+            </div>
+
+            {/* 右欄：A4 講義預覽 */}
+            <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-display text-xs font-black sm:text-sm">📑 A4 考場速查手冊線上試閱</h3>
+                  <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-bold sm:text-[11px]">
+                    日雜 FUDGE 排版
+                  </span>
+                </div>
+                <p className="mt-0.5 text-[11px] text-paper-sumi/60">
+                  可在框內直接滑動翻閱各章節公式與排版：
+                </p>
+
+                <div className="relative mt-2.5 h-[320px] w-full max-w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[380px] md:h-[420px]">
+                  <iframe
+                    src={currentTextbookProd.handbookUrl}
+                    title={`${currentTextbookProd.upper} A4 講義手冊試閱`}
+                    className="h-full w-full border-0 bg-[#faf7f2]"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-2.5 flex flex-col gap-1 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
+                <span className="text-paper-sumi/60">💡 支援 iPad GoodNotes 筆記或 A4 列印</span>
+                <a
+                  href={currentTextbookProd.handbookUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 font-display font-bold underline decoration-2 underline-offset-4 hover:text-level"
+                >
+                  🔍 開啟全頁高解析 A4 講義【精華試閱版】↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* 包含內容清單 */}
+          <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+            <h3 className="font-display text-xs font-black sm:text-sm">
+              📦 {currentTextbookProd.title} 包含完整內容：
+            </h3>
+            <ul className="mt-2 space-y-1 text-xs text-paper-sumi/85 sm:text-sm">
+              {currentTextbookProd.features.map((feat, idx) => (
+                <li key={idx} className="flex items-start gap-1.5">
+                  <span className="font-bold text-level">✔</span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 底部行動呼籲 CTA */}
+          <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-butter p-4 text-center sm:mt-6 sm:p-6">
+            <h3 className="font-display text-base font-black sm:text-xl md:text-2xl">
+              準備好一次通過 {currentTextbookProd.upper} 了嗎？
+            </h3>
+            <p className="mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
+              贊助日檢手帖，立即獲取完整 <strong>{currentTextbookProd.title}</strong>（含 Anki 逐字振假名字卡包 ＋ FUDGE 日雜風 A4 講義手冊）。付款後系統自動寄送下載連結，永久離線複習！
+            </p>
+            <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
+              <a
+                href="https://buymeacoffee.com/chiaoban/extras"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
+              >
+                🛒 前往商店購買 {currentTextbookProd.upper} 套組 ({currentTextbookProd.priceUsd}) →
+              </a>
+              <button
+                type="button"
+                onClick={() => handleLevelChange('all')}
+                className="btn-retro w-full text-xs sm:w-auto sm:text-sm"
+              >
+                👑 看看 N1～N5 終身全套包 ($29.99)
+              </button>
+            </div>
+            <div className="mt-3 text-center">
+              <Link
+                to={selectedLevel === 'all' ? '/grammar/n3' : `/grammar/${selectedLevel}`}
+                className="font-mono text-xs font-bold text-paper-sumi/80 hover:text-level underline underline-offset-4"
+              >
+                👉 先在線上自學？前往 {currentTextbookProd.upper} 免費線上文法講義 →
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      )}
     </div>
   );
 }

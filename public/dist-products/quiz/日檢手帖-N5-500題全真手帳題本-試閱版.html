@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日檢手帖｜N5 題型專攻・500題全真手帳題本（試閱版）</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500;700&family=Noto+Serif+JP:wght@600;700;900&family=Noto+Serif+TC:wght@600;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap');
+
+:root {
+  --sumi: #2B2523;
+  --canvas: #FAF7F2;
+  --card: #FFFFFF;
+  --butter: #FFE5A3;
+  --oatmeal: #EFEAE1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
+  background-color: #E5E0D8;
+  color: var(--sumi);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.screen-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #2B2523;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.screen-header h1 {
+  font-size: 15px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.screen-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-print {
+  background: var(--butter);
+  color: var(--sumi);
+  font-weight: 800;
+  font-size: 13px;
+  border: 1.5px solid var(--sumi);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-print:hover {
+  background: #FFFFFF;
+  transform: translate(-1px, -1px);
+}
+
+.book-container {
+  max-width: 210mm;
+  margin: 30px auto;
+  background: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 14mm 14mm 16mm 14mm;
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  .screen-header {
+    display: none !important;
+  }
+  .book-container {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+  .no-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+/* 封面樣式 */
+.book-cover {
+  min-height: 275mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24mm 20mm;
+  border: 4px solid var(--sumi);
+  margin: 10mm;
+  background: var(--canvas);
+  position: relative;
+}
+
+.cover-header {
+  border-bottom: 2px solid var(--sumi);
+  padding-bottom: 16px;
+}
+
+.cover-issue {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(43,37,35,0.7);
+}
+
+.cover-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 2px solid var(--sumi);
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: 'DM Mono', monospace;
+  box-shadow: 3px 3px 0px var(--sumi);
+  margin-top: 12px;
+}
+
+.cover-title-group {
+  margin: 40px 0;
+}
+
+.cover-jp-sub {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(43,37,35,0.8);
+  margin-bottom: 8px;
+}
+
+.cover-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: var(--sumi);
+  letter-spacing: -0.5px;
+}
+
+.cover-desc {
+  font-size: 14px;
+  color: rgba(43,37,35,0.85);
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.stat-box {
+  background: #FFFFFF;
+  border: 2px solid var(--sumi);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 0px var(--sumi);
+}
+
+.stat-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.7);
+  margin-top: 2px;
+}
+
+.cover-footer {
+  border-top: 2px solid var(--sumi);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(43,37,35,0.6);
+}
+
+/* 內容頁面通用 */
+.page-sheet {
+  padding: 18mm 16mm;
+  min-height: 280mm;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--sumi);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.sheet-part-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 900;
+  background: var(--sumi);
+  color: #FFFFFF;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.sheet-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.sheet-page-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(43,37,35,0.5);
+}
+
+/* 題目卡片樣式 */
+.quiz-item-box {
+  border: 1.5px solid var(--sumi);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #FFFFFF;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.q-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.q-num-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--sumi);
+}
+
+.q-grammar-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.6);
+}
+
+.q-sentence {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.q-blank-under {
+  display: inline-block;
+  min-width: 48px;
+  border-bottom: 2px solid var(--sumi);
+  text-align: center;
+  padding: 0 4px;
+  font-family: 'DM Mono', monospace;
+}
+
+.q-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+}
+
+.opt-pill {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(43,37,35,0.25);
+  background: var(--canvas);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.opt-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sumi);
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+/* 詳解區塊樣式（訂正本專用） */
+.solution-box {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--canvas);
+  border-left: 3px solid var(--sumi);
+  border-radius: 0 6px 6px 0;
+  font-size: 11.5px;
+}
+
+.sol-ans-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.sol-badge {
+  background: var(--butter);
+  border: 1px solid var(--sumi);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.sol-full {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  color: var(--sumi);
+}
+
+.sol-expl {
+  color: rgba(43,37,35,0.9);
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.note-taking-space {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px dashed rgba(43,37,35,0.25);
+  border-radius: 4px;
+  background: #FFFFFF;
+  font-size: 10.5px;
+  color: rgba(43,37,35,0.4);
+}
+
+/* 篇章閱讀題排版 */
+.passage-box {
+  background: var(--canvas);
+  border: 1.5px solid var(--sumi);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 14px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12.5px;
+  line-height: 1.8;
+}
+
+.passage-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(43,37,35,0.2);
+  padding-bottom: 6px;
+}
+
+.passage-title {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.passage-genre {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  background: var(--oatmeal);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(43,37,35,0.2);
+}
+
+/* 答案卡速查矩陣 */
+.answer-key-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  margin-top: 14px;
+}
+
+.answer-key-table th, .answer-key-table td {
+  border: 1px solid var(--sumi);
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.answer-key-table th {
+  background: var(--sumi);
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.answer-key-table tr:nth-child(even) td {
+  background: var(--canvas);
+}
+
+.lock-cta-box {
+  background: var(--canvas);
+  border: 2px dashed var(--sumi);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <h1>
+    <span style="background:#8338EC; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">N5</span>
+    日檢手帖・500 題全真題型專攻手帳題本（試閱版）
+  </h1>
+  <div class="screen-actions">
+    <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
+    <a href="/products?tab=quiz&level=n5" class="btn-print" style="background:#FFFFFF;">🛒 返回題庫專區</a>
+  </div>
+</div>
+
+<div class="book-container">
+  <!-- 封面 -->
+  <div class="book-cover">
+    <div class="cover-header">
+      <div class="cover-issue">NIKKEN TECHO JLPT PRACTICE BOOK SERIES</div>
+      <div class="cover-badge" style="background:#8338EC;">N5 全真題型專攻</div>
+    </div>
+    
+    <div class="cover-title-group">
+      <div class="cover-jp-sub">JLPT N5 500 QUESTIONS WORKBOOK</div>
+      <div class="cover-title">500 題厚切全真手帳題本</div>
+      <div style="font-size:15px; font-weight:800; color:#8338EC; margin-top:6px;">【試閱體驗手帳題本（30 題精華版）】</div>
+      <p class="cover-desc">
+        專為 iPad GoodNotes 手寫刷題與 A4 實體列印量身打造。<br>
+        嚴格參照日本國際交流基金會官方全真日檢規格，完整涵蓋 Part 1 文法挖空、Part 2 ★ 號語序重組、Part 3 篇章脈絡長文三大題型。
+      </p>
+      
+      <div class="cover-stats">
+        <div class="stat-box">
+          <div class="stat-num" style="color:#8338EC;">15 題</div>
+          <div class="stat-label">PART 01 文法形式挖空</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color:#8338EC;">10 題</div>
+          <div class="stat-label">PART 02 ★ 號語序重組</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color:#8338EC;">2 篇 (5題)</div>
+          <div class="stat-label">PART 03 篇章長文專欄</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cover-footer">
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列</div>
+      <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
+    </div>
+  </div>
+
+  <!-- PART 1 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#8338EC;">PART 01</span>
+        <span class="sheet-title">文法形式の判断（形式挖空題）</span>
+      </div>
+      <span class="sheet-page-num">P.01</span>
+    </div>
+    
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.01</span>
+            <span class="q-grammar-tag">考點：助詞「と」（完全列舉）</span>
+          </div>
+          <div class="q-sentence">わたしは　毎朝　パン<span class="q-blank-under">（　）</span>牛乳を　食べます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>と</div><div class="opt-pill"><span class="opt-num">2</span>や</div><div class="opt-pill"><span class="opt-num">3</span>を</div><div class="opt-pill"><span class="opt-num">4</span>に</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.02</span>
+            <span class="q-grammar-tag">考點：原因「〜から」</span>
+          </div>
+          <div class="q-sentence">昨日は　雨が　たくさん　降った<span class="q-blank-under">（　）</span>、どこへも　行きませんでした。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>でも</div><div class="opt-pill"><span class="opt-num">2</span>から</div><div class="opt-pill"><span class="opt-num">3</span>けど</div><div class="opt-pill"><span class="opt-num">4</span>より</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.03</span>
+            <span class="q-grammar-tag">考點：な形容詞中頓「〜で」</span>
+          </div>
+          <div class="q-sentence">この　図書館は　静か<span class="q-blank-under">（　）</span>、とても　広いです。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>に</div><div class="opt-pill"><span class="opt-num">2</span>な</div><div class="opt-pill"><span class="opt-num">3</span>で</div><div class="opt-pill"><span class="opt-num">4</span>だ</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.04</span>
+            <span class="q-grammar-tag">考點：進行「〜ています」</span>
+          </div>
+          <div class="q-sentence">田中さんは　今　部屋で　日本語の　ラジオを<span class="q-blank-under">（　）</span>います。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>聞いた</div><div class="opt-pill"><span class="opt-num">2</span>聞く</div><div class="opt-pill"><span class="opt-num">3</span>聞き</div><div class="opt-pill"><span class="opt-num">4</span>聞いて</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.05</span>
+            <span class="q-grammar-tag">考點：數量詞副詞用法</span>
+          </div>
+          <div class="q-sentence">テーブルの　上に　おいしい　りんごが　四つ<span class="q-blank-under">（　）</span>あります。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>（無助詞）</div><div class="opt-pill"><span class="opt-num">2</span>が</div><div class="opt-pill"><span class="opt-num">3</span>を</div><div class="opt-pill"><span class="opt-num">4</span>に</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.06</span>
+            <span class="q-grammar-tag">考點：邀請「〜ませんか」</span>
+          </div>
+          <div class="q-sentence">あした　いっしょに　映画を　見に<span class="q-blank-under">（　）</span>か。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>行きます</div><div class="opt-pill"><span class="opt-num">2</span>行きませんか</div><div class="opt-pill"><span class="opt-num">3</span>行きましょう</div><div class="opt-pill"><span class="opt-num">4</span>行きました</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.07</span>
+            <span class="q-grammar-tag">考點：請求「〜てください」</span>
+          </div>
+          <div class="q-sentence">部屋の　電気を　<span class="q-blank-under">（　）</span>ください。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>消す</div><div class="opt-pill"><span class="opt-num">2</span>消した</div><div class="opt-pill"><span class="opt-num">3</span>消して</div><div class="opt-pill"><span class="opt-num">4</span>消し</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.08</span>
+            <span class="q-grammar-tag">考點：範圍最高級「〜の中で」</span>
+          </div>
+          <div class="q-sentence">わたしは　日本料理の<span class="q-blank-under">（　）</span>で　すしが　いちばん　好きです。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>あいだ</div><div class="opt-pill"><span class="opt-num">2</span>うしろ</div><div class="opt-pill"><span class="opt-num">3</span>そと</div><div class="opt-pill"><span class="opt-num">4</span>なか</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.09</span>
+            <span class="q-grammar-tag">考點：列舉「〜たり〜たりする」</span>
+          </div>
+          <div class="q-sentence">日曜日は　テレビを　見たり、本を<span class="q-blank-under">（　）</span>しました。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>読んだり</div><div class="opt-pill"><span class="opt-num">2</span>読んで</div><div class="opt-pill"><span class="opt-num">3</span>読む</div><div class="opt-pill"><span class="opt-num">4</span>読み</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.10</span>
+            <span class="q-grammar-tag">考點：禁止「〜てはいけない」</span>
+          </div>
+          <div class="q-sentence">ここに　車を　止めては<span class="q-blank-under">（　）</span>。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>できません</div><div class="opt-pill"><span class="opt-num">2</span>いけません</div><div class="opt-pill"><span class="opt-num">3</span>ありません</div><div class="opt-pill"><span class="opt-num">4</span>ください</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.11</span>
+            <span class="q-grammar-tag">考點：先後「〜てから」</span>
+          </div>
+          <div class="q-sentence">毎朝　顔を<span class="q-blank-under">（　）</span>から、朝ごはんを　食べます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>洗う</div><div class="opt-pill"><span class="opt-num">2</span>洗った</div><div class="opt-pill"><span class="opt-num">3</span>洗って</div><div class="opt-pill"><span class="opt-num">4</span>洗い</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.12</span>
+            <span class="q-grammar-tag">考點：能力「〜ことができる」</span>
+          </div>
+          <div class="q-sentence">兄は　英語を　上手に　話す<span class="q-blank-under">（　）</span>が　できます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>の</div><div class="opt-pill"><span class="opt-num">2</span>もの</div><div class="opt-pill"><span class="opt-num">3</span>ほう</div><div class="opt-pill"><span class="opt-num">4</span>こと</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.13</span>
+            <span class="q-grammar-tag">考點：移動目的「〜に行く」</span>
+          </div>
+          <div class="q-sentence">デパートへ　服を　買い<span class="q-blank-under">（　）</span>行きました。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>に</div><div class="opt-pill"><span class="opt-num">2</span>で</div><div class="opt-pill"><span class="opt-num">3</span>を</div><div class="opt-pill"><span class="opt-num">4</span>へ</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.14</span>
+            <span class="q-grammar-tag">考點：原因「〜から」</span>
+          </div>
+          <div class="q-sentence">この　お茶は　熱い<span class="q-blank-under">（　）</span>、気をつけて　飲んでください。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>ので</div><div class="opt-pill"><span class="opt-num">2</span>から</div><div class="opt-pill"><span class="opt-num">3</span>でも</div><div class="opt-pill"><span class="opt-num">4</span>のに</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.15</span>
+            <span class="q-grammar-tag">考點：時間助詞「に」</span>
+          </div>
+          <div class="q-sentence">毎朝　7時<span class="q-blank-under">（　）</span>起きます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>で</div><div class="opt-pill"><span class="opt-num">2</span>を</div><div class="opt-pill"><span class="opt-num">3</span>に</div><div class="opt-pill"><span class="opt-num">4</span>が</div></div>
+        </div>
+        
+  </div>
+
+  <!-- PART 2 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#8338EC;">PART 02</span>
+        <span class="sheet-title">文の組み立て（★ 號排序重組題）</span>
+      </div>
+      <span class="sheet-page-num">P.02</span>
+    </div>
+    
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.01（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">わたしは　毎晩　お風呂に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　寝ます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>本を</div><div class="opt-pill"><span class="opt-num">2</span>入って</div><div class="opt-pill"><span class="opt-num">3</span>から</div><div class="opt-pill"><span class="opt-num">4</span>読んで</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.02（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">駅の　前に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　できました。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>新しい</div><div class="opt-pill"><span class="opt-num">2</span>レストラン</div><div class="opt-pill"><span class="opt-num">3</span>大きくて</div><div class="opt-pill"><span class="opt-num">4</span>が</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.03（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">日曜日は　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　のんびり過ごしました。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>掃除をしたり</div><div class="opt-pill"><span class="opt-num">2</span>見たりして</div><div class="opt-pill"><span class="opt-num">3</span>テレビを</div><div class="opt-pill"><span class="opt-num">4</span>部屋の</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.04（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">きのう　デパートへ　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　行きました。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>友達と</div><div class="opt-pill"><span class="opt-num">2</span>新しい</div><div class="opt-pill"><span class="opt-num">3</span>買いに</div><div class="opt-pill"><span class="opt-num">4</span>靴を</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.05（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">毎晩　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　みがきます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>きれいに</div><div class="opt-pill"><span class="opt-num">2</span>歯を</div><div class="opt-pill"><span class="opt-num">3</span>まえに</div><div class="opt-pill"><span class="opt-num">4</span>寝る</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.06（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">わたしは　一度も　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　ありません。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>スキーを</div><div class="opt-pill"><span class="opt-num">2</span>した</div><div class="opt-pill"><span class="opt-num">3</span>日本で</div><div class="opt-pill"><span class="opt-num">4</span>ことが</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.07（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">兄は　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　できます。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>英語を</div><div class="opt-pill"><span class="opt-num">2</span>上手に</div><div class="opt-pill"><span class="opt-num">3</span>話す</div><div class="opt-pill"><span class="opt-num">4</span>ことが</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.08（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">わたしの　趣味は　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　ことです。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>休みの</div><div class="opt-pill"><span class="opt-num">2</span>山の</div><div class="opt-pill"><span class="opt-num">3</span>撮る</div><div class="opt-pill"><span class="opt-num">4</span>写真を</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.09（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">図書館で　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　いけません。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>友達と</div><div class="opt-pill"><span class="opt-num">2</span>声で</div><div class="opt-pill"><span class="opt-num">3</span>大きな</div><div class="opt-pill"><span class="opt-num">4</span>話しては</div></div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.10（★ 排序題）</span>
+            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+          </div>
+          <div class="q-sentence">すみませんが、この　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　ください。</div>
+          <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>漢字の</div><div class="opt-pill"><span class="opt-num">2</span>やさしく</div><div class="opt-pill"><span class="opt-num">3</span>教えて</div><div class="opt-pill"><span class="opt-num">4</span>読み方を</div></div>
+        </div>
+        
+  </div>
+
+  <!-- PART 3 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#8338EC;">PART 03</span>
+        <span class="sheet-title">文章の文法（篇章脈絡填空題）</span>
+      </div>
+      <span class="sheet-page-num">P.03</span>
+    </div>
+    
+        <div class="no-break" style="margin-bottom:20px;">
+          <div class="passage-box">
+            <div class="passage-title-bar">
+              <span class="passage-title">📖 第 01 篇：留学生エマさんの日記「はじめての京都旅行」</span>
+              <span class="passage-genre">日記・隨筆</span>
+            </div>
+            <div style="white-space:pre-line;">先週の土曜日に、友達のリーさんと一緒に京都へ行きました。東京駅から新幹線に【 01 】、約2時間で京都に着きました。京都はとても歴史が古い町で、きれいなお寺がたくさんありました。
+お昼ご飯は、京都で有名な豆腐料理の店に入りました。料理はとてもおいしかった【 02 】、少し高かったです。
+午後はずっと雨が降っていました。【 03 】、傘をさしながら写真をたくさん撮って、とても楽しかったです。また行きたいです。</div>
+          </div>
+          <div class="quiz-item-box" style="background:#FAF7F2;">
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】應填入：</div>
+              <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>乗って</div><div class="opt-pill"><span class="opt-num">2</span>乗る</div><div class="opt-pill"><span class="opt-num">3</span>乗った</div><div class="opt-pill"><span class="opt-num">4</span>乗り</div></div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】應填入：</div>
+              <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>から</div><div class="opt-pill"><span class="opt-num">2</span>ですが</div><div class="opt-pill"><span class="opt-num">3</span>ので</div><div class="opt-pill"><span class="opt-num">4</span>そして</div></div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】應填入：</div>
+              <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>ですから</div><div class="opt-pill"><span class="opt-num">2</span>それで</div><div class="opt-pill"><span class="opt-num">3</span>しかし</div><div class="opt-pill"><span class="opt-num">4</span>そして</div></div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="no-break" style="margin-bottom:20px;">
+          <div class="passage-box">
+            <div class="passage-title-bar">
+              <span class="passage-title">📖 第 02 篇：案内「私の日本語学校の１日」</span>
+              <span class="passage-genre">學校生活介紹</span>
+            </div>
+            <div style="white-space:pre-line;">私の学校の授業は、毎朝9時に【 01 】。午前中は文法と漢字の勉強をします。先生はいつも優しくて、説明も分かりやすいです。
+12時になると、みんなで教室でお弁当を食べます。【 02 】、午後は会話の練習をたくさんします。
+学校が終わった後は、図書館で宿題をします。毎日とても忙しいですが、勉強はとても【 03 】です。</div>
+          </div>
+          <div class="quiz-item-box" style="background:#FAF7F2;">
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】應填入：</div>
+              <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>終わります</div><div class="opt-pill"><span class="opt-num">2</span>あります</div><div class="opt-pill"><span class="opt-num">3</span>行きます</div><div class="opt-pill"><span class="opt-num">4</span>始まります</div></div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】應填入：</div>
+              <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>そして</div><div class="opt-pill"><span class="opt-num">2</span>しかし</div><div class="opt-pill"><span class="opt-num">3</span>ですから</div><div class="opt-pill"><span class="opt-num">4</span>でも</div></div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】應填入：</div>
+              <div class="q-options-grid"><div class="opt-pill"><span class="opt-num">1</span>楽しくて</div><div class="opt-pill"><span class="opt-num">2</span>楽しい</div><div class="opt-pill"><span class="opt-num">3</span>楽しく</div><div class="opt-pill"><span class="opt-num">4</span>楽しみ</div></div>
+            </div>
+            
+          </div>
+        </div>
+        
+  </div>
+
+  <!-- 答案檢索矩陣 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#2B2523;">ANSWER KEY</span>
+        <span class="sheet-title">標準正解對照矩陣卡</span>
+      </div>
+      <span class="sheet-page-num">APPENDIX</span>
+    </div>
+    <p style="font-size:12px; color:rgba(43,37,35,0.7); margin-bottom:12px;">
+      💡 作答完畢後可直接核對本表格快速計算答對題數：
+    </p>
+    <table class='answer-key-table'><tbody><tr><td><strong>Q1</strong>: 1</td><td><strong>Q2</strong>: 2</td><td><strong>Q3</strong>: 3</td><td><strong>Q4</strong>: 4</td><td><strong>Q5</strong>: 1</td><td><strong>Q6</strong>: 2</td><td><strong>Q7</strong>: 3</td><td><strong>Q8</strong>: 4</td><td><strong>Q9</strong>: 1</td><td><strong>Q10</strong>: 2</td></tr><tr><td><strong>Q11</strong>: 3</td><td><strong>Q12</strong>: 4</td><td><strong>Q13</strong>: 1</td><td><strong>Q14</strong>: 2</td><td><strong>Q15</strong>: 3</td></tr></tbody></table>
+  </div>
+
+  
+        <div class="lock-cta-box page-break">
+          <div style="font-size:32px;">📑 🔒</div>
+          <h3 style="font-size:18px; font-weight:900; margin-top:8px;">【試閱本結束】完整 500 題收錄於正式手帳套組</h3>
+          <p style="font-size:13px; color:rgba(43,37,35,0.8); margin:10px auto 16px auto; max-width:460px;">
+            包含 300 題挖空＋125 題重組＋25 篇長文（共 75 題）！<br>
+            正式版套組提供「純實戰手寫空白版」與「逐題手寫風詳解訂正版」雙 PDF 檔案，支援 iPad GoodNotes 向量手寫與 A4 高清列印。
+          </p>
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-print" style="background:#8338EC; color:#fff; padding:8px 24px; font-size:14px;">
+            ☕ 前往商店贊助解鎖完整版 500 題套組（約 NT$190）→
+          </a>
+        </div>
+        
+</div>
+
+</body>
+</html>

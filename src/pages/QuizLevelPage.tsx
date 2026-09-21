@@ -323,7 +323,7 @@ function QuizLevelContent({ level }: { level: Level }) {
           <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-paper-sumi/15 pt-2 font-mono text-xs">
             <span className="text-paper-sumi/70">想離線一口氣手寫刷完這 {filteredQuestions.length} 題？</span>
             <Link
-              to="/products"
+              to={`/products?tab=quiz&level=${level}`}
               className="font-bold text-paper-sumi hover:text-[#ff6b35] underline decoration-paper-sumi/30 underline-offset-2"
             >
               📥 下載 iPad / A4 列印版手帳題本 PDF →
@@ -346,7 +346,7 @@ function QuizLevelContent({ level }: { level: Level }) {
           </span>
         </div>
         <Link
-          to="/products"
+          to={`/products?tab=quiz&level=${level}`}
           className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border-1.5 border-paper-sumi bg-paper-butter px-3 py-1 font-mono text-xs font-black text-paper-sumi shadow-retro-sm transition-all hover:bg-paper-sumi hover:text-white active:scale-95"
         >
           <span>📥 下載 PDF 題本</span>
