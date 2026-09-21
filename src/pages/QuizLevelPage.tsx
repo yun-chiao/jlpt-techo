@@ -51,6 +51,7 @@ function QuizLevelContent({ level }: { level: Level }) {
   const [filter, setFilter] = useState<FilterType>('all');
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showJumpPanel, setShowJumpPanel] = useState(false);
+  const [showGraduationModal, setShowGraduationModal] = useState(false);
   const [jumpInput, setJumpInput] = useState('');
 
   // 答題紀錄
@@ -145,6 +146,16 @@ function QuizLevelContent({ level }: { level: Level }) {
   const starCount = state.data.starQuizzes.length;
   const passageCount = state.data.passageQuizzes.reduce((n, p) => n + p.questions.length, 0);
 
+  const answeredCount = useMemo(() => {
+    let count = 0;
+    allQuestions.forEach((q) => {
+      if (q.type === 'sentence' && sentenceAnswers[q.id] !== undefined) count++;
+      if (q.type === 'star' && (starSlots[q.id]?.length ?? 0) === 4) count++;
+      if (q.type === 'passage' && passageAnswers[q.id] !== undefined) count++;
+    });
+    return count;
+  }, [allQuestions, sentenceAnswers, starSlots, passageAnswers]);
+
   return (
     <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
       {/* 頂部整合式控制列（手機端極致精簡：級別 + 題庫標題 + Stepper 一應俱全，零空間浪費） */}
@@ -157,8 +168,8 @@ function QuizLevelContent({ level }: { level: Level }) {
             <h1 className="font-display text-sm font-black text-paper-sumi sm:text-lg">
               題型專攻・三部曲
             </h1>
-            <span className="hidden font-mono text-xs text-paper-sumi/50 sm:inline">
-              ・共 {allQuestions.length} 題
+            <span className="hidden font-mono text-xs text-paper-sumi/60 sm:inline">
+              ・精華特訓 {allQuestions.length} 題（已作答 {answeredCount} 題）
             </span>
           </div>
 
@@ -321,12 +332,26 @@ function QuizLevelContent({ level }: { level: Level }) {
 
           {/* 抽屜底部：iPad / 列印版手帳題本連結 */}
           <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-paper-sumi/15 pt-2 font-mono text-xs">
-            <span className="text-paper-sumi/70">想離線一口氣手寫刷完這 {filteredQuestions.length} 題？</span>
+            <div className="flex items-center gap-2 text-paper-sumi/70">
+              <span>官方免費特訓（已完成 {answeredCount} / {filteredQuestions.length} 題）</span>
+              {answeredCount > 0 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowJumpPanel(false);
+                    setShowGraduationModal(true);
+                  }}
+                  className="font-bold text-[#ff6b35] underline decoration-1 underline-offset-2 hover:text-paper-sumi"
+                >
+                  🏆 查看成績證書
+                </button>
+              )}
+            </div>
             <Link
               to={`/products?tab=quiz&level=${level}`}
               className="font-bold text-paper-sumi hover:text-[#ff6b35] underline decoration-paper-sumi/30 underline-offset-2"
             >
-              📥 下載 iPad / A4 列印版手帳題本 PDF →
+              📥 解鎖完整 500 題手帳題本（含 350 題獨家進階題）→
             </Link>
           </div>
         </div>
@@ -339,17 +364,17 @@ function QuizLevelContent({ level }: { level: Level }) {
             ✎
           </span>
           <p className="font-display text-xs font-black text-paper-sumi sm:text-sm">
-            習慣用紙筆刷題？<span className="hidden sm:inline">可下載</span>《{levelLabel} 全真題本・GoodNotes / A4 列印手帳》
+            想刷更多題目？<span className="hidden sm:inline">可解鎖</span>《{levelLabel} 500 題完整題本・含 350 題獨家題與手寫詳解》
           </p>
           <span className="hidden rounded bg-paper-oatmeal px-1.5 py-0.5 font-mono text-[10px] font-bold text-paper-sumi/70 md:inline">
-            含空白題本＋手寫訂正詳解
+            A4 列印 ＋ iPad 手帳
           </span>
         </div>
         <Link
           to={`/products?tab=quiz&level=${level}`}
           className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border-1.5 border-paper-sumi bg-paper-butter px-3 py-1 font-mono text-xs font-black text-paper-sumi shadow-retro-sm transition-all hover:bg-paper-sumi hover:text-white active:scale-95"
         >
-          <span>📥 下載 PDF 題本</span>
+          <span>📥 前往解鎖 500 題</span>
           <span className="font-mono">→</span>
         </Link>
       </div>
@@ -424,17 +449,129 @@ function QuizLevelContent({ level }: { level: Level }) {
             >
               ← PREV
             </button>
-            <span className="font-mono text-xs font-bold text-paper-sumi/40">
-              {String(safeIdx + 1).padStart(2, '0')} / {String(filteredQuestions.length).padStart(2, '0')}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs font-bold text-paper-sumi/50">
+                {String(safeIdx + 1).padStart(2, '0')} / {String(filteredQuestions.length).padStart(2, '0')}
+              </span>
+              {safeIdx === filteredQuestions.length - 1 && (
+                <button
+                  type="button"
+                  onClick={() => setShowGraduationModal(true)}
+                  className="animate-pulse rounded-md border border-paper-sumi bg-paper-butter px-2 py-0.5 font-mono text-[11px] font-black text-paper-sumi shadow-retro-sm hover:bg-paper-sumi hover:text-white"
+                >
+                  🏆 通關總結
+                </button>
+              )}
+            </div>
+            {safeIdx === filteredQuestions.length - 1 ? (
+              <button
+                type="button"
+                onClick={() => setShowGraduationModal(true)}
+                className="rounded-lg border-2 border-paper-sumi bg-paper-butter px-3.5 py-1.5 font-mono text-xs font-black text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px]"
+              >
+                🎉 查看通關證書 →
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleNext}
+                className="rounded-lg border-2 border-paper-sumi bg-paper-butter px-3.5 py-1.5 font-mono text-xs font-black text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px]"
+              >
+                NEXT →
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 🏆 通關證書與轉化彈窗 (Graduation Modal) */}
+      {showGraduationModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-paper-sumi/60 p-3 backdrop-blur-sm sm:p-4 overflow-y-auto">
+          <div className="relative w-full max-w-lg rounded-2xl border-3 border-paper-sumi bg-paper-canvas p-5 shadow-retro-lg sm:p-7 animate-in fade-in zoom-in-95 duration-200">
+            {/* 關閉叉叉 */}
             <button
               type="button"
-              disabled={safeIdx === filteredQuestions.length - 1}
-              onClick={handleNext}
-              className="rounded-lg border-2 border-paper-sumi bg-paper-butter px-3.5 py-1.5 font-mono text-xs font-black text-paper-sumi shadow-retro-sm hover:translate-x-[-1px] hover:translate-y-[-1px] disabled:opacity-20"
+              onClick={() => setShowGraduationModal(false)}
+              className="absolute right-3.5 top-3.5 flex h-7 w-7 items-center justify-center rounded-full border border-paper-sumi/30 bg-white font-mono text-xs font-bold text-paper-sumi hover:bg-paper-butter"
             >
-              NEXT →
+              ✕
             </button>
+
+            {/* 證書頂部標章 */}
+            <div className="text-center">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-paper-sumi bg-paper-butter px-3 py-0.5 font-mono text-xs font-black text-paper-sumi shadow-retro-sm">
+                <span>🏆</span>
+                <span>CERTIFICATE OF COMPLETION</span>
+              </div>
+              <h2 className="mt-2.5 font-serif text-xl font-black text-paper-sumi sm:text-2xl">
+                《日檢手帖》{levelLabel} 精華特訓修了証
+              </h2>
+              <p className="mt-1 font-mono text-xs text-paper-sumi/60">
+                JLPT {level.toUpperCase()} CORE CURRICULUM・150 QUESTIONS COMPLETED
+              </p>
+            </div>
+
+            {/* 證書中央內容框 */}
+            <div className="mt-4 rounded-xl border-2 border-paper-sumi bg-white p-4 shadow-retro-sm">
+              <div className="flex items-center justify-between border-b border-dashed border-paper-sumi/20 pb-2.5 text-xs font-mono">
+                <span className="text-paper-sumi/70">特訓科目：言語知識（文法三部曲）</span>
+                <span className="rounded bg-[#FAF7F2] px-2 py-0.5 font-black text-[#ff6b35]">合格判定：S級</span>
+              </div>
+
+              {/* 戰績三欄 */}
+              <div className="my-3 grid grid-cols-3 gap-2 text-center font-mono">
+                <div className="rounded-lg border border-paper-sumi/15 bg-paper-canvas p-2">
+                  <div className="text-[10px] text-paper-sumi/60">Part 1 挖空</div>
+                  <div className="text-sm font-black text-paper-sumi sm:text-base">90 題</div>
+                </div>
+                <div className="rounded-lg border border-paper-sumi/15 bg-paper-canvas p-2">
+                  <div className="text-[10px] text-paper-sumi/60">Part 2 重組</div>
+                  <div className="text-sm font-black text-paper-sumi sm:text-base">42 題</div>
+                </div>
+                <div className="rounded-lg border border-paper-sumi/15 bg-paper-canvas p-2">
+                  <div className="text-[10px] text-paper-sumi/60">Part 3 篇章</div>
+                  <div className="text-sm font-black text-paper-sumi sm:text-base">18 題</div>
+                </div>
+              </div>
+
+              <p className="font-body text-xs leading-relaxed text-paper-sumi/85">
+                🎉 <strong>恭喜通關！</strong> 您已成功完成本站 150 題全真核心特訓，針對 {levelLabel} 核心文法架構與考場常考句型，已具備極高的直覺題感！
+              </p>
+            </div>
+
+            {/* 商業轉化引導區塊 */}
+            <div className="mt-4 rounded-xl border-2 border-dashed border-[#ff6b35] bg-[#fffaf5] p-3.5 text-xs">
+              <div className="flex items-center gap-1.5 font-display font-black text-[#ff6b35]">
+                <span>👑</span>
+                <span>想在考場拿下文法滿分？解鎖進階 350 題獨家真題！</span>
+              </div>
+              <p className="mt-1.5 leading-relaxed text-paper-sumi/80">
+                網頁版僅收錄 150 題精華題。正式出版的<strong>《{levelLabel} 500 題厚切全真手帳題本》</strong>多收錄了 <strong>350 題獨家進階考點</strong>，並提供：
+              </p>
+              <ul className="mt-2 space-y-1 font-mono text-[11px] text-paper-sumi/75">
+                <li>✓ <strong>實戰純題空白手寫本</strong>（iPad GoodNotes 向量手寫 / A4 列印無干擾）</li>
+                <li>✓ <strong>逐題手寫風詳解神手帳</strong>（500 題完整解析、句型拆解與錯題筆記欄）</li>
+                <li>✓ <strong>卷末 Answer Key 快速答案卡</strong>（考前 30 分鐘複習利器）</li>
+              </ul>
+            </div>
+
+            {/* 動作按鈕 */}
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+              <Link
+                to={`/products?tab=quiz&level=${level}`}
+                className="btn-retro flex flex-1 items-center justify-center gap-1.5 bg-paper-butter py-2.5 text-center font-display text-xs font-black text-paper-sumi shadow-retro sm:text-sm"
+              >
+                <span>🛒 前往解鎖完整 500 題題本套組</span>
+                <span className="font-mono">→</span>
+              </Link>
+              <button
+                type="button"
+                onClick={() => setShowGraduationModal(false)}
+                className="rounded-xl border border-paper-sumi/30 bg-white px-4 py-2.5 font-mono text-xs font-bold text-paper-sumi/70 hover:bg-paper-canvas sm:shrink-0"
+              >
+                關閉證書
+              </button>
+            </div>
           </div>
         </div>
       )}

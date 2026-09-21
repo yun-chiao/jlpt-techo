@@ -20,7 +20,8 @@ import zipfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-QUIZ_DATA_DIR = REPO_ROOT / "src" / "data" / "quiz"
+FULL_DATA_DIR = REPO_ROOT / "data_full" / "quiz"
+QUIZ_DATA_DIR = FULL_DATA_DIR if FULL_DATA_DIR.exists() else REPO_ROOT / "src" / "data" / "quiz"
 DIST_PRODUCTS_DIR = REPO_ROOT / "dist-products" / "quiz"
 PUBLIC_PRODUCTS_DIR = REPO_ROOT / "public" / "dist-products" / "quiz"
 
