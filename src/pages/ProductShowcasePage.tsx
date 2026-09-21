@@ -567,31 +567,31 @@ export function ProductShowcasePage() {
     <div className="mx-auto max-w-5xl px-3 py-5 sm:px-4 sm:py-8 md:py-12">
       {/* 頂部雙商品線切換（日雜文青質感） */}
       <div className="mx-auto max-w-xl">
-        <div className="grid grid-cols-2 gap-2 rounded-2xl border-2 border-paper-sumi bg-paper-canvas p-1.5 shadow-retro">
+        <div className="grid grid-cols-2 gap-1.5 rounded-2xl border-2 border-paper-sumi bg-paper-canvas p-1 sm:gap-2 sm:p-1.5 shadow-retro">
           <button
             type="button"
             onClick={() => setActiveLine('quiz')}
-            className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 font-display text-xs font-black transition-all sm:gap-2 sm:text-sm ${
+            className={`flex items-center justify-center gap-1 rounded-xl px-2 py-2 font-display text-xs font-black transition-all sm:gap-1.5 sm:px-3 sm:py-2.5 sm:text-sm ${
               activeLine === 'quiz'
                 ? 'bg-paper-sumi text-white shadow-retro-sm'
                 : 'text-paper-sumi hover:bg-paper-butter'
             }`}
           >
             <span>✍️</span>
-            <span>【題庫】500 題手帳題本</span>
-            <span className="rounded bg-[#ff6b35] px-1.5 py-0.5 font-mono text-[9.5px] font-black text-white">HOT</span>
+            <span className="whitespace-nowrap">500 題手帳題本</span>
+            <span className="rounded bg-[#ff6b35] px-1 py-0.2 font-mono text-[9px] font-black text-white sm:px-1.5 sm:py-0.5 sm:text-[10px]">HOT</span>
           </button>
           <button
             type="button"
             onClick={() => setActiveLine('textbook')}
-            className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 font-display text-xs font-black transition-all sm:gap-2 sm:text-sm ${
+            className={`flex items-center justify-center gap-1 rounded-xl px-2 py-2 font-display text-xs font-black transition-all sm:gap-1.5 sm:px-3 sm:py-2.5 sm:text-sm ${
               activeLine === 'textbook'
                 ? 'bg-paper-sumi text-white shadow-retro-sm'
                 : 'text-paper-sumi hover:bg-paper-butter'
             }`}
           >
             <span>📱</span>
-            <span>【教材】Anki 牌組＆手冊</span>
+            <span className="whitespace-nowrap">Anki 備考套組</span>
           </button>
         </div>
       </div>
@@ -733,28 +733,28 @@ export function ProductShowcasePage() {
               </div>
 
               {/* 雙版本試閱切換鈕 */}
-              <div className="grid grid-cols-2 gap-1 w-full sm:w-auto sm:inline-flex rounded-xl border-2 border-paper-sumi bg-white p-1 font-mono text-xs font-bold shadow-retro-sm shrink-0">
+              <div className="grid grid-cols-2 gap-1 w-full sm:w-auto sm:inline-flex rounded-xl border-2 border-paper-sumi bg-white p-1 font-display text-xs font-bold shadow-retro-sm shrink-0">
                 <button
                   type="button"
                   onClick={() => setPreviewWorkbookType('blank')}
-                  className={`rounded-lg px-2.5 py-1.5 text-center transition-all ${
+                  className={`rounded-lg px-2 py-1.5 text-center transition-all whitespace-nowrap ${
                     previewWorkbookType === 'blank'
                       ? 'bg-paper-sumi text-white font-black shadow-retro-sm'
                       : 'text-paper-sumi hover:bg-paper-butter'
                   }`}
                 >
-                  📄 實戰空白題本
+                  📄 實戰空白本
                 </button>
                 <button
                   type="button"
                   onClick={() => setPreviewWorkbookType('solution')}
-                  className={`rounded-lg px-2.5 py-1.5 text-center transition-all ${
+                  className={`rounded-lg px-2 py-1.5 text-center transition-all whitespace-nowrap ${
                     previewWorkbookType === 'solution'
                       ? 'bg-paper-butter text-paper-sumi font-black border border-paper-sumi'
                       : 'text-paper-sumi hover:bg-paper-butter'
                   }`}
                 >
-                  ✍️ 逐題詳解訂正本
+                  ✍️ 逐題詳解本
                 </button>
               </div>
             </div>
