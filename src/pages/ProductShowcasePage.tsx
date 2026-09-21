@@ -684,18 +684,19 @@ export function ProductShowcasePage() {
               <p className="mt-1 text-xs font-bold text-paper-sumi/70 sm:mt-1.5 sm:text-sm">{currentQuizProd.subTitle}</p>
             </div>
 
-            <div className="flex flex-col items-start gap-1 md:items-end">
-              <div className="flex items-baseline gap-2">
+            <div className="flex flex-row items-center justify-between gap-3 pt-2 sm:pt-0 md:flex-col md:items-end md:justify-center md:gap-2 md:pt-0 shrink-0">
+              <div className="flex items-baseline gap-1.5 sm:gap-2">
                 <span className="font-display text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">{currentQuizProd.priceUsd}</span>
-                <span className="font-mono text-xs text-paper-sumi/60">{currentQuizProd.priceTwdApprox}</span>
+                <span className="font-mono text-xs font-bold text-paper-sumi/60">{currentQuizProd.priceTwdApprox}</span>
               </div>
               <a
                 href="https://buymeacoffee.com/chiaoban/extras"
                 target="_blank"
                 rel="noreferrer"
-                className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
+                className="btn-retro !bg-paper-butter !px-4 !py-2 sm:!px-5 sm:!py-2.5 text-xs sm:text-sm font-black text-paper-sumi shadow-retro hover:scale-[1.02] active:scale-95 transition-all whitespace-nowrap"
               >
-                🛒 前往商店購買 {currentQuizProd.upper} 題本套組 ({currentQuizProd.priceUsd}) →
+                <span>🛒 立即購買套組</span>
+                <span className="font-mono">→</span>
               </a>
             </div>
           </div>
@@ -849,19 +850,20 @@ export function ProductShowcasePage() {
             <p className="mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
               贊助日檢手帖，立即獲取 <strong>{currentQuizProd.title}</strong>（含實戰空白題本 ＋ 逐題手寫風詳解訂正手帳雙 PDF 檔案）。付款後系統自動寄送下載連結，永久離線複習！
             </p>
-            <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
+            <div className="mt-4 flex flex-col items-center justify-center gap-2.5 sm:flex-row sm:gap-3">
               <a
                 href="https://buymeacoffee.com/chiaoban/extras"
                 target="_blank"
                 rel="noreferrer"
-                className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
+                className="btn-retro w-full sm:w-auto !bg-paper-sumi !text-white !border-paper-sumi px-5 py-2.5 text-xs sm:text-sm md:text-base font-black shadow-retro-md hover:!bg-paper-card hover:!text-paper-sumi transition-all"
               >
-                🛒 前往商店購買 {currentQuizProd.upper} 題本套組 ({currentQuizProd.priceUsd}) →
+                <span>🛒 立即購買 {currentQuizProd.upper} 題本套組（{currentQuizProd.priceUsd}）</span>
+                <span className="font-mono">→</span>
               </a>
               <button
                 type="button"
                 onClick={() => handleLevelChange('all')}
-                className="btn-retro w-full text-xs sm:w-auto sm:text-sm"
+                className="btn-retro w-full sm:w-auto !bg-white px-4 py-2.5 text-xs sm:text-sm font-bold text-paper-sumi shadow-retro-sm"
               >
                 👑 看看 N1～N5 全真 2,500 題終身典藏包 ($24.99)
               </button>
@@ -871,7 +873,7 @@ export function ProductShowcasePage() {
                 to={selectedLevel === 'all' ? '/quiz/n2' : `/quiz/${selectedLevel}`}
                 className="font-mono text-xs font-bold text-paper-sumi/80 hover:text-[#ff6b35] underline underline-offset-4"
               >
-                👉 想要直接在線上免費刷題？前往 {currentQuizProd.upper} 線上全真題庫（500 題）→
+                👉 想要直接在線上免費刷題？前往 {currentQuizProd.upper} 線上精華題庫（150 題）→
               </Link>
             </div>
           </div>
@@ -900,18 +902,19 @@ export function ProductShowcasePage() {
               <p className="mt-1 text-xs font-bold text-paper-sumi/70 sm:mt-1.5 sm:text-sm">{currentTextbookProd.subTitle}</p>
             </div>
 
-            <div className="flex flex-col items-start gap-1 md:items-end">
-              <div className="flex items-baseline gap-2">
+            <div className="flex flex-row items-center justify-between gap-3 pt-2 sm:pt-0 md:flex-col md:items-end md:justify-center md:gap-2 md:pt-0 shrink-0">
+              <div className="flex items-baseline gap-1.5 sm:gap-2">
                 <span className="font-display text-2xl font-black text-paper-sumi sm:text-3xl md:text-4xl">{currentTextbookProd.priceUsd}</span>
-                <span className="font-mono text-xs text-paper-sumi/60">{currentTextbookProd.priceTwdApprox}</span>
+                <span className="font-mono text-xs font-bold text-paper-sumi/60">{currentTextbookProd.priceTwdApprox}</span>
               </div>
               <a
                 href="https://buymeacoffee.com/chiaoban/extras"
                 target="_blank"
                 rel="noreferrer"
-                className="btn-retro mt-1 inline-flex w-full items-center justify-center gap-1.5 bg-paper-butter !py-2 text-xs font-black sm:mt-2 sm:!py-2.5 sm:text-sm sm:w-auto"
+                className="btn-retro !bg-paper-butter !px-4 !py-2 sm:!px-5 sm:!py-2.5 text-xs sm:text-sm font-black text-paper-sumi shadow-retro hover:scale-[1.02] active:scale-95 transition-all whitespace-nowrap"
               >
-                🛒 前往商店購買 {currentTextbookProd.upper} 套組 ({currentTextbookProd.priceUsd}) →
+                <span>🛒 立即購買套組</span>
+                <span className="font-mono">→</span>
               </a>
             </div>
           </div>
@@ -1071,19 +1074,20 @@ export function ProductShowcasePage() {
             <p className="mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-paper-sumi/80 sm:text-sm">
               贊助日檢手帖，立即獲取完整 <strong>{currentTextbookProd.title}</strong>（含 Anki 逐字振假名字卡包 ＋ FUDGE 日雜風 A4 講義手冊）。付款後系統自動寄送下載連結，永久離線複習！
             </p>
-            <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:mt-4 sm:flex-row sm:gap-3">
+            <div className="mt-4 flex flex-col items-center justify-center gap-2.5 sm:flex-row sm:gap-3">
               <a
                 href="https://buymeacoffee.com/chiaoban/extras"
                 target="_blank"
                 rel="noreferrer"
-                className="btn-retro w-full bg-paper-card text-xs font-black sm:w-auto sm:text-sm md:text-base"
+                className="btn-retro w-full sm:w-auto !bg-paper-sumi !text-white !border-paper-sumi px-5 py-2.5 text-xs sm:text-sm md:text-base font-black shadow-retro-md hover:!bg-paper-card hover:!text-paper-sumi transition-all"
               >
-                🛒 前往商店購買 {currentTextbookProd.upper} 套組 ({currentTextbookProd.priceUsd}) →
+                <span>🛒 立即購買 {currentTextbookProd.upper} 備考套組（{currentTextbookProd.priceUsd}）</span>
+                <span className="font-mono">→</span>
               </a>
               <button
                 type="button"
                 onClick={() => handleLevelChange('all')}
-                className="btn-retro w-full text-xs sm:w-auto sm:text-sm"
+                className="btn-retro w-full sm:w-auto !bg-white px-4 py-2.5 text-xs sm:text-sm font-bold text-paper-sumi shadow-retro-sm"
               >
                 👑 看看 N1～N5 終身全套包 ($29.99)
               </button>
