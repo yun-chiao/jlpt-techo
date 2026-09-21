@@ -41,17 +41,6 @@ interface ProductInfo {
   samples: CardSample[];
 }
 
-interface QuizSampleItem {
-  part: string;
-  title: string;
-  question: string;
-  options: string[];
-  correctNum: number;
-  explanation: string;
-  fullSentence?: string;
-  translation?: string;
-}
-
 interface QuizProductInfo {
   key: LevelKey;
   upper: string;
@@ -68,8 +57,8 @@ interface QuizProductInfo {
     solutions: string;
   };
   features: string[];
-  handbookUrl: string;
-  samples: QuizSampleItem[];
+  blankWorkbookUrl: string;
+  solutionWorkbookUrl: string;
 }
 
 const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
@@ -95,35 +84,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
       '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
     ],
-    handbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
-    samples: [
-      {
-        part: 'PART 01',
-        title: '文法形式挖空',
-        question: '山田さんは、どんなに忙しくても、毎日日本語の勉強を（　　）。',
-        options: ['おこたる', 'おこたりかねない', 'おこたることはない', 'おこたらざるを得ない'],
-        correctNum: 3,
-        explanation: '「〜ことはない」表示「絕不會… / 沒必要…」。句意為「山田先生無論多忙，每天絕不疏忽日文的學習」。',
-      },
-      {
-        part: 'PART 02',
-        title: '★ 號排序重組',
-        question: '会議の準備が ＿＿ ＿＿ ★ ＿＿ と言われた。',
-        options: ['遅れる', 'ないように', '急ぐ', 'ように'],
-        correctNum: 3,
-        fullSentence: '会議の準備が遅れないように急ぐようにと言われた。',
-        translation: '被交代說為了不讓會議準備有所延誤，要趕快進行。',
-        explanation: '排序順序為「遅れる（1）＋ ないように（2）＋ 急ぐ（3）＋ ように（4）」。落在 ★ 號位置的是 3 號「急ぐ」。',
-      },
-      {
-        part: 'PART 03',
-        title: '篇章脈絡填空',
-        question: '【 01 】現代のビジネスにおいて、単なる効率性だけでは生き残れない。むしろ重要なのは... ',
-        options: ['しかしながら', 'したがって', 'それどころか', 'つまり'],
-        correctNum: 1,
-        explanation: '前後兩句在語意上構成明確的轉折反思關係，填入表示轉折的「しかしながら」最為自然合適。',
-      },
-    ],
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-詳解試閱版.html',
   },
   n1: {
     key: 'n1',
@@ -147,35 +109,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
       '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
     ],
-    handbookUrl: '/dist-products/quiz/日檢手帖-N1-500題全真手帳題本-試閱版.html',
-    samples: [
-      {
-        part: 'PART 01',
-        title: '文法形式挖空',
-        question: 'プロの登山家（　　）、この険しい冬山を前にしては慎重にならざるを得ない。',
-        options: ['たるもの', 'にあって', 'に即して', 'をおいて'],
-        correctNum: 1,
-        explanation: '「〜たるもの」表示「身為具備某資格/身份者，理當…」。句意為「身為專業登山家，面對這險峻冬山也必須謹慎」。',
-      },
-      {
-        part: 'PART 02',
-        title: '★ 號排序重組',
-        question: 'いかに厳しい ＿＿ ＿＿ ★ ＿＿ あきらめてはならない。',
-        options: ['状況で', 'あろうと', '夢を', 'も'],
-        correctNum: 4,
-        fullSentence: 'いかに厳しい状況であろうとも夢をあきらめてはならない。',
-        translation: '無論處於多麼嚴苛的境遇之中，也絕不能放棄夢想。',
-        explanation: '排序順序為「状況で（1）＋ あろうと（2）＋ も（4）＋ 夢を（3）」。落在 ★ 號位置的是 4 號「も」。',
-      },
-      {
-        part: 'PART 03',
-        title: '篇章脈絡填空',
-        question: '【 01 】日本の伝統美学における「陰翳礼讚」は、単なる暗闇の肯定ではない。...',
-        options: ['いわば', 'とはいえ', 'それゆえに', 'あえて'],
-        correctNum: 1,
-        explanation: '後文對前述概念進行深入本質性詮釋說明，填入「いわば（換言之 / 可謂）」最為流暢自然。',
-      },
-    ],
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N1-500題全真手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N1-500題全真手帳題本-詳解試閱版.html',
   },
   n3: {
     key: 'n3',
@@ -199,35 +134,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
       '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
     ],
-    handbookUrl: '/dist-products/quiz/日檢手帖-N3-500題全真手帳題本-試閱版.html',
-    samples: [
-      {
-        part: 'PART 01',
-        title: '文法形式挖空',
-        question: 'よく考えた（　　）で、最終的な進路を決めることにした。',
-        options: ['うわ', 'うえ', 'あいだ', 'おり'],
-        correctNum: 2,
-        explanation: '「動詞た形 ＋ 上（うえ）で」表示「在充分進行某前項動作之後，再做出後續行為/決定」。',
-      },
-      {
-        part: 'PART 02',
-        title: '★ 號排序重組',
-        question: '雨が ＿＿ ＿＿ ★ ＿＿ 散歩に出かけた。',
-        options: ['やんだ', 'うちに', '急いで', 'すきに'],
-        correctNum: 2,
-        fullSentence: '雨がやんだすきに急いで散歩に出かけた。',
-        translation: '趁著雨停的空檔，趕忙出門散步了。',
-        explanation: '排序順序為「やんだ（1）＋ すきに（4）＋ 急いで（3）＋ うちに（2）... 」，正解為 2 號。',
-      },
-      {
-        part: 'PART 03',
-        title: '篇章脈絡填空',
-        question: '【 01 】読書という行為は、単に知識を得るだけのものではない。...',
-        options: ['なぜなら', '要するに', 'むしろ', 'ただし'],
-        correctNum: 3,
-        explanation: '承接前句的「単に〜だけのものではない」，後項以「むしろ（倒不如說）」帶出閱讀的深層心靈價值。',
-      },
-    ],
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N3-500題全真手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N3-500題全真手帳題本-詳解試閱版.html',
   },
   n4: {
     key: 'n4',
@@ -251,41 +159,14 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
       '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
     ],
-    handbookUrl: '/dist-products/quiz/日檢手帖-N4-500題全真手帳題本-試閱版.html',
-    samples: [
-      {
-        part: 'PART 01',
-        title: '文法形式挖空',
-        question: '先生、この本を（　　）もよろしいでしょうか。',
-        options: ['拝見して', 'ご覧になって', 'お目にかけて', 'いらっしゃって'],
-        correctNum: 1,
-        explanation: '「拝見する」為「見る」的謙讓語，用於講話者自己觀看對方物品時表達最高禮貌。',
-      },
-      {
-        part: 'PART 02',
-        title: '★ 號排序重組',
-        question: '風邪を ＿＿ ＿＿ ★ ＿＿ 暖かくして寝てください。',
-        options: ['ひかない', 'ように', '服を', '厚い'],
-        correctNum: 3,
-        fullSentence: '風邪をひかないように厚い服を着て暖かくして寝てください。',
-        translation: '為了不感冒，請穿上厚衣服並保暖睡覺。',
-        explanation: '排序順序為「ひかない（1）＋ ように（2）＋ 厚い服を（4+3）」，落在第 3 格的是「服を」。',
-      },
-      {
-        part: 'PART 03',
-        title: '篇章脈絡填空',
-        question: '【 01 】日本では、地震が起きたときのために、家具を固定しておくことが大切です。...',
-        options: ['たとえば', 'そのため', 'しかし', 'ところで'],
-        correctNum: 1,
-        explanation: '後文列舉具體的防災固定用品與使用方法，填入「たとえば（例如）」引導舉例最合適。',
-      },
-    ],
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N4-500題全真手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N4-500題全真手帳題本-詳解試閱版.html',
   },
   n5: {
     key: 'n5',
     upper: 'N5',
     color: '#8338ec',
-    tint: '#f2e8fd',
+    tint: '#f2f8e6',
     title: '【日檢手帖】JLPT N5 題型專攻・500 題厚切全真手帳題本',
     subTitle: '零基礎入門首選・基礎格助詞、日常對話與生活記事 500 題實戰',
     priceUsd: '$5.99',
@@ -303,35 +184,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '📱 【iPad GoodNotes 完美支援】：向量高清排版，隨心用 Apple Pencil 劃重點、圈助詞',
       '🖨️ 【A4 實體列印 100% 支援】：考前進考場手機關機後的考前最後 30 分鐘複習神手冊',
     ],
-    handbookUrl: '/dist-products/quiz/日檢手帖-N5-500題全真手帳題本-試閱版.html',
-    samples: [
-      {
-        part: 'PART 01',
-        title: '文法形式挖空',
-        question: 'わたしは 毎朝 ７時（　　） 起きます。',
-        options: ['で', 'に', 'を', 'へ'],
-        correctNum: 2,
-        explanation: '具體特定的時間點（如 7點、星期一、8月等）後面，必須使用格助詞「に」表示時間。',
-      },
-      {
-        part: 'PART 02',
-        title: '★ 號排序重組',
-        question: '机の ＿＿ ＿＿ ★ ＿＿ あります。',
-        options: ['上に', '辞書が', 'きれいに', '並べて'],
-        correctNum: 4,
-        fullSentence: '机の上に辞書がきれいに並べてあります。',
-        translation: '書桌上整齊地擺放著字典。',
-        explanation: '排序為「上に（1）＋ 辞書が（2）＋ きれいに（3）＋ 並べて（4）」，第 3 格是 4 號「並べて」。',
-      },
-      {
-        part: 'PART 03',
-        title: '篇章脈絡填空',
-        question: '【 01 】きのう、友だちといっしょに デパートへ行きました。...',
-        options: ['そして', 'でも', 'だから', 'では'],
-        correctNum: 1,
-        explanation: '接續前項行程並陳述接下來買東西與吃飯的動作，填入順接連詞「そして（然後）」最為合適。',
-      },
-    ],
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N5-500題全真手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N5-500題全真手帳題本-詳解試閱版.html',
   },
   all: {
     key: 'all',
@@ -355,8 +209,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '📊 5 份【標準正解 Answer Key 矩陣卡】：考前 30 分鐘快速對分核對',
       '💡 現省 55% 終身大特惠：一次付費，永久獲取 N1～N5 題本檔案，直通最高殿堂！',
     ],
-    handbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
-    samples: [],
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-詳解試閱版.html',
   },
 };
 
@@ -675,9 +529,8 @@ export function ProductShowcasePage() {
     levelParam && ['n1', 'n2', 'n3', 'n4', 'n5', 'all'].includes(levelParam) ? levelParam : 'n2'
   );
   
-  // 題本樣張翻面狀態
-  const [isQuizCardFlipped, setIsQuizCardFlipped] = useState(false);
-  const [activeQuizSampleIdx, setActiveQuizSampleIdx] = useState(0);
+  // 題本試閱切換：'blank'（實戰空白做題本）| 'solution'（逐題詳解訂正本）
+  const [previewWorkbookType, setPreviewWorkbookType] = useState<'blank' | 'solution'>('blank');
 
   // 教材樣張翻牌
   const [activeTextbookSampleIdx, setActiveTextbookSampleIdx] = useState(0);
@@ -698,8 +551,6 @@ export function ProductShowcasePage() {
   );
 
   const currentQuizProd = QUIZ_PRODUCTS[selectedLevel];
-  const quizSamples = selectedLevel === 'all' ? QUIZ_PRODUCTS.n2.samples : currentQuizProd.samples;
-  const curQuizSample = quizSamples[activeQuizSampleIdx % quizSamples.length];
 
   const currentTextbookProd = PRODUCTS[selectedLevel];
   const tbSamples = selectedLevel === 'all' ? PRODUCTS.n3.samples : currentTextbookProd.samples;
@@ -707,8 +558,6 @@ export function ProductShowcasePage() {
 
   const handleLevelChange = (lvl: LevelKey) => {
     setSelectedLevel(lvl);
-    setActiveQuizSampleIdx(0);
-    setIsQuizCardFlipped(false);
     setActiveTextbookSampleIdx(0);
     setIsCardFlipped(false);
   };
@@ -870,164 +719,69 @@ export function ProductShowcasePage() {
             </div>
           </div>
 
-          {/* 左右分欄展示：左欄實體手帳樣張，右欄 A4 題本試閱視窗 */}
-          <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
-            {/* 左欄：手帳樣張互動對比（點擊卡片翻面看詳解，與教材端 100% 對齊） */}
-            <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
+          {/* A4 手帳題本真實試閱專區（全寬大器翻閱，支援實戰空白 vs 逐題詳解雙模式切換） */}
+          <div className="mt-5 rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3.5 sm:p-5">
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div className="flex items-center justify-between">
-                  <h3 className="font-display text-xs font-black sm:text-sm">✍️ 手帳題本真實樣張</h3>
-                  <span className="font-mono text-[10.5px] text-paper-sumi/60">點擊卡片翻面看詳解</span>
-                </div>
-
-                {curQuizSample && (
-                  <div
-                    onClick={() => setIsQuizCardFlipped((v) => !v)}
-                    className="mt-3 cursor-pointer rounded-xl border-2 border-paper-sumi bg-white p-3.5 shadow-retro-sm transition-all hover:scale-[1.01] sm:p-5"
-                  >
-                    <div className="flex items-center justify-between border-b border-paper-sumi/15 pb-2">
-                      <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-black text-paper-sumi">
-                        {curQuizSample.part} ｜ {curQuizSample.title}
-                      </span>
-                      <span className="font-mono text-[11px] font-bold text-paper-sumi/60">
-                        {isQuizCardFlipped ? '【背面：逐題手寫詳解】' : '【正面：考場實戰空白本】'}
-                      </span>
-                    </div>
-
-                    {!isQuizCardFlipped ? (
-                      /* 正面：實戰空白做題樣式 */
-                      <div className="my-4">
-                        <div className="font-serif text-sm font-bold leading-relaxed text-paper-sumi sm:text-base">
-                          {curQuizSample.question}
-                        </div>
-
-                        <div className="mt-3.5 grid grid-cols-1 gap-2 sm:grid-cols-2 font-serif text-xs sm:text-sm">
-                          {curQuizSample.options.map((opt, oIdx) => (
-                            <div
-                              key={oIdx}
-                              className="flex items-center gap-2 rounded-lg border border-paper-sumi/30 bg-paper-canvas px-3 py-2 text-paper-sumi"
-                            >
-                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-paper-sumi bg-white font-mono text-xs font-black">
-                                {oIdx + 1}
-                              </span>
-                              <span className="leading-snug">{opt}</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="mt-4 text-center font-mono text-xs font-bold text-[#ff6b35]">
-                          💡 點擊卡片翻面 ➔ 查看正確答案與手寫訂正筆記
-                        </div>
-                      </div>
-                    ) : (
-                      /* 背面：逐題手寫風詳解樣式（手機端單欄絕不跑版，正解標籤完整對齊） */
-                      <div className="my-3 space-y-2 text-xs leading-relaxed text-paper-sumi sm:text-sm">
-                        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 font-serif">
-                          {curQuizSample.options.map((opt, oIdx) => {
-                            const isRight = oIdx + 1 === curQuizSample.correctNum;
-                            return (
-                              <div
-                                key={oIdx}
-                                className={`flex items-center justify-between rounded-lg border px-3 py-2 ${
-                                  isRight
-                                    ? 'border-2 border-paper-sumi bg-paper-butter font-bold shadow-retro-sm text-paper-sumi'
-                                    : 'border-paper-sumi/20 bg-paper-canvas text-paper-sumi/50 line-through'
-                                }`}
-                              >
-                                <div className="flex items-center gap-2">
-                                  <span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border font-mono text-xs font-black ${isRight ? 'border-paper-sumi bg-white text-paper-sumi' : 'border-paper-sumi/40 bg-transparent'}`}>
-                                    {oIdx + 1}
-                                  </span>
-                                  <span className="leading-snug">{opt}</span>
-                                </div>
-                                {isRight && (
-                                  <span className="shrink-0 whitespace-nowrap rounded bg-paper-sumi px-1.5 py-0.5 font-mono text-[10px] font-black text-white">
-                                    ✓ 正解
-                                  </span>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-
-                        <div className="border-t border-paper-sumi/15 pt-2.5 space-y-1.5">
-                          {curQuizSample.fullSentence && (
-                            <div className="font-serif">
-                              <strong>完整句：</strong>
-                              <span className="font-bold text-paper-sumi">{curQuizSample.fullSentence}</span>
-                            </div>
-                          )}
-                          {curQuizSample.translation && (
-                            <div className="text-paper-sumi/80">
-                              <strong>中文：</strong>
-                              <span>{curQuizSample.translation}</span>
-                            </div>
-                          )}
-                          <div className="rounded bg-paper-canvas p-2 font-body text-xs sm:text-sm leading-relaxed text-paper-sumi/90">
-                            <strong>💡 考點拆解：</strong>{curQuizSample.explanation}
-                          </div>
-                          <div className="rounded border border-dashed border-paper-sumi/30 bg-white p-2 font-mono text-[10.5px] text-paper-sumi/50">
-                            ✍️ 我的錯題筆記與 Apple Pencil 註記欄（考前 30 分鐘複習重點）...
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                )}
+                <h3 className="font-display text-sm font-black text-paper-sumi sm:text-base">
+                  📖 A4 / GoodNotes 手帳題本真實內頁試閱（30 題精華版）
+                </h3>
+                <p className="mt-0.5 text-xs text-paper-sumi/65">
+                  可在下方視窗內直接滑動翻閱真實 A4 排版、做題留白與考場格式：
+                </p>
               </div>
 
-              {/* 切換題型按鈕 */}
-              <div className="mt-3 flex items-center justify-between border-t border-paper-sumi/15 pt-2">
-                <span className="font-mono text-xs text-paper-sumi/60">
-                  樣張 { (activeQuizSampleIdx % quizSamples.length) + 1 } / { quizSamples.length }
-                </span>
+              {/* 雙版本試閱切換鈕 */}
+              <div className="inline-flex rounded-xl border-2 border-paper-sumi bg-white p-1 font-mono text-xs font-bold shadow-retro-sm shrink-0">
                 <button
                   type="button"
-                  onClick={() => {
-                    setActiveQuizSampleIdx((i) => (i + 1) % quizSamples.length);
-                    setIsQuizCardFlipped(false);
-                  }}
-                  className="rounded-lg border border-paper-sumi bg-paper-card px-2.5 py-1 font-display text-xs font-bold hover:bg-paper-butter"
+                  onClick={() => setPreviewWorkbookType('blank')}
+                  className={`rounded-lg px-3 py-1.5 transition-all ${
+                    previewWorkbookType === 'blank'
+                      ? 'bg-paper-sumi text-white font-black shadow-retro-sm'
+                      : 'text-paper-sumi hover:bg-paper-butter'
+                  }`}
                 >
-                  換下一題樣張 ›
+                  📄 實戰空白題本（試閱）
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPreviewWorkbookType('solution')}
+                  className={`rounded-lg px-3 py-1.5 transition-all ${
+                    previewWorkbookType === 'solution'
+                      ? 'bg-paper-butter text-paper-sumi font-black border border-paper-sumi'
+                      : 'text-paper-sumi hover:bg-paper-butter'
+                  }`}
+                >
+                  ✍️ 逐題詳解訂正本（試閱）
                 </button>
               </div>
             </div>
 
-            {/* 右欄：A4 題本線上試閱視窗 */}
-            <div className="flex flex-col justify-between rounded-xl border-2 border-paper-sumi bg-paper-canvas p-3 sm:p-4">
-              <div>
-                <div className="flex items-center justify-between">
-                  <h3 className="font-display text-xs font-black sm:text-sm">📖 A4 手帳題本線上試閱視窗</h3>
-                  <span className="rounded bg-paper-butter px-2 py-0.5 font-mono text-[10px] font-bold sm:text-[11px]">
-                    30 題精選試閱
-                  </span>
-                </div>
-                <p className="mt-0.5 text-[11px] text-paper-sumi/60">
-                  可在框內直接滑動翻閱真實 A4 排版與考場格式：
-                </p>
+            {/* A4 題本內嵌視窗 */}
+            <div className="relative mt-3.5 h-[460px] w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[560px] md:h-[640px]">
+              <iframe
+                key={previewWorkbookType}
+                src={previewWorkbookType === 'blank' ? currentQuizProd.blankWorkbookUrl : currentQuizProd.solutionWorkbookUrl}
+                title={`${currentQuizProd.upper} 500題手帳題本試閱`}
+                className="h-full w-full border-0 bg-[#faf7f2]"
+                loading="lazy"
+              />
+            </div>
 
-                <div className="relative mt-2.5 h-[320px] w-full max-w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[380px] md:h-[420px]">
-                  <iframe
-                    src={currentQuizProd.handbookUrl}
-                    title={`${currentQuizProd.upper} 500題手帳題本試閱`}
-                    className="h-full w-full border-0 bg-[#faf7f2]"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              <div className="mt-2.5 flex flex-col gap-1 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:text-xs">
-                <span className="text-paper-sumi/60">💡 支援 iPad GoodNotes 向量筆記與 A4 列印</span>
-                <a
-                  href={currentQuizProd.handbookUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 font-display font-bold underline decoration-2 underline-offset-4 hover:text-[#ff6b35]"
-                >
-                  🔍 開啟全頁高解析 A4 題本【30 題試閱版】↗
-                </a>
-              </div>
+            {/* 視窗下方全頁超連結 */}
+            <div className="mt-3 flex flex-col gap-1.5 text-xs sm:flex-row sm:items-center sm:justify-between">
+              <span className="font-mono text-paper-sumi/70">
+                💡 支援 iPad GoodNotes / Notability 向量手寫註記 ＆ A4 高解析列印
+              </span>
+              <a
+                href={previewWorkbookType === 'blank' ? currentQuizProd.blankWorkbookUrl : currentQuizProd.solutionWorkbookUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 font-display font-bold text-[#ff6b35] underline decoration-2 underline-offset-4 hover:text-paper-sumi"
+              >
+                🔍 開啟全頁高解析 A4 題本【{previewWorkbookType === 'blank' ? '實戰空白試閱版' : '逐題詳解試閱版'}】↗
+              </a>
             </div>
           </div>
 

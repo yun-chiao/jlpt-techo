@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日檢手帖｜N5 題型專攻・500題全真手帳題本（逐題詳解訂正本）</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500;700&family=Noto+Serif+JP:wght@600;700;900&family=Noto+Serif+TC:wght@600;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap');
+
+:root {
+  --sumi: #2B2523;
+  --canvas: #FAF7F2;
+  --card: #FFFFFF;
+  --butter: #FFE5A3;
+  --oatmeal: #EFEAE1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
+  background-color: #FAF7F2;
+  color: var(--sumi);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-cta {
+  background: var(--butter);
+  color: var(--sumi);
+  font-weight: 800;
+  font-size: 13px;
+  border: 1.5px solid var(--sumi);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cta:hover {
+  background: #FFFFFF;
+  transform: translate(-1px, -1px);
+}
+
+.book-container {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 14mm 14mm 16mm 14mm;
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  .screen-header {
+    display: none !important;
+  }
+  .book-container {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+  .no-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+/* 封面樣式 */
+.book-cover {
+  min-height: 275mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24mm 20mm;
+  border: 4px solid var(--sumi);
+  margin: 10mm;
+  background: var(--canvas);
+  position: relative;
+}
+
+.cover-header {
+  border-bottom: 2px solid var(--sumi);
+  padding-bottom: 16px;
+}
+
+.cover-issue {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(43,37,35,0.7);
+}
+
+.cover-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 2px solid var(--sumi);
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: 'DM Mono', monospace;
+  box-shadow: 3px 3px 0px var(--sumi);
+  margin-top: 12px;
+}
+
+.cover-title-group {
+  margin: 40px 0;
+}
+
+.cover-jp-sub {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(43,37,35,0.8);
+  margin-bottom: 8px;
+}
+
+.cover-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: var(--sumi);
+  letter-spacing: -0.5px;
+}
+
+.cover-desc {
+  font-size: 13.5px;
+  color: rgba(43,37,35,0.85);
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.stat-box {
+  background: #FFFFFF;
+  border: 2px solid var(--sumi);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 0px var(--sumi);
+}
+
+.stat-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.7);
+  margin-top: 2px;
+}
+
+.cover-footer {
+  border-top: 2px solid var(--sumi);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(43,37,35,0.6);
+}
+
+/* 內容頁面通用 */
+.page-sheet {
+  padding: 18mm 16mm;
+  min-height: 280mm;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--sumi);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.sheet-part-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 900;
+  background: var(--sumi);
+  color: #FFFFFF;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.sheet-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.sheet-page-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(43,37,35,0.5);
+}
+
+/* 題目卡片樣式 */
+.quiz-item-box {
+  border: 1.5px solid var(--sumi);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #FFFFFF;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.q-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.q-num-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--sumi);
+}
+
+.q-grammar-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.6);
+}
+
+.q-sentence {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.q-blank-under {
+  display: inline-block;
+  min-width: 48px;
+  border-bottom: 2px solid var(--sumi);
+  text-align: center;
+  padding: 0 4px;
+  font-family: 'DM Mono', monospace;
+}
+
+.q-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+}
+
+.opt-pill {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(43,37,35,0.25);
+  background: var(--canvas);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.opt-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sumi);
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+/* 詳解區塊樣式（訂正本專用） */
+.solution-box {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--canvas);
+  border-left: 3px solid var(--sumi);
+  border-radius: 0 6px 6px 0;
+  font-size: 11.5px;
+}
+
+.sol-ans-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.sol-badge {
+  background: var(--butter);
+  border: 1px solid var(--sumi);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.sol-full {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  color: var(--sumi);
+}
+
+.sol-expl {
+  color: rgba(43,37,35,0.9);
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.note-taking-space {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px dashed rgba(43,37,35,0.25);
+  border-radius: 4px;
+  background: #FFFFFF;
+  font-size: 10.5px;
+  color: rgba(43,37,35,0.4);
+}
+
+/* 篇章閱讀題排版 */
+.passage-box {
+  background: var(--canvas);
+  border: 1.5px solid var(--sumi);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 14px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12.5px;
+  line-height: 1.8;
+}
+
+.passage-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(43,37,35,0.2);
+  padding-bottom: 6px;
+}
+
+.passage-title {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.passage-genre {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  background: var(--oatmeal);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(43,37,35,0.2);
+}
+
+/* 答案卡速查矩陣 */
+.answer-key-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.answer-key-table th, .answer-key-table td {
+  border: 1px solid var(--sumi);
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.answer-key-table th {
+  background: var(--sumi);
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.answer-key-table tr:nth-child(even) td {
+  background: var(--canvas);
+}
+
+.lock-cta-box {
+  background: var(--canvas);
+  border: 2px dashed var(--sumi);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="book-container">
+  <div class="book-cover">
+    <div class="cover-header">
+      <div class="cover-issue">NIKKEN TECHO SOLUTION & NOTES EDITION</div>
+      <div class="cover-badge" style="background:#8338EC;">N5 逐題手寫風詳解</div>
+    </div>
+    
+    <div class="cover-title-group">
+      <div class="cover-jp-sub">JLPT N5 COMPLETE SOLUTIONS</div>
+      <div class="cover-title">N5 題型專攻・30 題手寫詳解試閱手帳</div>
+      <div style="font-size:15px; font-weight:800; color:#8338EC; margin-top:6px;">【考前訂正神器・30 題精選詳解體驗版】</div>
+      <p class="cover-desc">
+        完整收錄正解選項標記、語法拆解、長文中日對照與考點筆記欄。<br>
+        隨心在 iPad GoodNotes 上用螢光筆標記錯題，考前最後 30 分鐘只要複習這本錯題手帳即可安心赴考！
+      </p>
+
+      <div class="cover-stats">
+        <div class="stat-box">
+          <div class="stat-num" style="color:#8338EC;">15 題</div>
+          <div class="stat-label">PART 01 形式挖空詳解</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color:#8338EC;">9 題</div>
+          <div class="stat-label">PART 02 ★ 號重組詳解</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color:#8338EC;">2 篇 (6題)</div>
+          <div class="stat-label">PART 03 篇章長文詳解</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cover-footer">
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（共 30 題逐題詳解試閱手帳）</div>
+      <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
+    </div>
+  </div>
+
+  <!-- PART 1 詳解 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#8338EC;">PART 01</span>
+        <span class="sheet-title">文法形式挖空・300 題逐題詳解</span>
+      </div>
+      <span class="sheet-page-num">SOLUTIONS P.01</span>
+    </div>
+    
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.01</span>
+            <span class="q-grammar-tag">考點：助詞「と」（完全列舉）</span>
+          </div>
+          <div class="q-sentence">わたしは　毎朝　パン<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ と ）</span>牛乳を　食べます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>と ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>や</div><div class="opt-pill" style=""><span class="opt-num">3</span>を</div><div class="opt-pill" style=""><span class="opt-num">4</span>に</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (1)</span>
+              <span class="sol-full">【 と 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>並列助詞「と」用於完全列舉兩者（A 和 B）。「パンと牛乳」意為「麵包與牛奶」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.02</span>
+            <span class="q-grammar-tag">考點：原因「〜から」</span>
+          </div>
+          <div class="q-sentence">昨日は　雨が　たくさん　降った<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ から ）</span>、どこへも　行きませんでした。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>でも</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>から ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>けど</div><div class="opt-pill" style=""><span class="opt-num">4</span>より</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (2)</span>
+              <span class="sol-full">【 から 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>「〜から」接在普通體或丁寧體後，表示主觀的原因、理由。「降ったから」意為「因為下雨了」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.03</span>
+            <span class="q-grammar-tag">考點：な形容詞中頓「〜で」</span>
+          </div>
+          <div class="q-sentence">この　図書館は　静か<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ で ）</span>、とても　広いです。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>に</div><div class="opt-pill" style=""><span class="opt-num">2</span>な</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>で ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>だ</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (3)</span>
+              <span class="sol-full">【 で 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>な形容詞中頓形為「詞幹＋で」，用於並列兩個特徵。「静かで、広いです」表示「既安靜又寬敞」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.04</span>
+            <span class="q-grammar-tag">考點：進行「〜ています」</span>
+          </div>
+          <div class="q-sentence">田中さんは　今　部屋で　日本語の　ラジオを<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ 聞いて ）</span>います。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>聞いた</div><div class="opt-pill" style=""><span class="opt-num">2</span>聞く</div><div class="opt-pill" style=""><span class="opt-num">3</span>聞き</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>聞いて ✓ 正解</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (4)</span>
+              <span class="sol-full">【 聞いて 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞て形＋います」表示動作正在進行中。「聞く」的て形為「聞いて」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.05</span>
+            <span class="q-grammar-tag">考點：數量詞副詞用法</span>
+          </div>
+          <div class="q-sentence">テーブルの　上に　おいしい　りんごが　四つ<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ （無助詞） ）</span>あります。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>（無助詞） ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>が</div><div class="opt-pill" style=""><span class="opt-num">3</span>を</div><div class="opt-pill" style=""><span class="opt-num">4</span>に</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (1)</span>
+              <span class="sol-full">【 （無助詞） 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>日語中的數量詞（如「四つ」）可以直接作為副詞修飾動詞，中間通常不需要加助詞。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.06</span>
+            <span class="q-grammar-tag">考點：邀請「〜ませんか」</span>
+          </div>
+          <div class="q-sentence">あした　いっしょに　映画を　見に<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ 行きませんか ）</span>か。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>行きます</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>行きませんか ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>行きましょう</div><div class="opt-pill" style=""><span class="opt-num">4</span>行きました</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (2)</span>
+              <span class="sol-full">【 行きませんか 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞ます形去ます＋に行きませんか」表示禮貌邀請對方一同去做某事（要不要一起去看電影？）。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.07</span>
+            <span class="q-grammar-tag">考點：請求「〜てください」</span>
+          </div>
+          <div class="q-sentence">部屋の　電気を　<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ 消して ）</span>ください。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>消す</div><div class="opt-pill" style=""><span class="opt-num">2</span>消した</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>消して ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>消し</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (3)</span>
+              <span class="sol-full">【 消して 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>請求對方的句型為「動詞て形＋ください」。「消す（關閉）」的て形為「消して」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.08</span>
+            <span class="q-grammar-tag">考點：範圍最高級「〜の中で」</span>
+          </div>
+          <div class="q-sentence">わたしは　日本料理の<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ なか ）</span>で　すしが　いちばん　好きです。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>あいだ</div><div class="opt-pill" style=""><span class="opt-num">2</span>うしろ</div><div class="opt-pill" style=""><span class="opt-num">3</span>そと</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>なか ✓ 正解</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (4)</span>
+              <span class="sol-full">【 なか 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>最高級比較句型「名詞＋の中で〜がいちばん...」，表示在某個範圍之中最...。「日本料理の中で」意為「日本料理當中」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.09</span>
+            <span class="q-grammar-tag">考點：列舉「〜たり〜たりする」</span>
+          </div>
+          <div class="q-sentence">日曜日は　テレビを　見たり、本を<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ 読んだり ）</span>しました。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>読んだり ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>読んで</div><div class="opt-pill" style=""><span class="opt-num">3</span>読む</div><div class="opt-pill" style=""><span class="opt-num">4</span>読み</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (1)</span>
+              <span class="sol-full">【 読んだり 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>動作列舉句型為「〜たり〜たりする」，動詞使用た形加上「り」。「読む」的た形為「読んだ」，因此為「読んだり」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.10</span>
+            <span class="q-grammar-tag">考點：禁止「〜てはいけない」</span>
+          </div>
+          <div class="q-sentence">ここに　車を　止めては<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ いけません ）</span>。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>できません</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>いけません ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>ありません</div><div class="opt-pill" style=""><span class="opt-num">4</span>ください</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (2)</span>
+              <span class="sol-full">【 いけません 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>禁止句型為「動詞て形＋はいけません」，表示「不可以做某事」。「止めてはいけません」意為「不可以停車」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.11</span>
+            <span class="q-grammar-tag">考點：先後「〜てから」</span>
+          </div>
+          <div class="q-sentence">毎朝　顔を<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ 洗って ）</span>から、朝ごはんを　食べます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>洗う</div><div class="opt-pill" style=""><span class="opt-num">2</span>洗った</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>洗って ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>洗い</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (3)</span>
+              <span class="sol-full">【 洗って 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>句型「動詞て形＋から」表示「在完成某動作之後，才進行下一個動作」。「洗ってから」表示「洗完臉之後」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.12</span>
+            <span class="q-grammar-tag">考點：能力「〜ことができる」</span>
+          </div>
+          <div class="q-sentence">兄は　英語を　上手に　話す<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ こと ）</span>が　できます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>の</div><div class="opt-pill" style=""><span class="opt-num">2</span>もの</div><div class="opt-pill" style=""><span class="opt-num">3</span>ほう</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>こと ✓ 正解</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (4)</span>
+              <span class="sol-full">【 こと 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>能力句型「動詞辭書形＋ことができる」表示「具備某項能力或可以做某事」。「話すことができる」意為「能夠說」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.13</span>
+            <span class="q-grammar-tag">考點：移動目的「〜に行く」</span>
+          </div>
+          <div class="q-sentence">デパートへ　服を　買い<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ に ）</span>行きました。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>に ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>で</div><div class="opt-pill" style=""><span class="opt-num">3</span>を</div><div class="opt-pill" style=""><span class="opt-num">4</span>へ</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (1)</span>
+              <span class="sol-full">【 に 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞ます形去ます＋に行く／来る」表示移動的目的。「買いに行く」表示「去買」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.14</span>
+            <span class="q-grammar-tag">考點：原因「〜から」</span>
+          </div>
+          <div class="q-sentence">この　お茶は　熱い<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ から ）</span>、気をつけて　飲んでください。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>ので</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>から ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>でも</div><div class="opt-pill" style=""><span class="opt-num">4</span>のに</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (2)</span>
+              <span class="sol-full">【 から 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>「い形容詞＋から」表示主觀原因理由。「熱いから」表示「因為很燙」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.15</span>
+            <span class="q-grammar-tag">考點：時間助詞「に」</span>
+          </div>
+          <div class="q-sentence">毎朝　7時<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ に ）</span>起きます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>で</div><div class="opt-pill" style=""><span class="opt-num">2</span>を</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>に ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>が</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解 (3)</span>
+              <span class="sol-full">【 に 】</span>
+            </div>
+            <div class="sol-expl"><strong>💡 考點解析：</strong>在具體明確的時間點發生動作時，使用時間助詞「に」。「7時に起きます」意為「7點起床」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+  </div>
+
+  <!-- PART 2 詳解 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#8338EC;">PART 02</span>
+        <span class="sheet-title">★ 號語序重組・125 題逐題詳解</span>
+      </div>
+      <span class="sheet-page-num">SOLUTIONS P.02</span>
+    </div>
+    
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.01</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">わたしは　毎晩　お風呂に　 ＿＿ ＿＿ ★ ＿＿ 　寝ます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>本を ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>入って</div><div class="opt-pill" style=""><span class="opt-num">3</span>から</div><div class="opt-pill" style=""><span class="opt-num">4</span>読んで</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">2 → 3 → 1 → 4 ｜ ★ 號位置為【 1 號：本を 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>わたしは毎晩お風呂に入ってから本を読んで寝ます。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>我每晚洗完澡之後，看本書才睡覺。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：「動詞て形＋から」（...之後）接續「お風呂に入って (1) から (3)」；其後接動作「本を (2) 読んで (4) 寝ます」。 正確語序應為 [2, 3, 1, 4]。因此 ★ 號位置（第 3 格）為 1 號「本を」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.02</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">駅の　前に　 ＿＿ ＿＿ ★ ＿＿ 　できました。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>新しい</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>レストラン ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>大きくて</div><div class="opt-pill" style=""><span class="opt-num">4</span>が</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">3 → 1 → 2 → 4 ｜ ★ 號位置為【 2 號：レストラン 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>駅の前に大きくて新しいレストランができました。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>車站前開了一間又大又新的餐廳。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：形容詞中頓並列修飾名詞：「大きくて (3) ➔ 新しい (1) ➔ レストラン (2) ➔ が (4)」。 正確語序應為 [3, 1, 2, 4]。因此 ★ 號位置（第 3 格）為 2 號「レストラン」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.03</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">日曜日は　 ＿＿ ＿＿ ★ ＿＿ 　のんびり過ごしました。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>掃除をしたり</div><div class="opt-pill" style=""><span class="opt-num">2</span>見たりして</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>テレビを ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>部屋の</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">4 → 1 → 3 → 2 ｜ ★ 號位置為【 3 號：テレビを 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>日曜日は部屋の掃除をしたりテレビを見たりしてのんびり過ごしました。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>週日我打掃房間、看看電視，悠閒度過。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：句型「〜たり〜たりする」動作列舉：「部屋の (4) ➔ 掃除をしたり (1) ➔ テレビを (2) ➔ 見たりして (3)」。 正確語序應為 [4, 1, 3, 2]。因此 ★ 號位置（第 3 格）為 3 號「テレビを」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.04</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">きのう　デパートへ　 ＿＿ ＿＿ ★ ＿＿ 　行きました。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>友達と</div><div class="opt-pill" style=""><span class="opt-num">2</span>新しい</div><div class="opt-pill" style=""><span class="opt-num">3</span>買いに</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>靴を ★ 正解</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">1 → 2 → 4 → 3 ｜ ★ 號位置為【 4 號：靴を 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>きのうデパートへ友達と新しい靴を買いに行きました。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>昨天我和朋友去百貨公司買新鞋。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：共同動作夥伴與目的：「友達と (1) ➔ 新しい (4) ➔ 靴を (2) ➔ 買いに (3) 行きました」。 正確語序應為 [1, 2, 4, 3]。因此 ★ 號位置（第 3 格）為 4 號「靴を」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.05</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">毎晩　 ＿＿ ＿＿ ★ ＿＿ 　みがきます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>きれいに ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>歯を</div><div class="opt-pill" style=""><span class="opt-num">3</span>まえに</div><div class="opt-pill" style=""><span class="opt-num">4</span>寝る</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">4 → 3 → 1 → 2 ｜ ★ 號位置為【 1 號：きれいに 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>毎晩寝るまえにきれいに歯をみがきます。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>每晚睡覺前把牙齒刷得很乾淨。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：「動詞辭書形＋まえに」表示動作之前：「寝る (1) ➔ まえに (3) ➔ きれいに (4) ➔ 歯を (2) みがきます」。 正確語序應為 [4, 3, 1, 2]。因此 ★ 號位置（第 3 格）為 1 號「きれいに」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.06</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">わたしは　一度も　 ＿＿ ＿＿ ★ ＿＿ 　ありません。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>スキーを</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>した ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>日本で</div><div class="opt-pill" style=""><span class="opt-num">4</span>ことが</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">3 → 1 → 2 → 4 ｜ ★ 號位置為【 2 號：した 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>わたしは一度も日本でスキーをしたことがありません。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>我一次也沒有在日本滑過雪。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：經驗否定句型「動詞た形＋ことがありません」：「日本で (2) ➔ スキーを (1) ➔ した (3) ➔ ことが (4) ありません」。 正確語序應為 [3, 1, 2, 4]。因此 ★ 號位置（第 3 格）為 2 號「した」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.07</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">兄は　 ＿＿ ＿＿ ★ ＿＿ 　できます。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>英語を</div><div class="opt-pill" style=""><span class="opt-num">2</span>上手に</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>話す ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>ことが</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">1 → 2 → 3 → 4 ｜ ★ 號位置為【 3 號：話す 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>兄は英語を上手に話すことができます。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>哥哥能夠把英語說得很好。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：能力句型「動詞辭書形＋ことができます」：「英語を (1) ➔ 上手に (2) ➔ 話す (3) ➔ ことが (4) できます」。 正確語序應為 [1, 2, 3, 4]。因此 ★ 號位置（第 3 格）為 3 號「話す」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.08</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">わたしの　趣味は　 ＿＿ ＿＿ ★ ＿＿ 　ことです。</div>
+          <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>休みの</div><div class="opt-pill" style=""><span class="opt-num">2</span>山の</div><div class="opt-pill" style=""><span class="opt-num">3</span>撮る</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>写真を ★ 正解</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">1 → 2 → 4 → 3 ｜ ★ 號位置為【 4 號：写真を 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>わたしの趣味は休みの山の写真を撮ることです。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>我的興趣是在假日拍攝山岳的照片。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：趣味句型「〜動詞辭書形＋ことです」：「休みの (1) ➔ 山の (2) ➔ 写真を (3) ➔ 撮る (4) ことです」。 正確語序應為 [1, 2, 4, 3]。因此 ★ 號位置（第 3 格）為 4 號「写真を」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+        <div class="quiz-item-box">
+          <div class="q-meta-line">
+            <span class="q-num-tag">Q.09</span>
+            <span class="q-grammar-tag">★ 號重組題</span>
+          </div>
+          <div class="q-sentence" style="color:rgba(43,37,35,0.7);">図書館で　 ＿＿ ＿＿ ★ ＿＿ 　いけません。</div>
+          <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>友達と ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>声で</div><div class="opt-pill" style=""><span class="opt-num">3</span>大きな</div><div class="opt-pill" style=""><span class="opt-num">4</span>話しては</div></div>
+          <div class="solution-box">
+            <div class="sol-ans-row">
+              <span class="sol-badge">正解順序</span>
+              <span class="sol-full">3 → 2 → 1 → 4 ｜ ★ 號位置為【 1 號：友達と 】</span>
+            </div>
+            <div class="sol-expl"><strong>完整句子：</strong>図書館で大きな声で友達と話してはいけません。</div>
+            <div class="sol-expl"><strong>中文翻譯：</strong>在圖書館不可以大聲和朋友交談。</div>
+            <div class="sol-expl"><strong>💡 語法拆解：</strong>文法解構：禁止句型「動詞て形＋はいけません」：「大きな (1) ➔ 声で (2) ➔ 友達と (3) ➔ 話しては (4) いけません」。 正確語序應為 [3, 2, 1, 4]。因此 ★ 號位置（第 3 格）為 1 號「友達と」。</div>
+            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+        
+  </div>
+
+  <!-- PART 3 詳解 -->
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#8338EC;">PART 03</span>
+        <span class="sheet-title">篇章脈絡填空・2 篇長文逐題詳解</span>
+      </div>
+      <span class="sheet-page-num">SOLUTIONS P.03</span>
+    </div>
+    
+        <div class="no-break" style="margin-bottom:20px;">
+          <div class="passage-box">
+            <div class="passage-title-bar">
+              <span class="passage-title">📖 第 01 篇：留学生エマさんの日記「はじめての京都旅行」</span>
+              <span class="passage-genre">日記・隨筆</span>
+            </div>
+            <div style="white-space:pre-line;">先週の土曜日に、友達のリーさんと一緒に京都へ行きました。東京駅から新幹線に【 01 】、約2時間で京都に着きました。京都はとても歴史が古い町で、きれいなお寺がたくさんありました。
+お昼ご飯は、京都で有名な豆腐料理の店に入りました。料理はとてもおいしかった【 02 】、少し高かったです。
+午後はずっと雨が降っていました。【 03 】、傘をさしながら写真をたくさん撮って、とても楽しかったです。また行きたいです。</div>
+            <div style="margin-top:10px; padding-top:8px; border-top:1px dashed rgba(43,37,35,0.2); font-size:11.5px; color:rgba(43,37,35,0.8);">
+              <strong>【全篇中文對照】：</strong>上週六我和朋友李同學一起去了京都。從東京站搭乘新幹線，約2小時到達京都。京都是歷史古城，有許多美麗寺廟。
+午餐進了一家有名豆腐料理店。料理很好吃，但有點貴。
+下午一直下雨。但是撐著傘拍了很多照片，非常開心。下次還想再去！
+            </div>
+          </div>
+          <div class="quiz-item-box" style="background:#FAF7F2;">
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(1) 乗って</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>乗って ✓</div><div class="opt-pill" style=""><span class="opt-num">2</span>乗る</div><div class="opt-pill" style=""><span class="opt-num">3</span>乗った</div><div class="opt-pill" style=""><span class="opt-num">4</span>乗り</div></div>
+              <div class="sol-expl" style="font-size:11px; margin-top:4px;">💡 前後相繼發生的動作，使用動詞て形（乗って）連接後續到達動作。</div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(2) ですが</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>から</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>ですが ✓</div><div class="opt-pill" style=""><span class="opt-num">3</span>ので</div><div class="opt-pill" style=""><span class="opt-num">4</span>そして</div></div>
+              <div class="sol-expl" style="font-size:11px; margin-top:4px;">💡 「好吃」與「有點貴」為轉折對立關係，接在普通形後選轉折助詞「ですが（雖然...但是...）」最為自然。</div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(3) しかし</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>ですから</div><div class="opt-pill" style=""><span class="opt-num">2</span>それで</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>しかし ✓</div><div class="opt-pill" style=""><span class="opt-num">4</span>そして</div></div>
+              <div class="sol-expl" style="font-size:11px; margin-top:4px;">💡 前句說明下雨的不便，後句表示撐傘拍照依然很開心，前後句意為轉折關係，使用接續詞「しかし（但是）」首字連接。</div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="no-break" style="margin-bottom:20px;">
+          <div class="passage-box">
+            <div class="passage-title-bar">
+              <span class="passage-title">📖 第 02 篇：案内「私の日本語学校の１日」</span>
+              <span class="passage-genre">學校生活介紹</span>
+            </div>
+            <div style="white-space:pre-line;">私の学校の授業は、毎朝9時に【 01 】。午前中は文法と漢字の勉強をします。先生はいつも優しくて、説明も分かりやすいです。
+12時になると、みんなで教室でお弁当を食べます。【 02 】、午後は会話の練習をたくさんします。
+学校が終わった後は、図書館で宿題をします。毎日とても忙しいですが、勉強はとても【 03 】です。</div>
+            <div style="margin-top:10px; padding-top:8px; border-top:1px dashed rgba(43,37,35,0.2); font-size:11.5px; color:rgba(43,37,35,0.8);">
+              <strong>【全篇中文對照】：</strong>我們學校的課每天早上9點開始。上午學習文法與漢字。老師總是親切且解說清楚。
+到12點大家一起在教室吃便當。然後，下午做很多對話練習。
+放學後在圖書館寫作業。每天雖然很忙，但學習非常愉快！
+            </div>
+          </div>
+          <div class="quiz-item-box" style="background:#FAF7F2;">
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(4) 始まります</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>終わります</div><div class="opt-pill" style=""><span class="opt-num">2</span>あります</div><div class="opt-pill" style=""><span class="opt-num">3</span>行きます</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>始まります ✓</div></div>
+              <div class="sol-expl" style="font-size:11px; margin-top:4px;">💡 每天早上9點課程「開始」，使用自動詞「始まります」。</div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(1) そして</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>そして ✓</div><div class="opt-pill" style=""><span class="opt-num">2</span>しかし</div><div class="opt-pill" style=""><span class="opt-num">3</span>ですから</div><div class="opt-pill" style=""><span class="opt-num">4</span>でも</div></div>
+              <div class="sol-expl" style="font-size:11px; margin-top:4px;">💡 午前讀書、中午吃便當，接續詞「そして（然後、接著）」順接下午安排的會話練習。</div>
+            </div>
+            
+            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+              <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(2) 楽しい</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>楽しくて</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>楽しい ✓</div><div class="opt-pill" style=""><span class="opt-num">3</span>楽しく</div><div class="opt-pill" style=""><span class="opt-num">4</span>楽しみ</div></div>
+              <div class="sol-expl" style="font-size:11px; margin-top:4px;">💡 形容詞放在丁寧句尾修飾主語「勉強は」，使用基本終止辭書形「楽しいです」。</div>
+            </div>
+            
+          </div>
+        </div>
+        
+  </div>
+  
+        <div class="lock-cta-box page-break">
+          <div style="font-size:32px;">📑 🔒</div>
+          <h3 style="font-size:18px; font-weight:900; margin-top:8px;">【詳解試閱本結束】完整 500 題詳解收錄於正式手帳套組</h3>
+          <p style="font-size:13px; color:rgba(43,37,35,0.8); margin:10px auto 16px auto; max-width:460px;">
+            包含 300 題挖空＋125 題重組＋25 篇長文（共 75 題）之完整手寫風詳解與錯題筆記欄！<br>
+            正式版套組提供「純實戰手寫空白版」與「逐題手寫風詳解訂正版」雙 PDF 檔案。
+          </p>
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-cta" style="background:#8338EC; color:#fff; padding:8px 24px; font-size:14px;">
+            ☕ 前往商店贊助解鎖完整版 500 題套組（約 NT$190）→
+          </a>
+        </div>
+        
+</div>
+
+</body>
+</html>

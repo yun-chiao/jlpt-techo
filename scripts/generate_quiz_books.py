@@ -795,14 +795,31 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
 </html>
 """
 
-def generate_solution_workbook_html(level_key: str, data: dict) -> str:
+def generate_solution_workbook_html(level_key: str, data: dict, is_preview: bool = False) -> str:
     conf = LEVEL_INFO[level_key]
     upper = conf["upper"]
     color = conf["color"]
     
-    sentence_list = data["sentenceQuizzes"][:300]
-    star_list = data["starQuizzes"][:125]
-    passage_list = data["passageQuizzes"][:25]
+    if is_preview:
+        sentence_list = data["sentenceQuizzes"][:15]
+        star_list = data["starQuizzes"][:9]
+        passage_list = data["passageQuizzes"][:2]
+        cover_title = f"{upper} 題型專攻・30 題手寫詳解試閱手帳"
+        edition_badge = "【考前訂正神器・30 題精選詳解體驗版】"
+        stat_p1 = "15 題"
+        stat_p2 = "9 題"
+        stat_p3 = "2 篇 (6題)"
+        total_desc = "共 30 題逐題詳解試閱手帳"
+    else:
+        sentence_list = data["sentenceQuizzes"][:300]
+        star_list = data["starQuizzes"][:125]
+        passage_list = data["passageQuizzes"][:25]
+        cover_title = f"{upper} 500 題逐題詳解訂正手帳"
+        edition_badge = "【考前訂正神器・考點語法全剖析（完整 500 題）】"
+        stat_p1 = "300 題"
+        stat_p2 = "125 題"
+        stat_p3 = "25 篇 (75題)"
+        total_desc = "共 500 題逐題手寫風詳解訂正本" 
     
     p1_items = []
     for idx, q in enumerate(sentence_list, 1):
@@ -888,6 +905,23 @@ def generate_solution_workbook_html(level_key: str, data: dict) -> str:
         </div>
         """)
 
+
+    lock_banner = ""
+    if is_preview:
+        lock_banner = f"""
+        <div class="lock-cta-box page-break">
+          <div style="font-size:32px;">📑 🔒</div>
+          <h3 style="font-size:18px; font-weight:900; margin-top:8px;">【詳解試閱本結束】完整 500 題詳解收錄於正式手帳套組</h3>
+          <p style="font-size:13px; color:rgba(43,37,35,0.8); margin:10px auto 16px auto; max-width:460px;">
+            包含 300 題挖空＋125 題重組＋25 篇長文（共 75 題）之完整手寫風詳解與錯題筆記欄！<br>
+            正式版套組提供「純實戰手寫空白版」與「逐題手寫風詳解訂正版」雙 PDF 檔案。
+          </p>
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-cta" style="background:{color}; color:#fff; padding:8px 24px; font-size:14px;">
+            ☕ 前往商店贊助解鎖完整版 500 題套組（{conf['price_twd']}）→
+          </a>
+        </div>
+        """
+
     return f"""<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -908,32 +942,32 @@ def generate_solution_workbook_html(level_key: str, data: dict) -> str:
     </div>
     
     <div class="cover-title-group">
-      <div class="cover-jp-sub">JLPT {upper} 500 COMPLETE SOLUTIONS</div>
-      <div class="cover-title">500 題逐題詳解訂正手帳</div>
-      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">【考前訂正神器・考點語法全剖析（完整 500 題）】</div>
+      <div class="cover-jp-sub">JLPT {upper} COMPLETE SOLUTIONS</div>
+      <div class="cover-title">{cover_title}</div>
+      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">{edition_badge}</div>
       <p class="cover-desc">
-        完整收錄 500 題之正解選項標記、語法拆解、長文中日對照與考點筆記欄。<br>
+        完整收錄正解選項標記、語法拆解、長文中日對照與考點筆記欄。<br>
         隨心在 iPad GoodNotes 上用螢光筆標記錯題，考前最後 30 分鐘只要複習這本錯題手帳即可安心赴考！
       </p>
 
       <div class="cover-stats">
         <div class="stat-box">
-          <div class="stat-num" style="color:{color};">300 題</div>
+          <div class="stat-num" style="color:{color};">{stat_p1}</div>
           <div class="stat-label">PART 01 形式挖空詳解</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num" style="color:{color};">125 題</div>
+          <div class="stat-num" style="color:{color};">{stat_p2}</div>
           <div class="stat-label">PART 02 ★ 號重組詳解</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num" style="color:{color};">25 篇 (75題)</div>
+          <div class="stat-num" style="color:{color};">{stat_p3}</div>
           <div class="stat-label">PART 03 篇章長文詳解</div>
         </div>
       </div>
     </div>
     
     <div class="cover-footer">
-      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（共 500 題完整詳解）</div>
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（{total_desc}）</div>
       <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
     </div>
   </div>
@@ -967,12 +1001,13 @@ def generate_solution_workbook_html(level_key: str, data: dict) -> str:
     <div class="sheet-header">
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="sheet-part-badge" style="background:{color};">PART 03</span>
-        <span class="sheet-title">篇章脈絡填空・25 篇長文逐題詳解</span>
+        <span class="sheet-title">篇章脈絡填空・{len(passage_list)} 篇長文逐題詳解</span>
       </div>
       <span class="sheet-page-num">SOLUTIONS P.03</span>
     </div>
     {"".join(p3_items)}
   </div>
+  {lock_banner}
 </div>
 
 </body>
@@ -1027,7 +1062,7 @@ def main():
             
         print(f"📦 正在產製 {upper} 題本 HTML（實戰 500 題 ＋ 試閱 30 題精華）...")
         
-        # 1. 產生試閱版 HTML（精準 30 題整，解答包含全部 30 題）
+        # 1. 產生空白試閱版 HTML（精準 30 題整，解答包含全部 30 題）
         preview_html = generate_blank_workbook_html(lvl, data, is_preview=True)
         preview_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-試閱版.html"
         with open(preview_file, "w", encoding="utf-8") as f:
@@ -1037,6 +1072,16 @@ def main():
         public_preview = PUBLIC_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-試閱版.html"
         with open(public_preview, "w", encoding="utf-8") as f:
             f.write(preview_html)
+
+        # 1b. 產生詳解試閱版 HTML（精準 30 題手寫風詳解試閱）
+        sol_preview_html = generate_solution_workbook_html(lvl, data, is_preview=True)
+        sol_preview_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-詳解試閱版.html"
+        with open(sol_preview_file, "w", encoding="utf-8") as f:
+            f.write(sol_preview_html)
+
+        public_sol_preview = PUBLIC_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-詳解試閱版.html"
+        with open(public_sol_preview, "w", encoding="utf-8") as f:
+            f.write(sol_preview_html)
             
         # 2. 產生實戰空白版 HTML（精準 500 題整，解答包含全部 500 題）
         blank_html = generate_blank_workbook_html(lvl, data, is_preview=False)
