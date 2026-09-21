@@ -67,15 +67,15 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     upper: 'N2',
     color: '#ff6b35',
     tint: '#fff0e8',
-    title: '【日檢手帖】JLPT N2 題型專攻・500 題厚切全真手帳題本',
+    title: '【日檢手帖】JLPT N2 500 題厚切全真手帳題本',
     subTitle: '日本留學與赴日求職黃金門檻・商務時事與長文理解實戰雙版本',
     priceUsd: '$12.99',
     priceTwdApprox: '約 NT$400',
     stats: {
-      cloze: '300 題 文法挖空',
-      star: '125 題 ★ 語序重組',
-      passage: '25 篇 長文 (75題)',
-      solutions: '500 題 逐題手寫詳解',
+      cloze: '300 題',
+      star: '125 題',
+      passage: '25 篇 (75題)',
+      solutions: '500 題',
     },
     features: [
       '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
@@ -92,15 +92,15 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     upper: 'N1',
     color: '#e63956',
     tint: '#ffeaef',
-    title: '【日檢手帖】JLPT N1 題型專攻・500 題厚切全真手帳題本',
+    title: '【日檢手帖】JLPT N1 500 題厚切全真手帳題本',
     subTitle: '最高殿堂抽象文語、深層邏輯與學術長文・雙版本實戰套組',
     priceUsd: '$14.99',
     priceTwdApprox: '約 NT$460',
     stats: {
-      cloze: '300 題 文法挖空',
-      star: '125 題 ★ 語序重組',
-      passage: '25 篇 長文 (75題)',
-      solutions: '500 題 逐題手寫詳解',
+      cloze: '300 題',
+      star: '125 題',
+      passage: '25 篇 (75題)',
+      solutions: '500 題',
     },
     features: [
       '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
@@ -117,15 +117,15 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     upper: 'N3',
     color: '#7cb518',
     tint: '#f2f8e6',
-    title: '【日檢手帖】JLPT N3 題型專攻・500 題厚切全真手帳題本',
+    title: '【日檢手帖】JLPT N3 500 題厚切全真手帳題本',
     subTitle: '跨越日檢分水嶺・日常複雜情境與職場銜接 500 題實戰雙版本',
     priceUsd: '$9.99',
     priceTwdApprox: '約 NT$310',
     stats: {
-      cloze: '300 題 文法挖空',
-      star: '125 題 ★ 語序重組',
-      passage: '25 篇 長文 (75題)',
-      solutions: '500 題 逐題手寫詳解',
+      cloze: '300 題',
+      star: '125 題',
+      passage: '25 篇 (75題)',
+      solutions: '500 題',
     },
     features: [
       '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
@@ -142,15 +142,15 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     upper: 'N4',
     color: '#0096c7',
     tint: '#e2f4fa',
-    title: '【日檢手帖】JLPT N4 題型專攻・500 題厚切全真手帳題本',
+    title: '【日檢手帖】JLPT N4 500 題厚切全真手帳題本',
     subTitle: '進階基礎・日常動詞活用、敬語使役被動與生活指南 500 題',
     priceUsd: '$7.99',
     priceTwdApprox: '約 NT$250',
     stats: {
-      cloze: '300 題 文法挖空',
-      star: '125 題 ★ 語序重組',
-      passage: '25 篇 長文 (75題)',
-      solutions: '500 題 逐題手寫詳解',
+      cloze: '300 題',
+      star: '125 題',
+      passage: '25 篇 (75題)',
+      solutions: '500 題',
     },
     features: [
       '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
@@ -167,15 +167,15 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     upper: 'N5',
     color: '#8338ec',
     tint: '#f2f8e6',
-    title: '【日檢手帖】JLPT N5 題型專攻・500 題厚切全真手帳題本',
+    title: '【日檢手帖】JLPT N5 500 題厚切全真手帳題本',
     subTitle: '零基礎入門首選・基礎格助詞、日常對話與生活記事 500 題實戰',
     priceUsd: '$5.99',
     priceTwdApprox: '約 NT$190',
     stats: {
-      cloze: '300 題 文法挖空',
-      star: '125 題 ★ 語序重組',
-      passage: '25 篇 長文 (75題)',
-      solutions: '500 題 逐題手寫詳解',
+      cloze: '300 題',
+      star: '125 題',
+      passage: '25 篇 (75題)',
+      solutions: '500 題',
     },
     features: [
       '✍️ 【實戰純題目空白本】：完整 500 題純淨排版，留有手寫做題空間，無干擾模擬真實考場',
@@ -192,15 +192,15 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     upper: 'N1～N5',
     color: '#2b2523',
     tint: '#faf7f2',
-    title: '【日檢手帖】JLPT N1～N5 題型專攻・全真 2,500 題終身典藏題本包',
+    title: '【日檢手帖】JLPT N1～N5 全真 2,500 題終身典藏題本包',
     subTitle: '一次買齊五大級別共 10 冊手帳題本（5冊實戰空白本＋5冊逐題手寫風詳解訂正手帳）',
     priceUsd: '$24.99',
     priceTwdApprox: '約 NT$770',
     stats: {
-      cloze: '1,500 題形式挖空',
-      star: '625 題 ★ 語序重組',
-      passage: '125 篇長文 (375題)',
-      solutions: '2,500 題完整手寫詳解',
+      cloze: '1,500 題',
+      star: '625 題',
+      passage: '125 篇 (375題)',
+      solutions: '2,500 題',
     },
     features: [
       '👑 包含 N5、N4、N3、N2、N1 全部 5 個獨立級別的 500 題全真題本套組（共 2,500 題）',
@@ -676,7 +676,7 @@ export function ProductShowcasePage() {
                   className="rounded-lg border-2 border-paper-sumi px-2 py-0.5 font-mono text-xs font-black text-paper-card sm:px-3 sm:py-1 sm:text-sm"
                   style={{ backgroundColor: currentQuizProd.color }}
                 >
-                  {currentQuizProd.upper} 題型專攻
+                  {currentQuizProd.upper}
                 </span>
                 <h2 className="font-display text-lg font-black sm:text-2xl md:text-3xl">{currentQuizProd.title}</h2>
               </div>
@@ -702,20 +702,20 @@ export function ProductShowcasePage() {
           {/* 4 大規格指標 */}
           <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:grid-cols-4 sm:gap-3">
             <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
-              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.cloze}</div>
-              <div className="text-[11px] font-bold text-paper-sumi/60">Part 1 文法挖空</div>
+              <div className="font-mono text-lg font-black text-paper-sumi sm:text-2xl">{currentQuizProd.stats.cloze}</div>
+              <div className="mt-0.5 text-[11px] font-bold text-paper-sumi/65">Part 1 文法挖空</div>
             </div>
             <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
-              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.star}</div>
-              <div className="text-[11px] font-bold text-paper-sumi/60">Part 2 ★ 號語序重組</div>
+              <div className="font-mono text-lg font-black text-paper-sumi sm:text-2xl">{currentQuizProd.stats.star}</div>
+              <div className="mt-0.5 text-[11px] font-bold text-paper-sumi/65">Part 2 ★ 語序重組</div>
             </div>
             <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
-              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.passage}</div>
-              <div className="text-[11px] font-bold text-paper-sumi/60">Part 3 篇章長文專欄</div>
+              <div className="font-mono text-lg font-black text-paper-sumi sm:text-2xl">{currentQuizProd.stats.passage}</div>
+              <div className="mt-0.5 text-[11px] font-bold text-paper-sumi/65">Part 3 篇章長文</div>
             </div>
             <div className="rounded-xl border border-paper-sumi/25 bg-paper-canvas p-2.5 text-center sm:p-3">
-              <div className="font-mono text-base font-black text-paper-sumi sm:text-xl">{currentQuizProd.stats.solutions}</div>
-              <div className="text-[11px] font-bold text-paper-sumi/60">考點陷阱與錯題欄</div>
+              <div className="font-mono text-lg font-black text-paper-sumi sm:text-2xl">{currentQuizProd.stats.solutions}</div>
+              <div className="mt-0.5 text-[11px] font-bold text-paper-sumi/65">逐題詳解與錯題欄</div>
             </div>
           </div>
 
