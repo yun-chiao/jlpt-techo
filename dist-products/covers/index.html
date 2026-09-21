@@ -16,24 +16,23 @@
     --n3: #7cb518;
     --n2: #ff6b35;
     --n1: #e63956;
-    --all: #2b2523;
+    --butter: #ffe5a3;
   }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
-    padding: 40px 20px 80px 20px;
     background: var(--paper);
-    font-family: 'Zen Kaku Gothic New', -apple-system, sans-serif;
+    font-family: "Zen Kaku Gothic New", -apple-system, sans-serif;
     color: var(--sumi);
+    padding: 40px 20px 80px 20px;
     line-height: 1.6;
   }
   .container {
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 0 auto;
   }
   .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     padding-bottom: 24px;
     border-bottom: 2.5px dashed rgba(43,37,35,0.25);
   }
@@ -41,7 +40,7 @@
     display: inline-block;
     background: var(--sumi);
     color: #fff;
-    font-family: 'Cinzel', serif;
+    font-family: "Cinzel", serif;
     font-size: 13px;
     font-weight: 900;
     letter-spacing: 0.2em;
@@ -50,50 +49,59 @@
     margin-bottom: 12px;
   }
   h1 {
-    font-family: 'Noto Serif JP', serif;
+    font-family: "Noto Serif JP", serif;
     font-size: 28px;
     font-weight: 900;
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
   }
   .desc {
     color: rgba(43,37,35,0.75);
-    font-size: 15px;
-    max-width: 680px;
+    font-size: 14.5px;
+    max-width: 700px;
     margin: 0 auto;
   }
-  .tip-box {
-    background: #fff;
-    border: 2px solid var(--sumi);
-    border-radius: 12px;
-    box-shadow: 4px 4px 0px var(--sumi);
-    padding: 16px 20px;
-    margin: 24px auto 0 auto;
-    max-width: 760px;
-    font-size: 13.5px;
-    text-align: left;
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 36px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--sumi);
+  }
+  .section-badge {
+    background: var(--sumi);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+  .section-h2 {
+    font-size: 19px;
+    font-weight: 900;
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    gap: 32px;
-    margin-top: 36px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
   }
   .card {
     background: #ffffff;
     border: 2.5px solid var(--sumi);
     border-radius: 14px;
-    box-shadow: 6px 6px 0px var(--sumi);
     overflow: hidden;
+    box-shadow: 4px 5px 0px var(--sumi);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   .cover-preview {
-    position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
-    background: #ece7de;
-    overflow: hidden;
+    background: #f0ebe1;
     border-bottom: 2px solid var(--sumi);
+    overflow: hidden;
+    position: relative;
   }
   .cover-preview img {
     width: 100%;
@@ -106,11 +114,11 @@
     transform: scale(1.02);
   }
   .card-body {
-    padding: 20px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    flex: 1;
     justify-content: space-between;
+    flex: 1;
   }
   .card-meta {
     display: flex;
@@ -120,68 +128,69 @@
   }
   .badge {
     color: #fff;
-    font-weight: 900;
     font-size: 11px;
-    padding: 3px 10px;
-    border-radius: 6px;
-    border: 1.5px solid var(--sumi);
+    font-weight: 900;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--sumi);
   }
   .price-text {
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
+    font-family: "Cinzel", monospace;
+    font-size: 16px;
     font-weight: 900;
     color: var(--sumi);
   }
   .card-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 900;
-    margin: 4px 0;
+    margin-bottom: 4px;
+    color: var(--sumi);
   }
   .card-sub {
-    font-size: 12.5px;
+    font-size: 12px;
     color: rgba(43,37,35,0.7);
-    margin-bottom: 16px;
+    line-height: 1.5;
+    margin-bottom: 14px;
   }
   .btn-row {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
   }
   .btn-download {
-    flex: 1;
-    display: inline-flex;
+    background: var(--butter);
+    border: 1.5px solid var(--sumi);
+    border-radius: 6px;
+    color: var(--sumi);
+    font-weight: 900;
+    font-size: 12px;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 0px var(--sumi);
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background: var(--sumi);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 13.5px;
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--sumi);
-    transition: all 0.15s ease;
+    gap: 4px;
   }
   .btn-download:hover {
-    background: #443c39;
-    transform: translateY(-1px);
+    background: #fff;
+    transform: translate(-1px, -1px);
   }
   .btn-open {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
+    background: #ffffff;
+    border: 1.5px solid var(--sumi);
+    border-radius: 6px;
     color: var(--sumi);
-    text-decoration: none;
     font-weight: 800;
-    font-size: 13px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 2px solid var(--sumi);
+    font-size: 12px;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 0px var(--sumi);
   }
   .btn-open:hover {
-    background: #f0ebe1;
+    background: var(--paper);
   }
 </style>
 </head>
@@ -189,178 +198,277 @@
 
 <div class="container">
   <div class="header">
-    <div class="brand-stamp">NIKKEN TECHO ・ SHOP ASSETS</div>
-    <h1>Buy Me a Coffee Shop 官方 1:1 正方形高解析商品封面圖</h1>
+    <div class="brand-stamp">NIKKEN TECHO SHOP COVERS</div>
+    <h1>Buy Me a Coffee 商品封面圖下載中心</h1>
     <p class="desc">
-      已為您的 6 款數位商品精準渲染 FUDGE / CLUEL 日雜風格、規格符合官方商店推薦的 <strong>1200 x 1200 (1:1 正方形) PNG</strong> 封面圖。可直接下載並上傳至後台！
+      符合 Buy Me a Coffee Shop 官方規格之 1:1 正方形超高解析度（1200 × 1200）封面圖。<br>
+      下方已區分【題庫系列】與【教材系列】，點擊按鈕即可一鍵儲存 PNG 檔案！
     </p>
-    <div class="tip-box">
-      💡 <strong>上架操作指引</strong>：<br>
-      1. 點擊下方各商品的「<strong>下載封面圖 (PNG)</strong>」儲存到電腦。<br>
-      2. 前往 <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" style="color:#ff6b35; font-weight:900;">buymeacoffee.com/chiaoban/extras</a> 點擊「<strong>Add Product</strong>」或編輯既有商品。<br>
-      3. 在「<strong>Cover Image</strong>」欄位直接上傳對應級別的 PNG 即可！
-    </div>
+  </div>
+
+  <!-- 題庫系列：500 題手帳題本 -->
+  <div class="section-title">
+    <span class="section-badge" style="background: #ff6b35;">NEW ・ 題庫</span>
+    <h2 class="section-h2">✍️ 【500 題手帳題本系列】商品封面圖（最新方眼手帳風）</h2>
   </div>
 
   <div class="grid">
-    <!-- N2 完全備考套組 -->
-    <div class="card" style="border-color: #ff6b35;">
+    <!-- ALL -->
+    <div class="card">
       <div class="cover-preview">
-        <a href="cover_n2.png" target="_blank">
-          <img src="cover_n2.png" alt="N2 完全備考套組 封面圖">
-        </a>
+        <a href="quiz/cover_quiz_all.png" target="_blank"><img src="quiz/cover_quiz_all.png" alt="N1～N5 終身題本包"></a>
       </div>
       <div class="card-body">
         <div>
           <div class="card-meta">
-            <span class="badge" style="background: #ff6b35;">JLPT N2 核心套組</span>
-            <span class="price-text">2.99 USD</span>
+            <span class="badge" style="background: #2b2523;">N1～N5 終身題本</span>
+            <span class="price-text">$24.99 USD</span>
           </div>
-          <div class="card-title">N2 完全備考套組</div>
-          <div class="card-sub">日本求職與留學門檻・時事長文完全制霸 ｜ 720 張 Anki 逐字振假名＋A4 手冊</div>
+          <div class="card-title">N1～N5 全真 2,500 題手帳題本終身包</div>
+          <div class="card-sub">10 冊雙版本手帳 ＋ 1,750 題獨家進階題 ｜ 現省 54% 典藏包</div>
         </div>
         <div class="btn-row">
-          <a class="btn-download" href="cover_n2.png" download="日檢手帖-N2-完全備考套組-封面.png">
-            💾 下載封面圖 (PNG)
-          </a>
-          <a class="btn-open" href="cover_n2.png" target="_blank">
-            🔍 原圖預覽
-          </a>
+          <a class="btn-download" href="quiz/cover_quiz_all.png" download="日檢手帖-N1-N5-2500題終身題本包-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="quiz/cover_quiz_all.png" target="_blank">🔍 原圖</a>
         </div>
       </div>
     </div>
 
-    <!-- N1~N5 終身全套典藏包 -->
-    <div class="card" style="border-color: #2b2523;">
+    <!-- N2 -->
+    <div class="card">
       <div class="cover-preview">
-        <a href="cover_all.png" target="_blank">
-          <img src="cover_all.png" alt="N1～N5 終身全套典藏包 封面圖">
-        </a>
+        <a href="quiz/cover_quiz_n2.png" target="_blank"><img src="quiz/cover_quiz_n2.png" alt="N2 500題手帳題本"></a>
       </div>
       <div class="card-body">
         <div>
           <div class="card-meta">
-            <span class="badge" style="background: #2b2523;">ALL 終身典藏包</span>
-            <span class="price-text" style="color: #d90429;">9.99 USD <small style="font-size:12px; color:rgba(43,37,35,0.6);">(省 42%)</small></span>
+            <span class="badge" style="background: #ff6b35;">JLPT N2 核心題本</span>
+            <span class="price-text">$12.99 USD</span>
+          </div>
+          <div class="card-title">N2 500 題厚切全真手帳題本</div>
+          <div class="card-sub">實戰空白做題本 ＋ 逐題手寫詳解訂正神手帳（含 350 題獨家進階題）</div>
+        </div>
+        <div class="btn-row">
+          <a class="btn-download" href="quiz/cover_quiz_n2.png" download="日檢手帖-N2-500題手帳題本-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="quiz/cover_quiz_n2.png" target="_blank">🔍 原圖</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- N1 -->
+    <div class="card">
+      <div class="cover-preview">
+        <a href="quiz/cover_quiz_n1.png" target="_blank"><img src="quiz/cover_quiz_n1.png" alt="N1 500題手帳題本"></a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="card-meta">
+            <span class="badge" style="background: #e63956;">JLPT N1 最高殿堂</span>
+            <span class="price-text">$14.99 USD</span>
+          </div>
+          <div class="card-title">N1 500 題厚切全真手帳題本</div>
+          <div class="card-sub">實戰空白做題本 ＋ 逐題手寫詳解訂正神手帳（含 350 題獨家進階題）</div>
+        </div>
+        <div class="btn-row">
+          <a class="btn-download" href="quiz/cover_quiz_n1.png" download="日檢手帖-N1-500題手帳題本-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="quiz/cover_quiz_n1.png" target="_blank">🔍 原圖</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- N3 -->
+    <div class="card">
+      <div class="cover-preview">
+        <a href="quiz/cover_quiz_n3.png" target="_blank"><img src="quiz/cover_quiz_n3.png" alt="N3 500題手帳題本"></a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="card-meta">
+            <span class="badge" style="background: #7cb518;">JLPT N3 中階分水嶺</span>
+            <span class="price-text">$9.99 USD</span>
+          </div>
+          <div class="card-title">N3 500 題厚切全真手帳題本</div>
+          <div class="card-sub">實戰空白做題本 ＋ 逐題手寫詳解訂正神手帳（含 350 題獨家進階題）</div>
+        </div>
+        <div class="btn-row">
+          <a class="btn-download" href="quiz/cover_quiz_n3.png" download="日檢手帖-N3-500題手帳題本-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="quiz/cover_quiz_n3.png" target="_blank">🔍 原圖</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- N4 -->
+    <div class="card">
+      <div class="cover-preview">
+        <a href="quiz/cover_quiz_n4.png" target="_blank"><img src="quiz/cover_quiz_n4.png" alt="N4 500題手帳題本"></a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="card-meta">
+            <span class="badge" style="background: #0096c7;">JLPT N4 進階基礎</span>
+            <span class="price-text">$8.99 USD</span>
+          </div>
+          <div class="card-title">N4 500 題厚切全真手帳題本</div>
+          <div class="card-sub">實戰空白做題本 ＋ 逐題手寫詳解訂正神手帳（含 350 題獨家進階題）</div>
+        </div>
+        <div class="btn-row">
+          <a class="btn-download" href="quiz/cover_quiz_n4.png" download="日檢手帖-N4-500題手帳題本-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="quiz/cover_quiz_n4.png" target="_blank">🔍 原圖</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- N5 -->
+    <div class="card">
+      <div class="cover-preview">
+        <a href="quiz/cover_quiz_n5.png" target="_blank"><img src="quiz/cover_quiz_n5.png" alt="N5 500題手帳題本"></a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="card-meta">
+            <span class="badge" style="background: #8338ec;">JLPT N5 入門首選</span>
+            <span class="price-text">$6.99 USD</span>
+          </div>
+          <div class="card-title">N5 500 題厚切全真手帳題本</div>
+          <div class="card-sub">實戰空白做題本 ＋ 逐題手寫詳解訂正神手帳（含 350 題獨家進階題）</div>
+        </div>
+        <div class="btn-row">
+          <a class="btn-download" href="quiz/cover_quiz_n5.png" download="日檢手帖-N5-500題手帳題本-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="quiz/cover_quiz_n5.png" target="_blank">🔍 原圖</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 教材系列：Anki 字卡 ＋ 講義手冊 -->
+  <div class="section-title" style="margin-top: 50px;">
+    <span class="section-badge" style="background: #2b2523;">教材</span>
+    <h2 class="section-h2">📱 【數位備考教材系列】商品封面圖（Anki 記憶卡 ＋ A4 速查手冊）</h2>
+  </div>
+
+  <div class="grid">
+    <!-- ALL 教材 -->
+    <div class="card">
+      <div class="cover-preview">
+        <a href="cover_all.png" target="_blank"><img src="cover_all.png" alt="N1～N5 終身全套包"></a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="card-meta">
+            <span class="badge" style="background: #2b2523;">N1～N5 終身全套</span>
+            <span class="price-text">$29.99 USD</span>
           </div>
           <div class="card-title">N1～N5 終身全套典藏包</div>
-          <div class="card-sub">一次買齊 5 個級別・五年份完整自學教材 ｜ 3,593 張 Anki 智慧字卡＋5 冊 A4 手冊</div>
+          <div class="card-sub">3,593 張 Anki 字卡 ＋ 5 冊 FUDGE 日雜風 A4 考場速查手冊</div>
         </div>
         <div class="btn-row">
-          <a class="btn-download" href="cover_all.png" download="日檢手帖-N1-N5-終身全套典藏包-封面.png">
-            💾 下載封面圖 (PNG)
-          </a>
-          <a class="btn-open" href="cover_all.png" target="_blank">
-            🔍 原圖預覽
-          </a>
+          <a class="btn-download" href="cover_all.png" download="日檢手帖-N1-N5-終身全套典藏包-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="cover_all.png" target="_blank">🔍 原圖</a>
         </div>
       </div>
     </div>
 
-    <!-- N1 完全備考套組 -->
+    <!-- N2 教材 -->
     <div class="card">
       <div class="cover-preview">
-        <a href="cover_n1.png" target="_blank">
-          <img src="cover_n1.png" alt="N1 完全備考套組 封面圖">
-        </a>
+        <a href="cover_n2.png" target="_blank"><img src="cover_n2.png" alt="N2 完全備考套組"></a>
       </div>
       <div class="card-body">
         <div>
           <div class="card-meta">
-            <span class="badge" style="background: #e63956;">JLPT N1 頂級套組</span>
-            <span class="price-text">2.99 USD</span>
+            <span class="badge" style="background: #ff6b35;">JLPT N2 備考套組</span>
+            <span class="price-text">$12.99 USD</span>
+          </div>
+          <div class="card-title">N2 完全備考套組</div>
+          <div class="card-sub">720 張 Anki 逐字振假名 ＋ FUDGE A4 考場速查手冊</div>
+        </div>
+        <div class="btn-row">
+          <a class="btn-download" href="cover_n2.png" download="日檢手帖-N2-完全備考套組-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="cover_n2.png" target="_blank">🔍 原圖</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- N1 教材 -->
+    <div class="card">
+      <div class="cover-preview">
+        <a href="cover_n1.png" target="_blank"><img src="cover_n1.png" alt="N1 完全備考套組"></a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="card-meta">
+            <span class="badge" style="background: #e63956;">JLPT N1 備考套組</span>
+            <span class="price-text">$12.99 USD</span>
           </div>
           <div class="card-title">N1 完全備考套組</div>
-          <div class="card-sub">最高殿堂・抽象邏輯與古典文語滿分攻克 ｜ 720 張 Anki 逐字振假名＋A4 手冊</div>
+          <div class="card-sub">720 張 Anki 逐字振假名 ＋ FUDGE A4 考場速查手冊</div>
         </div>
         <div class="btn-row">
-          <a class="btn-download" href="cover_n1.png" download="日檢手帖-N1-完全備考套組-封面.png">
-            💾 下載封面圖 (PNG)
-          </a>
-          <a class="btn-open" href="cover_n1.png" target="_blank">
-            🔍 原圖預覽
-          </a>
+          <a class="btn-download" href="cover_n1.png" download="日檢手帖-N1-完全備考套組-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="cover_n1.png" target="_blank">🔍 原圖</a>
         </div>
       </div>
     </div>
 
-    <!-- N3 完全備考套組 -->
+    <!-- N3 教材 -->
     <div class="card">
       <div class="cover-preview">
-        <a href="cover_n3.png" target="_blank">
-          <img src="cover_n3.png" alt="N3 完全備考套組 封面圖">
-        </a>
+        <a href="cover_n3.png" target="_blank"><img src="cover_n3.png" alt="N3 完全備考套組"></a>
       </div>
       <div class="card-body">
         <div>
           <div class="card-meta">
-            <span class="badge" style="background: #7cb518;">JLPT N3 核心套組</span>
-            <span class="price-text">.99 USD</span>
+            <span class="badge" style="background: #7cb518;">JLPT N3 備考套組</span>
+            <span class="price-text">$9.99 USD</span>
           </div>
           <div class="card-title">N3 完全備考套組</div>
-          <div class="card-sub">跨越日檢分水嶺・自學必備神包 ｜ 720 張 Anki 逐字振假名＋A4 手冊</div>
+          <div class="card-sub">720 張 Anki 逐字振假名 ＋ FUDGE A4 考場速查手冊</div>
         </div>
         <div class="btn-row">
-          <a class="btn-download" href="cover_n3.png" download="日檢手帖-N3-完全備考套組-封面.png">
-            💾 下載封面圖 (PNG)
-          </a>
-          <a class="btn-open" href="cover_n3.png" target="_blank">
-            🔍 原圖預覽
-          </a>
+          <a class="btn-download" href="cover_n3.png" download="日檢手帖-N3-完全備考套組-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="cover_n3.png" target="_blank">🔍 原圖</a>
         </div>
       </div>
     </div>
 
-    <!-- N4 完全備考套組 -->
+    <!-- N4 教材 -->
     <div class="card">
       <div class="cover-preview">
-        <a href="cover_n4.png" target="_blank">
-          <img src="cover_n4.png" alt="N4 完全備考套組 封面圖">
-        </a>
+        <a href="cover_n4.png" target="_blank"><img src="cover_n4.png" alt="N4 完全備考套組"></a>
       </div>
       <div class="card-body">
         <div>
           <div class="card-meta">
-            <span class="badge" style="background: #0096c7;">JLPT N4 初階進階</span>
-            <span class="price-text">.99 USD</span>
+            <span class="badge" style="background: #0096c7;">JLPT N4 備考套組</span>
+            <span class="price-text">$8.99 USD</span>
           </div>
           <div class="card-title">N4 完全備考套組</div>
-          <div class="card-sub">核心動詞變化與日常會話全攻略 ｜ 721 張 Anki 逐字振假名＋A4 手冊</div>
+          <div class="card-sub">721 張 Anki 逐字振假名 ＋ FUDGE A4 考場速查手冊</div>
         </div>
         <div class="btn-row">
-          <a class="btn-download" href="cover_n4.png" download="日檢手帖-N4-完全備考套組-封面.png">
-            💾 下載封面圖 (PNG)
-          </a>
-          <a class="btn-open" href="cover_n4.png" target="_blank">
-            🔍 原圖預覽
-          </a>
+          <a class="btn-download" href="cover_n4.png" download="日檢手帖-N4-完全備考套組-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="cover_n4.png" target="_blank">🔍 原圖</a>
         </div>
       </div>
     </div>
 
-    <!-- N5 完全備考套組 -->
+    <!-- N5 教材 -->
     <div class="card">
       <div class="cover-preview">
-        <a href="cover_n5.png" target="_blank">
-          <img src="cover_n5.png" alt="N5 完全備考套組 封面圖">
-        </a>
+        <a href="cover_n5.png" target="_blank"><img src="cover_n5.png" alt="N5 完全備考套組"></a>
       </div>
       <div class="card-body">
         <div>
           <div class="card-meta">
-            <span class="badge" style="background: #8338ec;">JLPT N5 入門套組</span>
-            <span class="price-text">.99 USD</span>
+            <span class="badge" style="background: #8338ec;">JLPT N5 備考套組</span>
+            <span class="price-text">$7.99 USD</span>
           </div>
           <div class="card-title">N5 完全備考套組</div>
-          <div class="card-sub">零基礎第一次考日檢的定心丸 ｜ 712 張 Anki 逐字振假名＋A4 手冊</div>
+          <div class="card-sub">712 張 Anki 逐字振假名 ＋ FUDGE A4 考場速查手冊</div>
         </div>
         <div class="btn-row">
-          <a class="btn-download" href="cover_n5.png" download="日檢手帖-N5-完全備考套組-封面.png">
-            💾 下載封面圖 (PNG)
-          </a>
-          <a class="btn-open" href="cover_n5.png" target="_blank">
-            🔍 原圖預覽
-          </a>
+          <a class="btn-download" href="cover_n5.png" download="日檢手帖-N5-完全備考套組-封面.png">💾 下載封面 (PNG)</a>
+          <a class="btn-open" href="cover_n5.png" target="_blank">🔍 原圖</a>
         </div>
       </div>
     </div>
