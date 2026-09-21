@@ -111,6 +111,17 @@ function QuizLevelContent({ level }: { level: Level }) {
     return allQuestions.filter((q) => q.type === filter);
   }, [allQuestions, filter]);
 
+  // 作答統計（必須在所有條件 return 之前宣告，遵循 React Hook 規則）
+  const answeredCount = useMemo(() => {
+    let count = 0;
+    allQuestions.forEach((q) => {
+      if (q.type === 'sentence' && sentenceAnswers[q.id] !== undefined) count++;
+      if (q.type === 'star' && (starSlots[q.id]?.length ?? 0) === 4) count++;
+      if (q.type === 'passage' && passageAnswers[q.id] !== undefined) count++;
+    });
+    return count;
+  }, [allQuestions, sentenceAnswers, starSlots, passageAnswers]);
+
   if (state.status === 'unavailable') return <ComingSoon section="quiz" level={level} />;
   if (state.status === 'loading') return <LoadingState />;
   if (state.status === 'error' || !state.data) return <ErrorState />;
@@ -145,16 +156,6 @@ function QuizLevelContent({ level }: { level: Level }) {
   const sentenceCount = state.data.sentenceQuizzes.length;
   const starCount = state.data.starQuizzes.length;
   const passageCount = state.data.passageQuizzes.reduce((n, p) => n + p.questions.length, 0);
-
-  const answeredCount = useMemo(() => {
-    let count = 0;
-    allQuestions.forEach((q) => {
-      if (q.type === 'sentence' && sentenceAnswers[q.id] !== undefined) count++;
-      if (q.type === 'star' && (starSlots[q.id]?.length ?? 0) === 4) count++;
-      if (q.type === 'passage' && passageAnswers[q.id] !== undefined) count++;
-    });
-    return count;
-  }, [allQuestions, sentenceAnswers, starSlots, passageAnswers]);
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
