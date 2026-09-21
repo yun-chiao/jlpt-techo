@@ -340,7 +340,7 @@ function QuizLevelContent({ level }: { level: Level }) {
               to={`/products?tab=quiz&level=${level}`}
               className="font-bold text-paper-sumi hover:text-[#ff6b35] underline decoration-paper-sumi/30 underline-offset-2"
             >
-              📥 解鎖完整 500 題手帳題本（含 350 題獨家進階題）→
+              📥 解鎖完整 500 題手帳題本（含 450 題獨家進階題）→
             </Link>
           </div>
         </div>
@@ -353,7 +353,7 @@ function QuizLevelContent({ level }: { level: Level }) {
             ✎
           </span>
           <p className="font-display text-xs font-black text-paper-sumi sm:text-sm">
-            想刷更多題目？<span className="hidden sm:inline">可解鎖</span>《{levelLabel} 500 題完整題本・含 350 題獨家題與手寫詳解》
+            想刷更多題目？<span className="hidden sm:inline">可解鎖</span>《{levelLabel} 500 題完整題本・含 450 題獨家題與手寫詳解》
           </p>
           <span className="hidden rounded bg-paper-oatmeal px-1.5 py-0.5 font-mono text-[10px] font-bold text-paper-sumi/70 md:inline">
             A4 列印 ＋ iPad 手帳
@@ -496,7 +496,7 @@ function QuizLevelContent({ level }: { level: Level }) {
                 《日檢手帖》{levelLabel} 精華特訓修了証
               </h2>
               <p className="mt-1 font-mono text-xs text-paper-sumi/60">
-                JLPT {level.toUpperCase()} CORE CURRICULUM・150 QUESTIONS COMPLETED
+                JLPT {level.toUpperCase()} CORE CURRICULUM・50 QUESTIONS COMPLETED
               </p>
             </div>
 
@@ -511,20 +511,20 @@ function QuizLevelContent({ level }: { level: Level }) {
               <div className="my-3 grid grid-cols-3 gap-2 text-center font-mono">
                 <div className="rounded-lg border border-paper-sumi/15 bg-paper-canvas p-2">
                   <div className="text-[10px] text-paper-sumi/60">Part 1 挖空</div>
-                  <div className="text-sm font-black text-paper-sumi sm:text-base">90 題</div>
+                  <div className="text-sm font-black text-paper-sumi sm:text-base">{sentenceCount} 題</div>
                 </div>
                 <div className="rounded-lg border border-paper-sumi/15 bg-paper-canvas p-2">
                   <div className="text-[10px] text-paper-sumi/60">Part 2 重組</div>
-                  <div className="text-sm font-black text-paper-sumi sm:text-base">42 題</div>
+                  <div className="text-sm font-black text-paper-sumi sm:text-base">{starCount} 題</div>
                 </div>
                 <div className="rounded-lg border border-paper-sumi/15 bg-paper-canvas p-2">
                   <div className="text-[10px] text-paper-sumi/60">Part 3 篇章</div>
-                  <div className="text-sm font-black text-paper-sumi sm:text-base">18 題</div>
+                  <div className="text-sm font-black text-paper-sumi sm:text-base">{passageCount} 題</div>
                 </div>
               </div>
 
               <p className="font-body text-xs leading-relaxed text-paper-sumi/85">
-                🎉 <strong>恭喜通關！</strong> 您已成功完成本站 150 題全真核心特訓，針對 {levelLabel} 核心文法架構與考場常考句型，已具備極高的直覺題感！
+                🎉 <strong>恭喜通關！</strong> 您已成功完成本站 50 題全真核心特訓，針對 {levelLabel} 核心文法架構與考場常考句型，已具備極高的直覺題感！
               </p>
             </div>
 
@@ -532,10 +532,10 @@ function QuizLevelContent({ level }: { level: Level }) {
             <div className="mt-4 rounded-xl border-2 border-dashed border-[#ff6b35] bg-[#fffaf5] p-3.5 text-xs">
               <div className="flex items-center gap-1.5 font-display font-black text-[#ff6b35]">
                 <span>👑</span>
-                <span>想在考場拿下文法滿分？解鎖進階 350 題獨家真題！</span>
+                <span>想在考場拿下文法滿分？解鎖進階 450 題獨家真題！</span>
               </div>
               <p className="mt-1.5 leading-relaxed text-paper-sumi/80">
-                網頁版僅收錄 150 題精華題。正式出版的<strong>《{levelLabel} 500 題厚切全真手帳題本》</strong>多收錄了 <strong>350 題獨家進階考點</strong>，並提供：
+                網頁版僅收錄 50 題精華題。正式出版的<strong>《{levelLabel} 500 題厚切全真手帳題本》</strong>多收錄了 <strong>450 題獨家進階考點</strong>，並提供：
               </p>
               <ul className="mt-2 space-y-1 font-mono text-[11px] text-paper-sumi/75">
                 <li>✓ <strong>實戰純題空白手寫本</strong>（iPad GoodNotes 向量手寫 / A4 列印無干擾）</li>
