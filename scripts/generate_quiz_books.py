@@ -6,9 +6,9 @@
 功能：
 1. 讀取 src/data/quiz/n{1..5}.json（每級 500 題，全庫 2,500 題）。
 2. 為每個級別產生高質感、A4 / GoodNotes 向量排版的日雜手帳題本：
-   - 【實戰空白刷題本】（全 500 題純題目＋答案矩陣卡，留有手寫做題與筆記空白）
+   - 【實戰空白刷題本】（全 500 題純題目＋完整 500 題答案矩陣卡，留有手寫做題與筆記空白）
    - 【逐題詳解訂正本】（全 500 題含完整句、中日對照、💡考點陷阱拆解與手帳錯題訂正欄）
-   - 【試閱體驗本】（精選 30 題試閱體驗，含詳解，供官網直接在線開啟預覽）
+   - 【試閱體驗本】（精準 30 題試閱體驗，包含完整 30 題之 Part1/Part2/Part3 解答，供官網直接在線開啟預覽）
 3. 打包 ZIP 套組至 dist-products/quiz/，並同步試閱 HTML 至 public/dist-products/quiz/。
 """
 
@@ -236,7 +236,7 @@ body {
 
 .cover-title {
   font-family: 'Noto Serif JP', serif;
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 900;
   line-height: 1.25;
   color: var(--sumi);
@@ -244,7 +244,7 @@ body {
 }
 
 .cover-desc {
-  font-size: 14px;
+  font-size: 13.5px;
   color: rgba(43,37,35,0.85);
   margin-top: 16px;
   line-height: 1.7;
@@ -498,7 +498,8 @@ body {
   border-collapse: collapse;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
-  margin-top: 14px;
+  margin-top: 8px;
+  margin-bottom: 14px;
 }
 
 .answer-key-table th, .answer-key-table td {
@@ -527,17 +528,112 @@ body {
 }
 """
 
+def build_answer_key_html(sentence_list, star_list, passage_list):
+    """產生包含 Part 1、Part 2、Part 3 所有題目的完整標準答案卡"""
+    # 1. Part 1 挖空題解答（每 10 題一列）
+    p1_cells = []
+    for idx, q in enumerate(sentence_list, 1):
+        p1_cells.append(f"<td><strong>Q{idx:02d}</strong>: {q['correctIndex']}</td>")
+    p1_rows = []
+    for i in range(0, len(p1_cells), 10):
+        p1_rows.append("<tr>" + "".join(p1_cells[i:i+10]) + "</tr>")
+    
+    p1_section = f"""
+    <div style="margin-bottom:16px;">
+      <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
+        【PART 01 文法形式挖空】標準正解（共 {len(sentence_list)} 題）
+      </h4>
+      <table class="answer-key-table"><tbody>{"".join(p1_rows)}</tbody></table>
+    </div>
+    """
+
+    # 2. Part 2 ★ 號重組題解答
+    p2_rows = []
+    for idx, q in enumerate(star_list, 1):
+        star_opt = q['correctOrder'][q['starIndex']]
+        order_str = " → ".join(str(n) for n in q['correctOrder'])
+        p2_rows.append(f"""
+        <tr>
+          <td style="font-weight:900; width:60px;">Q.{idx:02d}</td>
+          <td style="background:var(--butter); font-weight:900; width:130px;">★ 為 【 {star_opt} 】 號</td>
+          <td style="text-align:left; padding-left:12px; font-family:'DM Mono', monospace;">正確排列順序：{order_str}</td>
+        </tr>
+        """)
+
+    p2_section = f"""
+    <div style="margin-bottom:16px;">
+      <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
+        【PART 02 ★ 號語序重組】標準正解（共 {len(star_list)} 題）
+      </h4>
+      <table class="answer-key-table">
+        <thead>
+          <tr><th>題號</th><th>★ 號正解</th><th style="text-align:left; padding-left:12px;">完整詞塊語序</th></tr>
+        </thead>
+        <tbody>{"".join(p2_rows)}</tbody>
+      </table>
+    </div>
+    """
+
+    # 3. Part 3 篇章題解答
+    total_p3_q = sum(len(p['questions']) for p in passage_list)
+    p3_rows = []
+    for p_idx, p in enumerate(passage_list, 1):
+        blanks = [f"【空白 {q['blankNumber']:02d}】: <strong>({q['correctIndex']})</strong>" for q in p['questions']]
+        p3_rows.append(f"""
+        <tr>
+          <td style="font-weight:900; width:70px;">第 {p_idx:02d} 篇</td>
+          <td style="font-weight:700; text-align:left; padding-left:10px; width:180px;">{p['title']}</td>
+          <td style="text-align:left; padding-left:10px; font-family:'DM Mono', monospace;">{" ｜ ".join(blanks)}</td>
+        </tr>
+        """)
+
+    p3_section = f"""
+    <div style="margin-bottom:16px;">
+      <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
+        【PART 03 篇章長文專欄】標準正解（共 {len(passage_list)} 篇 / {total_p3_q} 題）
+      </h4>
+      <table class="answer-key-table">
+        <thead>
+          <tr><th>篇章</th><th style="text-align:left; padding-left:10px;">專欄標題</th><th style="text-align:left; padding-left:10px;">各空白正確選項</th></tr>
+        </thead>
+        <tbody>{"".join(p3_rows)}</tbody>
+      </table>
+    </div>
+    """
+
+    return p1_section + p2_section + p3_section
+
 def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = False) -> str:
     conf = LEVEL_INFO[level_key]
     upper = conf["upper"]
     color = conf["color"]
     
-    sentence_list = data["sentenceQuizzes"][:15 if is_preview else 300]
-    star_list = data["starQuizzes"][:10 if is_preview else 125]
-    passage_list = data["passageQuizzes"][:2 if is_preview else 25]
-    
-    edition_label = "【試閱體驗手帳題本（30 題精華版）】" if is_preview else "【考場實戰・純題目手寫空白題本（完整 500 題）】"
+    # 試閱版精準取：15 題挖空 ＋ 9 題重組 ＋ 2 篇篇章（6 題）＝ 精準 30 題整！
+    # 正式版全量取：300 題挖空 ＋ 125 題重組 ＋ 25 篇篇章（75 題）＝ 精準 500 題整！
+    if is_preview:
+        sentence_list = data["sentenceQuizzes"][:15]
+        star_list = data["starQuizzes"][:9]
+        passage_list = data["passageQuizzes"][:2]
+        cover_title = f"{upper} 題型專攻・30 題精華試閱本"
+        edition_badge = "【官方試閱體驗本・精選 30 題全真題庫】"
+        stat_p1 = "15 題"
+        stat_p2 = "9 題"
+        stat_p3 = "2 篇 (6題)"
+        total_desc = "共 30 題精選全真試閱題本"
+    else:
+        sentence_list = data["sentenceQuizzes"][:300]
+        star_list = data["starQuizzes"][:125]
+        passage_list = data["passageQuizzes"][:25]
+        cover_title = f"{upper} 500 題厚切全真手帳題本"
+        edition_badge = "【考場實戰・純題目手寫空白題本（完整 500 題）】"
+        stat_p1 = "300 題"
+        stat_p2 = "125 題"
+        stat_p3 = "25 篇 (75題)"
+        total_desc = "共 500 題全真規格題庫"
 
+    total_q = len(sentence_list) + len(star_list) + sum(len(p["questions"]) for p in passage_list)
+
+    # 1. 產生 Part 1 挖空題目 HTML
     p1_items = []
     for idx, q in enumerate(sentence_list, 1):
         q_text = q["question"].replace("（　　）", '<span class="q-blank-under">（　）</span>')
@@ -553,6 +649,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
         </div>
         """)
 
+    # 2. 產生 Part 2 ★ 號重組題目 HTML
     p2_items = []
     for idx, q in enumerate(star_list, 1):
         pre = q["preText"]
@@ -569,6 +666,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
         </div>
         """)
 
+    # 3. 產生 Part 3 篇章題目 HTML
     p3_items = []
     for p_idx, p in enumerate(passage_list, 1):
         sub_qs = []
@@ -596,13 +694,8 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
         </div>
         """)
 
-    ans_cells = []
-    for idx, q in enumerate(sentence_list, 1):
-        ans_cells.append(f"<td><strong>Q{idx}</strong>: {q['correctIndex']}</td>")
-    rows = []
-    for i in range(0, len(ans_cells), 10):
-        rows.append("<tr>" + "".join(ans_cells[i:i+10]) + "</tr>")
-    p1_key_html = "<table class='answer-key-table'><tbody>" + "".join(rows) + "</tbody></table>"
+    # 4. 產生涵蓋所有 Part 題目的完整標準答案卡
+    full_answer_key_html = build_answer_key_html(sentence_list, star_list, passage_list)
 
     lock_banner = ""
     if is_preview:
@@ -625,7 +718,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>日檢手帖｜{upper} 題型專攻・500題全真手帳題本（{ '試閱版' if is_preview else '實戰空白版' }）</title>
+<title>日檢手帖｜{cover_title}</title>
 <style>
 {BOOK_BASE_CSS}
 </style>
@@ -635,7 +728,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
 <div class="screen-header">
   <h1>
     <span style="background:{color}; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">{upper}</span>
-    日檢手帖・500 題全真題型專攻手帳題本（{ '試閱版' if is_preview else '考場實戰空白版' }）
+    日檢手帖・{cover_title}（{total_desc}）
   </h1>
   <div class="screen-actions">
     <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
@@ -652,9 +745,9 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
     </div>
     
     <div class="cover-title-group">
-      <div class="cover-jp-sub">JLPT {upper} 500 QUESTIONS WORKBOOK</div>
-      <div class="cover-title">500 題厚切全真手帳題本</div>
-      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">{edition_label}</div>
+      <div class="cover-jp-sub">JLPT {upper} WORKBOOK EDITION</div>
+      <div class="cover-title">{cover_title}</div>
+      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">{edition_badge}</div>
       <p class="cover-desc">
         專為 iPad GoodNotes 手寫刷題與 A4 實體列印量身打造。<br>
         嚴格參照日本國際交流基金會官方全真日檢規格，完整涵蓋 Part 1 文法挖空、Part 2 ★ 號語序重組、Part 3 篇章脈絡長文三大題型。
@@ -662,22 +755,22 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
       
       <div class="cover-stats">
         <div class="stat-box">
-          <div class="stat-num" style="color:{color};">{'15 題' if is_preview else '300 題'}</div>
+          <div class="stat-num" style="color:{color};">{stat_p1}</div>
           <div class="stat-label">PART 01 文法形式挖空</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num" style="color:{color};">{'10 題' if is_preview else '125 題'}</div>
+          <div class="stat-num" style="color:{color};">{stat_p2}</div>
           <div class="stat-label">PART 02 ★ 號語序重組</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num" style="color:{color};">{'2 篇 (5題)' if is_preview else '25 篇 (75題)'}</div>
+          <div class="stat-num" style="color:{color};">{stat_p3}</div>
           <div class="stat-label">PART 03 篇章長文專欄</div>
         </div>
       </div>
     </div>
     
     <div class="cover-footer">
-      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列</div>
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（{total_desc}）</div>
       <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
     </div>
   </div>
@@ -687,7 +780,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
     <div class="sheet-header">
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="sheet-part-badge" style="background:{color};">PART 01</span>
-        <span class="sheet-title">文法形式の判断（形式挖空題）</span>
+        <span class="sheet-title">文法形式の判断（形式挖空題・共 {len(sentence_list)} 題）</span>
       </div>
       <span class="sheet-page-num">P.01</span>
     </div>
@@ -699,7 +792,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
     <div class="sheet-header">
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="sheet-part-badge" style="background:{color};">PART 02</span>
-        <span class="sheet-title">文の組み立て（★ 號排序重組題）</span>
+        <span class="sheet-title">文の組み立て（★ 號排序重組題・共 {len(star_list)} 題）</span>
       </div>
       <span class="sheet-page-num">P.02</span>
     </div>
@@ -711,26 +804,26 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
     <div class="sheet-header">
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="sheet-part-badge" style="background:{color};">PART 03</span>
-        <span class="sheet-title">文章の文法（篇章脈絡填空題）</span>
+        <span class="sheet-title">文章の文法（篇章脈絡填空題・共 {len(passage_list)} 篇）</span>
       </div>
       <span class="sheet-page-num">P.03</span>
     </div>
     {"".join(p3_items)}
   </div>
 
-  <!-- 答案檢索矩陣 -->
+  <!-- 答案檢索矩陣（完整涵蓋全冊所有題目） -->
   <div class="page-sheet page-break">
     <div class="sheet-header">
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="sheet-part-badge" style="background:#2B2523;">ANSWER KEY</span>
-        <span class="sheet-title">標準正解對照矩陣卡</span>
+        <span class="sheet-title">全卷標準正解速查矩陣卡（共 {total_q} 題完整正解）</span>
       </div>
       <span class="sheet-page-num">APPENDIX</span>
     </div>
     <p style="font-size:12px; color:rgba(43,37,35,0.7); margin-bottom:12px;">
       💡 作答完畢後可直接核對本表格快速計算答對題數：
     </p>
-    {p1_key_html}
+    {full_answer_key_html}
   </div>
 
   {lock_banner}
@@ -848,7 +941,7 @@ def generate_solution_workbook_html(level_key: str, data: dict) -> str:
 <div class="screen-header">
   <h1>
     <span style="background:{color}; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">{upper}</span>
-    日檢手帖・500 題全真手帳題本（逐題手寫風詳解訂正本）
+    日檢手帖・{upper} 500 題全真手帳題本（逐題手寫風詳解訂正本）
   </h1>
   <div class="screen-actions">
     <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
@@ -865,15 +958,30 @@ def generate_solution_workbook_html(level_key: str, data: dict) -> str:
     <div class="cover-title-group">
       <div class="cover-jp-sub">JLPT {upper} 500 COMPLETE SOLUTIONS</div>
       <div class="cover-title">500 題逐題詳解訂正手帳</div>
-      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">【考前訂正神器・考點語法全剖析】</div>
+      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">【考前訂正神器・考點語法全剖析（完整 500 題）】</div>
       <p class="cover-desc">
         完整收錄 500 題之正解選項標記、語法拆解、長文中日對照與考點筆記欄。<br>
         隨心在 iPad GoodNotes 上用螢光筆標記錯題，考前最後 30 分鐘只要複習這本錯題手帳即可安心赴考！
       </p>
+
+      <div class="cover-stats">
+        <div class="stat-box">
+          <div class="stat-num" style="color:{color};">300 題</div>
+          <div class="stat-label">PART 01 形式挖空詳解</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color:{color};">125 題</div>
+          <div class="stat-label">PART 02 ★ 號重組詳解</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color:{color};">25 篇 (75題)</div>
+          <div class="stat-label">PART 03 篇章長文詳解</div>
+        </div>
+      </div>
     </div>
     
     <div class="cover-footer">
-      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列</div>
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（共 500 題完整詳解）</div>
       <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
     </div>
   </div>
@@ -933,14 +1041,14 @@ def generate_readme(level_key: str) -> str:
    - 包含 Part 1（300題）、Part 2（125題）、Part 3（25篇/75題）共 500 題純題目。
    - 雙擊即可在 Chrome、Safari 等瀏覽器開啟。
    - 點擊右上角「🖨️ 列印 A4 / 轉存 PDF」按鈕，即可匯出為高解析度 A4 PDF 匯入 iPad（GoodNotes）或列印成紙本。
-   - 卷末附有標準答案速查矩陣卡。
+   - 卷末附有涵蓋全部 500 題之標準正解速查矩陣卡。
 
 2. `日檢手帖-{conf['upper']}-500題全真手帳題本-逐題詳解訂正版.html`
    - 完整 500 題的考點語法剖析、正解選項標記、中日對照長文與專屬手寫錯題筆記欄。
    - 專門用於考前訂正與衝刺複習。
 
 3. `日檢手帖-{conf['upper']}-500題全真手帳題本-試閱版.html`
-   - 30 題精華速覽版。
+   - 30 題精華速覽版（含 15 題挖空＋9 題重組＋2 篇長文 6 題，附完整 30 題標準正解卡）。
 
 【使用建議】：
 - 方式 A（iPad / 平板使用者）：在瀏覽器按列印 ➔ 另存為 PDF ➔ 匯入 GoodNotes ➔ 使用 Apple Pencil 像手帳一樣刷題、圈助詞與訂正。
@@ -951,7 +1059,7 @@ def generate_readme(level_key: str) -> str:
 """
 
 def main():
-    print("🚀 開始產製 JLPT N1～N5 題型專攻 500 題全真手帳題本套組...")
+    print("🚀 開始產製 JLPT N1～N5 題型專攻 500 題全真手帳題本套組（校驗正解與封面題數）...")
     
     for lvl in ["n5", "n4", "n3", "n2", "n1"]:
         conf = LEVEL_INFO[lvl]
@@ -965,31 +1073,37 @@ def main():
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             
-        print(f"📦 正在產製 {upper} 題本 HTML（共 500 題）...")
+        print(f"📦 正在產製 {upper} 題本 HTML（實戰 500 題 ＋ 試閱 30 題精華）...")
         
+        # 1. 產生試閱版 HTML（精準 30 題整，解答包含全部 30 題）
         preview_html = generate_blank_workbook_html(lvl, data, is_preview=True)
         preview_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-試閱版.html"
         with open(preview_file, "w", encoding="utf-8") as f:
             f.write(preview_html)
             
+        # 同步複製至 public/dist-products/quiz/
         public_preview = PUBLIC_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-試閱版.html"
         with open(public_preview, "w", encoding="utf-8") as f:
             f.write(preview_html)
             
+        # 2. 產生實戰空白版 HTML（精準 500 題整，解答包含全部 500 題）
         blank_html = generate_blank_workbook_html(lvl, data, is_preview=False)
         blank_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html"
         with open(blank_file, "w", encoding="utf-8") as f:
             f.write(blank_html)
             
+        # 3. 產生逐題詳解訂正版 HTML（精準 500 題整）
         sol_html = generate_solution_workbook_html(lvl, data)
         sol_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-逐題詳解訂正版.html"
         with open(sol_file, "w", encoding="utf-8") as f:
             f.write(sol_html)
             
+        # 4. 產生 README
         readme_file = DIST_PRODUCTS_DIR / f"README-{upper}-使用說明.txt"
         with open(readme_file, "w", encoding="utf-8") as f:
             f.write(generate_readme(lvl))
             
+        # 5. 打包成 ZIP
         zip_path = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本套組.zip"
         with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
             zf.write(blank_file, arcname=f"日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html")
@@ -999,6 +1113,7 @@ def main():
             
         print(f"  ✓ {upper} 題本完成：{zip_path.name} ({zip_path.stat().st_size / 1024:.1f} KB)")
         
+    # 產生全套 N1～N5 典藏大禮包 ZIP
     all_zip = DIST_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本終身典藏包.zip"
     with zipfile.ZipFile(all_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for lvl in ["n5", "n4", "n3", "n2", "n1"]:
