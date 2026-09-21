@@ -144,8 +144,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     tint: '#e2f4fa',
     title: '【日檢手帖】JLPT N4 500 題厚切全真手帳題本',
     subTitle: '進階基礎・日常動詞活用、敬語使役被動與生活指南 500 題',
-    priceUsd: '$7.99',
-    priceTwdApprox: '約 NT$250',
+    priceUsd: '$8.99',
+    priceTwdApprox: '約 NT$280',
     stats: {
       cloze: '300 題',
       star: '125 題',
@@ -169,8 +169,8 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     tint: '#f2f8e6',
     title: '【日檢手帖】JLPT N5 500 題厚切全真手帳題本',
     subTitle: '零基礎入門首選・基礎格助詞、日常對話與生活記事 500 題實戰',
-    priceUsd: '$5.99',
-    priceTwdApprox: '約 NT$190',
+    priceUsd: '$6.99',
+    priceTwdApprox: '約 NT$220',
     stats: {
       cloze: '300 題',
       star: '125 題',
@@ -195,7 +195,7 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     title: '【日檢手帖】JLPT N1～N5 全真 2,500 題終身典藏題本包',
     subTitle: '一次買齊五大級別共 10 冊手帳題本（5冊實戰空白本＋5冊逐題手寫風詳解訂正手帳）',
     priceUsd: '$24.99',
-    priceTwdApprox: '約 NT$770',
+    priceTwdApprox: '約 NT$780',
     stats: {
       cloze: '1,500 題',
       star: '625 題',
@@ -208,7 +208,7 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
       '✍️ 5 冊【考場實戰純題空白手寫本】：完整收錄全 2,500 題，隨心在 iPad 或紙本計時刷題',
       '📑 5 冊【逐題詳解訂正神手帳】：2,500 題逐題日文原句、中日對照、考點拆解與錯題筆記欄',
       '📊 5 份【標準正解 Answer Key 矩陣卡】：考前 30 分鐘快速對分核對',
-      '💡 現省 55% 終身大特惠：一次付費，永久獲取 N1～N5 題本檔案！',
+      '💡 現省 54% 終身大特惠：一次付費，永久獲取 N1～N5 題本檔案！',
     ],
     blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
     solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-詳解試閱版.html',
@@ -657,7 +657,7 @@ export function ProductShowcasePage() {
             <span>👑</span>
             <span>
               {activeLine === 'quiz'
-                ? 'N1～N5 全真 2,500 題終身典藏題本包（共 10 冊・現省 55%）'
+                ? 'N1～N5 全真 2,500 題終身典藏題本包（共 10 冊・現省 54%）'
                 : 'N1～N5 終身全套典藏包（一次買齊 5 級教材・現省 42%）'}
             </span>
           </button>

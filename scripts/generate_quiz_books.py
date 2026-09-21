@@ -62,8 +62,8 @@ LEVEL_INFO = {
         "sub": "日常會話・敬語與使役被動全面攻略",
         "color": "#0096C7",
         "tint": "#E2F4FA",
-        "price_usd": "$7.99",
-        "price_twd": "約 NT$250",
+        "price_usd": "$8.99",
+        "price_twd": "約 NT$280",
     },
     "n5": {
         "upper": "N5",
@@ -71,8 +71,8 @@ LEVEL_INFO = {
         "sub": "零基礎新手・基礎助詞動詞變化一本通",
         "color": "#8338EC",
         "tint": "#F2E8FD",
-        "price_usd": "$5.99",
-        "price_twd": "約 NT$190",
+        "price_usd": "$6.99",
+        "price_twd": "約 NT$220",
     },
 }
 
