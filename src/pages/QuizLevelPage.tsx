@@ -399,7 +399,7 @@ function QuizLevelContent({ level }: { level: Level }) {
               </span>
             </div>
 
-            {activeQuestion.type === 'sentence' && activeQuestion.data.targetGrammar ? (
+            {activeQuestion.type === 'sentence' && activeQuestion.data.targetGrammar && sentenceAnswers[activeQuestion.id] !== undefined ? (
               <span className="shrink-0 max-w-[170px] truncate font-mono text-[11px] text-paper-sumi/60 sm:max-w-none">
                 考點：{activeQuestion.data.targetGrammar}
               </span>

@@ -856,7 +856,6 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
         <div class="quiz-item-box">
           <div class="q-meta-line">
             <span class="q-num-tag">Q.{idx:02d}</span>
-            <span class="q-grammar-tag">考點：{q.get('targetGrammar', '文法句型')}</span>
           </div>
           <div class="q-sentence">{q_text}</div>
           <div class="q-options-grid">{opts}</div>
@@ -872,8 +871,8 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
         p2_items.append(f"""
         <div class="quiz-item-box">
           <div class="q-meta-line">
-            <span class="q-num-tag">Q.{idx:02d}（★ 排序題）</span>
-            <span class="q-grammar-tag">找出落在 ★ 號位置的選項</span>
+            <span class="q-num-tag">Q.{idx:02d}</span>
+            <span class="q-grammar-tag">★ 排序題</span>
           </div>
           <div class="q-sentence">{pre} ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ {post}</div>
           <div class="q-options-grid">{chunks}</div>
