@@ -204,14 +204,14 @@ const QUIZ_PRODUCTS: Record<LevelKey, QuizProductInfo> = {
     },
     features: [
       '👑 包含 N5、N4、N3、N2、N1 全部 5 個獨立級別的 500 題全真題本套組（共 2,500 題）',
-      '🔥 包含高達 1,750 題網頁未公開之獨家進階真題，終身題海直通最高殿堂',
-      '✍️ 5 冊【考場實戰純題空白手寫本】：完整收錄全 2,500 題，隨心在 iPad 或紙本計時刷題',
-      '📑 5 冊【逐題詳解訂正神手帳】：2,500 題逐題日文原句、中日對照、考點拆解與錯題筆記欄',
+      '🔥 包含高達 2,250 題網頁未公開之獨家進階真題，終身題海直通最高殿堂',
+      '✍️ 【完整一次收錄合訂本 ＋ 5 冊分級獨立冊】：完整收錄全 2,500 題，隨心在 iPad 或紙本刷題',
+      '📑 【逐題詳解訂正合訂神手帳】：2,500 題逐題日文原句、中日對照、考點拆解與錯題筆記欄',
       '📊 5 份【標準正解 Answer Key 矩陣卡】：考前 30 分鐘快速對分核對',
       '💡 現省 54% 終身大特惠：一次付費，永久獲取 N1～N5 題本檔案！',
     ],
-    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-試閱版.html',
-    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N2-500題全真手帳題本-詳解試閱版.html',
+    blankWorkbookUrl: '/dist-products/quiz/日檢手帖-N1-N5-全真2500題手帳題本-試閱版.html',
+    solutionWorkbookUrl: '/dist-products/quiz/日檢手帖-N1-N5-全真2500題手帳題本-詳解試閱版.html',
   },
 };
 

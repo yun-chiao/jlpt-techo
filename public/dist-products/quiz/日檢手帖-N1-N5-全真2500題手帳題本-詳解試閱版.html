@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日檢手帖｜N1～N5 全真2500題手帳題本（詳解試閱版）</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500;700&family=Noto+Serif+JP:wght@600;700;900&family=Noto+Serif+TC:wght@600;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap');
+
+:root {
+  --sumi: #2B2523;
+  --canvas: #FAF7F2;
+  --card: #FFFFFF;
+  --butter: #FFE5A3;
+  --oatmeal: #EFEAE1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
+  background-color: #FAF7F2;
+  color: var(--sumi);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.btn-cta {
+  background: var(--butter);
+  color: var(--sumi);
+  font-weight: 800;
+  font-size: 13px;
+  border: 1.5px solid var(--sumi);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cta:hover {
+  background: #FFFFFF;
+  transform: translate(-1px, -1px);
+}
+
+.book-container {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 14mm 14mm 16mm 14mm;
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  .screen-header {
+    display: none !important;
+  }
+  .scroll-hint {
+    display: none !important;
+  }
+  .table-wrap {
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .book-container {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+  .no-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+/* 封面樣式 */
+.book-cover {
+  min-height: 275mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24mm 20mm;
+  border: 4px solid var(--sumi);
+  margin: 10mm;
+  background: var(--canvas);
+  position: relative;
+}
+
+.cover-header {
+  border-bottom: 2px solid var(--sumi);
+  padding-bottom: 16px;
+}
+
+.cover-issue {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(43,37,35,0.7);
+}
+
+.cover-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 2px solid var(--sumi);
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: 'DM Mono', monospace;
+  box-shadow: 3px 3px 0px var(--sumi);
+  margin-top: 12px;
+}
+
+.cover-title-group {
+  margin: 40px 0;
+}
+
+.cover-jp-sub {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(43,37,35,0.8);
+  margin-bottom: 8px;
+}
+
+.cover-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: var(--sumi);
+  letter-spacing: -0.5px;
+}
+
+.cover-desc {
+  font-size: 13.5px;
+  color: rgba(43,37,35,0.85);
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.stat-box {
+  background: #FFFFFF;
+  border: 2px solid var(--sumi);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 0px var(--sumi);
+}
+
+.stat-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.7);
+  margin-top: 2px;
+}
+
+.cover-footer {
+  border-top: 2px solid var(--sumi);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(43,37,35,0.6);
+}
+
+/* 內容頁面通用 */
+.page-sheet {
+  padding: 18mm 16mm;
+  min-height: 280mm;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--sumi);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.sheet-part-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 900;
+  background: var(--sumi);
+  color: #FFFFFF;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.sheet-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.sheet-page-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(43,37,35,0.5);
+}
+
+/* 題目卡片樣式 */
+.quiz-item-box {
+  border: 1.5px solid var(--sumi);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #FFFFFF;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.q-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.q-num-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--sumi);
+}
+
+.q-grammar-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(43,37,35,0.6);
+}
+
+.q-sentence {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.q-blank-under {
+  display: inline-block;
+  min-width: 48px;
+  border-bottom: 2px solid var(--sumi);
+  text-align: center;
+  padding: 0 4px;
+  font-family: 'DM Mono', monospace;
+}
+
+.q-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+}
+
+.opt-pill {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(43,37,35,0.25);
+  background: var(--canvas);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.opt-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sumi);
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+/* 詳解區塊樣式（訂正本專用） */
+.solution-box {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--canvas);
+  border-left: 3px solid var(--sumi);
+  border-radius: 0 6px 6px 0;
+  font-size: 11.5px;
+}
+
+.sol-ans-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.sol-badge {
+  background: var(--butter);
+  border: 1px solid var(--sumi);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 11px;
+  shrink: 0;
+}
+
+.sol-full {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  color: var(--sumi);
+  word-break: break-word;
+}
+
+.sol-expl {
+  color: rgba(43,37,35,0.9);
+  line-height: 1.5;
+  margin-top: 3px;
+  word-break: break-word;
+}
+
+.note-taking-space {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px dashed rgba(43,37,35,0.25);
+  border-radius: 4px;
+  background: #FFFFFF;
+  font-size: 10.5px;
+  color: rgba(43,37,35,0.55);
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+/* 篇章閱讀題排版 */
+.passage-box {
+  background: var(--canvas);
+  border: 1.5px solid var(--sumi);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 14px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12.5px;
+  line-height: 1.8;
+}
+
+.passage-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(43,37,35,0.2);
+  padding-bottom: 6px;
+}
+
+.passage-title {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.passage-genre {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  background: var(--oatmeal);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(43,37,35,0.2);
+}
+
+/* 答案卡速查矩陣 */
+.answer-key-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.answer-key-table th, .answer-key-table td {
+  border: 1px solid var(--sumi);
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.answer-key-table th {
+  background: var(--sumi);
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.answer-key-table tr:nth-child(even) td {
+  background: var(--canvas);
+}
+
+.scroll-hint {
+  display: none;
+}
+
+.table-wrap {
+  width: 100%;
+}
+
+.lock-cta-box {
+  background: var(--canvas);
+  border: 2px dashed var(--sumi);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* 手機與窄螢幕預覽視窗全面響應式（防止溢出、破版與排版錯位） */
+@media screen and (max-width: 680px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-cover {
+    min-height: auto !important;
+    margin: 8px !important;
+    padding: 18px 12px !important;
+    border-width: 2px !important;
+  }
+
+  .cover-header {
+    padding-bottom: 10px !important;
+  }
+
+  .cover-issue {
+    font-size: 9.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .cover-badge {
+    font-size: 13.5px !important;
+    padding: 3px 8px !important;
+    margin-top: 8px !important;
+    box-shadow: 2px 2px 0px var(--sumi) !important;
+    white-space: normal !important;
+  }
+
+  .cover-title-group {
+    margin: 18px 0 !important;
+  }
+
+  .cover-jp-sub {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cover-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .cover-desc {
+    font-size: 12px !important;
+    margin-top: 10px !important;
+    line-height: 1.6 !important;
+  }
+
+  .cover-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+
+  .stat-box {
+    padding: 8px 4px !important;
+    border-width: 1.5px !important;
+  }
+
+  .stat-num {
+    font-size: 15px !important;
+  }
+
+  .stat-label {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cover-footer {
+    padding-top: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    font-size: 10px !important;
+  }
+
+  .page-sheet {
+    padding: 16px 12px !important;
+    min-height: auto !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1.5px dashed rgba(43,37,35,0.2) !important;
+  }
+
+  .sheet-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 6px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .sheet-part-badge {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .sheet-title {
+    font-size: 13px !important;
+  }
+
+  .sheet-page-num {
+    font-size: 10px !important;
+  }
+
+  .quiz-item-box {
+    padding: 10px 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .q-meta-line {
+    margin-bottom: 4px !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .q-sentence {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    margin-bottom: 8px !important;
+  }
+
+  .q-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .opt-pill {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+    word-break: break-word !important;
+  }
+
+  .solution-box {
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .sol-ans-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .passage-box {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+  .passage-title-bar {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .passage-title {
+    font-size: 13px !important;
+  }
+
+  .scroll-hint {
+    display: block !important;
+    font-size: 10.5px !important;
+    color: rgba(43,37,35,0.6) !important;
+    margin-bottom: 4px !important;
+    font-family: 'DM Mono', monospace !important;
+  }
+
+  .table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 16px !important;
+    border: 1.5px solid var(--sumi) !important;
+    border-radius: 6px !important;
+    background: #FFFFFF !important;
+  }
+
+  .answer-key-table {
+    min-width: 440px !important;
+    font-size: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .answer-key-table th, .answer-key-table td {
+    padding: 5px 3px !important;
+  }
+
+  .lock-cta-box {
+    padding: 16px 12px !important;
+    margin: 20px 0 !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <h1>
+    <span style="background:#2B2523; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">N1～N5</span>
+    日檢手帖・全真 2,500 題逐題詳解訂正手帳（詳解試閱版）
+  </h1>
+  <div class="screen-actions">
+    <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
+    <a href="/products?tab=quiz&level=all" class="btn-print" style="background:#FFFFFF;">🛒 返回題庫專區</a>
+  </div>
+</div>
+
+<div class="book-container">
+  <div class="book-cover">
+    <div class="cover-header">
+      <div class="cover-issue">NIKKEN TECHO JLPT SOLUTIONS NOTEBOOK</div>
+      <div class="cover-badge" style="background:#2B2523;">N1～N5 終身全套</div>
+    </div>
+    
+    <div class="cover-title-group">
+      <div class="cover-jp-sub">JLPT N1-N5 COMPLETE SOLUTIONS NOTEBOOK</div>
+      <div class="cover-title">N1～N5 題型專攻・30 題手寫詳解試閱手帳</div>
+      <div style="font-size:15px; font-weight:800; color:#2B2523; margin-top:6px;">【考前訂正神器・N1～N5 精選 30 題手寫詳解試閱合訂本】</div>
+      <p class="cover-desc">
+        完整一次收錄 N5、N4、N3、N2、N1 全部五大級別，共 2,500 題完整日文原句、正解標註、中文翻譯與考點解析。
+      </p>
+    </div>
+    
+    <div class="cover-stats-box">
+      <div class="stat-pill">
+        <div class="stat-val">15 題</div>
+        <div class="stat-lbl">Part 1 挖空詳解</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val">10 題</div>
+        <div class="stat-lbl">Part 2 重組詳解</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val">5 篇</div>
+        <div class="stat-lbl">Part 3 篇章詳解</div>
+      </div>
+    </div>
+    
+    <div class="cover-footer">
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（共 30 題逐題詳解試閱合訂手帳）</div>
+      <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
+    </div>
+  </div>
+
+  
+        <div class="page-sheet page-break" style="background:#F2E8FD; padding:18px 24px; border-left:6px solid #8338EC; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:#8338EC; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">N5</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【N5 篇】N5 入門基石・逐題手寫詳解（共 8 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">零基礎新手・基礎助詞動詞變化一本通</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:#8338EC;">SOLUTIONS</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#8338EC;">N5 S01</span>
+              <span class="sheet-title">文法形式挖空・3 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N5 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N5-Q.01</span>
+                <span class="q-grammar-tag">考點：助詞「と」（完全列舉）</span>
+              </div>
+              <div class="q-sentence">わたしは　毎朝　パン<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ と ）</span>牛乳を　食べます。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>と ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>に</div><div class="opt-pill" style=""><span class="opt-num">3</span>を</div><div class="opt-pill" style=""><span class="opt-num">4</span>や</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (1)</span>
+                  <span class="sol-full">【 と 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>並列助詞「と」用於完全列舉兩者（A 和 B）。「パンと牛乳」意為「麵包與牛奶」。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N5-Q.02</span>
+                <span class="q-grammar-tag">考點：原因「〜から」</span>
+              </div>
+              <div class="q-sentence">昨日は　雨が　たくさん　降った<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ から ）</span>、どこへも　行きませんでした。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>けど</div><div class="opt-pill" style=""><span class="opt-num">2</span>でも</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>から ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>より</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (3)</span>
+                  <span class="sol-full">【 から 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「〜から」接在普通體或丁寧體後，表示主觀的原因、理由。「降ったから」意為「因為下雨了」。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N5-Q.03</span>
+                <span class="q-grammar-tag">考點：な形容詞中頓「〜で」</span>
+              </div>
+              <div class="q-sentence">この　図書館は　静か<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ で ）</span>、とても　広いです。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>だ</div><div class="opt-pill" style=""><span class="opt-num">2</span>に</div><div class="opt-pill" style=""><span class="opt-num">3</span>な</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>で ✓ 正解</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (4)</span>
+                  <span class="sol-full">【 で 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>な形容詞中頓形為「詞幹＋で」，用於並列兩個特徵。「静かで、広いです」表示「既安靜又寬敞」。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#8338EC;">N5 S02</span>
+              <span class="sheet-title">★ 號語序重組・2 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N5 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N5-Q.01</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">わたしは　毎晩　お風呂に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　寝ます。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>本を ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>入って</div><div class="opt-pill" style=""><span class="opt-num">3</span>から</div><div class="opt-pill" style=""><span class="opt-num">4</span>読んで</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (1)</span>
+                  <span class="sol-full">【 本を 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 2 → 3 → 1 → 4</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：わたしは毎晩お風呂に入ってから本を読んで寝ます。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：我每晚洗完澡之後，看本書才睡覺。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>文法解構：「動詞て形＋から」（...之後）接續「お風呂に入って (1) から (3)」；其後接動作「本を (2) 読んで (4) 寝ます」。 正確語序應為 [2, 3, 1, 4]。因此 ★ 號位置（第 3 格）為 1 號「本を」。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N5-Q.02</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">駅の　前に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　できました。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>新しい</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>レストラン ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>大きくて</div><div class="opt-pill" style=""><span class="opt-num">4</span>が</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (2)</span>
+                  <span class="sol-full">【 レストラン 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 3 → 1 → 2 → 4</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：駅の前に大きくて新しいレストランができました。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：車站前開了一間又大又新的餐廳。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>文法解構：形容詞中頓並列修飾名詞：「大きくて (3) ➔ 新しい (1) ➔ レストラン (2) ➔ が (4)」。 正確語序應為 [3, 1, 2, 4]。因此 ★ 號位置（第 3 格）為 2 號「レストラン」。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#8338EC;">N5 S03</span>
+              <span class="sheet-title">篇章脈絡填空・1 篇長文逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N5 SOL</span>
+          </div>
+          
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 N5 第 01 篇：留学生エマさんの日記「はじめての京都旅行」</span>
+                  <span class="passage-genre">日記・隨筆</span>
+                </div>
+                <div style="white-space:pre-line;">先週の土曜日に、友達のリーさんと一緒に京都へ行きました。東京駅から新幹線に【 01 】、約2時間で京都に着きました。京都はとても歴史が古い町で、きれいなお寺がたくさんありました。
+お昼ご飯は、京都で有名な豆腐料理の店に入りました。料理はとてもおいしかった【 02 】、少し高かったです。
+午後はずっと雨が降っていました。【 03 】、傘をさしながら写真をたくさん撮って、とても楽しかったです。また行きたいです。</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(1) 乗って</div>
+                  <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>乗って ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>乗った</div><div class="opt-pill" style=""><span class="opt-num">3</span>乗り</div><div class="opt-pill" style=""><span class="opt-num">4</span>乗る</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>前後相繼發生的動作，使用動詞て形（乗って）連接後續到達動作。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(2) ですが</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>ので</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>ですが ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>そして</div><div class="opt-pill" style=""><span class="opt-num">4</span>から</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>「好吃」與「有點貴」為轉折對立關係，接在普通形後選轉折助詞「ですが（雖然...但是...）」最為自然。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(4) しかし</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>そして</div><div class="opt-pill" style=""><span class="opt-num">2</span>ですから</div><div class="opt-pill" style=""><span class="opt-num">3</span>それで</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>しかし ✓ 正解</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>前句說明下雨的不便，後句表示撐傘拍照依然很開心，前後句意為轉折關係，使用接續詞「しかし（但是）」首字連接。</div>
+                </div>
+                
+                <div class="note-taking-space" style="margin-top:10px;">✍️ 篇章長文錯題筆記：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="page-sheet page-break" style="background:#E2F4FA; padding:18px 24px; border-left:6px solid #0096C7; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:#0096C7; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">N4</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【N4 篇】N4 進階基礎・逐題手寫詳解（共 8 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">日常會話・敬語與使役被動全面攻略</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:#0096C7;">SOLUTIONS</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#0096C7;">N4 S01</span>
+              <span class="sheet-title">文法形式挖空・3 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N4 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N4-Q.01</span>
+                <span class="q-grammar-tag">考點：許可「〜てもいいですか」</span>
+              </div>
+              <div class="q-sentence">熱が　あるので、今日は　早く　帰って<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ も ）</span>いいですか。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>に</div><div class="opt-pill" style=""><span class="opt-num">2</span>で</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>も ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>は</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (3)</span>
+                  <span class="sol-full">【 も 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞て形＋もいいですか」表示請求許可（可以...嗎？）。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N4-Q.02</span>
+                <span class="q-grammar-tag">考點：客氣請求「〜ていただけませんか」</span>
+              </div>
+              <div class="q-sentence">すみませんが、この言葉の読み方を教えて<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ （無） ）</span>いただけませんか。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>くださり</div><div class="opt-pill" style=""><span class="opt-num">2</span>くださって</div><div class="opt-pill" style=""><span class="opt-num">3</span>て</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>（無） ✓ 正解</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (4)</span>
+                  <span class="sol-full">【 （無） 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>禮貌請求句型「動詞て形＋いただけませんか」。「教えて」已是て形，後方直接接「いただけませんか」。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N4-Q.03</span>
+                <span class="q-grammar-tag">考點：授受「〜てあげる」</span>
+              </div>
+              <div class="q-sentence">弟の誕生日に　新しい自転車を　買って<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ あげた ）</span>。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>くれた</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>あげた ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>いただいた</div><div class="opt-pill" style=""><span class="opt-num">4</span>もらった</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (2)</span>
+                  <span class="sol-full">【 あげた 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「〜てあげる」表示說話者為他人（弟弟）做某事，給予恩惠。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#0096C7;">N4 S02</span>
+              <span class="sheet-title">★ 號語序重組・2 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N4 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N4-Q.01</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">来週のスピーチコンテストで　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　練習しています。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>話せる ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>ように</div><div class="opt-pill" style=""><span class="opt-num">3</span>上手に</div><div class="opt-pill" style=""><span class="opt-num">4</span>毎日</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (1)</span>
+                  <span class="sol-full">【 話せる 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 4 → 3 → 1 → 2</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：来週のスピーチコンテストで毎日上手に話せるように練習しています。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：為了在下週的演講比賽上能講得流利，我每天都在練習。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>毎日 (4) ➔ 上手に (3) ➔ 話せる (1) ➔ ように (2)。★ 為 1 號。【文法重點：目的「〜ように」】</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N4-Q.02</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">大切な会議の資料ですから、先生に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　準備しました。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>とおりに</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>きちんと ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>忘れないように</div><div class="opt-pill" style=""><span class="opt-num">4</span>言われた</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (2)</span>
+                  <span class="sol-full">【 きちんと 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 4 → 1 → 2 → 3</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：大切な会議の資料ですから、先生に言われたとおりにきちんと忘れないように準備しました。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：因為是很重要的會議資料，所以我按照老師所說的那樣，好好準備以防忘記。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>言われた (4) ➔ とおりに (1) ➔ きちんと (2) ➔ 忘れないように (3)。★ 為 2 號。【文法重點：遵照指示「〜とおりに」與預防目的「〜ないように」】</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#0096C7;">N4 S03</span>
+              <span class="sheet-title">篇章脈絡填空・1 篇長文逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N4 SOL</span>
+          </div>
+          
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 N4 第 01 篇：「日本のゴミ分別ルールについて」</span>
+                  <span class="passage-genre">生活指南專欄</span>
+                </div>
+                <div style="white-space:pre-line;">日本に住み始めてから、驚いたことがあります。それは、ゴミの捨て方がとても細かいということです。
+私の国では、燃えるゴミもプラスチックも一緒の袋に入れて捨てていました。しかし、日本では住んでいる町【 01 】、曜日や分別方法が厳しく決まっています。
+最初は少し面倒だと感じていました。【 02 】、慣れてくると、街が清潔に保たれている理由がよく分かります。皆さんもルールをしっかり守って、【 03 】ようにしましょう。</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(2) によって</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>に対して</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>によって ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>について</div><div class="opt-pill" style=""><span class="opt-num">4</span>にとって</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>「名詞＋によって」表示因地區而異、根據不同的規定。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(4) けれども</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>つまり</div><div class="opt-pill" style=""><span class="opt-num">2</span>そのため</div><div class="opt-pill" style=""><span class="opt-num">3</span>たとえば</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>けれども ✓ 正解</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>起初覺得麻煩，但習慣後很認同街道整潔，前後文意轉折選「けれども」。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(3) 生活する</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>生活できる</div><div class="opt-pill" style=""><span class="opt-num">2</span>生活した</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>生活する ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>生活している</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>「動詞辭書形＋ようにしましょう」表示呼籲大家努力養成良好的生活習慣。</div>
+                </div>
+                
+                <div class="note-taking-space" style="margin-top:10px;">✍️ 篇章長文錯題筆記：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="page-sheet page-break" style="background:#F2F8E6; padding:18px 24px; border-left:6px solid #7CB518; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:#7CB518; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">N3</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【N3 篇】N3 實用分水嶺・逐題手寫詳解（共 8 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">跨越日檢分水嶺・日常複雜情境與職場銜接</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:#7CB518;">SOLUTIONS</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#7CB518;">N3 S01</span>
+              <span class="sheet-title">文法形式挖空・3 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N3 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N3-Q.01</span>
+                <span class="q-grammar-tag">考點：階段前置「〜た上で」</span>
+              </div>
+              <div class="q-sentence">留学についての計画は、両親とよく相談<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ した ）</span>上で決めたいと思います。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>する</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>した ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>しよう</div><div class="opt-pill" style=""><span class="opt-num">4</span>している</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (2)</span>
+                  <span class="sol-full">【 した 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞た形＋上で」表示「在完成前項動作的前提基礎上，再進行後項判斷或行動」。「相談した上で」表示與父母充分商量後再做決定。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N3-Q.02</span>
+                <span class="q-grammar-tag">考點：重要場合「〜に際して」</span>
+              </div>
+              <div class="q-sentence">新店舗のオープン<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ に際して ）</span>、近隣の住民の皆様にご挨拶に伺いました。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>を通じて</div><div class="opt-pill" style=""><span class="opt-num">2</span>にとって</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>に際して ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>にわたって</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (3)</span>
+                  <span class="sol-full">【 に際して 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞 / 動詞辭書形＋に際して」為莊重的正式表現，表示「面臨重要事件之際、在...開幕之際」。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N3-Q.03</span>
+                <span class="q-grammar-tag">考點：名不虛傳「〜だけあって」</span>
+              </div>
+              <div class="q-sentence">彼は10年間も本場フランスで修業した<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ だけあって ）</span>、作る料理はどれも素晴らしい。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>せいで</div><div class="opt-pill" style=""><span class="opt-num">2</span>くせに</div><div class="opt-pill" style=""><span class="opt-num">3</span>からといって</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>だけあって ✓ 正解</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (4)</span>
+                  <span class="sol-full">【 だけあって 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「普通形＋だけあって」表示「不愧是...、名不虛傳」，後句承接相稱的高評價或卓越結果。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#7CB518;">N3 S02</span>
+              <span class="sheet-title">★ 號語序重組・2 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N3 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N3-Q.01</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">健康を維持するためには、 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　大切です。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>運動する</div><div class="opt-pill" style=""><span class="opt-num">2</span>だけでなく</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>食事のバランスにも ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>気をつけることが</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (3)</span>
+                  <span class="sol-full">【 食事のバランスにも 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 1 → 2 → 3 → 4</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：健康を維持するためには、運動するだけでなく食事のバランスにも気をつけることが大切です。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：為了保持健康，不僅要運動，注意飲食均衡也很重要。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>運動する (1) ➔ だけでなく (2) ➔ 食事のバランスにも (3) ➔ 気をつけることが (4)。★ 為 3 號。句型「〜だけでなく〜も」。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N3-Q.02</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">どんなに困難な目標であっても、途中で　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　決して成功は得られない。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>諦めて</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>ような ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>しまう</div><div class="opt-pill" style=""><span class="opt-num">4</span>ことでは</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (2)</span>
+                  <span class="sol-full">【 ような 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 1 → 3 → 2 → 4</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：どんなに困難な目標であっても、途中で諦めてしまうようなことでは決して成功は得られない。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：不管目標多難，半途放棄是絕不可能成功的。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>諦めて (1) ➔ しまう (3) ➔ ような (2) ➔ ことでは (4)。★ 為 2 號。句型「〜ようなことでは」。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#7CB518;">N3 S03</span>
+              <span class="sheet-title">篇章脈絡填空・1 篇長文逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N3 SOL</span>
+          </div>
+          
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 N3 第 01 篇：「現代社会における『睡眠』の重要性」</span>
+                  <span class="passage-genre">日常科學專欄</span>
+                </div>
+                <div style="white-space:pre-line;">忙しい現代人は、仕事や勉強の時間を確保するために、つい睡眠時間を削りがちです。しかし、近年の脳科学の研究【 01 】、慢性的な睡眠不足は集中力や記憶力の著しい低下を招くことが明らかになっています。
+睡眠中には単に体を休める【 02 】、日中に得た膨大な情報を整理して記憶を定着させる重要な作業が行われています。つまり、睡眠は脳を最適な状態に保つための不可欠なメンテナンス時間なのです。
+もし日々の学習や仕事で質の高い成果を出したいのなら、まずは睡眠時間を削るのではなく、生活習慣を【 03 】べきではないでしょうか。</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(4) によると</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>にとって</div><div class="opt-pill" style=""><span class="opt-num">2</span>に比べて</div><div class="opt-pill" style=""><span class="opt-num">3</span>に対して</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>によると ✓ 正解</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>引述研究報告來源根據時，使用句型「〜によると（根據...）」。「近年の脳科学の研究によると」。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(3) だけでなく</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>ばかりか</div><div class="opt-pill" style=""><span class="opt-num">2</span>につれて</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>だけでなく ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>どころか</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>句型「単に〜だけでなく〜も」表示「不僅僅是...而且...」。「単に体を休めるだけでなく」。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(1) 見直す</div>
+                  <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>見直す ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>見直させる</div><div class="opt-pill" style=""><span class="opt-num">3</span>見直した</div><div class="opt-pill" style=""><span class="opt-num">4</span>見直している</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>句型「動詞辭書形＋べきだ（理應當做某事）」。「生活習慣を見直すべきではないでしょうか」。</div>
+                </div>
+                
+                <div class="note-taking-space" style="margin-top:10px;">✍️ 篇章長文錯題筆記：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="page-sheet page-break" style="background:#FFF0E8; padding:18px 24px; border-left:6px solid #FF6B35; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:#FF6B35; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">N2</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【N2 篇】N2 中高階核心・逐題手寫詳解（共 8 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">日本求職留學必備・商務時事與長文理解</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:#FF6B35;">SOLUTIONS</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#FF6B35;">N2 S01</span>
+              <span class="sheet-title">文法形式挖空・3 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N2 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N2-Q.01</span>
+                <span class="q-grammar-tag">考點：義務責任「〜わけにはいかない」</span>
+              </div>
+              <div class="q-sentence">今回のプロジェクトは、どんなに困難が予想されようと、途中で投げ出す<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ わけ ）</span>にはいかない。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>わけ ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>もの</div><div class="opt-pill" style=""><span class="opt-num">3</span>こと</div><div class="opt-pill" style=""><span class="opt-num">4</span>はず</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (1)</span>
+                  <span class="sol-full">【 わけ 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞辭書形＋わけにはいかない」表示基於常理、社會道德或責任，心理上「不能、無法放棄」。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N2-Q.02</span>
+                <span class="q-grammar-tag">考點：連動伴隨「〜に伴って」</span>
+              </div>
+              <div class="q-sentence">スマートフォンの普及<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ にともなって ）</span>、人々の情報収集スタイルや購買行動は劇的に変化した。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>にかぎって</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>にともなって ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>をぬきにして</div><div class="opt-pill" style=""><span class="opt-num">4</span>をもとに</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (2)</span>
+                  <span class="sol-full">【 にともなって 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞＋に伴って」表示伴隨某重大趨勢或變革，相應產生連動轉變。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N2-Q.03</span>
+                <span class="q-grammar-tag">考點：原因情況「〜とあって」</span>
+              </div>
+              <div class="q-sentence">一流のプロ料理人<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ とあって ）</span>、彼の包丁さばきと味付けの繊細さはまさに完璧だ。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>としたら</div><div class="opt-pill" style=""><span class="opt-num">2</span>とあれば</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>とあって ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>といえば</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (3)</span>
+                  <span class="sol-full">【 とあって 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞＋とあって」表示處在特別的身分或情況之下，理所當然呈現出令人讚嘆的高水準成果。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#FF6B35;">N2 S02</span>
+              <span class="sheet-title">★ 號語序重組・2 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N2 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N2-Q.01</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">彼の実力からすれば、今回の試験に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　と思う。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>わけが ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>落ちる</div><div class="opt-pill" style=""><span class="opt-num">3</span>ない</div><div class="opt-pill" style=""><span class="opt-num">4</span>など</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (1)</span>
+                  <span class="sol-full">【 わけが 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 2 → 4 → 1 → 3</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：彼の実力からすれば、今回の試験に落ちるなどわけがないと思う。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：以他的實力而言，我認為這次考試他絕不可能落榜。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>落ちる (2) ➔ など (4) ➔ わけが (1) ➔ ない (3)。★ 為 1 號（わけが）。「動詞辭書形＋などわけがない」表示強烈否定，意為絕不可能發生。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N2-Q.02</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">恩師の温かい励ましが　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　深く感謝している。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>ここまで</div><div class="opt-pill" style=""><span class="opt-num">2</span>あればこそ</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>困難を乗り越えて ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>来られたのであり、</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (3)</span>
+                  <span class="sol-full">【 困難を乗り越えて 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 2 → 1 → 3 → 4</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：恩師の温かい励ましがあればこそここまで困難を乗り越えて来られたのであり、深く感謝している。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：正因為有恩師溫暖的鼓勵，我才能一路克服困難走到今天，對此我深表感激。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>あればこそ (2) ➔ ここまで (1) ➔ 困難を乗り越えて (3) ➔ 来られたのであり、 (4)。★ 為 3 號（困難を乗り越えて）。「〜あればこそ」強調正是因為存在前項條件，才得以達成後項。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#FF6B35;">N2 S03</span>
+              <span class="sheet-title">篇章脈絡填空・1 篇長文逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N2 SOL</span>
+          </div>
+          
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 N2 第 01 篇：「デジタル時代における『手書きノート』の価値」</span>
+                  <span class="passage-genre">文化評論</span>
+                </div>
+                <div style="white-space:pre-line;">キーボードやタブレットでの文字入力が当たり前になった現代において、あえてペンをとって手書きでメモをとる人が見直されている。タイピングは確かに速く効率的である。【 01 】、入力の速さゆえに、話の内容を咀嚼せずにそのまま書き写してしまう傾向がある。
+一方、手書きの場合はスピードが追いつかないため、頭の中で情報を一度要約し、自分の言葉に置き換える作業が【 02 】。その結果として、記憶の定着や深い理解が促されるのだ。
+デジタルツールの利便性を認めつつも、状況に【 03 】手書きの良さをうまく組み合わせることこそが、真の知的生産性を高める鍵と言えるだろう。</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(1) しかしながら</div>
+                  <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>しかしながら ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>すなわち</div><div class="opt-pill" style=""><span class="opt-num">3</span>したがって</div><div class="opt-pill" style=""><span class="opt-num">4</span>たとえば</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>前句肯定打字快速有效率，後句指出正因太快而缺乏深層咀嚼思考，前後語氣為逆接轉折，故選「しかしながら」。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(3) 求められる</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>余儀なくされる</div><div class="opt-pill" style=""><span class="opt-num">2</span>やまない</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>求められる ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>禁じ得ない</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>手寫時由於書寫速度限制，大腦自然「被需要、不得不進行（求められる）」濃縮要約資訊的思考過程。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(4) 応じて</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>沿って</div><div class="opt-pill" style=""><span class="opt-num">2</span>際して</div><div class="opt-pill" style=""><span class="opt-num">3</span>めぐって</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>応じて ✓ 正解</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>句型「名詞＋に応じて」表示順應、根據不同工作情境靈活調配數位與手寫工具。</div>
+                </div>
+                
+                <div class="note-taking-space" style="margin-top:10px;">✍️ 篇章長文錯題筆記：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+        
+        <div class="page-sheet page-break" style="background:#FFEAEF; padding:18px 24px; border-left:6px solid #E63956; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:#E63956; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">N1</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【N1 篇】N1 最高殿堂・逐題手寫詳解（共 8 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">抽象邏輯、書面政經與古典文語</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:#E63956;">SOLUTIONS</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#E63956;">N1 S01</span>
+              <span class="sheet-title">文法形式挖空・3 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N1 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N1-Q.01</span>
+                <span class="q-grammar-tag">考點：評價「〜に値する」</span>
+              </div>
+              <div class="q-sentence">彼の過去20年に及ぶ研究成果は、人類の医療史において特筆<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ する ）</span>に値する大発見だ。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>する ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>した</div><div class="opt-pill" style=""><span class="opt-num">3</span>すべく</div><div class="opt-pill" style=""><span class="opt-num">4</span>すべからく</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (1)</span>
+                  <span class="sol-full">【 する 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞辭書形＋に値する」表示配得上、值得（值得特筆大書）。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N1-Q.02</span>
+                <span class="q-grammar-tag">考點：極致「〜こと極まりない」</span>
+              </div>
+              <div class="q-sentence">公職にある人物として、このような重大な汚職疑惑に関与するなど、言語道断<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ こと ）</span>極まりない。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>な</div><div class="opt-pill" style=""><span class="opt-num">2</span>の</div><div class="opt-pill" style=""><span class="opt-num">3</span>に</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>こと ✓ 正解</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (4)</span>
+                  <span class="sol-full">【 こと 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「な形容詞詞幹＋こと極まりない」表示極度客觀批判或情感強烈（荒謬至極）。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N1-Q.03</span>
+                <span class="q-grammar-tag">考點：情懷「〜を禁じ得ない」</span>
+              </div>
+              <div class="q-sentence">かつての戦友たちの訃報に接するたび、時代の移ろいに対する深い寂寥感を禁じ<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ 得 ）</span>ない。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>かね</div><div class="opt-pill" style=""><span class="opt-num">2</span>られ</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">3</span>得 ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">4</span>させ</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 (3)</span>
+                  <span class="sol-full">【 得 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>「感情名詞＋を禁じ得ない」表示情不自禁、按捺不住某種深切情感。</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#E63956;">N1 S02</span>
+              <span class="sheet-title">★ 號語序重組・2 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N1 SOL</span>
+          </div>
+          
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N1-Q.01</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">どんなに世間から非難されようと、己の信念に　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　つもりは毛頭ない。</div>
+              <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>一切の ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>背く</div><div class="opt-pill" style=""><span class="opt-num">3</span>ような</div><div class="opt-pill" style=""><span class="opt-num">4</span>振る舞いをする</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (1)</span>
+                  <span class="sol-full">【 一切の 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 2 → 3 → 1 → 4</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：どんなに世間から非難されようと、己の信念に背くような一切の振る舞いをするつもりは毛頭ない。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：無論受到世人怎樣譴責，我絕無打算做出任何背叛信念的舉止。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>背く (2) ➔ ような (3) ➔ 一切の (1) ➔ 振る舞いをする (4)。★ 為 1 號【一切の】。「動詞辭書形＋ような＋名詞」修飾句，表絕不做背叛信念之行徑。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">N1-Q.02</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">地球温暖化の阻止は一国にとどまる問題ではなく、世界各国が　 ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ 　緊急のグローバル課題である。</div>
+              <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>取り組むべき</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>挙げて ★ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>総力</div><div class="opt-pill" style=""><span class="opt-num">4</span>を</div></div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 (2)</span>
+                  <span class="sol-full">【 挙げて 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: 3 → 4 → 2 → 1</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：地球温暖化の阻止は一国にとどまる問題ではなく、世界各国が総力を挙げて取り組むべき緊急のグローバル課題である。</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：遏阻全球暖化並非單一國家之事，而是舉世理應傾全力共同解決的迫切全球課題。</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>総力 (3) ➔ を (4) ➔ 挙げて (2) ➔ 取り組むべき (1)。★ 為 2 號【挙げて】。「〜を挙げて＋動詞」表示傾注全體力量。</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:#E63956;">N1 S03</span>
+              <span class="sheet-title">篇章脈絡填空・1 篇長文逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">N1 SOL</span>
+          </div>
+          
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 N1 第 01 篇：「伝統工芸の継承における革新と保存のパラドックス」</span>
+                  <span class="passage-genre">傳統文化與現代評論</span>
+                </div>
+                <div style="white-space:pre-line;">伝統工芸の技術や精神を後世に受け継ぐにあたり、「伝統の墨守」と「時代に即した革新」のどちらを重んずべきかという議論は絶えることがない。過去の手法を寸分違わず再現すること【 01 】伝統の保存だと信じ込むあまり、現代の生活様式から乖離してしまえば、工芸品としての実用性を失い、博物館の陳列品へと形骸化してしまう。
+しかしながら、単に市場の流行に迎合して本来の美意識を軽視するならば、それはもはや伝統工芸【 02 】。
+真の継承とは、古典的な技法への深い敬意を抱きつつも、現代社会の要請【 03 】新たな生命を吹き込む不断の創造的実践にほかならないのである。</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 01 】正解：(2) をもって</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>にかこつけて</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">2</span>をもって ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">3</span>をよそに</div><div class="opt-pill" style=""><span class="opt-num">4</span>を限りに</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>句型「〜をもって...とする」表示以此為標準。「再現することをもって伝統の保存だと信じ込む」指將分毫不差重現手法當作是保存傳統。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 02 】正解：(4) と呼ぶに値しない</div>
+                  <div class="q-options-grid"><div class="opt-pill" style=""><span class="opt-num">1</span>と言わざるを得ない</div><div class="opt-pill" style=""><span class="opt-num">2</span>の極みである</div><div class="opt-pill" style=""><span class="opt-num">3</span>にほかならない</div><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">4</span>と呼ぶに値しない ✓ 正解</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>「〜と呼ぶに値しない」表示配不上稱作傳統工藝。若一味盲目迎合市場流行，則失去其工藝本質。</div>
+                </div>
+                
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 03 】正解：(1) に即して</div>
+                  <div class="q-options-grid"><div class="opt-pill" style="background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);"><span class="opt-num">1</span>に即して ✓ 正解</div><div class="opt-pill" style=""><span class="opt-num">2</span>をよそに</div><div class="opt-pill" style=""><span class="opt-num">3</span>を皮切りに</div><div class="opt-pill" style=""><span class="opt-num">4</span>に至っては</div></div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>「名詞＋に即して」表示切合、符合現代社會生活之實際需求。</div>
+                </div>
+                
+                <div class="note-taking-space" style="margin-top:10px;">✍️ 篇章長文錯題筆記：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            
+        </div>
+        
+
+  
+        <div class="lock-cta-box page-break">
+          <div style="font-size:32px;">📑 🔒</div>
+          <h3 style="font-size:18px; font-weight:900; margin-top:8px;">【詳解試閱結束】完整 2,500 題手寫詳解收錄於終身典藏包</h3>
+          <p style="font-size:13px; color:rgba(43,37,35,0.8); margin:10px auto 16px auto; max-width:460px;">
+            包含 N5～N1 完整 2,500 題逐題手寫風詳解、錯題筆記欄與標準正解卡。<br>
+            正式版套組提供「完整一次收錄合訂本」與「5 大級別獨立冊」雙 PDF 檔案，支援 iPad GoodNotes 向量手寫與 A4 高清列印。
+          </p>
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-cta" style="background:#2B2523; color:#fff; padding:8px 24px; font-size:14px;">
+            ☕ 前往商店贊助解鎖 N1～N5 終身典藏題本包（約 NT$780）→
+          </a>
+        </div>
+        
+</div>
+
+</body>
+</html>

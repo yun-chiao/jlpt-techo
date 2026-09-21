@@ -74,6 +74,15 @@ LEVEL_INFO = {
         "price_usd": "$6.99",
         "price_twd": "約 NT$220",
     },
+    "all": {
+        "upper": "N1～N5",
+        "name": "N1～N5 全真 2,500 題終身典藏題本",
+        "sub": "一次買齊五大級別・從零基礎直通最高殿堂",
+        "color": "#2B2523",
+        "tint": "#FAF7F2",
+        "price_usd": "$24.99",
+        "price_twd": "約 NT$780",
+    },
 }
 
 BOOK_BASE_CSS = """
@@ -1285,9 +1294,535 @@ def generate_readme(level_key: str) -> str:
 官方網站：https://jlpt.chiaoban.com
 """
 
-def main():
-    print("🚀 開始產製 JLPT N1～N5 題型專攻 500 題全真手帳題本套組（校驗正解與封面題數）...")
+def generate_all_in_one_readme() -> str:
+    return """========================================================================
+【日檢手帖 NIKKEN TECHO】JLPT N1～N5 全真 2,500 題手帳題本終身典藏包
+========================================================================
+
+感謝您贊助支持《日檢手帖》自學數位商品！
+本終身典藏包為您一次收錄 N5 到 N1 全部五大級別，共 2,500 題超厚切全真題海。
+
+【目錄架構說明】：
+本壓縮包同時提供「一次收錄合訂版」與「分級獨立冊」兩種格式，滿足不同設備與備考習慣：
+
+1. 【一次收錄合訂版】（推薦 iPad GoodNotes 整本匯入刷題）：
+   - `日檢手帖-N1-N5-全真2500題手帳題本-實戰空白一次收錄版.html`
+     （一冊搞定 N5～N1 全部 2,500 題純題目，附卷末 5 級完整解答矩陣卡）
+   - `日檢手帖-N1-N5-全真2500題手帳題本-逐題詳解訂正一次收錄版.html`
+     （一冊搞定 2,500 題逐題日文原句、考點解析、中日對照與專屬錯題筆記欄）
+   - `日檢手帖-N1-N5-全真2500題手帳題本-試閱版.html`
+     （30 題五級別精選試閱合訂本）
+
+2. 【分級獨立冊】（方便單級別專攻）：
+   - `分級獨立冊/N5/`：N5 500 題實戰空白版 ＋ 逐題詳解訂正版
+   - `分級獨立冊/N4/`：N4 500 題實戰空白版 ＋ 逐題詳解訂正版
+   - `分級獨立冊/N3/`：N3 500 題實戰空白版 ＋ 逐題詳解訂正版
+   - `分級獨立冊/N2/`：N2 500 題實戰空白版 ＋ 逐題詳解訂正版
+   - `分級獨立冊/N1/`：N1 500 題實戰空白版 ＋ 逐題詳解訂正版
+
+【使用建議】：
+- 方式 A（iPad / 平板使用者）：在瀏覽器按列印 ➔ 另存為 PDF ➔ 匯入 GoodNotes ➔ 使用 Apple Pencil 像手帳一樣刷題、圈助詞與訂正。
+- 方式 B（紙本愛好者）：使用雙面黑白或彩色列印（A4 規格），帶入考場作為最後 30 分鐘衝刺神手冊。
+
+祝您日檢一路高分及格，順利登上 N1 最高殿堂！
+官方網站：https://jlpt.chiaoban.com
+"""
+
+def generate_all_in_one_blank_html(all_data: dict, is_preview: bool = False) -> str:
+    color = "#2B2523"
     
+    if is_preview:
+        cover_title = "N1～N5 全真題本・30 題精華試閱合訂本"
+        edition_badge = "【官方試閱體驗本・N1～N5 精選 30 題全真試閱合訂版】"
+        total_desc = "共 30 題全真規格試閱合訂本"
+        sample_counts = {"s": 3, "st": 2, "p": 1}
+    else:
+        cover_title = "N1～N5 全真 2,500 題手帳題本（完整一次收錄版）"
+        edition_badge = "【考場實戰・純題目手寫空白合訂手帳（2,500 題完整一次收錄）】"
+        total_desc = "共 2,500 題全真規格手帳合訂本"
+        sample_counts = {"s": 300, "st": 125, "p": 25}
+
+    total_q = 0
+    sections_html = []
+    level_answer_keys = []
+    
+    for lvl in ["n5", "n4", "n3", "n2", "n1"]:
+        conf = LEVEL_INFO[lvl]
+        lvl_upper = conf["upper"]
+        lvl_color = conf["color"]
+        data = all_data[lvl]
+        
+        s_list = data["sentenceQuizzes"][:sample_counts["s"]]
+        st_list = data["starQuizzes"][:sample_counts["st"]]
+        p_list = data["passageQuizzes"][:sample_counts["p"]]
+        lvl_q_count = len(s_list) + len(st_list) + sum(len(p["questions"]) for p in p_list)
+        total_q += lvl_q_count
+        
+        p1_items = []
+        for idx, q in enumerate(s_list, 1):
+            q_text = q["question"].replace("（　　）", '<span class="q-blank-under">（　）</span>')
+            opts = "".join([f'<div class="opt-pill"><span class="opt-num">{o_idx+1}</span>{opt}</div>' for o_idx, opt in enumerate(q["options"])])
+            p1_items.append(f"""
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">{lvl_upper}-Q.{idx:02d}</span>
+              </div>
+              <div class="q-sentence">{q_text}</div>
+              <div class="q-options-grid">{opts}</div>
+            </div>
+            """)
+            
+        p2_items = []
+        for idx, q in enumerate(st_list, 1):
+            pre = q["preText"]
+            post = q["postText"]
+            chunks = "".join([f'<div class="opt-pill"><span class="opt-num">{c_idx+1}</span>{c}</div>' for c_idx, c in enumerate(q["chunks"])])
+            p2_items.append(f"""
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">{lvl_upper}-Q.{idx:02d}</span>
+                <span class="q-grammar-tag">★ 排序題</span>
+              </div>
+              <div class="q-sentence">{pre} ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ {post}</div>
+              <div class="q-options-grid">{chunks}</div>
+            </div>
+            """)
+            
+        p3_items = []
+        for p_idx, p in enumerate(p_list, 1):
+            sub_qs = []
+            for q in p["questions"]:
+                opts = "".join([f'<div class="opt-pill"><span class="opt-num">{o_idx+1}</span>{opt}</div>' for o_idx, opt in enumerate(q["options"])])
+                sub_qs.append(f"""
+                <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 {q['blankNumber']:02d} 】應填入：</div>
+                  <div class="q-options-grid">{opts}</div>
+                </div>
+                """)
+            sub_html = "".join(sub_qs)
+            p3_items.append(f"""
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 {lvl_upper} 第 {p_idx:02d} 篇：{p['title']}</span>
+                  <span class="passage-genre">{p['genre']}</span>
+                </div>
+                <div style="white-space:pre-line;">{p['passage']}</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                {sub_html}
+              </div>
+            </div>
+            """)
+            
+        sections_html.append(f"""
+        <div class="page-sheet page-break" style="background:{conf['tint']}; padding:18px 24px; border-left:6px solid {lvl_color}; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:{lvl_color}; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">{lvl_upper}</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【{lvl_upper} 篇】{conf['name']}（共 {lvl_q_count} 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">{conf['sub']}</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:{lvl_color};">PART 01 ~ 03</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:{lvl_color};">{lvl_upper} P01</span>
+              <span class="sheet-title">文法形式の判断（形式挖空題・共 {len(s_list)} 題）</span>
+            </div>
+            <span class="sheet-page-num">{lvl_upper}</span>
+          </div>
+          {"".join(p1_items)}
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:{lvl_color};">{lvl_upper} P02</span>
+              <span class="sheet-title">文の組み立て（★ 號排序重組題・共 {len(st_list)} 題）</span>
+            </div>
+            <span class="sheet-page-num">{lvl_upper}</span>
+          </div>
+          {"".join(p2_items)}
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:{lvl_color};">{lvl_upper} P03</span>
+              <span class="sheet-title">文章の文法（篇章脈絡填空題・共 {len(p_list)} 篇）</span>
+            </div>
+            <span class="sheet-page-num">{lvl_upper}</span>
+          </div>
+          {"".join(p3_items)}
+        </div>
+        """)
+        
+        lvl_key_html = build_answer_key_html(s_list, st_list, p_list)
+        level_answer_keys.append(f"""
+        <div style="margin-top:24px; padding-top:16px; border-top:3px solid {lvl_color};">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+            <span style="background:{lvl_color}; color:#fff; font-family:'DM Mono'; font-weight:900; font-size:12px; padding:2px 8px; border-radius:4px;">{lvl_upper}</span>
+            <span style="font-weight:900; font-size:14px; color:var(--sumi);">{lvl_upper} 全卷標準正解矩陣卡</span>
+          </div>
+          {lvl_key_html}
+        </div>
+        """)
+
+    lock_banner = ""
+    if is_preview:
+        lock_banner = f"""
+        <div class="lock-cta-box page-break">
+          <div style="font-size:32px;">📑 🔒</div>
+          <h3 style="font-size:18px; font-weight:900; margin-top:8px;">【試閱合訂本結束】完整 2,500 題收錄於正式終身典藏包</h3>
+          <p style="font-size:13px; color:rgba(43,37,35,0.8); margin:10px auto 16px auto; max-width:460px;">
+            一次收錄 N5～N1 全部五大級別！包含 1,500 題挖空＋625 題重組＋125 篇長文（共 375 題）！<br>
+            正式版套組提供「完整一次收錄合訂本」與「5 大級別獨立冊」雙 PDF 檔案，支援 iPad GoodNotes 向量手寫與 A4 高清列印。
+          </p>
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-cta" style="background:#2B2523; color:#fff; padding:8px 24px; font-size:14px;">
+            ☕ 前往商店贊助解鎖 N1～N5 終身典藏題本包（約 NT$780）→
+          </a>
+        </div>
+        """
+
+    return f"""<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日檢手帖｜N1～N5 全真2500題手帳題本（{ '試閱版' if is_preview else '完整一次收錄版' }）</title>
+<style>
+{BOOK_BASE_CSS}
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <h1>
+    <span style="background:{color}; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">N1～N5</span>
+    日檢手帖・全真 2,500 題題型專攻手帳題本（{ '試閱版' if is_preview else '完整一次收錄實戰空白版' }）
+  </h1>
+  <div class="screen-actions">
+    <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
+    <a href="/products?tab=quiz&level=all" class="btn-print" style="background:#FFFFFF;">🛒 返回題庫專區</a>
+  </div>
+</div>
+
+<div class="book-container">
+  <div class="book-cover">
+    <div class="cover-header">
+      <div class="cover-issue">NIKKEN TECHO JLPT PRACTICE BOOK SERIES</div>
+      <div class="cover-badge" style="background:{color};">N1～N5 終身全套</div>
+    </div>
+    
+    <div class="cover-title-group">
+      <div class="cover-jp-sub">JLPT N1-N5 COMPLETE 2,500 QUESTIONS WORKBOOK</div>
+      <div class="cover-title">{cover_title}</div>
+      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">{edition_badge}</div>
+      <p class="cover-desc">
+        專為 iPad GoodNotes 手寫刷題與 A4 實體列印量身打造。<br>
+        完整一次收錄 N5、N4、N3、N2、N1 全部五大級別，涵蓋 Part 1 文法挖空、Part 2 ★ 號語序重組、Part 3 篇章脈絡長文三大題型。
+      </p>
+    </div>
+    
+    <div class="cover-stats-box">
+      <div class="stat-pill">
+        <div class="stat-val">{ '15 題' if is_preview else '1,500 題' }</div>
+        <div class="stat-lbl">Part 1 文法挖空</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val">{ '10 題' if is_preview else '625 題' }</div>
+        <div class="stat-lbl">Part 2 ★ 重組</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val">{ '5 篇' if is_preview else '125 篇 (375題)' }</div>
+        <div class="stat-lbl">Part 3 篇章長文</div>
+      </div>
+    </div>
+    
+    <div class="cover-footer">
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（{total_desc}）</div>
+      <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
+    </div>
+  </div>
+
+  {"".join(sections_html)}
+
+  <div class="page-sheet page-break">
+    <div class="sheet-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="sheet-part-badge" style="background:#2B2523;">ANSWER KEY</span>
+        <span class="sheet-title">N1～N5 全卷標準正解速查矩陣卡（共 {total_q} 題完整正解）</span>
+      </div>
+      <span class="sheet-page-num">APPENDIX</span>
+    </div>
+    <p style="font-size:12px; color:rgba(43,37,35,0.7); margin-bottom:12px;">
+      💡 作答完畢後可直接核對各級別表格快速計算答對題數：
+    </p>
+    {"".join(level_answer_keys)}
+  </div>
+
+  {lock_banner}
+</div>
+
+</body>
+</html>
+"""
+
+def generate_all_in_one_solution_html(all_data: dict, is_preview: bool = False) -> str:
+    color = "#2B2523"
+    
+    if is_preview:
+        cover_title = "N1～N5 題型專攻・30 題手寫詳解試閱手帳"
+        edition_badge = "【考前訂正神器・N1～N5 精選 30 題手寫詳解試閱合訂本】"
+        total_desc = "共 30 題逐題詳解試閱合訂手帳"
+        sample_counts = {"s": 3, "st": 2, "p": 1}
+    else:
+        cover_title = "N1～N5 全真 2,500 題手帳題本（逐題手寫詳解訂正合訂本）"
+        edition_badge = "【考前訂正神器・考點語法全剖析（2,500 題完整一次收錄）】"
+        total_desc = "共 2,500 題逐題手寫風詳解訂正合訂手帳"
+        sample_counts = {"s": 300, "st": 125, "p": 25}
+
+    sections_html = []
+    
+    for lvl in ["n5", "n4", "n3", "n2", "n1"]:
+        conf = LEVEL_INFO[lvl]
+        lvl_upper = conf["upper"]
+        lvl_color = conf["color"]
+        data = all_data[lvl]
+        
+        s_list = data["sentenceQuizzes"][:sample_counts["s"]]
+        st_list = data["starQuizzes"][:sample_counts["st"]]
+        p_list = data["passageQuizzes"][:sample_counts["p"]]
+        lvl_q_count = len(s_list) + len(st_list) + sum(len(p["questions"]) for p in p_list)
+        
+        p1_items = []
+        for idx, q in enumerate(s_list, 1):
+            corr_idx = q["correctIndex"]
+            corr_opt = q["options"][corr_idx - 1]
+            q_text = q["question"].replace("（　　）", f'<span class="q-blank-under" style="background:var(--butter); font-weight:900;">（ {corr_opt} ）</span>')
+            opts = "".join([f'<div class="opt-pill" style="{"background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);" if o_idx+1 == corr_idx else ""}"><span class="opt-num">{o_idx+1}</span>{opt}{ " ✓ 正解" if o_idx+1 == corr_idx else "" }</div>' for o_idx, opt in enumerate(q["options"])])
+            
+            p1_items.append(f"""
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">{lvl_upper}-Q.{idx:02d}</span>
+                <span class="q-grammar-tag">考點：{q.get('targetGrammar', '文法')}</span>
+              </div>
+              <div class="q-sentence">{q_text}</div>
+              <div class="q-options-grid">{opts}</div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">正解 ({corr_idx})</span>
+                  <span class="sol-full">【 {corr_opt} 】</span>
+                </div>
+                <div class="sol-expl"><strong>💡 考點解析：</strong>{q['explanation']}</div>
+                <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            """)
+
+        p2_items = []
+        for idx, q in enumerate(st_list, 1):
+            star_num = q["correctOrder"][q["starIndex"]]
+            star_chunk = q["chunks"][star_num - 1]
+            chunks = "".join([f'<div class="opt-pill" style="{"background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);" if c_idx+1 == star_num else ""}"><span class="opt-num">{c_idx+1}</span>{c}{ " ★ 正解" if c_idx+1 == star_num else "" }</div>' for c_idx, c in enumerate(q["chunks"])])
+            
+            p2_items.append(f"""
+            <div class="quiz-item-box">
+              <div class="q-meta-line">
+                <span class="q-num-tag">{lvl_upper}-Q.{idx:02d}</span>
+                <span class="q-grammar-tag">★ 號重組題</span>
+              </div>
+              <div class="q-sentence">{q['preText']} ［ 1 ］ ［ 2 ］ ［ ★ ］ ［ 4 ］ {q['postText']}</div>
+              <div class="q-options-grid">{chunks}</div>
+              <div class="solution-box">
+                <div class="sol-ans-row">
+                  <span class="sol-badge">★ 號正解 ({star_num})</span>
+                  <span class="sol-full">【 {star_chunk} 】</span>
+                  <span style="font-family:'DM Mono'; font-size:12px; color:rgba(43,37,35,0.6); margin-left:8px;">完整順序: {" → ".join(str(n) for n in q['correctOrder'])}</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--sumi); margin-bottom:4px;">正確整句：{q['fullSentence']}</div>
+                <div style="font-size:12px; color:rgba(43,37,35,0.8); margin-bottom:6px;">中文翻譯：{q['translation']}</div>
+                <div class="sol-expl"><strong>💡 語序拆解：</strong>{q['explanation']}</div>
+                <div class="note-taking-space">✍️ 重組邏輯盲點筆記欄：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            """)
+
+        p3_items = []
+        for p_idx, p in enumerate(p_list, 1):
+            sub_qs = []
+            for q in p["questions"]:
+                corr_idx = q["correctIndex"]
+                corr_opt = q["options"][corr_idx - 1]
+                opts = "".join([f'<div class="opt-pill" style="{"background:var(--butter); font-weight:900; border:1.5px solid var(--sumi);" if o_idx+1 == corr_idx else ""}"><span class="opt-num">{o_idx+1}</span>{opt}{ " ✓ 正解" if o_idx+1 == corr_idx else "" }</div>' for o_idx, opt in enumerate(q["options"])])
+                sub_qs.append(f"""
+                <div style="margin-top:10px; padding-top:8px; border-top:1px solid rgba(43,37,35,0.15);">
+                  <div style="font-size:12px; font-weight:700; margin-bottom:4px;">【 空白 {q['blankNumber']:02d} 】正解：({corr_idx}) {corr_opt}</div>
+                  <div class="q-options-grid">{opts}</div>
+                  <div style="font-size:12px; color:var(--sumi); margin-top:4px; line-height:1.5;"><strong>💡 脈絡解析：</strong>{q['explanation']}</div>
+                </div>
+                """)
+            sub_html = "".join(sub_qs)
+            p3_items.append(f"""
+            <div class="no-break" style="margin-bottom:20px;">
+              <div class="passage-box">
+                <div class="passage-title-bar">
+                  <span class="passage-title">📖 {lvl_upper} 第 {p_idx:02d} 篇：{p['title']}</span>
+                  <span class="passage-genre">{p['genre']}</span>
+                </div>
+                <div style="white-space:pre-line;">{p['passage']}</div>
+              </div>
+              <div class="quiz-item-box" style="background:#FAF7F2;">
+                {sub_html}
+                <div class="note-taking-space" style="margin-top:10px;">✍️ 篇章長文錯題筆記：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
+              </div>
+            </div>
+            """)
+            
+        sections_html.append(f"""
+        <div class="page-sheet page-break" style="background:{conf['tint']}; padding:18px 24px; border-left:6px solid {lvl_color}; margin-top:24px; border-radius:10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="background:{lvl_color}; color:#fff; font-family:'DM Mono', monospace; font-size:16px; font-weight:900; padding:3px 12px; border-radius:6px;">{lvl_upper}</span>
+              <div>
+                <h3 style="font-size:18px; font-weight:900; color:var(--sumi); margin:0;">【{lvl_upper} 篇】{conf['name']}・逐題手寫詳解（共 {lvl_q_count} 題）</h3>
+                <p style="font-size:12px; color:rgba(43,37,35,0.7); margin:2px 0 0 0;">{conf['sub']}</p>
+              </div>
+            </div>
+            <span style="font-family:'DM Mono', monospace; font-size:12px; font-weight:800; color:{lvl_color};">SOLUTIONS</span>
+          </div>
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:{lvl_color};">{lvl_upper} S01</span>
+              <span class="sheet-title">文法形式挖空・{len(s_list)} 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">{lvl_upper} SOL</span>
+          </div>
+          {"".join(p1_items)}
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:{lvl_color};">{lvl_upper} S02</span>
+              <span class="sheet-title">★ 號語序重組・{len(st_list)} 題逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">{lvl_upper} SOL</span>
+          </div>
+          {"".join(p2_items)}
+        </div>
+
+        <div class="page-sheet page-break">
+          <div class="sheet-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="sheet-part-badge" style="background:{lvl_color};">{lvl_upper} S03</span>
+              <span class="sheet-title">篇章脈絡填空・{len(p_list)} 篇長文逐題詳解</span>
+            </div>
+            <span class="sheet-page-num">{lvl_upper} SOL</span>
+          </div>
+          {"".join(p3_items)}
+        </div>
+        """)
+
+    lock_banner = ""
+    if is_preview:
+        lock_banner = f"""
+        <div class="lock-cta-box page-break">
+          <div style="font-size:32px;">📑 🔒</div>
+          <h3 style="font-size:18px; font-weight:900; margin-top:8px;">【詳解試閱結束】完整 2,500 題手寫詳解收錄於終身典藏包</h3>
+          <p style="font-size:13px; color:rgba(43,37,35,0.8); margin:10px auto 16px auto; max-width:460px;">
+            包含 N5～N1 完整 2,500 題逐題手寫風詳解、錯題筆記欄與標準正解卡。<br>
+            正式版套組提供「完整一次收錄合訂本」與「5 大級別獨立冊」雙 PDF 檔案，支援 iPad GoodNotes 向量手寫與 A4 高清列印。
+          </p>
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-cta" style="background:#2B2523; color:#fff; padding:8px 24px; font-size:14px;">
+            ☕ 前往商店贊助解鎖 N1～N5 終身典藏題本包（約 NT$780）→
+          </a>
+        </div>
+        """
+
+    return f"""<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日檢手帖｜N1～N5 全真2500題手帳題本（{ '詳解試閱版' if is_preview else '逐題詳解完整一次收錄版' }）</title>
+<style>
+{BOOK_BASE_CSS}
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <h1>
+    <span style="background:{color}; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">N1～N5</span>
+    日檢手帖・全真 2,500 題逐題詳解訂正手帳（{ '詳解試閱版' if is_preview else '完整一次收錄版' }）
+  </h1>
+  <div class="screen-actions">
+    <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
+    <a href="/products?tab=quiz&level=all" class="btn-print" style="background:#FFFFFF;">🛒 返回題庫專區</a>
+  </div>
+</div>
+
+<div class="book-container">
+  <div class="book-cover">
+    <div class="cover-header">
+      <div class="cover-issue">NIKKEN TECHO JLPT SOLUTIONS NOTEBOOK</div>
+      <div class="cover-badge" style="background:{color};">N1～N5 終身全套</div>
+    </div>
+    
+    <div class="cover-title-group">
+      <div class="cover-jp-sub">JLPT N1-N5 COMPLETE SOLUTIONS NOTEBOOK</div>
+      <div class="cover-title">{cover_title}</div>
+      <div style="font-size:15px; font-weight:800; color:{color}; margin-top:6px;">{edition_badge}</div>
+      <p class="cover-desc">
+        完整一次收錄 N5、N4、N3、N2、N1 全部五大級別，共 2,500 題完整日文原句、正解標註、中文翻譯與考點解析。
+      </p>
+    </div>
+    
+    <div class="cover-stats-box">
+      <div class="stat-pill">
+        <div class="stat-val">{ '15 題' if is_preview else '1,500 題' }</div>
+        <div class="stat-lbl">Part 1 挖空詳解</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val">{ '10 題' if is_preview else '625 題' }</div>
+        <div class="stat-lbl">Part 2 重組詳解</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val">{ '5 篇' if is_preview else '125 篇 (375題)' }</div>
+        <div class="stat-lbl">Part 3 篇章詳解</div>
+      </div>
+    </div>
+    
+    <div class="cover-footer">
+      <div>日檢手帖編纂委員會 ｜ 題型專攻・三部曲系列（{total_desc}）</div>
+      <div>FORMAT: GOODNOTES / NOTABILITY / A4 PRINT</div>
+    </div>
+  </div>
+
+  {"".join(sections_html)}
+
+  {lock_banner}
+</div>
+
+</body>
+</html>
+"""
+
+def main():
+    print("🚀 開始產製 JLPT N1～N5 題型專攻 500 題全真手帳題本套組（含完整一次收錄合訂版）...")
+    
+    all_data_map = {}
     for lvl in ["n5", "n4", "n3", "n2", "n1"]:
         conf = LEVEL_INFO[lvl]
         upper = conf["upper"]
@@ -1299,21 +1834,19 @@ def main():
             
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
+            all_data_map[lvl] = data
             
         print(f"📦 正在產製 {upper} 題本 HTML（實戰 500 題 ＋ 試閱 30 題精華）...")
         
-        # 1. 產生空白試閱版 HTML（精準 30 題整，解答包含全部 30 題）
         preview_html = generate_blank_workbook_html(lvl, data, is_preview=True)
         preview_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-試閱版.html"
         with open(preview_file, "w", encoding="utf-8") as f:
             f.write(preview_html)
             
-        # 同步複製至 public/dist-products/quiz/
         public_preview = PUBLIC_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-試閱版.html"
         with open(public_preview, "w", encoding="utf-8") as f:
             f.write(preview_html)
 
-        # 1b. 產生詳解試閱版 HTML（精準 30 題手寫風詳解試閱）
         sol_preview_html = generate_solution_workbook_html(lvl, data, is_preview=True)
         sol_preview_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-詳解試閱版.html"
         with open(sol_preview_file, "w", encoding="utf-8") as f:
@@ -1323,24 +1856,20 @@ def main():
         with open(public_sol_preview, "w", encoding="utf-8") as f:
             f.write(sol_preview_html)
             
-        # 2. 產生實戰空白版 HTML（精準 500 題整，解答包含全部 500 題）
         blank_html = generate_blank_workbook_html(lvl, data, is_preview=False)
         blank_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html"
         with open(blank_file, "w", encoding="utf-8") as f:
             f.write(blank_html)
             
-        # 3. 產生逐題詳解訂正版 HTML（精準 500 題整）
         sol_html = generate_solution_workbook_html(lvl, data)
         sol_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-逐題詳解訂正版.html"
         with open(sol_file, "w", encoding="utf-8") as f:
             f.write(sol_html)
             
-        # 4. 產生 README
         readme_file = DIST_PRODUCTS_DIR / f"README-{upper}-使用說明.txt"
         with open(readme_file, "w", encoding="utf-8") as f:
             f.write(generate_readme(lvl))
             
-        # 5. 打包成 ZIP
         zip_path = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本套組.zip"
         with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
             zf.write(blank_file, arcname=f"日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html")
@@ -1349,19 +1878,59 @@ def main():
             zf.write(readme_file, arcname="README-使用說明.txt")
             
         print(f"  ✓ {upper} 題本完成：{zip_path.name} ({zip_path.stat().st_size / 1024:.1f} KB)")
-        
-    # 產生全套 N1～N5 典藏大禮包 ZIP
+
+    # 產製【N1～N5 完整一次收錄合訂版】
+    print("📦 正在產製【N1～N5 完整一次收錄合訂版】（2,500 題實戰空白合訂本 ＋ 逐題詳解合訂本 ＋ 30 題試閱合訂本）...")
+    aio_preview_html = generate_all_in_one_blank_html(all_data_map, is_preview=True)
+    aio_preview_file = DIST_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本-試閱版.html"
+    with open(aio_preview_file, "w", encoding="utf-8") as f:
+        f.write(aio_preview_html)
+    with open(PUBLIC_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本-試閱版.html", "w", encoding="utf-8") as f:
+        f.write(aio_preview_html)
+
+    aio_sol_preview_html = generate_all_in_one_solution_html(all_data_map, is_preview=True)
+    aio_sol_preview_file = DIST_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本-詳解試閱版.html"
+    with open(aio_sol_preview_file, "w", encoding="utf-8") as f:
+        f.write(aio_sol_preview_html)
+    with open(PUBLIC_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本-詳解試閱版.html", "w", encoding="utf-8") as f:
+        f.write(aio_sol_preview_html)
+
+    aio_blank_html = generate_all_in_one_blank_html(all_data_map, is_preview=False)
+    aio_blank_file = DIST_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本-實戰空白一次收錄版.html"
+    with open(aio_blank_file, "w", encoding="utf-8") as f:
+        f.write(aio_blank_html)
+
+    aio_sol_html = generate_all_in_one_solution_html(all_data_map, is_preview=False)
+    aio_sol_file = DIST_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本-逐題詳解訂正一次收錄版.html"
+    with open(aio_sol_file, "w", encoding="utf-8") as f:
+        f.write(aio_sol_html)
+
+    aio_readme_file = DIST_PRODUCTS_DIR / "全套終身典藏包-使用指南.txt"
+    with open(aio_readme_file, "w", encoding="utf-8") as f:
+        f.write(generate_all_in_one_readme())
+
+    # 打包全套 N1～N5 終身典藏包 ZIP（含一次收錄合訂版 ＋ 分級獨立冊）
     all_zip = DIST_PRODUCTS_DIR / "日檢手帖-N1-N5-全真2500題手帳題本終身典藏包.zip"
     with zipfile.ZipFile(all_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        # 1. 放入「一次收錄合訂版」
+        zf.write(aio_blank_file, arcname="1.【一次收錄合訂版】/日檢手帖-N1-N5-全真2500題手帳題本-實戰空白一次收錄版.html")
+        zf.write(aio_sol_file, arcname="1.【一次收錄合訂版】/日檢手帖-N1-N5-全真2500題手帳題本-逐題詳解訂正一次收錄版.html")
+        zf.write(aio_preview_file, arcname="1.【一次收錄合訂版】/日檢手帖-N1-N5-全真2500題手帳題本-試閱版.html")
+        
+        # 2. 放入「分級獨立冊」
         for lvl in ["n5", "n4", "n3", "n2", "n1"]:
             upper = LEVEL_INFO[lvl]["upper"]
             blank_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html"
             sol_file = DIST_PRODUCTS_DIR / f"日檢手帖-{upper}-500題全真手帳題本-逐題詳解訂正版.html"
             if blank_file.exists():
-                zf.write(blank_file, arcname=f"{upper}/日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html")
+                zf.write(blank_file, arcname=f"2.【分級獨立冊】/{upper}/日檢手帖-{upper}-500題全真手帳題本-實戰空白版.html")
             if sol_file.exists():
-                zf.write(sol_file, arcname=f"{upper}/日檢手帖-{upper}-500題全真手帳題本-逐題詳解訂正版.html")
-    print(f"🎉 全部完成！全套大禮包已產出：{all_zip.name} ({all_zip.stat().st_size / 1024:.1f} KB)")
+                zf.write(sol_file, arcname=f"2.【分級獨立冊】/{upper}/日檢手帖-{upper}-500題全真手帳題本-逐題詳解訂正版.html")
+        
+        # 3. 放入使用指南
+        zf.write(aio_readme_file, arcname="全套使用指南-README.txt")
+
+    print(f"🎉 全部完成！【N1～N5 完整一次收錄合訂版】已產出：{all_zip.name} ({all_zip.stat().st_size / (1024*1024):.2f} MB)")
 
 if __name__ == "__main__":
     main()
