@@ -333,20 +333,8 @@ function QuizLevelContent({ level }: { level: Level }) {
 
           {/* 抽屜底部：iPad / 列印版手帳題本連結 */}
           <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-paper-sumi/15 pt-2 font-mono text-xs">
-            <div className="flex items-center gap-2 text-paper-sumi/70">
-              <span>官方免費特訓（已完成 {answeredCount} / {filteredQuestions.length} 題）</span>
-              {answeredCount > 0 && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowJumpPanel(false);
-                    setShowGraduationModal(true);
-                  }}
-                  className="font-bold text-[#ff6b35] underline decoration-1 underline-offset-2 hover:text-paper-sumi"
-                >
-                  🏆 查看成績證書
-                </button>
-              )}
+            <div className="text-paper-sumi/70">
+              官方免費特訓（已完成 {answeredCount} / {filteredQuestions.length} 題）
             </div>
             <Link
               to={`/products?tab=quiz&level=${level}`}
