@@ -94,46 +94,19 @@ BOOK_BASE_CSS = """
 
 body {
   font-family: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
-  background-color: #E5E0D8;
+  background-color: #FAF7F2;
   color: var(--sumi);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-.screen-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #2B2523;
-  color: #FFFFFF;
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.screen-header h1 {
-  font-size: 15px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.screen-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.btn-print {
+.btn-cta {
   background: var(--butter);
   color: var(--sumi);
   font-weight: 800;
   font-size: 13px;
   border: 1.5px solid var(--sumi);
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -143,16 +116,16 @@ body {
   gap: 6px;
 }
 
-.btn-print:hover {
+.btn-cta:hover {
   background: #FFFFFF;
   transform: translate(-1px, -1px);
 }
 
 .book-container {
   max-width: 210mm;
-  margin: 30px auto;
+  margin: 0 auto;
   background: #FFFFFF;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
 @page {
@@ -707,7 +680,7 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
             包含 300 題挖空＋125 題重組＋25 篇長文（共 75 題）！<br>
             正式版套組提供「純實戰手寫空白版」與「逐題手寫風詳解訂正版」雙 PDF 檔案，支援 iPad GoodNotes 向量手寫與 A4 高清列印。
           </p>
-          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-print" style="background:{color}; color:#fff; padding:8px 24px; font-size:14px;">
+          <a href="https://buymeacoffee.com/chiaoban/extras" target="_blank" class="btn-cta" style="background:{color}; color:#fff; padding:8px 24px; font-size:14px;">
             ☕ 前往商店贊助解鎖完整版 500 題套組（{conf['price_twd']}）→
           </a>
         </div>
@@ -724,17 +697,6 @@ def generate_blank_workbook_html(level_key: str, data: dict, is_preview: bool = 
 </style>
 </head>
 <body>
-
-<div class="screen-header">
-  <h1>
-    <span style="background:{color}; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">{upper}</span>
-    日檢手帖・{cover_title}（{total_desc}）
-  </h1>
-  <div class="screen-actions">
-    <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
-    <a href="/products?tab=quiz&level={level_key}" class="btn-print" style="background:#FFFFFF;">🛒 返回題庫專區</a>
-  </div>
-</div>
 
 <div class="book-container">
   <!-- 封面 -->
@@ -937,16 +899,6 @@ def generate_solution_workbook_html(level_key: str, data: dict) -> str:
 </style>
 </head>
 <body>
-
-<div class="screen-header">
-  <h1>
-    <span style="background:{color}; color:#fff; padding:2px 8px; border-radius:4px; font-family:'DM Mono';">{upper}</span>
-    日檢手帖・{upper} 500 題全真手帳題本（逐題手寫風詳解訂正本）
-  </h1>
-  <div class="screen-actions">
-    <button onclick="window.print()" class="btn-print">🖨️ 列印 A4 / 轉存 PDF</button>
-  </div>
-</div>
 
 <div class="book-container">
   <div class="book-cover">
