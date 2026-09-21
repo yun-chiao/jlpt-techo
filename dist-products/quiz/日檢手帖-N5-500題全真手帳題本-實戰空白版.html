@@ -28,6 +28,8 @@ body {
   color: var(--sumi);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn-cta {
@@ -69,6 +71,14 @@ body {
   }
   .screen-header {
     display: none !important;
+  }
+  .scroll-hint {
+    display: none !important;
+  }
+  .table-wrap {
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   .book-container {
     max-width: 100%;
@@ -325,7 +335,8 @@ body {
 .sol-ans-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 4px;
 }
 
@@ -336,18 +347,21 @@ body {
   border-radius: 4px;
   font-weight: 900;
   font-size: 11px;
+  shrink: 0;
 }
 
 .sol-full {
   font-family: 'Noto Serif JP', serif;
   font-weight: 700;
   color: var(--sumi);
+  word-break: break-word;
 }
 
 .sol-expl {
   color: rgba(43,37,35,0.9);
   line-height: 1.5;
   margin-top: 3px;
+  word-break: break-word;
 }
 
 .note-taking-space {
@@ -357,7 +371,9 @@ body {
   border-radius: 4px;
   background: #FFFFFF;
   font-size: 10.5px;
-  color: rgba(43,37,35,0.4);
+  color: rgba(43,37,35,0.55);
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 /* 篇章閱讀題排版 */
@@ -401,8 +417,8 @@ body {
   border-collapse: collapse;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .answer-key-table th, .answer-key-table td {
@@ -421,6 +437,14 @@ body {
   background: var(--canvas);
 }
 
+.scroll-hint {
+  display: none;
+}
+
+.table-wrap {
+  width: 100%;
+}
+
 .lock-cta-box {
   background: var(--canvas);
   border: 2px dashed var(--sumi);
@@ -428,6 +452,213 @@ body {
   padding: 24px;
   text-align: center;
   margin: 30px 0;
+}
+
+/* 手機與窄螢幕預覽視窗全面響應式（防止溢出、破版與排版錯位） */
+@media screen and (max-width: 680px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-cover {
+    min-height: auto !important;
+    margin: 8px !important;
+    padding: 18px 12px !important;
+    border-width: 2px !important;
+  }
+
+  .cover-header {
+    padding-bottom: 10px !important;
+  }
+
+  .cover-issue {
+    font-size: 9.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .cover-badge {
+    font-size: 13.5px !important;
+    padding: 3px 8px !important;
+    margin-top: 8px !important;
+    box-shadow: 2px 2px 0px var(--sumi) !important;
+    white-space: normal !important;
+  }
+
+  .cover-title-group {
+    margin: 18px 0 !important;
+  }
+
+  .cover-jp-sub {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cover-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .cover-desc {
+    font-size: 12px !important;
+    margin-top: 10px !important;
+    line-height: 1.6 !important;
+  }
+
+  .cover-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+
+  .stat-box {
+    padding: 8px 4px !important;
+    border-width: 1.5px !important;
+  }
+
+  .stat-num {
+    font-size: 15px !important;
+  }
+
+  .stat-label {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cover-footer {
+    padding-top: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    font-size: 10px !important;
+  }
+
+  .page-sheet {
+    padding: 16px 12px !important;
+    min-height: auto !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1.5px dashed rgba(43,37,35,0.2) !important;
+  }
+
+  .sheet-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 6px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .sheet-part-badge {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .sheet-title {
+    font-size: 13px !important;
+  }
+
+  .sheet-page-num {
+    font-size: 10px !important;
+  }
+
+  .quiz-item-box {
+    padding: 10px 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .q-meta-line {
+    margin-bottom: 4px !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .q-sentence {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    margin-bottom: 8px !important;
+  }
+
+  .q-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .opt-pill {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+    word-break: break-word !important;
+  }
+
+  .solution-box {
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .sol-ans-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .passage-box {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+  .passage-title-bar {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .passage-title {
+    font-size: 13px !important;
+  }
+
+  .scroll-hint {
+    display: block !important;
+    font-size: 10.5px !important;
+    color: rgba(43,37,35,0.6) !important;
+    margin-bottom: 4px !important;
+    font-family: 'DM Mono', monospace !important;
+  }
+
+  .table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 16px !important;
+    border: 1.5px solid var(--sumi) !important;
+    border-radius: 6px !important;
+    background: #FFFFFF !important;
+  }
+
+  .answer-key-table {
+    min-width: 440px !important;
+    font-size: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .answer-key-table th, .answer-key-table td {
+    padding: 5px 3px !important;
+  }
+
+  .lock-cta-box {
+    padding: 16px 12px !important;
+    margin: 20px 0 !important;
+  }
 }
 
 </style>
@@ -5114,18 +5345,23 @@ body {
       <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
         【PART 01 文法形式挖空】標準正解（共 300 題）
       </h4>
-      <table class="answer-key-table"><tbody><tr><td><strong>Q01</strong>: 1</td><td><strong>Q02</strong>: 2</td><td><strong>Q03</strong>: 3</td><td><strong>Q04</strong>: 4</td><td><strong>Q05</strong>: 1</td><td><strong>Q06</strong>: 2</td><td><strong>Q07</strong>: 3</td><td><strong>Q08</strong>: 4</td><td><strong>Q09</strong>: 1</td><td><strong>Q10</strong>: 2</td></tr><tr><td><strong>Q11</strong>: 3</td><td><strong>Q12</strong>: 4</td><td><strong>Q13</strong>: 1</td><td><strong>Q14</strong>: 2</td><td><strong>Q15</strong>: 3</td><td><strong>Q16</strong>: 4</td><td><strong>Q17</strong>: 1</td><td><strong>Q18</strong>: 2</td><td><strong>Q19</strong>: 3</td><td><strong>Q20</strong>: 4</td></tr><tr><td><strong>Q21</strong>: 1</td><td><strong>Q22</strong>: 2</td><td><strong>Q23</strong>: 3</td><td><strong>Q24</strong>: 4</td><td><strong>Q25</strong>: 1</td><td><strong>Q26</strong>: 2</td><td><strong>Q27</strong>: 3</td><td><strong>Q28</strong>: 4</td><td><strong>Q29</strong>: 1</td><td><strong>Q30</strong>: 2</td></tr><tr><td><strong>Q31</strong>: 3</td><td><strong>Q32</strong>: 4</td><td><strong>Q33</strong>: 1</td><td><strong>Q34</strong>: 2</td><td><strong>Q35</strong>: 3</td><td><strong>Q36</strong>: 4</td><td><strong>Q37</strong>: 1</td><td><strong>Q38</strong>: 2</td><td><strong>Q39</strong>: 3</td><td><strong>Q40</strong>: 4</td></tr><tr><td><strong>Q41</strong>: 1</td><td><strong>Q42</strong>: 2</td><td><strong>Q43</strong>: 3</td><td><strong>Q44</strong>: 4</td><td><strong>Q45</strong>: 1</td><td><strong>Q46</strong>: 2</td><td><strong>Q47</strong>: 3</td><td><strong>Q48</strong>: 4</td><td><strong>Q49</strong>: 1</td><td><strong>Q50</strong>: 2</td></tr><tr><td><strong>Q51</strong>: 3</td><td><strong>Q52</strong>: 4</td><td><strong>Q53</strong>: 1</td><td><strong>Q54</strong>: 2</td><td><strong>Q55</strong>: 3</td><td><strong>Q56</strong>: 4</td><td><strong>Q57</strong>: 1</td><td><strong>Q58</strong>: 2</td><td><strong>Q59</strong>: 3</td><td><strong>Q60</strong>: 4</td></tr><tr><td><strong>Q61</strong>: 1</td><td><strong>Q62</strong>: 2</td><td><strong>Q63</strong>: 3</td><td><strong>Q64</strong>: 4</td><td><strong>Q65</strong>: 1</td><td><strong>Q66</strong>: 2</td><td><strong>Q67</strong>: 3</td><td><strong>Q68</strong>: 4</td><td><strong>Q69</strong>: 1</td><td><strong>Q70</strong>: 2</td></tr><tr><td><strong>Q71</strong>: 3</td><td><strong>Q72</strong>: 4</td><td><strong>Q73</strong>: 1</td><td><strong>Q74</strong>: 2</td><td><strong>Q75</strong>: 3</td><td><strong>Q76</strong>: 4</td><td><strong>Q77</strong>: 1</td><td><strong>Q78</strong>: 2</td><td><strong>Q79</strong>: 3</td><td><strong>Q80</strong>: 4</td></tr><tr><td><strong>Q81</strong>: 1</td><td><strong>Q82</strong>: 2</td><td><strong>Q83</strong>: 3</td><td><strong>Q84</strong>: 4</td><td><strong>Q85</strong>: 1</td><td><strong>Q86</strong>: 2</td><td><strong>Q87</strong>: 3</td><td><strong>Q88</strong>: 4</td><td><strong>Q89</strong>: 1</td><td><strong>Q90</strong>: 2</td></tr><tr><td><strong>Q91</strong>: 3</td><td><strong>Q92</strong>: 4</td><td><strong>Q93</strong>: 1</td><td><strong>Q94</strong>: 2</td><td><strong>Q95</strong>: 3</td><td><strong>Q96</strong>: 4</td><td><strong>Q97</strong>: 1</td><td><strong>Q98</strong>: 2</td><td><strong>Q99</strong>: 3</td><td><strong>Q100</strong>: 4</td></tr><tr><td><strong>Q101</strong>: 1</td><td><strong>Q102</strong>: 2</td><td><strong>Q103</strong>: 3</td><td><strong>Q104</strong>: 4</td><td><strong>Q105</strong>: 1</td><td><strong>Q106</strong>: 2</td><td><strong>Q107</strong>: 3</td><td><strong>Q108</strong>: 4</td><td><strong>Q109</strong>: 1</td><td><strong>Q110</strong>: 2</td></tr><tr><td><strong>Q111</strong>: 3</td><td><strong>Q112</strong>: 4</td><td><strong>Q113</strong>: 1</td><td><strong>Q114</strong>: 2</td><td><strong>Q115</strong>: 3</td><td><strong>Q116</strong>: 4</td><td><strong>Q117</strong>: 1</td><td><strong>Q118</strong>: 2</td><td><strong>Q119</strong>: 3</td><td><strong>Q120</strong>: 4</td></tr><tr><td><strong>Q121</strong>: 1</td><td><strong>Q122</strong>: 2</td><td><strong>Q123</strong>: 3</td><td><strong>Q124</strong>: 4</td><td><strong>Q125</strong>: 1</td><td><strong>Q126</strong>: 2</td><td><strong>Q127</strong>: 3</td><td><strong>Q128</strong>: 4</td><td><strong>Q129</strong>: 1</td><td><strong>Q130</strong>: 2</td></tr><tr><td><strong>Q131</strong>: 3</td><td><strong>Q132</strong>: 4</td><td><strong>Q133</strong>: 1</td><td><strong>Q134</strong>: 2</td><td><strong>Q135</strong>: 3</td><td><strong>Q136</strong>: 4</td><td><strong>Q137</strong>: 1</td><td><strong>Q138</strong>: 2</td><td><strong>Q139</strong>: 3</td><td><strong>Q140</strong>: 4</td></tr><tr><td><strong>Q141</strong>: 1</td><td><strong>Q142</strong>: 2</td><td><strong>Q143</strong>: 3</td><td><strong>Q144</strong>: 4</td><td><strong>Q145</strong>: 1</td><td><strong>Q146</strong>: 2</td><td><strong>Q147</strong>: 3</td><td><strong>Q148</strong>: 4</td><td><strong>Q149</strong>: 1</td><td><strong>Q150</strong>: 2</td></tr><tr><td><strong>Q151</strong>: 3</td><td><strong>Q152</strong>: 4</td><td><strong>Q153</strong>: 1</td><td><strong>Q154</strong>: 2</td><td><strong>Q155</strong>: 3</td><td><strong>Q156</strong>: 4</td><td><strong>Q157</strong>: 1</td><td><strong>Q158</strong>: 2</td><td><strong>Q159</strong>: 3</td><td><strong>Q160</strong>: 4</td></tr><tr><td><strong>Q161</strong>: 1</td><td><strong>Q162</strong>: 2</td><td><strong>Q163</strong>: 3</td><td><strong>Q164</strong>: 4</td><td><strong>Q165</strong>: 1</td><td><strong>Q166</strong>: 2</td><td><strong>Q167</strong>: 3</td><td><strong>Q168</strong>: 4</td><td><strong>Q169</strong>: 1</td><td><strong>Q170</strong>: 2</td></tr><tr><td><strong>Q171</strong>: 3</td><td><strong>Q172</strong>: 4</td><td><strong>Q173</strong>: 1</td><td><strong>Q174</strong>: 2</td><td><strong>Q175</strong>: 3</td><td><strong>Q176</strong>: 4</td><td><strong>Q177</strong>: 1</td><td><strong>Q178</strong>: 2</td><td><strong>Q179</strong>: 3</td><td><strong>Q180</strong>: 4</td></tr><tr><td><strong>Q181</strong>: 1</td><td><strong>Q182</strong>: 2</td><td><strong>Q183</strong>: 3</td><td><strong>Q184</strong>: 4</td><td><strong>Q185</strong>: 1</td><td><strong>Q186</strong>: 2</td><td><strong>Q187</strong>: 3</td><td><strong>Q188</strong>: 4</td><td><strong>Q189</strong>: 1</td><td><strong>Q190</strong>: 2</td></tr><tr><td><strong>Q191</strong>: 3</td><td><strong>Q192</strong>: 4</td><td><strong>Q193</strong>: 1</td><td><strong>Q194</strong>: 2</td><td><strong>Q195</strong>: 3</td><td><strong>Q196</strong>: 4</td><td><strong>Q197</strong>: 1</td><td><strong>Q198</strong>: 2</td><td><strong>Q199</strong>: 3</td><td><strong>Q200</strong>: 4</td></tr><tr><td><strong>Q201</strong>: 1</td><td><strong>Q202</strong>: 2</td><td><strong>Q203</strong>: 3</td><td><strong>Q204</strong>: 4</td><td><strong>Q205</strong>: 1</td><td><strong>Q206</strong>: 2</td><td><strong>Q207</strong>: 3</td><td><strong>Q208</strong>: 4</td><td><strong>Q209</strong>: 1</td><td><strong>Q210</strong>: 2</td></tr><tr><td><strong>Q211</strong>: 3</td><td><strong>Q212</strong>: 4</td><td><strong>Q213</strong>: 1</td><td><strong>Q214</strong>: 2</td><td><strong>Q215</strong>: 3</td><td><strong>Q216</strong>: 4</td><td><strong>Q217</strong>: 1</td><td><strong>Q218</strong>: 2</td><td><strong>Q219</strong>: 3</td><td><strong>Q220</strong>: 4</td></tr><tr><td><strong>Q221</strong>: 1</td><td><strong>Q222</strong>: 2</td><td><strong>Q223</strong>: 3</td><td><strong>Q224</strong>: 4</td><td><strong>Q225</strong>: 1</td><td><strong>Q226</strong>: 2</td><td><strong>Q227</strong>: 3</td><td><strong>Q228</strong>: 4</td><td><strong>Q229</strong>: 1</td><td><strong>Q230</strong>: 2</td></tr><tr><td><strong>Q231</strong>: 3</td><td><strong>Q232</strong>: 4</td><td><strong>Q233</strong>: 1</td><td><strong>Q234</strong>: 2</td><td><strong>Q235</strong>: 3</td><td><strong>Q236</strong>: 4</td><td><strong>Q237</strong>: 1</td><td><strong>Q238</strong>: 2</td><td><strong>Q239</strong>: 3</td><td><strong>Q240</strong>: 4</td></tr><tr><td><strong>Q241</strong>: 1</td><td><strong>Q242</strong>: 2</td><td><strong>Q243</strong>: 3</td><td><strong>Q244</strong>: 4</td><td><strong>Q245</strong>: 1</td><td><strong>Q246</strong>: 2</td><td><strong>Q247</strong>: 3</td><td><strong>Q248</strong>: 4</td><td><strong>Q249</strong>: 1</td><td><strong>Q250</strong>: 2</td></tr><tr><td><strong>Q251</strong>: 3</td><td><strong>Q252</strong>: 4</td><td><strong>Q253</strong>: 1</td><td><strong>Q254</strong>: 2</td><td><strong>Q255</strong>: 3</td><td><strong>Q256</strong>: 4</td><td><strong>Q257</strong>: 1</td><td><strong>Q258</strong>: 2</td><td><strong>Q259</strong>: 3</td><td><strong>Q260</strong>: 4</td></tr><tr><td><strong>Q261</strong>: 1</td><td><strong>Q262</strong>: 2</td><td><strong>Q263</strong>: 3</td><td><strong>Q264</strong>: 4</td><td><strong>Q265</strong>: 1</td><td><strong>Q266</strong>: 2</td><td><strong>Q267</strong>: 3</td><td><strong>Q268</strong>: 4</td><td><strong>Q269</strong>: 1</td><td><strong>Q270</strong>: 2</td></tr><tr><td><strong>Q271</strong>: 3</td><td><strong>Q272</strong>: 4</td><td><strong>Q273</strong>: 1</td><td><strong>Q274</strong>: 2</td><td><strong>Q275</strong>: 3</td><td><strong>Q276</strong>: 4</td><td><strong>Q277</strong>: 1</td><td><strong>Q278</strong>: 2</td><td><strong>Q279</strong>: 3</td><td><strong>Q280</strong>: 4</td></tr><tr><td><strong>Q281</strong>: 1</td><td><strong>Q282</strong>: 2</td><td><strong>Q283</strong>: 3</td><td><strong>Q284</strong>: 4</td><td><strong>Q285</strong>: 1</td><td><strong>Q286</strong>: 2</td><td><strong>Q287</strong>: 3</td><td><strong>Q288</strong>: 4</td><td><strong>Q289</strong>: 1</td><td><strong>Q290</strong>: 2</td></tr><tr><td><strong>Q291</strong>: 3</td><td><strong>Q292</strong>: 4</td><td><strong>Q293</strong>: 1</td><td><strong>Q294</strong>: 2</td><td><strong>Q295</strong>: 3</td><td><strong>Q296</strong>: 4</td><td><strong>Q297</strong>: 1</td><td><strong>Q298</strong>: 2</td><td><strong>Q299</strong>: 3</td><td><strong>Q300</strong>: 4</td></tr></tbody></table>
+      <div class="scroll-hint">👈 可左右滑動查看完整題號解答 👉</div>
+      <div class="table-wrap">
+        <table class="answer-key-table"><tbody><tr><td><strong>Q01</strong>: 1</td><td><strong>Q02</strong>: 2</td><td><strong>Q03</strong>: 3</td><td><strong>Q04</strong>: 4</td><td><strong>Q05</strong>: 1</td><td><strong>Q06</strong>: 2</td><td><strong>Q07</strong>: 3</td><td><strong>Q08</strong>: 4</td><td><strong>Q09</strong>: 1</td><td><strong>Q10</strong>: 2</td></tr><tr><td><strong>Q11</strong>: 3</td><td><strong>Q12</strong>: 4</td><td><strong>Q13</strong>: 1</td><td><strong>Q14</strong>: 2</td><td><strong>Q15</strong>: 3</td><td><strong>Q16</strong>: 4</td><td><strong>Q17</strong>: 1</td><td><strong>Q18</strong>: 2</td><td><strong>Q19</strong>: 3</td><td><strong>Q20</strong>: 4</td></tr><tr><td><strong>Q21</strong>: 1</td><td><strong>Q22</strong>: 2</td><td><strong>Q23</strong>: 3</td><td><strong>Q24</strong>: 4</td><td><strong>Q25</strong>: 1</td><td><strong>Q26</strong>: 2</td><td><strong>Q27</strong>: 3</td><td><strong>Q28</strong>: 4</td><td><strong>Q29</strong>: 1</td><td><strong>Q30</strong>: 2</td></tr><tr><td><strong>Q31</strong>: 3</td><td><strong>Q32</strong>: 4</td><td><strong>Q33</strong>: 1</td><td><strong>Q34</strong>: 2</td><td><strong>Q35</strong>: 3</td><td><strong>Q36</strong>: 4</td><td><strong>Q37</strong>: 1</td><td><strong>Q38</strong>: 2</td><td><strong>Q39</strong>: 3</td><td><strong>Q40</strong>: 4</td></tr><tr><td><strong>Q41</strong>: 1</td><td><strong>Q42</strong>: 2</td><td><strong>Q43</strong>: 3</td><td><strong>Q44</strong>: 4</td><td><strong>Q45</strong>: 1</td><td><strong>Q46</strong>: 2</td><td><strong>Q47</strong>: 3</td><td><strong>Q48</strong>: 4</td><td><strong>Q49</strong>: 1</td><td><strong>Q50</strong>: 2</td></tr><tr><td><strong>Q51</strong>: 3</td><td><strong>Q52</strong>: 4</td><td><strong>Q53</strong>: 1</td><td><strong>Q54</strong>: 2</td><td><strong>Q55</strong>: 3</td><td><strong>Q56</strong>: 4</td><td><strong>Q57</strong>: 1</td><td><strong>Q58</strong>: 2</td><td><strong>Q59</strong>: 3</td><td><strong>Q60</strong>: 4</td></tr><tr><td><strong>Q61</strong>: 1</td><td><strong>Q62</strong>: 2</td><td><strong>Q63</strong>: 3</td><td><strong>Q64</strong>: 4</td><td><strong>Q65</strong>: 1</td><td><strong>Q66</strong>: 2</td><td><strong>Q67</strong>: 3</td><td><strong>Q68</strong>: 4</td><td><strong>Q69</strong>: 1</td><td><strong>Q70</strong>: 2</td></tr><tr><td><strong>Q71</strong>: 3</td><td><strong>Q72</strong>: 4</td><td><strong>Q73</strong>: 1</td><td><strong>Q74</strong>: 2</td><td><strong>Q75</strong>: 3</td><td><strong>Q76</strong>: 4</td><td><strong>Q77</strong>: 1</td><td><strong>Q78</strong>: 2</td><td><strong>Q79</strong>: 3</td><td><strong>Q80</strong>: 4</td></tr><tr><td><strong>Q81</strong>: 1</td><td><strong>Q82</strong>: 2</td><td><strong>Q83</strong>: 3</td><td><strong>Q84</strong>: 4</td><td><strong>Q85</strong>: 1</td><td><strong>Q86</strong>: 2</td><td><strong>Q87</strong>: 3</td><td><strong>Q88</strong>: 4</td><td><strong>Q89</strong>: 1</td><td><strong>Q90</strong>: 2</td></tr><tr><td><strong>Q91</strong>: 3</td><td><strong>Q92</strong>: 4</td><td><strong>Q93</strong>: 1</td><td><strong>Q94</strong>: 2</td><td><strong>Q95</strong>: 3</td><td><strong>Q96</strong>: 4</td><td><strong>Q97</strong>: 1</td><td><strong>Q98</strong>: 2</td><td><strong>Q99</strong>: 3</td><td><strong>Q100</strong>: 4</td></tr><tr><td><strong>Q101</strong>: 1</td><td><strong>Q102</strong>: 2</td><td><strong>Q103</strong>: 3</td><td><strong>Q104</strong>: 4</td><td><strong>Q105</strong>: 1</td><td><strong>Q106</strong>: 2</td><td><strong>Q107</strong>: 3</td><td><strong>Q108</strong>: 4</td><td><strong>Q109</strong>: 1</td><td><strong>Q110</strong>: 2</td></tr><tr><td><strong>Q111</strong>: 3</td><td><strong>Q112</strong>: 4</td><td><strong>Q113</strong>: 1</td><td><strong>Q114</strong>: 2</td><td><strong>Q115</strong>: 3</td><td><strong>Q116</strong>: 4</td><td><strong>Q117</strong>: 1</td><td><strong>Q118</strong>: 2</td><td><strong>Q119</strong>: 3</td><td><strong>Q120</strong>: 4</td></tr><tr><td><strong>Q121</strong>: 1</td><td><strong>Q122</strong>: 2</td><td><strong>Q123</strong>: 3</td><td><strong>Q124</strong>: 4</td><td><strong>Q125</strong>: 1</td><td><strong>Q126</strong>: 2</td><td><strong>Q127</strong>: 3</td><td><strong>Q128</strong>: 4</td><td><strong>Q129</strong>: 1</td><td><strong>Q130</strong>: 2</td></tr><tr><td><strong>Q131</strong>: 3</td><td><strong>Q132</strong>: 4</td><td><strong>Q133</strong>: 1</td><td><strong>Q134</strong>: 2</td><td><strong>Q135</strong>: 3</td><td><strong>Q136</strong>: 4</td><td><strong>Q137</strong>: 1</td><td><strong>Q138</strong>: 2</td><td><strong>Q139</strong>: 3</td><td><strong>Q140</strong>: 4</td></tr><tr><td><strong>Q141</strong>: 1</td><td><strong>Q142</strong>: 2</td><td><strong>Q143</strong>: 3</td><td><strong>Q144</strong>: 4</td><td><strong>Q145</strong>: 1</td><td><strong>Q146</strong>: 2</td><td><strong>Q147</strong>: 3</td><td><strong>Q148</strong>: 4</td><td><strong>Q149</strong>: 1</td><td><strong>Q150</strong>: 2</td></tr><tr><td><strong>Q151</strong>: 3</td><td><strong>Q152</strong>: 4</td><td><strong>Q153</strong>: 1</td><td><strong>Q154</strong>: 2</td><td><strong>Q155</strong>: 3</td><td><strong>Q156</strong>: 4</td><td><strong>Q157</strong>: 1</td><td><strong>Q158</strong>: 2</td><td><strong>Q159</strong>: 3</td><td><strong>Q160</strong>: 4</td></tr><tr><td><strong>Q161</strong>: 1</td><td><strong>Q162</strong>: 2</td><td><strong>Q163</strong>: 3</td><td><strong>Q164</strong>: 4</td><td><strong>Q165</strong>: 1</td><td><strong>Q166</strong>: 2</td><td><strong>Q167</strong>: 3</td><td><strong>Q168</strong>: 4</td><td><strong>Q169</strong>: 1</td><td><strong>Q170</strong>: 2</td></tr><tr><td><strong>Q171</strong>: 3</td><td><strong>Q172</strong>: 4</td><td><strong>Q173</strong>: 1</td><td><strong>Q174</strong>: 2</td><td><strong>Q175</strong>: 3</td><td><strong>Q176</strong>: 4</td><td><strong>Q177</strong>: 1</td><td><strong>Q178</strong>: 2</td><td><strong>Q179</strong>: 3</td><td><strong>Q180</strong>: 4</td></tr><tr><td><strong>Q181</strong>: 1</td><td><strong>Q182</strong>: 2</td><td><strong>Q183</strong>: 3</td><td><strong>Q184</strong>: 4</td><td><strong>Q185</strong>: 1</td><td><strong>Q186</strong>: 2</td><td><strong>Q187</strong>: 3</td><td><strong>Q188</strong>: 4</td><td><strong>Q189</strong>: 1</td><td><strong>Q190</strong>: 2</td></tr><tr><td><strong>Q191</strong>: 3</td><td><strong>Q192</strong>: 4</td><td><strong>Q193</strong>: 1</td><td><strong>Q194</strong>: 2</td><td><strong>Q195</strong>: 3</td><td><strong>Q196</strong>: 4</td><td><strong>Q197</strong>: 1</td><td><strong>Q198</strong>: 2</td><td><strong>Q199</strong>: 3</td><td><strong>Q200</strong>: 4</td></tr><tr><td><strong>Q201</strong>: 1</td><td><strong>Q202</strong>: 2</td><td><strong>Q203</strong>: 3</td><td><strong>Q204</strong>: 4</td><td><strong>Q205</strong>: 1</td><td><strong>Q206</strong>: 2</td><td><strong>Q207</strong>: 3</td><td><strong>Q208</strong>: 4</td><td><strong>Q209</strong>: 1</td><td><strong>Q210</strong>: 2</td></tr><tr><td><strong>Q211</strong>: 3</td><td><strong>Q212</strong>: 4</td><td><strong>Q213</strong>: 1</td><td><strong>Q214</strong>: 2</td><td><strong>Q215</strong>: 3</td><td><strong>Q216</strong>: 4</td><td><strong>Q217</strong>: 1</td><td><strong>Q218</strong>: 2</td><td><strong>Q219</strong>: 3</td><td><strong>Q220</strong>: 4</td></tr><tr><td><strong>Q221</strong>: 1</td><td><strong>Q222</strong>: 2</td><td><strong>Q223</strong>: 3</td><td><strong>Q224</strong>: 4</td><td><strong>Q225</strong>: 1</td><td><strong>Q226</strong>: 2</td><td><strong>Q227</strong>: 3</td><td><strong>Q228</strong>: 4</td><td><strong>Q229</strong>: 1</td><td><strong>Q230</strong>: 2</td></tr><tr><td><strong>Q231</strong>: 3</td><td><strong>Q232</strong>: 4</td><td><strong>Q233</strong>: 1</td><td><strong>Q234</strong>: 2</td><td><strong>Q235</strong>: 3</td><td><strong>Q236</strong>: 4</td><td><strong>Q237</strong>: 1</td><td><strong>Q238</strong>: 2</td><td><strong>Q239</strong>: 3</td><td><strong>Q240</strong>: 4</td></tr><tr><td><strong>Q241</strong>: 1</td><td><strong>Q242</strong>: 2</td><td><strong>Q243</strong>: 3</td><td><strong>Q244</strong>: 4</td><td><strong>Q245</strong>: 1</td><td><strong>Q246</strong>: 2</td><td><strong>Q247</strong>: 3</td><td><strong>Q248</strong>: 4</td><td><strong>Q249</strong>: 1</td><td><strong>Q250</strong>: 2</td></tr><tr><td><strong>Q251</strong>: 3</td><td><strong>Q252</strong>: 4</td><td><strong>Q253</strong>: 1</td><td><strong>Q254</strong>: 2</td><td><strong>Q255</strong>: 3</td><td><strong>Q256</strong>: 4</td><td><strong>Q257</strong>: 1</td><td><strong>Q258</strong>: 2</td><td><strong>Q259</strong>: 3</td><td><strong>Q260</strong>: 4</td></tr><tr><td><strong>Q261</strong>: 1</td><td><strong>Q262</strong>: 2</td><td><strong>Q263</strong>: 3</td><td><strong>Q264</strong>: 4</td><td><strong>Q265</strong>: 1</td><td><strong>Q266</strong>: 2</td><td><strong>Q267</strong>: 3</td><td><strong>Q268</strong>: 4</td><td><strong>Q269</strong>: 1</td><td><strong>Q270</strong>: 2</td></tr><tr><td><strong>Q271</strong>: 3</td><td><strong>Q272</strong>: 4</td><td><strong>Q273</strong>: 1</td><td><strong>Q274</strong>: 2</td><td><strong>Q275</strong>: 3</td><td><strong>Q276</strong>: 4</td><td><strong>Q277</strong>: 1</td><td><strong>Q278</strong>: 2</td><td><strong>Q279</strong>: 3</td><td><strong>Q280</strong>: 4</td></tr><tr><td><strong>Q281</strong>: 1</td><td><strong>Q282</strong>: 2</td><td><strong>Q283</strong>: 3</td><td><strong>Q284</strong>: 4</td><td><strong>Q285</strong>: 1</td><td><strong>Q286</strong>: 2</td><td><strong>Q287</strong>: 3</td><td><strong>Q288</strong>: 4</td><td><strong>Q289</strong>: 1</td><td><strong>Q290</strong>: 2</td></tr><tr><td><strong>Q291</strong>: 3</td><td><strong>Q292</strong>: 4</td><td><strong>Q293</strong>: 1</td><td><strong>Q294</strong>: 2</td><td><strong>Q295</strong>: 3</td><td><strong>Q296</strong>: 4</td><td><strong>Q297</strong>: 1</td><td><strong>Q298</strong>: 2</td><td><strong>Q299</strong>: 3</td><td><strong>Q300</strong>: 4</td></tr></tbody></table>
+      </div>
     </div>
     
     <div style="margin-bottom:16px;">
       <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
         【PART 02 ★ 號語序重組】標準正解（共 125 題）
       </h4>
-      <table class="answer-key-table">
-        <thead>
-          <tr><th>題號</th><th>★ 號正解</th><th style="text-align:left; padding-left:12px;">完整詞塊語序</th></tr>
-        </thead>
-        <tbody>
+      <div class="scroll-hint">👈 可左右滑動查看語序 👉</div>
+      <div class="table-wrap">
+        <table class="answer-key-table">
+          <thead>
+            <tr><th>題號</th><th>★ 號正解</th><th style="text-align:left; padding-left:12px;">完整詞塊語序</th></tr>
+          </thead>
+          <tbody>
         <tr>
           <td style="font-weight:900; width:60px;">Q.01</td>
           <td style="background:var(--butter); font-weight:900; width:130px;">★ 為 【 1 】 號</td>
@@ -5876,18 +6112,21 @@ body {
           <td style="text-align:left; padding-left:12px; font-family:'DM Mono', monospace;">正確排列順序：3 → 2 → 1 → 4</td>
         </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
     </div>
     
     <div style="margin-bottom:16px;">
       <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
         【PART 03 篇章長文專欄】標準正解（共 25 篇 / 75 題）
       </h4>
-      <table class="answer-key-table">
-        <thead>
-          <tr><th>篇章</th><th style="text-align:left; padding-left:10px;">專欄標題</th><th style="text-align:left; padding-left:10px;">各空白正確選項</th></tr>
-        </thead>
-        <tbody>
+      <div class="scroll-hint">👈 可左右滑動查看篇章正解 👉</div>
+      <div class="table-wrap">
+        <table class="answer-key-table">
+          <thead>
+            <tr><th>篇章</th><th style="text-align:left; padding-left:10px;">專欄標題</th><th style="text-align:left; padding-left:10px;">各空白正確選項</th></tr>
+          </thead>
+          <tbody>
         <tr>
           <td style="font-weight:900; width:70px;">第 01 篇</td>
           <td style="font-weight:700; text-align:left; padding-left:10px; width:180px;">留学生エマさんの日記「はじめての京都旅行」</td>
@@ -6038,7 +6277,8 @@ body {
           <td style="text-align:left; padding-left:10px; font-family:'DM Mono', monospace;">【空白 01】: <strong>(1)</strong> ｜ 【空白 02】: <strong>(2)</strong> ｜ 【空白 03】: <strong>(3)</strong></td>
         </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
     </div>
     
   </div>

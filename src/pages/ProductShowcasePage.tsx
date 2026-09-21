@@ -732,39 +732,40 @@ export function ProductShowcasePage() {
               </div>
 
               {/* 雙版本試閱切換鈕 */}
-              <div className="inline-flex rounded-xl border-2 border-paper-sumi bg-white p-1 font-mono text-xs font-bold shadow-retro-sm shrink-0">
+              <div className="grid grid-cols-2 gap-1 w-full sm:w-auto sm:inline-flex rounded-xl border-2 border-paper-sumi bg-white p-1 font-mono text-xs font-bold shadow-retro-sm shrink-0">
                 <button
                   type="button"
                   onClick={() => setPreviewWorkbookType('blank')}
-                  className={`rounded-lg px-3 py-1.5 transition-all ${
+                  className={`rounded-lg px-2.5 py-1.5 text-center transition-all ${
                     previewWorkbookType === 'blank'
                       ? 'bg-paper-sumi text-white font-black shadow-retro-sm'
                       : 'text-paper-sumi hover:bg-paper-butter'
                   }`}
                 >
-                  📄 實戰空白題本（試閱）
+                  📄 實戰空白題本
                 </button>
                 <button
                   type="button"
                   onClick={() => setPreviewWorkbookType('solution')}
-                  className={`rounded-lg px-3 py-1.5 transition-all ${
+                  className={`rounded-lg px-2.5 py-1.5 text-center transition-all ${
                     previewWorkbookType === 'solution'
                       ? 'bg-paper-butter text-paper-sumi font-black border border-paper-sumi'
                       : 'text-paper-sumi hover:bg-paper-butter'
                   }`}
                 >
-                  ✍️ 逐題詳解訂正本（試閱）
+                  ✍️ 逐題詳解訂正本
                 </button>
               </div>
             </div>
 
             {/* A4 題本內嵌視窗 */}
-            <div className="relative mt-3.5 h-[460px] w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[560px] md:h-[640px]">
+            <div className="relative mt-3.5 h-[440px] w-full overflow-hidden rounded-xl border-2 border-paper-sumi bg-white shadow-retro-sm sm:h-[560px] md:h-[640px]">
               <iframe
                 key={previewWorkbookType}
                 src={previewWorkbookType === 'blank' ? currentQuizProd.blankWorkbookUrl : currentQuizProd.solutionWorkbookUrl}
                 title={`${currentQuizProd.upper} 500題手帳題本試閱`}
                 className="h-full w-full border-0 bg-[#faf7f2]"
+                style={{ width: '100%', minWidth: '100%', maxWidth: '100%' }}
                 loading="lazy"
               />
             </div>
@@ -1026,6 +1027,7 @@ export function ProductShowcasePage() {
                     src={currentTextbookProd.handbookUrl}
                     title={`${currentTextbookProd.upper} A4 講義手冊試閱`}
                     className="h-full w-full border-0 bg-[#faf7f2]"
+                    style={{ width: '100%', minWidth: '100%', maxWidth: '100%' }}
                     loading="lazy"
                   />
                 </div>

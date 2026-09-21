@@ -98,6 +98,8 @@ body {
   color: var(--sumi);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn-cta {
@@ -139,6 +141,14 @@ body {
   }
   .screen-header {
     display: none !important;
+  }
+  .scroll-hint {
+    display: none !important;
+  }
+  .table-wrap {
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   .book-container {
     max-width: 100%;
@@ -395,7 +405,8 @@ body {
 .sol-ans-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 4px;
 }
 
@@ -406,18 +417,21 @@ body {
   border-radius: 4px;
   font-weight: 900;
   font-size: 11px;
+  shrink: 0;
 }
 
 .sol-full {
   font-family: 'Noto Serif JP', serif;
   font-weight: 700;
   color: var(--sumi);
+  word-break: break-word;
 }
 
 .sol-expl {
   color: rgba(43,37,35,0.9);
   line-height: 1.5;
   margin-top: 3px;
+  word-break: break-word;
 }
 
 .note-taking-space {
@@ -427,7 +441,9 @@ body {
   border-radius: 4px;
   background: #FFFFFF;
   font-size: 10.5px;
-  color: rgba(43,37,35,0.4);
+  color: rgba(43,37,35,0.55);
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 /* 篇章閱讀題排版 */
@@ -471,8 +487,8 @@ body {
   border-collapse: collapse;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .answer-key-table th, .answer-key-table td {
@@ -491,6 +507,14 @@ body {
   background: var(--canvas);
 }
 
+.scroll-hint {
+  display: none;
+}
+
+.table-wrap {
+  width: 100%;
+}
+
 .lock-cta-box {
   background: var(--canvas);
   border: 2px dashed var(--sumi);
@@ -498,6 +522,213 @@ body {
   padding: 24px;
   text-align: center;
   margin: 30px 0;
+}
+
+/* 手機與窄螢幕預覽視窗全面響應式（防止溢出、破版與排版錯位） */
+@media screen and (max-width: 680px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-cover {
+    min-height: auto !important;
+    margin: 8px !important;
+    padding: 18px 12px !important;
+    border-width: 2px !important;
+  }
+
+  .cover-header {
+    padding-bottom: 10px !important;
+  }
+
+  .cover-issue {
+    font-size: 9.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .cover-badge {
+    font-size: 13.5px !important;
+    padding: 3px 8px !important;
+    margin-top: 8px !important;
+    box-shadow: 2px 2px 0px var(--sumi) !important;
+    white-space: normal !important;
+  }
+
+  .cover-title-group {
+    margin: 18px 0 !important;
+  }
+
+  .cover-jp-sub {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cover-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .cover-desc {
+    font-size: 12px !important;
+    margin-top: 10px !important;
+    line-height: 1.6 !important;
+  }
+
+  .cover-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+
+  .stat-box {
+    padding: 8px 4px !important;
+    border-width: 1.5px !important;
+  }
+
+  .stat-num {
+    font-size: 15px !important;
+  }
+
+  .stat-label {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cover-footer {
+    padding-top: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    font-size: 10px !important;
+  }
+
+  .page-sheet {
+    padding: 16px 12px !important;
+    min-height: auto !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1.5px dashed rgba(43,37,35,0.2) !important;
+  }
+
+  .sheet-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 6px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .sheet-part-badge {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .sheet-title {
+    font-size: 13px !important;
+  }
+
+  .sheet-page-num {
+    font-size: 10px !important;
+  }
+
+  .quiz-item-box {
+    padding: 10px 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .q-meta-line {
+    margin-bottom: 4px !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .q-sentence {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    margin-bottom: 8px !important;
+  }
+
+  .q-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .opt-pill {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+    word-break: break-word !important;
+  }
+
+  .solution-box {
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .sol-ans-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .passage-box {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+  .passage-title-bar {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .passage-title {
+    font-size: 13px !important;
+  }
+
+  .scroll-hint {
+    display: block !important;
+    font-size: 10.5px !important;
+    color: rgba(43,37,35,0.6) !important;
+    margin-bottom: 4px !important;
+    font-family: 'DM Mono', monospace !important;
+  }
+
+  .table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 16px !important;
+    border: 1.5px solid var(--sumi) !important;
+    border-radius: 6px !important;
+    background: #FFFFFF !important;
+  }
+
+  .answer-key-table {
+    min-width: 440px !important;
+    font-size: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .answer-key-table th, .answer-key-table td {
+    padding: 5px 3px !important;
+  }
+
+  .lock-cta-box {
+    padding: 16px 12px !important;
+    margin: 20px 0 !important;
+  }
 }
 """
 
@@ -516,7 +747,10 @@ def build_answer_key_html(sentence_list, star_list, passage_list):
       <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
         【PART 01 文法形式挖空】標準正解（共 {len(sentence_list)} 題）
       </h4>
-      <table class="answer-key-table"><tbody>{"".join(p1_rows)}</tbody></table>
+      <div class="scroll-hint">👈 可左右滑動查看完整題號解答 👉</div>
+      <div class="table-wrap">
+        <table class="answer-key-table"><tbody>{"".join(p1_rows)}</tbody></table>
+      </div>
     </div>
     """
 
@@ -538,12 +772,15 @@ def build_answer_key_html(sentence_list, star_list, passage_list):
       <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
         【PART 02 ★ 號語序重組】標準正解（共 {len(star_list)} 題）
       </h4>
-      <table class="answer-key-table">
-        <thead>
-          <tr><th>題號</th><th>★ 號正解</th><th style="text-align:left; padding-left:12px;">完整詞塊語序</th></tr>
-        </thead>
-        <tbody>{"".join(p2_rows)}</tbody>
-      </table>
+      <div class="scroll-hint">👈 可左右滑動查看語序 👉</div>
+      <div class="table-wrap">
+        <table class="answer-key-table">
+          <thead>
+            <tr><th>題號</th><th>★ 號正解</th><th style="text-align:left; padding-left:12px;">完整詞塊語序</th></tr>
+          </thead>
+          <tbody>{"".join(p2_rows)}</tbody>
+        </table>
+      </div>
     </div>
     """
 
@@ -565,12 +802,15 @@ def build_answer_key_html(sentence_list, star_list, passage_list):
       <h4 style="font-size:13px; font-weight:900; color:var(--sumi); margin-bottom:4px;">
         【PART 03 篇章長文專欄】標準正解（共 {len(passage_list)} 篇 / {total_p3_q} 題）
       </h4>
-      <table class="answer-key-table">
-        <thead>
-          <tr><th>篇章</th><th style="text-align:left; padding-left:10px;">專欄標題</th><th style="text-align:left; padding-left:10px;">各空白正確選項</th></tr>
-        </thead>
-        <tbody>{"".join(p3_rows)}</tbody>
-      </table>
+      <div class="scroll-hint">👈 可左右滑動查看篇章正解 👉</div>
+      <div class="table-wrap">
+        <table class="answer-key-table">
+          <thead>
+            <tr><th>篇章</th><th style="text-align:left; padding-left:10px;">專欄標題</th><th style="text-align:left; padding-left:10px;">各空白正確選項</th></tr>
+          </thead>
+          <tbody>{"".join(p3_rows)}</tbody>
+        </table>
+      </div>
     </div>
     """
 
@@ -842,7 +1082,7 @@ def generate_solution_workbook_html(level_key: str, data: dict, is_preview: bool
               <span class="sol-full">【 {corr_opt} 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>{q['explanation']}</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         """)
@@ -869,7 +1109,7 @@ def generate_solution_workbook_html(level_key: str, data: dict, is_preview: bool
             <div class="sol-expl"><strong>完整句子：</strong>{q['fullSentence']}</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>{q['translation']}</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>{q['explanation']}</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         """)

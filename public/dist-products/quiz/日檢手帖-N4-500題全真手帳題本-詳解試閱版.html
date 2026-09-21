@@ -28,6 +28,8 @@ body {
   color: var(--sumi);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn-cta {
@@ -69,6 +71,14 @@ body {
   }
   .screen-header {
     display: none !important;
+  }
+  .scroll-hint {
+    display: none !important;
+  }
+  .table-wrap {
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   .book-container {
     max-width: 100%;
@@ -325,7 +335,8 @@ body {
 .sol-ans-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 4px;
 }
 
@@ -336,18 +347,21 @@ body {
   border-radius: 4px;
   font-weight: 900;
   font-size: 11px;
+  shrink: 0;
 }
 
 .sol-full {
   font-family: 'Noto Serif JP', serif;
   font-weight: 700;
   color: var(--sumi);
+  word-break: break-word;
 }
 
 .sol-expl {
   color: rgba(43,37,35,0.9);
   line-height: 1.5;
   margin-top: 3px;
+  word-break: break-word;
 }
 
 .note-taking-space {
@@ -357,7 +371,9 @@ body {
   border-radius: 4px;
   background: #FFFFFF;
   font-size: 10.5px;
-  color: rgba(43,37,35,0.4);
+  color: rgba(43,37,35,0.55);
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 /* 篇章閱讀題排版 */
@@ -401,8 +417,8 @@ body {
   border-collapse: collapse;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .answer-key-table th, .answer-key-table td {
@@ -421,6 +437,14 @@ body {
   background: var(--canvas);
 }
 
+.scroll-hint {
+  display: none;
+}
+
+.table-wrap {
+  width: 100%;
+}
+
 .lock-cta-box {
   background: var(--canvas);
   border: 2px dashed var(--sumi);
@@ -428,6 +452,213 @@ body {
   padding: 24px;
   text-align: center;
   margin: 30px 0;
+}
+
+/* 手機與窄螢幕預覽視窗全面響應式（防止溢出、破版與排版錯位） */
+@media screen and (max-width: 680px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-cover {
+    min-height: auto !important;
+    margin: 8px !important;
+    padding: 18px 12px !important;
+    border-width: 2px !important;
+  }
+
+  .cover-header {
+    padding-bottom: 10px !important;
+  }
+
+  .cover-issue {
+    font-size: 9.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .cover-badge {
+    font-size: 13.5px !important;
+    padding: 3px 8px !important;
+    margin-top: 8px !important;
+    box-shadow: 2px 2px 0px var(--sumi) !important;
+    white-space: normal !important;
+  }
+
+  .cover-title-group {
+    margin: 18px 0 !important;
+  }
+
+  .cover-jp-sub {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cover-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .cover-desc {
+    font-size: 12px !important;
+    margin-top: 10px !important;
+    line-height: 1.6 !important;
+  }
+
+  .cover-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+
+  .stat-box {
+    padding: 8px 4px !important;
+    border-width: 1.5px !important;
+  }
+
+  .stat-num {
+    font-size: 15px !important;
+  }
+
+  .stat-label {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cover-footer {
+    padding-top: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    font-size: 10px !important;
+  }
+
+  .page-sheet {
+    padding: 16px 12px !important;
+    min-height: auto !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1.5px dashed rgba(43,37,35,0.2) !important;
+  }
+
+  .sheet-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 6px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .sheet-part-badge {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .sheet-title {
+    font-size: 13px !important;
+  }
+
+  .sheet-page-num {
+    font-size: 10px !important;
+  }
+
+  .quiz-item-box {
+    padding: 10px 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .q-meta-line {
+    margin-bottom: 4px !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .q-sentence {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    margin-bottom: 8px !important;
+  }
+
+  .q-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .opt-pill {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+    word-break: break-word !important;
+  }
+
+  .solution-box {
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .sol-ans-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .passage-box {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+  .passage-title-bar {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .passage-title {
+    font-size: 13px !important;
+  }
+
+  .scroll-hint {
+    display: block !important;
+    font-size: 10.5px !important;
+    color: rgba(43,37,35,0.6) !important;
+    margin-bottom: 4px !important;
+    font-family: 'DM Mono', monospace !important;
+  }
+
+  .table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 16px !important;
+    border: 1.5px solid var(--sumi) !important;
+    border-radius: 6px !important;
+    background: #FFFFFF !important;
+  }
+
+  .answer-key-table {
+    min-width: 440px !important;
+    font-size: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .answer-key-table th, .answer-key-table td {
+    padding: 5px 3px !important;
+  }
+
+  .lock-cta-box {
+    padding: 16px 12px !important;
+    margin: 20px 0 !important;
+  }
 }
 
 </style>
@@ -495,7 +726,7 @@ body {
               <span class="sol-full">【 も 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞て形＋もいいですか」表示請求許可（可以...嗎？）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -512,7 +743,7 @@ body {
               <span class="sol-full">【 （無） 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>禮貌請求句型「動詞て形＋いただけませんか」。「教えて」已是て形，後方直接接「いただけませんか」。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -529,7 +760,7 @@ body {
               <span class="sol-full">【 あげた 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「〜てあげる」表示說話者為他人（弟弟）做某事，給予恩惠。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -546,7 +777,7 @@ body {
               <span class="sol-full">【 もらった 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「〜に…てもらう」表示請某人為自己做某事或蒙受他人幫助（駅員さんに手伝ってもらった）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -563,7 +794,7 @@ body {
               <span class="sol-full">【 くれました 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>他人為主語且為我做某事時，恩惠流向自己，動詞使用「〜てくれる」。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -580,7 +811,7 @@ body {
               <span class="sol-full">【 くださいました 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>長輩尊長（先生）為我做某事時，動詞「くれる」的尊敬語為「くださる」。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -597,7 +828,7 @@ body {
               <span class="sol-full">【 いただきました 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「尊長に…ていただく」為「てもらう」的謙讓表現，表示從尊長處獲益或承蒙指教。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -614,7 +845,7 @@ body {
               <span class="sol-full">【 しましょう 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>自謙句型「お＋動詞ます形去ます＋する」：「お持ちしましょう」表示由我替老師拿行李。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -631,7 +862,7 @@ body {
               <span class="sol-full">【 ください 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞て形＋くださいませんか」為向對方提出客氣請求的常用句型。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -648,7 +879,7 @@ body {
               <span class="sol-full">【 もらえ 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>平輩日常對話請託「〜てもらえない？」（能否借我一下？），為「てもらう」之可能形否定疑問句。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -665,7 +896,7 @@ body {
               <span class="sol-full">【 くれ 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>平輩親近請求「動詞て形＋くれない？」（能幫我開個窗嗎？）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -682,7 +913,7 @@ body {
               <span class="sol-full">【 に 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>向人詢問或打聽時，對象助詞使用「に」（人に尋ねる）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -699,7 +930,7 @@ body {
               <span class="sol-full">【 飲め 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>五段動詞假定形（ば形）：詞尾「u」段改「e」段加「ば」（飲む ➔ 飲めば）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -716,7 +947,7 @@ body {
               <span class="sol-full">【 なけれ 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>否定形容詞ない的ば形變化為「なけれ＋ば」（安くなければ＝如果不便宜的話；若便宜則為安ければ）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -733,7 +964,7 @@ body {
               <span class="sol-full">【 なっ 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「〜たら」接在動詞た形後面：なる ➔ なった ➔ なったら（到了春天）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -764,7 +995,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>来週のスピーチコンテストで毎日上手に話せるように練習しています。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>為了在下週的演講比賽上能講得流利，我每天都在練習。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>毎日 (4) ➔ 上手に (3) ➔ 話せる (1) ➔ ように (2)。★ 為 1 號。【文法重點：目的「〜ように」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -783,7 +1014,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>大切な会議の資料ですから、先生に言われたとおりにきちんと忘れないように準備しました。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>因為是很重要的會議資料，所以我按照老師所說的那樣，好好準備以防忘記。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>言われた (4) ➔ とおりに (1) ➔ きちんと (2) ➔ 忘れないように (3)。★ 為 2 號。【文法重點：遵照指示「〜とおりに」與預防目的「〜ないように」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -802,7 +1033,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>妹は母に大事にしていた漫画を捨てられてしまって思わず泣いてしまいました。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>妹妹因為珍藏的漫畫被媽媽丟掉了，忍不住哭了出來。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>大事にしていた漫画を (2) ➔ 捨てられて (1) ➔ しまって (3) ➔ 思わず (4)。★ 為 3 號。【文法重點：所有物受身「〜を…られる」與遺憾「〜てしまう」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -821,7 +1052,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>この料理は材料を切って電子レンジで温めるだけで簡単に作れます。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>這道料理只要把材料切一切，用微波爐加熱就能輕鬆做好。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>材料を (2) ➔ 切って (3) ➔ 電子レンジで (4) ➔ 温めるだけで (1)。★ 為 4 號。【文法重點：限定「〜だけで」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -840,7 +1071,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>風邪をひいて熱があるなら、無理をしないで早く休んだほうがいいですよ。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>要是感冒發燒的話，別勉強自己，早點休息比較好喔。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>しないで (3) ➔ 早く (4) ➔ 休んだ (1) ➔ ほうが (2)。★ 為 1 號。【文法重點：忠告「〜たほうがいい」與「〜ないで」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -859,7 +1090,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>電車が遅れたせいで大切な約束の時間に遅刻してしまった。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>因為電車誤點的緣故，重要約定時間遲到了。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>せいで (3) ➔ 大切な (1) ➔ 約束の (2) ➔ 時間に (4)。★ 為 2 號。【文法重點：負面原因「〜せいで」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -878,7 +1109,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>図書館で借りた本は、期限までにきちんと直接図書館へ返さなければいけません。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>在圖書館借的書，必須在期限前親自好好歸還圖書館。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>きちんと (2) ➔ 直接 (4) ➔ 図書館へ (3) ➔ 返さなければ (1)。★ 為 3 號。【文法重點：義務「〜なければいけない」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -897,7 +1128,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>雨がやんだら、公園へ犬を連れていっしょに散歩に行きましょう。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>雨停了的話，帶著狗狗一起去公園散步吧。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>犬を (2) ➔ 連れて (3) ➔ いっしょに (4) ➔ 散歩に (1)。★ 為 4 號。【文法重點：伴隨動詞「〜を連れて」與目的「〜に行く」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -916,7 +1147,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>日本語を上手に話せるように、毎日アニメを見て勉強しています。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>為了把日語說得好，每天都看動畫來學習。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>ように、 (2) ➔ 毎日 (4) ➔ アニメを (1) ➔ 見て (3)。★ 為 1 號。【文法重點：目的「〜ように」與手段「〜て勉強する」】</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         

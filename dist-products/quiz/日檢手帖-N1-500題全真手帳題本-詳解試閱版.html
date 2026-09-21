@@ -28,6 +28,8 @@ body {
   color: var(--sumi);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn-cta {
@@ -69,6 +71,14 @@ body {
   }
   .screen-header {
     display: none !important;
+  }
+  .scroll-hint {
+    display: none !important;
+  }
+  .table-wrap {
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   .book-container {
     max-width: 100%;
@@ -325,7 +335,8 @@ body {
 .sol-ans-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 4px;
 }
 
@@ -336,18 +347,21 @@ body {
   border-radius: 4px;
   font-weight: 900;
   font-size: 11px;
+  shrink: 0;
 }
 
 .sol-full {
   font-family: 'Noto Serif JP', serif;
   font-weight: 700;
   color: var(--sumi);
+  word-break: break-word;
 }
 
 .sol-expl {
   color: rgba(43,37,35,0.9);
   line-height: 1.5;
   margin-top: 3px;
+  word-break: break-word;
 }
 
 .note-taking-space {
@@ -357,7 +371,9 @@ body {
   border-radius: 4px;
   background: #FFFFFF;
   font-size: 10.5px;
-  color: rgba(43,37,35,0.4);
+  color: rgba(43,37,35,0.55);
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 /* 篇章閱讀題排版 */
@@ -401,8 +417,8 @@ body {
   border-collapse: collapse;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .answer-key-table th, .answer-key-table td {
@@ -421,6 +437,14 @@ body {
   background: var(--canvas);
 }
 
+.scroll-hint {
+  display: none;
+}
+
+.table-wrap {
+  width: 100%;
+}
+
 .lock-cta-box {
   background: var(--canvas);
   border: 2px dashed var(--sumi);
@@ -428,6 +452,213 @@ body {
   padding: 24px;
   text-align: center;
   margin: 30px 0;
+}
+
+/* 手機與窄螢幕預覽視窗全面響應式（防止溢出、破版與排版錯位） */
+@media screen and (max-width: 680px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  .book-cover {
+    min-height: auto !important;
+    margin: 8px !important;
+    padding: 18px 12px !important;
+    border-width: 2px !important;
+  }
+
+  .cover-header {
+    padding-bottom: 10px !important;
+  }
+
+  .cover-issue {
+    font-size: 9.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .cover-badge {
+    font-size: 13.5px !important;
+    padding: 3px 8px !important;
+    margin-top: 8px !important;
+    box-shadow: 2px 2px 0px var(--sumi) !important;
+    white-space: normal !important;
+  }
+
+  .cover-title-group {
+    margin: 18px 0 !important;
+  }
+
+  .cover-jp-sub {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cover-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .cover-desc {
+    font-size: 12px !important;
+    margin-top: 10px !important;
+    line-height: 1.6 !important;
+  }
+
+  .cover-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+
+  .stat-box {
+    padding: 8px 4px !important;
+    border-width: 1.5px !important;
+  }
+
+  .stat-num {
+    font-size: 15px !important;
+  }
+
+  .stat-label {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cover-footer {
+    padding-top: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    font-size: 10px !important;
+  }
+
+  .page-sheet {
+    padding: 16px 12px !important;
+    min-height: auto !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1.5px dashed rgba(43,37,35,0.2) !important;
+  }
+
+  .sheet-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 6px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .sheet-part-badge {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .sheet-title {
+    font-size: 13px !important;
+  }
+
+  .sheet-page-num {
+    font-size: 10px !important;
+  }
+
+  .quiz-item-box {
+    padding: 10px 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .q-meta-line {
+    margin-bottom: 4px !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .q-sentence {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    margin-bottom: 8px !important;
+  }
+
+  .q-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .opt-pill {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+    word-break: break-word !important;
+  }
+
+  .solution-box {
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .sol-ans-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .passage-box {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+  .passage-title-bar {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .passage-title {
+    font-size: 13px !important;
+  }
+
+  .scroll-hint {
+    display: block !important;
+    font-size: 10.5px !important;
+    color: rgba(43,37,35,0.6) !important;
+    margin-bottom: 4px !important;
+    font-family: 'DM Mono', monospace !important;
+  }
+
+  .table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 16px !important;
+    border: 1.5px solid var(--sumi) !important;
+    border-radius: 6px !important;
+    background: #FFFFFF !important;
+  }
+
+  .answer-key-table {
+    min-width: 440px !important;
+    font-size: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .answer-key-table th, .answer-key-table td {
+    padding: 5px 3px !important;
+  }
+
+  .lock-cta-box {
+    padding: 16px 12px !important;
+    margin: 20px 0 !important;
+  }
 }
 
 </style>
@@ -495,7 +726,7 @@ body {
               <span class="sol-full">【 する 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞辭書形＋に値する」表示配得上、值得（值得特筆大書）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -512,7 +743,7 @@ body {
               <span class="sol-full">【 こと 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「な形容詞詞幹＋こと極まりない」表示極度客觀批判或情感強烈（荒謬至極）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -529,7 +760,7 @@ body {
               <span class="sol-full">【 得 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「感情名詞＋を禁じ得ない」表示情不自禁、按捺不住某種深切情感。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -546,7 +777,7 @@ body {
               <span class="sol-full">【 と 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞意向形＋と（も）」表示逆接讓步假定（縱使遭到怎樣的非難）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -563,7 +794,7 @@ body {
               <span class="sol-full">【 を皮切りに 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞＋を皮切りに（して）」表示以此為開端，接二連三開展一系列同類事件。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -580,7 +811,7 @@ body {
               <span class="sol-full">【 にもかかわらず 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞た形＋にもかかわらず」表示儘管明明做足充分準備，卻依然得到相反的不如意結果。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -597,7 +828,7 @@ body {
               <span class="sol-full">【 もの 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞＋たる者」為書面莊重表現，表示身負重要職位之人理應具備高尚道德風範。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -614,7 +845,7 @@ body {
               <span class="sol-full">【 相まって 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「〜と相まって」表示兩者要素相互結合、相輔相成，產生更顯著成果。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -631,7 +862,7 @@ body {
               <span class="sol-full">【 すら 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞＋ですら」表示連極端、罕見的對象都如此，更何況一般人。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -648,7 +879,7 @@ body {
               <span class="sol-full">【 まじき 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「あるまじき＋名詞」表示作為該身份或體系絕不容許、絕不應有的行為。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -665,7 +896,7 @@ body {
               <span class="sol-full">【 のみならず 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「名詞＋のみならず」表示不僅前面一項，後面一項也同樣受到深刻影響。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -682,7 +913,7 @@ body {
               <span class="sol-full">【 うかがわれる 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「〜がうかがわれる」為自發表現，表示自然而然地顯露、可以從中看出或體察出。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -699,7 +930,7 @@ body {
               <span class="sol-full">【 及ぶ 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「〜の及ぶところではない」表示遠非某人某事能力所能企及或匹敵。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -716,7 +947,7 @@ body {
               <span class="sol-full">【 得ない 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞ます形去ます＋得ない」表示絕不可能避免（「免れ得ない」＝無法避免、勢在難免）。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -733,7 +964,7 @@ body {
               <span class="sol-full">【 ことなく 】</span>
             </div>
             <div class="sol-expl"><strong>💡 考點解析：</strong>「動詞辭書形＋ことなく」表示完全沒有做某事的情況下就直接推進後續行動。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -764,7 +995,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>どんなに世間から非難されようと、己の信念に背くような一切の振る舞いをするつもりは毛頭ない。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>無論受到世人怎樣譴責，我絕無打算做出任何背叛信念的舉止。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>背く (2) ➔ ような (3) ➔ 一切の (1) ➔ 振る舞いをする (4)。★ 為 1 號【一切の】。「動詞辭書形＋ような＋名詞」修飾句，表絕不做背叛信念之行徑。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -783,7 +1014,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>地球温暖化の阻止は一国にとどまる問題ではなく、世界各国が総力を挙げて取り組むべき緊急のグローバル課題である。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>遏阻全球暖化並非單一國家之事，而是舉世理應傾全力共同解決的迫切全球課題。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>総力 (3) ➔ を (4) ➔ 挙げて (2) ➔ 取り組むべき (1)。★ 為 2 號【挙げて】。「〜を挙げて＋動詞」表示傾注全體力量。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -802,7 +1033,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>あの大物政治家の失脚は、政界のみならず全般に国民生活の隅々に至るまで大きな衝撃を与えた。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>那位政界巨擘的垮台，不僅在政壇，更遍及整個國民生活各個角落，帶來了深遠震撼。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>全般に (1) ➔ 国民生活の (2) ➔ 隅々に (3) ➔ 至るまで (4)。★ 為 3 號【隅々に】。「〜に至るまで」表示範圍廣及至最深層角落。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -821,7 +1052,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>いかに科学技術が高度に進歩しようとも、自然への畏敬の念なくしては人類の真の繁栄など決して成り立たない。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>無論科技多麼高度進步，若失去對自然的敬畏之心，人類真正的繁榮便絕不可能成立。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>畏敬の念 (2) ➔ なくしては (1) ➔ 人類の (4) ➔ 真の (3)。★ 為 4 號【人類の】。「名詞＋なくしては」表示欠缺該前提則後者無法立足。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -840,7 +1071,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>今回の不正会計事件において、経営陣が示した対応は企業の社会的責任に値するものとは到底言えず世間から厳しい批判を浴びている。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>在此次假帳事件中，高層所展現的應對根本稱不上配得上企業社會責任，正面臨世人嚴厲批判。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>値する (2) ➔ ものとは (3) ➔ 到底言えず (1) ➔ 世間から (4)。★ 為 1 號【到底言えず】。「動詞辭書形＋に値する＋名詞」表示配得上...</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -859,7 +1090,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>学問の府たる大学の教授が研究データを捏造するなど、研究者としてあるまじき行為であり到底許されることのない言語道断である。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>身為學術殿堂的大學教授竟偽造研究數據，此乃研究者絕不應有的行徑，是絕不可饒恕的荒謬至極。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>あるまじき (3) ➔ 行為であり (4) ➔ 到底 (2) ➔ 許される (1)。★ 為 2 號【到底】。「名詞＋にあるまじき＋名詞」表示身為研究者絕不應有的行為。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -878,7 +1109,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>首都圏での大規模な国際芸術祭は、上野公園での開幕式典を皮切りに都内各地の美術館へと次々に連鎖して華々しく展開された。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>首都圈的大型國際藝術季以上野公園的開幕儀式為開端，接連串聯至東京都內各美術館盛大展開。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>を皮切りに (1) ➔ 都内各地の (2) ➔ 美術館へと (3) ➔ 次々に (4)。★ 為 3 號【美術館へと】。「名詞＋を皮切りに」表示以此為開端接連展開。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -897,7 +1128,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>卓越した語学力と異文化に対する深い理解が相まって難航していた和平交渉をついに妥結へと導いたと言えよう。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>卓越的語言能力與對異文化的深厚理解相輔相成，可以說引領了原本陷入僵局的和平談判走向妥協成立。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>相まって (2) ➔ 難航していた (1) ➔ 和平交渉を (4) ➔ ついに (3)。★ 為 4 號【和平交渉を】。「〜と相まって」表示兩者相成合力。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
@@ -916,7 +1147,7 @@ body {
             <div class="sol-expl"><strong>完整句子：</strong>主力工場の被災に伴うサプライチェーンの寸断により、新車製造の大幅な遅延を余儀なくされたことは深刻な打撃となった。</div>
             <div class="sol-expl"><strong>中文翻譯：</strong>因主力工廠受災導致供應鏈斷裂，新車製造被迫大幅延遲，造成了嚴重的打擊。</div>
             <div class="sol-expl"><strong>💡 語法拆解：</strong>大幅な (2) ➔ 遅延を (3) ➔ 余儀なく (1) ➔ された (4)。★ 為 1 號【余儀なく】。「名詞＋を余儀なくされる」表示被迫處於延遲。</div>
-            <div class="note-taking-space">✍️ 我的錯題訂正與筆記心得：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+            <div class="note-taking-space">✍️ 錯題訂正與手寫註記欄（考點記憶複習）：<div style="border-bottom:1px dashed rgba(43,37,35,0.25); height:14px; margin-top:3px;"></div></div>
           </div>
         </div>
         
